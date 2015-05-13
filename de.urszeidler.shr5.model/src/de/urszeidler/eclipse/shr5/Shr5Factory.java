@@ -868,6 +868,15 @@ public interface Shr5Factory extends EFactory {
     Granate createGranate();
 
     /**
+     * Returns a new object of class '<em>Source Link</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Source Link</em>'.
+     * @generated
+     */
+    SourceLink createSourceLink();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

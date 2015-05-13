@@ -2668,4 +2668,26 @@
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:element name="Granate" type="shr5:Granate"/>
+  <xsd:complexType name="SourceLink">
+    <xsd:annotation>
+      <xsd:documentation>Defines a simple link to a source book page.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="shr5:Beschreibbar">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="localizations" type="shr5:Localization"/>
+          <xsd:element name="srcBook" type="shr5:SourceBook"/>
+          <xsd:element name="subLinks" type="shr5:SourceLink"/>
+        </xsd:choice>
+        <xsd:attribute name="parentId" type="xsd:string"/>
+        <xsd:attribute name="page" type="xsd:string"/>
+        <xsd:attribute name="srcBook" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SourceLink" type="shr5:SourceLink">
+    <xsd:annotation>
+      <xsd:documentation>Defines a simple link to a source book page.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
 </xsd:schema>

@@ -1295,4 +1295,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MiniGrenate" eSuperTypes="#//Munition #//AbtraktGranate"/>
   <eClassifiers xsi:type="ecore:EClass" name="Granate" eSuperTypes="#//Wurfwaffe #//AbtraktGranate"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SourceLink" eSuperTypes="#//Beschreibbar #//Quelle">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Defines a simple link to a source book page."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subLinks" upperBound="-1"
+        eType="#//SourceLink" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

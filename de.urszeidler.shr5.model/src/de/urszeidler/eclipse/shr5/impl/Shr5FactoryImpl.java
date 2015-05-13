@@ -151,6 +151,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
             case Shr5Package.FAHRZEUG_ERWEITERUNG: return createFahrzeugErweiterung();
             case Shr5Package.MINI_GRENATE: return createMiniGrenate();
             case Shr5Package.GRANATE: return createGranate();
+            case Shr5Package.SOURCE_LINK: return createSourceLink();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -1216,6 +1217,16 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
     public Granate createGranate() {
         GranateImpl granate = new GranateImpl();
         return granate;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public SourceLink createSourceLink() {
+        SourceLinkImpl sourceLink = new SourceLinkImpl();
+        return sourceLink;
     }
 
     /**

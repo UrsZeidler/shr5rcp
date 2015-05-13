@@ -937,6 +937,13 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass sourceLinkEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EClass activeMatixDeviceEClass = null;
 
     /**
@@ -5954,6 +5961,24 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
     /**
      * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EClass getSourceLink() {
+        return sourceLinkEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EReference getSourceLink_SubLinks() {
+        return (EReference)sourceLinkEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      */
@@ -6781,6 +6806,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
         granateEClass = createEClass(GRANATE);
 
+        sourceLinkEClass = createEClass(SOURCE_LINK);
+        createEReference(sourceLinkEClass, SOURCE_LINK__SUB_LINKS);
+
         // Create enums
         feuerModusEEnum = createEEnum(FEUER_MODUS);
         schadensTypEEnum = createEEnum(SCHADENS_TYP);
@@ -7057,6 +7085,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         miniGrenateEClass.getESuperTypes().add(this.getAbtraktGranate());
         granateEClass.getESuperTypes().add(this.getWurfwaffe());
         granateEClass.getESuperTypes().add(this.getAbtraktGranate());
+        sourceLinkEClass.getESuperTypes().add(this.getBeschreibbar());
+        sourceLinkEClass.getESuperTypes().add(this.getQuelle());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(beschreibbarEClass, Beschreibbar.class, "Beschreibbar", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -7717,6 +7747,9 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(miniGrenateEClass, MiniGrenate.class, "MiniGrenate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
         initEClass(granateEClass, Granate.class, "Granate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+        initEClass(sourceLinkEClass, SourceLink.class, "SourceLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEReference(getSourceLink_SubLinks(), this.getSourceLink(), null, "subLinks", null, 0, -1, SourceLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(feuerModusEEnum, FeuerModus.class, "FeuerModus");

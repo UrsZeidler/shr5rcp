@@ -1119,5 +1119,14 @@
     <nested inputs="shr5.ecore#//AbtraktGranate/blast" outputs="Shr5XMI.xsd#//Granate;XSDComplexTypeDefinition=149/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//AbtraktGranate/chemical" outputs="Shr5XMI.xsd#//Granate;XSDComplexTypeDefinition=149/XSDParticle/XSDModelGroup/XSDParticle"/>
     <nested inputs="shr5.ecore#//Granate" outputs="Shr5XMI.xsd#//Granate;XSDElementDeclaration=149"/>
+    <nested inputs="shr5.ecore#//SourceLink" outputs="Shr5XMI.xsd#//SourceLink;XSDComplexTypeDefinition=150">
+      <nested inputs="shr5.ecore#//SourceLink/subLinks" outputs="Shr5XMI.xsd#//SourceLink;XSDComplexTypeDefinition=150/XSDParticle/XSDModelGroup/XSDParticle=2"/>
+    </nested>
+    <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//SourceLink;XSDComplexTypeDefinition=150/XSDAttributeUse"/>
+    <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//SourceLink;XSDComplexTypeDefinition=150/XSDParticle/XSDModelGroup/XSDParticle"/>
+    <nested inputs="shr5.ecore#//Quelle/page" outputs="Shr5XMI.xsd#//SourceLink;XSDComplexTypeDefinition=150/XSDAttributeUse=1"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//SourceLink;XSDComplexTypeDefinition=150/XSDAttributeUse=2"/>
+    <nested inputs="shr5.ecore#//Quelle/srcBook" outputs="Shr5XMI.xsd#//SourceLink;XSDComplexTypeDefinition=150/XSDParticle/XSDModelGroup/XSDParticle=1"/>
+    <nested inputs="shr5.ecore#//SourceLink" outputs="Shr5XMI.xsd#//SourceLink;XSDElementDeclaration=150"/>
   </nested>
 </xsd2ecore:XSD2EcoreMappingRoot>

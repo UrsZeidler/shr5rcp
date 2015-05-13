@@ -666,6 +666,10 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
                 return createGranateAdapter();
             }
             @Override
+            public Adapter caseSourceLink(SourceLink object) {
+                return createSourceLinkAdapter();
+            }
+            @Override
             public Adapter defaultCase(EObject object) {
                 return createEObjectAdapter();
             }
@@ -2502,6 +2506,20 @@ public class Shr5AdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createGranateAdapter() {
+        return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link de.urszeidler.eclipse.shr5.SourceLink <em>Source Link</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see de.urszeidler.eclipse.shr5.SourceLink
+     * @generated
+     */
+    public Adapter createSourceLinkAdapter() {
         return null;
     }
 

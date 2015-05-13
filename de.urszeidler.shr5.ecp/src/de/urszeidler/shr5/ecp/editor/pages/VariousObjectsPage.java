@@ -26,6 +26,7 @@ import de.urszeidler.eclipse.shr5.Quelle;
 import de.urszeidler.eclipse.shr5.SensorFunction;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.SourceLink;
 import de.urszeidler.eclipse.shr5.Zauber;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.LifeModule;
@@ -199,6 +200,8 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MARTIALART_STYLE__USABLE_WITH, grpGegenstand);
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MARTIALART_STYLE__TECHNIQUES, grpGegenstand,createControllGridData(100));
         }else if (object instanceof MartialartTechnique) {
+        }else if (object instanceof SourceLink) {
+            emfFormBuilder.addTextEntry(Shr5Package.Literals.SOURCE_LINK__SUB_LINKS, grpGegenstand,createControllGridData(200));
         }
         
         addSourceFeature(grpQuelle);

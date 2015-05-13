@@ -2285,6 +2285,29 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.eclipse.shr5.SourceLink} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SourceLinkItemProvider sourceLinkItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.eclipse.shr5.SourceLink}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSourceLinkAdapter() {
+        if (sourceLinkItemProvider == null) {
+            sourceLinkItemProvider = new SourceLinkItemProvider(this);
+        }
+
+        return sourceLinkItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2477,6 +2500,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
         if (fahrzeugErweiterungItemProvider != null) fahrzeugErweiterungItemProvider.dispose();
         if (miniGrenateItemProvider != null) miniGrenateItemProvider.dispose();
         if (granateItemProvider != null) granateItemProvider.dispose();
+        if (sourceLinkItemProvider != null) sourceLinkItemProvider.dispose();
     }
 
     @Override
