@@ -25356,4 +25356,22 @@
       </management>
     </stories>
   </entries>
+  <entries xsi:type="shr5:SourceLink" xmi:id="_qAodQPmmEeS0dPizuGf_kA" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="core rules" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+    <subLinks xmi:id="_SGYHMPkwEeS0dPizuGf_kA" name="Your Character" page="50" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+      <subLinks xmi:id="_b0-P0PmmEeS0dPizuGf_kA" name="Metatype" page="50" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
+      <subLinks xmi:id="_1otToPmmEeS0dPizuGf_kA" name="Attributes" page="51" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
+      <subLinks xmi:id="_lDyIwPmmEeS0dPizuGf_kA" name="Initiative and Condition Monitors" page="52" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
+      <subLinks xmi:id="_WprkwPmoEeS0dPizuGf_kA" name="Your Character" page="50" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+        <subLinks xmi:id="_WprkwfmoEeS0dPizuGf_kA" name="Metatype" page="50" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
+        <subLinks xmi:id="_WprkwvmoEeS0dPizuGf_kA" name="Attributes" page="51" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
+        <subLinks xmi:id="_Wprkw_moEeS0dPizuGf_kA" name="Initiative and Condition Monitors" page="52" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
+      </subLinks>
+    </subLinks>
+    <subLinks xmi:id="_E7QQoPmnEeS0dPizuGf_kA" name="Edge" page="56" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+      <subLinks xmi:id="_KXmkkPmnEeS0dPizuGf_kA" name="Edge Effects" page="56" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
+      <subLinks xmi:id="_YFcNkPmnEeS0dPizuGf_kA" name="Regaining Edge" page="56" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
+      <subLinks xmi:id="_SX-7gPmnEeS0dPizuGf_kA" name="Burning Edge" page="57" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
+    </subLinks>
+    <subLinks xmi:id="_zwbt8PmnEeS0dPizuGf_kA" name="Regaining Edge" page="56" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
+  </entries>
 </shr5:ShrList>

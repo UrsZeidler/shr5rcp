@@ -201,7 +201,8 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MARTIALART_STYLE__TECHNIQUES, grpGegenstand,createControllGridData(100));
         }else if (object instanceof MartialartTechnique) {
         }else if (object instanceof SourceLink) {
-            emfFormBuilder.addTextEntry(Shr5Package.Literals.SOURCE_LINK__SUB_LINKS, grpGegenstand,createControllGridData(200));
+            createTreeTableWidget(composite_Additional, Shr5Package.Literals.SOURCE_LINK__SUB_LINKS, managedForm, object);
+            grpGegenstand.dispose();
         }
         
         addSourceFeature(grpQuelle);

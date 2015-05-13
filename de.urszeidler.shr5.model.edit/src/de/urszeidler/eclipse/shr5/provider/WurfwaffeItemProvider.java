@@ -123,10 +123,13 @@ public class WurfwaffeItemProvider
      */
 	@Override
 	public String getText(Object object) {
-        String label = ((Wurfwaffe)object).getName();
-        return label == null || label.length() == 0 ?
-            getString("_UI_Wurfwaffe_type") :
-            getString("_UI_Wurfwaffe_type") + " " + label;
+        Wurfwaffe o = (Wurfwaffe)object;
+        
+        String label = o.getName();
+        int anzahl = o.getAnzahl();
+
+        String format = String.format("%s %s [%d]", getString("_UI_Wurfwaffe_type"),label == null || label.length() == 0 ? "" : label,anzahl);
+        return format;
     }
 
 	/**

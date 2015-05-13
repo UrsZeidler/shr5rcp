@@ -10,8 +10,11 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.swt.graphics.Image;
 
+import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.SensorArray;
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.SensorArray} object.
@@ -49,10 +52,17 @@ public class SensorArrayItemProvider extends SensorItemProvider {
      * This returns SensorArray.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public Object getImage(Object object) {
+        Beschreibbar beschreibbar = (Beschreibbar) object;
+        if (beschreibbar.getImage() != null) {
+            Image image = AdapterFactoryUtil.getInstance().getImageScaledBy(16, beschreibbar.getImage());
+            if (image != null)
+                return image;
+        }
+
         return overlayImage(object, getResourceLocator().getImage("full/obj16/SensorArray"));
     }
 

@@ -13,9 +13,12 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.swt.graphics.Image;
 
+import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Shr5Package;
 import de.urszeidler.eclipse.shr5.WaffenFokus;
+import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.WaffenFokus} object.
@@ -100,10 +103,17 @@ public class WaffenFokusItemProvider
      * This returns WaffenFokus.gif.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public Object getImage(Object object) {
+        Beschreibbar beschreibbar = (Beschreibbar) object;
+        if (beschreibbar.getImage() != null) {
+            Image image = AdapterFactoryUtil.getInstance().getImageScaledBy(16, beschreibbar.getImage());
+            if (image != null)
+                return image;
+        }
+
         return overlayImage(object, getResourceLocator().getImage("full/obj16/WaffenFokus"));
     }
 
