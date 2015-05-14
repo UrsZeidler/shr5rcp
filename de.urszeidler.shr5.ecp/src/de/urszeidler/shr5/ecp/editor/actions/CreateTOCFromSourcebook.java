@@ -45,7 +45,7 @@ public class CreateTOCFromSourcebook extends Action {
     public CreateTOCFromSourcebook(Shell shell, SourceLink object) {
         this.shell = shell;
         this.theObject = object;
-        setToolTipText("Create source links");
+        setToolTipText("Create source links from "+ labelProvider.getText(theObject.getSrcBook()));
         setImageDescriptor(ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/collection.png"));
     }
 
