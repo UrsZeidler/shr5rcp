@@ -185,6 +185,8 @@ public class Messages extends NLS {
     public static String BeschreibbarWidget_btnClear_text;
     public static String BeschreibbarWidget_link_text;
     public static String BeschreibbarWidget_link_clear_text;
+    public static String VariousObjectsPage_lblFilter_text;
+    public static String VariousObjectsPage_txtFiltertext_text;
 
     static {
         // initialize resource bundle

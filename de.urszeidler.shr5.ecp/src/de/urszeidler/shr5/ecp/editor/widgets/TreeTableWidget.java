@@ -61,6 +61,7 @@ public class TreeTableWidget extends Composite {
     // TODO: an enum for the editing state when we want only delete or only add for example
     private boolean readOnly = false;
     private ToolBar optionalToolbar;
+    private TreeViewer treeViewer;
 
     /**
      * Create the composite.
@@ -159,7 +160,7 @@ public class TreeTableWidget extends Composite {
 
         composite.setLayout(new TreeColumnLayout());
 
-        final TreeViewer treeViewer = new TreeViewer(composite, SWT.BORDER | SWT.MULTI);
+        treeViewer = new TreeViewer(composite, SWT.BORDER | SWT.MULTI);
         if (selectionChangeListener != null)
             treeViewer.addSelectionChangedListener(selectionChangeListener);
         if (dblListener != null)
@@ -271,6 +272,14 @@ public class TreeTableWidget extends Composite {
 
     public ToolBar getOptionalToolbar() {
         return optionalToolbar;
+    }
+
+    public TreeViewer getTreeViewer() {
+        return treeViewer;
+    }
+
+    public void setTreeViewer(TreeViewer treeViewer) {
+        this.treeViewer = treeViewer;
     }
 
 }

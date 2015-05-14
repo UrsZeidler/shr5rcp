@@ -1,16 +1,25 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
-import org.apache.fop.afp.util.StringUtils;
-import org.apache.pdfbox.util.StringUtil;
+
 import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.ModifyEvent;
+import org.eclipse.swt.events.ModifyListener;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
@@ -18,6 +27,7 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Geist;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.MagischeTradition;
@@ -38,6 +48,10 @@ import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.actions.CreateTOCFromSourcebook;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
+
+import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.core.databinding.UpdateValueStrategy;
 /**
  * Use for object that is only a {@link Quelle}.
  * @author urs
@@ -48,6 +62,8 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
     private EditingDomain editingDomain;
 
     private DataBindingContext m_bindingContext;
+    private Text txtFiltertext;
+//    private WritableValue filterValue = new WritableValue();
 
     /**
      * Create the form page.
@@ -108,14 +124,13 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit, editingDomain);
-        GridData gd_beschreibbarWidget = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1);
         // gd_beschreibbarWidget.widthHint = 0;
-        beschreibbarWidget.setLayoutData(gd_beschreibbarWidget);
+        beschreibbarWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         managedForm.getToolkit().adapt(beschreibbarWidget);
         managedForm.getToolkit().paintBordersFor(beschreibbarWidget);
 
         Group grpGegenstand = new Group(managedForm.getForm().getBody(), SWT.NONE);
-        grpGegenstand.setLayout(new GridLayout(6, false));
+        grpGegenstand.setLayout(new GridLayout(2, false));
         grpGegenstand.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
         managedForm.getToolkit().adapt(grpGegenstand);
         managedForm.getToolkit().paintBordersFor(grpGegenstand);
@@ -159,6 +174,7 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
         createFormBuilder(managedForm);
 
         grpGegenstand.setText(labelProvider.getText(object.eClass()));
+
 
         if (object instanceof Geist) {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.STUFEN_PERSONA__STUFE, grpGegenstand);
@@ -208,8 +224,9 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
             emfFormBuilder.addTextEntry(Shr5Package.Literals.MARTIALART_STYLE__TECHNIQUES, grpGegenstand,createControllGridData(100));
         }else if (object instanceof MartialartTechnique) {
         }else if (object instanceof SourceLink) {
-            createTreeTableWidget(composite_Additional, Shr5Package.Literals.SOURCE_LINK__SUB_LINKS, managedForm, object);
-            grpGegenstand.dispose();
+            grpGegenstand.setLayout(new GridLayout(3, false));
+            TreeTableWidget createTreeTableWidget = createTreeTableWidget(composite_Additional, Shr5Package.Literals.SOURCE_LINK__SUB_LINKS, managedForm, object);
+            createFilterWidgets(managedForm, grpGegenstand, createTreeTableWidget);
         }
         
         addSourceFeature(grpQuelle);
@@ -225,21 +242,74 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
             treeTableWidget.setLayoutData(layoutData);
             managedForm.getToolkit().adapt(treeTableWidget);
             managedForm.getToolkit().paintBordersFor(treeTableWidget);
-
         }
-        
         managedForm.reflow(true);
-
     }
 
-    protected DataBindingContext initDataBindings() {
-        DataBindingContext bindingContext = new DataBindingContext();
-        //
-        return bindingContext;
+    /**
+     * Creates the filter widget for the sourceLinks.
+     * @param managedForm
+     * @param grpGegenstand
+     * @param createTreeTableWidget
+     */
+    private void createFilterWidgets(IManagedForm managedForm, Group grpGegenstand,final TreeTableWidget createTreeTableWidget) {
+        Label lblFilter = new Label(grpGegenstand, SWT.NONE);
+        lblFilter.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
+        managedForm.getToolkit().adapt(lblFilter, true, true);
+        lblFilter.setText(Messages.VariousObjectsPage_lblFilter_text);
+        final WritableValue filterValue = new WritableValue();
+        
+        txtFiltertext = new Text(grpGegenstand, SWT.BORDER);
+        txtFiltertext.setMessage(Messages.VariousObjectsPage_txtFiltertext_text);
+        txtFiltertext.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+        txtFiltertext.addModifyListener(new ModifyListener() {
+            
+            @Override
+            public void modifyText(ModifyEvent e) {
+                createTreeTableWidget.getTreeViewer().refresh();
+                createTreeTableWidget.getTreeViewer().expandAll();
+            }
+        });
+        managedForm.getToolkit().adapt(txtFiltertext, true, true);
+        Button button = managedForm.getToolkit().createButton(grpGegenstand, "clear", SWT.PUSH);
+        button.addSelectionListener(new SelectionAdapter(){
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                txtFiltertext.setText("");
+                createTreeTableWidget.getTreeViewer().refresh();
+                createTreeTableWidget.getTreeViewer().expandAll();
+            }
+        });
+        
+        ViewerFilter nameFilter = new ViewerFilter() {
+            @Override
+            public boolean select(Viewer viewer, Object parentElement, Object element) {
+                String stringFilter = (String)filterValue.getValue();
+                if (element instanceof SourceLink)
+                    if (stringFilter  != null && !stringFilter.isEmpty()) {
+                        String name = ((SourceLink)element).getName();
+                        if(name!=null)
+                            if (!name.trim().toLowerCase().contains(stringFilter.toLowerCase()))
+                                return false;
+                    }
+                return true;
+            }
+        };
+        createTreeTableWidget.getTreeViewer().addFilter(nameFilter);
+        IObservableValue observeTextTxtFiltertextObserveWidget = WidgetProperties.text(SWT.Modify).observe(txtFiltertext);
+        m_bindingContext.bindValue(observeTextTxtFiltertextObserveWidget, filterValue, null, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER));
+        
     }
 
+    
     @Override
     protected EditingDomain getEditingDomain() {
         return editingDomain;
+    }
+    protected DataBindingContext initDataBindings() {
+        DataBindingContext bindingContext = new DataBindingContext();
+        //
+        //
+        return bindingContext;
     }
 }

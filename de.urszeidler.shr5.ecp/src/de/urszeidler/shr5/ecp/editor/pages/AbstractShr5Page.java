@@ -336,12 +336,13 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         return controlGridData;
     }
     
-    protected void createTreeTableWidget(Composite composite, EReference ref,IManagedForm managedForm, EObject object){
+    protected TreeTableWidget createTreeTableWidget(Composite composite, EReference ref,IManagedForm managedForm, EObject object){
         TreeTableWidget treeTableWidget = new TreeTableWidget(composite, labelprovider.getText(ref), SWT.NONE, object, ref,  managedForm.getToolkit(), mananger, getEditingDomain(),
                 this,this);
         treeTableWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
         managedForm.getToolkit().adapt(treeTableWidget);
         managedForm.getToolkit().paintBordersFor(treeTableWidget);
+        return treeTableWidget;
 
     }
     
