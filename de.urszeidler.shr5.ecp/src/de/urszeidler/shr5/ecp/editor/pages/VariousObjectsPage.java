@@ -1,5 +1,7 @@
 package de.urszeidler.shr5.ecp.editor.pages;
 
+import org.apache.fop.afp.util.StringUtils;
+import org.apache.pdfbox.util.StringUtil;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.LabelProvider;
@@ -33,6 +35,7 @@ import de.urszeidler.eclipse.shr5Management.LifeModule;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
+import de.urszeidler.shr5.ecp.editor.actions.CreateTOCFromSourcebook;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
 /**
@@ -94,6 +97,10 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
         toolkit.paintBordersFor(body);
         if (object instanceof LifeModule) {
             form.getToolBarManager().add(new ActionM2TDialog(form.getShell(), object));
+        }else if (object instanceof SourceLink) {
+            SourceLink o = (SourceLink)object;
+            if(o.getPage()==null || o.getPage().isEmpty())
+                form.getToolBarManager().add(new CreateTOCFromSourcebook(form.getShell(), o));
         }
         addFillToolbar(form.getToolBarManager(), object, form.getShell());
         form.getToolBarManager().update(true);

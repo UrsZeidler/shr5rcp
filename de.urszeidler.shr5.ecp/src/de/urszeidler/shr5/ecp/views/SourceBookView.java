@@ -57,7 +57,7 @@ import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 
 public class SourceBookView extends ViewPart implements ISelectionListener {
-    private DataBindingContext m_bindingContext;
+    protected DataBindingContext m_bindingContext;
 
     public static final String ID = "de.urszeidler.shr5.ecp.views.SourceBookView"; //$NON-NLS-1$
     private Composite container;
@@ -442,7 +442,7 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
         return indexOf;
     }
 
-    private File getFileFromPreferences(SourceBook srcBook) {
+    public static File getFileFromPreferences(SourceBook srcBook) {
         if (srcBook == null)
             return null;
         IPreferenceStore store = Activator.getDefault().getPreferenceStore();
