@@ -282,14 +282,19 @@ public class SourceLinkItemProvider
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated not
      */
     @Override
     public String getText(Object object) {
-        String label = ((SourceLink)object).getName();
-        return label == null || label.length() == 0 ?
+        SourceLink o = (SourceLink)object;
+        String label = o.getName();
+        String string = label == null || label.length() == 0 ?
             getString("_UI_SourceLink_type") :
             getString("_UI_SourceLink_type") + " " + label;
+        if(o.getPage()!=null)
+            string = String.format("%s page: %s", string,o.getPage());
+            
+        return string;
     }
     
 
