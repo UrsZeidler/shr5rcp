@@ -47,7 +47,7 @@ public abstract class FilterDropdownSelectionListener<A> extends DropdownSelecti
                     MenuItem menuItem1 = items[i];
                     Object data = menuItem1.getData(ENTRY);
                     if (data != null) {
-                        filterValueList.remove((SourceBook)data);
+                        filterValueList.remove(data);
                         menuItem1.notifyListeners(SWT.Selection, new Event());
                     }
                 }

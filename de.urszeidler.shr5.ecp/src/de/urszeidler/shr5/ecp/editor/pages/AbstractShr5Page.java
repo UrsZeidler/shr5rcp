@@ -354,7 +354,6 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
         managedForm.getToolkit().adapt(treeTableWidget);
         managedForm.getToolkit().paintBordersFor(treeTableWidget);
         return treeTableWidget;
-
     }
     
     /**
