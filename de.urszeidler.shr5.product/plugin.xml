@@ -78,6 +78,7 @@
       </perspective>
       <perspective
             class="de.urszeidler.shr5.product.application.SourceBookPerspective"
+            icon="icons/toc_link_obj.gif"
             id="de.urszeidler.shr5.product.application.SourceBookPerspective"
             name="Source Book Perspective">
       </perspective>

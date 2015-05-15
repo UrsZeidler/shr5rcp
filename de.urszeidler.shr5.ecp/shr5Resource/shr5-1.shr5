@@ -4401,27 +4401,6 @@
           <entries xsi:type="shr5:Munition" xmi:id="4257a39e-41eb-45ee-976e-41c3c0bf960c" page="55" srcBook="5d6626a2-2400-44b5-b777-d7dac6cb512f" verfuegbarkeit="2" wertValue="5" name="Capsule Rounds" anzahl="10" proAnzahl="10" damageMod="-4" armorMod="4">
             <localizations xmi:id="_EJ5z4DnTEeSe6_w6Jrbqxg" local="de" name="Munition: Kapselgeschosse"/>
           </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="f4b92e14-fe1f-4be4-ad73-aed10e1f73b4" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="100" name="Flash-Bang" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
-            <localizations xmi:id="_omMzkPZZEeSsLt2jgpjbkA" local="de" name="Granate: Betäubung"/>
-          </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="8e04c493-b04d-4511-ba68-7b2e0edbf3aa" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="125" name="Flash-Pak" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
-            <localizations xmi:id="_omNaoPZZEeSsLt2jgpjbkA" local="de" name="Granate: Flash-Pack"/>
-          </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="7c5e7573-d75e-43e3-949c-cb4c9d70329b" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Fragmentation" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
-            <localizations xmi:id="_omNaofZZEeSsLt2jgpjbkA" local="de" name="Granate: Splitter"/>
-          </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="e61c5487-2074-4fc8-8da0-9891b15482e7" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="High Explosive" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
-            <localizations xmi:id="_omNaovZZEeSsLt2jgpjbkA" local="de" name="Granate: Spreng"/>
-          </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="06798b15-40bb-4464-b6a8-a01466ee9b9e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Gas" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
-            <localizations xmi:id="_omNao_ZZEeSsLt2jgpjbkA" local="de" name="Granate: Gas"/>
-          </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="84c6921e-dfa0-42ca-a01f-87c459ffc000" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Smoke" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
-            <localizations xmi:id="_omNapPZZEeSsLt2jgpjbkA" local="de" name="Granate: Rauch"/>
-          </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="f3472dc1-4c7b-403a-8001-6441bb65a687" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Thermal Smoke" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
-            <localizations xmi:id="_omNapfZZEeSsLt2jgpjbkA" local="de" name="Granate: IR-Rauch"/>
-          </entries>
           <entries xsi:type="shr5:MiniGrenate" xmi:id="f092fca8-46a9-4351-a06a-362846e6546a" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="100" name="Flash-Bang" type="_ENGR0znTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omThQPZZEeSsLt2jgpjbkA" local="de" name="Minigranate: Betäubung"/>
           </entries>
@@ -4452,6 +4431,30 @@
             <chemical xsi:type="shr5:Toxin" xmi:id="_QIyPAPZEEeSk2Z4iXCLh5g" name="Neuro-Stun IX" parentId="f81d9a2e-5c2d-49ad-93b4-1a7a71439bf3" page="410" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="13R" wertValue="60" anzahl="10" proAnzahl="10">
               <localizations xmi:id="_QIyPAfZEEeSk2Z4iXCLh5g" local="de" name="Neuro-Stun IX"/>
             </chemical>
+          </entries>
+        </entries>
+        <entries xsi:type="shr5:ShrList" xmi:id="_vUCrkPruEeSlhPyNzXGxgw" name="Throwing Weapons">
+          <entries xsi:type="shr5:Wurfwaffe" xmi:id="_2zHFMPruEeSlhPyNzXGxgw" page="424" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="25" name="Throwing knife" schadenscode="(STR + 1)P " durchschlagsKraft="-1" reichweite="_ENG44TnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1"/>
+          <entries xsi:type="shr5:Granate" xmi:id="f4b92e14-fe1f-4be4-ad73-aed10e1f73b4" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="100" name="Flash-Bang" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+            <localizations xmi:id="_omMzkPZZEeSsLt2jgpjbkA" local="de" name="Granate: Betäubung"/>
+          </entries>
+          <entries xsi:type="shr5:Granate" xmi:id="8e04c493-b04d-4511-ba68-7b2e0edbf3aa" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="125" name="Flash-Pak" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+            <localizations xmi:id="_omNaoPZZEeSsLt2jgpjbkA" local="de" name="Granate: Flash-Pack"/>
+          </entries>
+          <entries xsi:type="shr5:Granate" xmi:id="7c5e7573-d75e-43e3-949c-cb4c9d70329b" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Fragmentation" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+            <localizations xmi:id="_omNaofZZEeSsLt2jgpjbkA" local="de" name="Granate: Splitter"/>
+          </entries>
+          <entries xsi:type="shr5:Granate" xmi:id="e61c5487-2074-4fc8-8da0-9891b15482e7" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="High Explosive" schadenscode="16P" durchschlagsKraft="-1" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1" blast="2/m">
+            <localizations xmi:id="_omNaovZZEeSsLt2jgpjbkA" local="de" name="Granate: Spreng"/>
+          </entries>
+          <entries xsi:type="shr5:Granate" xmi:id="06798b15-40bb-4464-b6a8-a01466ee9b9e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Gas" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+            <localizations xmi:id="_omNao_ZZEeSsLt2jgpjbkA" local="de" name="Granate: Gas"/>
+          </entries>
+          <entries xsi:type="shr5:Granate" xmi:id="84c6921e-dfa0-42ca-a01f-87c459ffc000" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Smoke" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+            <localizations xmi:id="_omNapPZZEeSsLt2jgpjbkA" local="de" name="Granate: Rauch"/>
+          </entries>
+          <entries xsi:type="shr5:Granate" xmi:id="f3472dc1-4c7b-403a-8001-6441bb65a687" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Thermal Smoke" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+            <localizations xmi:id="_omNapfZZEeSsLt2jgpjbkA" local="de" name="Granate: IR-Rauch"/>
           </entries>
         </entries>
       </entries>
@@ -25356,22 +25359,5 @@
       </management>
     </stories>
   </entries>
-  <entries xsi:type="shr5:SourceLink" xmi:id="_qAodQPmmEeS0dPizuGf_kA" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="core rules" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-    <subLinks xmi:id="_SGYHMPkwEeS0dPizuGf_kA" name="Your Character" page="50" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-      <subLinks xmi:id="_b0-P0PmmEeS0dPizuGf_kA" name="Metatype" page="50" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
-      <subLinks xmi:id="_1otToPmmEeS0dPizuGf_kA" name="Attributes" page="51" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
-      <subLinks xmi:id="_lDyIwPmmEeS0dPizuGf_kA" name="Initiative and Condition Monitors" page="52" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
-      <subLinks xmi:id="_WprkwPmoEeS0dPizuGf_kA" name="Your Character" page="50" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-        <subLinks xmi:id="_WprkwfmoEeS0dPizuGf_kA" name="Metatype" page="50" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
-        <subLinks xmi:id="_WprkwvmoEeS0dPizuGf_kA" name="Attributes" page="51" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
-        <subLinks xmi:id="_Wprkw_moEeS0dPizuGf_kA" name="Initiative and Condition Monitors" page="52" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
-      </subLinks>
-    </subLinks>
-    <subLinks xmi:id="_E7QQoPmnEeS0dPizuGf_kA" name="Edge" page="56" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
-      <subLinks xmi:id="_KXmkkPmnEeS0dPizuGf_kA" name="Edge Effects" page="56" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
-      <subLinks xmi:id="_YFcNkPmnEeS0dPizuGf_kA" name="Regaining Edge" page="56" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
-      <subLinks xmi:id="_SX-7gPmnEeS0dPizuGf_kA" name="Burning Edge" page="57" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
-    </subLinks>
-    <subLinks xmi:id="_zwbt8PmnEeS0dPizuGf_kA" name="Regaining Edge" page="56" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66"/>
-  </entries>
+  <entries xsi:type="shr5:SourceLink" xmi:id="_5mPbgPrrEeSlhPyNzXGxgw" name="All Sources"/>
 </shr5:ShrList>
