@@ -25,6 +25,7 @@ import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.viewers.AbstractTreeViewer;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ILabelProvider;
@@ -32,15 +33,23 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.nebula.jface.cdatetime.CDateTimeObservableValue;
 import org.eclipse.nebula.widgets.cdatetime.CDT;
 import org.eclipse.nebula.widgets.cdatetime.CDateTime;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.ModifyEvent;
+import org.eclipse.swt.events.ModifyListener;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
+import org.eclipse.ui.dialogs.PatternFilter;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.editor.FormPage;
@@ -339,7 +348,9 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
     protected TreeTableWidget createTreeTableWidget(Composite composite, EReference ref,IManagedForm managedForm, EObject object){
         TreeTableWidget treeTableWidget = new TreeTableWidget(composite, labelprovider.getText(ref), SWT.NONE, object, ref,  managedForm.getToolkit(), mananger, getEditingDomain(),
                 this,this);
-        treeTableWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+        GridData layoutData = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
+        layoutData.heightHint = 300;
+        treeTableWidget.setLayoutData(layoutData);
         managedForm.getToolkit().adapt(treeTableWidget);
         managedForm.getToolkit().paintBordersFor(treeTableWidget);
         return treeTableWidget;
@@ -384,6 +395,50 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
                 srcLink.setImage(labelprovider.getImage(value));
             }
         });
+    }
+
+    /**
+     * Creates the filter widget for a treeviewer.
+     * @param managedForm
+     * @param grpGegenstand
+     * @param createTreeTableWidget
+     */
+    protected void createFilterWidgets(IManagedForm managedForm, Composite grpGegenstand, final TreeTableWidget createTreeTableWidget) {
+        Label lblFilter = new Label(grpGegenstand, SWT.NONE);
+        lblFilter.setToolTipText("Filter the view (* is a wildcard for many any and ? one any character)");
+        lblFilter.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
+        managedForm.getToolkit().adapt(lblFilter, true, true);
+        lblFilter.setText(Messages.VariousObjectsPage_lblFilter_text);
+        
+        final PatternFilter filter = new PatternFilter() {
+            @Override
+            protected boolean isParentMatch(Viewer viewer, Object element) {
+                return viewer instanceof AbstractTreeViewer && super.isParentMatch(viewer, element);
+            }
+        };
+    
+        
+        final Text txtFiltertext = new Text(grpGegenstand, SWT.BORDER);
+        txtFiltertext.setMessage(Messages.VariousObjectsPage_txtFiltertext_text);
+        txtFiltertext.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
+        txtFiltertext.addModifyListener(new ModifyListener() {
+            
+            @Override
+            public void modifyText(ModifyEvent e) {
+                createTreeTableWidget.getTreeViewer().expandAll();
+                filter.setPattern(((Text)e.widget).getText());
+                createTreeTableWidget.getTreeViewer().refresh();
+            }
+        });
+        managedForm.getToolkit().adapt(txtFiltertext, true, true);
+        Button button = managedForm.getToolkit().createButton(grpGegenstand, "clear", SWT.PUSH);
+        button.addSelectionListener(new SelectionAdapter(){
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                txtFiltertext.setText("");
+             }
+        });
+        createTreeTableWidget.getTreeViewer().addFilter(filter);
     }
 
 }

@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.jface.databinding.viewers.IViewerObservableList;
 import org.eclipse.jface.databinding.viewers.ObservableListTreeContentProvider;
 import org.eclipse.jface.databinding.viewers.ViewersObservables;
@@ -168,7 +167,7 @@ public class TreeTableWidget extends Composite {
         Tree tree = treeViewer.getTree();
         tree.setLinesVisible(true);
         toolkit.paintBordersFor(tree);
-        tree.setToolTipText(toTooltipName());
+//        tree.setToolTipText(toTooltipName());
 
         ToolBar toolBar = new ToolBar(sctnNewSection, SWT.FLAT | SWT.RIGHT);
         toolkit.adapt(toolBar);
@@ -254,21 +253,21 @@ public class TreeTableWidget extends Composite {
         });
     }
 
-    /**
-     * Get the tooltip.
-     * 
-     * @param e
-     * @param object
-     * @return
-     */
-    private String toTooltipName() {
-        IItemPropertyDescriptor propertyDescriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(object, feature);
-        if (propertyDescriptor == null)
-            return AdapterFactoryUtil.getInstance().getItemDelegator().getText(feature);
-
-        String displayName = propertyDescriptor.getDescription(feature);
-        return displayName;
-    }
+//    /**
+//     * Get the tooltip.
+//     * 
+//     * @param e
+//     * @param object
+//     * @return
+//     */
+//    private String toTooltipName() {
+//        IItemPropertyDescriptor propertyDescriptor = AdapterFactoryUtil.getInstance().getItemDelegator().getPropertyDescriptor(object, feature);
+//        if (propertyDescriptor == null)
+//            return AdapterFactoryUtil.getInstance().getItemDelegator().getText(feature);
+//
+//        String displayName = propertyDescriptor.getDescription(feature);
+//        return displayName;
+//    }
 
     public ToolBar getOptionalToolbar() {
         return optionalToolbar;

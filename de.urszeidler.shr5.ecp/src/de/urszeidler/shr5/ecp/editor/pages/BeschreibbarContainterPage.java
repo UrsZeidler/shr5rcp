@@ -13,6 +13,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.ShrList;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.CharacterGroup;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
@@ -109,6 +110,16 @@ public class BeschreibbarContainterPage extends AbstractShr5Page<Beschreibbar> {
         beschreibbarWidget.setLayoutData(gd_beschreibbarWidget);
         managedForm.getToolkit().adapt(beschreibbarWidget);
         managedForm.getToolkit().paintBordersFor(beschreibbarWidget);
+        
+        Composite composite1 = null;
+        if (object instanceof ShrList) {
+            composite1 = new Composite(managedForm.getForm().getBody(), SWT.NONE);
+            composite1.setLayout(new GridLayout(3, false));
+            composite1.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+            managedForm.getToolkit().adapt(composite1);
+            managedForm.getToolkit().paintBordersFor(composite1);
+        }
+
 
         if (eReferences == null) {
             TreeTableWidget treeTableWidget = new TreeTableWidget(managedForm.getForm().getBody(), titel, SWT.NONE, object, eReference, toolkit,
@@ -130,6 +141,11 @@ public class BeschreibbarContainterPage extends AbstractShr5Page<Beschreibbar> {
                 treeTableWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
                 managedForm.getToolkit().adapt(treeTableWidget);
                 managedForm.getToolkit().paintBordersFor(treeTableWidget);
+                if (object instanceof ShrList) {
+                    if(composite1!=null)
+                        createFilterWidgets(managedForm, composite1, treeTableWidget);
+                    
+                }
             }
         }
         m_bindingContext = initDataBindings();

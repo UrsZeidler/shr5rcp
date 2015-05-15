@@ -292,7 +292,7 @@ public class SourceLinkItemProvider
             getString("_UI_SourceLink_type") :
             getString("_UI_SourceLink_type") + " " + label;
         if(o.getPage()!=null)
-            string = String.format("%s page: %s", string,o.getPage());
+            string = String.format("%s page: %s", label,o.getPage());
             
         return string;
     }

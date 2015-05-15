@@ -2,24 +2,14 @@ package de.urszeidler.shr5.ecp.editor.pages;
 
 
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.LabelProvider;
-import org.eclipse.jface.viewers.Viewer;
-import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.ModifyEvent;
-import org.eclipse.swt.events.ModifyListener;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.forms.IManagedForm;
 import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
@@ -27,7 +17,6 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
 import de.urszeidler.eclipse.shr5.Beschreibbar;
-import de.urszeidler.eclipse.shr5.Fertigkeit;
 import de.urszeidler.eclipse.shr5.Geist;
 import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.MagischeTradition;
@@ -48,10 +37,6 @@ import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
 import de.urszeidler.shr5.ecp.editor.actions.CreateTOCFromSourcebook;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.ecp.editor.widgets.TreeTableWidget;
-
-import org.eclipse.core.databinding.observable.value.IObservableValue;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
-import org.eclipse.core.databinding.UpdateValueStrategy;
 /**
  * Use for object that is only a {@link Quelle}.
  * @author urs
@@ -62,7 +47,6 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
     private EditingDomain editingDomain;
 
     private DataBindingContext m_bindingContext;
-    private Text txtFiltertext;
 //    private WritableValue filterValue = new WritableValue();
 
     /**
@@ -246,62 +230,6 @@ public class VariousObjectsPage extends AbstractShr5Page<Beschreibbar> {
         managedForm.reflow(true);
     }
 
-    /**
-     * Creates the filter widget for the sourceLinks.
-     * @param managedForm
-     * @param grpGegenstand
-     * @param createTreeTableWidget
-     */
-    private void createFilterWidgets(IManagedForm managedForm, Group grpGegenstand,final TreeTableWidget createTreeTableWidget) {
-        Label lblFilter = new Label(grpGegenstand, SWT.NONE);
-        lblFilter.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
-        managedForm.getToolkit().adapt(lblFilter, true, true);
-        lblFilter.setText(Messages.VariousObjectsPage_lblFilter_text);
-        final WritableValue filterValue = new WritableValue();
-        
-        txtFiltertext = new Text(grpGegenstand, SWT.BORDER);
-        txtFiltertext.setMessage(Messages.VariousObjectsPage_txtFiltertext_text);
-        txtFiltertext.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-        txtFiltertext.addModifyListener(new ModifyListener() {
-            
-            @Override
-            public void modifyText(ModifyEvent e) {
-                createTreeTableWidget.getTreeViewer().refresh();
-                createTreeTableWidget.getTreeViewer().expandAll();
-            }
-        });
-        managedForm.getToolkit().adapt(txtFiltertext, true, true);
-        Button button = managedForm.getToolkit().createButton(grpGegenstand, "clear", SWT.PUSH);
-        button.addSelectionListener(new SelectionAdapter(){
-            @Override
-            public void widgetSelected(SelectionEvent e) {
-                txtFiltertext.setText("");
-                createTreeTableWidget.getTreeViewer().refresh();
-                createTreeTableWidget.getTreeViewer().expandAll();
-            }
-        });
-        
-        ViewerFilter nameFilter = new ViewerFilter() {
-            @Override
-            public boolean select(Viewer viewer, Object parentElement, Object element) {
-                String stringFilter = (String)filterValue.getValue();
-                if (element instanceof SourceLink)
-                    if (stringFilter  != null && !stringFilter.isEmpty()) {
-                        String name = ((SourceLink)element).getName();
-                        if(name!=null)
-                            if (!name.trim().toLowerCase().contains(stringFilter.toLowerCase()))
-                                return false;
-                    }
-                return true;
-            }
-        };
-        createTreeTableWidget.getTreeViewer().addFilter(nameFilter);
-        IObservableValue observeTextTxtFiltertextObserveWidget = WidgetProperties.text(SWT.Modify).observe(txtFiltertext);
-        m_bindingContext.bindValue(observeTextTxtFiltertextObserveWidget, filterValue, null, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER));
-        
-    }
-
-    
     @Override
     protected EditingDomain getEditingDomain() {
         return editingDomain;

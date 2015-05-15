@@ -76,6 +76,11 @@
             id="de.urszeidler.shr5.product.application.CombatPerspective"
             name="Combat Perspective">
       </perspective>
+      <perspective
+            class="de.urszeidler.shr5.product.application.SourceBookPerspective"
+            id="de.urszeidler.shr5.product.application.SourceBookPerspective"
+            name="Source Book Perspective">
+      </perspective>
    </extension>
 
 
