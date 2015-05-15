@@ -2,6 +2,7 @@ package de.urszeidler.shr5.ecp.editor.actions;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collection;
 
 import org.apache.pdfbox.cos.COSArray;
 import org.apache.pdfbox.cos.COSObject;
@@ -17,9 +18,11 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.command.AddCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.preference.IPreferenceStore;
@@ -52,6 +55,11 @@ public class CreateTOCFromSourcebook extends Action {
     @Override
     public void run() {
         final SourceBook srcBook = theObject.getSrcBook();
+        if(srcBook==null && (theObject.getPage()==null || theObject.getPage().isEmpty()) ){
+            importAllSources();
+            return;
+        }
+        
         final File docFile = SourceBookView.getFileFromPreferences(srcBook);
         final IPreferenceStore store = Activator.getDefault().getPreferenceStore();
         final String id2 = ShadowrunEditingTools.getId(srcBook);
@@ -64,7 +72,7 @@ public class CreateTOCFromSourcebook extends Action {
         Job job = new Job(String.format("importing outline from %s" , labelProvider.getText(theObject))) {
             @Override
             protected IStatus run(IProgressMonitor monitor) {
-                return doAction(monitor,docFile,store,id2,srcBook);
+                return doAction(monitor,docFile,store,id2,srcBook,theObject);
             }
         };
 
@@ -72,9 +80,39 @@ public class CreateTOCFromSourcebook extends Action {
         job.schedule();
     }
 
-    protected IStatus doAction(IProgressMonitor monitor, File docFile, IPreferenceStore store, String id2, SourceBook srcBook) {
+    private void importAllSources() {
+        final Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType(theObject, Shr5Package.Literals.SOURCE_BOOK);
+
+        Job job = new Job(String.format("Importing outline from all confifured sources." , labelProvider.getText(theObject))) {
+            @Override
+            protected IStatus run(IProgressMonitor monitor) {
+                
+                for (EObject eObject : collection) {
+                    SourceBook srcBook = (SourceBook)eObject;
+                    final File docFile = SourceBookView.getFileFromPreferences(srcBook);
+                    final IPreferenceStore store = Activator.getDefault().getPreferenceStore();
+                    final String id2 = ShadowrunEditingTools.getId(srcBook);
+                    if (srcBook == null || docFile == null || id2 == null) {
+                        continue;
+                    }
+                    
+                    SourceLink link = Shr5Factory.eINSTANCE.createSourceLink();
+                    link.setSrcBook(srcBook);
+                    link.setName(srcBook.getName());
+                    theObject.getSubLinks().add(link);
+                    doAction(monitor,docFile,store,id2,srcBook,link);
+                }
+                return Status.OK_STATUS;
+            }
+        };
+
+        job.setUser(true);
+        job.schedule();
+    }
+
+    protected IStatus doAction(IProgressMonitor monitor, File docFile, IPreferenceStore store, String id2, SourceBook srcBook, SourceLink orgLink) {
         int offset = store.getInt(PreferenceConstants.LINKED_SOURCEBOOKS_OFFSET + id2);
-        monitor.setTaskName("load document");
+        monitor.setTaskName("load document "+labelProvider.getText(srcBook));
         SourceLink link = Shr5Factory.eINSTANCE.createSourceLink();
         link.setSrcBook(srcBook);
         try {
@@ -90,9 +128,9 @@ public class CreateTOCFromSourcebook extends Action {
             pdDocument.close();
             
             EList<SourceLink> subLinks = link.getSubLinks();
-            EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(theObject);
+            EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(orgLink);
             if(editingDomain!=null){
-                Command command = AddCommand.create(editingDomain, theObject, Shr5Package.Literals.SOURCE_LINK__SUB_LINKS, subLinks);
+                Command command = AddCommand.create(editingDomain, orgLink, Shr5Package.Literals.SOURCE_LINK__SUB_LINKS, subLinks);
                 editingDomain.getCommandStack().execute(command);
             }
         } catch (IOException e) {

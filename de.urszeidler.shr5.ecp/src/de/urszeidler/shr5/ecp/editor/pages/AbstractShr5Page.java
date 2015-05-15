@@ -431,7 +431,9 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
             }
         });
         managedForm.getToolkit().adapt(txtFiltertext, true, true);
-        Button button = managedForm.getToolkit().createButton(grpGegenstand, "clear", SWT.PUSH);
+        Button button = managedForm.getToolkit().createButton(grpGegenstand, "", SWT.PUSH);
+        button.setImage(ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/clear.gif"));
+        button.setToolTipText("Clear the filter");
         button.addSelectionListener(new SelectionAdapter(){
             @Override
             public void widgetSelected(SelectionEvent e) {

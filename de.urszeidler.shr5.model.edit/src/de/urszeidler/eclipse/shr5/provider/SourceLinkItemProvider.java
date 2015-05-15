@@ -275,7 +275,14 @@ public class SourceLinkItemProvider
                 return image;
         }
 
-        return overlayImage(object, getResourceLocator().getImage("full/obj16/SourceLink"));
+        SourceLink o = (SourceLink)object;
+        if(o.getPage()!=null && o.getSrcBook()!=null)
+            return overlayImage(object, getResourceLocator().getImage("full/obj16/link_rule"));
+            
+        if(o.getPage()==null && o.getSrcBook()!=null)
+           return AdapterFactoryUtil.getInstance().getLabelProvider().getImage(o.getSrcBook());
+        
+        return overlayImage(object, getResourceLocator().getImage("full/obj16/links_obj"));
     }
 
     /**
