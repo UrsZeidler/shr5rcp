@@ -110,7 +110,7 @@ public class VariousPage extends AbstractShr5Page<Beschreibbar> {
             managedForm.getToolkit().adapt(treeTableWidget);
             managedForm.getToolkit().paintBordersFor(treeTableWidget);
         }
-
+        
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);
         managedForm.reflow(true);
 

@@ -234,10 +234,21 @@ Limits
 [template public printContracts(gears : Sequence(Vertrag),empty :String)? (not gears->isEmpty())]
 ['_UI_ManagedCharacter_contracts_feature'.localizedString().titelText()/]
 [for (ag : Vertrag | gears)]
-[printTextPlusSpace(ag.getText(),empty)/] [ag.wert.formatMoney()/]
+[printContract(ag, empty)/]
 [/for]
 
 [printTextPlusSpace('sum :', empty)/] [calcListenWertToString(gears) /]
+[/template]
+
+[template public printContract(c : Vertrag,empty :String)]
+[printTextPlusSpace(c.getText(),empty)/] [c.wert.formatMoney()/]
+[/template]
+
+[template public printContract(c : Lifestyle,empty :String)]
+[printTextPlusSpace(c.getText(),empty)/] [c.wertValue.formatMoney()/]/[c.wert.formatMoney()/]
+[for (l : LifestyleOption | c.options)]
+- [printTextPlusSpace(l.getText(),empty)/] [l.wert.formatMoney()/]
+[/for]
 [/template]
 
 [template public printVehicles(sg : OrderedSet(Fahrzeug),empty :String)? (not sg->isEmpty())]

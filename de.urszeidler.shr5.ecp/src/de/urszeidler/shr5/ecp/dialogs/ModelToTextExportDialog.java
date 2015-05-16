@@ -39,6 +39,7 @@ import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.shr5.acceleo.sheets.AbstractGenerator;
 import de.urszeidler.shr5.acceleo.sheets.BoardCharacterSheet;
+import de.urszeidler.shr5.acceleo.sheets.BoardScriptProtocollWriter;
 import de.urszeidler.shr5.acceleo.sheets.BoardShr5GeneratorSheet;
 import de.urszeidler.shr5.acceleo.sheets.FoCharacterSheet;
 import de.urszeidler.shr5.acceleo.sheets.GenerateLifeModuleBoardSheet;
@@ -50,6 +51,7 @@ import de.urszeidler.shr5.acceleo.sheets.SpiritFoSheet;
 import de.urszeidler.shr5.acceleo.sheets.SvgCharacterSheet;
 import de.urszeidler.shr5.acceleo.sheets.TableBoardShr5CharacterSheet;
 import de.urszeidler.shr5.ecp.Activator;
+import de.urszeidler.shr5.scripting.ScriptingPackage;
 
 public class ModelToTextExportDialog extends TitleAreaDialog {
     private Text text;
@@ -136,6 +138,10 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         hashMap1.put("Life Module", new GenerateLifeModuleBoardSheet());
         transformerMap.put(Shr5managementPackage.Literals.LIFE_MODULE, hashMap1);
 
+        hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
+        hashMap1.put("Script hinstory", new BoardScriptProtocollWriter());
+        transformerMap.put(ScriptingPackage.Literals.SCRIPT_HISTORY, hashMap1);
+
 
         dialogSettings = Activator.getDefault().getDialogSettings();
     }
@@ -208,6 +214,9 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         if (map != null) {
             map.keySet();
             combo.setItems(map.keySet().toArray(new String[]{}));
+        }else{
+            setErrorMessage("For this type of object no transformation is registered.");
+            return area;
         }
 
         String dir = dialogSettings.get("m2t.dir");//$NON-NLS-1$

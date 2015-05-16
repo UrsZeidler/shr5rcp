@@ -48,6 +48,7 @@ import de.urszeidler.shr5.ecp.editor.pages.generator.AbstractGeneratorPage;
 import de.urszeidler.shr5.ecp.printer.ScriptPrinter;
 import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
+import de.urszeidler.shr5.runtime.ui.editor.pages.EObjectPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.PlacementPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.PlacementSimulationPage;
 import de.urszeidler.shr5.runtime.ui.editor.pages.RuntimeCharacterPage;
@@ -56,6 +57,7 @@ import de.urszeidler.shr5.runtime.ui.editor.pages.VariousPage;
 import de.urszeidler.shr5.scripting.Handout;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
+import de.urszeidler.shr5.scripting.ScriptHistory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
 import de.urszeidler.shr5.scripting.util.ScriptingSwitch;
 
@@ -137,7 +139,7 @@ public class RuntimeEditor extends AbstractShr5Editor {
                 try {
                     addPage(new VariousPage(RuntimeEditor.this, EMPTY, defaultLabelProvider.getText(object.eClass()), object, editingDomain, manager));
                 } catch (PartInitException e) {
-                    logError("error creating FertigkeitPage", e);//$NON-NLS-1$
+                    logError("error creating VariousPage", e);//$NON-NLS-1$
                 }
                 return this;
             }
@@ -161,7 +163,17 @@ public class RuntimeEditor extends AbstractShr5Editor {
         // };
         //
         ScriptingSwitch<Object> scriptingSwitchView = new ScriptingSwitch<Object>() {
-
+            @Override
+            public Object caseScriptHistory(ScriptHistory object) {
+                try {
+                    addPage(new EObjectPage(RuntimeEditor.this, EMPTY, defaultLabelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating EObjectPage", e);//$NON-NLS-1$
+                }
+                return this;
+            }
+            
+            
             @Override
             public Object caseScript(Script object) {
                 try {

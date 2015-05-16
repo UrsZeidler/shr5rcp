@@ -953,7 +953,7 @@
 
 [template public printContract(contract : IntervallVertrag)]
   <fo:table [defaultTableStyle()/]>
-    <fo:table-column  />
+    <fo:table-column column-width="20%"  />
     <fo:table-column  />
     <fo:table-column  />
     <fo:table-body  >
@@ -967,6 +967,32 @@
 [printCellRight(contract.wert.formatMoney())/]
      </fo:table-row>
 
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printContract(contract : Lifestyle)]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column column-width="20%" />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
+
+     <fo:table-row>
+[printCellSpanned(contract.getText(),3)/]
+     </fo:table-row>
+     <fo:table-row>
+[printCell(contract.begin.formatDate())/]
+[printCell(contract.faelligkeitsIntervall+' '+contract.unit)/]
+[printCellRight(contract.wertValue.formatMoney()+'/'+contract.wert.formatMoney())/]
+     </fo:table-row>
+[for (lo : LifestyleOption | contract.options)]
+     <fo:table-row>
+[printCell(' ')/]
+[printCell(lo.getText())/]
+[printCellRight(lo.wert.formatMoney())/]
+     </fo:table-row>
+[/for]
     </fo:table-body>
    </fo:table>
 [/template]

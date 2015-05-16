@@ -61,6 +61,8 @@ public class TreeTableWidget extends Composite {
     private boolean readOnly = false;
     private ToolBar optionalToolbar;
     private TreeViewer treeViewer;
+    private IObservableList mObs;
+    private IViewerObservableList uiObs;
 
     /**
      * Create the composite.
@@ -91,6 +93,11 @@ public class TreeTableWidget extends Composite {
         this.editingDomain = editingDomain;
         this.titel = titel;
         this.dblListener = dblListner;
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                intern_dispose();
+            }
+        });
 
         createWidgets();
     }
@@ -106,6 +113,11 @@ public class TreeTableWidget extends Composite {
         this.titel = titel;
         this.dblListener = dblListner;
         this.readOnly = readOnly;
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                intern_dispose();
+            }
+        });
 
         createWidgets();
     }
@@ -121,6 +133,11 @@ public class TreeTableWidget extends Composite {
         this.titel = titel;
         this.selectionChangeListener = selectionChangeListener;
         this.dblListener = dblListner;
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                intern_dispose();
+            }
+        });
 
         createWidgets();
     }
@@ -138,9 +155,23 @@ public class TreeTableWidget extends Composite {
         this.selectionChangeListener = selectionChangeListener;
         this.dblListener = dblListner;
         this.readOnly = readOnly;
+        addDisposeListener(new DisposeListener() {
+            public void widgetDisposed(DisposeEvent e) {
+                intern_dispose();
+            }
+        });
         createWidgets();
     }
 
+
+    protected void intern_dispose() {
+//        if(mObs!=null)
+//            mObs.dispose();
+//        if(uiObs!=null)
+//            uiObs.dispose();
+    }
+
+    
     private void createWidgets() {
         toolkit.adapt(this);
         toolkit.paintBordersFor(this);
@@ -218,7 +249,7 @@ public class TreeTableWidget extends Composite {
         });
 
         treeViewer.setContentProvider(treeContentProvider);
-        IViewerObservableList uiObs = ViewersObservables.observeMultiSelection(treeViewer);
+        uiObs = ViewersObservables.observeMultiSelection(treeViewer);
 
         optionalToolbar = new ToolBar(sctnNewSection, SWT.FLAT | SWT.RIGHT);
         // toolkit.adapt(optionalToolbar);
@@ -231,7 +262,7 @@ public class TreeTableWidget extends Composite {
         else
             property = EMFProperties.list(feature);
 
-        IObservableList mObs = property.observe(object);
+        mObs = property.observe(object);
         treeViewer.setInput(mObs);
         final FormbuilderEntry e1 = new FormbuilderEntry(null, feature, null, null);
         e1.setObservable(mObs);

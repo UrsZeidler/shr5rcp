@@ -1,0 +1,77 @@
+[comment encoding = UTF-8 /]
+[module boardScriptProtocollWriter('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0','http://shr.scripting/1.0','http://urszeidler.de/shr5/gameplay/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunManagmentTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunBBSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::shr5EEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::common::shr5ManagementEEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
+
+
+[template public boardScriptProtocollWriter(sh : ScriptHistory) {s : Script = sh.eContainer(Script); }]
+[comment @main /]
+[file (s.name.concat('BB.txt'), false, 'UTF-8')]
+[s.name.boldText()/] 
+ 
+[printProtocollWriter(sh)/]
+[/file]
+[/template]
+
+
+[template public printProtocollWriter(sh : ScriptHistory)]
+['Written Protocol :'.localizedString()/]
+[for (p : String | sh.writtenProtokol->sortedBy(s: String|-1* sh.writtenProtokol->indexOf(s)))]
+[p.italicText()/]
+[/for]		
+
+['Command Protocol :'.localizedString()/]
+[for (c : Command | sh.commandStack.protocol.commands)]
+[printCommand(c)/][/for]
+[/template]
+
+[template public printCommand (aCommand : Command) ]
+[aCommand.date.formatDateTimeSec()/] [aCommand.eClass().getText()/]
+[for (c : Command | aCommand.subCommands)]
+[printCommand(c)/][/for]
+[/template]
+
+[template public printCommand (aCommand : ProbeCommand) ]
+[aCommand.date.formatDateTimeSec()/] [aCommand.eClass().getText()/] [aCommand.subject.getText()/] [printCommandText(aCommand)/]
+[for (c : Command | aCommand.subCommands)]
+[printCommand(c)/][/for]
+[/template]
+
+[template public printCommand (aCommand : SkillTestCmd) ]
+[aCommand.date.formatDateTimeSec()/] [aCommand.eClass().getText()/] ([aCommand.skill.getText()/]) [aCommand.subject.getText()/] [printCommandText(aCommand)/]
+[for (c : Command | aCommand.subCommands)]
+[printCommand(c)/][/for]
+[/template]
+
+[template public printCommandText (p : ProbeCommand) ]
+[if (p.skipTest)] [p.netHits/]/[p.limit/]([p.glitches/]) [else] [p.netHits/]/[p.limit/]([p.glitches/]) [p.probe/] [/if][/template]
+
+
+[template public printCommand (aCommand : CombatTurn) ]
+[aCommand.date.formatDateTimeSec()/] [aCommand.eClass().getText()/] [aCommand.sequence/] 
+[for (i : InitativePass | aCommand.actionPhases)]
+[printIniPhase(i)/][/for]
+[/template]
+
+
+[template public printIniPhase (aCommand : InitativePass) ]
+[aCommand.date.formatDateTimeSec()/] [aCommand.eClass().getText()/] [aCommand.subject.getText()/] ([aCommand.phase/]/[aCommand.turn/])
+[printAction(aCommand.action)/]
+[for (c : Command | aCommand.subCommands)]
+[printCommand(c)/][/for]
+[/template]
+
+[template public printAction (cw : CommandWrapper) ]
+[if (cw.oclIsUndefined())]
+['pass'.localizedString()/][else]
+[if (cw.subCommands->isEmpty())]
+['pass'.localizedString()/][else]
+[for (c : Command | cw.subCommands)]
+[printCommand(c)/][/for]
+[/if][/if]
+[/template]
