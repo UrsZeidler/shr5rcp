@@ -1,0 +1,2518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="boardScriptProtocollWriter" nsURI="de::urszeidler::shr5::acceleo::sheets::boardScriptProtocollWriter" startHeaderPosition="29" endHeaderPosition="242">
+    <input>
+      <takesTypesFrom href="http://urszeidler.de/shr5/1.0#/"/>
+    </input>
+    <input>
+      <takesTypesFrom href="http://urszeidler.de/shr5mngt/1.0#/"/>
+    </input>
+    <input>
+      <takesTypesFrom href="http://shr.scripting/1.0#/"/>
+    </input>
+    <input>
+      <takesTypesFrom href="http://urszeidler.de/shr5/gameplay/1.0#/"/>
+    </input>
+    <input>
+      <takesTypesFrom href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+    </input>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunManagmentTools.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/shr5EEnumhelper.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/shr5ManagementEEnumhelper.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0"/>
+    <ownedModuleElement xsi:type="mtl:Template" name="boardScriptProtocollWriter" visibility="Public" main="true">
+      <init>
+        <variable name="s">
+          <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//Script"/>
+          <initExpression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/EObject_Class/eContainer">
+            <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//Script"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="sh" referredVariable="/0/boardScriptProtocollWriter/sh">
+              <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/6/Script">
+              <referredType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//Script"/>
+            </argument>
+          </initExpression>
+        </variable>
+      </init>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="mtl:QueryInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/boldText"/>
+          <argument xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/boardScriptProtocollWriter/@init/@variable.0">
+              <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//Script"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Beschreibbar/name"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &#xA; &#xA;"/>
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/printProtocollWriter">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="sh" referredVariable="/0/boardScriptProtocollWriter/sh">
+            <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/boardScriptProtocollWriter/@init/@variable.0">
+              <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//Script"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/1.0#//Beschreibbar/name"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="BB.txt">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="sh">
+        <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printProtocollWriter" visibility="Public">
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Written Protocol :">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:QueryInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/italicText"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/printProtocollWriter/%.2/p">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <loopVariable name="p">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:IteratorExp" name="sortedBy" eType="/17/Sequence(String)">
+          <source xsi:type="ocl.ecore:PropertyCallExp" eType="/17/Sequence(String)">
+            <source xsi:type="ocl.ecore:VariableExp" name="sh" referredVariable="/0/printProtocollWriter/sh">
+              <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://shr.scripting/1.0#//ScriptHistory/writtenProtokol"/>
+          </source>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="1">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              </source>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/-.1"/>
+            </source>
+            <argument xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp" eType="/17/Sequence(String)">
+                <source xsi:type="ocl.ecore:VariableExp" name="sh" referredVariable="/0/printProtocollWriter/sh">
+                  <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://shr.scripting/1.0#//ScriptHistory/writtenProtokol"/>
+              </source>
+              <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/printProtocollWriter/%.2/sortedBy/s">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/indexOf"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/*"/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="s">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </iterator>
+        </iterSet>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Command Protocol :">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/printCommand">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/printProtocollWriter/%.6/c">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+          </argument>
+        </body>
+        <loopVariable name="c">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/17/OrderedSet(Command)">
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ExecutionProtocol"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ExecutionStack"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="sh" referredVariable="/0/printProtocollWriter/sh">
+                <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://shr.scripting/1.0#//ScriptHistory/commandStack"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/gameplay/1.0#//ExecutionStack/protocol"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/gameplay/1.0#//ExecutionProtocol/commands"/>
+        </iterSet>
+      </body>
+      <parameter name="sh">
+        <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printCommand" visibility="Public">
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/formatDateTimeSec"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EDataType" href="http://urszeidler.de/shr5/1.0#//ShrDate"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//Command/date"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        <argument xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/emf/2002/Ecore#//EObject/eClass"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/printCommand">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/printCommand/%.4/c">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+          </argument>
+        </body>
+        <loopVariable name="c">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/17/OrderedSet(Command)">
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/gameplay/1.0#//Command/subCommands"/>
+        </iterSet>
+      </body>
+      <parameter name="aCommand">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printCommand" visibility="Public">
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/formatDateTimeSec"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EDataType" href="http://urszeidler.de/shr5/1.0#//ShrDate"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.1/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//Command/date"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        <argument xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.1/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/emf/2002/Ecore#//EObject/eClass"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/runtime/1.0#//RuntimeCharacter"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.1/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/gameplay/1.0#//SubjectCommand/subject"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+      <body xsi:type="mtl:TemplateInvocation" definition="/0/printCommandText">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.1/aCommand">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/printCommand">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/printCommand.1/%.8/c">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+          </argument>
+        </body>
+        <loopVariable name="c">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/17/OrderedSet(Command)">
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.1/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/gameplay/1.0#//Command/subCommands"/>
+        </iterSet>
+      </body>
+      <parameter name="aCommand">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printCommand" visibility="Public">
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/formatDateTimeSec"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EDataType" href="http://urszeidler.de/shr5/1.0#//ShrDate"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.2/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//Command/date"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        <argument xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.2/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/emf/2002/Ecore#//EObject/eClass"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" ("/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fertigkeit"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.2/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd/skill"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=") "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/runtime/1.0#//RuntimeCharacter"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.2/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/gameplay/1.0#//SubjectCommand/subject"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+      <body xsi:type="mtl:TemplateInvocation" definition="/0/printCommandText">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.2/aCommand">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/printCommand">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/printCommand.2/%.10/c">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+          </argument>
+        </body>
+        <loopVariable name="c">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/17/OrderedSet(Command)">
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.2/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/gameplay/1.0#//Command/subCommands"/>
+        </iterSet>
+      </body>
+      <parameter name="aCommand">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printCommandText" visibility="Public">
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/printCommandText/p">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//SuccesTest/netHits"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/printCommandText/p">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//Probe/limit"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/printCommandText/p">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//Probe/glitches"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=") "/>
+        <ifExpr xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/printCommandText/p">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//Probe/skipTest"/>
+        </ifExpr>
+        <else>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/printCommandText/p">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//SuccesTest/netHits"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/printCommandText/p">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//Probe/limit"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/printCommandText/p">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//Probe/glitches"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=") "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp" eType="/17/Sequence(Integer)">
+            <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/printCommandText/p">
+              <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//Probe/probe"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+        </else>
+      </body>
+      <parameter name="p">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printCommand" visibility="Public">
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/formatDateTimeSec"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EDataType" href="http://urszeidler.de/shr5/1.0#//ShrDate"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.3/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//Command/date"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        <argument xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.3/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/emf/2002/Ecore#//EObject/eClass"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.3/aCommand">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn/sequence"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/printIniPhase">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="i" referredVariable="/0/printCommand.3/%.6/i">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+          </argument>
+        </body>
+        <loopVariable name="i">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/17/OrderedSet(InitativePass)">
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.3/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn/actionPhases"/>
+        </iterSet>
+      </body>
+      <parameter name="aCommand">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printIniPhase" visibility="Public">
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/formatDateTimeSec"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EDataType" href="http://urszeidler.de/shr5/1.0#//ShrDate"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printIniPhase/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//Command/date"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        <argument xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printIniPhase/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/emf/2002/Ecore#//EObject/eClass"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+      <body xsi:type="mtl:QueryInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/runtime/1.0#//RuntimeCharacter"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printIniPhase/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/gameplay/1.0#//SubjectCommand/subject"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" ("/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printIniPhase/aCommand">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//PhaseCmd/phase"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/"/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printIniPhase/aCommand">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass/turn"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=")&#xA;"/>
+      <body xsi:type="mtl:TemplateInvocation" definition="/0/printAction">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CommandWrapper"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printIniPhase/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass/action"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/printCommand">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/printIniPhase/%.12/c">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+          </argument>
+        </body>
+        <loopVariable name="c">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/17/OrderedSet(Command)">
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printIniPhase/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/gameplay/1.0#//Command/subCommands"/>
+        </iterSet>
+      </body>
+      <parameter name="aCommand">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="printAction" visibility="Public">
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="mtl:QueryInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="pass">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </body>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="cw" referredVariable="/0/printAction/cw">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CommandWrapper"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsUndefined"/>
+        </ifExpr>
+        <else>
+          <body xsi:type="mtl:IfBlock">
+            <body xsi:type="mtl:QueryInvocation">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+              <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="pass">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              </argument>
+            </body>
+            <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp" eType="/17/OrderedSet(Command)">
+                <source xsi:type="ocl.ecore:VariableExp" name="cw" referredVariable="/0/printAction/cw">
+                  <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CommandWrapper"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/gameplay/1.0#//Command/subCommands"/>
+              </source>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/isEmpty"/>
+            </ifExpr>
+            <else>
+              <body xsi:type="mtl:ForBlock">
+                <body xsi:type="mtl:TemplateInvocation" definition="/0/printCommand">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <argument xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/printAction/%/%.2/%/%.2/%/c">
+                    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+                  </argument>
+                </body>
+                <loopVariable name="c">
+                  <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+                </loopVariable>
+                <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/17/OrderedSet(Command)">
+                  <source xsi:type="ocl.ecore:VariableExp" name="cw" referredVariable="/0/printAction/cw">
+                    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CommandWrapper"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/gameplay/1.0#//Command/subCommands"/>
+                </iterSet>
+              </body>
+            </else>
+          </body>
+        </else>
+      </body>
+      <parameter name="cw">
+        <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CommandWrapper"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="eContainer">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//OclAny"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="boardScriptProtocollWriter">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/boardScriptProtocollWriter"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="sh">
+          <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printProtocollWriter">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printProtocollWriter"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="sh">
+          <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printCommand">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printCommand"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aCommand">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printCommand">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printCommand.1"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aCommand">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printCommand">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printCommand.2"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aCommand">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printCommandText">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printCommandText"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="p">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printCommand">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printCommand.3"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aCommand">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printIniPhase">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printIniPhase"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aCommand">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="printAction">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/printAction"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="cw">
+          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CommandWrapper"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getText">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anOclAny">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="boldText">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/boldText"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="txt">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="italicText">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/0/italicText"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="txt">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="formatDateTimeSec">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/formatDateTimeSec"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="object">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="localizedString">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="text">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ScriptHistory_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://shr.scripting/1.0#//ScriptHistory"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Command_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ProbeCommand_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SkillTestCmd_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CombatTurn_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InitativePass_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CommandWrapper_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/gameplay/1.0#//CommandWrapper"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AbstraktPersona_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//AbstraktPersona"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EAttribute_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EAttribute"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AbstraktModifikatoren_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//AbstraktModifikatoren"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Spezies_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//Spezies"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sequence(OclAny)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/3/Sequence(OclAny)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FertigkeitsGruppe_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//FertigkeitsGruppe"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PersonaFertigkeit_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//PersonaFertigkeit"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Fertigkeit_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//Fertigkeit"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ManagedCharacter_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Shr5Generator_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Shr5KarmaGenerator_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5mngt/1.0#//Shr5KarmaGenerator"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="KoerperPersona_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//KoerperPersona"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(PersonaEigenschaft)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/3/OrderedSet(PersonaEigenschaft)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PersonaEigenschaft_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//PersonaEigenschaft"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Cyberdeck_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//Cyberdeck"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Bodenfahrzeug_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//Bodenfahrzeug"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Fahrzeug_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AbstaktFernKampfwaffe_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Quelle_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//Quelle"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sequence(String)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunBBSheetTools.emtl#/3/Sequence(String)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FeuerModus_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//FeuerModus"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SchadensTyp_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//SchadensTyp"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MagazinTyp_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//MagazinTyp"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FeuwerwaffenErweiterung_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//FeuwerwaffenErweiterung"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModifikatorType_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//ModifikatorType"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SmartgunType_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//SmartgunType"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ZauberArt_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//ZauberArt"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ZauberReichweite_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//ZauberReichweite"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ZauberDauer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//ZauberDauer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MagischeTradition_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//MagischeTradition"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CritterHandlung_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//CritterHandlung"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CritterReichweite_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//CritterReichweite"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CritterDauer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//CritterDauer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ResonanzZiel_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//ResonanzZiel"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GeneratorState_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5mngt/1.0#//GeneratorState"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sex_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5mngt/1.0#//Sex"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AstraleProjektion_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://urszeidler.de/shr5/1.0#//AstraleProjektion"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Script">
+      <referredType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//Script"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(String)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Command)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Integer)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(InitativePass)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://shr.scripting/1.0#//ScriptHistory"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//SkillTestCmd"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//ProbeCommand"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CommandWrapper"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CommandWrapper"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CommandWrapper"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CommandWrapper"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CommandWrapper"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CommandWrapper"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CommandWrapper"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CommandWrapper"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/boardScriptProtocollWriter">
+      <details key="start" value="744"/>
+      <details key="end" value="986"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/boardScriptProtocollWriter/@init">
+      <details key="start" value="808"/>
+      <details key="end" value="846"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/boardScriptProtocollWriter/@init/@variable.0">
+      <details key="start" value="809"/>
+      <details key="end" value="843"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/boardScriptProtocollWriter/@init/@variable.0/%">
+      <details key="start" value="822"/>
+      <details key="end" value="843"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/boardScriptProtocollWriter/@init/@variable.0/%/sh">
+      <details key="start" value="822"/>
+      <details key="end" value="824"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/boardScriptProtocollWriter/@init/@variable.0/%/%">
+      <details key="start" value="836"/>
+      <details key="end" value="842"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/boardScriptProtocollWriter/%">
+      <details key="start" value="866"/>
+      <details key="end" value="974"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/boardScriptProtocollWriter/%/%">
+      <details key="start" value="916"/>
+      <details key="end" value="933"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/boardScriptProtocollWriter/%/%/%">
+      <details key="start" value="916"/>
+      <details key="end" value="922"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/boardScriptProtocollWriter/%/%/%/s">
+      <details key="start" value="916"/>
+      <details key="end" value="917"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/boardScriptProtocollWriter/%/%.1">
+      <details key="start" value="935"/>
+      <details key="end" value="939"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/boardScriptProtocollWriter/%/%.2">
+      <details key="start" value="940"/>
+      <details key="end" value="964"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/boardScriptProtocollWriter/%/%.2/sh">
+      <details key="start" value="961"/>
+      <details key="end" value="963"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/boardScriptProtocollWriter/%/%.3">
+      <details key="start" value="966"/>
+      <details key="end" value="967"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/boardScriptProtocollWriter/%/%.4">
+      <details key="start" value="873"/>
+      <details key="end" value="896"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/boardScriptProtocollWriter/%/%.4/%">
+      <details key="start" value="873"/>
+      <details key="end" value="879"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/boardScriptProtocollWriter/%/%.4/%/s">
+      <details key="start" value="873"/>
+      <details key="end" value="874"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/boardScriptProtocollWriter/%/%.4/%.1">
+      <details key="start" value="887"/>
+      <details key="end" value="895"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/boardScriptProtocollWriter/%/%.5">
+      <details key="start" value="905"/>
+      <details key="end" value="912"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/boardScriptProtocollWriter/sh">
+      <details key="start" value="788"/>
+      <details key="end" value="806"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/printProtocollWriter">
+      <details key="start" value="989"/>
+      <details key="end" value="1348"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/printProtocollWriter/%">
+      <details key="start" value="1049"/>
+      <details key="end" value="1087"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/printProtocollWriter/%/%">
+      <details key="start" value="1049"/>
+      <details key="end" value="1069"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/printProtocollWriter/%.1">
+      <details key="start" value="1089"/>
+      <details key="end" value="1090"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/printProtocollWriter/%.2">
+      <details key="start" value="1090"/>
+      <details key="end" value="1210"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/printProtocollWriter/%.2/%">
+      <details key="start" value="1187"/>
+      <details key="end" value="1201"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/printProtocollWriter/%.2/%/p">
+      <details key="start" value="1187"/>
+      <details key="end" value="1188"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/printProtocollWriter/%.2/%.1">
+      <details key="start" value="1203"/>
+      <details key="end" value="1204"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/printProtocollWriter/%.2/p">
+      <details key="start" value="1096"/>
+      <details key="end" value="1106"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/printProtocollWriter/%.2/sortedBy">
+      <details key="start" value="1109"/>
+      <details key="end" value="1183"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/printProtocollWriter/%.2/sortedBy/%">
+      <details key="start" value="1109"/>
+      <details key="end" value="1127"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/printProtocollWriter/%.2/sortedBy/%/sh">
+      <details key="start" value="1109"/>
+      <details key="end" value="1111"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/printProtocollWriter/%.2/sortedBy/%.1">
+      <details key="start" value="1148"/>
+      <details key="end" value="1182"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/printProtocollWriter/%.2/sortedBy/%.1/%">
+      <details key="start" value="1148"/>
+      <details key="end" value="1150"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/printProtocollWriter/%.2/sortedBy/%.1/%/%">
+      <details key="start" value="1149"/>
+      <details key="end" value="1150"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/printProtocollWriter/%.2/sortedBy/%.1/%.1">
+      <details key="start" value="1152"/>
+      <details key="end" value="1182"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/printProtocollWriter/%.2/sortedBy/%.1/%.1/%">
+      <details key="start" value="1152"/>
+      <details key="end" value="1170"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/printProtocollWriter/%.2/sortedBy/%.1/%.1/%/sh">
+      <details key="start" value="1152"/>
+      <details key="end" value="1154"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/printProtocollWriter/%.2/sortedBy/%.1/%.1/s">
+      <details key="start" value="1180"/>
+      <details key="end" value="1181"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/printProtocollWriter/%.2/sortedBy/s">
+      <details key="start" value="1138"/>
+      <details key="end" value="1147"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/printProtocollWriter/%.3">
+      <details key="start" value="1213"/>
+      <details key="end" value="1214"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/printProtocollWriter/%.4">
+      <details key="start" value="1215"/>
+      <details key="end" value="1253"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/printProtocollWriter/%.4/%">
+      <details key="start" value="1215"/>
+      <details key="end" value="1235"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/printProtocollWriter/%.5">
+      <details key="start" value="1255"/>
+      <details key="end" value="1256"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/printProtocollWriter/%.6">
+      <details key="start" value="1256"/>
+      <details key="end" value="1336"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/printProtocollWriter/%.6/%">
+      <details key="start" value="1313"/>
+      <details key="end" value="1328"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/printProtocollWriter/%.6/%/c">
+      <details key="start" value="1326"/>
+      <details key="end" value="1327"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/printProtocollWriter/%.6/c">
+      <details key="start" value="1262"/>
+      <details key="end" value="1273"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/printProtocollWriter/%.6/%.1">
+      <details key="start" value="1276"/>
+      <details key="end" value="1309"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/printProtocollWriter/%.6/%.1/%">
+      <details key="start" value="1276"/>
+      <details key="end" value="1300"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/printProtocollWriter/%.6/%.1/%/%">
+      <details key="start" value="1276"/>
+      <details key="end" value="1291"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/printProtocollWriter/%.6/%.1/%/%/sh">
+      <details key="start" value="1276"/>
+      <details key="end" value="1278"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/printProtocollWriter/sh">
+      <details key="start" value="1027"/>
+      <details key="end" value="1045"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/printCommand">
+      <details key="start" value="1350"/>
+      <details key="end" value="1550"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/printCommand/%">
+      <details key="start" value="1404"/>
+      <details key="end" value="1437"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/printCommand/%/%">
+      <details key="start" value="1404"/>
+      <details key="end" value="1417"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/printCommand/%/%/aCommand">
+      <details key="start" value="1404"/>
+      <details key="end" value="1412"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/printCommand/%.1">
+      <details key="start" value="1439"/>
+      <details key="end" value="1440"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/printCommand/%.2">
+      <details key="start" value="1441"/>
+      <details key="end" value="1468"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/printCommand/%.2/%">
+      <details key="start" value="1441"/>
+      <details key="end" value="1458"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/printCommand/%.2/%/aCommand">
+      <details key="start" value="1441"/>
+      <details key="end" value="1449"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/printCommand/%.3">
+      <details key="start" value="1470"/>
+      <details key="end" value="1471"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/printCommand/%.4">
+      <details key="start" value="1471"/>
+      <details key="end" value="1538"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/printCommand/%.4/%">
+      <details key="start" value="1515"/>
+      <details key="end" value="1530"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/printCommand/%.4/%/c">
+      <details key="start" value="1528"/>
+      <details key="end" value="1529"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/printCommand/%.4/c">
+      <details key="start" value="1477"/>
+      <details key="end" value="1488"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/printCommand/%.4/%.1">
+      <details key="start" value="1491"/>
+      <details key="end" value="1511"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/printCommand/%.4/%.1/aCommand">
+      <details key="start" value="1491"/>
+      <details key="end" value="1499"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/printCommand/aCommand">
+      <details key="start" value="1381"/>
+      <details key="end" value="1399"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/printCommand.1">
+      <details key="start" value="1552"/>
+      <details key="end" value="1817"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/printCommand.1/%">
+      <details key="start" value="1611"/>
+      <details key="end" value="1644"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/printCommand.1/%/%">
+      <details key="start" value="1611"/>
+      <details key="end" value="1624"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/printCommand.1/%/%/aCommand">
+      <details key="start" value="1611"/>
+      <details key="end" value="1619"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/printCommand.1/%.1">
+      <details key="start" value="1646"/>
+      <details key="end" value="1647"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/printCommand.1/%.2">
+      <details key="start" value="1648"/>
+      <details key="end" value="1675"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/printCommand.1/%.2/%">
+      <details key="start" value="1648"/>
+      <details key="end" value="1665"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/printCommand.1/%.2/%/aCommand">
+      <details key="start" value="1648"/>
+      <details key="end" value="1656"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/printCommand.1/%.3">
+      <details key="start" value="1677"/>
+      <details key="end" value="1678"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/printCommand.1/%.4">
+      <details key="start" value="1679"/>
+      <details key="end" value="1705"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/printCommand.1/%.4/%">
+      <details key="start" value="1679"/>
+      <details key="end" value="1695"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/printCommand.1/%.4/%/aCommand">
+      <details key="start" value="1679"/>
+      <details key="end" value="1687"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/printCommand.1/%.5">
+      <details key="start" value="1707"/>
+      <details key="end" value="1708"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/printCommand.1/%.6">
+      <details key="start" value="1709"/>
+      <details key="end" value="1735"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/printCommand.1/%.6/aCommand">
+      <details key="start" value="1726"/>
+      <details key="end" value="1734"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/printCommand.1/%.7">
+      <details key="start" value="1737"/>
+      <details key="end" value="1738"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/printCommand.1/%.8">
+      <details key="start" value="1738"/>
+      <details key="end" value="1805"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/printCommand.1/%.8/%">
+      <details key="start" value="1782"/>
+      <details key="end" value="1797"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/printCommand.1/%.8/%/c">
+      <details key="start" value="1795"/>
+      <details key="end" value="1796"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/printCommand.1/%.8/c">
+      <details key="start" value="1744"/>
+      <details key="end" value="1755"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/printCommand.1/%.8/%.1">
+      <details key="start" value="1758"/>
+      <details key="end" value="1778"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/printCommand.1/%.8/%.1/aCommand">
+      <details key="start" value="1758"/>
+      <details key="end" value="1766"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/printCommand.1/aCommand">
+      <details key="start" value="1583"/>
+      <details key="end" value="1606"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/printCommand.2">
+      <details key="start" value="1819"/>
+      <details key="end" value="2114"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/printCommand.2/%">
+      <details key="start" value="1878"/>
+      <details key="end" value="1911"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/printCommand.2/%/%">
+      <details key="start" value="1878"/>
+      <details key="end" value="1891"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/printCommand.2/%/%/aCommand">
+      <details key="start" value="1878"/>
+      <details key="end" value="1886"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/printCommand.2/%.1">
+      <details key="start" value="1913"/>
+      <details key="end" value="1914"/>
+      <details key="line" value="46"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/printCommand.2/%.2">
+      <details key="start" value="1915"/>
+      <details key="end" value="1942"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/printCommand.2/%.2/%">
+      <details key="start" value="1915"/>
+      <details key="end" value="1932"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/printCommand.2/%.2/%/aCommand">
+      <details key="start" value="1915"/>
+      <details key="end" value="1923"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/printCommand.2/%.3">
+      <details key="start" value="1944"/>
+      <details key="end" value="1946"/>
+      <details key="line" value="46"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/printCommand.2/%.4">
+      <details key="start" value="1947"/>
+      <details key="end" value="1971"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/printCommand.2/%.4/%">
+      <details key="start" value="1947"/>
+      <details key="end" value="1961"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/printCommand.2/%.4/%/aCommand">
+      <details key="start" value="1947"/>
+      <details key="end" value="1955"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/printCommand.2/%.5">
+      <details key="start" value="1973"/>
+      <details key="end" value="1975"/>
+      <details key="line" value="46"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/printCommand.2/%.6">
+      <details key="start" value="1976"/>
+      <details key="end" value="2002"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/printCommand.2/%.6/%">
+      <details key="start" value="1976"/>
+      <details key="end" value="1992"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/printCommand.2/%.6/%/aCommand">
+      <details key="start" value="1976"/>
+      <details key="end" value="1984"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/printCommand.2/%.7">
+      <details key="start" value="2004"/>
+      <details key="end" value="2005"/>
+      <details key="line" value="46"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/printCommand.2/%.8">
+      <details key="start" value="2006"/>
+      <details key="end" value="2032"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/printCommand.2/%.8/aCommand">
+      <details key="start" value="2023"/>
+      <details key="end" value="2031"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/printCommand.2/%.9">
+      <details key="start" value="2034"/>
+      <details key="end" value="2035"/>
+      <details key="line" value="47"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/printCommand.2/%.10">
+      <details key="start" value="2035"/>
+      <details key="end" value="2102"/>
+      <details key="line" value="47"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/printCommand.2/%.10/%">
+      <details key="start" value="2079"/>
+      <details key="end" value="2094"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/printCommand.2/%.10/%/c">
+      <details key="start" value="2092"/>
+      <details key="end" value="2093"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/printCommand.2/%.10/c">
+      <details key="start" value="2041"/>
+      <details key="end" value="2052"/>
+      <details key="line" value="47"/>
+    </eAnnotations>
+    <eAnnotations source="positions.116" references="/0/printCommand.2/%.10/%.1">
+      <details key="start" value="2055"/>
+      <details key="end" value="2075"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.117" references="/0/printCommand.2/%.10/%.1/aCommand">
+      <details key="start" value="2055"/>
+      <details key="end" value="2063"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.118" references="/0/printCommand.2/aCommand">
+      <details key="start" value="1850"/>
+      <details key="end" value="1873"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/printCommandText">
+      <details key="start" value="2116"/>
+      <details key="end" value="2301"/>
+      <details key="line" value="51"/>
+    </eAnnotations>
+    <eAnnotations source="positions.120" references="/0/printCommandText/%">
+      <details key="start" value="2171"/>
+      <details key="end" value="2290"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.121" references="/0/printCommandText/%/%">
+      <details key="start" value="2188"/>
+      <details key="end" value="2189"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.122" references="/0/printCommandText/%/%.1">
+      <details key="start" value="2190"/>
+      <details key="end" value="2199"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.123" references="/0/printCommandText/%/%.1/p">
+      <details key="start" value="2190"/>
+      <details key="end" value="2191"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/printCommandText/%/%.2">
+      <details key="start" value="2201"/>
+      <details key="end" value="2202"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/printCommandText/%/%.3">
+      <details key="start" value="2203"/>
+      <details key="end" value="2210"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/printCommandText/%/%.3/p">
+      <details key="start" value="2203"/>
+      <details key="end" value="2204"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.127" references="/0/printCommandText/%/%.4">
+      <details key="start" value="2212"/>
+      <details key="end" value="2213"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.128" references="/0/printCommandText/%/%.5">
+      <details key="start" value="2214"/>
+      <details key="end" value="2224"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/printCommandText/%/%.5/p">
+      <details key="start" value="2214"/>
+      <details key="end" value="2215"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/printCommandText/%/%.6">
+      <details key="start" value="2226"/>
+      <details key="end" value="2228"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/printCommandText/%/%.7">
+      <details key="start" value="2175"/>
+      <details key="end" value="2187"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/printCommandText/%/%.7/p">
+      <details key="start" value="2176"/>
+      <details key="end" value="2177"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/printCommandText/%/%.8">
+      <details key="start" value="2228"/>
+      <details key="end" value="2285"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/printCommandText/%/%.8/%">
+      <details key="start" value="2234"/>
+      <details key="end" value="2235"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/printCommandText/%/%.8/%.1">
+      <details key="start" value="2236"/>
+      <details key="end" value="2245"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/printCommandText/%/%.8/%.1/p">
+      <details key="start" value="2236"/>
+      <details key="end" value="2237"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.137" references="/0/printCommandText/%/%.8/%.2">
+      <details key="start" value="2247"/>
+      <details key="end" value="2248"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.138" references="/0/printCommandText/%/%.8/%.3">
+      <details key="start" value="2249"/>
+      <details key="end" value="2256"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.139" references="/0/printCommandText/%/%.8/%.3/p">
+      <details key="start" value="2249"/>
+      <details key="end" value="2250"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.140" references="/0/printCommandText/%/%.8/%.4">
+      <details key="start" value="2258"/>
+      <details key="end" value="2259"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.141" references="/0/printCommandText/%/%.8/%.5">
+      <details key="start" value="2260"/>
+      <details key="end" value="2270"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.142" references="/0/printCommandText/%/%.8/%.5/p">
+      <details key="start" value="2260"/>
+      <details key="end" value="2261"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.143" references="/0/printCommandText/%/%.8/%.6">
+      <details key="start" value="2272"/>
+      <details key="end" value="2274"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.144" references="/0/printCommandText/%/%.8/%.7">
+      <details key="start" value="2275"/>
+      <details key="end" value="2282"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.145" references="/0/printCommandText/%/%.8/%.7/p">
+      <details key="start" value="2275"/>
+      <details key="end" value="2276"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.146" references="/0/printCommandText/%/%.8/%.8">
+      <details key="start" value="2284"/>
+      <details key="end" value="2285"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.147" references="/0/printCommandText/p">
+      <details key="start" value="2151"/>
+      <details key="end" value="2167"/>
+      <details key="line" value="51"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/printCommand.3">
+      <details key="start" value="2304"/>
+      <details key="end" value="2537"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/printCommand.3/%">
+      <details key="start" value="2361"/>
+      <details key="end" value="2394"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.150" references="/0/printCommand.3/%/%">
+      <details key="start" value="2361"/>
+      <details key="end" value="2374"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.151" references="/0/printCommand.3/%/%/aCommand">
+      <details key="start" value="2361"/>
+      <details key="end" value="2369"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.152" references="/0/printCommand.3/%.1">
+      <details key="start" value="2396"/>
+      <details key="end" value="2397"/>
+      <details key="line" value="56"/>
+    </eAnnotations>
+    <eAnnotations source="positions.153" references="/0/printCommand.3/%.2">
+      <details key="start" value="2398"/>
+      <details key="end" value="2425"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.154" references="/0/printCommand.3/%.2/%">
+      <details key="start" value="2398"/>
+      <details key="end" value="2415"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.155" references="/0/printCommand.3/%.2/%/aCommand">
+      <details key="start" value="2398"/>
+      <details key="end" value="2406"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.156" references="/0/printCommand.3/%.3">
+      <details key="start" value="2427"/>
+      <details key="end" value="2428"/>
+      <details key="line" value="56"/>
+    </eAnnotations>
+    <eAnnotations source="positions.157" references="/0/printCommand.3/%.4">
+      <details key="start" value="2429"/>
+      <details key="end" value="2446"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.158" references="/0/printCommand.3/%.4/aCommand">
+      <details key="start" value="2429"/>
+      <details key="end" value="2437"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.159" references="/0/printCommand.3/%.5">
+      <details key="start" value="2448"/>
+      <details key="end" value="2450"/>
+      <details key="line" value="56"/>
+    </eAnnotations>
+    <eAnnotations source="positions.160" references="/0/printCommand.3/%.6">
+      <details key="start" value="2450"/>
+      <details key="end" value="2525"/>
+      <details key="line" value="57"/>
+    </eAnnotations>
+    <eAnnotations source="positions.161" references="/0/printCommand.3/%.6/%">
+      <details key="start" value="2501"/>
+      <details key="end" value="2517"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.162" references="/0/printCommand.3/%.6/%/i">
+      <details key="start" value="2515"/>
+      <details key="end" value="2516"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.163" references="/0/printCommand.3/%.6/i">
+      <details key="start" value="2456"/>
+      <details key="end" value="2473"/>
+      <details key="line" value="57"/>
+    </eAnnotations>
+    <eAnnotations source="positions.164" references="/0/printCommand.3/%.6/%.1">
+      <details key="start" value="2476"/>
+      <details key="end" value="2497"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.165" references="/0/printCommand.3/%.6/%.1/aCommand">
+      <details key="start" value="2476"/>
+      <details key="end" value="2484"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.166" references="/0/printCommand.3/aCommand">
+      <details key="start" value="2335"/>
+      <details key="end" value="2356"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.167" references="/0/printIniPhase">
+      <details key="start" value="2540"/>
+      <details key="end" value="2846"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.168" references="/0/printIniPhase/%">
+      <details key="start" value="2601"/>
+      <details key="end" value="2634"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.169" references="/0/printIniPhase/%/%">
+      <details key="start" value="2601"/>
+      <details key="end" value="2614"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.170" references="/0/printIniPhase/%/%/aCommand">
+      <details key="start" value="2601"/>
+      <details key="end" value="2609"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.171" references="/0/printIniPhase/%.1">
+      <details key="start" value="2636"/>
+      <details key="end" value="2637"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.172" references="/0/printIniPhase/%.2">
+      <details key="start" value="2638"/>
+      <details key="end" value="2665"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.173" references="/0/printIniPhase/%.2/%">
+      <details key="start" value="2638"/>
+      <details key="end" value="2655"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.174" references="/0/printIniPhase/%.2/%/aCommand">
+      <details key="start" value="2638"/>
+      <details key="end" value="2646"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.175" references="/0/printIniPhase/%.3">
+      <details key="start" value="2667"/>
+      <details key="end" value="2668"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.176" references="/0/printIniPhase/%.4">
+      <details key="start" value="2669"/>
+      <details key="end" value="2695"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.177" references="/0/printIniPhase/%.4/%">
+      <details key="start" value="2669"/>
+      <details key="end" value="2685"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.178" references="/0/printIniPhase/%.4/%/aCommand">
+      <details key="start" value="2669"/>
+      <details key="end" value="2677"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.179" references="/0/printIniPhase/%.5">
+      <details key="start" value="2697"/>
+      <details key="end" value="2699"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.180" references="/0/printIniPhase/%.6">
+      <details key="start" value="2700"/>
+      <details key="end" value="2714"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.181" references="/0/printIniPhase/%.6/aCommand">
+      <details key="start" value="2700"/>
+      <details key="end" value="2708"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.182" references="/0/printIniPhase/%.7">
+      <details key="start" value="2716"/>
+      <details key="end" value="2717"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.183" references="/0/printIniPhase/%.8">
+      <details key="start" value="2718"/>
+      <details key="end" value="2731"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.184" references="/0/printIniPhase/%.8/aCommand">
+      <details key="start" value="2718"/>
+      <details key="end" value="2726"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.185" references="/0/printIniPhase/%.9">
+      <details key="start" value="2733"/>
+      <details key="end" value="2735"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.186" references="/0/printIniPhase/%.10">
+      <details key="start" value="2736"/>
+      <details key="end" value="2764"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.187" references="/0/printIniPhase/%.10/%">
+      <details key="start" value="2748"/>
+      <details key="end" value="2763"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.188" references="/0/printIniPhase/%.10/%/aCommand">
+      <details key="start" value="2748"/>
+      <details key="end" value="2756"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.189" references="/0/printIniPhase/%.11">
+      <details key="start" value="2766"/>
+      <details key="end" value="2767"/>
+      <details key="line" value="65"/>
+    </eAnnotations>
+    <eAnnotations source="positions.190" references="/0/printIniPhase/%.12">
+      <details key="start" value="2767"/>
+      <details key="end" value="2834"/>
+      <details key="line" value="65"/>
+    </eAnnotations>
+    <eAnnotations source="positions.191" references="/0/printIniPhase/%.12/%">
+      <details key="start" value="2811"/>
+      <details key="end" value="2826"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.192" references="/0/printIniPhase/%.12/%/c">
+      <details key="start" value="2824"/>
+      <details key="end" value="2825"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.193" references="/0/printIniPhase/%.12/c">
+      <details key="start" value="2773"/>
+      <details key="end" value="2784"/>
+      <details key="line" value="65"/>
+    </eAnnotations>
+    <eAnnotations source="positions.194" references="/0/printIniPhase/%.12/%.1">
+      <details key="start" value="2787"/>
+      <details key="end" value="2807"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.195" references="/0/printIniPhase/%.12/%.1/aCommand">
+      <details key="start" value="2787"/>
+      <details key="end" value="2795"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.196" references="/0/printIniPhase/aCommand">
+      <details key="start" value="2572"/>
+      <details key="end" value="2596"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.197" references="/0/printAction">
+      <details key="start" value="2848"/>
+      <details key="end" value="3113"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.198" references="/0/printAction/%">
+      <details key="start" value="2901"/>
+      <details key="end" value="3101"/>
+      <details key="line" value="70"/>
+    </eAnnotations>
+    <eAnnotations source="positions.199" references="/0/printAction/%/%">
+      <details key="start" value="2929"/>
+      <details key="end" value="2953"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.200" references="/0/printAction/%/%/%">
+      <details key="start" value="2929"/>
+      <details key="end" value="2935"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.201" references="/0/printAction/%/%.1">
+      <details key="start" value="2905"/>
+      <details key="end" value="2926"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.202" references="/0/printAction/%/%.1/cw">
+      <details key="start" value="2906"/>
+      <details key="end" value="2908"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.203" references="/0/printAction/%/%.2">
+      <details key="start" value="2955"/>
+      <details key="end" value="3096"/>
+      <details key="line" value="71"/>
+    </eAnnotations>
+    <eAnnotations source="positions.204" references="/0/printAction/%/%.2/%">
+      <details key="start" value="2962"/>
+      <details key="end" value="3096"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.205" references="/0/printAction/%/%.2/%/%">
+      <details key="start" value="2996"/>
+      <details key="end" value="3020"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.206" references="/0/printAction/%/%.2/%/%/%">
+      <details key="start" value="2996"/>
+      <details key="end" value="3002"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.207" references="/0/printAction/%/%.2/%/%.1">
+      <details key="start" value="2966"/>
+      <details key="end" value="2993"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.208" references="/0/printAction/%/%.2/%/%.1/%">
+      <details key="start" value="2967"/>
+      <details key="end" value="2981"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.209" references="/0/printAction/%/%.2/%/%.1/%/cw">
+      <details key="start" value="2967"/>
+      <details key="end" value="2969"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.210" references="/0/printAction/%/%.2/%/%.2">
+      <details key="start" value="3022"/>
+      <details key="end" value="3091"/>
+      <details key="line" value="73"/>
+    </eAnnotations>
+    <eAnnotations source="positions.211" references="/0/printAction/%/%.2/%/%.2/%">
+      <details key="start" value="3029"/>
+      <details key="end" value="3090"/>
+      <details key="line" value="74"/>
+    </eAnnotations>
+    <eAnnotations source="positions.212" references="/0/printAction/%/%.2/%/%.2/%/%">
+      <details key="start" value="3067"/>
+      <details key="end" value="3082"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.213" references="/0/printAction/%/%.2/%/%.2/%/%/c">
+      <details key="start" value="3080"/>
+      <details key="end" value="3081"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.214" references="/0/printAction/%/%.2/%/%.2/%/c">
+      <details key="start" value="3035"/>
+      <details key="end" value="3046"/>
+      <details key="line" value="74"/>
+    </eAnnotations>
+    <eAnnotations source="positions.215" references="/0/printAction/%/%.2/%/%.2/%/%.1">
+      <details key="start" value="3049"/>
+      <details key="end" value="3063"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.216" references="/0/printAction/%/%.2/%/%.2/%/%.1/cw">
+      <details key="start" value="3049"/>
+      <details key="end" value="3051"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.217" references="/0/printAction/cw">
+      <details key="start" value="2878"/>
+      <details key="end" value="2897"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>
