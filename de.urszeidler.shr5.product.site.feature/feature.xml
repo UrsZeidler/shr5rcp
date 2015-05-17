@@ -2,7 +2,7 @@
 <feature
       id="de.urszeidler.shr5.product.site.feature"
       label="Shr5 Product Feature"
-      version="0.2.8.qualifier">
+      version="0.2.9.qualifier">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]
