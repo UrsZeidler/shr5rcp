@@ -11288,6 +11288,12 @@
           <mods xmi:id="_UnKDkLYhEeSwtr65kYsBIA" wert="1">
             <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/initativWuerfel"/>
           </mods>
+          <mods xmi:id="_MX45gPyVEeSg8MbXs0RkMg" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/reaktion"/>
+          </mods>
+          <mods xmi:id="_Ot4ggPyVEeSg8MbXs0RkMg" wert="1">
+            <attribut href="http://urszeidler.de/shr5/1.0#//SpezielleAttribute/ausweichen"/>
+          </mods>
         </entries>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="72774a4b-4913-4296-aa13-91374437aeb7" name="Linguist" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="4"/>
         <entries xsi:type="shr5:PersonaEigenschaft" xmi:id="9aa922f4-46ae-4145-871a-28b3c8211a66" name="Made Man" page="148" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaKosten="5"/>

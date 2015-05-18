@@ -31,12 +31,6 @@ import org.eclipse.emf.ecp.core.util.ECPProperties;
 import org.eclipse.emf.ecp.core.util.ECPUtil;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.preference.IPreferenceStore;
-import org.eclipse.ui.IEditorReference;
-import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.IWorkbenchPage;
-import org.eclipse.ui.IWorkbenchWindow;
-import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.internal.registry.EditorRegistry;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.wb.swt.ResourceManager;
 import org.osgi.framework.Bundle;
@@ -50,6 +44,8 @@ import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
  */
 public class Activator extends AbstractUIPlugin {
 
+    private static final String PLATFORM_RESOURCE_SHR5_URI = "platform:/resource/shr5Resource/shr5-1.shr5";
+
     // The plug-in ID
     public static final String PLUGIN_ID = "de.urszeidler.shr5.ecp"; //$NON-NLS-1$
 
@@ -60,6 +56,8 @@ public class Activator extends AbstractUIPlugin {
 
     private IPreferenceStore store;
 
+    private BundleContext context;
+    
     /**
      * The constructor
      */
@@ -74,33 +72,36 @@ public class Activator extends AbstractUIPlugin {
         super.start(context);
         plugin = this;
         store = getPreferenceStore();
-
-//        cleanOldEditors();
+        this.context = context;
+//        ECPProject defaultEcpProject = getDefaultEcpProject();
+//        if(defaultEcpProject!=null){
+//            checkForResourceUpdate();
+//        }
     }
 
-    /**
-     * Cleans the old editorref. A patch for https://bugs.eclipse.org/bugs/show_bug.cgi?id=386648 .
-     */
-    private void cleanOldEditors() {
-        try {
-            IWorkbench wb = PlatformUI.getWorkbench();
-            IWorkbenchWindow win = wb.getActiveWorkbenchWindow();
-            if (win == null)
-                return;
-            IWorkbenchPage page = win.getActivePage();
-
-            // IWorkbenchPage activePage = workbenchWindow.getActivePage();
-            IEditorReference[] refs = page.getEditorReferences();
-            for (IEditorReference ref : refs) {
-                String editorId = ref.getId();
-                if (EditorRegistry.EMPTY_EDITOR_ID.equals(editorId)) {
-                    page.closeEditors(new IEditorReference[]{ ref }, false);
-                }
-            }
-        } catch (Exception e) {
-            logError("Error closing editors", e);
-        }
-    }
+//    /**
+//     * Cleans the old editorref. A patch for https://bugs.eclipse.org/bugs/show_bug.cgi?id=386648 .
+//     */
+//    private void cleanOldEditors() {
+//        try {
+//            IWorkbench wb = PlatformUI.getWorkbench();
+//            IWorkbenchWindow win = wb.getActiveWorkbenchWindow();
+//            if (win == null)
+//                return;
+//            IWorkbenchPage page = win.getActivePage();
+//
+//            // IWorkbenchPage activePage = workbenchWindow.getActivePage();
+//            IEditorReference[] refs = page.getEditorReferences();
+//            for (IEditorReference ref : refs) {
+//                String editorId = ref.getId();
+//                if (EditorRegistry.EMPTY_EDITOR_ID.equals(editorId)) {
+//                    page.closeEditors(new IEditorReference[]{ ref }, false);
+//                }
+//            }
+//        } catch (Exception e) {
+//            logError("Error closing editors", e);
+//        }
+//    }
 
     public EditingDomain getEdtingDomain() {
         ECPProject project = getDefaultEcpProject();
@@ -123,7 +124,7 @@ public class Activator extends AbstractUIPlugin {
         String projectName = store.getString(PreferenceConstants.DEFAUL_PROJECT_NAME);
         ECPProvider provider = ECPUtil.getECPProviderRegistry().getProvider("org.eclipse.emf.ecp.workspace.provider");
         ECPProperties ecpProperties = ECPUtil.createProperties();
-        ecpProperties.addProperty("rootURI", "platform:/resource/shr5Resource/shr5-1.shr5");
+        ecpProperties.addProperty("rootURI", PLATFORM_RESOURCE_SHR5_URI);
         ECPProject ecpProject = ECPUtil.getECPProjectManager().getProject(projectName);
         if (ecpProject == null) {
             logInfo("creating ECP project....");
@@ -131,16 +132,27 @@ public class Activator extends AbstractUIPlugin {
             project.open();
         }
 
-//         ecpProperties = ECPUtil.createProperties();
-//         ecpProperties.addProperty("rootURI", "platform:/resource/shr5Resource/shr5-1-test.shr5");
-//         ecpProject = ECPUtil.getECPProjectManager().getProject(DEFAUL_PROJECT_NAME+"-chummer-test");
-//         if (ecpProject == null) {
-//         logInfo("creating ECP project.... chummer-test");
-//         ECPProject project = ECPUtil.getECPProjectManager().createProject(provider, DEFAUL_PROJECT_NAME+"-chummer-test", ecpProperties);
-//         project.open();
-//         }
+        // ecpProperties = ECPUtil.createProperties();
+        // ecpProperties.addProperty("rootURI", "platform:/resource/shr5Resource/shr5-1-test.shr5");
+        // ecpProject = ECPUtil.getECPProjectManager().getProject(DEFAUL_PROJECT_NAME+"-chummer-test");
+        // if (ecpProject == null) {
+        // logInfo("creating ECP project.... chummer-test");
+        // ECPProject project = ECPUtil.getECPProjectManager().createProject(provider, DEFAUL_PROJECT_NAME+"-chummer-test", ecpProperties);
+        // project.open();
+        // }
     }
+//
+//    private IValidationServiceProvider getValidationServiceProvider() {
+//        if (validationServiceProvider == null) {
+//            // Register directly with the service
+//            final ServiceReference<IValidationServiceProvider> reference = context
+//                .getServiceReference(IValidationServiceProvider.class);
+//            validationServiceProvider = context.getService(reference);
+//        }
+//        return validationServiceProvider;
+//    }
 
+    
     public void createDefaultWorkspace() {
         IProgressMonitor progressMonitor = new NullProgressMonitor();
         IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
@@ -157,6 +169,67 @@ public class Activator extends AbstractUIPlugin {
             }
         }
     }
+
+//    /**
+//     * Check and do the update of the resouces.
+//     * 
+//     * @throws IOException
+//     */
+//    @SuppressWarnings("restriction")
+//    public void checkForResourceUpdate() throws IOException {
+//        final EditingDomain editingDomain = getEdtingDomain();
+//        ResourceSet resourceSet = editingDomain.getResourceSet();
+//        Resource resource = resourceSet.getResources().get(0);// .getResource(URI.createPlatformResourceURI(PLATFORM_RESOURCE_SHR5_URI, true), true);
+//
+//        Bundle extensionBundle = Activator.getDefault().getBundle();
+//        URL entry = extensionBundle.getEntry("shr5Resource/shr5-1.shr5");
+//        String file = FileLocator.toFileURL(entry).getFile();
+//        // Platform.asLocalURL(entry).getFile();
+//        final Shr5ResourceFactoryImpl newResourceSet = new Shr5ResourceFactoryImpl();
+//        final XMIResource newResource = (XMIResource)newResourceSet.createResource(URI.createFileURI(file));
+//        Map<?, ?> options = new HashMap<Object, Object>();
+//        newResource.load(options);
+//        EObject eObject = newResource.getContents().get(0);
+//        final EObject newRes = eObject.eContents().get(0);
+//        String newId = newResource.getID(newRes);
+//
+//        final EObject eObject1 = resource.getContents().get(0);
+//        EObject res = eObject1.eContents().get(0);
+//       
+//        if (res instanceof ShrList) {
+//            final int indexOf = ((ShrList)eObject1).getEntries().indexOf(res);
+//            
+//            final XMIResource xresource = (XMIResource)resource;
+//            String id = xresource.getID(res);
+//            if (!newId.equals(id)) {
+//                final IValidationServiceProvider validationServiceProvider2 = getValidationServiceProvider();     
+//                IValidationService validationService = validationServiceProvider2.getValidationService(getDefaultEcpProject());
+//               
+//                validationServiceProvider2.deleteValidationService(getDefaultEcpProject());
+//                Job job = new Job("Relpace resources") {
+//
+//                    @SuppressWarnings("restriction")
+//                    @Override
+//                    protected IStatus run(IProgressMonitor monitor) {
+//                        monitor.setTaskName("replacing resources");
+//                        editingDomain.getCommandStack().execute(SetCommand.create(editingDomain, eObject1, Shr5Package.Literals.SHR_LIST__ENTRIES, newRes, indexOf));
+//                        newResource.unload();
+//                        validationServiceProvider2.getValidationService(getDefaultEcpProject());
+////                        validationService.
+//                        return Status.OK_STATUS;
+//                    }
+//                    
+//                };
+//                job.setUser(true);
+//                job.schedule();
+////                if (MessageDialog.openConfirm(Display.getCurrent().getActiveShell(), "Resources changes",
+////                        "The resources are new do you want to update the resources ?")) {
+////                    
+//            }
+//
+//        }
+//        
+//    }
 
     private void copyResource(IProgressMonitor monitor, IProject project) throws CoreException {
         Bundle extensionBundle = Activator.getDefault().getBundle();
@@ -216,18 +289,10 @@ public class Activator extends AbstractUIPlugin {
             } else {
                 dstFile.create(stream, true, monitor);
             }
-
+            stream.close();
         } catch (IOException ioe) {
             logError("error while copy file", ioe);
-            try {
-                if (stream != null) {
-                    stream.close();
-                }
-            } catch (IOException ioe2) {
-                logError("error while closing stream file", ioe2);
-            }
         }
-
         return dstFile;
     }
 
