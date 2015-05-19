@@ -56,6 +56,14 @@ or the [FAQ](https://github.com/UrsZeidler/shr5rcp/wiki/faq)
  * email: shr5rcp@urszeidler.de 
  * twitter: [@shr5rcp](https://twitter.com/shr5rcp)
  
+another way to support is via bitcoin:
+ 
+ * 12Fgh416ogMiJsYnXyeYqaEGyEQHcVFSsJ for main support like webspace and service
+ * 1B9nJ2eXZJz1UKaVQTeMHriD1LBQsd4CvS for arts and graphics
+ * 18BbgDaurToEu6sou5dmBzNUNWAhTH25Tg for localization and spell checking
+ 
+as we could use the bitcoin to pay some people to make the tedious spell checking jobs, pay webspace or services or pay for some artwork. 
+ 
 3. Installation
 
  As the software is an eclipse product so you need to unpack the software and start the exe, you will need java installed.
