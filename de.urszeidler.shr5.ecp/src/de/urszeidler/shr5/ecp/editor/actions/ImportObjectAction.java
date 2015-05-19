@@ -6,6 +6,7 @@ package de.urszeidler.shr5.ecp.editor.actions;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -127,9 +128,11 @@ public class ImportObjectAction extends Action {
                     EObject eContainer = eObject.eContainer();
                     EStructuralFeature eContainingFeature = eObject.eContainingFeature();
                     if (eContainingFeature.isMany()) {
-                        editingDomain.getCommandStack().execute(new RemoveCommand(editingDomain, eContainer, eContainingFeature, eObject));
-                        editingDomain.getCommandStack().execute(new AddCommand(editingDomain, eContainer, eContainingFeature, eObjectImport));
-                        EcoreUtil.delete(eObject);
+                        final int indexOf = ((List<?>)eContainer.eGet(eContainingFeature)).indexOf(eObject);
+                        editingDomain.getCommandStack().execute(SetCommand.create(editingDomain, eContainer, eContainingFeature, eObjectImport, indexOf));
+//                        editingDomain.getCommandStack().execute(new RemoveCommand(editingDomain, eContainer, eContainingFeature, eObject));
+//                        editingDomain.getCommandStack().execute(new AddCommand(editingDomain, eContainer, eContainingFeature, eObjectImport));
+//                        EcoreUtil.delete(eObject);
                     } else {
                         editingDomain.getCommandStack().execute(new SetCommand(editingDomain, eContainer, eContainingFeature, eObjectImport));
                         EcoreUtil.delete(eObject);
