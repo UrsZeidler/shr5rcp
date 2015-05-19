@@ -15,9 +15,13 @@ import org.eclipse.ui.forms.widgets.ScrolledForm;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.shr5.ecp.editor.actions.ActionM2TDialog;
+import de.urszeidler.shr5.ecp.editor.actions.ExportObjectAction;
+import de.urszeidler.shr5.ecp.editor.actions.ImportObjectAction;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
+import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptHistory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
+import de.urszeidler.shr5.scripting.Scripts;
 
 public class EObjectPage extends AbstractShr5Page<EObject> {
     private EObject object;
@@ -57,6 +61,11 @@ public class EObjectPage extends AbstractShr5Page<EObject> {
         toolkit.paintBordersFor(body);
         if (object instanceof ScriptHistory) {
             form.getToolBarManager().add(new ActionM2TDialog(form.getShell(), object));
+        }  else if (object instanceof Scripts) {
+            form.getToolBarManager().add(new ActionM2TDialog(form.getShell(), object));
+            form.getToolBarManager().add(new ImportObjectAction(form.getShell(),object));
+        }else{
+            addFillToolbar(form.getToolBarManager(), object, form.getShell());
         }
         form.getToolBarManager().update(true);
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
@@ -77,6 +86,10 @@ public class EObjectPage extends AbstractShr5Page<EObject> {
             emfFormBuilder.addTextEntry(ScriptingPackage.Literals.SCRIPT_HISTORY__CURRENT_DATE, composite,dateEntryFactory);          
             emfFormBuilder.addTextEntry(ScriptingPackage.Literals.SCRIPT_HISTORY__CURRENT_PLACEMENT, composite,linkEntryFactory);          
             emfFormBuilder.addTextEntry(ScriptingPackage.Literals.SCRIPT_HISTORY__WRITTEN_PROTOKOL, composite,createControllGridData(200));          
+        }else if (object instanceof Scripts) {
+            emfFormBuilder.addTextEntry(ScriptingPackage.Literals.SCRIPTS__NAME, composite);          
+            emfFormBuilder.addTextEntry(ScriptingPackage.Literals.SCRIPTS__STORIES, composite,createControllGridData(250));          
+            
         }
 
         emfFormBuilder.buildinComposite(m_bindingContext, managedForm.getForm().getBody(), object);

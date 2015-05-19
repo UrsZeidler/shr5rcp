@@ -59,6 +59,7 @@ import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptHistory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
+import de.urszeidler.shr5.scripting.Scripts;
 import de.urszeidler.shr5.scripting.util.ScriptingSwitch;
 
 /**
@@ -172,7 +173,16 @@ public class RuntimeEditor extends AbstractShr5Editor {
                 }
                 return this;
             }
-            
+  
+            @Override
+            public Object caseScripts(Scripts object) {
+                try {
+                    addPage(new EObjectPage(RuntimeEditor.this, EMPTY, defaultLabelProvider.getText(object.eClass()), object, editingDomain, manager));
+                } catch (PartInitException e) {
+                    logError("error creating EObjectPage", e);//$NON-NLS-1$
+                }
+                return this;
+            }
             
             @Override
             public Object caseScript(Script object) {
