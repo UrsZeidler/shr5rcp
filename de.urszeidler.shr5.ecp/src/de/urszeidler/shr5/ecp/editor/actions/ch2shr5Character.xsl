@@ -32,8 +32,7 @@
 					select="shret:findPersonaType(adept/text(),magician/text(),technomancer/text())" /></xsl:attribute>
 
 				<xsl:attribute name="name"><xsl:value-of select="name/text()" /></xsl:attribute>
-				<!-- <xsl:attribute name="beschreibung"><xsl:value-of select="background/text()" 
-					/></xsl:attribute> -->
+				<xsl:attribute name="beschreibung"><xsl:value-of select="background/text()"/></xsl:attribute>
 
 				<xsl:for-each select="attributes/*">
 					<xsl:choose>
