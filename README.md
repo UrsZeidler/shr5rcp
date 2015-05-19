@@ -58,10 +58,10 @@ or the [FAQ](https://github.com/UrsZeidler/shr5rcp/wiki/faq)
  
 another way to support is via bitcoin:
  
- * 12Fgh416ogMiJsYnXyeYqaEGyEQHcVFSsJ for main support like webspace and service
- * 1B9nJ2eXZJz1UKaVQTeMHriD1LBQsd4CvS for arts and graphics
- * 18BbgDaurToEu6sou5dmBzNUNWAhTH25Tg for localization and spell checking
- * 1JcJK1nLkAZkr4jid6N44L2bYQ7rxPSVYZ tip the coder
+ * **12Fgh416ogMiJsYnXyeYqaEGyEQHcVFSsJ** for main support like webspace and service
+ * **1B9nJ2eXZJz1UKaVQTeMHriD1LBQsd4CvS** for arts and graphics
+ * **18BbgDaurToEu6sou5dmBzNUNWAhTH25Tg** for localization and spell checking
+ * **1JcJK1nLkAZkr4jid6N44L2bYQ7rxPSVYZ** tip the coder
   
 as we could use the bitcoin to pay some people to make the tedious spell checking jobs, pay webspace or services or pay for some artwork. 
  
