@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target includeMode="feature" name="new" sequenceNumber="49">
+<?pde version="3.8"?><target includeMode="feature" name="new" sequenceNumber="53">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="javax.servlet.source" version="3.1.0.v20140303-1611"/>
@@ -45,51 +45,48 @@
 <repository location="http://download.eclipse.org/technology/babel/update-site/R0.12.1/luna"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.emf.ecp.workspace.feature.feature.group" version="1.4.1.20141006-1346"/>
-<unit id="org.eclipse.emf.ecp.emfforms.sdk.feature.feature.group" version="1.4.1.20141006-1346"/>
-<unit id="org.eclipse.emf.ecp.workspace.feature.source.feature.group" version="1.4.1.20141006-1346"/>
-<unit id="org.eclipse.emf.ecp.sdk.feature.feature.group" version="1.4.1.20141006-1346"/>
-<unit id="org.eclipse.emf.ecp.validation.view.feature.feature.group" version="1.4.1.20141006-1346"/>
-<unit id="org.eclipse.emf.ecp.view.mappingdmr.feature.feature.group" version="1.4.1.20141006-1346"/>
-<unit id="org.eclipse.emf.ecp.ecore.feature.feature.group" version="1.4.1.20141006-1346"/>
-<repository location="http://download.eclipse.org/ecp/releases/releases_14"/>
+<unit id="org.eclipse.emf.ecp.workspace.feature.feature.group" version="1.5.1.20150303-1542"/>
+<unit id="org.eclipse.emf.ecp.emfforms.sdk.feature.feature.group" version="1.5.1.20150303-1542"/>
+<unit id="org.eclipse.emf.ecp.workspace.feature.source.feature.group" version="1.5.1.20150303-1542"/>
+<unit id="org.eclipse.emf.ecp.sdk.feature.feature.group" version="1.5.1.20150303-1542"/>
+<unit id="org.eclipse.emf.ecp.validation.view.feature.feature.group" version="1.5.1.20150303-1542"/>
+<unit id="org.eclipse.emf.ecp.view.mappingdmr.feature.feature.group" version="1.5.1.20150303-1542"/>
+<unit id="org.eclipse.emf.ecp.ecore.feature.feature.group" version="1.5.1.20150303-1542"/>
+<unit id="org.eclipse.emf.ecp.diffmerge.feature.feature.group" version="1.5.1.20150303-1542"/>
+<repository location="http://download.eclipse.org/ecp/releases/releases_target_15/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.nebula.widgets.calendarcombo.feature.feature.group" version="1.0.0.201503111318"/>
-<unit id="org.eclipse.nebula.cwt.feature.feature.group" version="0.9.0.201503111318"/>
-<unit id="org.eclipse.nebula.widgets.paperclips.feature.feature.group" version="2.0.0.201503111318"/>
-<unit id="org.eclipse.nebula.widgets.cdatetime.feature.feature.group" version="0.14.0.201503111318"/>
+<unit id="org.eclipse.nebula.widgets.calendarcombo.feature.feature.group" version="1.0.0.201504221542"/>
+<unit id="org.eclipse.nebula.cwt.feature.feature.group" version="0.9.0.201504221542"/>
+<unit id="org.eclipse.nebula.widgets.paperclips.feature.feature.group" version="2.0.0.201504221542"/>
+<unit id="org.eclipse.nebula.widgets.cdatetime.feature.feature.group" version="0.14.0.201504221542"/>
 <repository location="http://download.eclipse.org/technology/nebula/snapshot"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.emf.query.sdk.feature.group" version="1.8.0.201405281426"/>
-<unit id="org.eclipse.emf.sdk.feature.group" version="2.10.1.v20140901-1055"/>
+<unit id="org.eclipse.emf.sdk.feature.group" version="2.10.2.v20150123-0452"/>
 <unit id="org.eclipse.net4j.sdk.feature.group" version="4.3.0.v20140308-0604"/>
 <unit id="org.eclipse.acceleo.feature.group" version="3.5.1.201409021433"/>
 <unit id="org.eclipse.acceleo.source.feature.group" version="3.5.1.201409021433"/>
 <unit id="org.eclipse.emf.query.master.feature.group" version="1.8.0.201405281426"/>
-<unit id="org.eclipse.ocl.all.sdk.feature.group" version="5.0.2.v20140819-1612"/>
-<unit id="org.eclipse.emf.sdk.feature.group" version="2.10.1.v20140901-1055"/>
+<unit id="org.eclipse.ocl.all.sdk.feature.group" version="5.0.2.v20141027-1335"/>
+<unit id="org.eclipse.emf.sdk.feature.group" version="2.10.2.v20150123-0452"/>
 <unit id="org.eclipse.emf.validation.sdk.feature.group" version="1.8.0.201405281429"/>
 <unit id="org.eclipse.emf.transaction.sdk.feature.group" version="1.8.0.201405281451"/>
 <unit id="org.eclipse.zest.sdk.feature.group" version="1.5.101.201408150207"/>
 <repository location="http://download.eclipse.org/releases/luna"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.equinox.sdk.feature.group" version="3.10.0.v20140909-1633"/>
-<unit id="org.eclipse.platform.sdk" version="4.4.1.M20140925-0400"/>
-<unit id="org.eclipse.rcp.feature.group" version="4.4.0.v20140925-0400"/>
-<unit id="org.eclipse.platform.ide" version="4.4.1.M20140925-0400"/>
-<unit id="org.eclipse.sdk.ide" version="4.4.1.M20140925-0400"/>
+<unit id="org.eclipse.equinox.sdk.feature.group" version="3.10.2.v20150204-1316"/>
+<unit id="org.eclipse.platform.sdk" version="4.4.2.M20150204-1700"/>
+<unit id="org.eclipse.rcp.feature.group" version="4.4.2.v20150204-1700"/>
+<unit id="org.eclipse.platform.ide" version="4.4.2.M20150204-1700"/>
+<unit id="org.eclipse.sdk.ide" version="4.4.2.M20150204-1700"/>
 <repository location="http://download.eclipse.org/eclipse/updates/4.4"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="de.urszeidler.emf.commons.feature.feature.group" version="1.0.0.b20150324-2131"/>
 <repository location="http://opensource.urszeidler.de/updatesites/de.urszeidler.eclipse.others.p2site_1.0.0-eclipse.feature/site.p2/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.emf.ecp.diffmerge.feature.feature.group" version="1.4.1.20141006-1346"/>
-<repository location="http://download.eclipse.org/ecp/releases/releases_14"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.ecf.core.feature.feature.group" version="1.1.0.v20140827-1444"/>
