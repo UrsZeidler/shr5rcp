@@ -40,7 +40,6 @@ import org.eclipse.wb.rcp.databinding.EMFTreeObservableLabelProvider;
 import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.Shr5Package;
-import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
