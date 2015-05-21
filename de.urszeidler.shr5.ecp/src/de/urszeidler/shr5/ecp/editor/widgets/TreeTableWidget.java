@@ -40,11 +40,13 @@ import org.eclipse.wb.rcp.databinding.EMFTreeObservableLabelProvider;
 import org.eclipse.wb.swt.ResourceManager;
 
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
 import de.urszeidler.emf.commons.ui.util.FormbuilderEntry;
 import de.urszeidler.shr5.ecp.editor.pages.Messages;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
+import de.urszeidler.shr5.scripting.ScriptingPackage;
 
 public class TreeTableWidget extends Composite {
 
@@ -234,6 +236,7 @@ public class TreeTableWidget extends Composite {
             for (EClass eClass : provideNewClassTypes) {
                 featureList.addAll(eClass.getEAllStructuralFeatures());
             }
+            featureList.remove(ScriptingPackage.Literals.TIME_FRAME__ACTUAL_DATE);//a runtime feature
         }
         treeViewer.setLabelProvider(new EMFTreeObservableLabelProvider(treeContentProvider.getKnownElements(), imageFeature, featureList) {
             @Override
