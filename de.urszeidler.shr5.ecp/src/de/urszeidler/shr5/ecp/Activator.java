@@ -73,10 +73,6 @@ public class Activator extends AbstractUIPlugin {
         plugin = this;
         store = getPreferenceStore();
         this.context = context;
-//        ECPProject defaultEcpProject = getDefaultEcpProject();
-//        if(defaultEcpProject!=null){
-//            checkForResourceUpdate();
-//        }
     }
 
 //    /**
