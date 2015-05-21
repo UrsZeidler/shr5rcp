@@ -4,6 +4,8 @@
 package de.urszeidler.shr5.ecp.editor;
 
 import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.forms.IManagedForm;
+import org.eclipse.ui.forms.editor.FormPage;
 
 import de.urszeidler.eclipse.shr5.AbstractMatrixDevice;
 import de.urszeidler.eclipse.shr5.AbstraktFokus;
@@ -122,11 +124,28 @@ public class ShadowrunEditor extends AbstractShr5Editor {
     public static final String id = "de.urszeidler.eclipse.shadowrun.presentation.editors.ShadowrunEditorID"; //$NON-NLS-1$
 
     
+    protected void handleActivate() {
+        if(theEObject!=null)
+            super.handleActivate();
+    }
+    
      @Override
     protected void addPages() {
-         if(theEObject==null)
+         if(theEObject==null){
+             try {
+                 addPage( new FormPage(this, EMPTY,"Object deleted"){
+                     @Override
+                    protected void createFormContent(IManagedForm managedForm) {
+                         managedForm.getForm().setText("The object is deleted.");
+                     }
+                     
+                 });
+                
+            } catch (PartInitException e) {
+                logError("error creating deleted object page", e);//$NON-NLS-1$
+            }
              return;
-             
+         }
         // the switch creates all the pages
         Shr5Switch<Object> shadowrunSwitch = new Shr5Switch<Object>() {
             @Override
