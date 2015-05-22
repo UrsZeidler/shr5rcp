@@ -30,7 +30,6 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Tree;
-import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.FluentIterable;
@@ -96,7 +95,7 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
         this.newTitle = titel + " " + labelProvider.getText(cmd.eClass());
         this.state = pstate;
 
-        FormToolkit formToolkit = new FormToolkit(shell.getDisplay());
+//        FormToolkit formToolkit = new FormToolkit(shell.getDisplay());
 
         emfFormBuilder = new EmfFormBuilder(null, itemDelegator, labelProvider, null);
         emfFormBuilder.setManager(mananger);
