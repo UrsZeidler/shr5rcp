@@ -749,7 +749,7 @@ public class GameplayTools {
      * @return
      */
     public static EAttribute getLimitForSkill(Fertigkeit skill) {
-        if (skill == null)
+        if (skill == null || skill.getAttribut()==null)
             return null;
 
         EAttribute attribut = skill.getAttribut();
