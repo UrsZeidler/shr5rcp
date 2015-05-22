@@ -21,7 +21,7 @@
 
 [template public printProtocollWriter(sh : ScriptHistory)]
 ['Written Protocol :'.localizedString()/]
-[for (p : String | sh.writtenProtokol->sortedBy(s: String|-1* sh.writtenProtokol->indexOf(s)))]
+[for (p : String | sh.writtenProtokol->reverse())]
 [p.italicText()/]
 [/for]		
 

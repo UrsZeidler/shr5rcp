@@ -64,7 +64,6 @@ public abstract class AbstractFoGenerator extends AbstractGenerator{
     protected void transform(File file) throws FOPException, TransformerException, IOException{
         /*..*/
 
-        String svg_URI_input = file.toURI().toURL().toString();
         String outputFilename = file.getAbsolutePath() + ".pdf";
      // Step 1: Construct a FopFactory
      // (reuse if you plan to render multiple documents!)
