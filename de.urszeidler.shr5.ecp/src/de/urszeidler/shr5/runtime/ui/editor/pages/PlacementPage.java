@@ -26,6 +26,7 @@ import org.eclipse.ui.forms.widgets.TableWrapLayout;
 
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
+import de.urszeidler.shr5.ecp.editor.actions.DuplicateObjectAction;
 import de.urszeidler.shr5.ecp.editor.pages.AbstractShr5Page;
 import de.urszeidler.shr5.ecp.editor.widgets.BeschreibbarWidget;
 import de.urszeidler.shr5.scripting.Placement;
@@ -96,6 +97,7 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
         Composite body = form.getBody();
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
+        form.getToolBarManager().add(new DuplicateObjectAction(object));
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit, editingDomain);
