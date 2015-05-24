@@ -7,7 +7,6 @@ import java.util.List;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.emf.common.command.Command;
-import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.ui.celleditor.ExtendedDialogCellEditor;
 import org.eclipse.emf.common.util.EList;
@@ -211,13 +210,9 @@ public class PersonaFertigkeitenWidget extends Composite implements IPropertyCha
     private boolean skillsFixedByGroup = true;
 
     private IPreferenceStore store;
-
     private RGB backColor;
-
     private boolean changeDefaultColor;
-
     private Font boldFont;
-
     private boolean useBold;
 
     /**
@@ -392,7 +387,7 @@ public class PersonaFertigkeitenWidget extends Composite implements IPropertyCha
         treeViewerNameColumn.setLabelProvider(new ColumnLabelProvider() {
             @Override
             public Font getFont(Object element) {
-                if (!(element instanceof Fertigkeit))
+                if (!(element instanceof Fertigkeit) && useBold)
                    return boldFont;
                     
                 return super.getFont(element);
@@ -524,7 +519,7 @@ public class PersonaFertigkeitenWidget extends Composite implements IPropertyCha
                     PersonaFertigkeit personaFertigkeit = ShadowrunTools.findFertigkeit(fertigkeit, persona);
                     if (personaFertigkeit != null) {
                         
-                        CompoundCommand compoundCommand = new CompoundCommand();
+//                        CompoundCommand compoundCommand = new CompoundCommand();
                         if (value instanceof Collection) {
                         Collection<?> c = (Collection<?>)value;
                         Command create = SetCommand.create(editingDomain, personaFertigkeit, Shr5Package.Literals.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN, c);
@@ -633,6 +628,7 @@ public class PersonaFertigkeitenWidget extends Composite implements IPropertyCha
                     if (attribut != null) {
                         Integer value = (Integer)persona.eGet(attribut);
                         String attributeText = AdapterFactoryUtil.getInstance().getItemDelegator().getText(attribut);
+                        attributeText = attributeText !=null ? attributeText.substring(0, 3)  : attributeText;
                         Integer fertigkeitValue = ShadowrunTools.findFertigkeitValue(f, persona);
                         if (fertigkeitValue < 1 && !f.isAusweichen())
                             return Messages.PersonaFertigkeitenWidget_not_valid;
@@ -650,7 +646,7 @@ public class PersonaFertigkeitenWidget extends Composite implements IPropertyCha
             }
         });
         TreeColumn trclmnTotalColumn = treeViewerTotalColumn.getColumn();
-        tcl_composite.setColumnData(trclmnTotalColumn, new ColumnPixelData(120, true, true));
+        tcl_composite.setColumnData(trclmnTotalColumn, new ColumnPixelData(80, true, true));
         trclmnTotalColumn.setText(Messages.PersonaFertigkeitenWidget_dice_pool);
 
         treeViewer.setContentProvider(new FertigkeitsContentProvider());
