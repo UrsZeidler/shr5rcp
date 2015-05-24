@@ -141,13 +141,19 @@ public class ProbeDialog extends TitleAreaDialog implements Adapter {
             gd_txtProbe.heightHint = 34;
             txtProbe.setLayoutData(gd_txtProbe);
         }
-
+        
         if (eAllStructuralFeatures != null && state != ProbeExecutionState.afterExecute) {
             Group grpData = new Group(container, SWT.NONE);
             grpData.setLayout(new GridLayout(3, false));
             grpData.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, eAllStructuralFeatures.size()));
             grpData.setText(Messages.ProbeDialog_probe_data_section);
-
+//            if (probe instanceof ExtendetSkillTestCmd) {
+//                ExtendetSkillTestCmd esc = (ExtendetSkillTestCmd)probe;
+//                Intervall intervall = esc.getIntervall();
+//                if(intervall==null)
+//                emfFormBuilder.addTextEntry(intervall, property, parent);
+//            }
+            
             emfFormBuilder.addAllEntries(eAllStructuralFeatures, null);
             emfFormBuilder.buildinComposite(ctx, grpData, probe);
             grpData.setSize(grpData.computeSize(SWT.DEFAULT, SWT.DEFAULT));
