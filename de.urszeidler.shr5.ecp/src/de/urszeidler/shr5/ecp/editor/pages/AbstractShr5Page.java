@@ -287,7 +287,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
                 AdapterFactoryUtil.getInstance().getLabelProvider(), getEditingDomain());
         emfFormBuilder.setManager(mananger);
         emfFormBuilder.setNullString(Messages.EmfFormbuilder_non_selected);
-        // emfFormBuilder.setBorderStyle(SWT.NONE);
+//        emfFormBuilder.setBorderStyle(SWT.NONE);
         emfFormBuilder.setDblListner(this);
         emfFormBuilder.setSelectionChangeListener(this);
         return emfFormBuilder;
