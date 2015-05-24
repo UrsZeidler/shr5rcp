@@ -118,7 +118,7 @@ Limits
 [template public printAdvacements(gears : OrderedSet(Changes)) ? (not gears->isEmpty()) { empty :String = '                                             ' ;}]
 ['_UI_ManagedCharacter_changes_feature'.localizedString().titelText()/]
 [for (ag : Changes | gears)]
-[ printTextPlusSpace(ag.date.formatDate()+' '+  getText(ag),empty)  /] [ag.karmaCost/]
+[ printTextPlusSpace(ag.date.formatDate()+' '+  getText(ag),empty)  /][if (not ag.oclIsTypeOf(KarmaGaint))] [ag.karmaCost/][/if]
 [/for]
 [/template]
 
