@@ -52,13 +52,15 @@ public class SourcebookViewerPreferences extends FieldLayoutPreferencePage imple
     @Override
     public Control createPageContents(Composite parent) {
         Composite container = new Composite(parent, SWT.NULL);
-        container.setLayout(new GridLayout());
+        GridLayout gl_container = new GridLayout();
+        gl_container.numColumns = 2;
+        container.setLayout(gl_container);
 
         Group grpSourceBooks = new Group(container, SWT.NONE);
-        grpSourceBooks.setLayout(new GridLayout(1, false));
+        grpSourceBooks.setLayout(new GridLayout(2, false));
         grpSourceBooks.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
         grpSourceBooks.setText("Source books");
-
+        
         Object root = Activator.getDefault().getEdtingDomain().getResourceSet().getResources().get(0).getAllContents().next();
         Collection<EObject> collection = ItemPropertyDescriptor.getReachableObjectsOfType((EObject)root, Shr5Package.Literals.SOURCE_BOOK);
 
@@ -67,27 +69,16 @@ public class SourcebookViewerPreferences extends FieldLayoutPreferencePage imple
             if (eObject instanceof SourceBook) {
                 SourceBook sb = (SourceBook)eObject;
                 Composite composite = new Composite(grpSourceBooks, SWT.NONE);
+                composite.setLayout(new GridLayout(4, false));
                 composite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
                 addField(new FileFieldEditor(PreferenceConstants.LINKED_SOURCEBOOKS + ShadowrunEditingTools.getId(sb), AdapterFactoryUtil
                         .getInstance().getLabelProvider().getText(sb), composite));
                 Composite composite_1 = new Composite(grpSourceBooks, SWT.NONE);
                 composite_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
-                addField(new IntegerFieldEditor(PreferenceConstants.LINKED_SOURCEBOOKS_OFFSET + ShadowrunEditingTools.getId(sb), AdapterFactoryUtil
-                        .getInstance().getLabelProvider().getText(sb)
-                        + " offset", composite_1));
-
+                addField(new IntegerFieldEditor(PreferenceConstants.LINKED_SOURCEBOOKS_OFFSET + ShadowrunEditingTools.getId(sb), 
+                        " offset", composite_1));
             }
         }
-        //
-        //
-        //
-        // Composite composite = new Composite(grpSourceBooks, SWT.NONE);
-        // composite.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-        // addField(new BooleanFieldEditor("id", "New BooleanFieldEditor", BooleanFieldEditor.DEFAULT, composite));
-        //
-        // Composite composite_1 = new Composite(grpSourceBooks, SWT.NONE);
-        // composite_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
-        // addField(new ColorFieldEditor("id", "New ColorFieldEditor", composite_1));
-        return container;
+          return container;
     }
 }
