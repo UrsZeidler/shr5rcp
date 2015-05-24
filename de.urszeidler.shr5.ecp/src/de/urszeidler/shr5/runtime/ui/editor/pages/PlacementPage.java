@@ -98,10 +98,10 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
         toolkit.decorateFormHeading(form.getForm());
         toolkit.paintBordersFor(body);
         form.getToolBarManager().add(new DuplicateObjectAction(object));
+        form.getToolBarManager().update(true);
         managedForm.getForm().getBody().setLayout(new GridLayout(1, false));
 
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(managedForm.getForm().getBody(), SWT.NONE, object, toolkit, editingDomain);
-        // gd_beschreibbarWidget.widthHint = 0;
         beschreibbarWidget.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         formToolkit.adapt(beschreibbarWidget);
         formToolkit.paintBordersFor(beschreibbarWidget);

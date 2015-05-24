@@ -4,7 +4,6 @@
 package de.urszeidler.shr5.ecp.editor.actions;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,17 +23,13 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.edit.command.AddCommand;
-import org.eclipse.emf.edit.command.RemoveCommand;
 import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.dialogs.IDialogSettings;
-import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
