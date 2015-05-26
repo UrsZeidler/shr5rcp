@@ -79,61 +79,6 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         this.object = object;
         String titel = AdapterFactoryUtil.getInstance().getLabelProvider().getText(object);
         setTitle(String.format(Messages.ModelToTextExportDialog_titel, titel));
-        
-//        HashMap<String, AbstractAcceleoGenerator> hashMap = new HashMap<String, AbstractAcceleoGenerator>();
-//        hashMap.put(Messages.ModelToTextExportDialog_tf_BBcs, new BoardCharacterSheet());
-//        hashMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, new TableBoardShr5CharacterSheet());
-//        hashMap.put(Messages.ModelToTextExportDialog_tf_ssvg, new SimpleSvg());
-//        hashMap.put(Messages.ModelToTextExportDialog_tf_ssvgv, new GenerateSvgVehicleSheet());
-//        hashMap.put(Messages.ModelToTextExportDialog_tf_csPDF, new SvgCharacterSheet());
-//        hashMap.put(Messages.ModelToTextExportDialog_tf_npcPDF, new GenerateNpcCharacterSheet());
-//        hashMap.put("Bound Spirits", new SpiritFoSheet());
-//        hashMap.put("Fo Character sheet", new FoCharacterSheet());
-//
-//        imageMap.put(Messages.ModelToTextExportDialog_tf_csPDF, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/characterSheet1.png"));
-//        imageMap.put(Messages.ModelToTextExportDialog_tf_ssvg, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/simple-svg.png")); //$NON-NLS-2$ //$NON-NLS-3$
-//        imageMap.put(Messages.ModelToTextExportDialog_tf_BBcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
-//        imageMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
-//        imageMap.put(Messages.ModelToTextExportDialog_tf_BBGcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
-//        imageMap.put("Generator system", ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
-//        imageMap.put("Life Module", ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
-//        descriptionMap.put(Messages.ModelToTextExportDialog_tf_ssvg, Messages.ModelToTextExportDialog_tf_ssvg_desc);
-//        
-//        descriptionMap.put(Messages.ModelToTextExportDialog_tf_csPDF, Messages.ModelToTextExportDialog_tf_csPDF_desc);
-//        descriptionMap.put(Messages.ModelToTextExportDialog_tf_ssvgv, Messages.ModelToTextExportDialog_tf_ssvgv_desc);
-//        descriptionMap.put(Messages.ModelToTextExportDialog_tf_BBcs, Messages.ModelToTextExportDialog_tf_BBcs_desc);
-//        descriptionMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, Messages.ModelToTextExportDialog_tf_BBTcs_desc);
-//        descriptionMap.put(Messages.ModelToTextExportDialog_tf_npcPDF, Messages.ModelToTextExportDialog_tf_npcPDF_desc);
-//        descriptionMap.put("Generator system", "A simple text export for the generator system");
-//        descriptionMap.put("Life Module", "A simple text export for the a life module.");
-//        descriptionMap.put("Fo Character sheet", "A pdf based character sheet containing most infos.");
-//        descriptionMap.put("Bound Spirits", "A pdf sheet for the bound spirits of a character.");
-//        
-//        transformerMap.put(Shr5managementPackage.Literals.PLAYER_CHARACTER, hashMap);
-//        transformerMap.put(Shr5managementPackage.Literals.NON_PLAYER_CHARACTER, hashMap);
-//
-//        HashMap<String, AbstractAcceleoGenerator> hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
-//        hashMap1.put(Messages.ModelToTextExportDialog_tf_BBGcs, new BoardShr5GeneratorSheet());
-//        transformerMap.put(Shr5managementPackage.Literals.SHR5_GENERATOR, hashMap1);
-//
-//        hashMap = new HashMap<String, AbstractAcceleoGenerator>(hashMap);
-//        hashMap.putAll(hashMap1);
-//        transformerMap.put(Shr5managementPackage.Literals.CHARACTER_GROUP, hashMap);
-//        transformerMap.put(Shr5managementPackage.Literals.PLAYER_MANAGEMENT, hashMap);
-//        transformerMap.put(Shr5managementPackage.Literals.GAMEMASTER_MANAGEMENT, hashMap);
-//
-//        hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
-//        hashMap1.put("Generator system", new GeneratorSystemBoardSheet());
-//        transformerMap.put(Shr5managementPackage.Literals.SHR5_SYSTEM, hashMap1);
-//        transformerMap.put(Shr5managementPackage.Literals.LIFE_MODULES_SYSTEM, hashMap1);
-//
-//        hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
-//        hashMap1.put("Life Module", new GenerateLifeModuleBoardSheet());
-//        transformerMap.put(Shr5managementPackage.Literals.LIFE_MODULE, hashMap1);
-//
-//        hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
-//        hashMap1.put("Script hinstory", new BoardScriptProtocollWriter());
-//        transformerMap.put(ScriptingPackage.Literals.SCRIPT_HISTORY, hashMap1);
 
         transformerMaps = de.urszeidler.shr5.m2t.Activator.getDefault().getTransformers();
         imageMap = Maps.transformValues(transformerMaps.getImageMap(), new Function<IConfigurationElement, Image>() {
