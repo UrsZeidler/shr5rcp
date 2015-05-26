@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: M2t bridge
+Bundle-SymbolicName: de.urszeidler.shr5.m2t;singleton:=true
+Bundle-Version: 0.2.9.qualifier
+Bundle-Activator: de.urszeidler.shr5.m2t.Activator
+Bundle-Vendor: Urs Zeidler
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.acceleo.engine.service,
+ org.eclipse.emf.common,
+ org.eclipse.emf.common.util,
+ org.eclipse.emf.ecore
+Export-Package: de.urszeidler.shr5.m2t

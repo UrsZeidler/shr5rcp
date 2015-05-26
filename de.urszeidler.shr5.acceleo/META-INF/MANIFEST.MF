@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Acceleo Acceleo Module Runtime Plug-in
-Bundle-SymbolicName: de.urszeidler.shr5.acceleo
+Bundle-SymbolicName: de.urszeidler.shr5.acceleo;singleton:=true
 Bundle-Version: 0.2.9.qualifier
 Bundle-Activator: de.urszeidler.shr5.acceleo.Activator
 Bundle-Vendor: Eclipse Modeling Project
@@ -21,7 +21,13 @@ Require-Bundle: org.eclipse.core.runtime,
  org.apache.batik.util,
  org.apache.xerces,
  de.urszeidler.fop.help;bundle-version="1.0.0",
- org.apache.commons.codec;bundle-version="1.6.0"
+ org.apache.commons.codec;bundle-version="1.6.0",
+ de.urszeidler.shr5.m2t,
+ de.urszeidler.shr5.runtime,
+ de.urszeidler.shr5.runtime.edit,
+ de.urszeidler.shr5.scripting,
+ de.urszeidler.shr5.scripting.edit,
+ de.urszeidler.shr5.ecp
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true

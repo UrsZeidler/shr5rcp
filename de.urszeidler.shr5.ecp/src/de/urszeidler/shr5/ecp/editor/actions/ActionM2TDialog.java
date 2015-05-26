@@ -20,7 +20,7 @@ public class ActionM2TDialog extends Action {
 
     @Override
     public void run() {
-        ModelToTextExportDialog toTextExportDialog = new ModelToTextExportDialog(shell, theObject);
+        ModelToTextExportDialog toTextExportDialog = new ModelToTextExportDialog(shell, theObject);  //new ModelToTextExportDialog(shell, theObject);
         toTextExportDialog.open();
     }
 }

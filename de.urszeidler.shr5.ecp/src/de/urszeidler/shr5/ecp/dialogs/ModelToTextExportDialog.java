@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.eclipse.acceleo.engine.service.AbstractAcceleoGenerator;
+import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
@@ -35,23 +36,13 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.wb.swt.ResourceManager;
 
+import com.google.common.base.Function;
+import com.google.common.collect.Maps;
+
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
-import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
-import de.urszeidler.shr5.acceleo.sheets.AbstractGenerator;
-import de.urszeidler.shr5.acceleo.sheets.BoardCharacterSheet;
-import de.urszeidler.shr5.acceleo.sheets.BoardScriptProtocollWriter;
-import de.urszeidler.shr5.acceleo.sheets.BoardShr5GeneratorSheet;
-import de.urszeidler.shr5.acceleo.sheets.FoCharacterSheet;
-import de.urszeidler.shr5.acceleo.sheets.GenerateLifeModuleBoardSheet;
-import de.urszeidler.shr5.acceleo.sheets.GenerateNpcCharacterSheet;
-import de.urszeidler.shr5.acceleo.sheets.GenerateSvgVehicleSheet;
-import de.urszeidler.shr5.acceleo.sheets.GeneratorSystemBoardSheet;
-import de.urszeidler.shr5.acceleo.sheets.SimpleSvg;
-import de.urszeidler.shr5.acceleo.sheets.SpiritFoSheet;
-import de.urszeidler.shr5.acceleo.sheets.SvgCharacterSheet;
-import de.urszeidler.shr5.acceleo.sheets.TableBoardShr5CharacterSheet;
 import de.urszeidler.shr5.ecp.Activator;
-import de.urszeidler.shr5.scripting.ScriptingPackage;
+import de.urszeidler.shr5.m2t.Activator.TransformerMaps;
+import de.urszeidler.shr5.m2t.OpenAble;
 
 public class ModelToTextExportDialog extends TitleAreaDialog {
     private Text text;
@@ -64,6 +55,8 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
     private Combo combo;
     private IDialogSettings dialogSettings;
     private Button button_open;
+    private Map<String, Map<String, AbstractAcceleoGenerator>> transformerMap1;
+    private TransformerMaps transformerMaps;
 
     /**
      * Create the dialog.
@@ -87,62 +80,72 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         String titel = AdapterFactoryUtil.getInstance().getLabelProvider().getText(object);
         setTitle(String.format(Messages.ModelToTextExportDialog_titel, titel));
         
-        HashMap<String, AbstractAcceleoGenerator> hashMap = new HashMap<String, AbstractAcceleoGenerator>();
-        hashMap.put(Messages.ModelToTextExportDialog_tf_BBcs, new BoardCharacterSheet());
-        hashMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, new TableBoardShr5CharacterSheet());
-        hashMap.put(Messages.ModelToTextExportDialog_tf_ssvg, new SimpleSvg());
-        hashMap.put(Messages.ModelToTextExportDialog_tf_ssvgv, new GenerateSvgVehicleSheet());
-        hashMap.put(Messages.ModelToTextExportDialog_tf_csPDF, new SvgCharacterSheet());
-        hashMap.put(Messages.ModelToTextExportDialog_tf_npcPDF, new GenerateNpcCharacterSheet());
-        hashMap.put("Bound Spirits", new SpiritFoSheet());
-        hashMap.put("Fo Character sheet", new FoCharacterSheet());
+//        HashMap<String, AbstractAcceleoGenerator> hashMap = new HashMap<String, AbstractAcceleoGenerator>();
+//        hashMap.put(Messages.ModelToTextExportDialog_tf_BBcs, new BoardCharacterSheet());
+//        hashMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, new TableBoardShr5CharacterSheet());
+//        hashMap.put(Messages.ModelToTextExportDialog_tf_ssvg, new SimpleSvg());
+//        hashMap.put(Messages.ModelToTextExportDialog_tf_ssvgv, new GenerateSvgVehicleSheet());
+//        hashMap.put(Messages.ModelToTextExportDialog_tf_csPDF, new SvgCharacterSheet());
+//        hashMap.put(Messages.ModelToTextExportDialog_tf_npcPDF, new GenerateNpcCharacterSheet());
+//        hashMap.put("Bound Spirits", new SpiritFoSheet());
+//        hashMap.put("Fo Character sheet", new FoCharacterSheet());
+//
+//        imageMap.put(Messages.ModelToTextExportDialog_tf_csPDF, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/characterSheet1.png"));
+//        imageMap.put(Messages.ModelToTextExportDialog_tf_ssvg, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/simple-svg.png")); //$NON-NLS-2$ //$NON-NLS-3$
+//        imageMap.put(Messages.ModelToTextExportDialog_tf_BBcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
+//        imageMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
+//        imageMap.put(Messages.ModelToTextExportDialog_tf_BBGcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
+//        imageMap.put("Generator system", ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
+//        imageMap.put("Life Module", ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
+//        descriptionMap.put(Messages.ModelToTextExportDialog_tf_ssvg, Messages.ModelToTextExportDialog_tf_ssvg_desc);
+//        
+//        descriptionMap.put(Messages.ModelToTextExportDialog_tf_csPDF, Messages.ModelToTextExportDialog_tf_csPDF_desc);
+//        descriptionMap.put(Messages.ModelToTextExportDialog_tf_ssvgv, Messages.ModelToTextExportDialog_tf_ssvgv_desc);
+//        descriptionMap.put(Messages.ModelToTextExportDialog_tf_BBcs, Messages.ModelToTextExportDialog_tf_BBcs_desc);
+//        descriptionMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, Messages.ModelToTextExportDialog_tf_BBTcs_desc);
+//        descriptionMap.put(Messages.ModelToTextExportDialog_tf_npcPDF, Messages.ModelToTextExportDialog_tf_npcPDF_desc);
+//        descriptionMap.put("Generator system", "A simple text export for the generator system");
+//        descriptionMap.put("Life Module", "A simple text export for the a life module.");
+//        descriptionMap.put("Fo Character sheet", "A pdf based character sheet containing most infos.");
+//        descriptionMap.put("Bound Spirits", "A pdf sheet for the bound spirits of a character.");
+//        
+//        transformerMap.put(Shr5managementPackage.Literals.PLAYER_CHARACTER, hashMap);
+//        transformerMap.put(Shr5managementPackage.Literals.NON_PLAYER_CHARACTER, hashMap);
+//
+//        HashMap<String, AbstractAcceleoGenerator> hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
+//        hashMap1.put(Messages.ModelToTextExportDialog_tf_BBGcs, new BoardShr5GeneratorSheet());
+//        transformerMap.put(Shr5managementPackage.Literals.SHR5_GENERATOR, hashMap1);
+//
+//        hashMap = new HashMap<String, AbstractAcceleoGenerator>(hashMap);
+//        hashMap.putAll(hashMap1);
+//        transformerMap.put(Shr5managementPackage.Literals.CHARACTER_GROUP, hashMap);
+//        transformerMap.put(Shr5managementPackage.Literals.PLAYER_MANAGEMENT, hashMap);
+//        transformerMap.put(Shr5managementPackage.Literals.GAMEMASTER_MANAGEMENT, hashMap);
+//
+//        hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
+//        hashMap1.put("Generator system", new GeneratorSystemBoardSheet());
+//        transformerMap.put(Shr5managementPackage.Literals.SHR5_SYSTEM, hashMap1);
+//        transformerMap.put(Shr5managementPackage.Literals.LIFE_MODULES_SYSTEM, hashMap1);
+//
+//        hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
+//        hashMap1.put("Life Module", new GenerateLifeModuleBoardSheet());
+//        transformerMap.put(Shr5managementPackage.Literals.LIFE_MODULE, hashMap1);
+//
+//        hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
+//        hashMap1.put("Script hinstory", new BoardScriptProtocollWriter());
+//        transformerMap.put(ScriptingPackage.Literals.SCRIPT_HISTORY, hashMap1);
 
-        imageMap.put(Messages.ModelToTextExportDialog_tf_csPDF, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/characterSheet1.png"));
-        imageMap.put(Messages.ModelToTextExportDialog_tf_ssvg, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/simple-svg.png")); //$NON-NLS-2$ //$NON-NLS-3$
-        imageMap.put(Messages.ModelToTextExportDialog_tf_BBcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
-        imageMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
-        imageMap.put(Messages.ModelToTextExportDialog_tf_BBGcs, ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
-        imageMap.put("Generator system", ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
-        imageMap.put("Life Module", ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/textTransformations.png")); //$NON-NLS-2$ //$NON-NLS-3$
-        descriptionMap.put(Messages.ModelToTextExportDialog_tf_ssvg, Messages.ModelToTextExportDialog_tf_ssvg_desc);
-        
-        descriptionMap.put(Messages.ModelToTextExportDialog_tf_csPDF, Messages.ModelToTextExportDialog_tf_csPDF_desc);
-        descriptionMap.put(Messages.ModelToTextExportDialog_tf_ssvgv, Messages.ModelToTextExportDialog_tf_ssvgv_desc);
-        descriptionMap.put(Messages.ModelToTextExportDialog_tf_BBcs, Messages.ModelToTextExportDialog_tf_BBcs_desc);
-        descriptionMap.put(Messages.ModelToTextExportDialog_tf_BBTcs, Messages.ModelToTextExportDialog_tf_BBTcs_desc);
-        descriptionMap.put(Messages.ModelToTextExportDialog_tf_npcPDF, Messages.ModelToTextExportDialog_tf_npcPDF_desc);
-        descriptionMap.put("Generator system", "A simple text export for the generator system");
-        descriptionMap.put("Life Module", "A simple text export for the a life module.");
-        descriptionMap.put("Fo Character sheet", "A pdf based character sheet containing most infos.");
-        descriptionMap.put("Bound Spirits", "A pdf sheet for the bound spirits of a character.");
-        
-        transformerMap.put(Shr5managementPackage.Literals.PLAYER_CHARACTER, hashMap);
-        transformerMap.put(Shr5managementPackage.Literals.NON_PLAYER_CHARACTER, hashMap);
+        transformerMaps = de.urszeidler.shr5.m2t.Activator.getDefault().getTransformers();
+        imageMap = Maps.transformValues(transformerMaps.getImageMap(), new Function<IConfigurationElement, Image>() {
 
-        HashMap<String, AbstractAcceleoGenerator> hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
-        hashMap1.put(Messages.ModelToTextExportDialog_tf_BBGcs, new BoardShr5GeneratorSheet());
-        transformerMap.put(Shr5managementPackage.Literals.SHR5_GENERATOR, hashMap1);
-
-        hashMap = new HashMap<String, AbstractAcceleoGenerator>(hashMap);
-        hashMap.putAll(hashMap1);
-        transformerMap.put(Shr5managementPackage.Literals.CHARACTER_GROUP, hashMap);
-        transformerMap.put(Shr5managementPackage.Literals.PLAYER_MANAGEMENT, hashMap);
-        transformerMap.put(Shr5managementPackage.Literals.GAMEMASTER_MANAGEMENT, hashMap);
-
-        hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
-        hashMap1.put("Generator system", new GeneratorSystemBoardSheet());
-        transformerMap.put(Shr5managementPackage.Literals.SHR5_SYSTEM, hashMap1);
-        transformerMap.put(Shr5managementPackage.Literals.LIFE_MODULES_SYSTEM, hashMap1);
-
-        hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
-        hashMap1.put("Life Module", new GenerateLifeModuleBoardSheet());
-        transformerMap.put(Shr5managementPackage.Literals.LIFE_MODULE, hashMap1);
-
-        hashMap1 = new HashMap<String, AbstractAcceleoGenerator>();
-        hashMap1.put("Script hinstory", new BoardScriptProtocollWriter());
-        transformerMap.put(ScriptingPackage.Literals.SCRIPT_HISTORY, hashMap1);
-
-
+            @Override
+            public Image apply(IConfigurationElement input) {
+                Image pluginImage = ResourceManager.getPluginImage(input.getContributor().getName(), input.getAttribute("dialogImage"));
+                return pluginImage;
+            }
+        });
+        descriptionMap = transformerMaps.getDescriptionMap();
+        transformerMap1 = transformerMaps.getTransformerMap();
         dialogSettings = Activator.getDefault().getDialogSettings();
     }
 
@@ -209,8 +212,8 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         button_open = new Button(container, SWT.CHECK);
         button_open.setText("");
         new Label(container, SWT.NONE);
-
-        Map<String, AbstractAcceleoGenerator> map = transformerMap.get(object.eClass());
+        
+        Map<String, AbstractAcceleoGenerator> map = getGenerators();
         if (map != null) {
             map.keySet();
             combo.setItems(map.keySet().toArray(new String[]{}));
@@ -237,10 +240,21 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
         return area;
     }
 
+    private Map<String, AbstractAcceleoGenerator> getGenerators() {
+        Class<?>[] classes = object.getClass().getInterfaces();//[0].getInterfaces();        
+        for (Class<?> class1 : classes) {
+            Map<String, AbstractAcceleoGenerator> map = transformerMap1.get(class1.getCanonicalName());
+            if(map!=null)
+                return map;
+        }
+        
+        return null;
+    }
+
     @SuppressWarnings("unchecked")
     @Override
     protected void okPressed() {
-        Map<String, AbstractAcceleoGenerator> map = transformerMap.get(object.eClass());
+        Map<String, AbstractAcceleoGenerator> map = getGenerators();
         String text2 = combo.getText();
         final boolean open = button_open.getSelection();
         if (map != null) {
@@ -251,8 +265,8 @@ public class ModelToTextExportDialog extends TitleAreaDialog {
                 @Override
                 protected IStatus run(IProgressMonitor monitor) {
                     try {
-                        if (generator instanceof AbstractGenerator) {
-                            AbstractGenerator g = (AbstractGenerator)generator;
+                        if (generator instanceof OpenAble) {
+                            OpenAble g = (OpenAble)generator;
                             g.setOpen(open);
                         }
                         

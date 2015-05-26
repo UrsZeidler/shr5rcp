@@ -209,4 +209,11 @@
          version="0.2.9.qualifier"
          unpack="false"/>
 
+   <plugin
+         id="de.urszeidler.shr5.m2t"
+         download-size="0"
+         install-size="0"
+         version="0.2.9.qualifier"
+         unpack="false"/>
+
 </feature>

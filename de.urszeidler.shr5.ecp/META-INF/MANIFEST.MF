@@ -20,7 +20,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.nebula.paperclips.widgets;bundle-version="2.0.0",
  org.eclipse.nebula.widgets.cdatetime;bundle-version="0.14.0",
  org.eclipse.nebula.jface.cdatetime;bundle-version="0.14.0",
- de.urszeidler.shr5.acceleo,
  de.urszeidler.shr5.gameplay,
  de.urszeidler.shr5.gameplay.model,
  de.urszeidler.shr5.gameplay.model.edit,
@@ -67,3 +66,5 @@ Export-Package: de.urszeidler.shr5.ecp,
  org.eclipse.wb.swt
 Bundle-Vendor: Urs Zeidler
 Bundle-ClassPath: .
+Import-Package: de.urszeidler.shr5.m2t,
+ org.eclipse.acceleo.engine.service
