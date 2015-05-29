@@ -90,7 +90,9 @@
 		<fo:block margin-top="10pt" keep-together="always">
 [printContracts(aManagedCharacter)  /]
 		</fo:block  >
-
+		<fo:block margin-top="10pt" keep-together="always">
+[printNotesOnObjects(aManagedCharacter)/]
+		</fo:block  >
 
       </fo:table-cell>
      </fo:table-row>
@@ -209,6 +211,27 @@
 [/file]
 [/template]
 
+[template public printNotesOnObjects (aManagedCharacter : ManagedCharacter) ]
+[printSectionTitel('Notes'.localizedString())/]
+ <fo:table font-size="small">
+   <fo:table-column  />
+    <fo:table-body  >
+[for (it : OclAny | aManagedCharacter.eContents())]
+[if (it.oclIsKindOf(Beschreibbar) and not it.oclIsKindOf(AbstraktPersona))]
+[if (not it.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())]
+     	<fo:table-row>
+[printCell(it.oclAsType(Beschreibbar).name.getText())/]
+    	</fo:table-row>
+     	<fo:table-row>
+[printCell(it.oclAsType(Beschreibbar).beschreibung)/]
+    </fo:table-row>
+[/if]
+[/if]
+[/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+
 [template public printRiggerSection (character : ManagedCharacter) ]
 <!-- Rigger stuff -->
 <fo:block margin-top="10pt" ></fo:block  >
@@ -239,13 +262,17 @@
 [/template]
 
 [template public printCharacterChanges (aManagedCharacter : ManagedCharacter) ]
-[printSectionTitel('_UI_Changes_type'.localizedString())/]
- <fo:table font-size="small">
+ <fo:table font-size="small" keep-together="always">
     <fo:table-column column-width="10%" />
    <fo:table-column column-width="10%" />
    <fo:table-column  />
    <fo:table-column column-width="10%" />
     <fo:table-body  >
+     	<fo:table-row>
+      		<fo:table-cell>
+[printSectionTitel('_UI_Changes_type'.localizedString())/]
+      		</fo:table-cell>
+		</fo:table-row>
      	<fo:table-row>
 [printCellAttribute('_UI_Changes_date_feature'.localizedString(),'  font-style="italic" ')/]	
 [printCellAttribute('_UI_Changes_changeApplied_feature'.localizedString(),' font-size="small" font-style="italic" ')/]	
@@ -1344,6 +1371,11 @@
 		</fo:block>
       </fo:table-cell>
 	</fo:table-row>
+[for (prg : Sin | deck.storedSins)]
+     <fo:table-row>
+[printCellSpanned(prg.getText(),2)/]
+	</fo:table-row>
+[/for]
 
     </fo:table-body>
    </fo:table>

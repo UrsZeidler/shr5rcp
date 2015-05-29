@@ -7,6 +7,7 @@
 [import de::urszeidler::shr5::acceleo::common::shr5EEnumhelper  /]
 [import de::urszeidler::shr5::acceleo::common::shr5ManagementEEnumhelper  /]
 [import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunEditingTools  /]
 
 
 [template public boardScriptProtocollWriter(sh : ScriptHistory) {s : Script = sh.eContainer(Script); }]
@@ -37,30 +38,30 @@
 [/template]
 
 [template public printCommand (aCommand : ProbeCommand) ]
-[aCommand.date.formatDateTimeSec()/] [aCommand.eClass().getText()/] [aCommand.subject.getText()/] [printCommandText(aCommand)/]
+[aCommand.date.formatDateTimeSec()/] [aCommand.getText()/] [printCommandText(aCommand)/]
 [for (c : Command | aCommand.subCommands)]
 [printCommand(c)/][/for]
 [/template]
 
 [template public printCommand (aCommand : SkillTestCmd) ]
-[aCommand.date.formatDateTimeSec()/] [aCommand.eClass().getText()/] ([aCommand.skill.getText()/]) [aCommand.subject.getText()/] [printCommandText(aCommand)/]
+[aCommand.date.formatDateTimeSec()/] [aCommand.getText()/] [printCommandText(aCommand)/]
 [for (c : Command | aCommand.subCommands)]
 [printCommand(c)/][/for]
 [/template]
 
 [template public printCommandText (p : ProbeCommand) ]
-[if (p.skipTest)] [p.netHits/]/[p.limit/]([p.glitches/]) [else] [p.netHits/]/[p.limit/]([p.glitches/]) [p.probe/] [/if][/template]
+[command2String(p)/][/template]
 
 
 [template public printCommand (aCommand : CombatTurn) ]
-[aCommand.date.formatDateTimeSec()/] [aCommand.eClass().getText()/] [aCommand.sequence/] 
+[aCommand.date.formatDateTimeSec()/] [aCommand.getText()/] [aCommand.sequence/] --
 [for (i : InitativePass | aCommand.actionPhases)]
 [printIniPhase(i)/][/for]
 [/template]
 
 
 [template public printIniPhase (aCommand : InitativePass) ]
-[aCommand.date.formatDateTimeSec()/] [aCommand.eClass().getText()/] [aCommand.subject.getText()/] ([aCommand.phase/]/[aCommand.turn/])
+[aCommand.date.formatDateTimeSec()/] [aCommand.getText()/]--- [aCommand.subject.getText()/] ([aCommand.phase/]/[aCommand.turn/])
 [printAction(aCommand.action)/]
 [for (c : Command | aCommand.subCommands)]
 [printCommand(c)/][/for]

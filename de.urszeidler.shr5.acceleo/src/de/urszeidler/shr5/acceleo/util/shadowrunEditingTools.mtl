@@ -1,0 +1,32 @@
+[comment encoding = UTF-8 /]
+[module shadowrunEditingTools('http://shr.scripting/1.0', 'http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5/gameplay/1.0', 'http://urszeidler.de/shr5/runtime/1.0', 'http://urszeidler.de/shr5mngt/1.0','http://www.eclipse.org/emf/2002/Ecore')/]
+
+[query public getId(arg0 : EObject) : String
+	= invoke('de.urszeidler.shr5.ecp.util.ShadowrunEditingTools', 'getId(org.eclipse.emf.ecore.EObject)', Sequence{arg0})
+/]
+
+
+[query public powerPointsToFloat(arg0 : Integer) : String
+	= invoke('de.urszeidler.shr5.ecp.util.ShadowrunEditingTools', 'powerPointsToFloat()', Sequence{arg0})
+/]
+
+
+[query public essenzToFloat(arg0 : Integer) : String
+	= invoke('de.urszeidler.shr5.ecp.util.ShadowrunEditingTools', 'essenzToFloat()', Sequence{arg0})
+/]
+
+
+[query public command2String(arg0 : Command) : String
+	= invoke('de.urszeidler.shr5.ecp.util.ShadowrunEditingTools', 'command2String(de.urszeidler.eclipse.shr5.gameplay.Command)', Sequence{arg0})
+/]
+
+[query public toEEnumName(arg0 : OclAny, arg1 : EObject, arg2 : EAttribute) : String
+	= invoke('de.urszeidler.shr5.ecp.util.ShadowrunEditingTools', 'toEEnumName(java.lang.Object, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EAttribute)', Sequence{arg0, arg1, arg2})
+/]
+
+
+[query public toFeatureName(arg0 : EObject, arg1 : EStructuralFeature) : String
+	= invoke('de.urszeidler.shr5.ecp.util.ShadowrunEditingTools', 'toFeatureName(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EStructuralFeature)', Sequence{arg0, arg1})
+/]
+
+

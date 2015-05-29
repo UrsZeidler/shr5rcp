@@ -69,6 +69,16 @@
 
 [printVehicles(aManagedCharacter.vehicels,empty)/]
 
+['Notes'.localizedString().boldText()/]
+[for (it : OclAny | aManagedCharacter.eContents())]
+[if (it.oclIsKindOf(Beschreibbar) and not it.oclIsKindOf(AbstraktPersona))]
+[if (not it.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())]
+[it.oclAsType(Beschreibbar).name.getText()/]
+[it.oclAsType(Beschreibbar).beschreibung.italicText()/]
+[/if]
+[/if]
+[/for]
+
 [if (aManagedCharacter.oclIsTypeOf(PlayerCharacter))]
 [printDiary(aManagedCharacter.oclAsType(PlayerCharacter).diary)/]
 [/if]
