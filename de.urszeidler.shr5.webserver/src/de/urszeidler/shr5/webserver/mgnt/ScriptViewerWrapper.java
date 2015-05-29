@@ -98,7 +98,12 @@ public class ScriptViewerWrapper implements ScriptViewer {
 
             @Override
             public boolean prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-                if (cmd instanceof CommandWrapper || cmd instanceof SimpleAction || cmd instanceof SemanticAction)
+//                if (cmd instanceof SimpleAction) {
+//                    type new_name = (type)commandCallback;
+//                    
+//                }
+                
+                if (cmd instanceof CommandWrapper || cmd instanceof SemanticAction|| cmd instanceof SimpleAction)
                     return false;
 
                 if (cmd instanceof CombatTurn) {

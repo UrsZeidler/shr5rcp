@@ -19,19 +19,6 @@ public class Messages extends NLS {
     public static String ModelToTextExportDialog_select_dir_tooltip;
     public static String ModelToTextExportDialog_select_m2m_lable;
     public static String ModelToTextExportDialog_select_m2m_tooltip;
-    public static String ModelToTextExportDialog_tf_BBcs;
-    public static String ModelToTextExportDialog_tf_BBcs_desc;
-    public static String ModelToTextExportDialog_tf_BBGcs;
-    public static String ModelToTextExportDialog_tf_BBTcs;
-    public static String ModelToTextExportDialog_tf_BBTcs_desc;
-    public static String ModelToTextExportDialog_tf_csPDF;
-    public static String ModelToTextExportDialog_tf_csPDF_desc;
-    public static String ModelToTextExportDialog_tf_npcPDF;
-    public static String ModelToTextExportDialog_tf_npcPDF_desc;
-    public static String ModelToTextExportDialog_tf_ssvg;
-    public static String ModelToTextExportDialog_tf_ssvg_desc;
-    public static String ModelToTextExportDialog_tf_ssvgv;
-    public static String ModelToTextExportDialog_tf_ssvgv_desc;
     public static String ModelToTextExportDialog_titel;
     public static String ModelToTextExportDialog_lblOpen_text;
     static {

@@ -1116,7 +1116,7 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
     @Override
     public boolean prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
-        if (cmd instanceof CommandWrapper || cmd instanceof SimpleAction || cmd instanceof SemanticAction)
+        if (cmd instanceof CommandWrapper || cmd instanceof SemanticAction || cmd instanceof SimpleAction )//)
             return false;
         if (cmd instanceof CombatTurn) {
             CombatTurn ct = (CombatTurn)cmd;

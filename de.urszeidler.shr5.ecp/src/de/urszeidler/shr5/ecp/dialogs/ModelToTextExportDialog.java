@@ -14,7 +14,6 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.emf.common.util.Monitor;
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.dialogs.IDialogSettings;
@@ -47,7 +46,6 @@ import de.urszeidler.shr5.m2t.OpenAble;
 public class ModelToTextExportDialog extends TitleAreaDialog {
     private Text text;
     private EObject object;
-    private Map<EClass, Map<String, AbstractAcceleoGenerator>> transformerMap = new HashMap<EClass, Map<String, AbstractAcceleoGenerator>>();
     private Map<String, Image> imageMap = new HashMap<String, Image>();
     private Map<String, String> descriptionMap = new HashMap<String, String>();
     protected AbstractAcceleoGenerator generator;
