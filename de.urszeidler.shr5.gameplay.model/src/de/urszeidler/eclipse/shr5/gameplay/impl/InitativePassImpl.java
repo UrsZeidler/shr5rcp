@@ -1,5 +1,5 @@
 /**
- * (c) Urs Zeilder
+ * (c) Urs Zeidler
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 

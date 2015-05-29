@@ -1,5 +1,5 @@
 /**
- * (c) Urs Zeilder
+ * (c) Urs Zeidler
  */
 package de.urszeidler.eclipse.shr5.gameplay.impl;
 
@@ -37,4 +37,13 @@ public class SimpleActionImpl extends SubjectCommandImpl implements SimpleAction
         return GameplayPackage.Literals.SIMPLE_ACTION;
     }
 
+    
+    @Override
+    public void redo() {
+      prepareRedo();
+
+      executeSubActions();
+      setExecuted(true);
+      executing = false;
+    }
 } //SimpleActionImpl

@@ -23529,6 +23529,7 @@
         <changes xsi:type="shr5mngt:KarmaGaint" xmi:id="_bSbEYO-KEeSvgoopBS9psw" date="2075-07-27T17:36:00.000+0200" changeApplied="true" dateApplied="2015-05-01T00:44:20.132+0200" karma="3"/>
         <changes xsi:type="shr5mngt:KarmaGaint" xmi:id="_kngCwO-dEeSvgoopBS9psw" date="2075-07-27T17:36:00.000+0200" changeApplied="true" dateApplied="2015-05-01T03:01:44.243+0200" karma="2"/>
         <changes xsi:type="shr5mngt:KarmaGaint" xmi:id="_VEC7YPtjEeSwt6OProESPg" date="2075-07-31T17:36:00.000+0200" changeApplied="true" dateApplied="2015-05-16T02:35:03.564+0200" karma="5"/>
+        <changes xsi:type="shr5mngt:KarmaGaint" xmi:id="_j-_jQATQEeWpBcSpTPtqzg" date="2075-08-08T17:36:00.000+0200" changeApplied="true" dateApplied="2015-05-28T02:29:20.382+0200" karma="4"/>
         <inventar xsi:type="shr5:Nahkampfwaffe" xmi:id="_Bz1VY90CEeOvVYoRsPZlnA" page="422" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="9R" wertValue="1000" image="/shr5Resource/images/katana.png" name="Katana" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0" spezialisierung="_EL5X9DnTEeSe6_w6Jrbqxg" schadenscode="(STR+3)P" praezision="7" durchschlagsKraft="-3" reichweite="1"/>
         <inventar xsi:type="shr5:Feuerwaffe" xmi:id="_JoEq4FDLEeSjN8rIya5QCA" parentId="971c711b-db32-4339-9203-865ef38f350e" page="426" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5R" wertValue="725" name="Ares Predator V" fertigkeit="adf31a50-b228-4e09-a09c-46ab9f5e59a1" schadenscode="8P" praezision="5" durchschlagsKraft="-1" reichweite="_ENFDsznTEeSe6_w6Jrbqxg" munitionstyp="Streifen" kapazitaet="15">
           <localizations xmi:id="_JoEq4VDLEeSjN8rIya5QCA" local="de" name="Ares Predator V"/>
@@ -23590,6 +23591,11 @@
           <transactionlog xsi:type="shr5:TransferAmount" xmi:id="_XP2PIPtkEeSwt6OProESPg" amount="3000" date="2075-07-31T17:36:00.000+0200" description="transfer" source="_OIWH4MJoEeSTho7TSrzjng" dest="_evVfwK8WEeS3Wp9Q37-3Qw"/>
           <transactionlog xsi:type="shr5:ShoppingTransaction" xmi:id="_YS_BQAFxEeWgxfrTimxKgg" amount="-1500" date="2075-07-31T17:36:00.000+0200" items="_JyCD0AFyEeWgxfrTimxKgg"/>
           <transactionlog xmi:id="_OR-dEAF2EeWgxfrTimxKgg" amount="3000" date="2075-08-04T17:36:00.000+0200" description="Vorschuss"/>
+          <transactionlog xmi:id="_BGoSgASqEeWpBcSpTPtqzg" amount="-700" date="2075-08-08T17:36:00.000+0200" description="Auto Gemietet"/>
+          <transactionlog xsi:type="shr5:ShoppingTransaction" xmi:id="_dUStMATNEeWpBcSpTPtqzg" amount="-140" date="2075-08-09T17:36:00.000+0200" description="trodes" items="_opaLUATNEeWpBcSpTPtqzg" fee="1.0"/>
+          <transactionlog xmi:id="_Vv1AwATOEeWpBcSpTPtqzg" amount="-100" date="2075-08-10T17:36:00.000+0200" description="Stuff zum essen."/>
+          <transactionlog xmi:id="_ajIs0ATQEeWpBcSpTPtqzg" amount="4500" date="2075-08-08T17:36:00.000+0200" description="Auszahlung"/>
+          <transactionlog xmi:id="_HmVHwATUEeWpBcSpTPtqzg" amount="-2500" date="2075-08-08T17:36:00.000+0200" description="Anteil Novak"/>
         </inventar>
         <inventar xsi:type="shr5:Credstick" xmi:id="_Vh3_wK8YEeS769kjC9ygTA" parentId="_ELzRUjnTEeSe6_w6Jrbqxg" page="443" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="5" wertValue="20" name="Gold -1" maxValue="100000">
           <transactionlog xmi:id="_jphFUK8XEeS3Wp9Q37-3Qw" amount="12400" date="9999-03-20T00:00:00.000+0100" description="Einnahmen"/>
@@ -23618,7 +23624,7 @@
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_a498cK9pEeS769kjC9ygTA" parentId="97f888dd-7e0d-4f33-b4cc-396cddecdf62" page="448" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2" wertValue="80" name="Miniwelder Fuel Canister" kategorie="Breaking and Entering Gear">
           <localizations xmi:id="_a498ca9pEeS769kjC9ygTA" local="de" name="Mini-Schweißgerät Benzin"/>
         </inventar>
-        <inventar xsi:type="shr5:Munition" xmi:id="_DQ-kMK95EeSC2YJFV_dUOA" parentId="0c8d16cb-6e96-4d95-8454-104a36091cf9" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="25" name="Gel Rounds" anzahl="40" proAnzahl="10" armorMod="1" type="_ENFDsznTEeSe6_w6Jrbqxg">
+        <inventar xsi:type="shr5:Munition" xmi:id="_DQ-kMK95EeSC2YJFV_dUOA" parentId="0c8d16cb-6e96-4d95-8454-104a36091cf9" page="434" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="2R" wertValue="25" name="Gel Rounds" anzahl="31" proAnzahl="10" armorMod="1" type="_ENFDsznTEeSe6_w6Jrbqxg">
           <localizations xmi:id="_DQ-kMa95EeSC2YJFV_dUOA" local="de" name="Munition: Gelgeschosse"/>
         </inventar>
         <inventar xsi:type="shr5:Gegenstand" xmi:id="_dMtGYK95EeSC2YJFV_dUOA" parentId="22ceb53b-7863-424b-8ee5-d04bb520d97d" page="444" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="8" wertValue="250" name="Endoscope" kategorie="Vision Devices">
@@ -23640,7 +23646,7 @@
           <modie>EM</modie>
           <erweiterung>Lauf</erweiterung>
           <erweiterung>Oben</erweiterung>
-          <magazin xmi:id="__2bBgq97EeSC2YJFV_dUOA" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ruger Super Warhawk ammunition" type="__2bBgK97EeSC2YJFV_dUOA"/>
+          <magazin xmi:id="__2bBgq97EeSC2YJFV_dUOA" page="427" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" name="Ruger Super Warhawk ammunition" type="__2bBgK97EeSC2YJFV_dUOA" bullets="_NMtTILPPEeSnAumGkho7aw"/>
         </inventar>
         <inventar xsi:type="shr5:Feuerwaffe" xmi:id="__2xm0K97EeSC2YJFV_dUOA" parentId="c2c0e756-a099-4f9d-b6bb-18f412d670a3" page="429" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="450" name="Defiance T-250" fertigkeit="64088b25-de37-4d71-8800-4a430fde08af" schadenscode="10P" praezision="4" durchschlagsKraft="-1" reichweite="_ENFqwznTEeSe6_w6Jrbqxg" kapazitaet="5">
           <localizations xmi:id="__2xm0a97EeSC2YJFV_dUOA" local="de" name="Defiance T-250"/>
@@ -23713,10 +23719,13 @@
           <localizations xmi:id="_W1J-EQGBEeWgxfrTimxKgg" local="de" name="Meta Link"/>
           <pan xmi:id="_b7Wb0AGBEeWgxfrTimxKgg"/>
         </inventar>
+        <inventar xsi:type="shr5:Gegenstand" xmi:id="_opaLUATNEeWpBcSpTPtqzg" parentId="418d5ba1-dd19-4179-add8-074be445a7b2" page="439" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="0" wertValue="70" name="Trodes" kategorie="Electronics Accessories">
+          <localizations xmi:id="_opaLUQTNEeWpBcSpTPtqzg" local="de" name="Elektroden"/>
+        </inventar>
         <contracts xsi:type="shr5:Lifestyle" xmi:id="_Bz2jgd0CEeOvVYoRsPZlnA" name="Low" page="95" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="2000" faelligkeitsIntervall="1" unit="month" begin="2075-03-01T09:01:12.185+0100">
           <options xmi:id="_n4DQ8Ps3EeSZ-O6FDMrXCw" name="Garage" parentId="_ENlaADnTEeSe6_w6Jrbqxg" page="374" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="500"/>
         </contracts>
-        <contracts xsi:type="shr5:Sin" xmi:id="_W1G6wAGBEeWgxfrTimxKgg" name="Faked SIN 4" parentId="_ZrXDMIXPEeS_sOkeVG-YrA" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="2500" stufe="4" gefaelscht="true"/>
+        <contracts xsi:type="shr5:Sin" xmi:id="_W1G6wAGBEeWgxfrTimxKgg" beschreibung="Nicht im Havelpark benutzen." name="Faked SIN 4" parentId="_ZrXDMIXPEeS_sOkeVG-YrA" page="447" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="1" wertValue="2500" stufe="4" gefaelscht="true"/>
         <connections xmi:id="_Bz8DEN0CEeOvVYoRsPZlnA" influence="2" loyality="3" character="_B1PDlN0CEeOvVYoRsPZlnA"/>
         <connections xmi:id="_Bz8DEd0CEeOvVYoRsPZlnA" influence="4" loyality="2" character="_g_xAoL-FEeSSYv7eFvElvA"/>
         <connections xmi:id="_1rAMQMAXEeSK0tFwZsh0jA" influence="2" loyality="3" character="_7fDeQMAGEeSSE7G7aOAz9Q"/>
@@ -23748,6 +23757,8 @@
           <entries xmi:id="_lLx70AF1EeWgxfrTimxKgg" date="2075-08-04T17:36:00.000+0200" message="Wir treffen uns im Frakenstein.&#xA;Sollen einen Miliärputschisten für Kopfgeldjäger besorgen&#xA;Muva, Keas Joens, Nachschub und versorgung offizier der Ucas.&#xA;Arbeitet jetzt für Ares.&#xA;Wir Recherchieren 'Havelpark', schon hohe sicherheit.&#xA;&#xA;Fragen Beinarbeit:&#xA;&#xA;* Was ist der Realed Wert &#xA;* mehr HIntergrund Informationen über den Typen&#xA;* Wen kennt er so in Berlin&#xA;* der ganze Havelpark&#xA;* Ares gebaren im allgemeinen&#xA;* Tagesablauf, Doc Weagon&#xA;* Astrale Sicherheit&#xA;&#xA;&#xA;Decker beauftragen. &#xA;50 Min 18 Erfolge.Keas Joens&#xA;50 Min 18 Erfolge&#xA;&#xA;* Wir können uns mit 500 auf die Ignore Liste setzen&#xA;&#xA;&#xA;Wir besorgen die sin.&#xA;&#xA;"/>
           <entries xmi:id="_nGJgUAGBEeWgxfrTimxKgg" date="2075-08-05T17:36:00.000+0200" message="Wir haben die Sin und Fahren in den Havelpark.&#xA;Drei Wachen in der Tiefgarage. Eine macht Pause.&#xA;Die Autos werden durch das Gridgide gesteuert.&#xA;&#xA;Drei Wachen Wachen am Hapteingang.&#xA;Morgens dichter Helicopter vehrker.&#xA;Gebundene Geister beobachten die Apartments.&#xA;Wachstationen im Park, vereinzelt, sind mit Hütern gesichert.&#xA;20:30 ist er zu hause. (Das Licht ist an.)&#xA;&#xA;&#xA;&#xA;&#xA;"/>
           <entries xmi:id="_HCRjEAGgEeWgxfrTimxKgg" date="2075-08-07T17:36:00.000+0200" message="WIr starten."/>
+          <entries xmi:id="_8qcjcASbEeWpBcSpTPtqzg" date="2075-08-08T17:36:00.000+0200" message="In Wild TRash trefen wir uns und rufen Novak an.&#xA;Wir schieden einen heavy mettal plan.&#xA;Gu Mietet das Auto. &#xA;Das stellen wir an einer geeignten Stelle ab, die wir per Boot erreichen könten. WIr hijacken ein Auto mit dem wir vor faahren und nach oben in den 12 Stock gehen. Gu knackt die Tür.&#xA;"/>
+          <entries xsi:type="shr5mngt:CharacterChange" xmi:id="_lPwnkATQEeWpBcSpTPtqzg" date="2075-08-08T17:36:00.000+0200" message="Karma Gained : 4" change="_j-_jQATQEeWpBcSpTPtqzg"/>
         </diary>
       </members>
       <members xsi:type="shr5mngt:PlayerCharacter" xmi:id="_B0TPcd0CEeOvVYoRsPZlnA" chracterSource="_B0-k4d0CEeOvVYoRsPZlnA" choosenLifestyle="_CguDUIalEeSVUMMR5ontNw" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b" sex="male">
@@ -23875,7 +23886,7 @@
         <inventar xsi:type="shr5:Magazin" xmi:id="_hz40gJP8EeSg7ale_kHbpw" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="b2eefb04-0e33-4faa-8e92-5c4bcbfc3f16" bullets="_GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg _GfKE9IMaEeSeG83rgDt2Qg"/>
         <inventar xsi:type="shr5:Magazin" xmi:id="_i-Zf0JP8EeSg7ale_kHbpw" parentId="_PErXUD_REeSRYrHAmMULWA" page="433" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="5" name="Spare Clip" type="971c711b-db32-4339-9203-865ef38f350e" bullets="_GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg _GfKE8IMaEeSeG83rgDt2Qg"/>
         <contracts xsi:type="shr5:Sin" xmi:id="_B0h48N0CEeOvVYoRsPZlnA" name="Sin Stufe 4" wertValue="10000" stufe="4" gefaelscht="true"/>
-        <contracts xsi:type="shr5:Lizenz" xmi:id="_B0mxcN0CEeOvVYoRsPZlnA" name="Gun Licence" wertValue="800" stufe="4" gefaelscht="true" lizenzTraeger="_B0h48N0CEeOvVYoRsPZlnA"/>
+        <contracts xsi:type="shr5:Lizenz" xmi:id="_B0mxcN0CEeOvVYoRsPZlnA" name="Gun Licence" wertValue="800" stufe="4" gefaelscht="true"/>
         <contracts xsi:type="shr5:Lifestyle" xmi:id="_CguDUIalEeSVUMMR5ontNw" name="Low" parentId="e8e2f128-6f09-4e5f-bd7d-fce7b9766225" page="373" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="" wertValue="6000" faelligkeitsIntervall="3" unit="month" begin="2072-02-01T12:11:01.188+0100">
           <localizations xmi:id="_CguDUYalEeSVUMMR5ontNw" local="de" name="Unterschicht"/>
           <options xsi:type="shr5:PercentLifestyleOption" xmi:id="_EwE20IalEeSVUMMR5ontNw" name="Troll" parentId="_kFaCUIaiEeSXruMPxKiFDw" page="79" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" wertValue="100"/>

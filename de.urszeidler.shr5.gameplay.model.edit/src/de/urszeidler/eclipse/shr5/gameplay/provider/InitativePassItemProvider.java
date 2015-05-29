@@ -1,5 +1,5 @@
 /**
- * (c) Urs Zeilder
+ * (c) Urs Zeidler
  */
 package de.urszeidler.eclipse.shr5.gameplay.provider;
 
@@ -19,6 +19,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
+import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
+import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.InitativePass} object.
@@ -177,13 +180,8 @@ public class InitativePassItemProvider
         if(!initativePass.isExecuted())
             return getString("_UI_InitativePass_type");
 
-        String label = "";
-        ComposeableAdapterFactory factory = ((GameplayItemProviderAdapterFactory)this.adapterFactory).getRootAdapterFactory();
-        IItemLabelProvider labelprovider = (IItemLabelProvider)factory.adapt(initativePass.getSubject(), IItemLabelProvider.class);
-        if (labelprovider != null)
-            label = labelprovider.getText(initativePass.getSubject());
-
-        return getString("_UI_InitativePass_type_text",new Object[]{label,initativePass.getPhase()});
+        String label =  Shr5EditingTools.getLabelForEObject((ComposeableAdapterFactory)this.adapterFactory, "", initativePass.getSubject());
+        return getString("_UI_InitativePass_type_text",new Object[]{label,initativePass.getPhase(),initativePass.getTurn()});
     }
 
     /**
