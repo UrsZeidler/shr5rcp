@@ -33,6 +33,7 @@ import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
+import de.urszeidler.shr5.scripting.Section;
 
 /**
  * @author urs
@@ -91,18 +92,18 @@ public class ScriptPrinter extends PersonaPrinter {
         grid.add(new BreakPrint(), GridPrint.REMAINDER);
         for (Placement placement : script.getPlacements()) {
             grid.add(new NoBreakPrint(printPlacement(placement)));
-            
+
         }
         grid.add(new BreakPrint(), GridPrint.REMAINDER);
         grid.add(new TextPrint("Appendix enemy groups:", headFontData));
         for (Team team : script.getAllTeams()) {
-            grid.add(new TextPrint(toSimpleName(team),attributeFont));
+            grid.add(new TextPrint(toSimpleName(team), attributeFont));
             if (team instanceof GruntTeam) {
                 GruntTeam gt = (GruntTeam)team;
                 grid.add(printGruntGroupSheet(gt.getGruntGroup()));
-            }else
+            } else
                 grid.add(printTeamDetail(team));
-        }            
+        }
 
         return grid;
     }
@@ -114,34 +115,44 @@ public class ScriptPrinter extends PersonaPrinter {
         grid.add(printDescription(placement));
 
         grid.add(new EmptyPrint(5, 20));
-        grid.add(createBandPrint(new TextPrint("Time"), new TextPrint(formatDate(placement.getStartDate()))
-                ,new TextPrint(formatDate(placement.getStartDate())) ));
-        grid.add(new TextPrint(ShadowrunEditingTools.toFeatureName(placement, ScriptingPackage.Literals.PLACEMENT__IN_THEIR_FACE)  , headFontData));
-        grid.add(new TextPrint(printString(placement.getInTheirFace())));
-        grid.add(new EmptyPrint(5, 25));
-
-        grid.add(new TextPrint(ShadowrunEditingTools.toFeatureName(placement, ScriptingPackage.Literals.PLACEMENT__BACKGROUND), headFontData));
-        grid.add(new TextPrint(printString(placement.getBackground())));
-        grid.add(new EmptyPrint(5, 25));
-
-        grid.add(new TextPrint(ShadowrunEditingTools.toFeatureName(placement, ScriptingPackage.Literals.PLACEMENT__DEBUGGING), headFontData));
-        grid.add(new TextPrint(printString(placement.getDebugging())));
-        grid.add(new EmptyPrint(5, 25));
+        grid.add(createBandPrint(new TextPrint("Time"), new TextPrint(formatDate(placement.getStartDate())),
+                new TextPrint(formatDate(placement.getStartDate()))));
+        if (placement.getInTheirFace()!=null &&!placement.getInTheirFace().isEmpty()) {
+            grid.add(new TextPrint(ShadowrunEditingTools.toFeatureName(placement, ScriptingPackage.Literals.PLACEMENT__IN_THEIR_FACE), headFontData));
+            grid.add(new TextPrint(printString(placement.getInTheirFace())));
+            grid.add(new EmptyPrint(5, 25));
+        }
+        if (placement.getBackground()!=null && !placement.getBackground().isEmpty()) {
+            grid.add(new TextPrint(ShadowrunEditingTools.toFeatureName(placement, ScriptingPackage.Literals.PLACEMENT__BACKGROUND), headFontData));
+            grid.add(new TextPrint(printString(placement.getBackground())));
+            grid.add(new EmptyPrint(5, 25));
+        }
+        if (placement.getDebugging()!=null &&!placement.getDebugging().isEmpty()) {
+            grid.add(new TextPrint(ShadowrunEditingTools.toFeatureName(placement, ScriptingPackage.Literals.PLACEMENT__DEBUGGING), headFontData));
+            grid.add(new TextPrint(printString(placement.getDebugging())));
+            grid.add(new EmptyPrint(5, 25));
+        }
+        for (Section sec : placement.getSections()) {
+            grid.add(new TextPrint(sec.getTitel(), headFontData));
+            grid.add(new TextPrint(printString(sec.getText())));
+            grid.add(new EmptyPrint(5, 25));
+        }
 
         EList<Placement> nextPlacements = placement.getNextPlacements();
         if (!nextPlacements.isEmpty()) {
-            grid.add(new TextPrint(ShadowrunEditingTools.toFeatureName(placement, ScriptingPackage.Literals.PLACEMENT__NEXT_PLACEMENTS), tableHeaderFontData));
+            grid.add(new TextPrint(ShadowrunEditingTools.toFeatureName(placement, ScriptingPackage.Literals.PLACEMENT__NEXT_PLACEMENTS),
+                    tableHeaderFontData));
             for (Placement placement2 : nextPlacements) {
-                grid.add(new TextPrint(toSimpleName(placement2),attributeFont));
+                grid.add(new TextPrint(toSimpleName(placement2), attributeFont));
             }
             grid.add(new EmptyPrint(5, 5));
         }
         EList<Team> teams = placement.getTeams();
-        if(!teams.isEmpty()){
+        if (!teams.isEmpty()) {
             grid.add(new TextPrint(ShadowrunEditingTools.toFeatureName(placement, ScriptingPackage.Literals.PLACEMENT__TEAMS), tableHeaderFontData));
             for (Team team : teams) {
-                grid.add(new TextPrint(toSimpleName(team),attributeFont));
-            }            
+                grid.add(new TextPrint(toSimpleName(team), attributeFont));
+            }
         }
         grid.add(new EmptyPrint(5, 30));
 
@@ -149,6 +160,8 @@ public class ScriptPrinter extends PersonaPrinter {
     }
 
     private String formatDate(Date date) {
+        if(date==null)
+            return "";
         return SimpleDateFormat.getDateTimeInstance(SimpleDateFormat.SHORT, SimpleDateFormat.LONG).format(date);
     }
 
@@ -156,20 +169,20 @@ public class ScriptPrinter extends PersonaPrinter {
         DefaultGridLook look = new DefaultGridLook(0, 0);
         look.setHeaderGap(0);
         GridPrint grid = new GridPrint("d,d:g", look);//$NON-NLS-1$
-        
+
         EList<RuntimeCharacter> members = team.getMembers();
         HashMap<ManagedCharacter, AtomicInteger> list = new HashMap<ManagedCharacter, AtomicInteger>();
         for (RuntimeCharacter runtimeCharacter : members) {
             ManagedCharacter character = runtimeCharacter.getCharacter();
-            if(list.get(character)==null){
+            if (list.get(character) == null) {
                 list.put(character, new AtomicInteger());
             }
             list.get(character).incrementAndGet();
         }
         for (ManagedCharacter managedCharacter : list.keySet()) {
-            grid.add(printNpcSheet(managedCharacter,list.get(managedCharacter).intValue()));
+            grid.add(printNpcSheet(managedCharacter, list.get(managedCharacter).intValue()));
         }
-        
+
         return grid;
     }
 
@@ -186,8 +199,7 @@ public class ScriptPrinter extends PersonaPrinter {
         }
         grid.add(printPersonaAttributes(persona), 2);
         for (int i = 0; i < intValue; i++) {
-            grid.add(SWT.LEFT, SWT.TOP,
-                    printConditionMonitor(persona.getName() + ONE_SPACE + (i + 1), zustandKoerperlichMax));
+            grid.add(SWT.LEFT, SWT.TOP, printConditionMonitor(persona.getName() + ONE_SPACE + (i + 1), zustandKoerperlichMax));
         }
         grid.add(new EmptyPrint(), GridPrint.REMAINDER);
         grid.add(printPersonaWeaponsDetailList(managedCharacter), 5);
@@ -201,7 +213,7 @@ public class ScriptPrinter extends PersonaPrinter {
         grid1.add(printPersonaSkills(persona));
         grid1.add(printGegenstandList(managedCharacter.getInventar(), Messages.Printer_Items));
         grid.add(grid1, GridPrint.REMAINDER);
-        
+
         return grid;
     }
 
