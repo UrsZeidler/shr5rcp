@@ -1,6 +1,7 @@
 package de.urszeidler.shr5.m2t;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.eclipse.acceleo.engine.service.AbstractAcceleoGenerator;
@@ -66,7 +67,7 @@ public class Activator extends AbstractUIPlugin {
                   String executableExtension = ic.getAttribute("class");
                   Map<String, AbstractAcceleoGenerator> map = transformerMap.get(executableExtension);
                   if(map==null){
-                      map = new HashMap<String, AbstractAcceleoGenerator>();
+                      map = new LinkedHashMap<String, AbstractAcceleoGenerator>();
                       transformerMap.put(executableExtension, map);
                   }
                   map.put(name, (AbstractAcceleoGenerator)extension);
