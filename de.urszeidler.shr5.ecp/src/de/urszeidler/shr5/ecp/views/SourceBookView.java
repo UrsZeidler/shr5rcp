@@ -25,18 +25,27 @@ import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.dialogs.InputDialog;
+import org.eclipse.jface.preference.IPreferenceNode;
+import org.eclipse.jface.preference.IPreferencePage;
 import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.preference.PreferenceDialog;
+import org.eclipse.jface.preference.PreferenceManager;
+import org.eclipse.jface.preference.PreferenceNode;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.StackLayout;
 import org.eclipse.swt.custom.StyleRange;
 import org.eclipse.swt.custom.StyledText;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Link;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.IWorkbenchPart;
@@ -54,7 +63,9 @@ import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
+import de.urszeidler.shr5.ecp.preferences.SourcebookViewerPreferences;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
+import org.eclipse.wb.swt.SWTResourceManager;
 
 public class SourceBookView extends ViewPart implements ISelectionListener {
     protected DataBindingContext m_bindingContext;
@@ -64,7 +75,7 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
     private Quelle internalQuelle = Shr5Factory.eINSTANCE.createAutoSoft();
     private Quelle selection = Shr5Factory.eINSTANCE.createAutoSoft();
     private WritableValue displayedText = new WritableValue("", String.class);
-    private Collection<File> workingFiles = Collections.synchronizedCollection(new HashSet<File>()) ;
+    private Collection<File> workingFiles = Collections.synchronizedCollection(new HashSet<File>());
     private Map<String, String> pageMap = new HashMap<String, String>();
     private Map<File, PDDocument> bookMap = new HashMap<File, PDDocument>();
     private StyledText styledText;
@@ -73,6 +84,11 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
     private Action nextAction;
     private Action prevAction;
     private Action gotoPageAction;
+    private Composite composite_1;
+    private Composite composite_2;
+
+    private StackLayout layout;
+    private Link link;
 
     public SourceBookView() {
     }
@@ -114,90 +130,40 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
         GridData gd_lblName = new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1);
         gd_lblName.widthHint = 168;
         lblName.setLayoutData(gd_lblName);
-        lblName.setText("name");
+        lblName.setText("sourcebook name");
 
-        styledText = new StyledText(container, SWT.V_SCROLL | SWT.BORDER | SWT.READ_ONLY | SWT.WRAP);
-        styledText.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
+        composite_1 = new Composite(container, SWT.NONE);
+        layout = new StackLayout();
+        composite_1.setLayout(layout);
+        composite_1.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
 
-        // emfFormBuilder.setNullString(Messages.EmfFormbuilder_non_selected);
-        // emfFormBuilder.setBorderStyle(SWT.NONE);
-        // emfFormBuilder.setDblListner(this);
+        styledText = new StyledText(composite_1, SWT.V_SCROLL | SWT.BORDER | SWT.READ_ONLY | SWT.WRAP);
+        composite_2 = new Composite(composite_1, SWT.NONE);
+        composite_2.setBackground(SWTResourceManager.getColor(SWT.COLOR_LIST_BACKGROUND));
+        composite_2.setLayout(new GridLayout(1, false));
 
-        // ScrolledComposite scrolledComposite = new ScrolledComposite(container, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
-        // scrolledComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-        // scrolledComposite.setExpandHorizontal(true);
-        // scrolledComposite.setExpandVertical(true);
+        link = new Link(composite_2, SWT.NONE);
+        link.setBackground(SWTResourceManager.getColor(SWT.COLOR_LIST_BACKGROUND));
+        link.addSelectionListener(new SelectionAdapter() {
+            @Override
+            public void widgetSelected(SelectionEvent e) {
+                IPreferencePage page = new SourcebookViewerPreferences();
+                PreferenceManager mgr = new PreferenceManager();
+                IPreferenceNode node = new PreferenceNode("1", page);
+                mgr.addToRoot(node);
+                PreferenceDialog dialog = new PreferenceDialog(getSite().getShell(), mgr);
+                dialog.create();
+                dialog.setMessage(page.getTitle());
+                dialog.open();
 
-        // canvas = new Canvas (container, SWT.NO_BACKGROUND |
-        // SWT.NO_REDRAW_RESIZE | SWT.V_SCROLL | SWT.H_SCROLL);
-        // final ScrollBar hBar = canvas.getHorizontalBar ();
-        // canvas.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
-        // hBar.addListener (SWT.Selection, new Listener () {
-        // @Override
-        // public void handleEvent (Event e) {
-        // int hSelection = hBar.getSelection ();
-        // int destX = -hSelection - origin.x;
-        // Rectangle rect = image.getBounds();
-        // canvas.scroll (destX, 0, 0, 0, rect.width, rect.height, false);
-        // origin.x = -hSelection;
-        // }
-        // });
-        // final ScrollBar vBar = canvas.getVerticalBar ();
-        // vBar.addListener (SWT.Selection, new Listener () {
-        // @Override
-        // public void handleEvent (Event e) {
-        // int vSelection = vBar.getSelection ();
-        // int destY = -vSelection - origin.y;
-        // Rectangle rect = image.getBounds ();
-        // canvas.scroll (0, destY, 0, 0, rect.width, rect.height, false);
-        // origin.y = -vSelection;
-        // }
-        // });
-        // canvas.addListener (SWT.Resize, new Listener () {
-        // @Override
-        // public void handleEvent (Event e) {
-        // Rectangle rect = image.getBounds ();
-        // Rectangle client = canvas.getClientArea ();
-        // hBar.setMaximum (rect.width);
-        // vBar.setMaximum (rect.height);
-        // hBar.setThumb (Math.min (rect.width, client.width));
-        // vBar.setThumb (Math.min (rect.height, client.height));
-        // int hPage = rect.width - client.width;
-        // int vPage = rect.height - client.height;
-        // int hSelection = hBar.getSelection ();
-        // int vSelection = vBar.getSelection ();
-        // if (hSelection >= hPage) {
-        // if (hPage <= 0) hSelection = 0;
-        // origin.x = -hSelection;
-        // }
-        // if (vSelection >= vPage) {
-        // if (vPage <= 0) vSelection = 0;
-        // origin.y = -vSelection;
-        // }
-        // canvas.redraw ();
-        // }
-        // });
-        // canvas.addListener (SWT.Paint, new Listener () {
-        // @Override
-        // public void handleEvent (Event e) {
-        // GC gc = e.gc;
-        // gc.drawImage (image, origin.x, origin.y);
-        // Rectangle rect = image.getBounds ();
-        // Rectangle client = canvas.getClientArea ();
-        // int marginWidth = client.width - rect.width;
-        // if (marginWidth > 0) {
-        // gc.fillRectangle (rect.width, 0, marginWidth, client.height);
-        // }
-        // int marginHeight = client.height - rect.height;
-        // if (marginHeight > 0) {
-        // gc.fillRectangle (0, rect.height, client.width, marginHeight);
-        // }
-        // }
-        // });
-        //
-        //
-        //
-
+            }
+        });
+        link.setLayoutData(new GridData(SWT.LEFT, SWT.FILL, false, true, 1, 1));
+        link.setText("The current sourcebook is not configured, \nadd the sourcebook in the <a>preferences</a> \nto extract and display the text here.");
+        layout.topControl = composite_2;
+        composite.update();
+        composite_1.layout();
+        
         createActions();
         initializeToolBar();
         initializeMenu();
@@ -316,9 +282,13 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
         final File file = getFileFromPreferences(srcBook);//
         if (file == null) {
             displayedText.setValue("");
+            layout.topControl = composite_2;
+            composite_1.layout();
             return;
         }
-
+        layout.topControl = styledText;
+        composite_1.layout();
+        
         final String key = src.getSrcBook().getName() + src.getPage();
         String text = pageMap.get(key);
         if (text == null) {
@@ -457,14 +427,13 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
         return null;
     }
 
-
     /**
      * Get the text from the pdf.
      */
     private String getTextFromPage(Quelle q, PDDocument pdDocument2) {
         IPreferenceStore store = Activator.getDefault().getPreferenceStore();
         String id2 = ShadowrunEditingTools.getId(q.getSrcBook());
-        
+
         int offset = store.getInt(PreferenceConstants.LINKED_SOURCEBOOKS_OFFSET + id2);
         try {
             int page = Integer.parseInt(q.getPage());
@@ -474,7 +443,7 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
                 pdfTextStripper.setStartPage(page + offset);
                 pdfTextStripper.setEndPage(page + offset);
                 pdfTextStripper.setAddMoreFormatting(true);
-                
+
                 text = pdfTextStripper.getText(pdDocument2).trim();
             }
             text = text.replaceAll("-\n", "");
@@ -502,11 +471,11 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
         if (pdDocument != null)
             return pdDocument;
 
-        if(workingFiles.contains(file))
+        if (workingFiles.contains(file))
             return null;
         else
             workingFiles.add(file);
-        
+
         monitor.setTaskName("load ..." + file.getName());
         try {
             pdDocument = PDDocument.load(file);
