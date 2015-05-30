@@ -5,9 +5,9 @@
          point="de.urszeidler.shr5.m2t">
       <Transformer
             acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.BoardCharacterSheet"
-            description="A text based bulleting board chracter sheet."
+            description="%Transformer.bbcharactersheet.description"
             dialogImage="images/textTransformations.png"
-            name="Board Character sheet">
+            name="%Transformer.bbcharactersheet.name">
          <TransformerMapping
                class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter"></TransformerMapping>
          <TransformerMapping
@@ -19,8 +19,9 @@
       </Transformer>
       <Transformer
             acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.BoardShr5GeneratorSheet"
+            description="%Transformer.bbgeneratorsheet.description"
             dialogImage="images/textTransformations.png"
-            name="Board Generator Character sheet">
+            name="%Transformer.bbgeneratorsheet.name">
          <TransformerMapping
                class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter"></TransformerMapping>
          <TransformerMapping
@@ -32,75 +33,9 @@
       </Transformer>
       <Transformer
             acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.TableBoardShr5CharacterSheet"
-            description="A text based bulleting board chracter sheet based on a table."
+            description="%Transformer.bbtablesheet.description"
             dialogImage="images/textTransformations.png"
-            name="BB Table Character Sheet">
-         <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter"></TransformerMapping>
-         <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
-         </TransformerMapping>
-         <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
-         </TransformerMapping>
-      </Transformer>
-      <Transformer
-            acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.SimpleSvg"
-            description="A very basic character sheet."
-            dialogImage="images/simple-svg.png"
-            name="simple svg-&gt;pdf">
-         <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter"></TransformerMapping>
-         <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
-         </TransformerMapping>
-         <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
-         </TransformerMapping>
-      </Transformer>
-      <Transformer
-            acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.GenerateSvgVehicleSheet"
-            description="A very basic vehicle sheet."
-            name="simple vehicle-&gt;pdf">
-          <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter"></TransformerMapping>
-         <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
-         </TransformerMapping>
-         <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
-         </TransformerMapping>
-      </Transformer>
-      <Transformer
-            acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.GenerateNpcCharacterSheet"
-            description="A npc A5 landscape svg sheet."
-            name="npc character sheet-&gt;pdf">
-         <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter"></TransformerMapping>
-         <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
-         </TransformerMapping>
-         <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
-         </TransformerMapping>
-      </Transformer>
-      <Transformer
-            acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.SvgCharacterSheet"
-            description="A nice A4 svg character sheet"
-            dialogImage="images/characterSheet1.png"
-            name="characterSheet-&gt;pdf">
-          <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter"></TransformerMapping>
-         <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
-         </TransformerMapping>
-         <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
-         </TransformerMapping>
-      </Transformer>
-      <Transformer
-            acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.SpiritFoSheet"
-            name="Bound Spirits">
+            name="%Transformer.bbtablesheet.name">
          <TransformerMapping
                class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter"></TransformerMapping>
          <TransformerMapping
@@ -112,7 +47,76 @@
       </Transformer>
       <Transformer
             acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.FoCharacterSheet"
-            name="Fo Character sheet">
+            name="%Transformer.pdffo.name">
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter">
+         </TransformerMapping>
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
+         </TransformerMapping>
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
+         </TransformerMapping>
+      </Transformer>
+      <Transformer
+            acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.SvgCharacterSheet"
+            description="%Transformer.pdfcharacter.description"
+            dialogImage="images/characterSheet1.png"
+            name="%Transformer.pdfcharacter.name">
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter">
+         </TransformerMapping>
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
+         </TransformerMapping>
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
+         </TransformerMapping>
+      </Transformer>
+      <Transformer
+            acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.SimpleSvg"
+            description="%Transformer.pdfsimple.description"
+            dialogImage="images/simple-svg.png"
+            name="%Transformer.pdfsimple.name">
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter"></TransformerMapping>
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
+         </TransformerMapping>
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
+         </TransformerMapping>
+      </Transformer>
+      <Transformer
+            acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.GenerateSvgVehicleSheet"
+            description="%Transformer.pdfvehicle.description"
+            name="%Transformer.pdfvehicle.name">
+          <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter"></TransformerMapping>
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
+         </TransformerMapping>
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
+         </TransformerMapping>
+      </Transformer>
+      <Transformer
+            acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.GenerateNpcCharacterSheet"
+            description="%Transformer.pdfnpc.description"
+            name="%Transformer.pdfnpc.name">
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter"></TransformerMapping>
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
+         </TransformerMapping>
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
+         </TransformerMapping>
+      </Transformer>
+      <Transformer
+            acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.SpiritFoSheet"
+            description="%Transformer.pdfbspirit.description"
+            name="%Transformer.pdfbspirit.name">
          <TransformerMapping
                class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter"></TransformerMapping>
          <TransformerMapping
@@ -124,8 +128,9 @@
       </Transformer>
       <Transformer
             acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.GeneratorSystemBoardSheet"
+            description="%Transformer.textgeneratossystem.description"
             dialogImage="images/textTransformations.png"
-            name="Generator system">
+            name="%Transformer.textgeneratossystem.name">
          <TransformerMapping
                class="de.urszeidler.eclipse.shr5Management.Shr5System">
          </TransformerMapping>
@@ -135,15 +140,17 @@
       </Transformer>
       <Transformer
             acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.GenerateLifeModuleBoardSheet"
+            description="%Transformer.textlms.description"
             dialogImage="images/textTransformations.png"
-            name="Life Module">
+            name="%Transformer.textlms.name">
          <TransformerMapping
                class="de.urszeidler.eclipse.shr5Management.LifeModule"></TransformerMapping>
       </Transformer>
       <Transformer
             acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.BoardScriptProtocollWriter"
+            description="%Transformer.textscripthistory.description"
             dialogImage="images/textTransformations.png"
-            name="Script hinstory">
+            name="%Transformer.textscripthistory.name">
          <TransformerMapping
                class="de.urszeidler.shr5.scripting.ScriptHistory"></TransformerMapping>
       </Transformer>
