@@ -246,6 +246,7 @@ public class PlacementPage extends AbstractShr5Page<Placement> {
         controlGridData.heightHint = 120;
 
         emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__OPTIONS, composite_7,controlGridData);
+        emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__SECTIONS, composite_7);
         emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__NEXT_PLACEMENTS, composite_5);
         emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__TEAMS, composite_5);
         emfFormBuilder.addTextEntry(ScriptingPackage.Literals.PLACEMENT__HANDOUTS, composite_5);
