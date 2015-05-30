@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import de.urszeidler.eclipse.shr5.runtime.Enviorment;
 import de.urszeidler.eclipse.shr5.runtime.Team;
 import de.urszeidler.shr5.scripting.Handout;
@@ -25,6 +25,7 @@ import de.urszeidler.shr5.scripting.Placement;
 import de.urszeidler.shr5.scripting.PlacementOptions;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
+import de.urszeidler.shr5.scripting.Section;
 import de.urszeidler.shr5.scripting.TimeFrame;
 
 /**
@@ -49,6 +50,7 @@ import de.urszeidler.shr5.scripting.TimeFrame;
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getEnviorment <em>Enviorment</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getOptions <em>Options</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getHandouts <em>Handouts</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getSections <em>Sections</em>}</li>
  * </ul>
  * </p>
  *
@@ -284,6 +286,16 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * @ordered
      */
     protected EList<Handout> handouts;
+
+    /**
+     * The cached value of the '{@link #getSections() <em>Sections</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getSections()
+     * @generated
+     * @ordered
+     */
+    protected EList<Section> sections;
 
     /**
      * <!-- begin-user-doc -->
@@ -630,6 +642,18 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    public EList<Section> getSections() {
+        if (sections == null) {
+            sections = new EObjectContainmentEList<Section>(Section.class, this, ScriptingPackage.PLACEMENT__SECTIONS);
+        }
+        return sections;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
@@ -655,6 +679,8 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
                 return basicSetEnviorment(null, msgs);
             case ScriptingPackage.PLACEMENT__HANDOUTS:
                 return ((InternalEList<?>)getHandouts()).basicRemove(otherEnd, msgs);
+            case ScriptingPackage.PLACEMENT__SECTIONS:
+                return ((InternalEList<?>)getSections()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -711,6 +737,8 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
                 return getOptions();
             case ScriptingPackage.PLACEMENT__HANDOUTS:
                 return getHandouts();
+            case ScriptingPackage.PLACEMENT__SECTIONS:
+                return getSections();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -773,6 +801,10 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
                 getHandouts().clear();
                 getHandouts().addAll((Collection<? extends Handout>)newValue);
                 return;
+            case ScriptingPackage.PLACEMENT__SECTIONS:
+                getSections().clear();
+                getSections().addAll((Collection<? extends Section>)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -830,6 +862,9 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
             case ScriptingPackage.PLACEMENT__HANDOUTS:
                 getHandouts().clear();
                 return;
+            case ScriptingPackage.PLACEMENT__SECTIONS:
+                getSections().clear();
+                return;
         }
         super.eUnset(featureID);
     }
@@ -872,6 +907,8 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
                 return options != null && !options.isEmpty();
             case ScriptingPackage.PLACEMENT__HANDOUTS:
                 return handouts != null && !handouts.isEmpty();
+            case ScriptingPackage.PLACEMENT__SECTIONS:
+                return sections != null && !sections.isEmpty();
         }
         return super.eIsSet(featureID);
     }

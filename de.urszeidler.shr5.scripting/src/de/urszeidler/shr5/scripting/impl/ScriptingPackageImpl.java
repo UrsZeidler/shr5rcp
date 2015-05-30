@@ -22,6 +22,7 @@ import de.urszeidler.shr5.scripting.ScriptHistory;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
 import de.urszeidler.shr5.scripting.Scripts;
+import de.urszeidler.shr5.scripting.Section;
 import de.urszeidler.shr5.scripting.TimeFrame;
 
 /**
@@ -72,6 +73,13 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * @generated
      */
     private EClass handoutEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass sectionEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -309,6 +317,15 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    public EReference getPlacement_Sections() {
+        return (EReference)placementEClass.getEStructuralFeatures().get(9);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getTimeFrame() {
         return timeFrameEClass;
     }
@@ -444,6 +461,33 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    public EClass getSection() {
+        return sectionEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSection_Titel() {
+        return (EAttribute)sectionEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSection_Text() {
+        return (EAttribute)sectionEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EEnum getPlacementOptions() {
         return placementOptionsEEnum;
     }
@@ -503,6 +547,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         createEReference(placementEClass, PLACEMENT__ENVIORMENT);
         createEAttribute(placementEClass, PLACEMENT__OPTIONS);
         createEReference(placementEClass, PLACEMENT__HANDOUTS);
+        createEReference(placementEClass, PLACEMENT__SECTIONS);
 
         timeFrameEClass = createEClass(TIME_FRAME);
         createEAttribute(timeFrameEClass, TIME_FRAME__START_DATE);
@@ -522,6 +567,10 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         handoutEClass = createEClass(HANDOUT);
         createEAttribute(handoutEClass, HANDOUT__TYPE);
         createEAttribute(handoutEClass, HANDOUT__URL);
+
+        sectionEClass = createEClass(SECTION);
+        createEAttribute(sectionEClass, SECTION__TITEL);
+        createEAttribute(sectionEClass, SECTION__TEXT);
 
         // Create enums
         placementOptionsEEnum = createEEnum(PLACEMENT_OPTIONS);
@@ -586,6 +635,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         initEReference(getPlacement_Enviorment(), theRuntimePackage.getEnviorment(), null, "enviorment", null, 1, 1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getPlacement_Options(), this.getPlacementOptions(), "options", null, 0, 2, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getPlacement_Handouts(), this.getHandout(), null, "handouts", null, 0, -1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getPlacement_Sections(), this.getSection(), null, "sections", null, 0, -1, Placement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(timeFrameEClass, TimeFrame.class, "TimeFrame", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getTimeFrame_StartDate(), theShr5Package.getShrDate(), "startDate", null, 0, 1, TimeFrame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -605,6 +655,10 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         initEClass(handoutEClass, Handout.class, "Handout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getHandout_Type(), this.getHandoutType(), "type", null, 0, 1, Handout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getHandout_Url(), ecorePackage.getEString(), "url", null, 0, 1, Handout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+        initEClass(sectionEClass, Section.class, "Section", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getSection_Titel(), ecorePackage.getEString(), "titel", null, 0, 1, Section.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSection_Text(), ecorePackage.getEString(), "text", null, 0, 1, Section.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         // Initialize enums and add enum literals
         initEEnum(placementOptionsEEnum, PlacementOptions.class, "PlacementOptions");

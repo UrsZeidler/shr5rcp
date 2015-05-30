@@ -43,6 +43,7 @@
       <genFeatures createChild="false" propertyDescription="The options for this placement, they define the available actions for the placement."
           ecoreFeature="ecore:EAttribute scripting.ecore#//Placement/options"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Placement/handouts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scripting.ecore#//Placement/sections"/>
     </genClasses>
     <genClasses image="false" ecoreClass="scripting.ecore#//TimeFrame">
       <genFeatures createChild="false" propertyDescription="" ecoreFeature="ecore:EAttribute scripting.ecore#//TimeFrame/startDate"/>
@@ -64,6 +65,10 @@
     <genClasses ecoreClass="scripting.ecore#//Handout">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//Handout/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//Handout/url"/>
+    </genClasses>
+    <genClasses ecoreClass="scripting.ecore#//Section">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scripting.ecore#//Section/titel"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute scripting.ecore#//Section/text"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

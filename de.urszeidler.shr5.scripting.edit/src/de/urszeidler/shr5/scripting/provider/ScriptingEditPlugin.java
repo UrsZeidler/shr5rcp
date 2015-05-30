@@ -4,6 +4,7 @@ package de.urszeidler.shr5.scripting.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import de.urszeidler.eclipse.shr5.gameplay.provider.GameplayEditPlugin;
 import de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin;
 import de.urszeidler.eclipse.shr5.runtime.provider.RuntimeEditPlugin;

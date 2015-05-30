@@ -2,7 +2,6 @@
  */
 package de.urszeidler.shr5.scripting.impl;
 
-import de.urszeidler.shr5.scripting.*;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -10,12 +9,16 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
+import de.urszeidler.shr5.scripting.Handout;
+import de.urszeidler.shr5.scripting.HandoutType;
 import de.urszeidler.shr5.scripting.Placement;
+import de.urszeidler.shr5.scripting.PlacementOptions;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptHistory;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.ScriptingPackage;
 import de.urszeidler.shr5.scripting.Scripts;
+import de.urszeidler.shr5.scripting.Section;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,6 +69,7 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
             case ScriptingPackage.SCRIPT_HISTORY: return createScriptHistory();
             case ScriptingPackage.SCRIPTS: return createScripts();
             case ScriptingPackage.HANDOUT: return createHandout();
+            case ScriptingPackage.SECTION: return createSection();
             default:
                 throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
         }
@@ -153,6 +157,16 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
     public Handout createHandout() {
         HandoutImpl handout = new HandoutImpl();
         return handout;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public Section createSection() {
+        SectionImpl section = new SectionImpl();
+        return section;
     }
 
     /**

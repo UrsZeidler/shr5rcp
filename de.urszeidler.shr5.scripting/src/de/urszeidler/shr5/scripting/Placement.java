@@ -30,6 +30,7 @@ import de.urszeidler.eclipse.shr5.runtime.Team;
  *   <li>{@link de.urszeidler.shr5.scripting.Placement#getEnviorment <em>Enviorment</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Placement#getOptions <em>Options</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Placement#getHandouts <em>Handouts</em>}</li>
+ *   <li>{@link de.urszeidler.shr5.scripting.Placement#getSections <em>Sections</em>}</li>
  * </ul>
  * </p>
  *
@@ -242,5 +243,21 @@ public interface Placement extends Beschreibbar, TimeFrame {
      * @generated
      */
     EList<Handout> getHandouts();
+
+    /**
+     * Returns the value of the '<em><b>Sections</b></em>' containment reference list.
+     * The list contents are of type {@link de.urszeidler.shr5.scripting.Section}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Sections</em>' containment reference list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Sections</em>' containment reference list.
+     * @see de.urszeidler.shr5.scripting.ScriptingPackage#getPlacement_Sections()
+     * @model containment="true"
+     * @generated
+     */
+    EList<Section> getSections();
 
 } // Placement

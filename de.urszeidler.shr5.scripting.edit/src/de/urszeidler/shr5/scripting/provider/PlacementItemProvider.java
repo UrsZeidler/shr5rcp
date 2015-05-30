@@ -364,6 +364,7 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
             super.getChildrenFeatures(object);
             childrenFeatures.add(ScriptingPackage.Literals.PLACEMENT__ENVIORMENT);
             childrenFeatures.add(ScriptingPackage.Literals.PLACEMENT__HANDOUTS);
+            childrenFeatures.add(ScriptingPackage.Literals.PLACEMENT__SECTIONS);
         }
         return childrenFeatures;
     }
@@ -440,6 +441,7 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
                 return;
             case ScriptingPackage.PLACEMENT__ENVIORMENT:
             case ScriptingPackage.PLACEMENT__HANDOUTS:
+            case ScriptingPackage.PLACEMENT__SECTIONS:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
                 return;
         }
@@ -466,6 +468,11 @@ public class PlacementItemProvider extends ItemProviderAdapter implements IEditi
             (createChildParameter
                 (ScriptingPackage.Literals.PLACEMENT__HANDOUTS,
                  ScriptingFactory.eINSTANCE.createHandout()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (ScriptingPackage.Literals.PLACEMENT__SECTIONS,
+                 ScriptingFactory.eINSTANCE.createSection()));
     }
 
     /**

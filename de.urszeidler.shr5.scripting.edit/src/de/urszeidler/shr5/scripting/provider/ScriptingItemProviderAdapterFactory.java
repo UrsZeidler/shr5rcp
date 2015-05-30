@@ -186,6 +186,29 @@ public class ScriptingItemProviderAdapterFactory extends ScriptingAdapterFactory
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link de.urszeidler.shr5.scripting.Section} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected SectionItemProvider sectionItemProvider;
+
+    /**
+     * This creates an adapter for a {@link de.urszeidler.shr5.scripting.Section}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createSectionAdapter() {
+        if (sectionItemProvider == null) {
+            sectionItemProvider = new SectionItemProvider(this);
+        }
+
+        return sectionItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -289,6 +312,7 @@ public class ScriptingItemProviderAdapterFactory extends ScriptingAdapterFactory
         if (scriptHistoryItemProvider != null) scriptHistoryItemProvider.dispose();
         if (scriptsItemProvider != null) scriptsItemProvider.dispose();
         if (handoutItemProvider != null) handoutItemProvider.dispose();
+        if (sectionItemProvider != null) sectionItemProvider.dispose();
     }
 
 }

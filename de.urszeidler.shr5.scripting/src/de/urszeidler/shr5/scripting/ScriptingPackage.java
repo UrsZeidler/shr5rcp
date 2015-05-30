@@ -314,13 +314,22 @@ public interface ScriptingPackage extends EPackage {
     int PLACEMENT__HANDOUTS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 11;
 
     /**
+     * The feature id for the '<em><b>Sections</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLACEMENT__SECTIONS = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 12;
+
+    /**
      * The number of structural features of the '<em>Placement</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PLACEMENT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 12;
+    int PLACEMENT_FEATURE_COUNT = Shr5Package.BESCHREIBBAR_FEATURE_COUNT + 13;
 
     /**
      * The number of operations of the '<em>Placement</em>' class.
@@ -574,6 +583,52 @@ public interface ScriptingPackage extends EPackage {
     int HANDOUT_OPERATION_COUNT = Shr5Package.BESCHREIBBAR_OPERATION_COUNT + 0;
 
     /**
+     * The meta object id for the '{@link de.urszeidler.shr5.scripting.impl.SectionImpl <em>Section</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.urszeidler.shr5.scripting.impl.SectionImpl
+     * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getSection()
+     * @generated
+     */
+    int SECTION = 6;
+
+    /**
+     * The feature id for the '<em><b>Titel</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SECTION__TITEL = 0;
+
+    /**
+     * The feature id for the '<em><b>Text</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SECTION__TEXT = 1;
+
+    /**
+     * The number of structural features of the '<em>Section</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SECTION_FEATURE_COUNT = 2;
+
+    /**
+     * The number of operations of the '<em>Section</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SECTION_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link de.urszeidler.shr5.scripting.PlacementOptions <em>Placement Options</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -581,7 +636,7 @@ public interface ScriptingPackage extends EPackage {
      * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getPlacementOptions()
      * @generated
      */
-    int PLACEMENT_OPTIONS = 6;
+    int PLACEMENT_OPTIONS = 7;
 
 
     /**
@@ -592,7 +647,7 @@ public interface ScriptingPackage extends EPackage {
      * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getHandoutType()
      * @generated
      */
-    int HANDOUT_TYPE = 7;
+    int HANDOUT_TYPE = 8;
 
 
     /**
@@ -781,6 +836,17 @@ public interface ScriptingPackage extends EPackage {
     EReference getPlacement_Handouts();
 
     /**
+     * Returns the meta object for the containment reference list '{@link de.urszeidler.shr5.scripting.Placement#getSections <em>Sections</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Sections</em>'.
+     * @see de.urszeidler.shr5.scripting.Placement#getSections()
+     * @see #getPlacement()
+     * @generated
+     */
+    EReference getPlacement_Sections();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.TimeFrame <em>Time Frame</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -940,6 +1006,38 @@ public interface ScriptingPackage extends EPackage {
      * @generated
      */
     EAttribute getHandout_Url();
+
+    /**
+     * Returns the meta object for class '{@link de.urszeidler.shr5.scripting.Section <em>Section</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Section</em>'.
+     * @see de.urszeidler.shr5.scripting.Section
+     * @generated
+     */
+    EClass getSection();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.shr5.scripting.Section#getTitel <em>Titel</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Titel</em>'.
+     * @see de.urszeidler.shr5.scripting.Section#getTitel()
+     * @see #getSection()
+     * @generated
+     */
+    EAttribute getSection_Titel();
+
+    /**
+     * Returns the meta object for the attribute '{@link de.urszeidler.shr5.scripting.Section#getText <em>Text</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Text</em>'.
+     * @see de.urszeidler.shr5.scripting.Section#getText()
+     * @see #getSection()
+     * @generated
+     */
+    EAttribute getSection_Text();
 
     /**
      * Returns the meta object for enum '{@link de.urszeidler.shr5.scripting.PlacementOptions <em>Placement Options</em>}'.
@@ -1125,6 +1223,14 @@ public interface ScriptingPackage extends EPackage {
         EReference PLACEMENT__HANDOUTS = eINSTANCE.getPlacement_Handouts();
 
         /**
+         * The meta object literal for the '<em><b>Sections</b></em>' containment reference list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference PLACEMENT__SECTIONS = eINSTANCE.getPlacement_Sections();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.shr5.scripting.TimeFrame <em>Time Frame</em>}' class.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -1251,6 +1357,32 @@ public interface ScriptingPackage extends EPackage {
          * @generated
          */
         EAttribute HANDOUT__URL = eINSTANCE.getHandout_Url();
+
+        /**
+         * The meta object literal for the '{@link de.urszeidler.shr5.scripting.impl.SectionImpl <em>Section</em>}' class.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @see de.urszeidler.shr5.scripting.impl.SectionImpl
+         * @see de.urszeidler.shr5.scripting.impl.ScriptingPackageImpl#getSection()
+         * @generated
+         */
+        EClass SECTION = eINSTANCE.getSection();
+
+        /**
+         * The meta object literal for the '<em><b>Titel</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SECTION__TITEL = eINSTANCE.getSection_Titel();
+
+        /**
+         * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SECTION__TEXT = eINSTANCE.getSection_Text();
 
         /**
          * The meta object literal for the '{@link de.urszeidler.shr5.scripting.PlacementOptions <em>Placement Options</em>}' enum.
