@@ -54,14 +54,14 @@
 
 
 [template public printCommand (aCommand : CombatTurn) ]
-[aCommand.date.formatDateTimeSec()/] [aCommand.getText()/] [aCommand.sequence/] --
+[aCommand.date.formatDateTimeSec()/] [aCommand.eClass().getText()/] [aCommand.sequence/]
 [for (i : InitativePass | aCommand.actionPhases)]
 [printIniPhase(i)/][/for]
 [/template]
 
 
 [template public printIniPhase (aCommand : InitativePass) ]
-[aCommand.date.formatDateTimeSec()/] [aCommand.getText()/]--- [aCommand.subject.getText()/] ([aCommand.phase/]/[aCommand.turn/])
+[aCommand.date.formatDateTimeSec()/] [aCommand.getText()/]
 [printAction(aCommand.action)/]
 [for (c : Command | aCommand.subCommands)]
 [printCommand(c)/][/for]

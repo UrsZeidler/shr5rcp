@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
@@ -19,9 +18,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
 import de.urszeidler.eclipse.shr5.gameplay.InitativePass;
-import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5.util.Shr5EditingTools;
-import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 
 /**
  * This is the item provider adapter for a {@link de.urszeidler.eclipse.shr5.gameplay.InitativePass} object.
@@ -180,7 +177,8 @@ public class InitativePassItemProvider
         if(!initativePass.isExecuted())
             return getString("_UI_InitativePass_type");
 
-        String label =  Shr5EditingTools.getLabelForEObject((ComposeableAdapterFactory)this.adapterFactory, "", initativePass.getSubject());
+        ComposeableAdapterFactory factory = ((ComposeableAdapterFactory)this.adapterFactory).getRootAdapterFactory();
+        String label =  Shr5EditingTools.getLabelForEObject(factory, "", initativePass.getSubject());
         return getString("_UI_InitativePass_type_text",new Object[]{label,initativePass.getPhase(),initativePass.getTurn()});
     }
 

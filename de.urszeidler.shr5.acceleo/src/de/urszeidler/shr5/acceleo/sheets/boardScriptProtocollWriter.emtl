@@ -321,8 +321,12 @@
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
-        <argument xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.3/aCommand">
-          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+        <argument xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printCommand.3/aCommand">
+            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/emf/2002/Ecore#//EObject/eClass"/>
         </argument>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
@@ -333,7 +337,7 @@
         </source>
         <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//CombatTurn/sequence"/>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" --&#xA;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
       <body xsi:type="mtl:ForBlock">
         <body xsi:type="mtl:TemplateInvocation" definition="/0/printIniPhase">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -375,35 +379,7 @@
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
         </argument>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="--- "/>
-      <body xsi:type="mtl:QueryInvocation">
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0/getText"/>
-        <argument xsi:type="ocl.ecore:PropertyCallExp">
-          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/runtime/1.0#//RuntimeCharacter"/>
-          <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printIniPhase/aCommand">
-            <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
-          </source>
-          <referredProperty xsi:type="ecore:EReference" href="http://urszeidler.de/shr5/gameplay/1.0#//SubjectCommand/subject"/>
-        </argument>
-      </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" ("/>
-      <body xsi:type="ocl.ecore:PropertyCallExp">
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printIniPhase/aCommand">
-          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
-        </source>
-        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//PhaseCmd/phase"/>
-      </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="/"/>
-      <body xsi:type="ocl.ecore:PropertyCallExp">
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-        <source xsi:type="ocl.ecore:VariableExp" name="aCommand" referredVariable="/0/printIniPhase/aCommand">
-          <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
-        </source>
-        <referredProperty xsi:type="ecore:EAttribute" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass/turn"/>
-      </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=")&#xA;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
       <body xsi:type="mtl:TemplateInvocation" definition="/0/printAction">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
@@ -418,7 +394,7 @@
       <body xsi:type="mtl:ForBlock">
         <body xsi:type="mtl:TemplateInvocation" definition="/0/printCommand">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <argument xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/printIniPhase/%.12/c">
+          <argument xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/printIniPhase/%.6/c">
             <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
           </argument>
         </body>
@@ -1205,15 +1181,6 @@
     <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//InitativePass"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/gameplay/1.0#//Command"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
@@ -1775,7 +1742,7 @@
     </eAnnotations>
     <eAnnotations source="positions.101" references="/0/printCommand.3">
       <details key="start" value="2123"/>
-      <details key="end" value="2349"/>
+      <details key="end" value="2355"/>
       <details key="line" value="56"/>
     </eAnnotations>
     <eAnnotations source="positions.102" references="/0/printCommand.3/%">
@@ -1800,317 +1767,272 @@
     </eAnnotations>
     <eAnnotations source="positions.106" references="/0/printCommand.3/%.2">
       <details key="start" value="2217"/>
-      <details key="end" value="2235"/>
+      <details key="end" value="2244"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.107" references="/0/printCommand.3/%.2/aCommand">
+    <eAnnotations source="positions.107" references="/0/printCommand.3/%.2/%">
+      <details key="start" value="2217"/>
+      <details key="end" value="2234"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/printCommand.3/%.2/%/aCommand">
       <details key="start" value="2217"/>
       <details key="end" value="2225"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.108" references="/0/printCommand.3/%.3">
-      <details key="start" value="2237"/>
-      <details key="end" value="2238"/>
+    <eAnnotations source="positions.109" references="/0/printCommand.3/%.3">
+      <details key="start" value="2246"/>
+      <details key="end" value="2247"/>
       <details key="line" value="57"/>
     </eAnnotations>
-    <eAnnotations source="positions.109" references="/0/printCommand.3/%.4">
-      <details key="start" value="2239"/>
+    <eAnnotations source="positions.110" references="/0/printCommand.3/%.4">
+      <details key="start" value="2248"/>
+      <details key="end" value="2265"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/printCommand.3/%.4/aCommand">
+      <details key="start" value="2248"/>
       <details key="end" value="2256"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.110" references="/0/printCommand.3/%.4/aCommand">
-      <details key="start" value="2239"/>
-      <details key="end" value="2247"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.111" references="/0/printCommand.3/%.5">
-      <details key="start" value="2258"/>
-      <details key="end" value="2262"/>
-      <details key="line" value="57"/>
-    </eAnnotations>
-    <eAnnotations source="positions.112" references="/0/printCommand.3/%.6">
-      <details key="start" value="2262"/>
-      <details key="end" value="2337"/>
+    <eAnnotations source="positions.112" references="/0/printCommand.3/%.5">
+      <details key="start" value="2267"/>
+      <details key="end" value="2268"/>
       <details key="line" value="58"/>
     </eAnnotations>
-    <eAnnotations source="positions.113" references="/0/printCommand.3/%.6/%">
-      <details key="start" value="2313"/>
-      <details key="end" value="2329"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.114" references="/0/printCommand.3/%.6/%/i">
-      <details key="start" value="2327"/>
-      <details key="end" value="2328"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.115" references="/0/printCommand.3/%.6/i">
+    <eAnnotations source="positions.113" references="/0/printCommand.3/%.6">
       <details key="start" value="2268"/>
-      <details key="end" value="2285"/>
+      <details key="end" value="2343"/>
       <details key="line" value="58"/>
     </eAnnotations>
-    <eAnnotations source="positions.116" references="/0/printCommand.3/%.6/%.1">
-      <details key="start" value="2288"/>
-      <details key="end" value="2309"/>
+    <eAnnotations source="positions.114" references="/0/printCommand.3/%.6/%">
+      <details key="start" value="2319"/>
+      <details key="end" value="2335"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.117" references="/0/printCommand.3/%.6/%.1/aCommand">
-      <details key="start" value="2288"/>
-      <details key="end" value="2296"/>
+    <eAnnotations source="positions.115" references="/0/printCommand.3/%.6/%/i">
+      <details key="start" value="2333"/>
+      <details key="end" value="2334"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.118" references="/0/printCommand.3/aCommand">
+    <eAnnotations source="positions.116" references="/0/printCommand.3/%.6/i">
+      <details key="start" value="2274"/>
+      <details key="end" value="2291"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.117" references="/0/printCommand.3/%.6/%.1">
+      <details key="start" value="2294"/>
+      <details key="end" value="2315"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.118" references="/0/printCommand.3/%.6/%.1/aCommand">
+      <details key="start" value="2294"/>
+      <details key="end" value="2302"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/printCommand.3/aCommand">
       <details key="start" value="2154"/>
       <details key="end" value="2175"/>
       <details key="line" value="56"/>
     </eAnnotations>
-    <eAnnotations source="positions.119" references="/0/printIniPhase">
-      <details key="start" value="2352"/>
-      <details key="end" value="2652"/>
+    <eAnnotations source="positions.120" references="/0/printIniPhase">
+      <details key="start" value="2358"/>
+      <details key="end" value="2588"/>
       <details key="line" value="63"/>
     </eAnnotations>
-    <eAnnotations source="positions.120" references="/0/printIniPhase/%">
-      <details key="start" value="2413"/>
-      <details key="end" value="2446"/>
+    <eAnnotations source="positions.121" references="/0/printIniPhase/%">
+      <details key="start" value="2419"/>
+      <details key="end" value="2452"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.121" references="/0/printIniPhase/%/%">
-      <details key="start" value="2413"/>
-      <details key="end" value="2426"/>
+    <eAnnotations source="positions.122" references="/0/printIniPhase/%/%">
+      <details key="start" value="2419"/>
+      <details key="end" value="2432"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.122" references="/0/printIniPhase/%/%/aCommand">
-      <details key="start" value="2413"/>
-      <details key="end" value="2421"/>
+    <eAnnotations source="positions.123" references="/0/printIniPhase/%/%/aCommand">
+      <details key="start" value="2419"/>
+      <details key="end" value="2427"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.123" references="/0/printIniPhase/%.1">
-      <details key="start" value="2448"/>
-      <details key="end" value="2449"/>
+    <eAnnotations source="positions.124" references="/0/printIniPhase/%.1">
+      <details key="start" value="2454"/>
+      <details key="end" value="2455"/>
       <details key="line" value="64"/>
     </eAnnotations>
-    <eAnnotations source="positions.124" references="/0/printIniPhase/%.2">
-      <details key="start" value="2450"/>
-      <details key="end" value="2468"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.125" references="/0/printIniPhase/%.2/aCommand">
-      <details key="start" value="2450"/>
-      <details key="end" value="2458"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.126" references="/0/printIniPhase/%.3">
-      <details key="start" value="2470"/>
+    <eAnnotations source="positions.125" references="/0/printIniPhase/%.2">
+      <details key="start" value="2456"/>
       <details key="end" value="2474"/>
-      <details key="line" value="64"/>
-    </eAnnotations>
-    <eAnnotations source="positions.127" references="/0/printIniPhase/%.4">
-      <details key="start" value="2475"/>
-      <details key="end" value="2501"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.128" references="/0/printIniPhase/%.4/%">
-      <details key="start" value="2475"/>
-      <details key="end" value="2491"/>
+    <eAnnotations source="positions.126" references="/0/printIniPhase/%.2/aCommand">
+      <details key="start" value="2456"/>
+      <details key="end" value="2464"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.129" references="/0/printIniPhase/%.4/%/aCommand">
-      <details key="start" value="2475"/>
-      <details key="end" value="2483"/>
+    <eAnnotations source="positions.127" references="/0/printIniPhase/%.3">
+      <details key="start" value="2476"/>
+      <details key="end" value="2477"/>
+      <details key="line" value="65"/>
+    </eAnnotations>
+    <eAnnotations source="positions.128" references="/0/printIniPhase/%.4">
+      <details key="start" value="2478"/>
+      <details key="end" value="2506"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.130" references="/0/printIniPhase/%.5">
-      <details key="start" value="2503"/>
+    <eAnnotations source="positions.129" references="/0/printIniPhase/%.4/%">
+      <details key="start" value="2490"/>
       <details key="end" value="2505"/>
-      <details key="line" value="64"/>
-    </eAnnotations>
-    <eAnnotations source="positions.131" references="/0/printIniPhase/%.6">
-      <details key="start" value="2506"/>
-      <details key="end" value="2520"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.132" references="/0/printIniPhase/%.6/aCommand">
-      <details key="start" value="2506"/>
-      <details key="end" value="2514"/>
+    <eAnnotations source="positions.130" references="/0/printIniPhase/%.4/%/aCommand">
+      <details key="start" value="2490"/>
+      <details key="end" value="2498"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.133" references="/0/printIniPhase/%.7">
-      <details key="start" value="2522"/>
-      <details key="end" value="2523"/>
-      <details key="line" value="64"/>
+    <eAnnotations source="positions.131" references="/0/printIniPhase/%.5">
+      <details key="start" value="2508"/>
+      <details key="end" value="2509"/>
+      <details key="line" value="66"/>
     </eAnnotations>
-    <eAnnotations source="positions.134" references="/0/printIniPhase/%.8">
-      <details key="start" value="2524"/>
+    <eAnnotations source="positions.132" references="/0/printIniPhase/%.6">
+      <details key="start" value="2509"/>
+      <details key="end" value="2576"/>
+      <details key="line" value="66"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/printIniPhase/%.6/%">
+      <details key="start" value="2553"/>
+      <details key="end" value="2568"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/printIniPhase/%.6/%/c">
+      <details key="start" value="2566"/>
+      <details key="end" value="2567"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/printIniPhase/%.6/c">
+      <details key="start" value="2515"/>
+      <details key="end" value="2526"/>
+      <details key="line" value="66"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/printIniPhase/%.6/%.1">
+      <details key="start" value="2529"/>
+      <details key="end" value="2549"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.137" references="/0/printIniPhase/%.6/%.1/aCommand">
+      <details key="start" value="2529"/>
       <details key="end" value="2537"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.135" references="/0/printIniPhase/%.8/aCommand">
-      <details key="start" value="2524"/>
-      <details key="end" value="2532"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.136" references="/0/printIniPhase/%.9">
-      <details key="start" value="2539"/>
-      <details key="end" value="2541"/>
-      <details key="line" value="64"/>
-    </eAnnotations>
-    <eAnnotations source="positions.137" references="/0/printIniPhase/%.10">
-      <details key="start" value="2542"/>
-      <details key="end" value="2570"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.138" references="/0/printIniPhase/%.10/%">
-      <details key="start" value="2554"/>
-      <details key="end" value="2569"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.139" references="/0/printIniPhase/%.10/%/aCommand">
-      <details key="start" value="2554"/>
-      <details key="end" value="2562"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.140" references="/0/printIniPhase/%.11">
-      <details key="start" value="2572"/>
-      <details key="end" value="2573"/>
-      <details key="line" value="66"/>
-    </eAnnotations>
-    <eAnnotations source="positions.141" references="/0/printIniPhase/%.12">
-      <details key="start" value="2573"/>
-      <details key="end" value="2640"/>
-      <details key="line" value="66"/>
-    </eAnnotations>
-    <eAnnotations source="positions.142" references="/0/printIniPhase/%.12/%">
-      <details key="start" value="2617"/>
-      <details key="end" value="2632"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.143" references="/0/printIniPhase/%.12/%/c">
-      <details key="start" value="2630"/>
-      <details key="end" value="2631"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.144" references="/0/printIniPhase/%.12/c">
-      <details key="start" value="2579"/>
-      <details key="end" value="2590"/>
-      <details key="line" value="66"/>
-    </eAnnotations>
-    <eAnnotations source="positions.145" references="/0/printIniPhase/%.12/%.1">
-      <details key="start" value="2593"/>
-      <details key="end" value="2613"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.146" references="/0/printIniPhase/%.12/%.1/aCommand">
-      <details key="start" value="2593"/>
-      <details key="end" value="2601"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.147" references="/0/printIniPhase/aCommand">
-      <details key="start" value="2384"/>
-      <details key="end" value="2408"/>
+    <eAnnotations source="positions.138" references="/0/printIniPhase/aCommand">
+      <details key="start" value="2390"/>
+      <details key="end" value="2414"/>
       <details key="line" value="63"/>
     </eAnnotations>
-    <eAnnotations source="positions.148" references="/0/printAction">
-      <details key="start" value="2654"/>
-      <details key="end" value="2919"/>
+    <eAnnotations source="positions.139" references="/0/printAction">
+      <details key="start" value="2590"/>
+      <details key="end" value="2855"/>
       <details key="line" value="70"/>
     </eAnnotations>
-    <eAnnotations source="positions.149" references="/0/printAction/%">
-      <details key="start" value="2707"/>
-      <details key="end" value="2907"/>
+    <eAnnotations source="positions.140" references="/0/printAction/%">
+      <details key="start" value="2643"/>
+      <details key="end" value="2843"/>
       <details key="line" value="71"/>
     </eAnnotations>
-    <eAnnotations source="positions.150" references="/0/printAction/%/%">
-      <details key="start" value="2735"/>
-      <details key="end" value="2759"/>
+    <eAnnotations source="positions.141" references="/0/printAction/%/%">
+      <details key="start" value="2671"/>
+      <details key="end" value="2695"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.151" references="/0/printAction/%/%/%">
-      <details key="start" value="2735"/>
-      <details key="end" value="2741"/>
+    <eAnnotations source="positions.142" references="/0/printAction/%/%/%">
+      <details key="start" value="2671"/>
+      <details key="end" value="2677"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.152" references="/0/printAction/%/%.1">
-      <details key="start" value="2711"/>
-      <details key="end" value="2732"/>
+    <eAnnotations source="positions.143" references="/0/printAction/%/%.1">
+      <details key="start" value="2647"/>
+      <details key="end" value="2668"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.153" references="/0/printAction/%/%.1/cw">
-      <details key="start" value="2712"/>
-      <details key="end" value="2714"/>
+    <eAnnotations source="positions.144" references="/0/printAction/%/%.1/cw">
+      <details key="start" value="2648"/>
+      <details key="end" value="2650"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.154" references="/0/printAction/%/%.2">
-      <details key="start" value="2761"/>
-      <details key="end" value="2902"/>
+    <eAnnotations source="positions.145" references="/0/printAction/%/%.2">
+      <details key="start" value="2697"/>
+      <details key="end" value="2838"/>
       <details key="line" value="72"/>
     </eAnnotations>
-    <eAnnotations source="positions.155" references="/0/printAction/%/%.2/%">
-      <details key="start" value="2768"/>
-      <details key="end" value="2902"/>
+    <eAnnotations source="positions.146" references="/0/printAction/%/%.2/%">
+      <details key="start" value="2704"/>
+      <details key="end" value="2838"/>
       <details key="line" value="73"/>
     </eAnnotations>
-    <eAnnotations source="positions.156" references="/0/printAction/%/%.2/%/%">
-      <details key="start" value="2802"/>
-      <details key="end" value="2826"/>
+    <eAnnotations source="positions.147" references="/0/printAction/%/%.2/%/%">
+      <details key="start" value="2738"/>
+      <details key="end" value="2762"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.157" references="/0/printAction/%/%.2/%/%/%">
-      <details key="start" value="2802"/>
-      <details key="end" value="2808"/>
+    <eAnnotations source="positions.148" references="/0/printAction/%/%.2/%/%/%">
+      <details key="start" value="2738"/>
+      <details key="end" value="2744"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.158" references="/0/printAction/%/%.2/%/%.1">
-      <details key="start" value="2772"/>
-      <details key="end" value="2799"/>
+    <eAnnotations source="positions.149" references="/0/printAction/%/%.2/%/%.1">
+      <details key="start" value="2708"/>
+      <details key="end" value="2735"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.159" references="/0/printAction/%/%.2/%/%.1/%">
-      <details key="start" value="2773"/>
-      <details key="end" value="2787"/>
+    <eAnnotations source="positions.150" references="/0/printAction/%/%.2/%/%.1/%">
+      <details key="start" value="2709"/>
+      <details key="end" value="2723"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.160" references="/0/printAction/%/%.2/%/%.1/%/cw">
-      <details key="start" value="2773"/>
-      <details key="end" value="2775"/>
+    <eAnnotations source="positions.151" references="/0/printAction/%/%.2/%/%.1/%/cw">
+      <details key="start" value="2709"/>
+      <details key="end" value="2711"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.161" references="/0/printAction/%/%.2/%/%.2">
-      <details key="start" value="2828"/>
-      <details key="end" value="2897"/>
+    <eAnnotations source="positions.152" references="/0/printAction/%/%.2/%/%.2">
+      <details key="start" value="2764"/>
+      <details key="end" value="2833"/>
       <details key="line" value="74"/>
     </eAnnotations>
-    <eAnnotations source="positions.162" references="/0/printAction/%/%.2/%/%.2/%">
-      <details key="start" value="2835"/>
-      <details key="end" value="2896"/>
+    <eAnnotations source="positions.153" references="/0/printAction/%/%.2/%/%.2/%">
+      <details key="start" value="2771"/>
+      <details key="end" value="2832"/>
       <details key="line" value="75"/>
     </eAnnotations>
-    <eAnnotations source="positions.163" references="/0/printAction/%/%.2/%/%.2/%/%">
-      <details key="start" value="2873"/>
-      <details key="end" value="2888"/>
+    <eAnnotations source="positions.154" references="/0/printAction/%/%.2/%/%.2/%/%">
+      <details key="start" value="2809"/>
+      <details key="end" value="2824"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.164" references="/0/printAction/%/%.2/%/%.2/%/%/c">
-      <details key="start" value="2886"/>
-      <details key="end" value="2887"/>
+    <eAnnotations source="positions.155" references="/0/printAction/%/%.2/%/%.2/%/%/c">
+      <details key="start" value="2822"/>
+      <details key="end" value="2823"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.165" references="/0/printAction/%/%.2/%/%.2/%/c">
-      <details key="start" value="2841"/>
-      <details key="end" value="2852"/>
+    <eAnnotations source="positions.156" references="/0/printAction/%/%.2/%/%.2/%/c">
+      <details key="start" value="2777"/>
+      <details key="end" value="2788"/>
       <details key="line" value="75"/>
     </eAnnotations>
-    <eAnnotations source="positions.166" references="/0/printAction/%/%.2/%/%.2/%/%.1">
-      <details key="start" value="2855"/>
-      <details key="end" value="2869"/>
+    <eAnnotations source="positions.157" references="/0/printAction/%/%.2/%/%.2/%/%.1">
+      <details key="start" value="2791"/>
+      <details key="end" value="2805"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.167" references="/0/printAction/%/%.2/%/%.2/%/%.1/cw">
-      <details key="start" value="2855"/>
-      <details key="end" value="2857"/>
+    <eAnnotations source="positions.158" references="/0/printAction/%/%.2/%/%.2/%/%.1/cw">
+      <details key="start" value="2791"/>
+      <details key="end" value="2793"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.168" references="/0/printAction/cw">
-      <details key="start" value="2684"/>
-      <details key="end" value="2703"/>
+    <eAnnotations source="positions.159" references="/0/printAction/cw">
+      <details key="start" value="2620"/>
+      <details key="end" value="2639"/>
       <details key="line" value="70"/>
     </eAnnotations>
   </ecore:EAnnotation>

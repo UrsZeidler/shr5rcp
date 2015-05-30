@@ -2,6 +2,7 @@ package de.urszeidler.shr5.ecp.dialogs;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
@@ -46,7 +47,7 @@ import de.urszeidler.eclipse.shr5.Credstick;
 import de.urszeidler.eclipse.shr5.IntervallVertrag;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
 import de.urszeidler.eclipse.shr5Management.ContractPayment;
-import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.shr5.ecp.util.DefaultLabelProvider;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
@@ -55,7 +56,7 @@ import de.urszeidler.shr5.runtime.ui.views.SimpleListContenProvider;
 public class PayFineDialog extends TitleAreaDialog {
     private DataBindingContext m_bindingContext;
 
-    private ManagedCharacter character;
+    private PlayerCharacter character;
     private ILabelProvider labelProvider = new DefaultLabelProvider();
     private WritableList contracts = new WritableList();
     private WritableValue selectedCredstick = new WritableValue();
@@ -85,7 +86,7 @@ public class PayFineDialog extends TitleAreaDialog {
      * @param parentShell
      * @param date
      */
-    public PayFineDialog(Shell parentShell, ManagedCharacter character, Date date) {
+    public PayFineDialog(Shell parentShell, PlayerCharacter character, Date date) {
         super(parentShell);
         this.character = character;
         this.baseDate = date;
@@ -208,19 +209,30 @@ public class PayFineDialog extends TitleAreaDialog {
                     @Override
                     public boolean apply(IntervallVertrag input) {
                         
-                        Date begin = getPaymentDate(input,date);//input.getBegin();
+                        Date begin = getLastPaymentDate(input,date);//input.getBegin();
                         if(begin==null)
                             return false;
                         
                         Calendar instance = getNextPayment(input, begin);
-                        return instance.getTime().before(date);
+                        return instance.getTime().after(date);
                     }
                 }).toList();// .copyInto(contracts);
         checkboxTreeViewer.setInput(list);
     }
 
-    private Date getPaymentDate(IntervallVertrag input, Date date) {
-        return input.getBegin();
+    private Date getLastPaymentDate(IntervallVertrag input, Date date) {
+        ImmutableList<ContractPayment> lastpay = FluentIterable.from(character.getDiary().getEntries()).filter(ContractPayment.class).toSortedList(new Comparator<ContractPayment>() {
+            @Override
+            public int compare(ContractPayment o1, ContractPayment o2) {
+                if(o1.getDate()!=null && o2.getDate()!=null)
+                    return o1.getDate().compareTo(o2.getDate())*-1;
+                return 0;
+            }
+        });
+        if(lastpay.isEmpty())
+            return input.getBegin();
+        else
+            return lastpay.get(0).getDate();
     }
 
     /**

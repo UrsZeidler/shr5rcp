@@ -34,6 +34,7 @@ import de.urszeidler.eclipse.shr5.Vertrag;
 import de.urszeidler.eclipse.shr5Management.CharacterDiary;
 import de.urszeidler.eclipse.shr5Management.ContractPayment;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
+import de.urszeidler.eclipse.shr5Management.PlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.emf.commons.ui.util.EmfFormBuilder.ReferenceManager;
@@ -92,7 +93,7 @@ public class CharacterDiaryPage extends AbstractShr5Page<CharacterDiary> {
         Action action = new Action(null,ResourceManager.getPluginImageDescriptor("de.urszeidler.shr5.ecp", "images/newyen.png")) {
             @Override
             public void run() {
-                ManagedCharacter character = (ManagedCharacter)object.eContainer();
+                PlayerCharacter character = (PlayerCharacter)object.eContainer();
                 PayFineDialog payFineDialog = new PayFineDialog(getEditor().getSite().getShell(), character, object.getCharacterDate());
                 if (payFineDialog.open() == org.eclipse.jface.dialogs.Dialog.OK) {
                     List<ContractPayment> payments = payFineDialog.getPayments();
