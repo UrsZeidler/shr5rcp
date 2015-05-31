@@ -37,15 +37,17 @@ public class ImageChooseDialog extends TitleAreaDialog {
     private Text text;
     private WritableValue externalValue = new WritableValue(null, String.class);
     private String value;
+    private String defaultValue;
 
     /**
      * Create the dialog.
      * 
      * @param parentShell
      */
-    public ImageChooseDialog(Shell parentShell) {
+    public ImageChooseDialog(Shell parentShell,String defaultValue) {
         super(parentShell);
         setHelpAvailable(false);
+        this.defaultValue = defaultValue;
     }
 
     /**
@@ -101,6 +103,10 @@ public class ImageChooseDialog extends TitleAreaDialog {
 
         final Label label = new Label(grpPreview, SWT.CENTER);
 
+        if(defaultValue!=null && !defaultValue.isEmpty()){
+            label.setImage(AdapterFactoryUtil.getInstance().getImageScaledBy(gd_grpPreview.heightHint-5, defaultValue));
+            externalValue.setValue(defaultValue);
+        }
         externalValue.addChangeListener(new IChangeListener() {
 
             @Override
@@ -135,6 +141,8 @@ public class ImageChooseDialog extends TitleAreaDialog {
         return new Point(450, 395);
     }
 
+    
+    
     @Override
     protected void okPressed() {
         value = (String)externalValue.getValue();

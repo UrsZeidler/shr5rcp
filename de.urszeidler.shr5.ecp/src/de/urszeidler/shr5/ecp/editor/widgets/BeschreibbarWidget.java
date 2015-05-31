@@ -154,7 +154,7 @@ public class BeschreibbarWidget extends Composite {
         link.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
-                ImageChooseDialog imageChooseDialog = new ImageChooseDialog(getShell());
+                ImageChooseDialog imageChooseDialog = new ImageChooseDialog(getShell(),beschreibbar.getImage());
                 if (imageChooseDialog.open() == Window.OK) {
                     if (imageChooseDialog.getValue() != null) {
                         Command create = SetCommand.create(editingDomain, beschreibbar, Shr5Package.Literals.BESCHREIBBAR__IMAGE, imageChooseDialog.getValue()
@@ -162,23 +162,6 @@ public class BeschreibbarWidget extends Composite {
                         editingDomain.getCommandStack().execute(create);
                     }
                 }
-                // SelectionDialog dlg;
-                // dlg = new ResourceListSelectionDialog(getShell(), workspace.getRoot(), 1);
-                //
-                // // super.updateOKState(state);
-                //
-                // dlg.setTitle(Messages.BeschreibbarWidget_select_image);
-                //
-                // int open = dlg.open();
-                // if (open == Window.OK) {
-                // Object[] result = dlg.getResult();
-                // if (result != null) {
-                // Command create = SetCommand.create(editingDomain, beschreibbar, Shr5Package.Literals.BESCHREIBBAR__IMAGE, ((IFile)result[0])
-                // .getFullPath().toString());
-                // editingDomain.getCommandStack().execute(create);
-                // }
-                // }
-                //
             }
 
         });
