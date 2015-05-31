@@ -50,7 +50,7 @@
    <element name="Transformer">
       <annotation>
          <documentation>
-            Defines a acceleo generator.
+            Defines an acceleo generator which transform a given model object to a file.
          </documentation>
       </annotation>
       <complexType>
@@ -70,7 +70,7 @@
          <attribute name="name" type="string" use="required">
             <annotation>
                <documentation>
-                  
+                  The name of the transformation used to display it to the user.
                </documentation>
                <appinfo>
                   <meta.attribute translatable="true"/>
@@ -90,7 +90,7 @@
          <attribute name="dialogImage" type="string">
             <annotation>
                <documentation>
-                  An image 48x48.
+                  An image 48x48 for the dialog.
                </documentation>
                <appinfo>
                   <meta.attribute kind="resource"/>
@@ -110,7 +110,7 @@
          <attribute name="class" type="string">
             <annotation>
                <documentation>
-                  
+                  An  interface of the concret model type.
                </documentation>
                <appinfo>
                   <meta.attribute kind="java"/>
@@ -134,7 +134,7 @@
          <meta.section type="examples"/>
       </appinfo>
       <documentation>
-         [Enter extension point usage example here.]
+         See de.urszeidler.shr5.acceleo.
       </documentation>
    </annotation>
 
@@ -152,7 +152,8 @@
          <meta.section type="implementation"/>
       </appinfo>
       <documentation>
-         [Enter information about supplied implementation of this extension point.]
+         See de.urszeidler.shr5.acceleo.
+
       </documentation>
    </annotation>
 
@@ -161,7 +162,7 @@
          <meta.section type="copyright"/>
       </appinfo>
       <documentation>
-         Urs Zeidler
+         2015 Urs Zeidler
       </documentation>
    </annotation>
 
