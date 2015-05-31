@@ -14,7 +14,7 @@
                class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
          </TransformerMapping>
          <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
+               class="de.urszeidler.eclipse.shr5Management.CharacterGroup">
          </TransformerMapping>
       </Transformer>
       <Transformer
@@ -28,7 +28,7 @@
                class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
          </TransformerMapping>
          <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
+               class="de.urszeidler.eclipse.shr5Management.CharacterGroup">
          </TransformerMapping>
       </Transformer>
       <Transformer
@@ -42,7 +42,7 @@
                class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
          </TransformerMapping>
          <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
+               class="de.urszeidler.eclipse.shr5Management.CharacterGroup">
          </TransformerMapping>
       </Transformer>
       <Transformer
@@ -55,7 +55,7 @@
                class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
          </TransformerMapping>
          <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
+               class="de.urszeidler.eclipse.shr5Management.CharacterGroup">
          </TransformerMapping>
       </Transformer>
       <Transformer
@@ -70,7 +70,7 @@
                class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
          </TransformerMapping>
          <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
+               class="de.urszeidler.eclipse.shr5Management.CharacterGroup">
          </TransformerMapping>
       </Transformer>
       <Transformer
@@ -84,7 +84,7 @@
                class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
          </TransformerMapping>
          <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
+               class="de.urszeidler.eclipse.shr5Management.CharacterGroup">
          </TransformerMapping>
       </Transformer>
       <Transformer
@@ -97,7 +97,7 @@
                class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
          </TransformerMapping>
          <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
+               class="de.urszeidler.eclipse.shr5Management.CharacterGroup">
          </TransformerMapping>
       </Transformer>
       <Transformer
@@ -110,7 +110,7 @@
                class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
          </TransformerMapping>
          <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
+               class="de.urszeidler.eclipse.shr5Management.CharacterGroup">
          </TransformerMapping>
       </Transformer>
       <Transformer
@@ -123,7 +123,7 @@
                class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
          </TransformerMapping>
          <TransformerMapping
-               class="de.urszeidler.eclipse.shr5Management.PlayerManagement">
+               class="de.urszeidler.eclipse.shr5Management.CharacterGroup">
          </TransformerMapping>
       </Transformer>
       <Transformer
