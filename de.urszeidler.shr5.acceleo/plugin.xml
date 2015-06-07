@@ -58,6 +58,20 @@
                class="de.urszeidler.eclipse.shr5Management.CharacterGroup">
          </TransformerMapping>
       </Transformer>
+     <Transformer
+            acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.FoInventoryCard"
+            name="InventoryCards">
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter">
+         </TransformerMapping>
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
+         </TransformerMapping>
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.CharacterGroup">
+         </TransformerMapping>
+      </Transformer>
+      
       <Transformer
             acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.SvgCharacterSheet"
             description="%Transformer.pdfcharacter.description"

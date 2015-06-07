@@ -1,0 +1,94 @@
+[comment encoding = UTF-8 /]
+[module foInventoryCard('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+[import de::urszeidler::shr5::acceleo::sheets::foCharacterSheet/]
+[import de::urszeidler::shr5::acceleo::common::foSheetTools  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
+
+[template public foInventoryCardManagedCharacter(aManagedCharacter : ManagedCharacter)]
+	
+	[comment @main /]
+	[file (aManagedCharacter.getText().concat('inventory_card.fo'), false, 'UTF-8')]
+		[printInventoryCards(aManagedCharacter)/]
+	[/file]
+	
+[/template]
+
+[template public printInventoryCards (aManagedCharacter : ManagedCharacter) ]
+[printFoPageStart('Inventory Cards'.localizedString())/]
+
+   <fo:table margin="3pt" >
+    <fo:table-column column-width="50%" />
+    <fo:table-column column-width="50%" />
+    <fo:table-body  >
+    <fo:table-row >
+<!-- colum one -->
+      <fo:table-cell>
+[for (fk : AbstaktFernKampfwaffe | aManagedCharacter.inventar->select(oclIsKindOf(AbstaktFernKampfwaffe)))]
+[printAbstaktFernKampfwaffeCard(fk)/]
+[/for]		
+      </fo:table-cell>
+<!-- colum two -->
+      <fo:table-cell >
+[for (fk : Nahkampfwaffe | aManagedCharacter.inventar->select(oclIsKindOf(Nahkampfwaffe)))]
+[printMeleeCard(fk)/]
+[/for]		
+    </fo:table-cell>
+     </fo:table-row>
+    </fo:table-body>
+   </fo:table>
+
+[printSimpleFoPageEnd()/]
+[/template]
+
+[template public printAbstaktFernKampfwaffeCard(fk : AbstaktFernKampfwaffe)]
+<fo:block-container width="87mm"  height="62mm"  margin-top="2mm" [borderStyle()/] >		
+	<fo:block >
+[printRangeWeapon(fk,18)/]
+[printNotesBlock(fk)/]
+		</fo:block  >
+</fo:block-container>
+
+ [/template]
+
+[template public printMeleeCard(fk : Nahkampfwaffe)]
+	<fo:block-container width="87mm" height="62mm" margin-top="2mm"  [borderStyle()/]>		
+	<fo:block  keep-together="always">
+[printMeleeWeapon(fk)  /]
+[printNotesBlock(fk)/]
+		</fo:block  >
+</fo:block-container>
+[/template]
+
+[template public printNotesBlock(fk : Beschreibbar)]
+  <fo:table >
+    <fo:table-column />
+    <fo:table-column column-width="64px" />
+    <fo:table-body  >
+    <fo:table-row >
+[printCellAttribute('notes'.localizedString(),' font-weight="bold"')/]
+     <fo:table-cell number-rows-spanned="2">
+       <fo:block  display-align="right" text-align="right">
+[if (not fk.image.oclIsUndefined())]
+		<fo:external-graphic  src="url([fk.toBase64Image()/])"/>
+[/if]
+       </fo:block >
+    </fo:table-cell>
+     </fo:table-row>
+    <fo:table-row >
+[printCell(fk.beschreibung)/]
+     </fo:table-row>
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+
+
+[template public borderStyle(type : OclAny)]
+border-right-style="solid" 
+border-left-style="solid" border-top-color="rgb(0,0,0)" 
+background-color="rgb(255,255,255,255)" border-bottom-width="1pt" 
+border-bottom-style="solid" border-top-style="solid" 
+border-left-width="1pt" border-top-width="1pt" border-left-color="rgb(0,0,0)" 
+border-right-color="rgb(0,0,0)" border-bottom-color="rgb(0,0,0)" border-right-width="1pt" 
+[/template]

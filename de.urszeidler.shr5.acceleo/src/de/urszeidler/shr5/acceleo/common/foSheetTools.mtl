@@ -1,0 +1,230 @@
+[comment encoding = UTF-8 /]
+[module foSheetTools('http://shr.scripting/1.0', 'http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5/gameplay/1.0', 'http://urszeidler.de/shr5/runtime/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')]
+
+[import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
+
+
+[template public printNBoxName(name: String, value : Integer,mHeight : Integer,mWidth : Integer)]
+<fo:block  >
+[name/]
+</fo:block>
+[printNBoxes(value, mHeight, mWidth)/]
+[/template]
+
+[template public printNBoxes(conditionValue:Integer,h:Integer,w:Integer)]
+   <fo:table >
+[comment][for (it : String | conditionValue.createNumberList())][/comment]
+    <fo:table-column />
+[comment][/for][/comment]
+    <fo:table-body  >
+     <fo:table-row  >
+     <fo:table-cell >
+       <fo:block   >
+[for (it : String | conditionValue.createNumberList())]
+<fo:inline  width="[w/]pt"   [defaultBorderAll()/] > 
+<instream-foreign-object > </instream-foreign-object>
+</fo:inline>
+[/for]
+		</fo:block>
+      </fo:table-cell>
+     </fo:table-row>
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printConditionMonitorBlock(col:Integer,conditionValue:Integer) ]
+   <fo:table >
+[for (it : String | col.createNumberList())]
+    <fo:table-column />
+[/for]
+    <fo:table-body  >
+[for (it : String | conditionValue.div(col).createNumberList())]
+     <fo:table-row  >
+[for (it : String | col.createNumberList())]
+     <fo:table-cell >
+       <fo:block  >
+[printOneMonitorCell('1',5)/]</fo:block>
+      </fo:table-cell>
+[/for]
+     </fo:table-row>
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printOneSvgMonitorName(name: String, value : Integer,colCount : Integer,mHeight : Integer,mWidth : Integer)]
+<fo:block  >
+[name/]
+</fo:block>
+[printOneSvgMonitor(value, colCount, mHeight, mWidth)/]
+[/template]
+
+[template public printOneSvgMonitor(value : Integer,colCount : Integer,mHeight : Integer,mWidth : Integer)
+{offset : Integer = 5;
+width:Integer = colCount*(mWidth+offset); 
+height:Integer= (value.div(colCount)+1)*(mHeight+offset);
+}
+]
+<fo:instream-foreign-object content-width="[width/]pt" content-height="[height/]pt">
+<svg:svg width="[width/]pt" height="[height/]pt">
+   <svg:g >
+[for (it : String | value.createNumberList())]
+[let xpos : Integer = (i-1).mod(colCount)]
+[let ypos : Integer = (i-1).div(colCount)]
+   <svg:rect
+         y="[ ypos*(mHeight+offset)/]"
+         x="[xpos*(mWidth+offset)  /]"
+         height="[mHeight/]"
+         width="[mWidth/]"
+         id="rect-monitorbox-[it/]"
+         style="fill:#fdfdfd;fill-opacity:0;fill-rule:nonzero;stroke:#13100a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+[if (xpos=1)]
+[comment][printSvgLineValue('-'+(ypos+1)+''  ,115,(32 +  ypos*50 ),18)/][/comment]
+[/if]
+[/let][/let]
+[/for]
+	</svg:g>
+</svg:svg>
+</fo:instream-foreign-object>
+[/template]
+
+
+[template public printOneMonitorCell(text : String,margin: Integer)]
+   <fo:table margin="[margin/]pt">
+    <fo:table-column  />
+    <fo:table-body  >
+
+     <fo:table-row>
+[comment][printCellAttribute(text,'height="20pt" width="20pt" border-style="solid" text-align="botton" vertical-align="center" ')/][/comment]
+      <fo:table-cell>
+        <fo:block >
+<fo:instream-foreign-object content-width="40pt" content-height="40pt">
+<svg:svg width="10pt" height="10pt">
+  <svg:g >
+  <svg:rect
+         y="0"
+         x="0"
+         height="10"
+         width="10"
+         style="fill:#fdfdfd;fill-opacity:0;fill-rule:nonzero;stroke:#13100a;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  </svg:g>
+</svg:svg>
+</fo:instream-foreign-object>
+
+        </fo:block>
+      </fo:table-cell>
+
+     </fo:table-row>
+
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+
+[template public printCell(expression : OclAny)]
+      <fo:table-cell>
+       <fo:block  >
+[escapeXML(expression)/]</fo:block>
+      </fo:table-cell>
+[/template]
+
+[template public printCellAttribute(expression : OclAny, cellAttributes: String)]
+      <fo:table-cell [cellAttributes/]>
+       <fo:block  >
+[escapeXML(expression)/]</fo:block>
+      </fo:table-cell>
+[/template]
+
+[template public printCellDots(expression : OclAny, cellAttributes: String)]
+      <fo:table-cell [cellAttributes/]>
+       <fo:block  >
+[escapeXML(expression)/]<fo:leader leader-pattern="dots"/>
+</fo:block>
+      </fo:table-cell>
+[/template]
+
+[template public printCellSpanned(expression : OclAny, span: Integer)]
+      <fo:table-cell number-columns-spanned="[span/]">
+       <fo:block  >
+[escapeXML(expression)/]</fo:block>
+      </fo:table-cell>
+[/template]
+
+[template public printCellRight(expression : OclAny)]
+      <fo:table-cell>
+       <fo:block text-align="right"  >
+[escapeXML(expression)/]</fo:block>
+      </fo:table-cell>
+[/template]
+
+[template public printCellAttRight(expression : OclAny, cellAttributes: String)]
+      <fo:table-cell [cellAttributes/] >
+       <fo:block text-align="right" [cellAttributes/]  >
+[escapeXML(expression)/]</fo:block>
+      </fo:table-cell>
+[/template]
+
+
+[template public defaultBorderAll(arg : OclAny)]
+ border-right-style="outset" border-left-style="outset" 
+ border-bottom-style="outset" border-top-style="outset" 
+ border-left-width="1px" border-top-width="1px" 
+ border-right-width="1px" border-bottom-width="1px" 
+ border-left-color="rgb(0,0,0)" border-right-color="rgb(0,0,0)" 
+ border-bottom-color="rgb(0,0,0)" border-top-color="rgb(0,0,0)" 
+[/template]
+
+[template public defaultBorderTop(arg : OclAny)]
+border-top-color="rgb(0,0,0)" border-top-style="outset" border-top-width="1pt" 
+[/template]
+
+[**
+ * Print the start of a simple fo page
+*/]
+[template public printFoPageStart(documentTitel : String)]
+<fo:root xmlns:fox="http://xmlgraphics.apache.org/fop/extensions"
+	xmlns:cms="http://www.pulitzer.ch/2007/CMSFormat" 
+	xmlns:fo="http://www.w3.org/1999/XSL/Format"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
+	xmlns:svg="http://www.w3.org/2000/svg">
+	<fo:layout-master-set>
+		<fo:simple-page-master page-height="297mm"
+			master-name="A4_210_x_297_mm" page-width="210mm">
+			<fo:region-body margin-left="15mm" background-color="transparent"
+				region-name="xsl-region-body" margin-bottom="15mm" margin-top="15mm"
+				margin-right="15mm" />
+
+
+            <fo:region-after region-name="xsl-region-after"  extent="15mm"/>
+
+		</fo:simple-page-master>
+	</fo:layout-master-set>
+
+	<fo:bookmark-tree />
+	<fo:page-sequence master-reference="A4_210_x_297_mm">
+		<fo:title>[documentTitel /]</fo:title>
+	
+        <fo:static-content flow-name="xsl-region-after">
+            <fo:block font-size="x-small" margin-left="15mm">shr5rcp character sheet [documentTitel /] page <fo:page-number/></fo:block>
+        </fo:static-content>
+
+		<fo:flow flow-name="xsl-region-body">
+[/template]
+
+
+[**
+ * Print the simple end.
+*/]
+[template public printSimpleFoPageEnd (any : OclAny) ]
+		</fo:flow>
+	</fo:page-sequence>
+</fo:root>
+[/template]
+
