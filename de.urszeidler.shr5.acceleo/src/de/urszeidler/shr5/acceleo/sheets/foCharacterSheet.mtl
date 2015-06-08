@@ -1195,7 +1195,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [printCellRight(vehicle.vehicleSpeed())/]
      <fo:table-cell number-rows-spanned="7">
 		<fo:block>
-[printOneSvgMonitorName('Vehicle damage'.localizedString(),vehicle.zustandMax,6,20,20)/]
+[printOneSvgMonitorName('Vehicle damage'.localizedString(),vehicle.zustandMax,6,18,18)/]
 		</fo:block>
      </fo:table-cell>
 

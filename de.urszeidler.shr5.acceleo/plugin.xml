@@ -59,8 +59,9 @@
          </TransformerMapping>
       </Transformer>
      <Transformer
-            acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.FoInventoryCard"
-            name="InventoryCards">
+           acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.FoInventoryCard"
+           description="Pdf Cards for some inventory of the character. "
+           name="InventoryCards">
          <TransformerMapping
                class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter">
          </TransformerMapping>

@@ -33,12 +33,65 @@
 [for (fk : Nahkampfwaffe | aManagedCharacter.inventar->select(oclIsKindOf(Nahkampfwaffe)))]
 [printMeleeCard(fk)/]
 [/for]		
+[for (c : Cyberdeck | aManagedCharacter.inventar->select(oclIsKindOf(Cyberdeck)))]
+[printCyberdeckCard(c)/]
+[/for]		
+[for (c : Commlink | aManagedCharacter.inventar->select(oclIsKindOf(Commlink)))]
+[printCommlinkCard(c)/]
+[/for]		
     </fo:table-cell>
      </fo:table-row>
     </fo:table-body>
    </fo:table>
+<!-- page 2 -->
+   <fo:table margin="3pt" >
+    <fo:table-column column-width="50%" />
+    <fo:table-column column-width="50%" />
+    <fo:table-body  >
+    <fo:table-row >
+<!-- colum one -->
+      <fo:table-cell>
+[for (fk : Fahrzeug | aManagedCharacter.vehicels)]
+[printVehicleCard(fk)/]
+[/for]		
+      </fo:table-cell>
+<!-- colum two -->
+      <fo:table-cell >
+			<fo:block ></fo:block  >
+     </fo:table-cell>
+     </fo:table-row>
+    </fo:table-body>
+   </fo:table>
+
 
 [printSimpleFoPageEnd()/]
+[/template]
+
+[template public printCyberdeckCard(deck : Cyberdeck)]
+<fo:block-container width="87mm"    margin-top="2mm" [borderStyle()/] >		
+	<fo:block >
+[printCyberdeckDetail(deck)/]
+[printNotesBlock(deck)/]
+		</fo:block  >
+</fo:block-container>
+[/template]
+
+[template public printVehicleCard(vehicle : Fahrzeug)]
+<fo:block-container width="87mm"   height="62mm" margin-top="2mm" [borderStyle()/] >		
+	<fo:block >
+[printVehicle(vehicle)/]
+[printNotesBlock(vehicle)/]
+		</fo:block  >
+</fo:block-container>
+[/template]
+
+[template public printCommlinkCard(deck : Commlink)]
+<fo:block-container width="87mm"  height="62mm"  margin-top="2mm" [borderStyle()/] >		
+	<fo:block >
+[printComlinkDetail(deck)/]
+[printNotesBlock(deck)/]
+		</fo:block  >
+</fo:block-container>
 [/template]
 
 [template public printAbstaktFernKampfwaffeCard(fk : AbstaktFernKampfwaffe)]
