@@ -195,6 +195,32 @@ height:Integer= (value.div(colCount)+1)*(mHeight+offset);
 border-top-color="rgb(0,0,0)" border-top-style="outset" border-top-width="1pt" 
 [/template]
 
+[template public oneColumnTablePlain (titel : String, firstColumn : Sequence(String),tableDecoraction : String) ]
+<!-- one column table -->
+  <fo:table [tableDecoraction/]>
+    <fo:table-column  />
+    <fo:table-body  >
+[for (t : String | firstColumn)]
+    <fo:table-row>
+<fo:table-cell>
+[t/]
+</fo:table-cell>
+   </fo:table-row>
+[/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+[query public columnSpan(span : Integer) : String = 'number-columns-spanned="'+span+'"' /]
+[query public keepTogether(exp : String) : String = 'keep-together="'+exp+'"' /]
+[query public keepTogetherAlways(exp : OclAny) : String = keepTogether('always') /]
+[query public fontSize(exp : String) : String = 'font-size="'+exp+'"' /]
+[query public fontSizeSmall(a:OclAny) : String = fontSize('small') /]
+[query public fontFamlily(exp : String) : String = 'font-family="'+exp+'"' /]
+
+[query public columnWidth(exp : String) : String = 'column-width="'+exp+'"' /]
+[query public margin(exp : String) : String = 'margin="'+exp+'"' /]
+
 [**
  * Print the start of a simple fo page
 */]
@@ -214,7 +240,7 @@ border-top-color="rgb(0,0,0)" border-top-style="outset" border-top-width="1pt"
 		<fo:simple-page-master page-height="297mm"
 			master-name="A4_210_x_297_mm" page-width="210mm">
 			<fo:region-body margin-left="10mm" background-color="transparent"
-				region-name="xsl-region-body" margin-bottom="10mm" margin-top="10mm"
+				region-name="xsl-region-body" margin-bottom="15mm" margin-top="10mm"
 				margin-right="10mm" />
 
 

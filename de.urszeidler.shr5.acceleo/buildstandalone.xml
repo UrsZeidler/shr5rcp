@@ -41,7 +41,7 @@
 		<copy overwrite="true" todir="${SOURCE_FOLDER}">
 			<fileset dir="${OUTPUT_FOLDER}/" id="id">
 				<include name="**/*emtl" />
-
+				<exclude name="**/de/urszeidler/shr5/acceleo/main/**"/>
 			</fileset>
 
 		</copy>

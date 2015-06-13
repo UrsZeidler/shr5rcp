@@ -94,9 +94,9 @@
 </fo:block>
       </fo:table-cell>
       <fo:table-cell margin="4pt">
-[printTwoColumnTable('[armor]',armorList(aManagedCharacter),armorValueList(aManagedCharacter),80)/]
+[printTwoColumnTable('[implats]',implatsList(aManagedCharacter),implatsEsseceList(aManagedCharacter),80)/]
 <fo:block margin-top="10pt" >
-[printOneColumnTable('Magazine',magazineList(aManagedCharacter))/]
+[printOneColumnTable('[contracts]',contractList(aManagedCharacter))/]
 </fo:block>
       </fo:table-cell>
      </fo:table-row>
@@ -104,6 +104,10 @@
    </fo:table-body>
    </fo:table>
 [/template]
+
+[query public contractList (aManagedCharacter : ManagedCharacter) : Sequence(String) = aManagedCharacter.contracts->collect(getText()) /]
+[query public implatsEsseceList (aManagedCharacter : ManagedCharacter) : Sequence(String) = aManagedCharacter.persona.oclAsType(KoerperPersona).koerperMods->collect(getEssencesValue()/100) /]
+[query public implatsList (aManagedCharacter : ManagedCharacter) : Sequence(String) = aManagedCharacter.persona.oclAsType(KoerperPersona).koerperMods->collect(getText()) /]
 
 [template public printSecondPage (aManagedCharacter : ManagedCharacter) ]
 <!-- second page -->
@@ -123,7 +127,15 @@
 [printTwoColumnTable('[Mods]', modNameList(aManagedCharacter),modValeList(aManagedCharacter),80 )/]
       </fo:table-cell>
      </fo:table-row>
-<!-- skill block -->
+   </fo:table-body>
+   </fo:table>
+
+<!-- ranged block -->
+ <fo:table font-family="Helvetica" margin-top="4pt"   >
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
 	<fo:table-row >
       <fo:table-cell margin="4pt" number-columns-spanned="2">
 [printRangeWapons(aManagedCharacter)/]
@@ -216,12 +228,19 @@
 [printImage(aManagedCharacter)/]
       </fo:table-cell>
      </fo:table-row>
+   </fo:table-body>
+   </fo:table>
+
+
 	<!-- skill block -->
+  <fo:table font-family="Helvetica" margin-top="4pt" >
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
 	<fo:table-row >
       <fo:table-cell margin-top="10pt" margin="4pt" number-columns-spanned="2">
-
 [printActiveSkills(aManagedCharacter)/]
-
       </fo:table-cell>
       <fo:table-cell margin="4pt">
 [printKnowlegeSkills(aManagedCharacter)/]
@@ -248,33 +267,58 @@
      <fo:table-row>
 [printCellSpanned(aManagedCharacter.persona.spezies.getText(),2)/]
 [printCell('_UI_ManagedCharacter_sex_feature'.localizedString())/]
-[printCell(aManagedCharacter.sex.sexToName())/]
+[printCellRight(aManagedCharacter.sex.sexToName())/]
      </fo:table-row>
      <fo:table-row>
 [printCell('_UI_ManagedCharacter_dateofbirth_feature'.localizedString())/]
-[printCell(aManagedCharacter.dateofbirth.formatDate())/]
+[printCellRight(aManagedCharacter.dateofbirth.formatDate())/]
 [printCell('_UI_ManagedCharacter_age_feature'.localizedString())/]
 [printCell(aManagedCharacter.height)/]
      </fo:table-row>
      <fo:table-row>
 [printCell('_UI_ManagedCharacter_height_feature'.localizedString())/]
-[printCell(aManagedCharacter.height+' cm')/] 
+[printCellRight(aManagedCharacter.height+' cm')/] 
 [printCell('_UI_ManagedCharacter_weight_feature'.localizedString())/]
-[printCell(aManagedCharacter.weight+' kg')/] 
+[printCellRight(aManagedCharacter.weight+' kg')/] 
      </fo:table-row>
 [printSimpleLine(4)/]
      <fo:table-row>
 [printCell('_UI_ManagedCharacter_karmaGaint_feature'.localizedString())/]
-[printCell(aManagedCharacter.karmaGaint)/]
+[printCellRight(aManagedCharacter.karmaGaint)/]
 [printCell('_UI_ManagedCharacter_currentKarma_feature'.localizedString())/]
-[printCell(aManagedCharacter.currentKarma)/]
+[printCellRight(aManagedCharacter.currentKarma)/]
      </fo:table-row>
      <fo:table-row>
 [printCell('_UI_ManagedCharacter_streetCred_feature'.localizedString())/]
-[printCell(aManagedCharacter.streetCred)/]
+[printCellRight(aManagedCharacter.streetCred)/]
 [printCell('_UI_ManagedCharacter_notoriety_feature'.localizedString())/]
-[printCell(aManagedCharacter.notoriety)/]
+[printCellRight(aManagedCharacter.notoriety)/]
      </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_BerechneteAttribute_selbstbeherrschung_feature'.localizedString())/]
+[printCellRight(persona.oclAsType(KoerperPersona).selbstbeherrschung.toString())/]
+[printCell('_UI_BerechneteAttribute_menschenkenntnis_feature'.localizedString())/] 
+[printCellRight(persona.oclAsType(KoerperPersona).menschenkenntnis)/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_BerechneteAttribute_errinerungsvermoegen_feature'.localizedString())/]
+[printCellRight(persona.oclAsType(KoerperPersona).errinerungsvermoegen) /]
+[printCell('Lifting/Carrying')/] 
+[printCellRight(persona.liftCarry())/]
+    </fo:table-row>
+[printSimpleLine(4)/]
+	<fo:table-row>
+[printCell('Movement')/] 
+[printCellRight(persona.movement())/]
+[printCell('_UI_ChrakterLimits_koerperlich_feature'.localizedString())/] 
+[printCellRight(persona.oclAsType(KoerperPersona).koerperlich)/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_ChrakterLimits_geistig_feature'.localizedString())/]
+[printCellRight(persona.oclAsType(KoerperPersona).geistig)/]
+[printCell('_UI_ChrakterLimits_sozial_feature'.localizedString())/]
+[printCellRight(persona.oclAsType(KoerperPersona).sozial)/]
+    </fo:table-row>
 
 
    </fo:table-body>
@@ -452,9 +496,9 @@ list : Sequence(PersonaFertigkeit) =
 [/template]
 
 [template public printSkillList(list : Sequence(PersonaFertigkeit),persona : AbstraktPersona)]
-  <fo:table font-size="small" font-weight="lighter" >
+  <fo:table [fontSizeSmall()/]  font-weight="lighter" >
     <fo:table-column  />
-   	<fo:table-column column-width="15%" />
+   	<fo:table-column [columnWidth('15%')/] />
 	<fo:table-column column-width="15%" />
     <fo:table-body  >
 [for (f : PersonaFertigkeit | list)]
@@ -509,7 +553,7 @@ list : Sequence(PersonaFertigkeit) =
 [template public print3ColumnTable (titel : String, firstColumn : Sequence(String)
 ,secondColumn : Sequence(String), column3 : Sequence(String)) ]
 <!-- two column table -->
-  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+  <fo:table font-size="small" keep-together="always" font-weight="lighter" [defaultBorderAll()/]>
     <fo:table-column  />
     <fo:table-column  />   
 	<fo:table-column  />
@@ -529,7 +573,7 @@ list : Sequence(PersonaFertigkeit) =
 
 [template public printTwoColumnTable (titel : String, firstColumn : Sequence(String),secondColumn : Sequence(String),clW1 : Integer) ]
 <!-- two column table -->
-  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+  <fo:table font-size="small" keep-together="always" font-weight="lighter" [defaultBorderAll()/]>
     <fo:table-column column-width="[clW1/]%" />
    <fo:table-column  />
     <fo:table-body  >
@@ -547,7 +591,7 @@ list : Sequence(PersonaFertigkeit) =
 
 [template public printOneColumnTable (titel : String, firstColumn : Sequence(String)) ]
 <!-- one column table -->
-  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+  <fo:table font-size="small" keep-together="always" font-weight="lighter" [defaultBorderAll()/]>
     <fo:table-column  />
    <fo:table-column  />
     <fo:table-body  >
@@ -563,7 +607,7 @@ list : Sequence(PersonaFertigkeit) =
 
 [template public printOneColumnTableRaw (titel : String, firstColumn : Sequence(String)) ]
 <!-- one column table -->
-  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+  <fo:table font-size="small" keep-together="always" font-weight="lighter" [defaultBorderAll()/]>
     <fo:table-column  />
     <fo:table-body  >
 [printSectionHeader(titel, 1)/]

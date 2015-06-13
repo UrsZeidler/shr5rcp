@@ -19,7 +19,7 @@
 [printCharacterMainInfo(aManagedCharacter)/]
 [printCharacterAttributes(aManagedCharacter)/]
 
-   <fo:table font-family="Helvetica"  margin="3pt" >
+   <fo:table [fontFamlily('Helvetica') +' ' + margin('3pt') /] >
     <fo:table-column column-width="50%" />
     <fo:table-column column-width="50%" />
     <fo:table-body  >
@@ -32,10 +32,10 @@
 		<fo:block  >
 [printSkills(aManagedCharacter)  /]
 		</fo:block  >
-		<fo:block keep-together="always">
+		<fo:block [keepTogetherAlways()/] >
 [printActiveMods(aManagedCharacter.persona)  /]
 		</fo:block  >
-		<fo:block keep-together="always">
+		<fo:block [keepTogetherAlways()/]>
 [printConnections(aManagedCharacter)  /]
 		</fo:block  >
 		<fo:block margin-top="10pt" >
@@ -166,6 +166,7 @@
 [for (fk : AbstaktFernKampfwaffe | aManagedCharacter.inventar->selectByKind(AbstaktFernKampfwaffe))]
 		<fo:block margin-top="10pt" keep-together="always">
 [printRangeWeapon(fk,25)/]
+[printSimpleLineBlock()/]
 		</fo:block  >
 [/for]
 
@@ -1036,7 +1037,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [printCellRight(contract.wertValue.formatMoney()+'/'+contract.wert.formatMoney())/]
      </fo:table-row>
 [for (lo : LifestyleOption | contract.options)]
-     <fo:table-row>
+     <fo:table-row font-size="x-small">
 [printCell(' ')/]
 [printCell(lo.getText())/]
 [printCellRight(lo.wert.formatMoney())/]
