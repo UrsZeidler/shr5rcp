@@ -19,23 +19,23 @@
 [printCharacterMainInfo(aManagedCharacter)/]
 [printCharacterAttributes(aManagedCharacter)/]
 
-   <fo:table margin="3pt" >
+   <fo:table font-family="Helvetica"  margin="3pt" >
     <fo:table-column column-width="50%" />
     <fo:table-column column-width="50%" />
     <fo:table-body  >
     <fo:table-row >
 <!-- colum one -->
-      <fo:table-cell>
+      <fo:table-cell border-right-width="1px"  border-right-style="outset">
 		[comment]<fo:block  >
 [printAttributes(aManagedCharacter)  /]
 		</fo:block  >[/comment]
-		<fo:block margin-top="10pt" >
+		<fo:block  >
 [printSkills(aManagedCharacter)  /]
 		</fo:block  >
-		<fo:block margin-top="10pt" keep-together="always">
+		<fo:block keep-together="always">
 [printActiveMods(aManagedCharacter.persona)  /]
 		</fo:block  >
-		<fo:block margin-top="10pt" keep-together="always">
+		<fo:block keep-together="always">
 [printConnections(aManagedCharacter)  /]
 		</fo:block  >
 		<fo:block margin-top="10pt" >
@@ -44,16 +44,19 @@
 
 [for (cy : Cyberdeck | aManagedCharacter.inventar->selectByType(Cyberdeck))]
         <fo:block margin-top="10pt" keep-together="always">
+[printSimpleLineBlock()/]
 [printCyberdeckDetail(cy) /]
 		</fo:block  >
 [/for]
 [for (cy : RiggerCommandConsole | aManagedCharacter.inventar->selectByType(RiggerCommandConsole))]
         <fo:block margin-top="10pt" keep-together="always">
+[printSimpleLineBlock()/]
 [printRiggerConsoleDetail(cy) /]
 		</fo:block  >
 [/for]
 [for (cy : Commlink | aManagedCharacter.inventar->selectByType(Commlink))]
         <fo:block margin-top="10pt" keep-together="always">
+[printSimpleLineBlock()/]
 [printComlinkDetail(cy) /]
 		</fo:block  >
 [/for]
@@ -63,7 +66,7 @@
 <!-- colum two -->
       <fo:table-cell>
 
-		<fo:block margin-top="10pt"  >
+		<fo:block   >
 [printGear(aManagedCharacter)  /]
 		</fo:block  >
 
@@ -72,26 +75,26 @@
 
 [if (aManagedCharacter.persona.oclIsKindOf(KoerperPersona))]
 [let kp : KoerperPersona = aManagedCharacter.persona.oclAsType(KoerperPersona)]
-		<fo:block margin-top="10pt" keep-together="always">
+		<fo:block  keep-together="always">
 [printQuallities(kp)/]
 		</fo:block  >
-		<fo:block  margin-top="10pt" keep-together="always">
+		<fo:block  keep-together="always">
 [printCyberwares(kp)/]
 		</fo:block  >
-		<fo:block  margin-top="10pt" keep-together="always">
+		<fo:block  keep-together="always">
 [printBioware(kp)/]
 		</fo:block  >
 [/let]
 [/if]
 [if (aManagedCharacter.persona.oclIsKindOf(KiAdept)and not aManagedCharacter.persona.oclAsType(KiAdept).kikraft->isEmpty())]
-		<fo:block  margin-top="10pt" keep-together="always">
+		<fo:block   keep-together="always">
 [printKiPower(aManagedCharacter.persona.oclAsType(KiAdept))/]
 		</fo:block  >
 [/if] 
-		<fo:block margin-top="10pt" keep-together="always">
+		<fo:block  keep-together="always">
 [printContracts(aManagedCharacter)  /]
 		</fo:block  >
-		<fo:block margin-top="10pt" keep-together="always">
+		<fo:block  keep-together="always">
 [printNotesOnObjects(aManagedCharacter)/]
 		</fo:block  >
 
@@ -101,7 +104,6 @@
    </fo:table>
 
 [comment][printRiggerSection(aManagedCharacter)/][/comment]
-
 [printSinLicense(aManagedCharacter)/]
 
 [if (aManagedCharacter.persona.oclIsKindOf(Zauberer) and not aManagedCharacter.persona.oclAsType(Zauberer).zauber->isEmpty())]
@@ -112,10 +114,6 @@
 <fo:block margin-top="10pt" ></fo:block  >
 [printComplexForms(aManagedCharacter.persona.oclAsType(Technomancer))  /]
 [/if] 
-[if (not aManagedCharacter.changes->isEmpty())]
-<fo:block margin-top="10pt" ></fo:block  >
-[printCharacterChanges(aManagedCharacter)  /]
-[/if] 
 
 [comment 3 col table weapon detail /]
    <fo:table margin="3pt" break-before="page">
@@ -125,7 +123,7 @@
     <fo:table-body  >
     <fo:table-row >
 <!-- colum one -->
- <fo:table-cell>
+ <fo:table-cell border-right-width="1px"  border-right-style="outset">
 [if (not aManagedCharacter.inventar->selectByKind(Nahkampfwaffe)->isEmpty())]
 [printSectionTitel('_UI_Nahkampfwaffe_type'.localizedString())/]
 [for (n : Nahkampfwaffe | aManagedCharacter.inventar->selectByKind(Nahkampfwaffe))]
@@ -135,29 +133,29 @@
 [/for]
 [/if]
 [if (not aManagedCharacter.inventar->selectByKind(Munition)->isEmpty())]
-<fo:block margin-top="10pt" ></fo:block  >
+[printSimpleLineBlock()/]
 [printSectionTitel('_UI_Munition_type'.localizedString())/]
 [for (m : Munition | aManagedCharacter.inventar->selectByKind(Munition))]
 		<fo:block font-size="small"  >
-[m.name  /] [m.type.getText()/] [m.anzahl/]
+[m.name.escapeXML()  /] [m.type.getText().escapeXML()/] [m.anzahl/]
 		</fo:block  >
 [/for]
 [/if]
 [if (not aManagedCharacter.inventar->selectByKind(Magazin)->isEmpty())]
-<fo:block margin-top="10pt" ></fo:block  >
+[printSimpleLineBlock()/]
 [printSectionTitel('_UI_Magazin_type'.localizedString())/]
 [for (m : Magazin | aManagedCharacter.inventar->selectByKind(Magazin))]
 		<fo:block font-size="small"  >
-[m.getText()  /]
+[m.getText().escapeXML()  /]
 		</fo:block  >
 [/for]
 [/if]
 [if (not aManagedCharacter.inventar->selectByKind(Kleidung)->isEmpty())]
-<fo:block margin-top="10pt" ></fo:block  >
+[printSimpleLineBlock()/]
 [printSectionTitel('_UI_Kleidung_type'.localizedString())/]
 [for (m : Kleidung | aManagedCharacter.inventar->selectByKind(Kleidung))]
 		<fo:block font-size="small"  >
-[m.getText()  /] [m.ruestung/]
+[m.getText().escapeXML()  /] [m.ruestung/]
 		</fo:block  >
 [/for]
 [/if]
@@ -175,6 +173,8 @@
      </fo:table-row>
     </fo:table-body>
    </fo:table>
+
+
 [comment diary /]
 [if (aManagedCharacter.oclIsKindOf(PlayerCharacter) and not aManagedCharacter.oclAsType(PlayerCharacter).diary.entries->isEmpty())]
 <!-- diary -->
@@ -183,6 +183,11 @@
     <fo:table-body  >
      <fo:table-row>
       <fo:table-cell>
+[if (not aManagedCharacter.changes->isEmpty())]
+<fo:block margin-top="10pt" break-before="page" ></fo:block  >
+[printCharacterChanges(aManagedCharacter)  /]
+[/if] 
+
        <fo:block  >
 [printDiary(aManagedCharacter.oclAsType(PlayerCharacter).diary)  /]
 		</fo:block  >
@@ -219,6 +224,7 @@ and not e.oclIsKindOf(AbstraktPersona)
 and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 ->isEmpty()
 ) ]
+[printSimpleLineBlock()/]
 [printSectionTitel('Notes'.localizedString())/]
  <fo:table font-size="small">
    <fo:table-column  />
@@ -313,7 +319,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
     <fo:table-column  />
     <fo:table-body  >
      <fo:table-row>
-[printCellAttribute(m.getText(),' font-weight="bold"')/]
+[printCellAttribute(m.getSimpleText(),' font-weight="bold"')/]
      </fo:table-row>
      <fo:table-row>
       <fo:table-cell>
@@ -354,7 +360,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
     <fo:table-column  />
     <fo:table-body  >
      <fo:table-row>
-[printCellAttribute(fk.getText(),' font-weight="bold"')/]
+[printCellAttribute(fk.getSimpleText(),' font-weight="bold"')/]
 [printCell(fk.reichweite.getText())/]
      </fo:table-row>
      <fo:table-row>
@@ -395,7 +401,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
     <fo:table-column column-width="35%" />
     <fo:table-body  >
      <fo:table-row>
-[printCellAttribute(fk.getText(),' font-weight="bold"')/]
+[printCellAttribute(fk.getSimpleText(),' font-weight="bold"')/]
 [printCell(fk.reichweite.getText())/]
      </fo:table-row>
      <fo:table-row>
@@ -511,7 +517,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
     <fo:table-body  >
     <fo:table-row >
       <fo:table-cell number-rows-spanned="3" >
-		<fo:block  >
+		<fo:block  border-right-width="1px"  border-right-style="outset" >
 [printAttributes(aManagedCharacter)  /]
 		</fo:block  >
       </fo:table-cell>
@@ -521,12 +527,12 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
    <fo:table-row >
       <fo:table-cell>
 		<fo:block  >
-[printOneSvgMonitorName('_UI_KoerperPersona_zustandKoerperlich_feature'.localizedString(), persona.zustandKoerperlichMax, 3, 25, 25) /]
+[printOneSvgMonitorName('_UI_KoerperPersona_zustandKoerperlich_feature'.localizedString(), persona.zustandKoerperlichMax, 3, 20, 20) /]
 		</fo:block  >
       </fo:table-cell>
      <fo:table-cell>
 		<fo:block  >
-[printOneSvgMonitorName('_UI_KoerperPersona_zustandGeistig_feature'.localizedString(), persona.zustandGeistigMax, 3, 25, 25) /]
+[printOneSvgMonitorName('_UI_KoerperPersona_zustandGeistig_feature'.localizedString(), persona.zustandGeistigMax, 3, 20, 20) /]
 		</fo:block  >
       </fo:table-cell>
 	</fo:table-row>
@@ -534,11 +540,12 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
    <fo:table-row >
       <fo:table-cell number-columns-spanned="2">
 		<fo:block  >
-[printOneSvgMonitorName('overflow', persona.zustandGrenze, 6, 25, 25) /]
+[printOneSvgMonitorName('overflow', persona.zustandGrenze, 6, 20, 20) /]
 		</fo:block  >
       </fo:table-cell>
 	</fo:table-row>
 
+[printSimpleLine(3)/]
     </fo:table-body>
    </fo:table>
 [/template]
@@ -547,6 +554,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
  * print the attributes the persona, uses the localized text.
 */]
 [template public printCyberwares(persona : KoerperPersona) ? (not persona.koerperMods->isEmpty())]
+[printSimpleLineBlock()/]
 [printSectionTitel('Cyberware'.localizedString())/]
   <fo:table [defaultTableStyle()/]>
     <fo:table-column  />
@@ -714,6 +722,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [/template]
 
 [template public printSpells(z : Zauberer) ? (not z.zauber->isEmpty())]
+[printSimpleLineBlock()/]
 [printSectionTitel('_UI_Zauberer_zauber_feature'.localizedString())/]
   <fo:table [defaultTableStyle()/] >
     <fo:table-column column-width="35%" />
@@ -738,6 +747,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [/template]
 
 [template public printComplexForms(z : Technomancer) ? (not z.complexForms->isEmpty())]
+[printSimpleLineBlock()/]
 [printSectionTitel('_UI_Technomancer_complexForms_feature'.localizedString())/]
   <fo:table [defaultTableStyle()/]>
     <fo:table-column column-width="35%" />
@@ -870,12 +880,13 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [printCell('_UI_ManagedCharacter_currentKarma_feature'.localizedString())/]
 [printCell(aManagedCharacter.currentKarma)/]
      </fo:table-row>
-
+[printSimpleLine(5)/]
     </fo:table-body>
    </fo:table>
 [/template]
 
 [template public printConnections (aManagedCharacter : ManagedCharacter) ? (not aManagedCharacter.connections->isEmpty())]
+[printSimpleLineBlock()/]
 [printSectionTitel('_UI_ManagedCharacter_connections_feature'.localizedString())/]
   <fo:table [defaultTableStyle()/]>
     <fo:table-column  />
@@ -884,7 +895,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
     <fo:table-body  >
 [for (t : Connection | aManagedCharacter.connections )]
      <fo:table-row>
-[printCell(t.getText())/]
+[printCell(t.getSimpleText())/]
 [printCellRight(t.influence)/]
 [printCellRight(t.loyality)/]
      </fo:table-row>
@@ -894,6 +905,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [/template]
 
 [template public printDiary(diary : CharacterDiary)? (not diary.entries->isEmpty())]
+[printSimpleLineBlock()/]
 [printSectionTitel('diary'.localizedString())/]
   <fo:table [defaultTableStyle()/]>
     <fo:table-column  />
@@ -950,6 +962,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [/template]
 
 [template public printContracts (aManagedCharacter : ManagedCharacter) ? (not aManagedCharacter.contracts->select(not oclIsKindOf(Fakeable))->isEmpty())]
+[printSimpleLineBlock()/]
 [printSectionTitel('_UI_ManagedCharacter_contracts_feature'.localizedString())/]
   <fo:table [defaultTableStyle()/]>
     <fo:table-column  />
@@ -968,6 +981,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [/template]
 
 [template public printSinLicense (aManagedCharacter : ManagedCharacter) ? (not aManagedCharacter.contracts->select(oclIsKindOf(Fakeable))->isEmpty())]
+[printSimpleLineBlock()/]
 [printSectionTitel('SinLicense'.localizedString())/]
   <fo:table [defaultTableStyle()/] >
     <fo:table-column  />
@@ -1107,6 +1121,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [/template]
 
 [template public printQuallities (persona : KoerperPersona) ? (not persona.eigenschaften->isEmpty())]
+[printSimpleLineBlock()/]
 [printSectionTitel('_UI_KoerperPersona_eigenschaften_feature'.localizedString())/]
   <fo:table [defaultTableStyle()/]>
     <fo:table-column  />
@@ -1114,7 +1129,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
     <fo:table-body  >
 [for (t : PersonaEigenschaft | persona.eigenschaften )]
      <fo:table-row>
-[printCell(t.getText())/]
+[printCell(t.getSimpleText())/]
 [printCellRight(t.karmaKosten)/]
      </fo:table-row>
 [/for]
@@ -1123,6 +1138,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [/template]
 
 [template public printActiveMods(persona : AbstraktPersona) ? (not persona.getModList()->isEmpty())]
+[printSimpleLineBlock()/]
 [printSectionTitel('Modifications'.localizedString())/]
   <fo:table [defaultTableStyle()/]>
     <fo:table-column  />
@@ -1139,6 +1155,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [/template]
 
 [template public printBioware (persona : KoerperPersona) ? (not persona.koerperMods->selectByType(BioWare)->isEmpty())]
+[printSimpleLineBlock()/]
 [printSectionTitel('bioware'.localizedString())/]
   <fo:table [defaultTableStyle()/]>
     <fo:table-column  />
@@ -1155,6 +1172,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [/template]
 
 [template public printKiPower (persona : KiAdept) ? (not persona.kikraft->isEmpty())]
+[printSimpleLineBlock()/]
 [printSectionTitel('_UI_KiAdept_kikraft_feature'.localizedString())/]
   <fo:table [defaultTableStyle()/]>
     <fo:table-column  />
@@ -1162,7 +1180,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
     <fo:table-body  >
 [for (t : KiKraft | persona.kikraft )]
      <fo:table-row>
-[printCell(t.getText())/]
+[printCell(t.getSimpleText())/]
 [printCellRight(t.kraftpunkte/100)/]
      </fo:table-row>
 [/for]
@@ -1172,6 +1190,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 
 [template public printVehicles(character : ManagedCharacter)? (not character.vehicels->isEmpty())]
 [for (f : Fahrzeug | character.vehicels)]
+[printSimpleLineBlock()/]
 [printVehicle(f)/]
 [/for]
 [/template]

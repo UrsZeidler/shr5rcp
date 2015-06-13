@@ -103,7 +103,8 @@ import de.urszeidler.shr5.ecp.opener.ECPAttributModifikatorWertOpener;
  * @author urs
  */
 public class ShadowrunEditingTools {
-
+    
+    
     /**
      * Transform to the message string.
      * 

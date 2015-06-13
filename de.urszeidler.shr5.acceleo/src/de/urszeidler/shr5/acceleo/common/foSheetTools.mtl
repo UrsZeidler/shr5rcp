@@ -5,6 +5,22 @@
 [import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
 
 
+[template public printSimpleLine(span : Integer)]
+   <fo:table-row >
+      <fo:table-cell number-columns-spanned="[span/]">
+[printSimpleLineBlock()/]
+      </fo:table-cell>
+    </fo:table-row >
+[/template]
+
+[template public printSimpleLineBlock(arg : OclAny)]
+<fo:block>
+<fo:leader
+	leader-pattern="rule" leader-length.optimum="100%"
+	rule-style="solid" rule-thickness="1px"/>
+</fo:block>
+[/template]
+
 [template public printNBoxName(name: String, value : Integer,mHeight : Integer,mWidth : Integer)]
 <fo:block  >
 [name/]
@@ -197,9 +213,9 @@ border-top-color="rgb(0,0,0)" border-top-style="outset" border-top-width="1pt"
 	<fo:layout-master-set>
 		<fo:simple-page-master page-height="297mm"
 			master-name="A4_210_x_297_mm" page-width="210mm">
-			<fo:region-body margin-left="15mm" background-color="transparent"
-				region-name="xsl-region-body" margin-bottom="15mm" margin-top="15mm"
-				margin-right="15mm" />
+			<fo:region-body margin-left="10mm" background-color="transparent"
+				region-name="xsl-region-body" margin-bottom="10mm" margin-top="10mm"
+				margin-right="10mm" />
 
 
             <fo:region-after region-name="xsl-region-after"  extent="15mm"/>

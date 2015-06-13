@@ -1,0 +1,580 @@
+[comment encoding = UTF-8 /]
+[module foCharacterSheet2('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunManagmentTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::shr5EEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::common::shr5ManagementEEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
+[import de::urszeidler::shr5::acceleo::sheets::svgCharacterSheet /]
+[import de::urszeidler::shr5::acceleo::sheets::foCharacterSheet  /]
+[import de::urszeidler::shr5::acceleo::common::foSheetTools  /]
+
+
+[template public foCharacterSheet2(aManagedCharacter : ManagedCharacter)]
+	
+	[comment @main /]
+[file (aManagedCharacter.getText().concat('2.fo'), false, 'UTF-8')]
+[printFoPageStart(aManagedCharacter.getText())/]	
+
+[printFirstPage(aManagedCharacter)/]
+<fo:block break-after="page"></fo:block>	
+[printSecondPage(aManagedCharacter)/]	
+<fo:block break-after="page"></fo:block>	
+[printVehiclePage(aManagedCharacter)/]	
+<fo:block break-after="page"></fo:block>	
+[printMatrixPage(aManagedCharacter)/]	
+
+[printSimpleFoPageEnd()/]		
+[/file]
+	
+[/template]
+
+[template public printMatrixPage (aManagedCharacter : ManagedCharacter) ]
+<!-- matix page -->
+  <fo:table font-family="Helvetica"  >
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
+<!-- skill block -->
+	<fo:table-row >
+      <fo:table-cell margin="4pt" number-columns-spanned="2">
+[printOneColumnTableRaw('Comlink',comlinkTableList(aManagedCharacter))/]
+<fo:block margin-top="10pt" >
+[printOneColumnTableRaw('cyberdeck',cyberdeckTableList(aManagedCharacter))/]
+</fo:block>
+<fo:block margin-top="10pt" >
+[printOneColumnTableRaw('rigger',rccTableList(aManagedCharacter))/]
+</fo:block>
+      </fo:table-cell>
+      <fo:table-cell margin="4pt">
+[printTwoColumnTable('[sin]',sinList(aManagedCharacter),sinValueList(aManagedCharacter),80)/]
+<fo:block margin-top="10pt" >
+[printOneColumnTable('Magazine',magazineList(aManagedCharacter))/]
+</fo:block>
+      </fo:table-cell>
+     </fo:table-row>
+
+   </fo:table-body>
+   </fo:table>
+
+[/template]
+
+
+[query public sinValueList (aManagedCharacter : ManagedCharacter) : Sequence(String) = aManagedCharacter.contracts->selectByType(Sin)->collect(oclAsType(Sin).stufe.getText())  /]
+[query public sinList (aManagedCharacter : ManagedCharacter) : Sequence(String) = aManagedCharacter.contracts->selectByType(Sin)->collect(getText())  /]
+
+[query public rccTableList (aManagedCharacter : ManagedCharacter) :  Sequence(String) = aManagedCharacter.inventar->selectByType(RiggerCommandConsole)->collect(printRiggerConsoleDetail()) /]
+[query public cyberdeckTableList (aManagedCharacter : ManagedCharacter) :  Sequence(String) = aManagedCharacter.inventar->selectByType(Cyberdeck)->collect(printCyberdeckDetail()) /]
+[query public comlinkTableList (aManagedCharacter : ManagedCharacter) : Sequence(String) = aManagedCharacter.inventar->selectByType(Commlink)->collect(printComlinkDetail()) /]
+
+
+[query public modList(character : ManagedCharacter) : Sequence(OclAny) = persona.getModList() /]
+[query public modNameList(character : ManagedCharacter) : Sequence(String) = persona.getModList()->collect(at(1).getText()) /]
+[query public modValeList(character : ManagedCharacter) : Sequence(String) = persona.getModList()->collect(at(2).getText()) /]
+
+
+
+
+[template public printVehiclePage (aManagedCharacter : ManagedCharacter) ]
+<!-- vehicle page -->
+  <fo:table font-family="Helvetica"  >
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
+<!-- skill block -->
+	<fo:table-row >
+      <fo:table-cell margin="4pt" number-columns-spanned="2">
+[printVehicles(aManagedCharacter)/]
+<fo:block margin-top="10pt" >
+
+</fo:block>
+      </fo:table-cell>
+      <fo:table-cell margin="4pt">
+[printTwoColumnTable('[armor]',armorList(aManagedCharacter),armorValueList(aManagedCharacter),80)/]
+<fo:block margin-top="10pt" >
+[printOneColumnTable('Magazine',magazineList(aManagedCharacter))/]
+</fo:block>
+      </fo:table-cell>
+     </fo:table-row>
+
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printSecondPage (aManagedCharacter : ManagedCharacter) ]
+<!-- second page -->
+  <fo:table font-family="Helvetica"  >
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
+     <fo:table-row>
+      <fo:table-cell margin="4pt">
+[printOneColumnTable('Contacts',connectionListSimple(aManagedCharacter))/]
+      </fo:table-cell>
+      <fo:table-cell margin="4pt">
+[printOneColumnTable('[Quallities]', quallityList(aManagedCharacter) )/]
+      </fo:table-cell>
+      <fo:table-cell margin="4pt">
+[printTwoColumnTable('[Mods]', modNameList(aManagedCharacter),modValeList(aManagedCharacter),80 )/]
+      </fo:table-cell>
+     </fo:table-row>
+<!-- skill block -->
+	<fo:table-row >
+      <fo:table-cell margin="4pt" number-columns-spanned="2">
+[printRangeWapons(aManagedCharacter)/]
+<fo:block margin-top="10pt" >
+[printMeleeWapons(aManagedCharacter)/]
+</fo:block>
+      </fo:table-cell>
+      <fo:table-cell margin="4pt">
+[printTwoColumnTable('[armor]',armorList(aManagedCharacter),armorValueList(aManagedCharacter),80)/]
+<fo:block margin-top="10pt" >
+[printOneColumnTable('Magazine',magazineList(aManagedCharacter))/]
+</fo:block>
+      </fo:table-cell>
+     </fo:table-row>
+
+   </fo:table-body>
+   </fo:table>
+
+[/template]
+
+[template public printRangeWapons (aManagedCharacter : ManagedCharacter) ]
+<!-- one column table -->
+  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+   <fo:table-column  />
+    <fo:table-body  >
+[printSectionHeader('RangedWapons', 1)/]
+[for (f : AbstaktFernKampfwaffe | aManagedCharacter.inventar->select(oclIsKindOf(AbstaktFernKampfwaffe)))]
+    <fo:table-row>
+       <fo:table-cell>
+[printRangeWeapon(f,25)/]
+ 		</fo:table-cell>
+   </fo:table-row>
+[printSimpleLine(1)/]
+[/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printVehicles (aManagedCharacter : ManagedCharacter) ]
+<!-- one column table -->
+  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+   <fo:table-column  />
+    <fo:table-body  >
+[printSectionHeader('Vehicles', 1)/]
+[for (f : Fahrzeug | aManagedCharacter.vehicels)]
+    <fo:table-row>
+       <fo:table-cell>
+[printVehicle(f)/]
+ 		</fo:table-cell>
+   </fo:table-row>
+[printSimpleLine(1)/]
+[/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printMeleeWapons (aManagedCharacter : ManagedCharacter) ]
+<!-- one column table -->
+  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+   <fo:table-column  />
+    <fo:table-body  >
+[printSectionHeader('MeeWapons', 1)/]
+[for (f : Nahkampfwaffe | aManagedCharacter.inventar->select(oclIsKindOf(Nahkampfwaffe)))]
+    <fo:table-row>
+       <fo:table-cell>
+[printMeleeWeapon(f)/]
+ 		</fo:table-cell>
+   </fo:table-row>
+[printSimpleLine(1)/]
+[/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+
+[template public printFirstPage (aManagedCharacter : ManagedCharacter) ]
+  <fo:table font-family="Helvetica"  >
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
+     <fo:table-row>
+      <fo:table-cell margin="4pt">
+[printPersonaData(aManagedCharacter)/]
+      </fo:table-cell>
+      <fo:table-cell margin="4pt">
+[printAttributes(aManagedCharacter)/]
+      </fo:table-cell>
+      <fo:table-cell margin="4pt">
+[printImage(aManagedCharacter)/]
+      </fo:table-cell>
+     </fo:table-row>
+	<!-- skill block -->
+	<fo:table-row >
+      <fo:table-cell margin-top="10pt" margin="4pt" number-columns-spanned="2">
+
+[printActiveSkills(aManagedCharacter)/]
+
+      </fo:table-cell>
+      <fo:table-cell margin="4pt">
+[printKnowlegeSkills(aManagedCharacter)/]
+      </fo:table-cell>
+     </fo:table-row>
+
+   </fo:table-body>
+   </fo:table>
+
+[/template]
+
+[template public printPersonaData (aManagedCharacter : ManagedCharacter) ]
+  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+    <fo:table-column  />
+   <fo:table-column  />
+   <fo:table-column  />
+   <fo:table-column  />
+    <fo:table-body  >
+[printSectionHeader('Personal Data'.localizedString(), 4)/]
+     <fo:table-row>
+[printCell('name'.localizedString())/]
+[printCellSpanned(aManagedCharacter.persona.name,3)/]
+     </fo:table-row>
+     <fo:table-row>
+[printCellSpanned(aManagedCharacter.persona.spezies.getText(),2)/]
+[printCell('_UI_ManagedCharacter_sex_feature'.localizedString())/]
+[printCell(aManagedCharacter.sex.sexToName())/]
+     </fo:table-row>
+     <fo:table-row>
+[printCell('_UI_ManagedCharacter_dateofbirth_feature'.localizedString())/]
+[printCell(aManagedCharacter.dateofbirth.formatDate())/]
+[printCell('_UI_ManagedCharacter_age_feature'.localizedString())/]
+[printCell(aManagedCharacter.height)/]
+     </fo:table-row>
+     <fo:table-row>
+[printCell('_UI_ManagedCharacter_height_feature'.localizedString())/]
+[printCell(aManagedCharacter.height+' cm')/] 
+[printCell('_UI_ManagedCharacter_weight_feature'.localizedString())/]
+[printCell(aManagedCharacter.weight+' kg')/] 
+     </fo:table-row>
+[printSimpleLine(4)/]
+     <fo:table-row>
+[printCell('_UI_ManagedCharacter_karmaGaint_feature'.localizedString())/]
+[printCell(aManagedCharacter.karmaGaint)/]
+[printCell('_UI_ManagedCharacter_currentKarma_feature'.localizedString())/]
+[printCell(aManagedCharacter.currentKarma)/]
+     </fo:table-row>
+     <fo:table-row>
+[printCell('_UI_ManagedCharacter_streetCred_feature'.localizedString())/]
+[printCell(aManagedCharacter.streetCred)/]
+[printCell('_UI_ManagedCharacter_notoriety_feature'.localizedString())/]
+[printCell(aManagedCharacter.notoriety)/]
+     </fo:table-row>
+
+
+   </fo:table-body>
+   </fo:table>
+
+[/template]
+
+[template public printAttributes (aManagedCharacter : ManagedCharacter)
+{persona : AbstraktPersona = aManagedCharacter.persona ; } ]
+  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+    <fo:table-column  />
+   <fo:table-column  />
+   <fo:table-column  />
+   <fo:table-column  />
+    <fo:table-body  >
+[printSectionHeader('Attribute'.localizedString(), 4)/]
+[for (ea : EAttribute | getOrderedAttibutesForPersona(persona))]
+[if (i.mod(2)=1)]
+     <fo:table-row >
+[/if]
+
+[let attributeName : String = getText(base2Calced(ea))]
+[printCell(attributeName)/] 
+      <fo:table-cell>
+       <fo:block text-align="right" >
+[persona.eGet(ea)/][if(not (persona.eGet(ea)=persona.eGet(base2Calced(ea))))]([persona.eGet(base2Calced(ea))/])[/if] 
+</fo:block>
+      </fo:table-cell>
+[/let]
+[if (i.mod(2)=0)]
+     </fo:table-row>
+[/if]
+[/for]
+[if (getOrderedAttibutesForPersona(persona)->asSequence()->size().mod(2)=1)]
+     </fo:table-row>
+[/if]
+
+    <fo:table-row >
+      <fo:table-cell number-columns-spanned="2">
+[printNBoxes(persona.edge, 8,8)/]
+      </fo:table-cell>
+[printCell('_UI_SpezielleAttribute_essenz_feature'.localizedString())/] 
+[printCell((persona.essenz)/100 )/]
+    </fo:table-row >
+
+[printSimpleLine(4)/]
+
+	<fo:table-row>
+[printCellSpanned('_UI_SpezielleAttribute_initative_feature'.localizedString(),2)/] 
+[printCellSpanned(persona.toLocalizedInitative(),2)/]
+     </fo:table-row>
+[if(persona.oclIsKindOf(AstraleProjektion))]
+[let ap : AstraleProjektion = persona.oclAsType(AstraleProjektion)]
+	<fo:table-row>
+[printCellSpanned('_UI_AstraleProjektion_astraleInitative_feature'.localizedString(),2)/]
+[printCellSpanned(ap.toLocalizedAstralInitative(),2)/]
+     </fo:table-row>
+[/let][/if]
+[if (aManagedCharacter.hasMatrixInitative())]
+	<fo:table-row>
+[printCellSpanned('Matrix Ini cold',2)/]
+[printCellSpanned(aManagedCharacter.getMatrixInitative()+'+3d6',2)/]
+     </fo:table-row>
+	<fo:table-row>
+[printCellSpanned('Matrix Ini hot',2)/]
+[printCellSpanned(aManagedCharacter.getMatrixInitative()+'+4d6',2)/]
+     </fo:table-row>
+[/if]
+[printSimpleLine(4)/]
+<!--condition monitor -->
+    <fo:table-row >
+[printCellSpanned('Physical',4)/]
+    </fo:table-row >
+    <fo:table-row >
+      <fo:table-cell number-columns-spanned="4">
+[printNBoxes(persona.oclAsType(KoerperPersona).zustandKoerperlichMax, 8,8)/]
+      </fo:table-cell>
+    </fo:table-row >
+    <fo:table-row >
+[printCellSpanned('Men',4)/]
+    </fo:table-row >
+    <fo:table-row >
+      <fo:table-cell number-columns-spanned="4" margin-bottom="5pt">
+[printNBoxes(persona.oclAsType(KoerperPersona).zustandGeistigMax, 8,8)/]
+      </fo:table-cell>
+    </fo:table-row >
+
+   </fo:table-body>
+   </fo:table>
+
+[/template]
+
+[template public printImage (aManagedCharacter : ManagedCharacter) ]
+      <fo:block font-size="small" font-weight="lighter" margin-left="5px"  text-align="justify" [defaultBorderAll()/] >
+[if (not aManagedCharacter.persona.image.oclIsUndefined())]
+<fo:external-graphic display-align="right"  src="url([aManagedCharacter.persona.toBase64Image()/])"/>
+[/if]
+[if (not aManagedCharacter.persona.beschreibung.oclIsUndefined())]
+[aManagedCharacter.persona.beschreibung/]
+[/if]
+       </fo:block >
+
+[/template]
+
+
+[template public printSectionHeader(titel : String,colSpan : Integer)]
+      <fo:table-row  font-size="12pt">
+   <fo:table-cell   number-columns-spanned="[colSpan/]"  margin="2pt" >
+   <fo:block background-color="green"  margin="4pt" 
+         color="white" font-size="large" >
+   <fo:block text-align="left"  margin="2pt" padding="2pt"
+         >
+[escapeXML(titel)/]</fo:block></fo:block>
+       </fo:table-cell>
+     </fo:table-row>
+
+[/template]
+
+[template public printActiveSkills (aManagedCharacter : ManagedCharacter) {
+list : Sequence(PersonaFertigkeit) =  
+	aManagedCharacter.persona.fertigkeiten -> select(e| e.fertigkeit.oclIsTypeOf(Fertigkeit))
+			->asSequence()
+;}]
+  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+    <fo:table-column  />
+   <fo:table-column  />
+    <fo:table-body  >
+[printSectionHeader('Active Skills'.localizedString(), 2)/]
+    <fo:table-row>
+	<fo:table-cell>
+<!-- skill header -->
+[printSkillTableHeader()/]
+</fo:table-cell>
+     </fo:table-row>
+
+   <fo:table-row>
+	<fo:table-cell>
+<!-- skills -->
+[printSkillList(list, aManagedCharacter.persona)/]
+</fo:table-cell>
+     </fo:table-row>
+
+
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printKnowlegeSkills (aManagedCharacter : ManagedCharacter) {
+list : Sequence(PersonaFertigkeit) =  
+	aManagedCharacter.persona.fertigkeiten -> select(e| e.fertigkeit.oclIsTypeOf(Wissensfertigkeit))
+			->asSequence()
+;}]
+  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+    <fo:table-column  />
+    <fo:table-body  >
+[printSectionHeader('Knowlege Skills'.localizedString(), 1)/]
+    <fo:table-row>
+	<fo:table-cell>
+<!-- skill header -->
+[printSkillTableHeader()/]
+</fo:table-cell>
+     </fo:table-row>
+
+   <fo:table-row>
+	<fo:table-cell>
+<!-- skills -->
+[printSkillList(list, aManagedCharacter.persona)/]
+</fo:table-cell>
+     </fo:table-row>
+
+
+
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printSkillList(list : Sequence(PersonaFertigkeit),persona : AbstraktPersona)]
+  <fo:table font-size="small" font-weight="lighter" >
+    <fo:table-column  />
+   	<fo:table-column column-width="15%" />
+	<fo:table-column column-width="15%" />
+    <fo:table-body  >
+[for (f : PersonaFertigkeit | list)]
+		<fo:table-row>
+[printCell(f.fertigkeit.getSimpleText()+' '+ f.fertigkeit.attribut.getText().substring(1, 3))/] 
+[printCell(f.stufe)/]
+[printCellRight((f.stufe + persona.eGet(f.fertigkeit.attribut).oclAsType(Integer)).toString())/]
+		</fo:table-row>
+[/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printSkillTableHeader(arg : OclAny)]
+  <fo:table font-size="small" font-weight="lighter" >
+    <fo:table-column  />
+   	<fo:table-column column-width="15%" />
+	<fo:table-column column-width="15%" />
+    <fo:table-body  >
+		<fo:table-row>
+[printCell('Skill Name'.localizedString())/] 
+[printCell('Rtg'.localizedString())/]
+[printCell('Pool'.localizedString())/]
+		</fo:table-row>
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public print4ColumnTable (titel : String, firstColumn : Sequence(String)
+,secondColumn : Sequence(String), column3 : Sequence(String),column4 : Sequence(String)) ]
+<!-- two column table -->
+  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+    <fo:table-column  />
+    <fo:table-column  />   
+	<fo:table-column  />
+	<fo:table-column  />
+    <fo:table-body  >
+[printSectionHeader(titel, 2)/]
+[for (t : String | firstColumn)]
+    <fo:table-row>
+[printCell(t)/]
+[printCell(secondColumn->at(i))/]
+[printCell(column3->at(i))/]
+[printCell(column4->at(i))/]
+   </fo:table-row>
+[/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+
+[template public print3ColumnTable (titel : String, firstColumn : Sequence(String)
+,secondColumn : Sequence(String), column3 : Sequence(String)) ]
+<!-- two column table -->
+  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+    <fo:table-column  />
+    <fo:table-column  />   
+	<fo:table-column  />
+    <fo:table-body  >
+[printSectionHeader(titel, 2)/]
+[for (t : String | firstColumn)]
+    <fo:table-row>
+[printCell(t)/]
+[printCell(secondColumn->at(i))/]
+[printCell(column3->at(i))/]
+   </fo:table-row>
+[/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+
+[template public printTwoColumnTable (titel : String, firstColumn : Sequence(String),secondColumn : Sequence(String),clW1 : Integer) ]
+<!-- two column table -->
+  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+    <fo:table-column column-width="[clW1/]%" />
+   <fo:table-column  />
+    <fo:table-body  >
+[printSectionHeader(titel, 2)/]
+[for (t : String | firstColumn)]
+    <fo:table-row>
+[printCell(t)/]
+[printCell(secondColumn->at(i))/]
+   </fo:table-row>
+[/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+
+[template public printOneColumnTable (titel : String, firstColumn : Sequence(String)) ]
+<!-- one column table -->
+  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+    <fo:table-column  />
+   <fo:table-column  />
+    <fo:table-body  >
+[printSectionHeader(titel, 2)/]
+[for (t : String | firstColumn)]
+    <fo:table-row>
+[printCellSpanned(t,2)/]
+   </fo:table-row>
+[/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printOneColumnTableRaw (titel : String, firstColumn : Sequence(String)) ]
+<!-- one column table -->
+  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+    <fo:table-column  />
+    <fo:table-body  >
+[printSectionHeader(titel, 1)/]
+[for (t : String | firstColumn)]
+    <fo:table-row>
+<fo:table-cell>
+[t/]
+</fo:table-cell>
+   </fo:table-row>
+[/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+

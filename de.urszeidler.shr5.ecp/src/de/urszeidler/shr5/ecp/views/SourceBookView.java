@@ -52,6 +52,7 @@ import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.part.ViewPart;
 import org.eclipse.wb.swt.ResourceManager;
+import org.eclipse.wb.swt.SWTResourceManager;
 
 import com.google.common.base.Joiner;
 
@@ -65,7 +66,6 @@ import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.preferences.PreferenceConstants;
 import de.urszeidler.shr5.ecp.preferences.SourcebookViewerPreferences;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
-import org.eclipse.wb.swt.SWTResourceManager;
 
 public class SourceBookView extends ViewPart implements ISelectionListener {
     protected DataBindingContext m_bindingContext;

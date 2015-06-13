@@ -5,6 +5,22 @@
 [module ShadowrunSheetTools('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
 [import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
 
+
+
+[query public armorList(character : ManagedCharacter) : Sequence(String) = character.inventar->select(oclIsKindOf(Kleidung))->collect(getText()->asSequence()) /]
+[query public armorValueList(character : ManagedCharacter) : Sequence(String) = character.inventar->select(oclIsKindOf(Kleidung))->collect(oclAsType(Kleidung).ruestung.getText()->asSequence()) /]
+
+[query public connectionList(character : ManagedCharacter) : Sequence(String) = character.connections->collect(getText()->asSequence()) /]
+[query public connectionListSimple(character : ManagedCharacter) : Sequence(String) = character.connections->collect(getSimpleText())->asSequence() /]
+[query public magazineList(character : ManagedCharacter) : Sequence(String) = character.eAllContents()->selectByType(Magazin)->collect(getText())->asSequence() /]
+
+[query public quallityList(character : ManagedCharacter) : Sequence(String) = character.persona.oclAsType(KoerperPersona).eigenschaften->collect(getText()->asSequence()) /]
+
+[query public getSimpleText(arg0 : OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'getSimpleText(java.lang.Object)', Sequence{arg0})
+/]
+
+
 [**
  * Get the text from the item descriptor.
  */]

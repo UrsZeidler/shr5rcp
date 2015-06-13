@@ -35,27 +35,34 @@ public class DefaultLabelProvider extends LabelProvider {
     @Override
     public String getText(Object element) {
         if (element instanceof EClass) {
-            EClass eclass = (EClass)element;
-            
-            String key = "_UI_" + eclass.getName() + "_type";
-            try {
-                String packageName = eclass.getEPackage().getName();
-                if(packageName.equals("gameplay")){
-                    return GameplayEditPlugin.INSTANCE.getString(key);
-                }else if(packageName.equals("shr5Management")){
-                    return Shr5ManagementEditPlugin.INSTANCE.getString(key);
-                }else if(packageName.equals("scripting")){
-                    return ScriptingEditPlugin.INSTANCE.getString(key);
-                }
-                
-                
-                return Shr5EditPlugin.INSTANCE.getString(key);
-            } catch (Exception e) {
-                return eclass.getName();
-            }
+            EClass eclass = (EClass)element;            
+            return getEClassName(eclass);
         }
         
          return AdapterFactoryUtil.getInstance().getLabelProvider().getText(element);
+    }
+
+    /**
+     * @param eclass
+     * @return
+     */
+    public static String getEClassName(EClass eclass) {
+        String key = "_UI_" + eclass.getName() + "_type";
+        try {
+            String packageName = eclass.getEPackage().getName();
+            if(packageName.equals("gameplay")){
+                return GameplayEditPlugin.INSTANCE.getString(key);
+            }else if(packageName.equals("shr5Management")){
+                return Shr5ManagementEditPlugin.INSTANCE.getString(key);
+            }else if(packageName.equals("scripting")){
+                return ScriptingEditPlugin.INSTANCE.getString(key);
+            }
+            
+            
+            return Shr5EditPlugin.INSTANCE.getString(key);
+        } catch (Exception e) {
+            return eclass.getName();
+        }
     }
 
 }

@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.ImageData;
@@ -38,6 +39,7 @@ import de.urszeidler.eclipse.shr5Management.NonPlayerCharacter;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 import de.urszeidler.eclipse.shr5Management.provider.Shr5ManagementEditPlugin;
+import de.urszeidler.shr5.ecp.util.SimpleNameLabelProvider;
 
 /**
  * @author urs
@@ -51,7 +53,12 @@ public class ShadowrunTextTools {
     private static DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.SHORT);
     private static DateFormat dateTimeFormat = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
     private static DateFormat dateTimeFormatSec = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.LONG);
-
+    private static LabelProvider simpleLabelProvider = new SimpleNameLabelProvider();
+    
+    
+    public static String getSimpleText(Object element) {
+      return  simpleLabelProvider.getText(element);
+    }
     /**
      * Returns the localized feature name.
      * 
@@ -154,7 +161,7 @@ public class ShadowrunTextTools {
      */
     public static List<String> createNumberList(Integer count) {
         ArrayList<String> list = new ArrayList<String>(count);
-        for (int i = 1; i < count + 1; i++) {
+        for (int i = 1; i <= count + 1; i++) {
             list.add(i + EMPTY);
         }
         return list;
