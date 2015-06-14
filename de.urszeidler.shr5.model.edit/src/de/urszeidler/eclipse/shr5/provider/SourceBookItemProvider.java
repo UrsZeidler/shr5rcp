@@ -69,6 +69,7 @@ public class SourceBookItemProvider
             addParentIdPropertyDescriptor(object);
             addStartShrTimePropertyDescriptor(object);
             addEndShrTimePropertyDescriptor(object);
+            addCodePropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
     }
@@ -206,6 +207,28 @@ public class SourceBookItemProvider
     }
 
 	/**
+     * This adds a property descriptor for the Code feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addCodePropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add
+            (createItemPropertyDescriptor
+                (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+                 getResourceLocator(),
+                 getString("_UI_SourceBook_code_feature"),
+                 getString("_UI_PropertyDescriptor_description", "_UI_SourceBook_code_feature", "_UI_SourceBook_type"),
+                 Shr5Package.Literals.SOURCE_BOOK__CODE,
+                 true,
+                 false,
+                 false,
+                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+                 null,
+                 null));
+    }
+
+    /**
      * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
      * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
      * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -284,6 +307,7 @@ public class SourceBookItemProvider
             case Shr5Package.SOURCE_BOOK__PARENT_ID:
             case Shr5Package.SOURCE_BOOK__START_SHR_TIME:
             case Shr5Package.SOURCE_BOOK__END_SHR_TIME:
+            case Shr5Package.SOURCE_BOOK__CODE:
                 fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
                 return;
             case Shr5Package.SOURCE_BOOK__LOCALIZATIONS:

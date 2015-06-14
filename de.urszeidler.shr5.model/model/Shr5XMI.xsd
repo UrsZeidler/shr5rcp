@@ -215,6 +215,7 @@
         <xsd:attribute name="parentId" type="xsd:string"/>
         <xsd:attribute name="startShrTime" type="xsd:string"/>
         <xsd:attribute name="endShrTime" type="xsd:string"/>
+        <xsd:attribute name="code" type="xsd:string"/>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

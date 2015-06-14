@@ -2,8 +2,184 @@
  */
 package de.urszeidler.eclipse.shr5.impl;
 
+import de.urszeidler.eclipse.shr5.AbstaktFernKampfwaffe;
+import de.urszeidler.eclipse.shr5.AbstaktWaffe;
+import de.urszeidler.eclipse.shr5.AbstractMatrixDevice;
+import de.urszeidler.eclipse.shr5.AbstraktFokus;
+import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
+import de.urszeidler.eclipse.shr5.AbstraktModifikatoren;
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
+import de.urszeidler.eclipse.shr5.AbtraktGranate;
+import de.urszeidler.eclipse.shr5.ActiveMatixDevice;
+import de.urszeidler.eclipse.shr5.AddictionType;
+import de.urszeidler.eclipse.shr5.Anwendbar;
+import de.urszeidler.eclipse.shr5.AspektMagier;
+import de.urszeidler.eclipse.shr5.AstraleProjektion;
+import de.urszeidler.eclipse.shr5.AttributModifikatorWert;
+import de.urszeidler.eclipse.shr5.AutoSoft;
+import de.urszeidler.eclipse.shr5.BaseMagischePersona;
+import de.urszeidler.eclipse.shr5.BasicProgram;
+import de.urszeidler.eclipse.shr5.BerechneteAttribute;
+import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.BioWare;
+import de.urszeidler.eclipse.shr5.Bodenfahrzeug;
+import de.urszeidler.eclipse.shr5.Capacity;
+import de.urszeidler.eclipse.shr5.ChrakterLimits;
+import de.urszeidler.eclipse.shr5.Commlink;
+import de.urszeidler.eclipse.shr5.CommonProgram;
+import de.urszeidler.eclipse.shr5.ConsumerSoft;
+import de.urszeidler.eclipse.shr5.Credstick;
+import de.urszeidler.eclipse.shr5.CredstickTransaction;
+import de.urszeidler.eclipse.shr5.Critter;
+import de.urszeidler.eclipse.shr5.CritterDauer;
+import de.urszeidler.eclipse.shr5.CritterHandlung;
+import de.urszeidler.eclipse.shr5.CritterKraft;
+import de.urszeidler.eclipse.shr5.CritterReichweite;
+import de.urszeidler.eclipse.shr5.CyberImplantWeapon;
+import de.urszeidler.eclipse.shr5.Cyberdeck;
+import de.urszeidler.eclipse.shr5.Cyberware;
+import de.urszeidler.eclipse.shr5.CyberwareEnhancement;
+import de.urszeidler.eclipse.shr5.CyberwareModifikatioren;
+import de.urszeidler.eclipse.shr5.CyberwareType;
+import de.urszeidler.eclipse.shr5.Datasoft;
+import de.urszeidler.eclipse.shr5.DefaultWifi;
+import de.urszeidler.eclipse.shr5.Drohne;
+import de.urszeidler.eclipse.shr5.Drug;
+import de.urszeidler.eclipse.shr5.Echo;
+import de.urszeidler.eclipse.shr5.Enzug;
+import de.urszeidler.eclipse.shr5.Erlernbar;
+import de.urszeidler.eclipse.shr5.Fahrzeug;
+import de.urszeidler.eclipse.shr5.FahrzeugErweiterung;
+import de.urszeidler.eclipse.shr5.FahrzeugModifikation;
+import de.urszeidler.eclipse.shr5.FahrzeugZustand;
+import de.urszeidler.eclipse.shr5.Fakeable;
+import de.urszeidler.eclipse.shr5.FernkampfwaffeModifikator;
+import de.urszeidler.eclipse.shr5.FernkampfwaffenModifikatoren;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.FeuerModus;
+import de.urszeidler.eclipse.shr5.Feuerwaffe;
+import de.urszeidler.eclipse.shr5.FeuwerwaffenErweiterung;
+import de.urszeidler.eclipse.shr5.Fokus;
+import de.urszeidler.eclipse.shr5.FokusBinding;
+import de.urszeidler.eclipse.shr5.GebundenerGeist;
+import de.urszeidler.eclipse.shr5.Gegenstand;
+import de.urszeidler.eclipse.shr5.GegenstandStufen;
+import de.urszeidler.eclipse.shr5.Geist;
+import de.urszeidler.eclipse.shr5.GeistigeAttribute;
+import de.urszeidler.eclipse.shr5.GeldWert;
+import de.urszeidler.eclipse.shr5.Granate;
+import de.urszeidler.eclipse.shr5.Host;
+import de.urszeidler.eclipse.shr5.Identifiable;
+import de.urszeidler.eclipse.shr5.Initation;
+import de.urszeidler.eclipse.shr5.InterfaceModus;
+import de.urszeidler.eclipse.shr5.IntervallVertrag;
+import de.urszeidler.eclipse.shr5.KiAdept;
+import de.urszeidler.eclipse.shr5.KiKraft;
+import de.urszeidler.eclipse.shr5.Kleidung;
+import de.urszeidler.eclipse.shr5.KleindungsModifikator;
+import de.urszeidler.eclipse.shr5.KoerperPersona;
+import de.urszeidler.eclipse.shr5.KoerperlicheAttribute;
+import de.urszeidler.eclipse.shr5.Koerpermods;
+import de.urszeidler.eclipse.shr5.KomplexeForm;
+import de.urszeidler.eclipse.shr5.Lifestyle;
+import de.urszeidler.eclipse.shr5.LifestyleOption;
+import de.urszeidler.eclipse.shr5.Lizenz;
+import de.urszeidler.eclipse.shr5.Localization;
+import de.urszeidler.eclipse.shr5.Magazin;
+import de.urszeidler.eclipse.shr5.MagazinTyp;
+import de.urszeidler.eclipse.shr5.MagieFokus;
+import de.urszeidler.eclipse.shr5.Magier;
+import de.urszeidler.eclipse.shr5.MagischeMods;
+import de.urszeidler.eclipse.shr5.MagischePersona;
+import de.urszeidler.eclipse.shr5.MagischeStufe;
+import de.urszeidler.eclipse.shr5.MagischeTradition;
+import de.urszeidler.eclipse.shr5.MartialartStyle;
+import de.urszeidler.eclipse.shr5.MartialartTechnique;
+import de.urszeidler.eclipse.shr5.MatixConditionMonitor;
+import de.urszeidler.eclipse.shr5.MatrixAttributes;
+import de.urszeidler.eclipse.shr5.MatrixDevice;
+import de.urszeidler.eclipse.shr5.MatrixProgram;
+import de.urszeidler.eclipse.shr5.MatrixProgramType;
+import de.urszeidler.eclipse.shr5.Menge;
+import de.urszeidler.eclipse.shr5.MetaMagie;
+import de.urszeidler.eclipse.shr5.MiniGrenate;
+import de.urszeidler.eclipse.shr5.ModSetter;
+import de.urszeidler.eclipse.shr5.ModifikatorAttribute;
+import de.urszeidler.eclipse.shr5.ModifikatorType;
+import de.urszeidler.eclipse.shr5.Modifizierbar;
+import de.urszeidler.eclipse.shr5.Modifyable;
+import de.urszeidler.eclipse.shr5.MudanPersona;
+import de.urszeidler.eclipse.shr5.Munition;
+import de.urszeidler.eclipse.shr5.MysticAdept;
+import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
+import de.urszeidler.eclipse.shr5.Panzerung;
+import de.urszeidler.eclipse.shr5.PassagierFahrzeug;
+import de.urszeidler.eclipse.shr5.PercentLifestyleOption;
+import de.urszeidler.eclipse.shr5.PersonaEigenschaft;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeit;
+import de.urszeidler.eclipse.shr5.PersonaFertigkeitsGruppe;
+import de.urszeidler.eclipse.shr5.PersonaKomplexForm;
+import de.urszeidler.eclipse.shr5.PersonaMartialartStyle;
+import de.urszeidler.eclipse.shr5.PersonaMartialartTechnique;
+import de.urszeidler.eclipse.shr5.PersonaZauber;
+import de.urszeidler.eclipse.shr5.PersonaZustand;
+import de.urszeidler.eclipse.shr5.PersonalAreaNetwork;
+import de.urszeidler.eclipse.shr5.ProbenModifikatoren;
+import de.urszeidler.eclipse.shr5.ProgramType;
+import de.urszeidler.eclipse.shr5.Projektilwaffe;
+import de.urszeidler.eclipse.shr5.QiFokus;
+import de.urszeidler.eclipse.shr5.Quelle;
+import de.urszeidler.eclipse.shr5.Reichweite;
+import de.urszeidler.eclipse.shr5.ResonanzPersona;
+import de.urszeidler.eclipse.shr5.ResonanzZiel;
+import de.urszeidler.eclipse.shr5.RiggerCommandConsole;
+import de.urszeidler.eclipse.shr5.RiggerProgram;
+import de.urszeidler.eclipse.shr5.SchadensTyp;
+import de.urszeidler.eclipse.shr5.Schutzgeist;
+import de.urszeidler.eclipse.shr5.Sensor;
+import de.urszeidler.eclipse.shr5.SensorArray;
+import de.urszeidler.eclipse.shr5.SensorFunction;
+import de.urszeidler.eclipse.shr5.ShoppingTransaction;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.ShrList;
+import de.urszeidler.eclipse.shr5.Sichtverhaeltnisse;
+import de.urszeidler.eclipse.shr5.Sin;
+import de.urszeidler.eclipse.shr5.SkillSoft;
+import de.urszeidler.eclipse.shr5.SmartgunType;
+import de.urszeidler.eclipse.shr5.Software;
+import de.urszeidler.eclipse.shr5.SoftwareAgent;
+import de.urszeidler.eclipse.shr5.SourceBook;
+import de.urszeidler.eclipse.shr5.SourceLink;
+import de.urszeidler.eclipse.shr5.Spezialisierung;
+import de.urszeidler.eclipse.shr5.SpezielleAttribute;
+import de.urszeidler.eclipse.shr5.Spezies;
+import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
+import de.urszeidler.eclipse.shr5.Sprite;
+import de.urszeidler.eclipse.shr5.Steigerbar;
+import de.urszeidler.eclipse.shr5.StufenPersona;
+import de.urszeidler.eclipse.shr5.Substance;
+import de.urszeidler.eclipse.shr5.SubstanceContainer;
+import de.urszeidler.eclipse.shr5.SubstanceEffect;
+import de.urszeidler.eclipse.shr5.SubstanceVector;
+import de.urszeidler.eclipse.shr5.Technomancer;
+import de.urszeidler.eclipse.shr5.TimeUnits;
+import de.urszeidler.eclipse.shr5.Toxin;
+import de.urszeidler.eclipse.shr5.TransferAmount;
+import de.urszeidler.eclipse.shr5.Tutorsoft;
+import de.urszeidler.eclipse.shr5.Vertrag;
+import de.urszeidler.eclipse.shr5.WaffenFokus;
+import de.urszeidler.eclipse.shr5.WeaponMount;
+import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
+import de.urszeidler.eclipse.shr5.Wurfwaffe;
+import de.urszeidler.eclipse.shr5.Zauber;
+import de.urszeidler.eclipse.shr5.ZauberArt;
+import de.urszeidler.eclipse.shr5.ZauberDauer;
+import de.urszeidler.eclipse.shr5.ZauberReichweite;
+import de.urszeidler.eclipse.shr5.Zauberer;
+import de.urszeidler.eclipse.shr5.armorModificationType;
 import java.util.Date;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -12,8 +188,6 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import de.urszeidler.eclipse.shr5.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -1406,6 +1580,15 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
     }
 
 	/**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAttribute getSourceBook_Code() {
+        return (EAttribute)sourceBookEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -6161,6 +6344,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         sourceBookEClass = createEClass(SOURCE_BOOK);
         createEAttribute(sourceBookEClass, SOURCE_BOOK__START_SHR_TIME);
         createEAttribute(sourceBookEClass, SOURCE_BOOK__END_SHR_TIME);
+        createEAttribute(sourceBookEClass, SOURCE_BOOK__CODE);
 
         abstraktPersonaEClass = createEClass(ABSTRAKT_PERSONA);
         createEAttribute(abstraktPersonaEClass, ABSTRAKT_PERSONA__KONSTITUTION_BASIS);
@@ -7101,6 +7285,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEClass(sourceBookEClass, SourceBook.class, "SourceBook", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getSourceBook_StartShrTime(), this.getShrDate(), "startShrTime", null, 0, 1, SourceBook.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEAttribute(getSourceBook_EndShrTime(), this.getShrDate(), "endShrTime", null, 0, 1, SourceBook.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getSourceBook_Code(), ecorePackage.getEString(), "code", null, 0, 1, SourceBook.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(abstraktPersonaEClass, AbstraktPersona.class, "AbstraktPersona", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getAbstraktPersona_KonstitutionBasis(), ecorePackage.getEInt(), "konstitutionBasis", null, 0, 1, AbstraktPersona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -7477,8 +7662,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         initEAttribute(getCredstick_CurrentValue(), ecorePackage.getEBigDecimal(), "currentValue", null, 0, 1, Credstick.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(mengeEClass, Menge.class, "Menge", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getMenge_Anzahl(), ecorePackage.getEInt(), "anzahl", null, 0, 1, Menge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getMenge_ProAnzahl(), ecorePackage.getEInt(), "proAnzahl", null, 0, 1, Menge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getMenge_Anzahl(), ecorePackage.getEInt(), "anzahl", "1", 0, 1, Menge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getMenge_ProAnzahl(), ecorePackage.getEInt(), "proAnzahl", "1", 0, 1, Menge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(munitionEClass, Munition.class, "Munition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getMunition_DamageType(), this.getSchadensTyp(), "damageType", null, 0, 1, Munition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

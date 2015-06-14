@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Menge extends EObject {
     /**
      * Returns the value of the '<em><b>Anzahl</b></em>' attribute.
+     * The default value is <code>"1"</code>.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * <!-- begin-model-doc -->
@@ -37,7 +38,7 @@ public interface Menge extends EObject {
      * @return the value of the '<em>Anzahl</em>' attribute.
      * @see #setAnzahl(int)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getMenge_Anzahl()
-     * @model
+     * @model default="1"
      * @generated
      */
     int getAnzahl();
@@ -54,6 +55,7 @@ public interface Menge extends EObject {
 
     /**
      * Returns the value of the '<em><b>Pro Anzahl</b></em>' attribute.
+     * The default value is <code>"1"</code>.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * <!-- begin-model-doc -->
@@ -62,7 +64,7 @@ public interface Menge extends EObject {
      * @return the value of the '<em>Pro Anzahl</em>' attribute.
      * @see #setProAnzahl(int)
      * @see de.urszeidler.eclipse.shr5.Shr5Package#getMenge_ProAnzahl()
-     * @model
+     * @model default="1"
      * @generated
      */
     int getProAnzahl();

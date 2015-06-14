@@ -35,7 +35,7 @@ public class WurfwaffeImpl extends AbstaktFernKampfwaffeImpl implements Wurfwaff
      * @generated
      * @ordered
      */
-    protected static final int ANZAHL_EDEFAULT = 0;
+    protected static final int ANZAHL_EDEFAULT = 1;
     /**
      * The cached value of the '{@link #getAnzahl() <em>Anzahl</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -53,7 +53,7 @@ public class WurfwaffeImpl extends AbstaktFernKampfwaffeImpl implements Wurfwaff
      * @generated
      * @ordered
      */
-    protected static final int PRO_ANZAHL_EDEFAULT = 0;
+    protected static final int PRO_ANZAHL_EDEFAULT = 1;
     /**
      * The cached value of the '{@link #getProAnzahl() <em>Pro Anzahl</em>}' attribute.
      * <!-- begin-user-doc -->

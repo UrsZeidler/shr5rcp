@@ -1138,13 +1138,22 @@ public interface Shr5Package extends EPackage {
 	int SOURCE_BOOK__END_SHR_TIME = BESCHREIBBAR_FEATURE_COUNT + 3;
 
     /**
+     * The feature id for the '<em><b>Code</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SOURCE_BOOK__CODE = BESCHREIBBAR_FEATURE_COUNT + 4;
+
+    /**
      * The number of structural features of the '<em>Source Book</em>' class.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-	int SOURCE_BOOK_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 4;
+	int SOURCE_BOOK_FEATURE_COUNT = BESCHREIBBAR_FEATURE_COUNT + 5;
 
     /**
      * The number of operations of the '<em>Source Book</em>' class.
@@ -23160,6 +23169,17 @@ public interface Shr5Package extends EPackage {
 	EAttribute getSourceBook_EndShrTime();
 
 	/**
+     * Returns the meta object for the attribute '{@link de.urszeidler.eclipse.shr5.SourceBook#getCode <em>Code</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Code</em>'.
+     * @see de.urszeidler.eclipse.shr5.SourceBook#getCode()
+     * @see #getSourceBook()
+     * @generated
+     */
+    EAttribute getSourceBook_Code();
+
+    /**
      * Returns the meta object for class '{@link de.urszeidler.eclipse.shr5.AbstraktPersona <em>Abstrakt Persona</em>}'.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -28861,6 +28881,14 @@ public interface Shr5Package extends EPackage {
 		EAttribute SOURCE_BOOK__END_SHR_TIME = eINSTANCE.getSourceBook_EndShrTime();
 
 		/**
+         * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute SOURCE_BOOK__CODE = eINSTANCE.getSourceBook_Code();
+
+        /**
          * The meta object literal for the '{@link de.urszeidler.eclipse.shr5.impl.AbstraktPersonaImpl <em>Abstrakt Persona</em>}' class.
          * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

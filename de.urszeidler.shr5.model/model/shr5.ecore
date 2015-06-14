@@ -14,6 +14,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="SourceBook" eSuperTypes="#//Beschreibbar #//Identifiable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startShrTime" eType="#//ShrDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="endShrTime" eType="#//ShrDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="ShrDate" instanceClassName="java.util.Date"/>
   <eClassifiers xsi:type="ecore:EClass" name="AbstraktPersona" abstract="true" eSuperTypes="#//Beschreibbar #//KoerperlicheAttribute #//SpezielleAttribute #//GeistigeAttribute #//ChrakterLimits">

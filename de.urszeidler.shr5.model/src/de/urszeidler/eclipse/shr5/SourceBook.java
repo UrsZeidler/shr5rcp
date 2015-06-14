@@ -14,6 +14,7 @@ import java.util.Date;
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.SourceBook#getStartShrTime <em>Start Shr Time</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.SourceBook#getEndShrTime <em>End Shr Time</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.SourceBook#getCode <em>Code</em>}</li>
  * </ul>
  * </p>
  *
@@ -73,5 +74,31 @@ public interface SourceBook extends Beschreibbar, Identifiable {
      * @generated
      */
 	void setEndShrTime(Date value);
+
+    /**
+     * Returns the value of the '<em><b>Code</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Code</em>' attribute isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Code</em>' attribute.
+     * @see #setCode(String)
+     * @see de.urszeidler.eclipse.shr5.Shr5Package#getSourceBook_Code()
+     * @model
+     * @generated
+     */
+    String getCode();
+
+    /**
+     * Sets the value of the '{@link de.urszeidler.eclipse.shr5.SourceBook#getCode <em>Code</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Code</em>' attribute.
+     * @see #getCode()
+     * @generated
+     */
+    void setCode(String value);
 
 } // SourceBook

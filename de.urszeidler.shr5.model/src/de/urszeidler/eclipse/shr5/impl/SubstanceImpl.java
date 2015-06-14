@@ -231,7 +231,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * @generated
      * @ordered
      */
-    protected static final int ANZAHL_EDEFAULT = 0;
+    protected static final int ANZAHL_EDEFAULT = 1;
 
     /**
      * The cached value of the '{@link #getAnzahl() <em>Anzahl</em>}' attribute.
@@ -251,7 +251,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * @generated
      * @ordered
      */
-    protected static final int PRO_ANZAHL_EDEFAULT = 0;
+    protected static final int PRO_ANZAHL_EDEFAULT = 1;
 
     /**
      * The cached value of the '{@link #getProAnzahl() <em>Pro Anzahl</em>}' attribute.

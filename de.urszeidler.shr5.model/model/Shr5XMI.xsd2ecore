@@ -149,6 +149,7 @@
     <nested inputs="shr5.ecore#//SourceBook" outputs="Shr5XMI.xsd#//SourceBook;XSDComplexTypeDefinition=2">
       <nested inputs="shr5.ecore#//SourceBook/startShrTime" outputs="Shr5XMI.xsd#//SourceBook;XSDComplexTypeDefinition=2/XSDAttributeUse=1"/>
       <nested inputs="shr5.ecore#//SourceBook/endShrTime" outputs="Shr5XMI.xsd#//SourceBook;XSDComplexTypeDefinition=2/XSDAttributeUse=2"/>
+      <nested inputs="shr5.ecore#//SourceBook/code" outputs="Shr5XMI.xsd#//SourceBook;XSDComplexTypeDefinition=2/XSDAttributeUse=3"/>
     </nested>
     <nested inputs="shr5.ecore#//Identifiable/parentId" outputs="Shr5XMI.xsd#//SourceBook;XSDComplexTypeDefinition=2/XSDAttributeUse"/>
     <nested inputs="shr5.ecore#//Identifiable/localizations" outputs="Shr5XMI.xsd#//SourceBook;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle"/>

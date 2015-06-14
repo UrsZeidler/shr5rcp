@@ -34,6 +34,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SourceBookImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SourceBookImpl#getStartShrTime <em>Start Shr Time</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SourceBookImpl#getEndShrTime <em>End Shr Time</em>}</li>
+ *   <li>{@link de.urszeidler.eclipse.shr5.impl.SourceBookImpl#getCode <em>Code</em>}</li>
  * </ul>
  * </p>
  *
@@ -171,6 +172,26 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
 	protected Date endShrTime = END_SHR_TIME_EDEFAULT;
 
 	/**
+     * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCode()
+     * @generated
+     * @ordered
+     */
+    protected static final String CODE_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getCode()
+     * @generated
+     * @ordered
+     */
+    protected String code = CODE_EDEFAULT;
+
+    /**
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
      * @generated
@@ -332,6 +353,27 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
      * <!-- end-user-doc -->
      * @generated
      */
+    public String getCode() {
+        return code;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public void setCode(String newCode) {
+        String oldCode = code;
+        code = newCode;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, Shr5Package.SOURCE_BOOK__CODE, oldCode, code));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @Override
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
         switch (featureID) {
@@ -363,6 +405,8 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
                 return getStartShrTime();
             case Shr5Package.SOURCE_BOOK__END_SHR_TIME:
                 return getEndShrTime();
+            case Shr5Package.SOURCE_BOOK__CODE:
+                return getCode();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -398,6 +442,9 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
             case Shr5Package.SOURCE_BOOK__END_SHR_TIME:
                 setEndShrTime((Date)newValue);
                 return;
+            case Shr5Package.SOURCE_BOOK__CODE:
+                setCode((String)newValue);
+                return;
         }
         super.eSet(featureID, newValue);
     }
@@ -431,6 +478,9 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
             case Shr5Package.SOURCE_BOOK__END_SHR_TIME:
                 setEndShrTime(END_SHR_TIME_EDEFAULT);
                 return;
+            case Shr5Package.SOURCE_BOOK__CODE:
+                setCode(CODE_EDEFAULT);
+                return;
         }
         super.eUnset(featureID);
     }
@@ -457,6 +507,8 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
                 return START_SHR_TIME_EDEFAULT == null ? startShrTime != null : !START_SHR_TIME_EDEFAULT.equals(startShrTime);
             case Shr5Package.SOURCE_BOOK__END_SHR_TIME:
                 return END_SHR_TIME_EDEFAULT == null ? endShrTime != null : !END_SHR_TIME_EDEFAULT.equals(endShrTime);
+            case Shr5Package.SOURCE_BOOK__CODE:
+                return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
         }
         return super.eIsSet(featureID);
     }
@@ -517,6 +569,8 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
         result.append(startShrTime);
         result.append(", endShrTime: ");
         result.append(endShrTime);
+        result.append(", code: ");
+        result.append(code);
         result.append(')');
         return result.toString();
     }

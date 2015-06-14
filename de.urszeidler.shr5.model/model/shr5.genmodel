@@ -155,6 +155,7 @@
     <genClasses ecoreClass="shr5.ecore#//SourceBook">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SourceBook/startShrTime"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SourceBook/endShrTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//SourceBook/code"/>
     </genClasses>
     <genClasses image="false" ecoreClass="shr5.ecore#//AbstraktPersona">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shr5.ecore#//AbstraktPersona/konstitutionBasis"/>
