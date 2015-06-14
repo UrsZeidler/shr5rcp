@@ -622,10 +622,14 @@ public class ShadowrunEditingTools {
         final EClass eclass;
         if ("resources".equals(categoryName))
             eclass = Shr5managementPackage.Literals.RESOURCEN;
+        else if ("metatype".equals(categoryName))
+            eclass = Shr5managementPackage.Literals.META_TYPE;
         else if ("skills".equals(categoryName))
             eclass = Shr5managementPackage.Literals.SKILL;
-        else if ("attribute".equals(categoryName))
+        else if ("attributes".equals(categoryName))
             eclass = Shr5managementPackage.Literals.ATTRIBUTES;
+        else if ("magic".equals(categoryName))
+            eclass = Shr5managementPackage.Literals.SPELLCASTER;
         else
             eclass = Shr5managementPackage.Literals.RESOURCEN;
 
@@ -645,6 +649,7 @@ public class ShadowrunEditingTools {
         if (iterator.hasNext()) {
 
             Shr5System eObject = (Shr5System)iterator.next();
+            
             Optional<PriorityCategorie> firstMatch = FluentIterable.from(eObject.getPriorities()).firstMatch(
                     new com.google.common.base.Predicate<PriorityCategorie>() {
 

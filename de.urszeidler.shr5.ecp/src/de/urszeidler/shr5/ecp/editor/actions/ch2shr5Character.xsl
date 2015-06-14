@@ -14,16 +14,16 @@
 		<shr5mngt:PlayerCharacter xmi:version="2.0"
 			xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0"
-			chracterSource="//@generatorSrc" >
+			chracterSource="//@generatorSrc">
 			<xsl:choose>
-						<xsl:when test="sex/text()='Male'">
-							<xsl:attribute name="sex"><xsl:value-of
-								select="'male'" /></xsl:attribute>
-						</xsl:when>
-						<xsl:when test="sex/text()='Femal'">
-							<xsl:attribute name="sex"><xsl:value-of
-								select="'female'" /></xsl:attribute>
-						</xsl:when>
+				<xsl:when test="sex/text()='Male'">
+					<xsl:attribute name="sex"><xsl:value-of
+						select="'male'" /></xsl:attribute>
+				</xsl:when>
+				<xsl:when test="sex/text()='Femal'">
+					<xsl:attribute name="sex"><xsl:value-of
+						select="'female'" /></xsl:attribute>
+				</xsl:when>
 			</xsl:choose>
 
 			<!-- <xsl:attribute name="sex"><xsl:value-of select="low sex/text()" /></xsl:attribute> -->
@@ -32,7 +32,7 @@
 					select="shret:findPersonaType(adept/text(),magician/text(),technomancer/text())" /></xsl:attribute>
 
 				<xsl:attribute name="name"><xsl:value-of select="name/text()" /></xsl:attribute>
-				<xsl:attribute name="beschreibung"><xsl:value-of select="background/text()"/></xsl:attribute>
+				<xsl:attribute name="beschreibung"><xsl:value-of select="background/text()" /></xsl:attribute>
 
 				<xsl:for-each select="attributes/*">
 					<xsl:choose>
@@ -110,8 +110,17 @@
 					<xsl:call-template name="skill" />
 				</xsl:for-each>
 				<xsl:for-each select="cyberwares/*">
-					<xsl:value-of disable-output-escaping="yes"
-						select="shret:copyObject(concat(name/text(),' ',rating/text()),id/text(),'koerperMods')" />
+					<xsl:choose>
+						<xsl:when
+							test="shret:copyObject(concat(name/text(),' ',rating/text()),id/text(),'koerperMods')!=''">
+							<xsl:value-of disable-output-escaping="yes"
+								select="shret:copyObject(concat(name/text(),' ',rating/text()),id/text(),'koerperMods')" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:call-template name="wares" />
+						</xsl:otherwise>
+					</xsl:choose>
+					<xsl:call-template name="spec" />
 				</xsl:for-each>
 				<xsl:for-each select="powers/*">
 					<xsl:value-of disable-output-escaping="yes"
@@ -127,7 +136,7 @@
 				<!-- </xsl:if> -->
 				<!-- </xsl:for-each> -->
 
-				<xsl:call-template name="spec" />
+				
 			</persona>
 			<xsl:for-each select="weapons/*">
 				<xsl:value-of disable-output-escaping="yes"
@@ -160,12 +169,6 @@
 						select="loyalty/text()" /></xsl:attribute>
 				</connections>
 			</xsl:for-each>
-			<!-- <generatorSrc xsi:type="shr5mngt:FreeStyleGenerator" xmi:id="_B1Q4wN0CEeOvVYoRsPZlnA" 
-				character="_B1PDlN0CEeOvVYoRsPZlnA" state="commited" characterName="Ralf"> 
-				<generator xsi:type="shr5mngt:FreeStyle" href="platform:/resource/shr5Resource/shr5-1.shr5#_BtTPkN0CEeOvVYoRsPZlnA"/> 
-				<selectedGroup href="platform:/resource/shr5Resource/shr5-1.shr5#_B1HHwd0CEeOvVYoRsPZlnA"/> 
-				<selectedSpecies href="platform:/resource/shr5Resource/shr5-1.shr5#a53d885d-a4a4-443d-b6a6-b0a55b0a96c7"/> 
-				<selectedType href="http://urszeidler.de/shr5/1.0#//MudanPersona"/> </generatorSrc> -->
 
 			<generatorSrc xsi:type="shr5mngt:Shr5Generator"
 				character="/" state="commited" startKarma="3">
@@ -176,21 +179,63 @@
 					<xsl:attribute name="href"><xsl:value-of
 						select="concat($plattform-path, shret:findObject(gameplayoption/text()))" /></xsl:attribute>
 				</generator>
-				<resourcen
-					href="platform:/resource/shr5Resource/shr5-1.shr5#_BtMh4d0CEeOvVYoRsPZlnA">
+				<resourcen>
 					<xsl:attribute name="href"><xsl:value-of
 						select="concat($plattform-path, shret:findPriority(priorityresources/text(),gameplayoption/text(),'resourcen'))" /></xsl:attribute>
-
 				</resourcen>
-				<!-- <skills href="platform:/resource/shr5Resource/shr5-1.shr5#_BtGbQ90CEeOvVYoRsPZlnA" 
-					/> <attribute href="platform:/resource/shr5Resource/shr5-1.shr5#_Bs4Y0N0CEeOvVYoRsPZlnA" 
-					/> <metaType href="platform:/resource/shr5Resource/shr5-1.shr5#_Bs3Ksd0CEeOvVYoRsPZlnA" 
-					/> <magic xsi:type="shr5mngt:Mudan" href="platform:/resource/shr5Resource/shr5-1.shr5#_BtNwAN0CEeOvVYoRsPZlnA" 
-					/> -->
+				<attribute>
+					<xsl:attribute name="href"><xsl:value-of
+						select="concat($plattform-path, shret:findPriority(priorityattributes/text(),gameplayoption/text(),'attributes'))" /></xsl:attribute>
+				</attribute>
+				<skills>
+					<xsl:attribute name="href"><xsl:value-of
+						select="concat($plattform-path, shret:findPriority(priorityskills/text(),gameplayoption/text(),'skills'))" /></xsl:attribute>
+				</skills>
+				<metaType>
+					<xsl:attribute name="href"><xsl:value-of
+						select="concat($plattform-path, shret:findPriority(prioritymetatype/text(),gameplayoption/text(),'metatype'))" /></xsl:attribute>
+				</metaType>
+				<!-- <magic > <xsl:attribute name="href"><xsl:value-of select="concat($plattform-path, 
+					shret:findPriority(priorityspecial/text(),gameplayoption/text(),'magic'))" 
+					/></xsl:attribute> </magic> -->
 			</generatorSrc>
 
 		</shr5mngt:PlayerCharacter>
 
+	</xsl:template>
+
+	<xsl:template name="wares">
+		<koerperMods xsi:type="shr5:Cyberware" >
+<!-- 			<xsl:choose> -->
+<!-- 				<xsl:when test="starts-with(category/text(),'Bodyware' )"> -->
+<!-- 					<xsl:attribute name="xsi:type"><xsl:value-of -->
+<!-- 						select="shr5:Bioware" /> -->
+<!-- 				</xsl:attribute> -->
+<!-- 				</xsl:when> -->
+<!-- 				<xsl:otherwise> -->
+<!-- 					<xsl:attribute name="xsi:type"><xsl:value-of -->
+<!-- 						select="'shr5:Cyberware'" /> -->
+<!-- 				</xsl:attribute> -->
+<!-- 				</xsl:otherwise> -->
+<!-- 			</xsl:choose> -->
+
+			<xsl:call-template name="gegenstand-basis" />
+			<!-- <xsl:call-template name="mods" /> -->
+			<mods>
+				<xsl:if test="number(ess/text())">
+					<xsl:attribute name="wert">
+				<xsl:value-of select="number(ess/text())*-100" />
+				</xsl:attribute>
+				</xsl:if>
+				<!-- <attribut> -->
+				<xsl:attribute name="attribut">
+							<xsl:value-of
+					select="'http://urszeidler.de/shr5/1.0#//SpezielleAttribute/essenz'" />
+					</xsl:attribute>
+				<!-- </attribut> -->
+			</mods>
+
+		</koerperMods>
 	</xsl:template>
 
 
@@ -257,6 +302,24 @@
 					select="concat($plattform-path, shret:findSourceBook(source/text()))" /></xsl:attribute>
 			</srcBook>
 		</eigenschaften>
+	</xsl:template>
+
+
+	<!-- basic helper -->
+	<xsl:template name="gegenstand-basis">
+		<xsl:attribute name="verfuegbarkeit"><xsl:value-of select="avail/text()" /></xsl:attribute>
+		<xsl:if test="number(cost/text())">
+			<xsl:attribute name="wertValue"><xsl:value-of select="number(cost/text())" /></xsl:attribute>
+		</xsl:if>
+		<xsl:call-template name="beschreibbar" />
+		<!-- <xsl:call-template name="quelle" /> -->
+	</xsl:template>
+
+	<xsl:template name="beschreibbar">
+		<xsl:attribute name="name"><xsl:value-of select="name/text()" /></xsl:attribute>
+		<xsl:if test="string-length(doc/text())!=0">
+			<xsl:attribute name="beschreibung"><xsl:value-of select="doc/text()" /></xsl:attribute>
+		</xsl:if>
 	</xsl:template>
 
 
