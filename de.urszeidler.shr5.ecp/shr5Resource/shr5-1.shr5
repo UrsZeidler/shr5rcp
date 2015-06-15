@@ -2,19 +2,19 @@
 <shr5:ShrList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:runtime="http://urszeidler.de/shr5/runtime/1.0" xmlns:scripting="http://shr.scripting/1.0" xmlns:shr5="http://urszeidler.de/shr5/1.0" xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" xmi:id="_EIjJADnTEeSe6_w6Jrbqxg" name="All">
   <entries xsi:type="shr5:ShrList" xmi:id="_EIjwEDnTEeSe6_w6Jrbqxg" name="Resourcen">
     <entries xsi:type="shr5:ShrList" xmi:id="_EIjwETnTEeSe6_w6Jrbqxg" name="Sourcebooks">
-      <entries xsi:type="shr5:SourceBook" xmi:id="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac" name="Assassin's Primer" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
-      <entries xsi:type="shr5:SourceBook" xmi:id="b68175bc-e10f-4e11-9361-ed62bb371c8d" name="Gun Heaven 3" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
-      <entries xsi:type="shr5:SourceBook" xmi:id="5d6626a2-2400-44b5-b777-d7dac6cb512f" image="/shr5Resource/images/CAT27003_RunGun_Cover.jpg" name="Run and Gun" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
-      <entries xsi:type="shr5:SourceBook" xmi:id="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="Shadowrun 5th Edition" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
-      <entries xsi:type="shr5:SourceBook" xmi:id="b3c5ea18-56dc-42f4-b567-50ead12fab1f" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="Shadowrun 5th Edition (German)" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
-      <entries xsi:type="shr5:SourceBook" xmi:id="3976dc50-f7db-481d-9372-fc2a5c1178ce" name="Street Grimoire" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
-      <entries xsi:type="shr5:SourceBook" xmi:id="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" name="Bullets &amp; Bandages" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
-      <entries xsi:type="shr5:SourceBook" xmi:id="7c37e671-9d0c-48f6-aa61-891a38be18d8" name="Sail Away, Sweet Sister" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
-      <entries xsi:type="shr5:SourceBook" xmi:id="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d" image="/shr5Resource/images/CAT27200_Stolen-Souls_Cover_.jpg" name="Stolen Souls" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
-      <entries xsi:type="shr5:SourceBook" xmi:id="e2b9ec78-b83f-4ea9-8531-95b074a1b9d8" name="Shadowrun Forum Post 1" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
-      <entries xsi:type="shr5:SourceBook" xmi:id="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" beschreibung="" image="/shr5Resource/images/runFaster.jpg" name="Run Faster" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
-      <entries xsi:type="shr5:SourceBook" xmi:id="abb9ec78-b430-4ea9-8531-95b004a1b9d9" beschreibung="" name="Shadow Spells" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
-      <entries xsi:type="shr5:SourceBook" xmi:id="62b9ec78-b83f-4ea9-8531-95d074ceb9d8" beschreibung="" name="Nothing Personal" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="289bc41d-6dd5-4216-9bc7-e6f0cabae9ac" name="Assassin's Primer" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100" code="AP"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="b68175bc-e10f-4e11-9361-ed62bb371c8d" name="Gun Heaven 3" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100" code="GH3"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="5d6626a2-2400-44b5-b777-d7dac6cb512f" image="/shr5Resource/images/CAT27003_RunGun_Cover.jpg" name="Run and Gun" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100" code="RG"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="Shadowrun 5th Edition" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100" code="SR5"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="b3c5ea18-56dc-42f4-b567-50ead12fab1f" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="Shadowrun 5th Edition (German)" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100" code="SR5G"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="3976dc50-f7db-481d-9372-fc2a5c1178ce" name="Street Grimoire" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100" code="SG"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="d7b60868-41ee-4970-b9f2-f1a2a81b6d1a" name="Bullets &amp; Bandages" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100" code="BB"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="7c37e671-9d0c-48f6-aa61-891a38be18d8" name="Sail Away, Sweet Sister" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100" code="SASS"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="ab9fd70c-6b79-4780-ae3d-dfa5f1624c9d" image="/shr5Resource/images/CAT27200_Stolen-Souls_Cover_.jpg" name="Stolen Souls" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100" code="SS"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="e2b9ec78-b83f-4ea9-8531-95b074a1b9d8" name="Shadowrun Forum Post 1" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100" code="SFP1"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" beschreibung="" image="/shr5Resource/images/runFaster.jpg" name="Run Faster" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100" code="RF"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="abb9ec78-b430-4ea9-8531-95b004a1b9d9" beschreibung="" name="Shadow Spells" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100" code="SSP"/>
+      <entries xsi:type="shr5:SourceBook" xmi:id="62b9ec78-b83f-4ea9-8531-95d074ceb9d8" beschreibung="" name="Nothing Personal" startShrTime="2072-12-13T17:51:44.000+0100" endShrTime="2075-12-13T17:51:44.000+0100" code="NP"/>
     </entries>
     <entries xsi:type="shr5:ShrList" xmi:id="_BsbF1N0CEeOvVYoRsPZlnA" name="Generators">
       <entries xsi:type="shr5mngt:Shr5System" xmi:id="_BssLkN0CEeOvVYoRsPZlnA" image="/shr5Resource/images/SR5_Cover_CRBook.jpg" name="The basic character generator system." page="62" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6" freeMartialArtTechniques="1" maxMartialArtStyles="1">
@@ -4422,38 +4422,38 @@
           <entries xsi:type="shr5:MiniGrenate" xmi:id="e2252b3c-1bae-496e-adbb-f1c3d6e0b32b" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Thermal Smoke" type="_ENGR0znTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omUIVPZZEeSsLt2jgpjbkA" local="de" name="Minigranate: IR-Rauch"/>
           </entries>
-          <entries xsi:type="shr5:MiniGrenate" xmi:id="_OSuP0PZFEeSk2Z4iXCLh5g" wertValue="2" anzahl="1" proAnzahl="1" type="_ENGR0znTEeSe6_w6Jrbqxg">
+          <entries xsi:type="shr5:MiniGrenate" xmi:id="_OSuP0PZFEeSk2Z4iXCLh5g" wertValue="2" type="_ENGR0znTEeSe6_w6Jrbqxg">
             <chemical xsi:type="shr5:Toxin" xmi:id="_P9_e0PZFEeSk2Z4iXCLh5g" name="Neuro-Stun X" parentId="4ad3f9ea-4ee0-45f8-a57b-ed40c660d0b0" page="410" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="14R" wertValue="100" anzahl="10" proAnzahl="10">
               <localizations xmi:id="_P9_e0fZFEeSk2Z4iXCLh5g" local="de" name="Neuro-Stun X"/>
             </chemical>
           </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="_NLxEQPZEEeSk2Z4iXCLh5g" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" wertValue="1" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+          <entries xsi:type="shr5:Granate" xmi:id="_NLxEQPZEEeSk2Z4iXCLh5g" srcBook="3976dc50-f7db-481d-9372-fc2a5c1178ce" wertValue="1" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
             <chemical xsi:type="shr5:Toxin" xmi:id="_QIyPAPZEEeSk2Z4iXCLh5g" name="Neuro-Stun IX" parentId="f81d9a2e-5c2d-49ad-93b4-1a7a71439bf3" page="410" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="13R" wertValue="60" anzahl="10" proAnzahl="10">
               <localizations xmi:id="_QIyPAfZEEeSk2Z4iXCLh5g" local="de" name="Neuro-Stun IX"/>
             </chemical>
           </entries>
         </entries>
         <entries xsi:type="shr5:ShrList" xmi:id="_vUCrkPruEeSlhPyNzXGxgw" name="Throwing Weapons">
-          <entries xsi:type="shr5:Wurfwaffe" xmi:id="_2zHFMPruEeSlhPyNzXGxgw" page="424" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="25" name="Throwing knife" schadenscode="(STR + 1)P " durchschlagsKraft="-1" reichweite="_ENG44TnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1"/>
-          <entries xsi:type="shr5:Granate" xmi:id="f4b92e14-fe1f-4be4-ad73-aed10e1f73b4" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="100" name="Flash-Bang" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+          <entries xsi:type="shr5:Wurfwaffe" xmi:id="_2zHFMPruEeSlhPyNzXGxgw" page="424" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="25" name="Throwing knife" schadenscode="(STR + 1)P " durchschlagsKraft="-1" reichweite="_ENG44TnTEeSe6_w6Jrbqxg"/>
+          <entries xsi:type="shr5:Granate" xmi:id="f4b92e14-fe1f-4be4-ad73-aed10e1f73b4" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="100" name="Flash-Bang" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omMzkPZZEeSsLt2jgpjbkA" local="de" name="Granate: Betäubung"/>
           </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="8e04c493-b04d-4511-ba68-7b2e0edbf3aa" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="125" name="Flash-Pak" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+          <entries xsi:type="shr5:Granate" xmi:id="8e04c493-b04d-4511-ba68-7b2e0edbf3aa" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4" wertValue="125" name="Flash-Pak" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omNaoPZZEeSsLt2jgpjbkA" local="de" name="Granate: Flash-Pack"/>
           </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="7c5e7573-d75e-43e3-949c-cb4c9d70329b" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Fragmentation" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+          <entries xsi:type="shr5:Granate" xmi:id="7c5e7573-d75e-43e3-949c-cb4c9d70329b" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="Fragmentation" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omNaofZZEeSsLt2jgpjbkA" local="de" name="Granate: Splitter"/>
           </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="e61c5487-2074-4fc8-8da0-9891b15482e7" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="High Explosive" schadenscode="16P" durchschlagsKraft="-1" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1" blast="2/m">
+          <entries xsi:type="shr5:Granate" xmi:id="e61c5487-2074-4fc8-8da0-9891b15482e7" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="11F" wertValue="100" name="High Explosive" schadenscode="16P" durchschlagsKraft="-1" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" blast="2/m">
             <localizations xmi:id="_omNaovZZEeSsLt2jgpjbkA" local="de" name="Granate: Spreng"/>
           </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="06798b15-40bb-4464-b6a8-a01466ee9b9e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Gas" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+          <entries xsi:type="shr5:Granate" xmi:id="06798b15-40bb-4464-b6a8-a01466ee9b9e" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Gas" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omNao_ZZEeSsLt2jgpjbkA" local="de" name="Granate: Gas"/>
           </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="84c6921e-dfa0-42ca-a01f-87c459ffc000" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Smoke" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+          <entries xsi:type="shr5:Granate" xmi:id="84c6921e-dfa0-42ca-a01f-87c459ffc000" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="4R" wertValue="40" name="Smoke" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omNapPZZEeSsLt2jgpjbkA" local="de" name="Granate: Rauch"/>
           </entries>
-          <entries xsi:type="shr5:Granate" xmi:id="f3472dc1-4c7b-403a-8001-6441bb65a687" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Thermal Smoke" reichweite="_ENG45DnTEeSe6_w6Jrbqxg" anzahl="1" proAnzahl="1">
+          <entries xsi:type="shr5:Granate" xmi:id="f3472dc1-4c7b-403a-8001-6441bb65a687" page="435" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" verfuegbarkeit="6R" wertValue="60" name="Thermal Smoke" reichweite="_ENG45DnTEeSe6_w6Jrbqxg">
             <localizations xmi:id="_omNapfZZEeSsLt2jgpjbkA" local="de" name="Granate: IR-Rauch"/>
           </entries>
         </entries>
@@ -9289,6 +9289,114 @@
         </entries>
         <entries xsi:type="shr5:Fertigkeit" xmi:id="_Mpz3UL-JEeSxE5QmePZRyA" name="Data search" page="57" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
           <attribut href="http://urszeidler.de/shr5/1.0#//GeistigeAttribute/intuition"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_RL4yABKkEeW0bNwG4LSQ3w" name="Exotic Melee Weapon (AA Combat Chainsaw)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_RL4yARKkEeW0bNwG4LSQ3w" local="de" name="Exotische Nahkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_VmGTgBKkEeW0bNwG4LSQ3w" name="Exotic Melee Weapon (AA Monofilament Chainsaw)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_VmGTgRKkEeW0bNwG4LSQ3w" local="de" name="Exotische Nahkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_IRyvYBKlEeW0bNwG4LSQ3w" name="Exotic Melee Weapon (Ballistic Shield)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_IRyvYRKlEeW0bNwG4LSQ3w" local="de" name="Exotische Nahkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_zYT34BLMEeW0bNwG4LSQ3w" name="Exotic Melee Weapon (All 4 battering rams)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_zYT34RLMEeW0bNwG4LSQ3w" local="de" name="Exotische Nahkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_2cxHYBLMEeW0bNwG4LSQ3w" name="Exotic Melee Weapon (Bullwhip)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_2cxHYRLMEeW0bNwG4LSQ3w" local="de" name="Exotische Nahkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_5a5FYBLMEeW0bNwG4LSQ3w" name="Exotic Melee Weapon (Blast shield)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_5a5FYRLMEeW0bNwG4LSQ3w" local="de" name="Exotische Nahkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_8SOe4BLMEeW0bNwG4LSQ3w" name="Exotic Melee Weapon (Garrote)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_8SOe4RLMEeW0bNwG4LSQ3w" local="de" name="Exotische Nahkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_-mEw0BLMEeW0bNwG4LSQ3w" name="Exotic Melee Weapon (Mono. Chainsaw)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_-mEw0RLMEeW0bNwG4LSQ3w" local="de" name="Exotische Nahkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_A76m0BLNEeW0bNwG4LSQ3w" name="Exotic Melee Weapon (Mono. Whip)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_A76m0RLNEeW0bNwG4LSQ3w" local="de" name="Exotische Nahkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_DxlMYBLNEeW0bNwG4LSQ3w" name="Exotic Melee Weapon (Riot Shield)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_DxlMYRLNEeW0bNwG4LSQ3w" local="de" name="Exotische Nahkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_HO-gUBLNEeW0bNwG4LSQ3w" name="Exotic Melee Weapon (Mono. Garotte)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_HO-gURLNEeW0bNwG4LSQ3w" local="de" name="Exotische Nahkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_PbRMUBLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Screech Sonic Rifle)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_PbRMURLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_S0ej0BLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Super Squirt)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_S0ej0RLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_XPEf0BLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Blowgun)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_XPEf0RLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_aLNg0BLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Pain Inducer)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_aLNg0RLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_cYCkwBLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Bola)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_cYDL0BLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_dsf2QBLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Gyrojet Pistol)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_dsf2QRLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_hLDAwBLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Grapple Gun)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_hLDAwRLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_lslSQBLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Hold-fast Sprayer)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_lslSQRLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_oDamwBLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Mono. Bola)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_oDamwRLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_quKVwBLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Gun Cane)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_quKVwRLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_tV2wwBLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Knockoff gun cane)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_tV2wwRLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_w8e5MBLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Parashield Dart Pistol)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_w8e5MRLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_0ZvDMBLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Parashield Dart Rifle)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_0ZvDMRLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_2wpQMBLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Reatrius Net Gun)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_2wpQMRLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_5xSWsBLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Retarius Net Gun XL)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_5xSWsRLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
+        </entries>
+        <entries xsi:type="shr5:Fertigkeit" xmi:id="_7r5CMBLNEeW0bNwG4LSQ3w" name="Exotic Ranged Weapon (Shooting Bracers)" page="131" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66">
+          <localizations xmi:id="_7r5CMRLNEeW0bNwG4LSQ3w" local="de" name="Exotische Fernkampfwaffe"/>
+          <attribut href="http://urszeidler.de/shr5/1.0#//KoerperlicheAttribute/geschicklichkeit"/>
         </entries>
       </entries>
       <entries xsi:type="shr5:ShrList" xmi:id="_EMPWNjnTEeSe6_w6Jrbqxg" name="Knowledgeskills">
