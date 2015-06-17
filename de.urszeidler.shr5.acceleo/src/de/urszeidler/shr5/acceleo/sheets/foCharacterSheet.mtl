@@ -86,6 +86,11 @@
 		</fo:block  >
 [/let]
 [/if]
+[if (not aManagedCharacter.persona.martialartStyles->isEmpty())]
+		<fo:block   keep-together="always">
+[printMartialArts(aManagedCharacter)/]
+		</fo:block  >
+[/if] 
 [if (aManagedCharacter.persona.oclIsKindOf(KiAdept)and not aManagedCharacter.persona.oclAsType(KiAdept).kikraft->isEmpty())]
 		<fo:block   keep-together="always">
 [printKiPower(aManagedCharacter.persona.oclAsType(KiAdept))/]
@@ -823,6 +828,28 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [printCell(t.getText())/]
 [printCellRight(t.wert.formatMoney())/]
      </fo:table-row>
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+[template public printMartialArts (aManagedCharacter : ManagedCharacter) ? (not aManagedCharacter.persona.martialartStyles->isEmpty())]
+[printSimpleLineBlock()/]
+[printSectionTitel('_UI_AbstraktPersona_martialartStyles_feature'.localizedString())/]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column column-width="10%" />
+    <fo:table-column  />
+    <fo:table-body  >
+[for (m : PersonaMartialartStyle | aManagedCharacter.persona.martialartStyles )]
+     <fo:table-row>
+[printCellSpanned(m.getText(),2)/]
+     </fo:table-row>
+[for (t : PersonaMartialartTechnique | m.techniques)]
+     <fo:table-row>
+[printCell('')/]
+[printCell(t.getText())/]
+     </fo:table-row>
+[/for]
 [/for]
     </fo:table-body>
    </fo:table>
