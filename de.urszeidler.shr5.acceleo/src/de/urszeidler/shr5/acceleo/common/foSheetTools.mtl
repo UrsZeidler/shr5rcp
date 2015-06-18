@@ -216,8 +216,11 @@ border-top-color="rgb(0,0,0)" border-top-style="outset" border-top-width="1pt"
 [query public keepTogetherAlways(exp : OclAny) : String = keepTogether('always') /]
 [query public fontSize(exp : String) : String = 'font-size="'+exp+'"' /]
 [query public fontSizeSmall(a:OclAny) : String = fontSize('small') /]
+[query public fontSizeXSmall(a:OclAny) : String = fontSize('xx-small') /]
 [query public fontFamlily(exp : String) : String = 'font-family="'+exp+'"' /]
+[query public fontStyleItalic(a : OclAny) : String = 'font-style="italic"' /]
 
+ 
 [query public columnWidth(exp : String) : String = 'column-width="'+exp+'"' /]
 [query public margin(exp : String) : String = 'margin="'+exp+'"' /]
 

@@ -731,19 +731,31 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [printSimpleLineBlock()/]
 [printSectionTitel('_UI_Zauberer_zauber_feature'.localizedString())/]
   <fo:table [defaultTableStyle()/] >
-    <fo:table-column column-width="35%" />
+    <fo:table-column column-width="25%" />
+    <fo:table-column  />
     <fo:table-column  />
     <fo:table-column  />
     <fo:table-column  />
     <fo:table-column column-width="5%" />
-    <fo:table-column  />
+    <fo:table-column column-width="20%" />
     <fo:table-body  >
+     <fo:table-row [fontSizeXSmall()+' '+fontStyleItalic()/]>
+[printCellAttribute('_UI_Zauber_name_feature'.localizedString(),'')/]
+[printCellAttribute('_UI_Zauber_kategorie_feature'.localizedString(),'')/]
+[printCellAttribute('_UI_Zauber_art_feature'.localizedString(),'')/]
+[printCellAttribute('_UI_Zauber_reichweite_feature'.localizedString(),'')/]
+[printCellAttribute('_UI_Zauber_dauer_feature'.localizedString(),'')/]
+[printCellAttribute('_UI_Zauber_entzug_feature'.localizedString(),'')/]
+[printCellAttribute('_UI_Zauber_merkmale_feature'.localizedString(),'')/]
+
+     </fo:table-row>
 [for (pz : PersonaZauber | z.zauber)]
      <fo:table-row>
-[printCell(pz.formel.getText())/]
+[printCell(pz.formel.getSimpleText())/]
 [printCell(pz.formel.kategorie)/]
-[printCell(pz.formel.art)/]
-[printCell(pz.formel.dauer)/]
+[printCell(pz.formel.art.zauberArtToName())/]
+[printCell(pz.formel.reichweite.zauberReichweiteToName())/]
+[printCell(pz.formel.dauer.zauberDauerToName())/]
 [printCell(pz.formel.entzug)/]
 [printCell(pz.formel.merkmale)/]
 	</fo:table-row>
@@ -764,9 +776,9 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [for (pz : PersonaKomplexForm | z.complexForms)]
      <fo:table-row>
 [printCell(pz.form.getText())/]
-[printCell(pz.form.dauer)/]
-[printCell(pz.form.schwund)/]
-[printCell(pz.form.ziel)/]
+[printCell(pz.form.dauer.komplexformDauerToName())/]
+[printCell(pz.form.schwund.komplexformSchwundToName())/]
+[printCell(pz.form.ziel.komplexformZielToName())/]
 	</fo:table-row>
 [/for]
     </fo:table-body>

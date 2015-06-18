@@ -18,6 +18,21 @@
 [query public zauberArtToName(arg0 : OclAny) : String
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'zauberArtToName(java.lang.Object)', Sequence{arg0})
 /]
+[query public zauberReichweiteToName(arg0 : OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'zauberReichweiteToName(java.lang.Object)', Sequence{arg0})
+/]
+[query public zauberDauerToName(arg0 : OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'zauberDauerToName(java.lang.Object)', Sequence{arg0})
+/]
+[query public komplexformDauerToName(arg0 : OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'komplexformDauerToName(java.lang.Object)', Sequence{arg0})
+/]
+[query public komplexformSchwundToName(arg0 : OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'komplexformSchwundToName(java.lang.Object)', Sequence{arg0})
+/]
+[query public komplexformZielToName(arg0 : OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'komplexformZielToName(java.lang.Object)', Sequence{arg0})
+/]
 [query public sexToName(sex : OclAny) : String
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'sexToName(java.lang.Object)', Sequence{sex})
 /]

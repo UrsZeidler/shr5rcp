@@ -29,6 +29,7 @@ import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.AstraleProjektion;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
 import de.urszeidler.eclipse.shr5.Feuerwaffe;
+import de.urszeidler.eclipse.shr5.KomplexeForm;
 import de.urszeidler.eclipse.shr5.ModSetter;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Shr5Package;
@@ -48,6 +49,7 @@ public class ShadowrunTextTools {
 
     private static final String EMPTY = "";
     private static Zauber zauber = Shr5Factory.eINSTANCE.createZauber();
+    private static KomplexeForm komplexForm = Shr5Factory.eINSTANCE.createKomplexeForm();
     private static NonPlayerCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
     private static Feuerwaffe fiereweapon = Shr5Factory.eINSTANCE.createFeuerwaffe();
     private static DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.SHORT);
@@ -139,6 +141,26 @@ public class ShadowrunTextTools {
      */
     public static String zauberArtToName(Object literal) {
         return toName(literal, zauber, Shr5Package.Literals.ZAUBER__ART);
+    }
+
+    public static String zauberReichweiteToName(Object literal) {
+        return toName(literal, zauber, Shr5Package.Literals.ZAUBER__REICHWEITE);
+    }
+
+    public static String zauberDauerToName(Object literal) {
+        return toName(literal, zauber, Shr5Package.Literals.ZAUBER__DAUER);
+    }
+
+    public static String komplexformDauerToName(Object literal) {
+        return toName(literal, komplexForm, Shr5Package.Literals.KOMPLEXE_FORM__DAUER);
+    }
+
+    public static String komplexformSchwundToName(Object literal) {
+        return toName(literal, komplexForm, Shr5Package.Literals.KOMPLEXE_FORM__SCHWUND);
+    }
+
+    public static String komplexformZielToName(Object literal) {
+        return toName(literal, komplexForm, Shr5Package.Literals.KOMPLEXE_FORM__ZIEL);
     }
 
     public static String sexToName(Object literal) {
