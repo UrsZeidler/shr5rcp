@@ -25,10 +25,44 @@
 [printVehiclePage(aManagedCharacter)/]	
 <fo:block break-after="page"></fo:block>	
 [printMatrixPage(aManagedCharacter)/]	
+<fo:block break-after="page"></fo:block>	
+[printMagicPage(aManagedCharacter)/]	
 
 [printSimpleFoPageEnd()/]		
 [/file]
 	
+[/template]
+
+[template public printMagicPage (aManagedCharacter : ManagedCharacter) ]
+<!-- matix page -->
+  <fo:table font-family="Helvetica"  >
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
+<!-- skill block -->
+[if (aManagedCharacter.persona.oclIsKindOf(Zauberer))]
+	<fo:table-row >
+
+      <fo:table-cell margin="4pt" number-columns-spanned="3">
+[printOneColumnTableRaw('_UI_Zauberer_zauber_feature'.localizedString(), zauberTableList(aManagedCharacter.persona.oclAsType(Zauberer)))/]
+      </fo:table-cell>
+     </fo:table-row>
+[/if]
+	<fo:table-row >
+
+      <fo:table-cell margin="4pt" number-columns-spanned="3">
+<fo:block margin-top="10pt" >
+</fo:block >
+     </fo:table-cell>
+     </fo:table-row>
+
+   </fo:table-body>
+   </fo:table>
+
+
+
+
 [/template]
 
 [template public printMatrixPage (aManagedCharacter : ManagedCharacter) ]
@@ -69,6 +103,8 @@
 [query public rccTableList (aManagedCharacter : ManagedCharacter) :  Sequence(String) = aManagedCharacter.inventar->selectByType(RiggerCommandConsole)->collect(printRiggerConsoleDetail()) /]
 [query public cyberdeckTableList (aManagedCharacter : ManagedCharacter) :  Sequence(String) = aManagedCharacter.inventar->selectByType(Cyberdeck)->collect(printCyberdeckDetail()) /]
 [query public comlinkTableList (aManagedCharacter : ManagedCharacter) : Sequence(String) = aManagedCharacter.inventar->selectByType(Commlink)->collect(printComlinkDetail()) /]
+
+[query public zauberTableList (z : Zauberer) : Sequence(String) = printSpellTable(z)->asSequence() /]
 
 
 [query public modList(character : ManagedCharacter) : Sequence(OclAny) = persona.getModList() /]
@@ -121,7 +157,7 @@
 [printOneColumnTable('Contacts',connectionListSimple(aManagedCharacter))/]
       </fo:table-cell>
       <fo:table-cell margin="4pt">
-[printOneColumnTable('[Quallities]', quallityList(aManagedCharacter) )/]
+[printOneColumnTable('_UI_KoerperPersona_eigenschaften_feature'.localizedString(), quallityListSimple(aManagedCharacter) )/]
       </fo:table-cell>
       <fo:table-cell margin="4pt">
 [printTwoColumnTable('[Mods]', modNameList(aManagedCharacter),modValeList(aManagedCharacter),80 )/]

@@ -15,6 +15,7 @@
 [query public magazineList(character : ManagedCharacter) : Sequence(String) = character.eAllContents()->selectByType(Magazin)->collect(getText())->asSequence() /]
 
 [query public quallityList(character : ManagedCharacter) : Sequence(String) = character.persona.oclAsType(KoerperPersona).eigenschaften->collect(getText()->asSequence()) /]
+[query public quallityListSimple(character : ManagedCharacter) : Sequence(String) = character.persona.oclAsType(KoerperPersona).eigenschaften->collect(getSimpleText()->asSequence()) /]
 
 [query public getSimpleText(arg0 : OclAny) : String
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'getSimpleText(java.lang.Object)', Sequence{arg0})
