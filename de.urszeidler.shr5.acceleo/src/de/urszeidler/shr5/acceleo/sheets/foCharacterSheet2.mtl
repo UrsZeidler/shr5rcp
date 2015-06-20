@@ -43,7 +43,6 @@
 <!-- skill block -->
 [if (aManagedCharacter.persona.oclIsKindOf(Zauberer))]
 	<fo:table-row >
-
       <fo:table-cell margin="4pt" number-columns-spanned="3">
 [printOneColumnTableRaw('_UI_Zauberer_zauber_feature'.localizedString(), zauberTableList(aManagedCharacter.persona.oclAsType(Zauberer)))/]
       </fo:table-cell>
@@ -51,18 +50,14 @@
 [/if]
 	<fo:table-row >
 
-      <fo:table-cell margin="4pt" number-columns-spanned="3">
-<fo:block margin-top="10pt" >
-</fo:block >
-     </fo:table-cell>
+      	<fo:table-cell margin="4pt" number-columns-spanned="3">
+			<fo:block margin-top="10pt" >
+			</fo:block >
+     	</fo:table-cell>
      </fo:table-row>
 
    </fo:table-body>
    </fo:table>
-
-
-
-
 [/template]
 
 [template public printMatrixPage (aManagedCharacter : ManagedCharacter) ]
@@ -250,17 +245,27 @@
 [template public printFirstPage (aManagedCharacter : ManagedCharacter) ]
   <fo:table font-family="Helvetica"  >
     <fo:table-column  />
+    <fo:table-column column-width="4pt" />
     <fo:table-column  />
+    <fo:table-column column-width="4pt" />
     <fo:table-column  />
     <fo:table-body  >
      <fo:table-row>
-      <fo:table-cell margin="4pt">
+      <fo:table-cell  margin="2pt"  [defaultBorderAll()/]>
 [printPersonaData(aManagedCharacter)/]
       </fo:table-cell>
-      <fo:table-cell margin="4pt">
+      <fo:table-cell >
+		<fo:block >
+		</fo:block >
+      </fo:table-cell>
+      <fo:table-cell   margin="4pt" [defaultBorderAll()/]>
 [printAttributes(aManagedCharacter)/]
       </fo:table-cell>
-      <fo:table-cell margin="4pt">
+       <fo:table-cell >
+		<fo:block >
+		</fo:block >
+      </fo:table-cell>
+     <fo:table-cell   margin="4pt" [defaultBorderAll()/]>
 [printImage(aManagedCharacter)/]
       </fo:table-cell>
      </fo:table-row>
@@ -275,7 +280,7 @@
     <fo:table-column  />
     <fo:table-body  >
 	<fo:table-row >
-      <fo:table-cell margin-top="10pt" margin="4pt" number-columns-spanned="2">
+      <fo:table-cell margin-top="10pt" margin="4pt"  number-columns-spanned="2">
 [printActiveSkills(aManagedCharacter)/]
       </fo:table-cell>
       <fo:table-cell margin="4pt">
@@ -289,7 +294,7 @@
 [/template]
 
 [template public printPersonaData (aManagedCharacter : ManagedCharacter) ]
-  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+  <fo:table font-size="small" font-weight="lighter" >
     <fo:table-column  />
    <fo:table-column  />
    <fo:table-column  />
@@ -305,12 +310,14 @@
 [printCell('_UI_ManagedCharacter_sex_feature'.localizedString())/]
 [printCellRight(aManagedCharacter.sex.sexToName())/]
      </fo:table-row>
+[if (aManagedCharacter.oclIsKindOf(PlayerCharacter))]
      <fo:table-row>
 [printCell('_UI_ManagedCharacter_dateofbirth_feature'.localizedString())/]
 [printCellRight(aManagedCharacter.dateofbirth.formatDate())/]
 [printCell('_UI_ManagedCharacter_age_feature'.localizedString())/]
-[printCell(aManagedCharacter.height)/]
+[printCell(aManagedCharacter.oclAsType(PlayerCharacter).age)/]
      </fo:table-row>
+[/if]
      <fo:table-row>
 [printCell('_UI_ManagedCharacter_height_feature'.localizedString())/]
 [printCellRight(aManagedCharacter.height+' cm')/] 
@@ -364,7 +371,7 @@
 
 [template public printAttributes (aManagedCharacter : ManagedCharacter)
 {persona : AbstraktPersona = aManagedCharacter.persona ; } ]
-  <fo:table font-size="small" font-weight="lighter" [defaultBorderAll()/]>
+  <fo:table font-size="small" font-weight="lighter" >
     <fo:table-column  />
    <fo:table-column  />
    <fo:table-column  />
@@ -448,7 +455,7 @@
 [/template]
 
 [template public printImage (aManagedCharacter : ManagedCharacter) ]
-      <fo:block font-size="small" font-weight="lighter" margin-left="5px"  text-align="justify" [defaultBorderAll()/] >
+      <fo:block font-size="small" font-weight="lighter" margin-left="5px"  text-align="justify"  >
 [if (not aManagedCharacter.persona.image.oclIsUndefined())]
 <fo:external-graphic display-align="right"  src="url([aManagedCharacter.persona.toBase64Image()/])"/>
 [/if]
@@ -461,12 +468,11 @@
 
 
 [template public printSectionHeader(titel : String,colSpan : Integer)]
-      <fo:table-row  font-size="12pt">
-   <fo:table-cell   number-columns-spanned="[colSpan/]"  margin="2pt" >
+  <fo:table-row  font-size="12pt">
+   <fo:table-cell   number-columns-spanned="[colSpan/]"  >
    <fo:block background-color="green"  margin="4pt" 
          color="white" font-size="large" >
-   <fo:block text-align="left"  margin="2pt" padding="2pt"
-         >
+   <fo:block text-align="left"  margin="2pt" padding="2pt" >
 [escapeXML(titel)/]</fo:block></fo:block>
        </fo:table-cell>
      </fo:table-row>

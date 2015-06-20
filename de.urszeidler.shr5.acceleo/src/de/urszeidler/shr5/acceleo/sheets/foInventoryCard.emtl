@@ -10,8 +10,8 @@
     <input>
       <takesTypesFrom href="http://www.eclipse.org/emf/2002/Ecore#/"/>
     </input>
-    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/foCharacterSheet.emtl#/0"/>
-    <imports href="../common/foSheetTools.emtl#/0"/>
+    <imports href="foCharacterSheet.emtl#/0"/>
+    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/foSheetTools.emtl#/0"/>
     <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0"/>
     <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunSheetTools.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="foInventoryCardManagedCharacter" visibility="Public" main="true">
@@ -51,7 +51,7 @@
     <ownedModuleElement xsi:type="mtl:Template" name="printInventoryCards" visibility="Public">
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="../common/foSheetTools.emtl#/0/printFoPageStart"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/foSheetTools.emtl#/0/printFoPageStart"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
@@ -216,7 +216,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="      &lt;/fo:table-cell>&#xA;&lt;!-- colum two -->&#xA;      &lt;fo:table-cell >&#xA;&#x9;&#x9;&#x9;&lt;fo:block >&lt;/fo:block  >&#xA;     &lt;/fo:table-cell>&#xA;     &lt;/fo:table-row>&#xA;    &lt;/fo:table-body>&#xA;   &lt;/fo:table>&#xA;&#xA;&#xA;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="../common/foSheetTools.emtl#/0/printSimpleFoPageEnd"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/foSheetTools.emtl#/0/printSimpleFoPageEnd"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/41">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5mngt/1.0#//ManagedCharacter"/>
         </argument>
@@ -236,7 +236,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" >&#x9;&#x9;&#xA;&#x9;&lt;fo:block >&#xA;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/foCharacterSheet.emtl#/0/printCyberdeckDetail"/>
+        <definition href="foCharacterSheet.emtl#/0/printCyberdeckDetail"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="deck" referredVariable="/0/printCyberdeckCard/deck">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Cyberdeck"/>
         </argument>
@@ -264,7 +264,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" >&#x9;&#x9;&#xA;&#x9;&lt;fo:block >&#xA;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/foCharacterSheet.emtl#/0/printVehicle"/>
+        <definition href="foCharacterSheet.emtl#/0/printVehicle"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="vehicle" referredVariable="/0/printVehicleCard/vehicle">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Fahrzeug"/>
         </argument>
@@ -292,7 +292,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" >&#x9;&#x9;&#xA;&#x9;&lt;fo:block >&#xA;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/foCharacterSheet.emtl#/0/printComlinkDetail"/>
+        <definition href="foCharacterSheet.emtl#/0/printComlinkDetail"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="deck" referredVariable="/0/printCommlinkCard/deck">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Commlink"/>
         </argument>
@@ -320,7 +320,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" >&#x9;&#x9;&#xA;&#x9;&lt;fo:block >&#xA;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/foCharacterSheet.emtl#/0/printRangeWeapon"/>
+        <definition href="foCharacterSheet.emtl#/0/printRangeWeapon"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="fk" referredVariable="/0/printAbstaktFernKampfwaffeCard/fk">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//AbstaktFernKampfwaffe"/>
         </argument>
@@ -351,7 +351,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">&#x9;&#x9;&#xA;&#x9;&lt;fo:block  keep-together=&quot;always&quot;>&#xA;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/foCharacterSheet.emtl#/0/printMeleeWeapon"/>
+        <definition href="foCharacterSheet.emtl#/0/printMeleeWeapon"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="fk" referredVariable="/0/printMeleeCard/fk">
           <eType xsi:type="ecore:EClass" href="http://urszeidler.de/shr5/1.0#//Nahkampfwaffe"/>
         </argument>
@@ -372,7 +372,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="  &lt;fo:table >&#xA;    &lt;fo:table-column />&#xA;    &lt;fo:table-column column-width=&quot;64px&quot; />&#xA;    &lt;fo:table-body  >&#xA;    &lt;fo:table-row >&#xA;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="../common/foSheetTools.emtl#/0/printCellAttribute"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/foSheetTools.emtl#/0/printCellAttribute"/>
         <argument xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/localizedString"/>
@@ -414,7 +414,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="       &lt;/fo:block >&#xA;    &lt;/fo:table-cell>&#xA;     &lt;/fo:table-row>&#xA;    &lt;fo:table-row >&#xA;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="../common/foSheetTools.emtl#/0/printCell"/>
+        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/foSheetTools.emtl#/0/printCell"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="fk" referredVariable="/0/printNotesBlock/fk">
@@ -550,7 +550,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/foCharacterSheet.emtl#/0/printMeleeWeapon"/>
+          <references href="foCharacterSheet.emtl#/0/printMeleeWeapon"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="m">
@@ -562,7 +562,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/foCharacterSheet.emtl#/0/printRangeWeapon"/>
+          <references href="foCharacterSheet.emtl#/0/printRangeWeapon"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="fk">
@@ -577,7 +577,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/foCharacterSheet.emtl#/0/printVehicle"/>
+          <references href="foCharacterSheet.emtl#/0/printVehicle"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="vehicle">
@@ -589,7 +589,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/foCharacterSheet.emtl#/0/printCyberdeckDetail"/>
+          <references href="foCharacterSheet.emtl#/0/printCyberdeckDetail"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="deck">
@@ -601,7 +601,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/foCharacterSheet.emtl#/0/printComlinkDetail"/>
+          <references href="foCharacterSheet.emtl#/0/printComlinkDetail"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="deck">
@@ -613,7 +613,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/foSheetTools.emtl#/0/printCell"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/foSheetTools.emtl#/0/printCell"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="expression">
@@ -625,7 +625,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/foSheetTools.emtl#/0/printCellAttribute"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/foSheetTools.emtl#/0/printCellAttribute"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="expression">
@@ -640,7 +640,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/foSheetTools.emtl#/0/printFoPageStart"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/foSheetTools.emtl#/0/printFoPageStart"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="documentTitel">
@@ -652,7 +652,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="../common/foSheetTools.emtl#/0/printSimpleFoPageEnd"/>
+          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/foSheetTools.emtl#/0/printSimpleFoPageEnd"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="any">
@@ -863,7 +863,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(Credstick)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-        <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/sheets/foCharacterSheet.emtl#/3/OrderedSet(Credstick)"/>
+        <references href="foCharacterSheet.emtl#/3/OrderedSet(Credstick)"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Credstick_Class">

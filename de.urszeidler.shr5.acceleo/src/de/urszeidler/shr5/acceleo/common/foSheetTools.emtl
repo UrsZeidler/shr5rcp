@@ -20,7 +20,7 @@
       <takesTypesFrom href="http://www.eclipse.org/emf/2002/Ecore#/"/>
     </input>
     <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/common/ShadowrunTools.emtl#/0"/>
-    <imports href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0"/>
+    <imports href="../util/shadowrunTextTools.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="printSimpleLine" visibility="Public">
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="   &lt;fo:table-row >&#xA;      &lt;fo:table-cell number-columns-spanned=&quot;"/>
       <body xsi:type="ocl.ecore:VariableExp" name="span" referredVariable="/0/printSimpleLine/span.1">
@@ -96,7 +96,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </loopVariable>
         <iterSet xsi:type="mtl:QueryInvocation" eType="/3/OrderedSet(String)">
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/createNumberList"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/createNumberList"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="conditionValue" referredVariable="/0/printNBoxes/conditionValue">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
           </argument>
@@ -121,7 +121,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </loopVariable>
         <iterSet xsi:type="mtl:QueryInvocation" eType="/3/OrderedSet(String)">
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/createNumberList"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/createNumberList"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="col" referredVariable="/0/printConditionMonitorBlock/col">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
           </argument>
@@ -146,7 +146,7 @@
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </loopVariable>
           <iterSet xsi:type="mtl:QueryInvocation" eType="/3/OrderedSet(String)">
-            <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/createNumberList"/>
+            <definition href="../util/shadowrunTextTools.emtl#/0/createNumberList"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="col" referredVariable="/0/printConditionMonitorBlock/col">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
             </argument>
@@ -157,7 +157,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </loopVariable>
         <iterSet xsi:type="mtl:QueryInvocation" eType="/3/OrderedSet(String)">
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/createNumberList"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/createNumberList"/>
           <argument xsi:type="ocl.ecore:OperationCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
             <source xsi:type="ocl.ecore:VariableExp" name="conditionValue" referredVariable="/0/printConditionMonitorBlock/conditionValue">
@@ -405,7 +405,7 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </loopVariable>
         <iterSet xsi:type="mtl:QueryInvocation" eType="/3/OrderedSet(String)">
-          <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/createNumberList"/>
+          <definition href="../util/shadowrunTextTools.emtl#/0/createNumberList"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="value" referredVariable="/0/printOneSvgMonitor/value">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
           </argument>
@@ -443,7 +443,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="      &lt;fo:table-cell>&#xA;       &lt;fo:block  >&#xA;"/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/escapeXML"/>
+        <definition href="../util/shadowrunTextTools.emtl#/0/escapeXML"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="expression" referredVariable="/0/printCell/expression">
           <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
         </argument>
@@ -461,7 +461,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">&#xA;       &lt;fo:block  >&#xA;"/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/escapeXML"/>
+        <definition href="../util/shadowrunTextTools.emtl#/0/escapeXML"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="expression" referredVariable="/0/printCellAttribute/expression">
           <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
         </argument>
@@ -482,7 +482,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">&#xA;       &lt;fo:block  >&#xA;"/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/escapeXML"/>
+        <definition href="../util/shadowrunTextTools.emtl#/0/escapeXML"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="expression" referredVariable="/0/printCellDots/expression">
           <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
         </argument>
@@ -503,7 +503,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;>&#xA;       &lt;fo:block  >&#xA;"/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/escapeXML"/>
+        <definition href="../util/shadowrunTextTools.emtl#/0/escapeXML"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="expression" referredVariable="/0/printCellSpanned/expression">
           <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
         </argument>
@@ -520,7 +520,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="      &lt;fo:table-cell>&#xA;       &lt;fo:block text-align=&quot;right&quot;  >&#xA;"/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/escapeXML"/>
+        <definition href="../util/shadowrunTextTools.emtl#/0/escapeXML"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="expression" referredVariable="/0/printCellRight/expression">
           <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
         </argument>
@@ -542,7 +542,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="  >&#xA;"/>
       <body xsi:type="mtl:QueryInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/escapeXML"/>
+        <definition href="../util/shadowrunTextTools.emtl#/0/escapeXML"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="expression" referredVariable="/0/printCellAttRight/expression">
           <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
         </argument>
@@ -680,6 +680,18 @@
       </expression>
       <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
     </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="fontSizeXSmall" visibility="Public">
+      <parameter name="a">
+        <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </parameter>
+      <expression xsi:type="mtl:QueryInvocation" definition="/0/fontSize">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="xx-small">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+      </expression>
+      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="fontFamlily" visibility="Public">
       <parameter name="exp">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -698,6 +710,15 @@
         <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </argument>
+      </expression>
+      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="fontStyleItalic" visibility="Public">
+      <parameter name="a">
+        <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="font-style=&quot;italic&quot;">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
       </expression>
       <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
     </ownedModuleElement>
@@ -754,7 +775,7 @@
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" page &lt;fo:page-number/>&lt;/fo:block>&#xA;        &lt;/fo:static-content>&#xA;&#xA;&#x9;&#x9;&lt;fo:flow flow-name=&quot;xsl-region-body&quot;>"/>
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="7221" endPosition="7262" value="&#xA;Print the start of a simple fo page&#xA;&#xA;"/>
+        <body startPosition="7375" endPosition="7416" value="&#xA;Print the start of a simple fo page&#xA;&#xA;"/>
       </documentation>
       <parameter name="documentTitel">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -763,7 +784,7 @@
     <ownedModuleElement xsi:type="mtl:Template" name="printSimpleFoPageEnd" visibility="Public">
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&lt;/fo:flow>&#xA;&#x9;&lt;/fo:page-sequence>&#xA;&lt;/fo:root>"/>
       <documentation xsi:type="mtl:ModuleElementDocumentation">
-        <body startPosition="8699" endPosition="8726" value="&#xA;Print the simple end.&#xA;&#xA;"/>
+        <body startPosition="8853" endPosition="8880" value="&#xA;Print the simple end.&#xA;&#xA;"/>
       </documentation>
       <parameter name="any">
         <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
@@ -1075,6 +1096,16 @@
           <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
         </eParameters>
       </eOperations>
+      <eOperations name="fontSizeXSmall">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/fontSizeXSmall"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="a">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        </eParameters>
+      </eOperations>
       <eOperations name="fontFamlily">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
           <contents xsi:type="ocl.ecore:Constraint"/>
@@ -1083,6 +1114,16 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="exp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="fontStyleItalic">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/fontStyleItalic"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="a">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
         </eParameters>
       </eOperations>
       <eOperations name="columnWidth">
@@ -1130,9 +1171,9 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/createNumberList"/>
+          <references href="../util/shadowrunTextTools.emtl#/0/createNumberList"/>
         </eAnnotations>
-        <eType xsi:type="ocl.ecore:OrderedSetType" href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/3/OrderedSet(String)"/>
+        <eType xsi:type="ocl.ecore:OrderedSetType" href="../util/shadowrunTextTools.emtl#/3/OrderedSet(String)"/>
         <eParameters name="count">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
         </eParameters>
@@ -1142,7 +1183,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="platform:/resource/de.urszeidler.shr5.acceleo/bin/de/urszeidler/shr5/acceleo/util/shadowrunTextTools.emtl#/0/escapeXML"/>
+          <references href="../util/shadowrunTextTools.emtl#/0/escapeXML"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="text">
@@ -1681,10 +1722,28 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
@@ -3058,170 +3117,205 @@
       <details key="end" value="6986"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.264" references="/0/fontFamlily">
+    <eAnnotations source="positions.264" references="/0/fontSizeXSmall">
       <details key="start" value="6991"/>
-      <details key="end" value="7068"/>
+      <details key="end" value="7064"/>
       <details key="line" value="219"/>
     </eAnnotations>
-    <eAnnotations source="positions.265" references="/0/fontFamlily/exp">
-      <details key="start" value="7017"/>
-      <details key="end" value="7029"/>
+    <eAnnotations source="positions.265" references="/0/fontSizeXSmall/a">
+      <details key="start" value="7020"/>
+      <details key="end" value="7028"/>
       <details key="line" value="219"/>
     </eAnnotations>
-    <eAnnotations source="positions.266" references="/0/fontFamlily/%">
-      <details key="start" value="7042"/>
-      <details key="end" value="7065"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.267" references="/0/fontFamlily/%/%">
-      <details key="start" value="7042"/>
+    <eAnnotations source="positions.266" references="/0/fontSizeXSmall/%">
+      <details key="start" value="7041"/>
       <details key="end" value="7061"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.268" references="/0/fontFamlily/%/%/%">
-      <details key="start" value="7042"/>
-      <details key="end" value="7057"/>
+    <eAnnotations source="positions.267" references="/0/fontSizeXSmall/%/%">
+      <details key="start" value="7050"/>
+      <details key="end" value="7060"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.269" references="/0/fontFamlily/%/%/exp">
-      <details key="start" value="7058"/>
-      <details key="end" value="7061"/>
+    <eAnnotations source="positions.268" references="/0/fontFamlily">
+      <details key="start" value="7065"/>
+      <details key="end" value="7142"/>
+      <details key="line" value="220"/>
+    </eAnnotations>
+    <eAnnotations source="positions.269" references="/0/fontFamlily/exp">
+      <details key="start" value="7091"/>
+      <details key="end" value="7103"/>
+      <details key="line" value="220"/>
+    </eAnnotations>
+    <eAnnotations source="positions.270" references="/0/fontFamlily/%">
+      <details key="start" value="7116"/>
+      <details key="end" value="7139"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.270" references="/0/fontFamlily/%/%.1">
-      <details key="start" value="7062"/>
-      <details key="end" value="7065"/>
+    <eAnnotations source="positions.271" references="/0/fontFamlily/%/%">
+      <details key="start" value="7116"/>
+      <details key="end" value="7135"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.271" references="/0/columnWidth">
-      <details key="start" value="7070"/>
-      <details key="end" value="7148"/>
+    <eAnnotations source="positions.272" references="/0/fontFamlily/%/%/%">
+      <details key="start" value="7116"/>
+      <details key="end" value="7131"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.273" references="/0/fontFamlily/%/%/exp">
+      <details key="start" value="7132"/>
+      <details key="end" value="7135"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.274" references="/0/fontFamlily/%/%.1">
+      <details key="start" value="7136"/>
+      <details key="end" value="7139"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.275" references="/0/fontStyleItalic">
+      <details key="start" value="7143"/>
+      <details key="end" value="7220"/>
       <details key="line" value="221"/>
     </eAnnotations>
-    <eAnnotations source="positions.272" references="/0/columnWidth/exp">
-      <details key="start" value="7096"/>
-      <details key="end" value="7108"/>
+    <eAnnotations source="positions.276" references="/0/fontStyleItalic/a">
+      <details key="start" value="7173"/>
+      <details key="end" value="7183"/>
       <details key="line" value="221"/>
     </eAnnotations>
-    <eAnnotations source="positions.273" references="/0/columnWidth/%">
-      <details key="start" value="7121"/>
-      <details key="end" value="7145"/>
+    <eAnnotations source="positions.277" references="/0/fontStyleItalic/%">
+      <details key="start" value="7196"/>
+      <details key="end" value="7217"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.274" references="/0/columnWidth/%/%">
-      <details key="start" value="7121"/>
-      <details key="end" value="7141"/>
+    <eAnnotations source="positions.278" references="/0/columnWidth">
+      <details key="start" value="7224"/>
+      <details key="end" value="7302"/>
+      <details key="line" value="224"/>
+    </eAnnotations>
+    <eAnnotations source="positions.279" references="/0/columnWidth/exp">
+      <details key="start" value="7250"/>
+      <details key="end" value="7262"/>
+      <details key="line" value="224"/>
+    </eAnnotations>
+    <eAnnotations source="positions.280" references="/0/columnWidth/%">
+      <details key="start" value="7275"/>
+      <details key="end" value="7299"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.275" references="/0/columnWidth/%/%/%">
-      <details key="start" value="7121"/>
-      <details key="end" value="7137"/>
+    <eAnnotations source="positions.281" references="/0/columnWidth/%/%">
+      <details key="start" value="7275"/>
+      <details key="end" value="7295"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.276" references="/0/columnWidth/%/%/exp">
-      <details key="start" value="7138"/>
-      <details key="end" value="7141"/>
+    <eAnnotations source="positions.282" references="/0/columnWidth/%/%/%">
+      <details key="start" value="7275"/>
+      <details key="end" value="7291"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.277" references="/0/columnWidth/%/%.1">
-      <details key="start" value="7142"/>
-      <details key="end" value="7145"/>
+    <eAnnotations source="positions.283" references="/0/columnWidth/%/%/exp">
+      <details key="start" value="7292"/>
+      <details key="end" value="7295"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.278" references="/0/margin">
-      <details key="start" value="7149"/>
-      <details key="end" value="7216"/>
-      <details key="line" value="222"/>
-    </eAnnotations>
-    <eAnnotations source="positions.279" references="/0/margin/exp">
-      <details key="start" value="7170"/>
-      <details key="end" value="7182"/>
-      <details key="line" value="222"/>
-    </eAnnotations>
-    <eAnnotations source="positions.280" references="/0/margin/%">
-      <details key="start" value="7195"/>
-      <details key="end" value="7213"/>
+    <eAnnotations source="positions.284" references="/0/columnWidth/%/%.1">
+      <details key="start" value="7296"/>
+      <details key="end" value="7299"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.281" references="/0/margin/%/%">
-      <details key="start" value="7195"/>
-      <details key="end" value="7209"/>
-      <details key="line" value="0"/>
+    <eAnnotations source="positions.285" references="/0/margin">
+      <details key="start" value="7303"/>
+      <details key="end" value="7370"/>
+      <details key="line" value="225"/>
     </eAnnotations>
-    <eAnnotations source="positions.282" references="/0/margin/%/%/%">
-      <details key="start" value="7195"/>
-      <details key="end" value="7205"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.283" references="/0/margin/%/%/exp">
-      <details key="start" value="7206"/>
-      <details key="end" value="7209"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.284" references="/0/margin/%/%.1">
-      <details key="start" value="7210"/>
-      <details key="end" value="7213"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.285" references="/0/printFoPageStart">
-      <details key="start" value="7265"/>
-      <details key="end" value="8693"/>
-      <details key="line" value="227"/>
-    </eAnnotations>
-    <eAnnotations source="positions.286" references="/0/printFoPageStart/%">
+    <eAnnotations source="positions.286" references="/0/margin/exp">
       <details key="start" value="7324"/>
-      <details key="end" value="8387"/>
-      <details key="line" value="228"/>
+      <details key="end" value="7336"/>
+      <details key="line" value="225"/>
     </eAnnotations>
-    <eAnnotations source="positions.287" references="/0/printFoPageStart/documentTitel">
-      <details key="start" value="8388"/>
-      <details key="end" value="8401"/>
+    <eAnnotations source="positions.287" references="/0/margin/%">
+      <details key="start" value="7349"/>
+      <details key="end" value="7367"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.288" references="/0/printFoPageStart/%.1">
-      <details key="start" value="8404"/>
-      <details key="end" value="8560"/>
-      <details key="line" value="254"/>
-    </eAnnotations>
-    <eAnnotations source="positions.289" references="/0/printFoPageStart/documentTitel.1">
-      <details key="start" value="8561"/>
-      <details key="end" value="8574"/>
+    <eAnnotations source="positions.288" references="/0/margin/%/%">
+      <details key="start" value="7349"/>
+      <details key="end" value="7363"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.290" references="/0/printFoPageStart/%.2">
-      <details key="start" value="8577"/>
-      <details key="end" value="8681"/>
+    <eAnnotations source="positions.289" references="/0/margin/%/%/%">
+      <details key="start" value="7349"/>
+      <details key="end" value="7359"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.290" references="/0/margin/%/%/exp">
+      <details key="start" value="7360"/>
+      <details key="end" value="7363"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.291" references="/0/margin/%/%.1">
+      <details key="start" value="7364"/>
+      <details key="end" value="7367"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.292" references="/0/printFoPageStart">
+      <details key="start" value="7419"/>
+      <details key="end" value="8847"/>
+      <details key="line" value="230"/>
+    </eAnnotations>
+    <eAnnotations source="positions.293" references="/0/printFoPageStart/%">
+      <details key="start" value="7478"/>
+      <details key="end" value="8541"/>
+      <details key="line" value="231"/>
+    </eAnnotations>
+    <eAnnotations source="positions.294" references="/0/printFoPageStart/documentTitel">
+      <details key="start" value="8542"/>
+      <details key="end" value="8555"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.295" references="/0/printFoPageStart/%.1">
+      <details key="start" value="8558"/>
+      <details key="end" value="8714"/>
       <details key="line" value="257"/>
     </eAnnotations>
-    <eAnnotations source="positions.291" references="/0/printFoPageStart/%.3">
-      <details key="start" value="7218"/>
-      <details key="end" value="7264"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.292" references="/0/printFoPageStart/documentTitel.2">
-      <details key="start" value="7299"/>
-      <details key="end" value="7321"/>
-      <details key="line" value="227"/>
-    </eAnnotations>
-    <eAnnotations source="positions.293" references="/0/printSimpleFoPageEnd">
-      <details key="start" value="8729"/>
-      <details key="end" value="8840"/>
-      <details key="line" value="267"/>
-    </eAnnotations>
-    <eAnnotations source="positions.294" references="/0/printSimpleFoPageEnd/%">
-      <details key="start" value="8784"/>
-      <details key="end" value="8828"/>
-      <details key="line" value="268"/>
-    </eAnnotations>
-    <eAnnotations source="positions.295" references="/0/printSimpleFoPageEnd/%.1">
-      <details key="start" value="8696"/>
+    <eAnnotations source="positions.296" references="/0/printFoPageStart/documentTitel.1">
+      <details key="start" value="8715"/>
       <details key="end" value="8728"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.296" references="/0/printSimpleFoPageEnd/any">
-      <details key="start" value="8768"/>
-      <details key="end" value="8780"/>
-      <details key="line" value="267"/>
+    <eAnnotations source="positions.297" references="/0/printFoPageStart/%.2">
+      <details key="start" value="8731"/>
+      <details key="end" value="8835"/>
+      <details key="line" value="260"/>
+    </eAnnotations>
+    <eAnnotations source="positions.298" references="/0/printFoPageStart/%.3">
+      <details key="start" value="7372"/>
+      <details key="end" value="7418"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.299" references="/0/printFoPageStart/documentTitel.2">
+      <details key="start" value="7453"/>
+      <details key="end" value="7475"/>
+      <details key="line" value="230"/>
+    </eAnnotations>
+    <eAnnotations source="positions.300" references="/0/printSimpleFoPageEnd">
+      <details key="start" value="8883"/>
+      <details key="end" value="8994"/>
+      <details key="line" value="270"/>
+    </eAnnotations>
+    <eAnnotations source="positions.301" references="/0/printSimpleFoPageEnd/%">
+      <details key="start" value="8938"/>
+      <details key="end" value="8982"/>
+      <details key="line" value="271"/>
+    </eAnnotations>
+    <eAnnotations source="positions.302" references="/0/printSimpleFoPageEnd/%.1">
+      <details key="start" value="8850"/>
+      <details key="end" value="8882"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.303" references="/0/printSimpleFoPageEnd/any">
+      <details key="start" value="8922"/>
+      <details key="end" value="8934"/>
+      <details key="line" value="270"/>
     </eAnnotations>
   </ecore:EAnnotation>
 </xmi:XMI>

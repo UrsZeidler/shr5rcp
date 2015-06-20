@@ -744,7 +744,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
     <fo:table-column column-width="20%" />
     <fo:table-body  >
      <fo:table-row [fontSizeXSmall()+' '+fontStyleItalic()/]>
-[printCellAttribute('_UI_Beschreibar_name_feature'.localizedString(),'')/]
+[printCellAttribute('_UI_Beschreibbar_name_feature'.localizedString(),'')/]
 [printCellAttribute('_UI_Zauber_kategorie_feature'.localizedString(),'')/]
 [printCellAttribute('_UI_Zauber_art_feature'.localizedString(),'')/]
 [printCellAttribute('_UI_Zauber_reichweite_feature'.localizedString(),'')/]
@@ -898,7 +898,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [printCell('type'.localizedString())/]
 [printCell(aManagedCharacter.persona.eClass().getText())/]
 [printCell('_UI_ManagedCharacter_nativeLanguage_feature'.localizedString())/]
-[printCell(aManagedCharacter.nativeLanguage.getText())/]
+[printCell(aManagedCharacter.nativeLanguage.getSimpleText())/]
      </fo:table-row>
      <fo:table-row>
 [printCell('_UI_ManagedCharacter_sex_feature'.localizedString())/]
