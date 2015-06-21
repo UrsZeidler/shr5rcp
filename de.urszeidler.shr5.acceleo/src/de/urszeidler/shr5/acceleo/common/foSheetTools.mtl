@@ -5,6 +5,49 @@
 [import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
 
 
+[template public printNColumnTable( columns : Sequence(Sequence(String)), style : String) ]
+<!-- one column table -->
+  <fo:table   [style/]  >
+[for (t : Sequence(String) | columns)]
+    <fo:table-column  />
+[/for]
+    <fo:table-body  >
+[for (t : String | columns->at(1))]
+[let j : Integer = i]
+    <fo:table-row>
+[for (s : Sequence(String) | columns)]
+[printCell(s->at(j))/]
+[/for]
+   </fo:table-row>
+[/let]
+[/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+
+[template public printNColumnTable( columns : Sequence(Sequence(String)),widths:Sequence(String), style : String) ]
+<!-- one column table -->
+  <fo:table   [style/]  >
+[for (w : String | widths)]
+    <fo:table-column column-width="[w/]" />
+[/for]
+    <fo:table-body  >
+[for (t : String | columns->at(1))]
+[let j : Integer = i]
+    <fo:table-row>
+[for (s : Sequence(String) | columns)]
+[printCell(s->at(j))/]
+[/for]
+   </fo:table-row>
+[/let]
+[/for]
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+
+
 [template public printSimpleLine(span : Integer)]
    <fo:table-row >
       <fo:table-cell number-columns-spanned="[span/]">

@@ -833,8 +833,12 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
    </fo:table>
 [/template]
 
-[template public printGear (aManagedCharacter : ManagedCharacter) ? (not aManagedCharacter.inventar->isEmpty())]
+[template public printGear (aManagedCharacter : ManagedCharacter) ? (not aManagedCharacter.inventar->isEmpty())
+{ w : Sequence(String)=Sequence{'80%','10%','10%'}; }
+]
 [printSectionTitel('_UI_ManagedCharacter_inventar_feature'.localizedString())/]
+[printNColumnTable(itemList(aManagedCharacter.inventar),w ,defaultTableStyle())/]
+<!--
   <fo:table [defaultTableStyle()/]>
     <fo:table-column  />
     <fo:table-column column-width="30%" />
@@ -847,6 +851,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [/for]
     </fo:table-body>
    </fo:table>
+-->
 [/template]
 
 [template public printMartialArts (aManagedCharacter : ManagedCharacter) ? (not aManagedCharacter.persona.martialartStyles->isEmpty())]

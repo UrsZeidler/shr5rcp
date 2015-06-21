@@ -1,10 +1,21 @@
 [comment encoding = UTF-8 /]
 [**
- * The documentation of the module.
+ * various helper and queries
  */]
 [module ShadowrunSheetTools('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
 [import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
 
+[query public itemListTitel(list : Collection(AbstraktGegenstand)) : Sequence(String) = 
+  Sequence{'_UI_Beschreibbar_name_feature'.localizedString(),'code','page'} /]
+[query public itemList(list : Collection(AbstraktGegenstand)) : Sequence(Sequence(String)) = 
+  Sequence{beschreibbarNameList(list),scrCodeList(list),scrPageList(list)} /]
+
+[query public beschreibbarNameList(list : Collection(Beschreibbar)) : Sequence(String) = list->collect(getText())->asSequence() /]
+[query public scrNameList(list : Collection(Quelle)) : Sequence(String) = list->collect(srcBook.getSimpleText())->asSequence() /]
+[query public scrCodeList(list : Collection(Quelle)) : Sequence(String) = list->collect(srcBook.code)->asSequence() /]
+[query public scrPageList(list : Collection(Quelle)) : Sequence(String) = list->collect(page)->asSequence() /]
+[query public moneyList(list : Collection(GeldWert)) : Sequence(String) = list->collect(formatMoney())->asSequence() /]
 
 
 [query public armorList(character : ManagedCharacter) : Sequence(String) = character.inventar->select(oclIsKindOf(Kleidung))->collect(getText()->asSequence()) /]
