@@ -47,6 +47,8 @@
       </Transformer>
       <Transformer
             acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.FoCharacterSheet"
+            description="%Transformer.pdffo.description"
+            dialogImage="images/focharacterSheet.png"
             name="%Transformer.pdffo.name">
          <TransformerMapping
                class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter">
