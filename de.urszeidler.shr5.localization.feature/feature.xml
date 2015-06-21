@@ -2,7 +2,7 @@
 <feature
       id="de.urszeidler.shr5.localization.feature"
       label="Shr5 Localization Feature"
-      version="0.2.9.qualifier"
+      version="0.3.0.qualifier"
       provider-name="Urs Zeidler">
 
    <description url="https://github.com/UrsZeidler/shr5rcp/wiki/Building%20and%20development#localisation">

@@ -2,7 +2,7 @@
 <feature
       id="de.urszeidler.shr5.model.feature"
       label="shr5 model Feature"
-      version="0.2.9.qualifier">
+      version="0.3.0.qualifier">
 
    <description url="http://www.example.com/description">
       The model plugins as an api provider.
