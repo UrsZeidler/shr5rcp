@@ -11,7 +11,9 @@
 [import de::urszeidler::shr5::acceleo::common::foSheetTools  /]
 
 
-[template public foCharacterSheet(aManagedCharacter : ManagedCharacter)]
+[template public foCharacterSheet(aManagedCharacter : ManagedCharacter)
+{ default2ColmnWidth : Sequence(String)=Sequence{'80%','20%'}; }
+]
 	[comment @main /]
 [file (aManagedCharacter.getText().concat('.fo'), false, 'UTF-8')]
 [printFoPageStart(aManagedCharacter.getText())/]	
@@ -137,12 +139,20 @@
 		</fo:block  >
 [/for]
 [/if]
+
+[printSimpleLineBlock()/]
+		<fo:block font-size="small"  >
+[printSectionTitel('CombatInfo'.localizedString())/]
+[printNColumnTable(combatInfo(aManagedCharacter),default2ColmnWidth ,defaultTableStyle())/]
+		</fo:block  >
+
+
 [if (not aManagedCharacter.inventar->selectByKind(Munition)->isEmpty())]
 [printSimpleLineBlock()/]
 [printSectionTitel('_UI_Munition_type'.localizedString())/]
 [for (m : Munition | aManagedCharacter.inventar->selectByKind(Munition))]
 		<fo:block font-size="small"  >
-[m.name.escapeXML()  /] [m.type.getText().escapeXML()/] [m.anzahl/]
+[m.getSimpleText().escapeXML()  /]
 		</fo:block  >
 [/for]
 [/if]
@@ -161,6 +171,11 @@
 [for (m : Kleidung | aManagedCharacter.inventar->selectByKind(Kleidung))]
 		<fo:block font-size="small"  >
 [m.getText().escapeXML()  /] [m.ruestung/]
+[for (k : KleindungsModifikator | m.kmods)]
+		<fo:block font-size="small"  >
+-[k.getSimpleText()/] [k.rating/]
+		</fo:block  >
+[/for]
 		</fo:block  >
 [/for]
 [/if]
@@ -532,12 +547,12 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 
    <fo:table-row >
       <fo:table-cell>
-		<fo:block  >
+		<fo:block margin-top="5pt" >
 [printOneSvgMonitorName('_UI_KoerperPersona_zustandKoerperlich_feature'.localizedString(), persona.zustandKoerperlichMax, 3, 20, 20) /]
 		</fo:block  >
       </fo:table-cell>
      <fo:table-cell>
-		<fo:block  >
+		<fo:block margin-top="5pt" >
 [printOneSvgMonitorName('_UI_KoerperPersona_zustandGeistig_feature'.localizedString(), persona.zustandGeistigMax, 3, 20, 20) /]
 		</fo:block  >
       </fo:table-cell>

@@ -6,6 +6,19 @@
 [import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
 [import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
 
+
+[query public combatInfoTitel(list : OclAny) : Sequence(String) = 
+  Sequence{'_UI_SpezielleAttribute_ausweichen_feature'.localizedString(),
+   '_UI_Panzerung_panzer_feature'.localizedString()} /]
+[query public combatInfoValues(character : ManagedCharacter) : Sequence(String) = 
+  Sequence{character.persona.ausweichen,
+    character.persona.oclAsType(KoerperPersona).panzer
+     } /]
+[query public combatInfo(character : ManagedCharacter) : Sequence(Sequence(String))= 
+  Sequence{ combatInfoTitel(),combatInfoValues(character)
+     } /]
+
+
 [query public itemListTitel(list : Collection(AbstraktGegenstand)) : Sequence(String) = 
   Sequence{'_UI_Beschreibbar_name_feature'.localizedString(),'code','page'} /]
 [query public itemList(list : Collection(AbstraktGegenstand)) : Sequence(Sequence(String)) = 
