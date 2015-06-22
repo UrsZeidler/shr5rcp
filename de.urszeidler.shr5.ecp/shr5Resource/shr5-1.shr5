@@ -172,7 +172,7 @@
           <type href="http://urszeidler.de/shr5/1.0#//PersonaMartialartTechnique"/>
         </characterAdvancements>
       </entries>
-      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_kwlUQOJ1EeOcv4XBYqxZsQ" name="The streetscum campain EE." page="354" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6" freeMartialArtTechniques="1" maxMartialArtStyles="1">
+      <entries xsi:type="shr5mngt:Shr5System" xmi:id="_kwlUQOJ1EeOcv4XBYqxZsQ" name="The streetscum campaign EE." page="354" srcBook="f5ec713c-98cd-41f6-a0a4-4a8eaed55b66" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="25" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" knowlegeSkillFactor="2" charismaToConnectionFactor="3" maxResourceToKeep="5000" maxKarmaToResources="10" maxKarmaToKeep="7" skillMax="6" numberOfSpecalism="1" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6" freeMartialArtTechniques="1" maxMartialArtStyles="1">
         <instructions xmi:id="_djpB4eJ0EeOht_G61YAQvg" value="Select the categories and the group."/>
         <instructions xmi:id="_djpB4uJ0EeOht_G61YAQvg" key="readyForCreation" value="All has been set, you can create the character now."/>
         <instructions xmi:id="_djpB4-J0EeOht_G61YAQvg" key="personaCreated" value="The character is created spend all the values."/>
@@ -25309,7 +25309,7 @@
       </members>
     </groups>
     <entries xsi:type="shr5mngt:GamemasterManagement" xmi:id="_Uu54UL9LEeS9maZrSgWaVQ" name="Grunts">
-      <groups xmi:id="_C2UIgL9_EeS9maZrSgWaVQ" name="gunts">
+      <groups xmi:id="_C2UIgL9_EeS9maZrSgWaVQ" name="grunts">
         <members xsi:type="shr5mngt:NonPlayerCharacter" xmi:id="_B1JkAN0CEeOvVYoRsPZlnA" chracterSource="_B1MnUN0CEeOvVYoRsPZlnA" choosenLifestyle="_B1KyId0CEeOvVYoRsPZlnA" nativeLanguage="907a3a8f-2c40-4543-a5a9-891bcde41f6b" sex="male">
           <persona xsi:type="shr5:MudanPersona" xmi:id="_B1KLEN0CEeOvVYoRsPZlnA" image="/shr5Resource/images/MrBordello_Strategy_Game_Tileset_19.png" name="Thugs &amp; mouth breathers" konstitutionBasis="3" geschicklichkeitBasis="3" reaktionBasis="3" staerkeBasis="3" charismaBasis="2" willenskraftBasis="3" intuitionBasis="3" logikBasis="2" spezies="a53d885d-a4a4-443d-b6a6-b0a55b0a96c7">
             <fertigkeiten xmi:id="_B1KLEd0CEeOvVYoRsPZlnA" stufe="3" fertigkeit="48763fa5-4b89-48c7-80ff-d0a2761de4c0"/>
