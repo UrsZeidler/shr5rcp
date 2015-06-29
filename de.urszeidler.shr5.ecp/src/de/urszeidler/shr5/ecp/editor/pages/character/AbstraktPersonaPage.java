@@ -202,7 +202,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 
         BeschreibbarWidget beschreibbarWidget = new BeschreibbarWidget(body, SWT.NONE, object, toolkit, editingDomain);
 
-        beschreibbarWidget.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+        beschreibbarWidget.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
         toolkit.adapt(beschreibbarWidget);
         toolkit.paintBordersFor(beschreibbarWidget);
 
@@ -227,7 +227,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         Group grpKrperlicheAttribute = new Group(grpAttribute, SWT.NONE);
         grpKrperlicheAttribute.setText(Messages.AbstraktPersonaPage_Body);
         grpKrperlicheAttribute.setToolTipText(Messages.AbstraktPersonaPage_Body_Attributes);
-        grpKrperlicheAttribute.setLayout(new GridLayout(3, false));
+        grpKrperlicheAttribute.setLayout(new GridLayout(4, false));
         grpKrperlicheAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.adapt(grpKrperlicheAttribute);
         toolkit.paintBordersFor(grpKrperlicheAttribute);
@@ -235,7 +235,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         Group grpGeistigeAttribute = new Group(grpAttribute, SWT.NONE);
         grpGeistigeAttribute.setText(Messages.AbstraktPersonaPage_Mental);
         grpGeistigeAttribute.setToolTipText(Messages.AbstraktPersonaPage_Mental_Attributes);
-        grpGeistigeAttribute.setLayout(new GridLayout(3, false));
+        grpGeistigeAttribute.setLayout(new GridLayout(4, false));
         grpGeistigeAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.adapt(grpGeistigeAttribute);
         toolkit.paintBordersFor(grpGeistigeAttribute);
@@ -243,7 +243,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         Group grpSpezielleAttribute = new Group(grpAttribute, SWT.NONE);
         grpSpezielleAttribute.setText(Messages.AbstraktPersonaPage_Special);
         grpSpezielleAttribute.setToolTipText(Messages.AbstraktPersonaPage_Special_Attributes);
-        grpSpezielleAttribute.setLayout(new GridLayout(3, false));
+        grpSpezielleAttribute.setLayout(new GridLayout(4, false));
         grpSpezielleAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.adapt(grpSpezielleAttribute);
         toolkit.paintBordersFor(grpSpezielleAttribute);
@@ -251,7 +251,7 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
         Group compositelimits = new Group(grpAttribute, SWT.NONE);
         compositelimits.setText(Messages.AbstraktPersonaPage_Limits);
         compositelimits.setToolTipText(Messages.AbstraktPersonaPage_The_Limits);
-        compositelimits.setLayout(new GridLayout(3, false));
+        compositelimits.setLayout(new GridLayout(4, false));
         compositelimits.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.adapt(compositelimits);
         toolkit.paintBordersFor(compositelimits);
@@ -348,13 +348,15 @@ public class AbstraktPersonaPage extends AbstractShr5Page<AbstraktPersona> {
 
         int height = 200;
         if (object instanceof KoerperPersona) {
-            Composite grpFertigkeitGruppe = new Composite(body, SWT.NONE);
-            grpFertigkeitGruppe.setLayout(new GridLayout(3, true));
-            final GridData gd_grpFertigkeitGruppe = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
-            gd_grpFertigkeitGruppe.heightHint = height;
-            grpFertigkeitGruppe.setLayoutData(gd_grpFertigkeitGruppe);
-            toolkit.adapt(grpFertigkeitGruppe);
-            toolkit.paintBordersFor(grpFertigkeitGruppe);
+//            Composite grpFertigkeitGruppe = new Composite(body, SWT.NONE);
+//            grpFertigkeitGruppe.setLayout(new GridLayout(3, true));
+//            final GridData gd_grpFertigkeitGruppe = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
+//            gd_grpFertigkeitGruppe.heightHint = height;
+//            grpFertigkeitGruppe.setLayoutData(gd_grpFertigkeitGruppe);
+//            toolkit.adapt(grpFertigkeitGruppe);
+//            toolkit.paintBordersFor(grpFertigkeitGruppe);
+            
+            Composite grpFertigkeitGruppe = managedForm.getForm().getBody();
 
             compositeEigenschaften = new Composite(grpFertigkeitGruppe, SWT.NONE);
             compositeEigenschaften.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));

@@ -169,7 +169,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         Group grpKrperlicheAttribute = new Group(composite_4, SWT.NONE);
         grpKrperlicheAttribute.setText(Messages.AbstraktPersonaPage_Body);
         grpKrperlicheAttribute.setToolTipText(Messages.AbstraktPersonaPage_Body_Attributes);
-        grpKrperlicheAttribute.setLayout(new GridLayout(3, false));
+        grpKrperlicheAttribute.setLayout(new GridLayout(4, false));
         grpKrperlicheAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.adapt(grpKrperlicheAttribute);
         toolkit.paintBordersFor(grpKrperlicheAttribute);
@@ -177,7 +177,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         Group grpGeistigeAttribute = new Group(composite_4, SWT.NONE);
         grpGeistigeAttribute.setText(Messages.AbstraktPersonaPage_Mental);
         grpGeistigeAttribute.setToolTipText(Messages.AbstraktPersonaPage_Mental_Attributes);
-        grpGeistigeAttribute.setLayout(new GridLayout(3, false));
+        grpGeistigeAttribute.setLayout(new GridLayout(4, false));
         grpGeistigeAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.adapt(grpGeistigeAttribute);
         toolkit.paintBordersFor(grpGeistigeAttribute);
@@ -185,7 +185,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         Group grpSpezielleAttribute = new Group(composite_4, SWT.NONE);
         grpSpezielleAttribute.setText(Messages.AbstraktPersonaPage_Special);
         grpSpezielleAttribute.setToolTipText(Messages.AbstraktPersonaPage_Special_Attributes);
-        grpSpezielleAttribute.setLayout(new GridLayout(3, false));
+        grpSpezielleAttribute.setLayout(new GridLayout(4, false));
         grpSpezielleAttribute.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.adapt(grpSpezielleAttribute);
         toolkit.paintBordersFor(grpSpezielleAttribute);
@@ -193,7 +193,7 @@ public class RuntimeCharacterPage extends AbstractShr5Page<RuntimeCharacter> {
         Group compositelimits = new Group(composite_4, SWT.NONE);
         compositelimits.setText(Messages.AbstraktPersonaPage_Limits);
         compositelimits.setToolTipText(Messages.AbstraktPersonaPage_The_Limits);
-        compositelimits.setLayout(new GridLayout(3, false));
+        compositelimits.setLayout(new GridLayout(4, false));
         compositelimits.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1));
         toolkit.adapt(compositelimits);
         toolkit.paintBordersFor(compositelimits);

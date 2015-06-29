@@ -14,6 +14,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 
+@Deprecated
 public class PersonaAttributesWidget extends Composite {
     private DataBindingContext m_bindingContext;
 

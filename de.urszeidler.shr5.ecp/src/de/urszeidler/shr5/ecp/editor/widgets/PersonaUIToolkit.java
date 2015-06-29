@@ -30,11 +30,14 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.BaseMagischePersona;
 import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.Spezies;
 import de.urszeidler.eclipse.shr5.Technomancer;
 import de.urszeidler.eclipse.shr5.Zauberer;
 import de.urszeidler.eclipse.shr5.util.AdapterFactoryUtil;
+import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
 import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
 import de.urszeidler.shr5.ecp.binding.ModificatedAttributeLabelValue;
@@ -74,13 +77,14 @@ public class PersonaUIToolkit {
     protected AdapterFactoryItemDelegator itemDelegator = AdapterFactoryUtil.getInstance().getItemDelegator();
     protected FormToolkit toolkit;
     protected DataBindingContext ctx;
-    protected EObject eObject;
+    protected AbstraktPersona eObject;
     protected EditingDomain editingDomain;
 
     private boolean karmaMode = false;
     private ManagedCharacter character;
 
-    public PersonaUIToolkit(DataBindingContext ctx, IObservableValue selection, EObject object, EditingDomain editingDomain, FormToolkit toolkit) {
+    public PersonaUIToolkit(DataBindingContext ctx, IObservableValue selection, AbstraktPersona object, EditingDomain editingDomain,
+            FormToolkit toolkit) {
         super();
         if (ctx == null)
             this.ctx = new DataBindingContext();
@@ -107,39 +111,6 @@ public class PersonaUIToolkit {
         this.toolkit = toolkit;
     }
 
-    //
-    // private void createBodyIndexWidget(Composite client) {
-    // // shadowrunPackage.eINSTANCE.getAbstaktPersona_EssenzBase(),,
-    //
-    // EAttribute attribute =
-    // shadowrunPackage.eINSTANCE.getBodyIndex_BodyIndex();
-    // Label label = getToolkit().createLabel(client,
-    // itemDelegator.getText(attribute));
-    // createLayoutForLabel(label, client);
-    //
-    // Label text = getToolkit().createLabel(client, "");
-    // IObservableValue observeValue = createObservableValue(attribute);//
-    // EMFObservables.observeValue(eObject,
-    // // attribute);
-    // ISWTObservableValue observeEditable = SWTObservables.observeText(text);
-    //
-    // EMFUpdateValueStrategy updateStrategie1 = new EMFUpdateValueStrategy();
-    // updateStrategie1.setConverter(new Converter(1, 1) {
-    //
-    // @Override
-    // public Object convert(Object fromObject) {
-    // if (fromObject instanceof Integer) {
-    // Integer v = (Integer) fromObject;
-    // float f = v / 100;
-    // return "" + f;
-    // }
-    // return null;
-    // }
-    // });
-    // bindObservable(observeValue, observeEditable, updateStrategie1);
-    // getToolkit().createLabel(client, "");
-    // }
-    //
     private void createEssenzWidget(Composite client) {
         EAttribute attribute = Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__ESSENZ;
         getToolkit().createLabel(client, toFeatureName(attribute, eObject));// itemDelegator.getText(attribute));
@@ -155,12 +126,13 @@ public class PersonaUIToolkit {
         // updateStrategie1, updateStrategie1);
         // ctx.addBinding(binding);
         getToolkit().createLabel(client, ""); //$NON-NLS-1$
+        getToolkit().createLabel(client, "");//$NON-NLS-1$ 
     }
 
     private void createAttributeWidget(final EAttribute basefeature, final EAttribute calcFeature, Composite client) {
         getToolkit().createLabel(client, toFeatureName(calcFeature, eObject));// itemDelegator.getText(calcFeature));
 
-        final Text text = getToolkit().createText(client, "__", SWT.BORDER);//$NON-NLS-1$ 
+        final Text text = getToolkit().createText(client, "_", SWT.BORDER);//$NON-NLS-1$ 
         setDefaultLayout(text);
 
         IObservableValue calcObserveValue = createObservableValue(calcFeature);
@@ -180,9 +152,23 @@ public class PersonaUIToolkit {
         final IObservableValue feature = bindTextFeature(text, basefeature, new EMFUpdateValueStrategy(), updateStrategie);
         ComputedValue computedValue = new ModificatedAttributeLabelValue(calcObserveValue, feature);
         Label label2 = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
-        setDefaultLayout(label2);
+//        setDefaultLayout(label2);
 
         bindObservable(computedValue, SWTObservables.observeText(label2));
+
+        final Spezies spezies = eObject.getSpezies();
+        if (ShadowrunTools.base2SpeciesMin(basefeature) != null && spezies != null) {
+            Label minMaxLabel = getToolkit().createLabel(client, "");
+            ComputedValue computedValue2 = new ComputedValue() {
+
+                @Override
+                protected Object calculate() {
+                    return String.format("[%s/%s]", spezies.eGet(ShadowrunTools.base2SpeciesMin(basefeature)),
+                            spezies.eGet(ShadowrunTools.base2SpeciesMax(basefeature)));
+                }
+            };
+            bindObservable(computedValue2, SWTObservables.observeText(minMaxLabel));
+        }
     }
 
     private void bindObservable(IObservableValue observeValue, ISWTObservableValue observeText) {
@@ -196,7 +182,7 @@ public class PersonaUIToolkit {
      * @param text
      */
     private void setDefaultLayout(Control text) {
-        GridData gridData = new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1);
+        GridData gridData = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
         gridData.widthHint = 28;
 
         text.setLayoutData(gridData);
@@ -205,15 +191,17 @@ public class PersonaUIToolkit {
     private void createAttributeWidgetRO(final EAttribute basefeature, final EAttribute calcFeature, Composite client) {
         getToolkit().createLabel(client, toFeatureName(calcFeature, eObject));// itemDelegator.getText(calcFeature));
 
-        Label text = getToolkit().createLabel(client, "_____");//$NON-NLS-1$ 
+        Label text = getToolkit().createLabel(client, "__");//$NON-NLS-1$ 
         setDefaultLayout(text);
         final IObservableValue feature = bindLabelFeature(text, basefeature, new EMFUpdateValueStrategy());
         IObservableValue calcObserveValue = createObservableValue(calcFeature);
         ComputedValue computedValue = new ModificatedAttributeLabelValue(calcObserveValue, feature);
 
         Label label2 = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
-        setDefaultLayout(label2);
+//        setDefaultLayout(label2);
         bindObservable(computedValue, SWTObservables.observeText(label2));
+        label2 = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
+
     }
 
     private void createReaktionAttWidgets(EAttribute basefeature, EAttribute calcFeature, Composite client) {
@@ -232,85 +220,9 @@ public class PersonaUIToolkit {
 
         Label label2 = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
         bindObservable(computedValue, SWTObservables.observeText(label2));
-
+        label2 = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
     }
 
-    // /**
-    // * @param client
-    // */
-    // public void createBeschreibungWidget(Composite client) {
-    // GridLayout glayout = new GridLayout();
-    // glayout.marginWidth = glayout.marginHeight = 1;
-    // glayout.numColumns = 5;
-    // client.setLayout(glayout);
-    //
-    // Label nameLabel = getToolkit().createLabel(client, "Name ");
-    // GridData td = new GridData();
-    // td.horizontalSpan = 1;
-    // nameLabel.setLayoutData(td);
-    // Text nameText = getToolkit().createText(client, "namen");
-    // td = new GridData();
-    // td.horizontalSpan = 3;
-    // td.grabExcessHorizontalSpace = true;
-    // td.horizontalAlignment = GridData.FILL;
-    // nameText.setLayoutData(td);
-    // bindTextFeature(nameText,
-    // shadowrunPackage.eINSTANCE.getBeschreibbar_Name());
-    //
-    // Label iconLabel = getToolkit().createLabel(client, "icon");
-    // td = new GridData();
-    // td.horizontalSpan = 1;
-    // td.verticalSpan = 2;
-    // td.minimumHeight = 128;
-    // td.widthHint = 128;
-    // td.grabExcessVerticalSpace = true;
-    // td.verticalAlignment = GridData.BEGINNING;
-    // td.horizontalAlignment = GridData.END;
-    // iconLabel.setLayoutData(td);
-    //
-    //
-    //
-    // //MyImageLabelObserver labelObserver = new
-    // MyImageLabelObserver(iconLabel);
-    // bindImageLabel(iconLabel,
-    // shadowrunPackage.eINSTANCE.getBeschreibbar_Image());
-    //
-    // Text formText = getToolkit().createText(client, "beschreibung", SWT.MULTI
-    // | SWT.WRAP);
-    // td = new GridData();
-    // td.horizontalSpan = 4;
-    // td.verticalSpan = 2;
-    // td.grabExcessHorizontalSpace = true;
-    // td.grabExcessVerticalSpace = true;
-    // td.verticalAlignment = GridData.FILL;
-    // td.horizontalAlignment = GridData.FILL;
-    //
-    // formText.setLayoutData(td);
-    // bindTextFeature(formText,
-    // shadowrunPackage.eINSTANCE.getBeschreibbar_Beschreibung());
-    //
-    // Composite createComposite = getToolkit().createComposite(client);
-    // td = new GridData();
-    // td.horizontalSpan = 5;
-    // td.verticalSpan = 1;
-    // td.grabExcessHorizontalSpace = true;
-    // td.grabExcessVerticalSpace = true;
-    // td.verticalAlignment = GridData.FILL;
-    // td.horizontalAlignment = GridData.FILL;
-    // createComposite.setLayoutData(td);
-    //
-    // TableWrapLayout layout = new TableWrapLayout();
-    // layout.topMargin = 5;
-    // layout.leftMargin = 5;
-    // layout.rightMargin = 2;
-    // layout.bottomMargin = 2;
-    // layout.numColumns = 3;
-    // createComposite.setLayout(layout);
-    //
-    // createSingleReferenceWidget(shadowrunPackage.eINSTANCE.getAbstaktPersona_Spezies(),
-    // createComposite);
-    // }
-    //
     /**
      * Creates bound widget for the koeperlichen attributes.
      * 
@@ -324,6 +236,7 @@ public class PersonaUIToolkit {
                 Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__GESCHICKLICHKEIT, client);
         createAttributeWidget(Shr5Package.Literals.ABSTRAKT_PERSONA__REAKTION_BASIS, Shr5Package.Literals.KOERPERLICHE_ATTRIBUTE__REAKTION, client);
     }
+
     /**
      * Creates bound widget for the koeperlichen attributes.
      * 
@@ -370,10 +283,11 @@ public class PersonaUIToolkit {
         } else if (eObject instanceof Technomancer) {
             createAttributeWidget(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS, Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ, client);
         }
-//        if(eObject instanceof Zauberer)
-//            createAttributeWidgetRO(Shr5Package.Literals.ZAUBERER__ENZUG, Shr5Package.Literals.ZAUBERER__ENZUG, client);
+        // if(eObject instanceof Zauberer)
+        // createAttributeWidgetRO(Shr5Package.Literals.ZAUBERER__ENZUG, Shr5Package.Literals.ZAUBERER__ENZUG, client);
 
     }
+
     /**
      * Creates bound widget for the koeperlichen attributes.
      * 
@@ -389,12 +303,13 @@ public class PersonaUIToolkit {
         createAttributeWidgetRO(Shr5Package.Literals.PANZERUNG__PANZER, Shr5Package.Literals.PANZERUNG__PANZER, client);
 
         if (eObject instanceof BaseMagischePersona) {
-            createAttributeWidgetRO(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS, Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE, client);
+            createAttributeWidgetRO(Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE_BASIS, Shr5Package.Literals.BASE_MAGISCHE_PERSONA__MAGIE,
+                    client);
 
         } else if (eObject instanceof Technomancer) {
             createAttributeWidgetRO(Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ_BASIS, Shr5Package.Literals.RESONANZ_PERSONA__RESONANZ, client);
         }
-        if(eObject instanceof Zauberer)
+        if (eObject instanceof Zauberer)
             createAttributeWidgetRO(Shr5Package.Literals.ZAUBERER__ENZUG, Shr5Package.Literals.ZAUBERER__ENZUG, client);
 
     }
@@ -411,6 +326,7 @@ public class PersonaUIToolkit {
         createAttributeWidget(Shr5Package.Literals.ABSTRAKT_PERSONA__INTUITION_BASIS, Shr5Package.Literals.GEISTIGE_ATTRIBUTE__INTUITION, client);
         createAttributeWidget(Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS, Shr5Package.Literals.GEISTIGE_ATTRIBUTE__LOGIK, client);
     }
+
     /**
      * Creates bound widget for the koeperlichen attributes.
      * 
@@ -424,13 +340,13 @@ public class PersonaUIToolkit {
         createAttributeWidgetRO(Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS, Shr5Package.Literals.GEISTIGE_ATTRIBUTE__LOGIK, client);
     }
 
-    private IObservableValue bindTextFeature(Text text, EAttribute feature, EMFUpdateValueStrategy updateStrategie) {
-        IObservableValue observeValue = createObservableValue(feature);
-        ISWTObservableValue observeEditable = SWTObservables.observeText(text, SWT.Modify);
-        bindObservable(observeValue, observeEditable, updateStrategie);
-        return observeValue;
-
-    }
+    // private IObservableValue bindTextFeature(Text text, EAttribute feature, EMFUpdateValueStrategy updateStrategie) {
+    // IObservableValue observeValue = createObservableValue(feature);
+    // ISWTObservableValue observeEditable = SWTObservables.observeText(text, SWT.Modify);
+    // bindObservable(observeValue, observeEditable, updateStrategie);
+    // return observeValue;
+    //
+    // }
 
     private IObservableValue bindTextFeature(Text text, EAttribute feature, EMFUpdateValueStrategy updateStrategie,
             EMFUpdateValueStrategy targetToModel) {

@@ -153,22 +153,22 @@ public class CommitedCharacterPage extends AbstractShr5Page<ManagedCharacter> {
         Composite composite_phy_att = new Composite(composite_2, SWT.NONE);
         managedForm.getToolkit().adapt(composite_phy_att);
         managedForm.getToolkit().paintBordersFor(composite_phy_att);
-        composite_phy_att.setLayout(new GridLayout(3, false));
+        composite_phy_att.setLayout(new GridLayout(4, false));
 
         Composite composite_mental = new Composite(composite_2, SWT.NONE);
         managedForm.getToolkit().adapt(composite_mental);
         managedForm.getToolkit().paintBordersFor(composite_mental);
-        composite_mental.setLayout(new GridLayout(3, false));
+        composite_mental.setLayout(new GridLayout(4, false));
 
         Composite composite_spec = new Composite(composite_2, SWT.NONE);
         managedForm.getToolkit().adapt(composite_spec);
         managedForm.getToolkit().paintBordersFor(composite_spec);
-        composite_spec.setLayout(new GridLayout(3, false));
+        composite_spec.setLayout(new GridLayout(4, false));
 
         Composite composite_limits = new Composite(composite_2, SWT.NONE);
         managedForm.getToolkit().adapt(composite_limits);
         managedForm.getToolkit().paintBordersFor(composite_limits);
-        composite_limits.setLayout(new GridLayout(3, false));
+        composite_limits.setLayout(new GridLayout(4, false));
 
         // Composite composite_3 = new Composite(composite_2, SWT.NONE);
         // managedForm.getToolkit().adapt(composite_3);
