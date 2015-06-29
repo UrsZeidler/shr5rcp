@@ -22,12 +22,13 @@ import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.SWTObservables;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.Spinner;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
@@ -132,7 +133,16 @@ public class PersonaUIToolkit {
     private void createAttributeWidget(final EAttribute basefeature, final EAttribute calcFeature, Composite client) {
         getToolkit().createLabel(client, toFeatureName(calcFeature, eObject));// itemDelegator.getText(calcFeature));
 
-        final Text text = getToolkit().createText(client, "_", SWT.BORDER);//$NON-NLS-1$ 
+//        final Text text = getToolkit().createText(client, "_", SWT.BORDER);//$NON-NLS-1$ 
+        
+        final Spinner text = new Spinner(client, SWT.BORDER);
+        GridData gd_spinner = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+        gd_spinner.widthHint = 40;
+        text.setLayoutData(gd_spinner);
+        getToolkit().adapt(text);
+        getToolkit().paintBordersFor(text);
+
+        
         setDefaultLayout(text);
 
         IObservableValue calcObserveValue = createObservableValue(calcFeature);
@@ -141,7 +151,8 @@ public class PersonaUIToolkit {
             updateStrategie = new EMFUpdateValueStrategy() {
                 protected IStatus doSet(IObservableValue observableValue, Object value) {
                     int aValue = ShadowrunManagmentTools.changeAttributeByAdvacement(character, basefeature, (Integer)value);// (Integer)value);
-                    text.setText(Integer.toString(aValue));
+                    text.setSelection(aValue);
+//                    text.setText(Integer.toString(aValue));
                     return Status.OK_STATUS;
                 }
 
@@ -149,7 +160,7 @@ public class PersonaUIToolkit {
         else
             updateStrategie = new EMFUpdateValueStrategy();
 
-        final IObservableValue feature = bindTextFeature(text, basefeature, new EMFUpdateValueStrategy(), updateStrategie);
+        final IObservableValue feature = bindTextFeature(text, basefeature, updateStrategie);
         ComputedValue computedValue = new ModificatedAttributeLabelValue(calcObserveValue, feature);
         Label label2 = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
 //        setDefaultLayout(label2);
@@ -171,6 +182,17 @@ public class PersonaUIToolkit {
         }
     }
 
+    private IObservableValue bindTextFeature(Spinner spinner, EAttribute basefeature,
+            EMFUpdateValueStrategy targetToModel) {
+        IObservableValue observeWidget = WidgetProperties.selection().observe(spinner);
+        IObservableValue observeValue = EMFEditObservables.observeValue(editingDomain, eObject, basefeature);
+        
+        Binding binding = ctx.bindValue(observeWidget, observeValue, targetToModel, new EMFUpdateValueStrategy());
+        ctx.addBinding(binding);
+
+        return observeValue;
+    }
+
     private void bindObservable(IObservableValue observeValue, ISWTObservableValue observeText) {
         bindObservable(observeValue, observeText, new EMFUpdateValueStrategy());
 
@@ -183,7 +205,7 @@ public class PersonaUIToolkit {
      */
     private void setDefaultLayout(Control text) {
         GridData gridData = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-        gridData.widthHint = 28;
+        gridData.widthHint = 16;
 
         text.setLayoutData(gridData);
     }
@@ -208,6 +230,7 @@ public class PersonaUIToolkit {
 
         getToolkit().createLabel(client, toFeatureName(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIVE, eObject));
         Label label = getToolkit().createLabel(client, "ini");//$NON-NLS-1$ 
+        setDefaultLayout(label);
         bindLabelFeature(label, Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIVE, new EMFUpdateValueStrategy());
         final IObservableValue reaktWValue = createObservableValue(Shr5Package.Literals.SPEZIELLE_ATTRIBUTE__INITATIV_WUERFEL);
         ComputedValue computedValue = new ComputedValue() {
@@ -340,24 +363,16 @@ public class PersonaUIToolkit {
         createAttributeWidgetRO(Shr5Package.Literals.ABSTRAKT_PERSONA__LOGIK_BASIS, Shr5Package.Literals.GEISTIGE_ATTRIBUTE__LOGIK, client);
     }
 
-    // private IObservableValue bindTextFeature(Text text, EAttribute feature, EMFUpdateValueStrategy updateStrategie) {
-    // IObservableValue observeValue = createObservableValue(feature);
-    // ISWTObservableValue observeEditable = SWTObservables.observeText(text, SWT.Modify);
-    // bindObservable(observeValue, observeEditable, updateStrategie);
-    // return observeValue;
-    //
-    // }
-
-    private IObservableValue bindTextFeature(Text text, EAttribute feature, EMFUpdateValueStrategy updateStrategie,
-            EMFUpdateValueStrategy targetToModel) {
-        IObservableValue observeValue = createObservableValue(feature);
-        ISWTObservableValue observeEditable = SWTObservables.observeText(text, SWT.Modify);
-        Binding binding = ctx.bindValue(observeEditable, observeValue, targetToModel, updateStrategie);
-        ctx.addBinding(binding);
-
-        return observeValue;
-
-    }
+//    private IObservableValue bindTextFeature(Text text, EAttribute feature, EMFUpdateValueStrategy updateStrategie,
+//            EMFUpdateValueStrategy targetToModel) {
+//        IObservableValue observeValue = createObservableValue(feature);
+//        ISWTObservableValue observeEditable = SWTObservables.observeText(text, SWT.Modify);
+//        Binding binding = ctx.bindValue(observeEditable, observeValue, targetToModel, updateStrategie);
+//        ctx.addBinding(binding);
+//
+//        return observeValue;
+//
+//    }
 
     /**
      * binds a label to the feature
