@@ -1,0 +1,152 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: create-npc
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _IBIJgB5TEeW4ptoB54jvTw
+Runtime-Version: 2.0.0.201506120617
+Save-Time: 6/30/15 12:09 PM
+Tags: freestyle
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Creates an npc via freestyle generator, copy the persona.
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+take-screenshot "first-start"
+get-menu "Charakter/Charakter Generator wizard" | click
+with [get-window "Select generator object to create ..."] {
+    get-tree | select "Freestyle Generator"
+    get-button "Next >" | click
+}
+with [get-window -class WizardDialog] {
+    get-combo -after [get-label "Container auswählen"] | select "Spielleiter my game stuff"
+    get-combo -after [get-label "Wähle Generator System"] | select "Free Style Free Style Generator"
+    get-combo -after [get-label "Wähle Gruppe"] | select "Charakter Gruppe non player group"
+    get-button Finish | click
+    get-window "Perspektiv wechsel" | get-button No | click
+}
+with [get-editor "Free Style Generator"] {
+    get-group "Übersicht" | get-editbox -after [get-label "Character Name"] | get-property text | equals "" 
+        | verify-true
+    with [get-section "auswählen" | get-button "Nicht Spieler"] {
+        get-property caption | equals "Nicht Spieler" | verify-true
+        get-property selected | equals false | verify-true
+    }
+}
+get-editor "Free Style Generator" | get-section "auswählen" | get-button "Nicht Spieler" | click
+with [get-editor "Free Style Generator" | get-section "auswählen"] {
+    get-link "Charakter Gruppe non player group" | get-property "getText()" 
+        | equals "Charakter Gruppe non player group" | verify-true
+    get-link "nichts ausgewählt" | get-property "getText()" | equals "nichts ausgewählt" | verify-true
+    get-link "nichts ausgewählt" -after [get-label "Ausgewählte Spezies"] | get-property "getText()" 
+        | equals "nichts ausgewählt" | verify-true
+    get-link "nichts ausgewählt" -after [get-label "Ausgewählte Persona"] | get-property "getText()" 
+        | equals "nichts ausgewählt" | verify-true
+}
+with [get-editor "Free Style Generator"] {
+    with [get-group "Übersicht" | get-editbox -after [get-label "Character Name"]] {
+         set-text TestCharacter
+    }
+    get-section "auswählen" | get-link "nichts ausgewählt" | click
+}
+get-window "Wähle einen typen." | get-tree | select "Mundane Persona" | click -default
+get-editor "Free Style Generator" | get-section "auswählen" | get-link "nichts ausgewählt" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Spezies Mensch"
+    get-button OK | click
+}
+with [get-editor "Free Style Generator" | get-button "Erstelle den Charakter mit den ausgewälten optionen."] {
+    get-property grayed | equals false | verify-true
+    get-property "isEnabled()" | equals true | verify-true
+}
+get-editor "Free Style Generator" | get-button "Erstelle den Charakter mit den ausgewälten optionen." | click
+get-editor "Free Style Generator" | get-button "Beende das Charakter erstellen durch das Festschreiben des Charakters." 
+    | get-property "isEnabled()" | equals true | verify-true
+get-editor "Free Style Generator" | get-tab-folder | get-tab-item Persona | click
+with [get-editor "Free Style Generator"] {
+    get-section Beschreibung | get-editbox -after [get-label Name] | get-property text | equals TestCharacter 
+        | verify-true
+    with [get-link "Spezies Mensch"] {
+        get-property caption | equals "Spezies Mensch" | verify-true
+        get-property "getText()" | equals "Spezies Mensch" | verify-true
+    }
+    get-section Attribute | get-group "Körperlich" | get-editbox -after [get-label Konstitution] | get-property text 
+        | equals 1 | verify-true
+}
+with [get-editor "Free Style Generator"] {
+    with [get-section Fertigkeiten | get-tree] {
+        select "Fertigkeits Gruppe Acting/Fertigkeit Überreden" | activate-cell-edit -column 2
+        apply-cell-edit -deactivate
+        select "Fertigkeits Gruppe Acting/Fertigkeit Überreden" | activate-cell-edit -column 2
+        get-editbox | set-text 3
+        apply-cell-edit -deactivate
+        select "Fertigkeits Gruppe Acting/Fertigkeit Verkörperung" | activate-cell-edit -column 2
+        get-editbox | set-text 3
+        apply-cell-edit -deactivate
+        select "Fertigkeits Gruppe Acting/Fertigkeit Vorführung" | activate-cell-edit -column 2
+        get-editbox | set-text 3
+        apply-cell-edit -deactivate
+        select "Fertigkeits Gruppe Acting/Fertigkeit Vorführung"
+    }
+    get-tab-folder | get-tab-item Charakter | click
+    with [get-group Allgemein] {
+        get-combo -after [get-label Geschlecht] | select "männlich"
+        get-link "nichts ausgewählt" | click
+    }
+}
+get-window -class OwnChooseDialog | get-tree | select "Sprachfertigkeit Dänisch" | click -default
+with [get-editor "Free Style Generator"] {
+    with [get-section Inventar] {
+        mouse-release 166 22 button1 524288
+        mouse-move 170 1
+    }
+    with [get-group Allgemein] {
+        get-editbox -after [get-label Height] | set-text 170
+        get-editbox -after [get-label Weight] | set-text 70
+        get-editbox -after [get-label "Date of birth"] | set-focus
+    }
+    get-section Inventar | mouse-move 133 2
+    get-group Allgemein | get-editbox -after [get-label "Date of birth"] | click-text 4 5
+    with [get-section Inventar] {
+        mouse-move 5 55
+        get-button "Füge ein Abstrakt Gegenstand zu dem Inventar feature." | click
+    }
+}
+with [get-window "Add Inventar -- Shr List"] {
+    with [get-table] {
+        select "Cyberdeck Erika MCD-1" | double-click
+        select "Magazin Spare Clip" | double-click
+    }
+    get-button OK | click
+}
+get-editor "Free Style Generator" | get-section Connections 
+    | get-button "Füge ein Connection zu dem Connections feature." | click
+with [get-window -class GenericEObjectDialog] {
+    get-editbox -after [get-label Influence] | set-text 1
+    get-editbox -after [get-label Loyality] | set-text 1
+    get-link "[null]" | click
+    get-window "Choose connection" | get-tree | select "SC Mundane Persona Ex-Firewatch Concept" | click -default
+    get-button OK | click
+}
+get-editor "Connection SC Mundane Persona Ex-Firewatch Concept [1/1]" | close
+with [get-editor "Free Style Generator"] {
+    get-section Inventar | mouse-move 293 41
+    with [get-tab-folder] {
+        get-tab-item Steigerungen | click
+        get-tab-item Persona | click
+        get-tab-item "Freestyle generator" | click
+    }
+    get-button "Beende das Charakter erstellen durch das Festschreiben des Charakters." | click
+}
+get-window "Charakter festscheiben" | get-button OK | click
+get-editor "Free Style Generator" | get-group "Übersicht" | get-label "The character is finshed and commited." 
+    | get-property caption | equals "The character is finshed and commited." | verify-true
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

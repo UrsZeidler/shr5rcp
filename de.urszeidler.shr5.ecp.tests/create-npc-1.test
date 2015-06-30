@@ -1,0 +1,141 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: create-npc-1
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _1i1JwB50EeW4ptoB54jvTw
+Runtime-Version: 2.0.0.201506120617
+Save-Time: 6/30/15 12:00 PM
+Tags: freestyle
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+take-screenshot "first-start"
+with [get-view "Model Explorer" | get-tree] {
+    get-item "shr5Resources/All" | drag-start "-32" 7
+    drag-end
+    select "shr5Resources/All/Spieler my player/Charakter Gruppe player group" 
+    select "shr5Resources/All/Spielleiter my game stuff/Charakter Gruppe Connections"
+}
+get-menu "Charakter/Charakter Generator wizard" | click
+take-screenshot "test2"
+with [get-window "Select generator object to create ..."] {
+take-screenshot "test1"
+    get-tree | select "Freestyle Generator"
+    get-button "Next >" | click
+}
+with [get-window -class WizardDialog] {
+    get-combo -after [get-label "Container auswählen"] | get-property selection | equals "Spielleiter my game stuff" 
+        | verify-true
+    get-combo -after [get-label "Wähle Gruppe"] | get-property selection | equals "Charakter Gruppe Connections" 
+        | verify-true
+    get-combo -after [get-label "Wähle Generator System"] | get-property selection | equals "" | verify-true
+}
+get-window -class WizardDialog | get-combo -after [get-label "Wähle Generator System"] 
+    | select "Free Style Free Style Generator"
+with [get-window -class WizardDialog] {
+    get-combo -after [get-label "Wähle Generator System"] | get-property selection 
+        | equals "Free Style Free Style Generator" | verify-true
+    get-editbox -after [get-label "Erzeugt einen Freestyle Generator"] | get-property text 
+        | equals "Erzeugt einen Freestyle Generator um einen Charakter ohne Regeln zu erstellen." | verify-true
+}
+with [get-window -class WizardDialog] {
+    get-button Finish | click
+    get-window "Perspektiv wechsel" | get-button Yes | click
+}
+with [get-editor "Free Style Generator"] {
+    get-button "Wähle eine Persona die Kopiert wird, oder einen Type und einen Meta Typen." 
+        | get-property "isEnabled()" | equals true | verify-true
+    with [get-section "auswählen"] {
+        get-button Spieler | get-property selected | equals true | verify-true
+        get-button "Nicht Spieler" | get-property containMenu | equals false | verify-true
+        get-link "nichts ausgewählt" | get-property caption | equals "nichts ausgewählt" | verify-true
+        get-link "nichts ausgewählt" -after [get-label "Ausgewählte Spezies"] | get-property caption 
+            | equals "nichts ausgewählt" | verify-true
+        get-link "Charakter Gruppe Connections" | get-property caption | equals "Charakter Gruppe Connections" 
+            | verify-true
+    }
+}
+get-editor "Free Style Generator" | get-group "Übersicht" | get-link "Free Style Free Style Generator" 
+    | get-property caption | equals "Free Style Free Style Generator" | verify-true
+with [get-editor "Free Style Generator"] {
+    with [get-group "Übersicht" | get-editbox -after [get-label "Character Name"]] {
+         set-text TestCharacter1
+    }
+    get-section "auswählen" | get-link "nichts ausgewählt" -after [get-label "Ausgewählte Persona"] | click
+}
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Mundane Persona Barkeeper"
+    get-button OK | click
+}
+with [get-editor "Free Style Generator"] {
+take-screenshot "test2"
+    get-button "Erstelle den Charakter mit den ausgewälten optionen." | get-property "isEnabled()" | equals true 
+        | verify-true
+    get-group "Übersicht" | get-label "All has been set, you can create the character now." | get-property caption 
+        | equals "All has been set, you can create the character now." | verify-true
+    get-section "auswählen" | get-link "Mundane Persona Barkeeper" | get-property caption 
+        | equals "Mundane Persona Barkeeper" | verify-true
+}
+with [get-editor "Free Style Generator"] {
+    get-section "auswählen" | get-button "Nicht Spieler" | click
+    get-button "Erstelle den Charakter mit den ausgewälten optionen." | click
+}
+with [get-editor "Free Style Generator"] {
+    get-button "Beende das Charakter erstellen durch das Festschreiben des Charakters." | get-property "isEnabled()" 
+        | equals true | verify-true
+    get-section "auswählen" | get-link | get-property "isExpanded()" | equals false | verify-true
+}
+get-editor "Free Style Generator" | get-group "Übersicht" 
+    | get-label "The character is created you can comit any time." | get-property caption 
+    | equals "The character is created you can comit any time." | verify-true
+get-editor "Free Style Generator" | get-tab-folder | get-tab-item Persona | click
+get-editor "Free Style Generator" | get-section Beschreibung | get-editbox -after [get-label Name] | get-property text 
+    | equals TestCharacter1 | verify-true
+with [get-editor "Free Style Generator"] {
+    with [get-tab-folder] {
+        get-tab-item Charakter | click
+        get-tab-item Steigerungen | click
+        get-tab-item "Character sheet" | click
+        get-tab-item "Shr5 generator sheet" | click
+        get-tab-item Charakter | click
+        get-tab-item Persona | click
+        get-tab-item "Freestyle generator" | click
+    }
+    get-button "Beende das Charakter erstellen durch das Festschreiben des Charakters." | click
+}
+get-window "Charakter festscheiben" | get-button Cancel | click
+get-editor "Free Style Generator" | get-button "Beende das Charakter erstellen durch das Festschreiben des Charakters." 
+    | get-property "isEnabled()" | equals true | verify-true
+get-editor "Free Style Generator" | get-button "Beende das Charakter erstellen durch das Festschreiben des Charakters." 
+    | click
+get-window "Charakter festscheiben" | get-button OK | click
+get-editor "Free Style Generator" | close
+get-menu "Fenster/Show Perspective" | click
+get-window "Open Perspective" | get-table | select "Shadowrun Resourcen \\(default\\)" | click -default
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Spielleiter my game stuff/Charakter Gruppe Connections/NSC Mundane Persona TestCharacter1" 
+    | double-click
+with [get-editor "NSC Mundane Persona TestCharacter1"] {
+    get-section Beschreibung | get-editbox -after [get-label Name] | get-property "getText()" | equals TestCharacter1 
+        | verify-true
+    with [get-section "attributes  skills"] {
+        get-group Skills | get-tree | get-item "Fertigkeits Gruppe Close Combat/Fertigkeit Waffenloser Kampf" 
+            | get-property "getText()" | equals "Fertigkeit Waffenloser Kampf" | verify-true
+        with [get-group attributes] {
+            get-label 3 | get-property caption | equals 3 | verify-true
+            get-label 3 -after [get-label "Stärke"] | get-property caption | equals 3 | verify-true
+            get-label 4 | get-property caption | equals 4 | verify-true
+        }
+    }
+}
+with [get-editor "NSC Mundane Persona TestCharacter1" | get-section "attributes  skills"] {
+    get-link "Spezies Mensch" | get-property caption | equals "Spezies Mensch" | verify-true
+    get-link "nichts ausgewählt" | get-property caption | equals "nichts ausgewählt" | verify-true
+}
+get-editor "NSC Mundane Persona TestCharacter1" | close
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

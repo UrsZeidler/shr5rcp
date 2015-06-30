@@ -1,0 +1,86 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: test-preferences
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _XshXMB8KEeW6LIvJ0-SaGg
+Runtime-Version: 2.0.0.201506120617
+Save-Time: 6/30/15 12:07 PM
+Tags: preferences
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Test the basic preferences.
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+
+take-screenshot "first-start-pref"
+get-menu "Fenster/Preferences" | click
+with [get-window Preferences] {
+take-screenshot "test0"
+    get-editbox -after [get-label "main project name"] | get-property text | equals shr5Resources | verify-true
+    with [get-button "display the skillgroup bold"] {
+        get-property caption | equals "display the skillgroup bold" | verify-true
+        get-property selected | equals true | verify-true
+    }
+}
+get-window Preferences | get-tree | select "Basis Shadowrun Preferences/Interne Druck Einstellungen"
+take-screenshot "test1"
+get-window Preferences | get-label "Interne Druck Einstellungen" | get-property caption 
+    | equals "Interne Druck Einstellungen" | verify-true
+get-window Preferences | get-tree | select "Basis Shadowrun Preferences/Sourcebook View Preferences"
+
+with [get-window Preferences] {
+    get-label "Link the source books." | get-property caption | equals "Link the source books." | verify-true
+    get-label "Linke the source books with the pdf." | get-property caption 
+        | equals "Linke the source books with the pdf." | verify-true
+}
+get-window Preferences | get-tree | select "Basis Shadowrun Preferences/model appearence "
+with [get-window Preferences] {
+    get-label "model appearence" | get-property caption | equals "model appearence" | verify-true
+    with [get-button "Reduce tree complexity"] {
+        get-property caption | equals "Reduce tree complexity" | verify-true
+        get-property selected | equals true | verify-true
+    }
+}
+get-window Preferences | get-tree | select "Basis Shadowrun Preferences/Übersetzungs Einstellungen"
+with [get-window Preferences] {
+    get-label "Übersetzungs Einstellungen" | get-property caption | equals "Übersetzungs Einstellungen" | verify-true
+    with [get-button "Übersetze die Resourcen"] {
+        get-property caption | equals "Übersetze die Resourcen" | verify-true
+        get-property selected | equals true | verify-true
+    }
+    with [get-button "Wähle sprache automatisch"] {
+        get-property caption | equals "Wähle sprache automatisch" | verify-true
+        get-property selected | equals true | verify-true
+    }
+}
+get-window Preferences | get-tree | select "Script Preferences"
+with [get-window Preferences] {
+    get-label "Script Preferences" | get-property caption | equals "Script Preferences" | verify-true
+    get-combo -after [get-label "Start webserver with script"] | get-property selection | equals "ask always" 
+        | verify-true
+}
+get-window Preferences | get-tree | select "Script Preferences/Script graph preferences"
+with [get-window Preferences] {
+    get-label "Script graph preferences" | get-property caption | equals "Script graph preferences" | verify-true
+    get-label "fg color for combat" | get-property caption | equals "fg color for combat" | verify-true
+}
+get-window Preferences | get-tree | select "Script Preferences/Webserver Preferences"
+with [get-window Preferences] {
+    get-label "Webserver Preferences" | get-property caption | equals "Webserver Preferences" | verify-true
+    with [get-button "Open web app in brower on server start."] {
+        get-property caption | equals "Open web app in brower on server start." | verify-true
+        get-property selected | equals true | verify-true
+    }
+    get-editbox -after [get-label "Server port"] | get-property text | equals 8089 | verify-true
+}
+get-window Preferences | get-button OK | click
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
