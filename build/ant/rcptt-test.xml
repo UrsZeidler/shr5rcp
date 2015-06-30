@@ -51,6 +51,8 @@
 
       <arg value="-testOptions" />
       <arg value="reportingIncludeIgnoredWaitDetails=true;reportingPassedTestDetails=true;runtimeEnableActivityLogs=true;q7ImageCapture=true" />
+   
+      <sysproperty key="image.folder" value="${image.folder}" />
     </java>
   </target>
 </project>
