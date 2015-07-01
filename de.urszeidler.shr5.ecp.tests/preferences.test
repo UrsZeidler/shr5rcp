@@ -1,0 +1,80 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: preferences
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _mB7RQB_gEeWSRorpcoiIvw
+Runtime-Version: 2.0.0.201506120617
+Save-Time: 7/1/15 1:06 PM
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+Test the preferences.
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-menu "Window/Preferences" | click
+get-preferences-menu | click
+with [get-window Preferences] {
+    get-editbox -after [get-label "main project name"] | get-property text | equals shr5Resources | verify-true
+    get-combo -after [get-label "Switch to the character building perspective."] | get-property selection 
+        | equals "ask always" | verify-true
+    with [get-button "Higlight Skillgroup"] {
+        get-property caption | equals "Higlight Skillgroup" | verify-true
+        get-property selected | equals false | verify-true
+    }
+    with [get-button "display the skillgroup bold"] {
+        get-property caption | equals "display the skillgroup bold" | verify-true
+        get-property selected | equals true | verify-true
+    }
+}
+get-window Preferences | get-tree | select "Basic Shadowrun Preferences/Internal Print Preferences"
+with [get-window Preferences] {
+    get-label "Main printing prefereces" | get-property caption | equals "Main printing prefereces" | verify-true
+    with [get-button "print persona description"] {
+        get-property caption | equals "print persona description" | verify-true
+        get-property selected | equals true | verify-true
+    }
+}
+get-window Preferences | get-tree | select "Basic Shadowrun Preferences/Localisation Preferences"
+with [get-window Preferences] {
+    with [get-button "Localize resources"] {
+        get-property caption | equals "Localize resources" | verify-true
+        get-property selected | equals true | verify-true
+    }
+    with [get-button "Choose local automatic"] {
+        get-property caption | equals "Choose local automatic" | verify-true
+        get-property selected | equals true | verify-true
+    }
+}
+get-window Preferences | get-tree | select "Basic Shadowrun Preferences/Sourcebook View Preferences"
+with [get-window Preferences | get-group "Source books"] {
+    get-editbox -after [get-label "Sourcebook Assassin's Primer"] | get-property text | equals "" | verify-true
+    get-editbox -after [get-label offset] | get-property text | equals 0 | verify-true
+}
+get-window Preferences | get-tree | select "Basic Shadowrun Preferences/model appearence "
+with [get-window Preferences | get-button "Reduce tree complexity"] {
+    get-property caption | equals "Reduce tree complexity" | verify-true
+    get-property selected | equals true | verify-true
+}
+get-window Preferences | get-tree | select "Script Preferences"
+get-window Preferences | get-combo -after [get-label "Start webserver with script"] | get-property selection 
+    | equals "ask always" | verify-true
+get-window Preferences | get-tree | select "Script Preferences/Script graph preferences"
+get-window Preferences | get-tree | select "Script Preferences/Webserver Preferences"
+with [get-window Preferences] {
+    get-editbox -after [get-label "Server port"] | get-property text | equals 8089 | verify-true
+    with [get-button "Open web app in brower on server start."] {
+        get-property caption | equals "Open web app in brower on server start." | verify-true
+        get-property selected | equals true | verify-true
+    }
+    get-editbox -after [get-label "History lines"] | get-property text | equals 2000 | verify-true
+}
+get-window Preferences | get-button Cancel | click
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
