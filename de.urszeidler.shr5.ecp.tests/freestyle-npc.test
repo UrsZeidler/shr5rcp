@@ -1,0 +1,332 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: freestyle-npc
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _s1RRgB_ZEeWSRorpcoiIvw
+Runtime-Version: 2.0.0.201506120617
+Save-Time: 7/1/15 12:42 PM
+Tags: freestyle
+Testcase-Type: ecl
+
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
+Content-Type: text/plain
+Entry-Name: .description
+
+A freestyle generator test.
+------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa--
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-menu "Character/Character Generator wizard" | click
+get-window "Select generator object to create ..." | get-button "Next >" | click
+with [get-window -class WizardDialog] {
+    get-combo -after [get-label "Select Container"] | select "Gamemaster my game stuff"
+    get-combo -after [get-label "Select campaign"] | select "Free Style Free Style Generator"
+    get-combo -after [get-label "Select Group"] | select "Character Group non player group"
+}
+get-window -class WizardDialog | get-editbox -after [get-label "Create a freestyle Generator"] | get-property text 
+    | equals "Creates a freestyle generator object for creating a character without rules." | verify-true
+get-window -class WizardDialog | get-button Finish | click
+get-window -class WizardDialog | get-window "Switch Perspective" 
+    | get-label "The preferred perspective is the character building perspective. You want to switch ?" 
+    | get-property caption 
+    | equals "The preferred perspective is the character building perspective. You want to switch ?" | verify-true
+get-window -class WizardDialog | get-window "Switch Perspective" | get-button No | click
+with [get-editor "Free Style Generator"] {
+    get-button "Choose a persona to copy, or a type and a metatype." | get-property "isEnabled()" | equals true 
+        | verify-true
+    with [get-group Overview] {
+        get-editbox -after [get-label "Character Name"] | get-property text | equals "" | verify-true
+        get-label "Choose the basic Concept" | get-property caption | equals "Choose the basic Concept" | verify-true
+    }
+    get-section choose | get-link "Character Group non player group" | get-property caption 
+        | equals "Character Group non player group" | verify-true
+}
+with [get-editor "Free Style Generator"] {
+    with [get-group Overview | get-editbox -after [get-label "Character Name"]] {
+        set-text "TestCharacter-1"
+    }
+    with [get-section choose] {
+        get-button "None player" | click
+        get-link "nothing selected" | click
+    }
+}
+get-window "Select type" | get-tree | select "Mudan Persona" | click -default
+get-editor "Free Style Generator" | get-section choose | get-link "nothing selected" | click
+get-window -class OwnChooseDialog | get-tree | select "Species Human" | click -default
+with [get-editor "Free Style Generator"] {
+    get-button "Create the character with the choosen options." | get-property "isEnabled()" | equals true | verify-true
+    get-group Overview | get-label "All has been set, you can create the character now." | get-property caption 
+        | equals "All has been set, you can create the character now." | verify-true
+}
+get-editor "Free Style Generator" | get-button "Create the character with the choosen options." | click
+with [get-editor "Free Style Generator"] {
+    get-button "Finish the character generation by commiting the character." | get-property "isEnabled()" | equals true 
+        | verify-true
+    get-group Overview | get-label "The character is created you can comit any time." | get-property caption 
+        | equals "The character is created you can comit any time." | verify-true
+    get-section choose | get-link | get-property "isExpanded()" | equals false | verify-true
+}
+get-editor "Free Style Generator" | get-tab-folder | get-tab-item Persona | click
+with [get-editor "Free Style Generator"] {
+    get-section Description | get-editbox -after [get-label Name] | get-property text | equals "TestCharacter-1" 
+        | verify-true
+    get-link "Species Human" | get-property caption | equals "Species Human" | verify-true
+    with [get-section Attributes] {
+        get-group Physical | get-editbox -after [get-label Body] | get-property text | equals "1.0" | verify-true
+        get-group Special | get-label "6.00" | get-property caption | equals "6.00" | verify-true
+    }
+}
+with [get-editor "Free Style Generator"] {
+    with [get-section Attributes] {
+        with [get-group Physical] {
+            get-editbox -after [get-label Body] | set-text 3
+            get-editbox -after [get-label Agility] | set-text 3
+            get-editbox -after [get-label Reaction] | set-text 2
+        }
+        with [get-group Mental] {
+            get-editbox -after [get-label Willpower] | set-text 2
+            get-editbox -after [get-label Intuition] | set-text 2
+            get-editbox -after [get-label Logic] | set-text 2
+            get-editbox -after [get-label Charisma] | set-text 2
+        }
+        with [get-group Physical] {
+            get-editbox -after [get-label Strength] | set-text 3
+            get-editbox -after [get-label Reaction] | set-text 3
+        }
+        with [get-group Mental] {
+            get-editbox -after [get-label Charisma] | set-text 3
+            get-editbox -after [get-label Willpower] | set-text 3
+            get-editbox -after [get-label Intuition] | set-text 3
+            get-editbox -after [get-label Logic] | set-text 3
+        }
+    }
+    with [get-section Skills | get-tree] {
+        select "Skill group Acting/Skill Con" | activate-cell-edit -column 2
+        get-editbox | set-text 2
+        apply-cell-edit -deactivate
+        select "Skill group Acting/Skill Impersonation" | activate-cell-edit -column 2
+        get-editbox | set-text 2
+        apply-cell-edit -deactivate
+        select "Skill group Acting/Skill Performance" | activate-cell-edit -column 2
+        get-editbox | set-text 2
+        apply-cell-edit -deactivate
+        select "Skill group Athletics" | activate-cell-edit -column 2
+        get-editbox | set-text 2
+        apply-cell-edit -deactivate
+        select "Skill group Athletics"
+    }
+    get-tab-folder | get-tab-item Character | click
+    with [get-group Allgemein] {
+        get-combo -after [get-label Sex] | select male
+        get-link "nothing selected" | click
+    }
+}
+get-window -class OwnChooseDialog | get-tree | select "Language skill English" | click -default
+with [get-editor "Free Style Generator"] {
+    with [get-tab-folder] {
+        get-tab-item Advancement | click
+        get-tab-item Character | click
+    }
+    get-section Inventory | get-button "Add a Abstract item to the Inventory feature." | click
+}
+with [get-window "Add Inventory -- Shr List"] {
+    get-table | select "Item Micro-transceiver" | double-click
+    get-button OK | click
+}
+get-editor "Free Style Generator" | get-section Inventory | get-button "Add a Abstract item to the Inventory feature." 
+    | click
+with [get-window "Add Inventory -- Shr List"] {
+    with [get-group "Filter Available Choices" | get-button "display the money value"] {
+        click
+        click
+    }
+    get-button Cancel | click
+}
+with [get-editor "Free Style Generator"] {
+    get-tab-folder | get-tab-item "Freestyle generator" | click
+    get-button "Finish the character generation by commiting the character." | click
+}
+get-window "commit character" | get-button OK | click
+get-editor "Free Style Generator" | get-group Overview | get-editbox -after [get-label "Character Name"] 
+    | click-text 16 1 right
+get-editor "Free Style Generator" | get-group Overview | get-label "The character is finshed and commited." 
+    | get-property caption | equals "The character is finshed and commited." | verify-true
+get-menu "Character/Open Managed Character" | click
+with [get-window "Open Managed Character."] {
+    with [get-editbox -after [get-label filter]] {
+        set-text TestCharacte
+    }
+    get-tree | select "NPC Mudan Persona TestCharacter-1" | click -default
+}
+with [get-editor "NPC Mudan Persona TestCharacter-1"] {
+    get-section Description | get-editbox -after [get-label Name] | get-property text | equals "TestCharacter-1" 
+        | verify-true
+    with [get-section "attributes  skills"] {
+        with [get-group attributes] {
+            get-label 3 | get-property caption | equals 3 | verify-true
+            get-label 3 -after [get-label Strength] | get-property caption | equals 3 | verify-true
+        }
+        with [get-group Skills | get-tree] {
+            get-item "Skill group Acting/Skill Con" | get-property "values['dice pool']" | equals "[Cha] : 5" 
+                | verify-true
+            get-item "Skill group Acting/Skill Con" | get-property "values['value']" | equals 2 | verify-true
+            get-item "Skill group Athletics" | get-property "values['dice pool']" | equals 2 | verify-true
+            get-item "Skill group Athletics" | get-property "values['value']" | equals 2 | verify-true
+            get-item "Skill group Athletics" | get-property "values['Groups/Skills']" | equals "Skill group Athletics" 
+                | verify-true
+            get-item "Skill group Athletics/Skill Gymnastics" | get-property "values['specialism']" | equals "" 
+                | verify-true
+            get-item "Skill group Athletics/Skill Gymnastics" | get-property "values['dice pool']" | equals "[Agi] : 5" 
+                | verify-true
+            get-item "Skill group Athletics/Skill Gymnastics" | get-property "values['value']" | equals 2 | verify-true
+            get-item "Skill group Athletics/Skill Gymnastics" | get-property "values['Groups/Skills']" 
+                | equals "Skill Gymnastics" | verify-true
+        }
+    }
+}
+with [get-editor "NPC Mudan Persona TestCharacter-1"] {
+    with [get-section "attributes  skills"] {
+        get-link "Species Human" | get-property caption | equals "Species Human" | verify-true
+        get-link "Language skill English" | get-property caption | equals "Language skill English" | verify-true
+    }
+    get-section character | get-tree | get-item "Item Micro-transceiver" | get-property caption 
+        | equals "Item Micro-transceiver" | verify-true
+}
+with [get-editor "NPC Mudan Persona TestCharacter-1" | get-tab-folder] {
+    get-tab-item Persona | click
+    get-tab-item "Freestyle generator" | click
+    get-tab-item Overview | click
+    get-tab-item Persona | click
+    get-tab-item "Freestyle generator" | click
+}
+with [get-editor "NPC Mudan Persona TestCharacter-1" | get-section choose] {
+    get-link "Mudan Persona" | get-property "isEnabled()" | equals false | verify-true
+    with [get-link "Species Human"] {
+        get-property caption | equals "Species Human" | verify-true
+        get-property "isEnabled()" | equals false | verify-true
+    }
+}
+get-editor "NPC Mudan Persona TestCharacter-1" | close
+get-editor "Free Style Generator" | close
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Gamemaster my game stuff/Character Group non player group/NPC Mudan Persona TestCharacter-1" 
+    | double-click
+get-editor "NPC Mudan Persona TestCharacter-1" | close
+
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Gamemaster my game stuff/Character Group non player group"
+get-menu "Character/Character Generator wizard" | click
+get-window "Select generator object to create ..." | get-button "Next >" | click
+with [get-window -class WizardDialog] {
+    get-editbox -after [get-label "Create a freestyle Generator"] | get-property text 
+        | equals "Select a system and a group. The system is the campaign like street scrum or core rules, the group will be the container of your character." 
+        | verify-true
+    get-combo -after [get-label "Select campaign"] | get-property selection | equals "" | verify-true
+}
+get-window -class WizardDialog | get-combo -after [get-label "Select campaign"] 
+    | select "Free Style Free Style Generator"
+get-window -class WizardDialog | get-editbox -after [get-label "Create a freestyle Generator"] | get-property text 
+    | equals "Creates a freestyle generator object for creating a character without rules." | verify-true
+with [get-window -class WizardDialog] {
+    get-button Finish | click
+    get-window "Switch Perspective" | get-button Yes | click
+}
+with [get-editor "Free Style Generator"] {
+    get-button "Choose a persona to copy, or a type and a metatype." | get-property "isEnabled()" | equals true 
+        | verify-true
+    get-group Overview | get-link "Free Style Free Style Generator" | get-property caption 
+        | equals "Free Style Free Style Generator" | verify-true
+    get-section choose | get-link "Character Group non player group" | get-property caption 
+        | equals "Character Group non player group" | verify-true
+}
+get-tab-folder -index 2 | get-property activePage | equals "Character rule validation" | verify-true
+with [get-view "Character rule validation" | get-tree] {
+    get-item "The required feature 'Character' of 'Free Style Generator' must be set" | get-property caption 
+        | equals "The required feature 'Character' of 'Free Style Generator' must be set" | verify-true
+    get-item "The required feature 'Character Name' of 'Free Style Generator' must be set" | get-property caption 
+        | equals "The required feature 'Character Name' of 'Free Style Generator' must be set" | verify-true
+}
+get-editor "Free Style Generator" | get-section choose | get-button Player | get-property selected | equals true 
+    | verify-true
+with [get-editor "Free Style Generator"] {
+    with [get-group Overview | get-editbox -after [get-label "Character Name"]] {
+        click-text
+        key-type "M1+v"
+        set-text freestyle
+        key-type "M1+v"
+    }
+    with [get-section choose] {
+        get-button "None player" | click
+        get-link "nothing selected" -after [get-label "Selected Persona"] | click
+    }
+}
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Mudan Persona TestCharacter-1"
+    get-button OK | click
+}
+with [get-editor "Free Style Generator"] {
+    get-button "Create the character with the choosen options." | get-property "isEnabled()" | equals true | verify-true
+    get-group Overview | get-editbox -after [get-label "Character Name"] | get-property text | equals freestyle 
+        | verify-true
+    get-section choose | get-link "Mudan Persona TestCharacter-1" | get-property caption 
+        | equals "Mudan Persona TestCharacter-1" | verify-true
+}
+get-view "Character rule validation" | get-tree 
+    | get-item "The required feature 'Character' of 'Free Style Generator freestyle' must be set" 
+    | get-property caption | equals "The required feature 'Character' of 'Free Style Generator freestyle' must be set" 
+    | verify-true
+get-editor "Free Style Generator" | get-button "Create the character with the choosen options." | click
+get-editor "Free Style Generator" | get-group Overview | get-label "The character is created you can comit any time." 
+    | get-property caption | equals "The character is created you can comit any time." | verify-true
+get-editor "Free Style Generator" | get-tab-folder | get-tab-item Persona | click
+with [get-editor "Free Style Generator"] {
+    get-section Description | get-editbox -after [get-label Name] | get-property text | equals freestyle | verify-true
+    with [get-section Attributes | get-group Physical] {
+        get-editbox -after [get-label Body] | get-property text | equals "3.0" | verify-true
+        get-editbox -after [get-label Strength] | get-property text | equals "3.0" | verify-true
+    }
+}
+get-view "Character rule validation" | get-label freestyle | get-property caption | equals freestyle | verify-true
+with [get-editor "Free Style Generator"] {
+    get-tab-folder | get-tab-item "Freestyle generator" | click
+    get-button "Finish the character generation by commiting the character." | click
+}
+get-window "commit character" | get-button OK | click
+get-editor "Free Style Generator" | get-group Overview | get-label "The character is finshed and commited." 
+    | get-property caption | equals "The character is finshed and commited." | verify-true
+get-menu "Window/Show Perspective" | click
+get-window "Open Perspective" | get-table | select "Shadowrun resources \\(default\\)" | click -default
+get-editor "Free Style Generator" | close
+get-menu "Character/Open Managed Character" | click
+with [get-window "Open Managed Character."] {
+    with [get-editbox -after [get-label filter]] {
+        key-type "M1+v"
+        set-text freestyle
+        key-type "M1+v"
+    }
+    get-tree | select "NPC Mudan Persona freestyle" | click -default
+}
+with [get-editor "NPC Mudan Persona freestyle"] {
+    get-section Description | get-editbox -after [get-label Name] | get-property text | equals freestyle | verify-true
+    with [get-section "attributes  skills"] {
+        with [get-group attributes] {
+            get-label 3 | get-property caption | equals 3 | verify-true
+            get-label 3 -after [get-label Strength] | get-property caption | equals 3 | verify-true
+        }
+        with [get-group Skills | get-tree] {
+            get-item "Skill group Acting/Skill Con" | get-property "values['specialism']" | equals "[]" | verify-true
+            get-item "Skill group Acting/Skill Con" | get-property "values['dice pool']" | equals "[Cha] : 5" 
+                | verify-true
+            get-item "Skill group Acting/Skill Con" | get-property "values['value']" | equals 2 | verify-true
+            get-item "Skill group Acting/Skill Con" | get-property "values['Groups/Skills']" | equals "Skill Con" 
+                | verify-true
+        }
+    }
+}
+get-editor "NPC Mudan Persona freestyle" | close
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
