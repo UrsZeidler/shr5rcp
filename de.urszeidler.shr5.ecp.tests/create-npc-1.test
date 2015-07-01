@@ -6,7 +6,7 @@ Element-Version: 3.0
 External-Reference: 
 Id: _1i1JwB50EeW4ptoB54jvTw
 Runtime-Version: 2.0.0.201506120617
-Save-Time: 6/30/15 12:00 PM
+Save-Time: 7/1/15 10:31 AM
 Tags: freestyle
 Testcase-Type: ecl
 
@@ -14,7 +14,7 @@ Testcase-Type: ecl
 Content-Type: text/ecl
 Entry-Name: .content
 
-take-screenshot "first-start"
+
 with [get-view "Model Explorer" | get-tree] {
     get-item "shr5Resources/All" | drag-start "-32" 7
     drag-end

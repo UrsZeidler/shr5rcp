@@ -3,6 +3,10 @@
   <property name="runner-path" location="/path/to/runner" />
   <property name="aut-path" location="/path/to/aut" />
   <property name="test-path" location="${basedir}/../de.urszeidler.shr5.ecp.tests"/> 
+  <property name="images" value="/home/urs/git/shr5rcp.wiki/wiki-images/images"/>
+
+	
+	
   <!-- properties below configure all intermediate and result files
        to be put in "results" folder next to a project folder. If
        that's ok, you can leave them as is -->
@@ -22,8 +26,27 @@
     <mkdir dir="${test-results}" />
   </target>
 
+	<!-- - - - - - - - - - - - - - - - - - 
+          target: configure-aut                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="configure-aut">
+            <delete file="${aut-path}/run_shr.ini" />
+    		<echo  file="${aut-path}/run_shr.ini">
+-startup plugins/org.eclipse.equinox.launcher_1.3.0.v20140415-2008.jar
+--launcher.library plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20150204-1316
+-nl 
+ en
+    			
+-vmargs
+-XX:MaxPermSize=256m
+-Xms240m
+-Xmx768m
+-Dimage.folder=${images}
+</echo>
+    </target>
+
   
-  <target name="test" depends="init">
+  <target name="test" depends="init,configure-aut">
     <java jar="${runner-path}/plugins/${erunner2}" fork="true">
       <arg value="-application" />
       <arg value="org.eclipse.rcptt.runner.headless" />
@@ -33,7 +56,10 @@
 
       <arg value="-aut" />
       <arg value="${aut-path}" />
-
+      
+      <arg value="-autArgs" />
+      <arg value="'-nl;en'" />
+      	
       <arg value="-autWsPrefix" />
       <arg value="${aut-workspace}" />
 
@@ -51,8 +77,7 @@
 
       <arg value="-testOptions" />
       <arg value="reportingIncludeIgnoredWaitDetails=true;reportingPassedTestDetails=true;runtimeEnableActivityLogs=true;q7ImageCapture=true" />
-   
-      <arg value="-Dimage.folder=${image.folder}" />
+
     </java>
   </target>
 </project>

@@ -6,7 +6,7 @@ Element-Type: context
 Element-Version: 2.0
 Id: _lobIMB9IEeWS-4GHvxJuGA
 Runtime-Version: 2.0.0.201506120617
-Save-Time: 6/30/15 9:52 PM
+Save-Time: 7/1/15 10:39 AM
 Tags: functions
 
 ------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
@@ -15,17 +15,17 @@ Entry-Name: .ecl.context
 
 
 proc "save-editor-image" [val editorName][val name] {
- find-tab-folder $editorName | get-object | save-screenshot -out [format "%s/%s-editor-1.png" [get-java-property "image.folder"] [$name]]
+ find-tab-folder $editorName | get-object | save-screenshot -out [format "%s/tmp/%s-editor-1.png" [get-java-property "image.folder"] [$name]]
 }
 
 proc "save-window-image" [val window -input] [val name] {
-$window | get-object | save-screenshot -out [format "%s/%s-editor-1.png" [get-java-property "image.folder"] [$name]]
+$window | get-object | save-screenshot -out [format "%s/tmp/%s-window-1.png" [get-java-property "image.folder"] [$name]]
 
 }
 
 
 proc "save-editor-page" [val editor -input]  [val name] {
- $editor | get-object | save-screenshot -out [format "%s/%s-editor-1.png" [get-java-property "image.folder"] [$name]]
+ $editor | get-object | save-screenshot -out [format "%s/tmp/%s-editor-1.png" [get-java-property "image.folder"] [$name]]
 }
 
 proc "find-tab-folder" [val activePage] {
