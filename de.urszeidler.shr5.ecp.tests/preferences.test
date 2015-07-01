@@ -6,7 +6,7 @@ Element-Version: 3.0
 External-Reference: 
 Id: _mB7RQB_gEeWSRorpcoiIvw
 Runtime-Version: 2.0.0.201506120617
-Save-Time: 7/1/15 1:06 PM
+Save-Time: 7/1/15 9:26 PM
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -19,9 +19,10 @@ Test the preferences.
 Content-Type: text/ecl
 Entry-Name: .content
 
-get-menu "Window/Preferences" | click
+
 get-preferences-menu | click
 with [get-window Preferences] {
+	get-tree | select "Basic Shadowrun Preferences"
     get-editbox -after [get-label "main project name"] | get-property text | equals shr5Resources | verify-true
     get-combo -after [get-label "Switch to the character building perspective."] | get-property selection 
         | equals "ask always" | verify-true

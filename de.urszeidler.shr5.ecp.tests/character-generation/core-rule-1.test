@@ -1,0 +1,374 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: core-rule-1
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _bAKkQB_xEeWSRorpcoiIvw
+Runtime-Version: 2.0.0.201506120617
+Save-Time: 7/1/15 9:21 PM
+Tags: character-generation, core-rule
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-menu "Character/Character Generator wizard" | click
+with [get-window "Select generator object to create ..."] {
+    get-tree | select "Shadowrun 5 Core rule Generator"
+    get-button "Next >" | click
+}
+with [get-window -class WizardDialog] {
+    get-combo -after [get-label "Select campaign"] | select "ruleset The basic character generator system."
+    get-button Finish | click
+    get-window "Switch Perspective" | get-button Yes | click
+}
+with [get-editor "Shr5 Generator"] {
+    get-button "Choose the priorities and create the character." | get-property "isEnabled()" | equals true 
+        | verify-true
+    with [get-group Overview] {
+        get-editbox -after [get-label "Character Name"] | get-property text | equals "" | verify-true
+        get-link "ruleset The basic character generator system." | get-property caption 
+            | equals "ruleset The basic character generator system." | verify-true
+    }
+    with [get-section choose] {
+        get-link "Character Group non player group" | get-property caption | equals "Character Group non player group" 
+            | verify-true
+        get-button "None player" | get-property selected | equals false | verify-true
+        get-button Player | get-property selected | equals true | verify-true
+    }
+}
+get-editor "Shr5 Generator" | get-section choose | get-link "nothing selected" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Meta Type D \\[Species Human\\] \\(3\\)"
+    get-button OK | click
+}
+get-editor "Shr5 Generator" | get-section choose | get-link "nothing selected" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Attributes A \\(24\\)"
+    get-button OK | click
+}
+get-editor "Shr5 Generator" | get-section choose | get-link "nothing selected" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Mudan E"
+    get-button OK | click
+}
+get-view "Character rule validation" | get-tree | get-item "You have choose less than 5, or equal categories. " 
+    | get-property "getText()" | equals "You have choose less than 5, or equal categories." | verify-true
+get-editor "Shr5 Generator" | get-section choose | get-link "nothing selected" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Skill C \\(28\\/2\\)"
+    get-button OK | click
+}
+get-editor "Shr5 Generator" | get-section choose | get-link "nothing selected" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Resources B \\(275000\\)"
+    get-button OK | click
+}
+with [get-editor "Shr5 Generator"] {
+    get-group Overview | get-label "All has been set, you can create the character now." | get-property caption 
+        | equals "All has been set, you can create the character now." | verify-true
+    get-button "Create the character with the choosen options." | get-property "isEnabled()" | equals true | verify-true
+}
+with [get-view "Character rule validation" | get-tree] {
+    get-item "The required feature 'Character' of 'Shr5 Generator' must be set" | get-property caption 
+        | equals "The required feature 'Character' of 'Shr5 Generator' must be set" | verify-true
+    get-item "The required feature 'Character Name' of 'Shr5 Generator' must be set" | get-property caption 
+        | equals "The required feature 'Character Name' of 'Shr5 Generator' must be set" | verify-true
+}
+with [get-editor "Shr5 Generator" | get-group Overview | get-editbox -after [get-label "Character Name"]] {
+    set-text "Test-Character-1"
+}
+get-view "Character rule validation" | get-tree 
+    | get-item "The required feature 'Character' of 'Shr5 Generator Test-Character-1' must be set" 
+    | get-property caption | equals "The required feature 'Character' of 'Shr5 Generator Test-Character-1' must be set" 
+    | verify-true
+get-editor "Shr5 Generator" | get-button "Create the character with the choosen options." | click
+get-editor "Shr5 Generator" | get-group Overview | get-label "The character is created spend all the values." 
+    | get-property caption | equals "The character is created spend all the values." | verify-true
+with [get-view "Character rule validation" | get-tree] {
+    get-item "You need to choose a lifestyle for PC Mudan Persona Test-Character-1. A lifestyle is a contract." 
+        | get-property caption 
+        | equals "You need to choose a lifestyle for PC Mudan Persona Test-Character-1. A lifestyle is a contract." 
+        | verify-true
+    get-item "You need to choose a lifestyle for PC Mudan Persona Test-Character-1. A lifestyle is a contract." 
+        | get-property index | equals 1 | verify-true
+    get-item "You need to spend 24 attributes points more." | get-property caption 
+        | equals "You need to spend 24 attributes points more." | verify-true
+    get-item "You need to spend 24 attributes points more." | get-property index | equals 2 | verify-true
+}
+with [get-editor "Shr5 Generator" | get-section create] {
+    get-editbox -after [get-label "Karma to resources"] | get-property text | equals "0.0" | verify-true
+    get-label "left :25" | get-property caption | equals "left :25" | verify-true
+}
+get-editor "Shr5 Generator" | get-section create | get-editbox -after [get-label "Karma to resources"] | set-text 1
+with [get-editor "Shr5 Generator" | get-section create] {
+    get-editbox -after [get-label "Karma to resources"] | get-property text | equals "1.0" | verify-true
+    get-label "left :24" | get-property caption | equals "left :24" | verify-true
+}
+with [get-view "Character rule validation" | get-tree] {
+    get-item "You have to spend 24 karma points more." | get-property caption 
+        | equals "You have to spend 24 karma points more." | verify-true
+    get-item "You have to spend 24 karma points more." | get-property index | equals 9 | verify-true
+}
+with [get-editor "Shr5 Generator"] {
+    get-tab-folder | get-tab-item Persona | click
+    get-section Attributes | get-group Physical | get-editbox -after [get-label Body] | set-text 2
+}
+get-editor "Shr5 Generator" | get-section Attributes | get-group Physical | get-editbox -after [get-label Body] 
+    | get-property text | equals "2.0" | verify-true
+get-view "Character rule validation" | get-tree | get-item "You need to spend 23 attributes points more." 
+    | get-property caption | equals "You need to spend 23 attributes points more." | verify-true
+with [get-editor "Shr5 Generator" | get-section Attributes] {
+    with [get-group Physical] {
+        get-editbox -after [get-label Strength] | set-text 3
+        get-editbox -after [get-label Agility] | set-text 3
+        get-editbox -after [get-label Reaction] | set-text 4
+    }
+    with [get-group Mental] {
+        get-editbox -after [get-label Charisma] | set-text 2
+        get-editbox -after [get-label Willpower] | set-text 3
+        get-editbox -after [get-label Intuition] | set-text 4
+        get-editbox -after [get-label Logic] | set-text 3
+    }
+    with [get-group Physical] {
+        get-editbox -after [get-label Body] | set-text 4
+        get-editbox -after [get-label Strength] | set-text 4
+        get-editbox -after [get-label Agility] | set-text 4
+        get-editbox -after [get-label Reaction] | set-text 6
+    }
+    get-group Mental | get-editbox -after [get-label Charisma] | set-text 3
+}
+get-editor "Shr5 Generator" | get-section Attributes | get-group Physical | get-editbox -after [get-label Body] 
+    | get-property text | equals "4.0" | verify-true
+get-view "Character rule validation" | get-tree | get-item "You need to spend 1 attributes points more." 
+    | get-property caption | equals "You need to spend 1 attributes points more." | verify-true
+get-editor "Shr5 Generator" | get-section Attributes | get-group Mental | get-editbox -after [get-label Logic] 
+    | set-text 4
+get-view "Character rule validation" | get-tree | get-item "You need to spend 3 special points more." 
+    | get-property caption | equals "You need to spend 3 special points more." | verify-true
+with [get-editor "Shr5 Generator"] {
+    with [get-section Attributes] {
+        get-group Special | get-editbox -after [get-label "Edge base"] | set-text 5
+        click
+    }
+    with [get-section Skills | get-tree] {
+        select "Skill group Acting" | activate-cell-edit -column 2
+        get-editbox | set-text 2
+        apply-cell-edit -deactivate
+        select "Skill group Acting"
+    }
+}
+get-view "Character rule validation" | get-tree | get-property "getData().getChildren().size()" | equals 7 | verify-true
+with [get-editor "Shr5 Generator" | get-section Skills | get-tree] {
+    select "Skill group Athletics/Skill Gymnastics" | activate-cell-edit -column 2
+    get-editbox | set-text 7
+    apply-cell-edit -deactivate
+    select "Skill group Athletics/Skill Gymnastics"
+}
+get-view "Character rule validation" | get-tree 
+    | get-item "The skills \\[Gymnastics\\] are over the allowed value of 6." | get-property caption 
+    | equals "The skills [Gymnastics] are over the allowed value of 6." | verify-true
+with [get-editor "Shr5 Generator" | get-section Skills | get-tree] {
+    select "Skill group Athletics/Skill Gymnastics" | activate-cell-edit -column 2
+    get-editbox | set-text 6
+    apply-cell-edit -deactivate
+    select "Skill group Athletics/Skill Running" | activate-cell-edit -column 2
+    get-editbox | set-text 5
+    apply-cell-edit -deactivate
+    select "Skill group Athletics/Skill Swimming" | activate-cell-edit -column 2
+    get-editbox | set-text 6
+    apply-cell-edit -deactivate
+    select "Skill group Biotech/Skill Biotechnology" | activate-cell-edit -column 2
+    get-editbox | set-text 3
+    apply-cell-edit -deactivate
+    select "Skill group Biotech/Skill Cybertechnology" | activate-cell-edit -column 2
+    get-editbox | set-text 4
+    apply-cell-edit -deactivate
+    select "Skill group Biotech/Skill First Aid" | activate-cell-edit -column 2
+    get-editbox | set-text 4
+    apply-cell-edit -deactivate
+    select "Knowledge skills/Knowledge skill Alcohol" | activate-cell-edit -column 2
+    get-editbox | set-text 4
+    apply-cell-edit -deactivate
+    select "Knowledge skills/Knowledge skill Architecture" | activate-cell-edit -column 2
+    get-editbox | set-text 4
+    apply-cell-edit -deactivate
+    select "Knowledge skills/Knowledge skill Area Knowledge: Atlanta" | activate-cell-edit -column 2
+    get-editbox | set-text 4
+    apply-cell-edit -deactivate
+    select "Knowledge skills/Knowledge skill Area Knowledge: Cheyenne" | activate-cell-edit -column 2
+    get-editbox | set-text 4
+    apply-cell-edit -deactivate
+    select "Knowledge skills/Knowledge skill Area Knowledge: Cheyenne"
+}
+get-view "Character rule validation" | get-tree | get-property "getItems().length" | equals 5 | verify-true
+with [get-editor "Shr5 Generator"] {
+    get-tab-folder | get-tab-item Character | click
+    get-section Connections | get-button "Add a Connection to the Connections feature." | click
+}
+with [get-window -class GenericEObjectDialog] {
+    get-editbox -after [get-label Influence] | set-text 2
+    get-editbox -after [get-label Loyalty] | set-text 2
+    get-button OK | click
+}
+get-editor "Connection  unset [2/2]" | close
+get-view "Character rule validation" | get-tree | get-item "You need to spend 5 connection points more." 
+    | get-property caption | equals "You need to spend 5 connection points more." | verify-true
+get-editor "Shr5 Generator" | get-section Connections | get-button "Add a Connection to the Connections feature." 
+    | click
+with [get-window -class GenericEObjectDialog] {
+    get-editbox -after [get-label Influence] | set-text 2
+    get-editbox -after [get-label Loyalty] | set-text 3
+    get-button OK | click
+}
+get-editor "Connection  unset [2/3]" | close
+get-view "Character rule validation" | get-tree | get-property "getItems().length" | equals 4 | verify-true
+get-editor "Shr5 Generator" | get-section Contracts | get-button "Add a Contract to the Contracts feature." | click
+with [get-window "Add Contracts -- Shr List"] {
+    get-table | select "Lifestyle High" | double-click
+    get-button OK | click
+}
+get-editor "Shr5 Generator" | get-group Allgemein | get-link "nothing selected" -after [get-label "Chosen Lifestyle"] 
+    | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Lifestyle High"
+    get-button OK | click
+}
+get-editor "Shr5 Generator" | get-group Allgemein | get-link "Lifestyle High" | get-property caption 
+    | equals "Lifestyle High" | verify-true
+get-view "Character rule validation" | get-tree | get-property "getItems().length" | equals 3 | verify-true
+get-editor "Shr5 Generator" | get-section Contracts | get-button "Add a Contract to the Contracts feature." | click
+with [get-window "Add Contracts -- Shr List"] {
+    get-table | select "Lifestyle Luxury" | double-click
+    get-button OK | click
+}
+get-editor "Shr5 Generator" | get-section Vehicles | get-button "Add a Vehicles to the Vehicles feature." | click
+with [get-window "Add Vehicles -- Shr List"] {
+    get-group "Filter Available Choices" | get-button "display the money value" | click
+    with [get-table] {
+        select "Ground vehicle Ares Roadmaster (Armored Transport) : 52,000 ¥" | double-click
+        select "Ground vehicle Conestoga Vista (Bus) : 25,000 ¥" | double-click
+        select "Passenger vehicle Yongkang Gala Trinity (Speedboat) : 37,000 ¥" | double-click
+    }
+    get-button OK | click
+}
+get-editor "Shr5 Generator" | get-section Inventory | get-button "Add a Abstract item to the Inventory feature." | click
+with [get-window "Add Inventory -- Shr List"] {
+    get-group "Filter Available Choices" | get-button "display the money value" | click
+    with [get-table] {
+        select "Clothes Actioneer Business Clothes : 1,500 ¥" | double-click
+        select "Clothes Armor Clothing : 450 ¥" | double-click
+        select "Clothes Mortimer of London: Berwick Suit : 2,600 ¥" | double-click
+        select "Firearm Ares Alpha : 2,650 ¥" | double-click
+        select "Firearm Ares Crusader II : 830 ¥" | double-click
+    }
+    with [get-group "Filter Available Choices"] {
+        get-button "show only list items" | click
+        get-button "Filter by source book." | click -arrow
+        with [get-button "show only item contained by character"] {
+            click
+            click
+        }
+    }
+    get-table | select "Melee weapon Combat Axe : 4,000 ¥" | double-click
+    get-button OK | click
+}
+get-editor "Shr5 Generator" | get-section Inventory | get-button "Add a Abstract item to the Inventory feature." | click
+with [get-window "Add Inventory -- Shr List"] {
+    get-group "Filter Available Choices" | get-button "display the money value" | click
+    get-table | select "Cyberdeck Microdeck Summit : 58,000 ¥" | double-click
+    get-button OK | click
+}
+with [get-editor "Shr5 Generator"] {
+    get-tab-folder | get-tab-item "Shr5 generator" | click
+    get-section create | get-editbox -after [get-label "Karma to resources"] | set-text 3
+}
+with [get-editor "Shr5 Generator" | get-section create] {
+    get-editbox -after [get-label "Karma to resources"] | get-property text | equals "3.0" | verify-true
+    get-label "left :22" | get-property caption | equals "left :22" | verify-true
+}
+with [get-view "Character rule validation" | get-tree] {
+    get-item "You have to spend 22 karma points more." | get-property caption 
+        | equals "You have to spend 22 karma points more." | verify-true
+    get-item "You have to spend 22 karma points more." | get-property index | equals 2 | verify-true
+    get-item "You need to spend -13,030 resource less." | get-property caption 
+        | equals "You need to spend -13,030 resource less." | verify-true
+}
+with [get-editor "Shr5 Generator" | get-section create | get-editbox -after [get-label "Karma to resources"]] {
+    set-text 9
+    set-text 10
+}
+with [get-editor "Shr5 Generator" | get-section create] {
+    get-editbox -after [get-label "Karma to resources"] | get-property text | equals "10.0" | verify-true
+    get-label "left :15" | get-property caption | equals "left :15" | verify-true
+}
+with [get-view "Character rule validation" | get-tree] {
+    get-item "You have to spend 15 karma points more." | get-property caption 
+        | equals "You have to spend 15 karma points more." | verify-true
+    get-property "getItems().length" | equals 2 | verify-true
+}
+with [get-editor "Shr5 Generator"] {
+    get-tab-folder | get-tab-item Persona | click
+    get-section Skills | click
+    get-section Qualities | get-button "Add a Qualities to the Qualities feature." | click
+}
+with [get-window "Add Qualities -- Shr List"] {
+    get-table | select "Qualities Aptitude" | double-click
+    get-button OK | click
+}
+get-editor "Shr5 Generator" | get-tab-folder | get-tab-item "Shr5 generator" | click
+get-view "Character rule validation" | get-tree | get-property "getItems().length" | equals 0 | verify-true
+get-editor "Shr5 Generator" | get-button "Finish the character generation by commiting the character." 
+    | get-property "isEnabled()" | equals true | verify-true
+get-editor "Shr5 Generator" | get-button "Finish the character generation by commiting the character." | click
+get-window "Start money" | get-button OK | click
+get-editor "Shr5 Generator" | close
+get-menu "Window/Show Perspective" | click
+get-window "Open Perspective" | get-table | select "Shadowrun resources \\(default\\)" | click -default
+get-menu "Character/Open Managed Character" | click
+with [get-window "Open Managed Character."] {
+    get-editbox -after [get-label filter] | set-text Tes
+    get-tree | select "PC Mudan Persona Test-Character-1" | click -default
+}
+with [get-editor "PC Mudan Persona Test-Character-1"] {
+    get-section Description | get-editbox -after [get-label Name] | get-property text | equals "Test-Character-1" 
+        | verify-true
+    with [get-section "attributes  skills"] {
+        get-link "Species Human" | get-property caption | equals "Species Human" | verify-true
+        get-link "Lifestyle High" | get-property caption | equals "Lifestyle High" | verify-true
+        with [get-group Skills | get-tree] {
+            get-item "Skill group Acting" | get-property "columns[0]" | equals "Skill group Acting" | verify-true
+            get-item "Skill group Acting" | get-property "columns[1]" | equals "" | verify-true
+            get-item "Skill group Acting" | get-property "columns[2]" | equals 2 | verify-true
+            get-item "Skill group Acting" | get-property "columns[3]" | equals 2 | verify-true
+        }
+    }
+}
+get-editor "PC Mudan Persona Test-Character-1" | get-tab-folder | get-tab-item Persona | click
+with [get-editor "PC Mudan Persona Test-Character-1" | get-section Attributes | get-group Physical] {
+    get-editbox -after [get-label Body] | get-property text | equals "4.0" | verify-true
+    get-editbox -after [get-label Strength] | get-property text | equals "4.0" | verify-true
+}
+get-editor "PC Mudan Persona Test-Character-1" | get-section Skills | click
+get-editor "PC Mudan Persona Test-Character-1" | get-section Qualities | get-tree | get-item "Qualities Aptitude" 
+    | get-property caption | equals "Qualities Aptitude" | verify-true
+get-editor "PC Mudan Persona Test-Character-1" | get-tab-folder | get-tab-item Character | click
+with [get-editor "PC Mudan Persona Test-Character-1"] {
+    get-section Vehicles | get-tree | get-item "Ground vehicle Ares Roadmaster \\(Armored Transport\\)" 
+        | get-property caption | equals "Ground vehicle Ares Roadmaster (Armored Transport)" | verify-true
+    get-section Contracts | get-tree | get-item "Lifestyle High" | get-property caption | equals "Lifestyle High" 
+        | verify-true
+}
+with [get-editor "PC Mudan Persona Test-Character-1" | get-tab-folder] {
+    get-tab-item Diary | click
+    get-tab-item Advancement | click
+    get-tab-item "Character sheet" | click
+    get-tab-item "Shr5 generator" | click
+}
+get-editor "PC Mudan Persona Test-Character-1" | get-group Overview 
+    | get-label "The character is finshed and commited." | get-property caption 
+    | equals "The character is finshed and commited." | verify-true
+get-editor "PC Mudan Persona Test-Character-1" | close
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
