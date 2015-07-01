@@ -6,7 +6,7 @@ Element-Version: 3.0
 External-Reference: 
 Id: _onIqQCAzEeWSRorpcoiIvw
 Runtime-Version: 2.0.0.201506120617
-Save-Time: 7/1/15 11:27 PM
+Save-Time: 7/1/15 11:38 PM
 Tags: character-generation, lifemodule
 Testcase-Type: ecl
 
@@ -166,4 +166,156 @@ with [get-editor "Life Modules Generator"] {
         set-text "0.0"
     }
 }
+with [get-editor "Life Modules Generator" | get-section create | get-editbox -after [get-label "Karma to resources"]] {
+    set-text 6
+    set-text 7
+    set-text 8
+    set-text 9
+    set-text 10
+    set-text 11
+    set-text 12
+    set-text 13
+    set-text 14
+    set-text 15
+    double-click
+    set-text 17
+    set-text 18
+    set-text 19
+    set-text 20
+}
+with [get-editor "Life Modules Generator" | get-section create] {
+    get-editbox -after [get-label "Karma to resources"] | get-property text | equals "20.0" | verify-true
+    get-label "left :74" | get-property caption | equals "left :74" | verify-true
+}
+with [get-view "Character rule validation" | get-tree] {
+    get-property itemCount | equals 4 | verify-true
+    get-item "You need to spend 40,000 resource more." | get-property caption 
+        | equals "You need to spend 40,000 resource more." | verify-true
+}
+with [get-editor "Life Modules Generator"] {
+    get-tab-folder | get-tab-item Character | click
+    get-section Contracts | get-button "Add a Contract to the Contracts feature." | click
+}
+with [get-window "Add Contracts -- Shr List"] {
+    get-table | select "Lifestyle Middle" | double-click
+    get-button OK | click
+}
+get-editor "Life Modules Generator" | get-group Allgemein | get-link "nothing selected" | click
+get-window -class OwnChooseDialog | get-tree | select "Lifestyle Middle" | click -default
+get-editor "Life Modules Generator" | get-group Allgemein | get-editbox -after [get-label "Date of birth"] 
+    | click-text 1
+get-view "Character rule validation" | get-tree | get-property itemCount | equals 3 | verify-true
+get-editor "Life Modules Generator" | get-section Inventory 
+    | get-button "Add a Abstract item to the Inventory feature." | click
+with [get-window "Add Inventory -- Shr List"] {
+    with [get-table] {
+        select [get-item "Firearm Ruger Super Warhawk" -index 2] | double-click
+        select "Firearm Walther Palm Pistol" | double-click
+    }
+    get-group "Filter Available Choices" | get-button "show only list items" | click
+    with [get-table] {
+        select "Melee weapon Bottle (unbroken)" | double-click
+        select "Melee weapon Monofilament Whip" | double-click
+        select "Melee weapon Club" | double-click
+        select "Credstick Silver" | double-click
+        select "Credstick Gold" | double-click
+        select "Clothes Survival Bubble, Rating 1" | double-click
+        select "Clothes Desert Suit" | double-click
+        select "Clothes Body Armor Bag" | double-click
+        select "Clothes Bunker Gear" | double-click
+        select "Clothes Clothing" | double-click
+        select "Item Moodchip" | double-click
+        select "Item Miniwelder" | double-click
+        select "Item Maglock Passkey" | double-click
+        select "Item Lockpick Set" | double-click
+        select "Item Keycard Copier" | double-click
+        select "Item Contacts" | double-click
+        select "Commlink Erika Elite" | double-click
+        select "Commlink Renraku Sensei" | double-click
+        select [get-item "Cyberdeck Erika MCD-1" -index 1] | double-click
+    }
+    get-button Remove | click
+    with [get-table] {
+        select "Regular Ammo (unset) 10" | double-click
+        select "Grenate Gas [1]" | double-click
+        select "Firearm Colt M23" | double-click
+        select "Firearm HK XM30" | double-click
+        select "Firearm SBd-44" | double-click
+        select "Firearm Shiawase Arms Incinerator" | double-click
+    }
+    get-table -after [get-label Feature] | select "Firearm Shiawase Arms Incinerator" | double-click
+    with [get-table] {
+        select "Firearm Shiawase Blazer" | double-click
+        select "Firearm Ares Antioch-2" | double-click
+    }
+    get-button OK | click
+}
+get-editor "Life Modules Generator" | get-section Contracts | get-button "Add a Contract to the Contracts feature." 
+    | click
+with [get-window "Add Contracts -- Shr List"] {
+    get-table | select "Interval contract DocWagon Contract, Basic" | double-click
+    get-button OK | click
+}
+with [get-editor "Life Modules Generator"] {
+    get-tab-folder | get-tab-item "Life module generator" | click
+    get-section create | get-editbox -after [get-label "Karma to resources"] | set-text 22
+    with [get-tab-folder] {
+        get-tab-item Persona | click
+        get-tab-item Character | click
+    }
+    get-section Inventory | get-tree | select "Melee weapon Club" | click -default
+}
+get-editor "Melee weapon Club" | get-group Price | get-editbox -after [get-label "price Value"] | set-text 1490
+get-view "Character rule validation" | get-tree | get-property itemCount | equals 2 | verify-true
+get-tab-folder | get-tab-item "Life Modules Generator" | click
+get-editor "Melee weapon Club" | close
+with [get-editor "Life Modules Generator"] {
+    get-tab-folder | get-tab-item Persona | click
+    get-section Qualities | get-button "Add a Qualities to the Qualities feature." | click
+}
+with [get-window "Select qualities ... -- Shr List"] {
+    with [get-table] {
+        select "Qualities Codeslinger" | double-click
+        select "Qualities Bilingual" | double-click
+        select "Qualities Blandness" | double-click
+    }
+    get-button OK | click
+}
+get-editor "Life Modules Generator" | get-section Qualities | get-button "Add a Qualities to the Qualities feature." 
+    | click
+with [get-window "Select qualities ... -- Shr List"] {
+    get-table | select "Qualities Double Jointed" | double-click
+    get-button OK | click
+}
+get-editor "Life Modules Generator" | get-section Qualities | get-button "Add a Qualities to the Qualities feature." 
+    | click
+with [get-window "Select qualities ... -- Shr List"] {
+    get-table | select "Qualities Ambidextrous" | double-click
+    get-button OK | click
+}
+with [get-editor "Life Modules Generator" | get-section Skills] {
+    click
+    with [get-tree] {
+        select "Skill group Influence/Skill Leadership" | activate-cell-edit -column 2
+        get-editbox | set-text 3
+        apply-cell-edit -deactivate
+        select "Skill group Influence/Skill Leadership" | activate-cell-edit -column 2
+        get-editbox | set-text 2
+        apply-cell-edit -deactivate
+        select "Skill group Engineering/Skill Industrial Mechanic" | activate-cell-edit -column 2
+        get-editbox | set-text 1
+        apply-cell-edit -deactivate
+        select "Skill group Engineering/Skill Industrial Mechanic"
+    }
+}
+get-view "Character rule validation" | get-tree | get-property itemCount | equals 0 | verify-true
+get-editor "Life Modules Generator" | get-tab-folder | get-tab-item "Life module generator" | click
+get-editor "Life Modules Generator" | get-button "Finish the character generation by commiting the character." 
+    | get-property "isEnabled()" | equals true | verify-true
+with [get-editor "Life Modules Generator"] {
+    get-button "Finish the character generation by commiting the character." | click
+    close
+}
+get-menu "Window/Show Perspective" | click
+get-window "Open Perspective" | get-table | select "Shadowrun resources \\(default\\)" | click -default
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
