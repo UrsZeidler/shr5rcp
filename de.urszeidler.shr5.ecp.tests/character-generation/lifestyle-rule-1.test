@@ -6,7 +6,7 @@ Element-Version: 3.0
 External-Reference: 
 Id: _onIqQCAzEeWSRorpcoiIvw
 Runtime-Version: 2.0.0.201506120617
-Save-Time: 7/1/15 11:10 PM
+Save-Time: 7/1/15 11:27 PM
 Tags: character-generation, lifemodule
 Testcase-Type: ecl
 
@@ -73,4 +73,97 @@ get-view "Character rule validation" | get-tree | get-property itemCount | equal
 get-editor "Life Modules Generator" | get-section choose | get-link "nothing selected" | click
 get-window -class OwnChooseDialog | get-tree | select "STREET KID \\[teenYears\\] karma: 50 years: 7" | click -default
 get-view "Character rule validation" | get-tree | get-property itemCount | equals 2 | verify-true
+get-editor "Life Modules Generator" | get-section choose | get-button -after [get-label "Real Life"] | click
+with [get-window "-- Life Modules Generator Test-lifemodule"] {
+    with [get-table] {
+        select "COMBAT CORRESPONDENT [realLife] karma: 100 years: 4" | double-click
+        select "LAW ENFORCEMENT (Beat Cop) [realLife] karma: 100 years: 4" | double-click
+    }
+    get-button OK | click
+}
+get-view "Character rule validation" | get-tree | get-property itemCount | equals 1 | verify-true
+get-editor "Life Modules Generator" | get-button "Create the character with the choosen options." 
+    | get-property "isEnabled()" | equals true | verify-true
+with [get-editor "Life Modules Generator" | get-section choose] {
+    get-label 50 | get-property caption | equals 50 | verify-true
+    get-label 305 | get-property caption | equals 305 | verify-true
+    get-label 25 | get-property caption | equals 25 | verify-true
+}
+get-editor "Life Modules Generator" | get-button "Create the character with the choosen options." | click
+get-window "Select a skill" | get-tree | select "Language skill German" | click -default
+get-window "Select a skill" | get-tree | select "Language skill Croatian" | click -default
+get-window "Select a skill" | get-tree | select "Language skill Danish" | click -default
+with [get-view "Character rule validation" | get-tree] {
+    get-property itemCount | equals 3 | verify-true
+    get-item "You need to satisfy all character building rules before commit." | get-property caption 
+        | equals "You need to satisfy all character building rules before commit." | verify-true
+    get-item "You need to choose a lifestyle for NPC Mudan Persona Test-lifemodule. A lifestyle is a contract." 
+        | get-property caption 
+        | equals "You need to choose a lifestyle for NPC Mudan Persona Test-lifemodule. A lifestyle is a contract." 
+        | verify-true
+    get-item "You have to spend more karma points 395." | get-property caption 
+        | equals "You have to spend more karma points 395." | verify-true
+}
+with [get-editor "Life Modules Generator"] {
+    with [get-section create | get-editbox -after [get-label "Karma to resources"]] {
+        double-click
+        double-click
+    }
+    with [get-tab-folder] {
+        get-tab-item Persona | click
+        get-tab-item Character | click
+        get-tab-item Persona | click
+        get-tab-item "Life module generator" | click
+    }
+    get-section create | get-editbox -after [get-label "Karma to resources"] | key-type Up
+    get-group Overview | get-link "Life Modules System testLifeModuleSystem" | click
+}
+get-window -class OwnChooseDialog | get-tree | select "Life Modules System Building the lifemodule system" | click 
+    -default
+with [get-editor "Life Modules Generator"] {
+    get-section create | get-editbox -after [get-label "Karma to resources"] | double-click
+    get-tab-folder | get-tab-item Persona | click
+    with [get-section Attributes] {
+        with [get-group Mental] {
+            get-editbox -after [get-label Logic] | set-text 3
+            get-editbox -after [get-label Intuition] | set-text 4
+            get-editbox -after [get-label Charisma] | set-text 4
+        }
+        get-group Physical | get-editbox -after [get-label Agility] | set-text 5
+        click
+    }
+    with [get-section Skills] {
+        with [get-tree] {
+            select "Skill group Athletics/Skill Gymnastics" | activate-cell-edit -column 2
+            get-editbox | set-text 5
+            apply-cell-edit -deactivate
+            select "Skill group Athletics/Skill Running" | activate-cell-edit -column 2
+            get-editbox | set-text 5
+            apply-cell-edit -deactivate
+            select "Skill group Close Combat/Skill Blades" | activate-cell-edit -column 2
+            get-editbox | set-text 4
+            apply-cell-edit -deactivate
+            select "Skill group Close Combat/Skill Clubs" | activate-cell-edit -column 2
+            get-editbox | set-text 5
+            apply-cell-edit -deactivate
+            select "Skill group Firearms/Skill Automatics" | activate-cell-edit -column 2
+            get-editbox | set-text 3
+            apply-cell-edit -deactivate
+            select "Skill group Firearms/Skill Longarms" | activate-cell-edit -column 2
+            get-editbox | set-text 4
+            apply-cell-edit -deactivate
+            select "Skill group Firearms/Skill Longarms"
+        }
+        click
+    }
+    with [get-tab-folder] {
+        get-tab-item Character | click
+        get-tab-item "Life module generator" | click
+    }
+    with [get-section create | get-editbox -after [get-label "Karma to resources"]] {
+        double-click
+        double-click
+        set-text "0.0"
+    }
+}
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
