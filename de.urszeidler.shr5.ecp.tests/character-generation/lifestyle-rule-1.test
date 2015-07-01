@@ -1,0 +1,76 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: lifestyle-rule-1
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _onIqQCAzEeWSRorpcoiIvw
+Runtime-Version: 2.0.0.201506120617
+Save-Time: 7/1/15 11:10 PM
+Tags: character-generation, lifemodule
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Gamemaster my game stuff/Character Group non player group"
+get-menu "Character/Character Generator wizard" | click
+with [get-window "Select generator object to create ..."] {
+    get-tree | select "Life module Generator"
+    get-button "Next >" | click
+}
+get-window -class WizardDialog | get-combo -after [get-label "Select campaign"] 
+    | select "Life Modules System testLifeModuleSystem"
+get-window -class WizardDialog | get-label "" -after [get-label "Select Group"] -index 1 | get-property "image.path" 
+    | equals "de.urszeidler.shr5.ecp/images/SumToTenGenerator32.png" | verify-true
+with [get-window -class WizardDialog] {
+    get-button Finish | click
+    get-window "Switch Perspective" | get-button Yes | click
+}
+get-editor "Life Modules Generator" | get-button "Choose the options." | get-property "isEnabled()" | equals true 
+    | verify-true
+get-view "Character rule validation" | get-tree | get-property itemCount | equals 8 | verify-true
+with [get-editor "Life Modules Generator"] {
+    get-section choose | get-button "None player" | click
+    with [get-group Overview | get-editbox -after [get-label "Character Name"]] {
+         set-text "Test-lifemodule"
+    }
+}
+get-editor "Life Modules Generator" | get-group Overview | get-editbox -after [get-label "Character Name"] 
+    | get-property text | equals "Test-lifemodule" | verify-true
+with [get-view "Character rule validation"] {
+    get-label "Test-lifemodule" | get-property caption | equals "Test-lifemodule" | verify-true
+    get-tree | get-item "The required feature 'Character' of 'Life Modules Generator Test-lifemodule' must be set" 
+        | get-property caption 
+        | equals "The required feature 'Character' of 'Life Modules Generator Test-lifemodule' must be set" 
+        | verify-true
+}
+get-editor "Life Modules Generator" | get-section choose | get-link "nothing selected" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Meta Type 50 \\[Species Dwarf\\] \\(0\\)"
+    get-button OK | click
+}
+get-view "Character rule validation" | get-tree | get-property itemCount | equals 6 | verify-true
+get-editor "Life Modules Generator" | get-section choose | get-link "nothing selected" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Mudan 0"
+    get-button OK | click
+}
+get-view "Character rule validation" | get-tree | get-property itemCount | equals 5 | verify-true
+get-editor "Life Modules Generator" | get-section choose 
+    | get-link "nothing selected" | click
+get-window -class OwnChooseDialog | get-tree | select "UCAS Canada \\[nationality\\] karma: 15 years: 0" | click 
+    -default
+get-view "Character rule validation" | get-tree | get-property itemCount | equals 4 | verify-true
+get-editor "Life Modules Generator" | get-section choose | get-link "nothing selected" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "FUGITIVE \\[formativeYears\\] karma: 40 years: 10"
+    get-button OK | click
+}
+get-view "Character rule validation" | get-tree | get-property itemCount | equals 3 | verify-true
+get-editor "Life Modules Generator" | get-section choose | get-link "nothing selected" | click
+get-window -class OwnChooseDialog | get-tree | select "STREET KID \\[teenYears\\] karma: 50 years: 7" | click -default
+get-view "Character rule validation" | get-tree | get-property itemCount | equals 2 | verify-true
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
