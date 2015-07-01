@@ -1,0 +1,376 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: karma-rule-1
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _YvZu0CAuEeWSRorpcoiIvw
+Runtime-Version: 2.0.0.201506120617
+Save-Time: 7/1/15 10:38 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Gamemaster my game stuff/Character Group non player group"
+get-menu "Character/Character Generator wizard" | click
+with [get-window "Select generator object to create ..."] {
+    get-tree | select "Shadowrun 5 Karma Generator"
+    get-button "Next >" | click
+}
+with [get-window -class WizardDialog] {
+    get-combo -after [get-label "Select campaign"] | select "ruleset point buy system"
+    get-button Finish | click
+    get-window "Switch Perspective" | get-button Yes | click
+}
+with [get-editor "Shr5 Karma Generator"] {
+    get-button "Choose the options." | get-property "isEnabled()" | equals true | verify-true
+    get-group Overview | get-editbox -after [get-label "Character Name"] | get-property text | equals "" | verify-true
+    with [get-section choose] {
+        get-link "nothing selected" | get-property caption | equals "nothing selected" | verify-true
+        get-link "nothing selected" -after [get-label "Character Concept"] | get-property caption 
+            | equals "nothing selected" | verify-true
+        get-label 0 | get-property caption | equals 0 | verify-true
+    }
+}
+with [get-view "Character rule validation" | get-tree] {
+    get-property "getItemCount()" | equals 4 | verify-true
+    get-item "The required feature 'Character Name' of 'Shr5 Karma Generator' must be set" | get-property caption 
+        | equals "The required feature 'Character Name' of 'Shr5 Karma Generator' must be set" | verify-true
+}
+with [get-editor "Shr5 Karma Generator"] {
+    with [get-group Overview | get-editbox -after [get-label "Character Name"]] {
+        set-text "Test-karma-1"
+    }
+    get-section choose | get-button "None player" | click
+}
+with [get-view "Character rule validation" | get-tree] {
+    get-property itemCount | equals 3 | verify-true
+    get-item "The required feature 'Meta Type' of 'Shr5 Karma Generator Test-karma-1' must be set" 
+        | get-property caption 
+        | equals "The required feature 'Meta Type' of 'Shr5 Karma Generator Test-karma-1' must be set" | verify-true
+}
+get-editor "Shr5 Karma Generator" | get-group Overview | get-editbox -after [get-label "Character Name"] 
+    | get-property text | equals "Test-karma-1" | verify-true
+get-editor "Shr5 Karma Generator" | get-section choose | get-link "nothing selected" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Meta Type 90 \\[Species Dryad \\(Elf\\)\\] \\(0\\)"
+    get-button OK | click
+}
+get-editor "Shr5 Karma Generator" | get-section choose | get-link "nothing selected" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Spellcaster 30 \\[Magier\\] \\(0\\/0\\/0\\) magic :0"
+    get-button OK | click
+}
+with [get-editor "Shr5 Karma Generator"] {
+    get-button "Create the character with the choosen options." | get-property "isEnabled()" | equals true | verify-true
+    get-group Overview | get-label "All has been set, you can create the character now." | get-property caption 
+        | equals "All has been set, you can create the character now." | verify-true
+}
+get-view "Character rule validation" | get-tree | get-property itemCount | equals 1 | verify-true
+get-editor "Shr5 Karma Generator" | get-section choose | get-label 90 | get-property caption | equals 90 | verify-true
+get-editor "Shr5 Karma Generator" | get-button "Create the character with the choosen options." | click
+with [get-view "Character rule validation" | get-tree] {
+    get-property itemCount | equals 3 | verify-true
+    get-item "You have to spend more karma points 680." | get-property caption 
+        | equals "You have to spend more karma points 680." | verify-true
+}
+with [get-editor "Shr5 Karma Generator"] {
+    get-tab-folder | get-tab-item Persona | click
+    get-link "nothing selected" | click
+}
+get-window -class OwnChooseDialog | get-tree | select "Tradition Buddhism" | click -default
+with [get-editor "Shr5 Karma Generator"] {
+    get-section Description | click
+    with [get-section Attributes] {
+        with [get-group Physical] {
+            get-editbox -after [get-label Body] | set-text 4
+            get-editbox -after [get-label Strength] | set-text 5
+            with [get-editbox -after [get-label Agility]] {
+                set-text 5
+                double-click
+            }
+        }
+        with [get-group Mental] {
+            get-editbox -after [get-label Intuition] | set-text 4
+            get-editbox -after [get-label Willpower] | set-text 3
+            get-editbox -after [get-label Logic] | set-text 3
+        }
+        get-group Physical | get-editbox -after [get-label Reaction] | set-text 3
+        click
+    }
+    with [get-section Skills | get-tree] {
+        select "Skill group Acting/Skill Con" | activate-cell-edit -column 2
+        get-editbox | set-text 4
+        apply-cell-edit -deactivate
+        select "Skill group Acting/Skill Impersonation" | activate-cell-edit -column 2
+        get-editbox | set-text 7
+        apply-cell-edit -deactivate
+        select "Skill group Acting/Skill Impersonation"
+    }
+}
+with [get-editor "Shr5 Karma Generator" | get-section Skills | get-tree] {
+    get-item "Skill group Acting/Skill Impersonation" | get-property "columns[0]" | equals "Skill Impersonation" 
+        | verify-true
+    get-item "Skill group Acting/Skill Impersonation" | get-property "columns[1]" | equals "[]" | verify-true
+    get-item "Skill group Acting/Skill Impersonation" | get-property "columns[2]" | equals 7 | verify-true
+    get-item "Skill group Acting/Skill Impersonation" | get-property "columns[3]" | equals "[Cha] : 10" | verify-true
+}
+with [get-view "Character rule validation" | get-tree] {
+    get-property itemCount | equals 4 | verify-true
+    get-item "The skills \\[Impersonation\\] are over the allowed value of 6." | get-property caption 
+        | equals "The skills [Impersonation] are over the allowed value of 6." | verify-true
+}
+with [get-editor "Shr5 Karma Generator" | get-section Skills | get-tree] {
+    select "Skill group Acting/Skill Impersonation" | activate-cell-edit -column 2
+    get-editbox | set-text 6
+    apply-cell-edit -deactivate
+    select "Skill group Acting/Skill Impersonation"
+}
+with [get-editor "Shr5 Karma Generator" | get-section Skills | get-tree] {
+    get-item "Skill group Acting/Skill Impersonation" | get-property "columns[0]" | equals "Skill Impersonation" 
+        | verify-true
+    get-item "Skill group Acting/Skill Impersonation" | get-property "columns[1]" | equals "[]" | verify-true
+    get-item "Skill group Acting/Skill Impersonation" | get-property "columns[2]" | equals 6 | verify-true
+    get-item "Skill group Acting/Skill Impersonation" | get-property "columns[3]" | equals "[Cha] : 9" | verify-true
+}
+get-view "Character rule validation" | get-tree | get-property itemCount | equals 3 | verify-true
+with [get-editor "Shr5 Karma Generator"] {
+    with [get-section Skills | get-tree] {
+        select "Skill group Athletics/Skill Running" | activate-cell-edit -column 2
+        get-editbox | set-text 3
+        apply-cell-edit -deactivate
+        select "Skill group Athletics/Skill Gymnastics" | activate-cell-edit -column 2
+        get-editbox | set-text 3
+        apply-cell-edit -deactivate
+        select "Skill group Biotech/Skill Biotechnology" | activate-cell-edit -column 2
+        get-editbox | set-text 2
+        apply-cell-edit -deactivate
+        select "Skill group Biotech/Skill First Aid" | activate-cell-edit -column 2
+        get-editbox | set-text 3
+        apply-cell-edit -deactivate
+        select "Skill group Biotech/Skill Cybertechnology" | activate-cell-edit -column 2
+        get-editbox | set-text 3
+        apply-cell-edit -deactivate
+        select "Skill group Cracking/Skill Electronic Warfare" | activate-cell-edit -column 2
+        get-editbox | set-text 3
+        apply-cell-edit -deactivate
+        select "Skill group Cracking/Skill Cybercombat" | activate-cell-edit -column 2
+        get-editbox | set-text 6
+        apply-cell-edit -deactivate
+        select "Skill group Electronics" | activate-cell-edit -column 2
+        get-editbox | set-text 3
+        apply-cell-edit -deactivate
+        select "Skill group Enchanting/Skill Alchemy" | activate-cell-edit -column 2
+        get-editbox | set-text 2
+        apply-cell-edit -deactivate
+        select "Skill group Firearms/Skill Automatics" | activate-cell-edit -column 2
+        get-editbox | set-text 3
+        apply-cell-edit -deactivate
+        select "Skill group Firearms/Skill Longarms" | activate-cell-edit -column 2
+        get-editbox | set-text 3
+        apply-cell-edit -deactivate
+        select "Skill group Firearms/Skill Pistols" | activate-cell-edit -column 2
+        get-editbox | set-text 2
+        apply-cell-edit -deactivate
+        select "Skill group Firearms/Skill Pistols"
+    }
+    get-tab-folder | get-tab-item "Karma Generator" | click
+    with [get-section create | get-editbox -after [get-label "Karma to resources"]] {
+        set-text 2
+        double-click
+        set-text 6
+    }
+}
+get-editor "Shr5 Karma Generator" | get-section create | get-editbox -after [get-label "Karma to resources"] 
+    | get-property text | equals "6.0" | verify-true
+with [get-view "Character rule validation" | get-tree] {
+    get-item "You need to spend 15,000 resource more." | get-property caption 
+        | equals "You need to spend 15,000 resource more." | verify-true
+    get-property itemCount | equals 4 | verify-true
+}
+with [get-editor "Shr5 Karma Generator"] {
+    get-tab-folder | get-tab-item Character | click
+    get-section Inventory | get-button "Add a Abstract item to the Inventory feature." | click
+}
+with [get-window "Add Inventory -- Shr List"] {
+    get-table | select "Item Micro-transceiver" | double-click
+    get-button OK | click
+}
+get-editor "Shr5 Karma Generator" | get-section Contracts | get-button "Add a Contract to the Contracts feature." 
+    | click
+with [get-window "Add Contracts -- Shr List"] {
+    get-table | select "Lifestyle Low" | double-click
+    get-button OK | click
+}
+get-editor "Shr5 Karma Generator" | get-group Allgemein | get-link "nothing selected" 
+    -after [get-label "Chosen Lifestyle"] | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Lifestyle Low"
+    get-button OK | click
+}
+get-editor "Shr5 Karma Generator" | get-group Allgemein | get-link "Lifestyle Low" | get-property caption 
+    | equals "Lifestyle Low" | verify-true
+get-view "Character rule validation" | get-tree | get-property itemCount | equals 3 | verify-true
+get-editor "Shr5 Karma Generator" | get-section Inventory | get-button "Add a Abstract item to the Inventory feature." 
+    | click
+with [get-window "Add Inventory -- Shr List"] {
+    with [get-table] {
+        select "Item Missile: Anti-Vehicle" | double-click
+        select "Item Missile: Fragmentation" | double-click
+        select "Commlink Hermes Ikon" | double-click
+        select "Commlink Transys Avalon" | double-click
+    }
+    get-button OK | click
+}
+get-editor "Shr5 Karma Generator" | get-section Connections | get-button "Add a Connection to the Connections feature." 
+    | click
+with [get-window -class GenericEObjectDialog] {
+    get-editbox -after [get-label Influence] | set-text 4
+    get-editbox -after [get-label Loyalty] | set-text 4
+    get-button OK | click
+}
+get-editor "Connection  unset [4/4]" | close
+get-editor "Shr5 Karma Generator" | get-section Connections | get-button "Add a Connection to the Connections feature." 
+    | click
+with [get-window -class GenericEObjectDialog] {
+    get-editbox -after [get-label Influence] | set-text 5
+    get-editbox -after [get-label Loyalty] | set-text 5
+    get-button OK | click
+}
+get-editor "Connection  unset [5/5]" | close
+get-view "Character rule validation" | get-tree | get-property itemCount | equals 2 | verify-true
+with [get-editor "Shr5 Karma Generator"] {
+    get-tab-folder | get-tab-item Persona | click
+    get-section Skills | click
+    get-section Qualities | get-button "Add a Qualities to the Qualities feature." | click
+}
+with [get-window "Select qualities ... -- Shr List"] {
+    with [get-table] {
+        select "Qualities Astral Chameleon" | double-click
+        select "Qualities Catlike" | double-click
+        select "Qualities Focused Concentration (Rating 6)" | double-click
+    }
+    get-button Remove | click
+    with [get-table] {
+        select "Qualities Gearhead" | double-click
+        select "Qualities High Pain Tolerance (Rating 2)" | double-click
+    }
+    get-button OK | click
+}
+get-editor "Shr5 Karma Generator" | get-section Qualities | get-button "Add a Qualities to the Qualities feature." 
+    | click
+with [get-window "Select qualities ... -- Shr List"] {
+    with [get-table] {
+        select "Qualities Lucky" | double-click
+        select "Qualities Quick Healer" | double-click
+    }
+    get-button OK | click
+}
+with [get-editor "Shr5 Karma Generator" | get-section Qualities] {
+    get-tree | select "Qualities Gearhead"
+    get-button "Remove all selected items." | click
+    get-button "Add a Qualities to the Qualities feature." | click
+}
+with [get-window "Select qualities ... -- Shr List"] {
+    get-table | select "Qualities Codeslinger" | double-click
+    get-button Remove | click
+    get-table | select "Qualities Codeslinger" | double-click
+    get-button OK | click
+}
+with [get-editor "Shr5 Karma Generator" | get-section Qualities] {
+    get-tree | select "Qualities High Pain Tolerance (Rating 2)"
+    get-button "Remove all selected items." | click
+    get-button "Add a Qualities to the Qualities feature." | click
+}
+with [get-window "Select qualities ... -- Shr List"] {
+    with [get-table] {
+        select "Qualities Ambidextrous" | double-click
+        select "Qualities Aptitude" | double-click
+        select "Qualities First Impression" | double-click
+    }
+    get-table -after [get-label Feature] | select "Qualities Ambidextrous" | double-click
+    get-button OK | click
+}
+with [get-editor "Shr5 Karma Generator" | get-section Qualities] {
+    get-tree | select "Qualities First Impression"
+    get-button "Remove all selected items." | click
+    get-tree | select "Qualities Aptitude"
+    get-button "Remove all selected items." | click
+    get-button "Add a Qualities to the Qualities feature." | click
+}
+with [get-window "Select qualities ... -- Shr List"] {
+    get-table | select "Qualities Ambidextrous" | double-click
+    get-button OK | click
+}
+with [get-editor "Shr5 Karma Generator"] {
+    with [get-tab-folder] {
+        get-tab-item Character | click
+        get-tab-item Persona | click
+    }
+    with [get-section Skills] {
+        click
+        with [get-tree] {
+            select "Skill group Influence/Skill Negotiation" | activate-cell-edit -column 2
+            get-editbox | set-text 2
+            apply-cell-edit -deactivate
+            select "Skill group Influence/Skill Leadership" | activate-cell-edit -column 2
+            get-editbox | set-text 2
+            apply-cell-edit -deactivate
+            select "Skill group Influence/Skill Etiquette" | activate-cell-edit -column 2
+            get-editbox | set-text 1
+            apply-cell-edit -deactivate
+            select "Skill group Influence/Skill Etiquette"
+        }
+    }
+}
+get-view "Character rule validation" | get-tree | get-property itemCount | equals 0 | verify-true
+get-editor "Shr5 Karma Generator" | get-tab-folder | get-tab-item "Karma Generator" | click
+with [get-editor "Shr5 Karma Generator"] {
+    get-button "Finish the character generation by commiting the character." | get-property "isEnabled()" | equals true 
+        | verify-true
+    get-section create | get-label "left :1" | get-property caption | equals "left :1" | verify-true
+}
+get-editor "Shr5 Karma Generator" | get-button "Finish the character generation by commiting the character." | click
+get-window "Start money" | get-button OK | click
+get-editor "Shr5 Karma Generator" | get-section create | get-label create | get-property "isEnabled()" | equals false 
+    | verify-true
+with [get-editor "Shr5 Karma Generator"] {
+    get-group Overview | get-editbox -after [get-label "Character Name"] | click-text 13 1 right
+    close
+}
+get-menu "Window/Show Perspective" | click
+get-window "Open Perspective" | get-table | select "Shadowrun resources \\(default\\)" | click -default
+get-menu "Character/Open Managed Character" | click
+with [get-window "Open Managed Character."] {
+    with [get-editbox -after [get-label filter]] {
+        set-text "*Test-karma-1"
+    }
+    get-tree | select "NPC Spellcaster type Test-karma-1" | click -default
+}
+with [get-editor "NPC Spellcaster type Test-karma-1"] {
+    get-section Description | get-editbox -after [get-label Name] | get-property text | equals "Test-karma-1" 
+        | verify-true
+    with [get-section "attributes  skills"] {
+        with [get-group attributes] {
+            get-label 4 | get-property caption | equals 4 | verify-true
+            get-label 5 | get-property caption | equals 5 | verify-true
+        }
+        with [get-group Skills | get-tree] {
+            get-item "Skill group Acting/Skill Con" | get-property "columns[0]" | equals "Skill Con" | verify-true
+            get-item "Skill group Acting/Skill Con" | get-property "columns[1]" | equals "[]" | verify-true
+            get-item "Skill group Acting/Skill Con" | get-property "columns[2]" | equals 4 | verify-true
+            get-item "Skill group Acting/Skill Con" | get-property "columns[3]" | equals "[Cha] : 7" | verify-true
+        }
+    }
+}
+with [get-editor "NPC Spellcaster type Test-karma-1" | get-tab-folder] {
+    get-tab-item Persona | click
+    get-tab-item Character | click
+}
+get-editor "NPC Spellcaster type Test-karma-1" | get-group Allgemein | get-link "Lifestyle Low" | get-property caption 
+    | equals "Lifestyle Low" | verify-true
+get-editor "NPC Spellcaster type Test-karma-1" | close
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
