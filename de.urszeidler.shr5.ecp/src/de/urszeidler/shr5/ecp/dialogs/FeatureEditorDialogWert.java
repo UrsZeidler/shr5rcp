@@ -575,9 +575,9 @@ public class FeatureEditorDialogWert extends FeatureEditorDialog {
         gesamtPreisLabel = new Label(choiceComposite, SWT.NONE);
         gesamtPreisLabel.setLayoutData(gridData);
         updateLabel();
-        if (activateFilter)
-            if (dialogSettings.getBoolean("Featuredialog.shrListFilter")) //$NON-NLS-1$
-                choiceTableViewer.addFilter(shrListFilter);
+//        if (activateFilter)
+//            if (dialogSettings.getBoolean("Featuredialog.shrListFilter")) //$NON-NLS-1$
+//                choiceTableViewer.addFilter(shrListFilter);
 
        
         
