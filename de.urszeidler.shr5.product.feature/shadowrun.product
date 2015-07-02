@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="RCP schadowrun" uid="de.urszeidler.shr5.rcp.product.id" id="de.urszeidler.shr5.product.shr5" application="de.urszeidler.shr5.product.app" version="0.3.0.rc" useFeatures="true" includeLaunchers="true">
+<product name="RCP schadowrun" uid="de.urszeidler.shr5.rcp.product.id" id="de.urszeidler.shr5.product.shr5" application="de.urszeidler.shr5.product.app" version="0.3.0" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="/de.urszeidler.shr5.product/icons/shrImage_6_250.png"/>
@@ -28,11 +28,6 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
 -Xms240m
 -Xmx768m
       </vmArgs>
-      <vmArgsLin>-Dorg.eclipse.swt.browser.DefaultType=mozilla
--XX:MaxPermSize=256m
--Xms240m
--Xmx768m
-      </vmArgsLin>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
    </launcherArgs>
@@ -63,6 +58,7 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
 
    <vm>
    </vm>
+
 
    <plugins>
    </plugins>
