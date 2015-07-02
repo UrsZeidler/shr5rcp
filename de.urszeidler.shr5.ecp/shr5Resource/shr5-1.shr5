@@ -1057,7 +1057,7 @@
         </priorities>
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//Shr5Generator"/>
       </entries>
-      <entries xsi:type="shr5mngt:LifeModulesSystem" xmi:id="_9ljvUNHvEeS4ndSijGfJ0Q" name="Building the lifemodule system" page="65" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="750" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" skillMax="7" numberOfSpecalism="2" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6" knowlegeSkillMax="9">
+      <entries xsi:type="shr5mngt:LifeModulesSystem" xmi:id="_9ljvUNHvEeS4ndSijGfJ0Q" name="Building the lifemodule system" page="65" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" characterAdvancements="_BtZ9QN0CEeOvVYoRsPZlnA" karmaPoints="750" karmaToResourceFactor="2000" karmaToMagicFactor="5" numberOfMaxAttributes="1" maxResourceToKeep="2000" maxKarmaToResources="200" maxKarmaToKeep="5" skillMax="7" numberOfSpecalism="2" karmaToConnectionFactor="2" boundSprititServiceCost="1" maxConnectionRating="6" freeMartialArtTechniques="1" maxMartialArtStyles="1" knowlegeSkillMax="9">
         <applicableGenerators href="http://urszeidler.de/shr5mngt/1.0#//LifeModulesGenerator"/>
         <modules xmi:id="_SOF0wM_bEeSu9qVfM6-lMQ" image="/shr5Resource/images/250px-Flagge_UCAS_(Aktuell).png" name="UCAS " page="66" srcBook="eab9ec78-b43f-4ea9-8531-95b074a1b9d9" karmaCost="15">
           <characterChanges xsi:type="shr5mngt:ModuleFeatureChange" xmi:id="_SOF0wc_bEeSu9qVfM6-lMQ" value="907a3a8f-2c40-4543-a5a9-891bcde41f6b">
