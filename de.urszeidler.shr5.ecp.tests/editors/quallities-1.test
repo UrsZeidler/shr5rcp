@@ -1,0 +1,53 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: quallities-1
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _cqZ90CDIEeWWn5o5a4U-pA
+Runtime-Version: 2.0.0.201506120617
+Save-Time: 7/2/15 4:44 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-menu "Window/Show Perspective" | click
+get-window "Open Perspective" | get-table | select "Shadowrun resources \\(default\\)" | click -default
+with [get-view "Model Explorer" | get-tree] {
+    select "shr5Resources/All/Resourcen/Definitions/Qualities/Qualities Ambidextrous" | double-click
+    get-item "shr5Resources/All/Resourcen/Definitions/Qualities/Qualities Ambidextrous" | drag-start 58 12
+    get-item "shr5Resources/All/Resourcen/Definitions/Qualities" | drag-enter 69 22 -detail move
+    get-item "shr5Resources/All/Resourcen/Definitions/Qualities" | drag-over 67 17 -detail move
+    get-item "shr5Resources/All/Resourcen/Definitions/Qualities" | drag-exit
+    get-item "shr5Resources/All/Resourcen/Definitions/Qualities" | drag-accept 67 17 -detail move
+    drag-set-data
+    get-item "shr5Resources/All/Resourcen/Definitions/Qualities" | drop 67 17 -detail move
+    drag-end -detail move
+    select [get-item "shr5Resources/All/Resourcen/Definitions/Qualities" | get-item "Qualities Ambidextrous" -index 1] 
+        | double-click
+}
+with [get-editor "Qualities Ambidextrous" -index 1] {
+    with [get-section Description] {
+        get-editbox -after [get-label Description -after [get-label Name]] | set-text-offset 0 0
+        get-editbox -after [get-label Name] | set-text "Ambidextrous tttt"
+    }
+    get-tab-folder | get-tab-item Modifications | click
+    get-group Modification | get-section Modification 
+        | get-button "Add a Attribute modificator rating to the Mods feature." | click
+}
+with [get-window -class CreateAttributModifikatorDialog] {
+    get-button "..." | click
+    get-window -class OwnChooseDialog | get-tree | select Intuition | click -default
+    get-editbox -after [get-label Rating] | set-text 1
+    get-button OK | click
+}
+get-editor "Intuition: 1" | close
+with [get-editor "Qualities Ambidextrous" -index 1] {
+    get-tab-folder | get-tab-item Qualities | click
+    close
+}
+get-editor "Qualities Ambidextrous" | close
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
