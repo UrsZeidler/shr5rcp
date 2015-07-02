@@ -16,6 +16,6 @@
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_ANT_TARGETS" value="createSHR5.resource,"/>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_LAUNCH_CONFIGURATION_BUILD_SCOPE" value="${project}"/>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="${workspace_loc:/build/ant/build.xml}"/>
-<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="-Dout.filename=shr5-1-test-cyberware.shr5&#10;-Dout.path=../de.urszeidler.shr5.ecp/shr5Resource/&#10;-Ddo.localization=true&#10;-Dchummer2shr5xsl=xsl/shr5shr5.xsl"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="-Dout.filename=shr5-1-test-cyberware.shr5&#10;-Dout.path=out&#10;-Ddo.localization=true&#10;-Dchummer2shr5xsl=xsl/shr5shr5.xsl&#10;-Dpath.to.chummer.data=/home/urs/git/chummer5a/Chummer/data"/>
 <stringAttribute key="process_factory_id" value="org.eclipse.ant.ui.remoteAntProcessFactory"/>
 </launchConfiguration>

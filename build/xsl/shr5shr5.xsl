@@ -3,24 +3,29 @@
 	xmlns:shr5mngt="http://urszeidler.de/shr5mngt/1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:output method="xml" indent="yes" encoding="UTF-8" />
 	<xsl:strip-space elements="*" />
-	<xsl:param name="path" select="'/home/urs/chummer2/Chummer2/data'" />
+	<xsl:param name="path" select="'/home/urs/git/chummer5a/Chummer/data'" />
 	<xsl:param name="loc_path"
-		select="'/home/urs/eclipse_workspaces/workspace_E4.3_shr_git/chummer-data/lang/de_data.xml'" />
+		select="'/home/urs/git/chummer5a/Chummer/lang/de_data.xml'" />
 	<xsl:param name="do_localization" select="true" />
-	<xsl:variable name="loc_data" select="document($loc_path,/)" />
+<!-- 	<xsl:variable name="loc_data" select="document($loc_path,/)" /> -->
 
-	<xsl:variable name="books"
-		select="document(concat($path,'/books.xml'),/)" />
-	<xsl:variable name="skills"
-		select="document(concat($path,'/skills.xml'),/)" />
+<!-- 	<xsl:variable name="books" -->
+<!-- 		select="document(concat($path,'/books.xml'),/)" /> -->
+<!-- 	<xsl:variable name="skills" -->
+<!-- 		select="document(concat($path,'/skills.xml'),/)" /> -->
 
-	<xsl:variable name="cyberwares"
-		select="document(concat($path,'/cyberware.xml'),/)" />
-	<xsl:variable name="biowares"
-		select="document(concat($path,'/bioware.xml'),/)" />
-	<xsl:variable name="powers"
-		select="document(concat($path,'/powers.xml'),/)" />
+<!-- 	<xsl:variable name="cyberwares" -->
+<!-- 		select="document(concat($path,'/cyberware.xml'),/)" /> -->
+<!-- 	<xsl:variable name="biowares" -->
+<!-- 		select="document(concat($path,'/bioware.xml'),/)" /> -->
+<!-- 	<xsl:variable name="powers" -->
+<!-- 		select="document(concat($path,'/powers.xml'),/)" /> -->
+<!-- 	<xsl:variable name="martialarts" -->
+<!-- 		select="document(concat($path,'/martialarts.xml'),/)" /> -->
+<!-- 	<xsl:variable name="qualities" -->
+<!-- 		select="document(concat($path,'/qualities.xml'),/)" /> -->
 
+	<xsl:include href="basic-imports.xsl" />
 	<xsl:include href="shr5-functions.xsl" />
 	<xsl:template
 		match="categories|version|accessories|grades|enhancements|enhancement" />
@@ -34,16 +39,16 @@
 					<xsl:apply-templates select="node()" />
 				</xsl:for-each>
 			</entries>
-			<!-- <entries xsi:type="shr5:ShrList" name="bioware"> -->
-			<!-- <xsl:for-each select="$biowares"> -->
-			<!-- <xsl:apply-templates select="node()" /> -->
-			<!-- </xsl:for-each> -->
-			<!-- </entries> -->
-			<!-- <entries xsi:type="shr5:ShrList" name="power"> -->
-			<!-- <xsl:for-each select="$powers"> -->
-			<!-- <xsl:apply-templates select="node()" /> -->
-			<!-- </xsl:for-each> -->
-			<!-- </entries> -->
+			<entries xsi:type="shr5:ShrList" name="bioware">
+			<xsl:for-each select="$biowares">
+			<xsl:apply-templates select="node()" />
+			</xsl:for-each>
+			</entries>
+			<entries xsi:type="shr5:ShrList" name="power">
+			<xsl:for-each select="$powers">
+			<xsl:apply-templates select="node()" />
+			</xsl:for-each>
+			</entries>
 
 		</shr5:ShrList>
 	</xsl:template>
