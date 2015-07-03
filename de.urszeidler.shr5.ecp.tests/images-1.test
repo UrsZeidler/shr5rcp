@@ -7,7 +7,7 @@ Element-Version: 3.0
 External-Reference: 
 Id: _PiNz8B8lEeWS-4GHvxJuGA
 Runtime-Version: 2.0.0.201506120617
-Save-Time: 7/1/15 11:17 AM
+Save-Time: 7/3/15 12:23 AM
 Tags: images
 Testcase-Type: ecl
 
@@ -95,7 +95,102 @@ with [get-window "Open Managed Character."]{
 	get-button Cancel | click
 }
 
+get-editor "PC Ki Adept Gunter von Kintzel" | close
+// editors
+
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Resourcen/Gear/Weapons/Accessories/Weapon mod Silencer, Ares Light Fire 70" 
+    | double-click
+save-editor-image -editorName "Weapon mod Silencer, Ares Light Fire 70" -name "Accessories"
+get-editor "Weapon mod Silencer, Ares Light Fire 70" | close
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Resourcen/Gear/Weapons/Melee/Melee weapon Ares 'One' Monosword" | double-click
+save-editor-image -editorName -editorName  "Melee weapon Ares 'One' Monosword" -name "Melee"
+get-editor "Melee weapon Ares 'One' Monosword" | close
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Resourcen/Gear/Weapons/Projectileweapon/Projectile weapon Bow (Rating 1)" | double-click
+save-editor-image -editorName "Projectile weapon Bow (Rating 1)" -name "Projectileweapon"
+get-editor "Projectile weapon Bow (Rating 1)" | close
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Resourcen/Gear/Weapons/Firearm/Firearm Ares Thuderstruck Gauss Rifle" | double-click
+save-editor-image -editorName "Firearm Ares Thuderstruck Gauss Rifle" -name "Firearm"
+get-editor "Firearm Ares Thuderstruck Gauss Rifle" | close
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Resourcen/Gear/Weapons/Amunition/Assault Cannon (unset) 10" | double-click
+save-editor-image -editorName "Assault Cannon (unset) 10" -name "Amunition"
+get-editor "Assault Cannon (unset) 10" | close
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Resourcen/Gear/Weapons/Throwing Weapons/Grenate Flash-Bang [1]" | double-click
+save-editor-image -editorName "Grenate Flash-Bang [1]"  -name "Grenate"
+get-editor "Grenate Flash-Bang [1]" | close
+get-view "Model Explorer" | get-tree | select "shr5Resources/All/Resourcen/Gear/Gears/Item Arrow: Standard" 
+    | double-click
+save-editor-image -editorName "Item Arrow: Standard"  -name "Gear"
+get-editor "Item Arrow: Standard" | close
+get-view "Model Explorer" | get-tree | select "shr5Resources/All/Resourcen/Gear/Cyberware/Cyberware Commlink" 
+    | double-click
+save-editor-image -editorName "Cyberware Commlink"  -name "Cyberware-Commlink"
+get-editor "Cyberware Commlink" | close
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Resourcen/Gear/Cyberware/Cyberware Cybereyes Basic System 2" | double-click
+save-editor-image -editorName "Cyberware Cybereyes Basic System 2"  -name "Cyberware-Cybereyes"
+get-editor "Cyberware Cybereyes Basic System 2" | close
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Resourcen/Gear/Cyberware/Cyberware Select Sound Filter 2" | double-click
+save-editor-image -editorName "Cyberware Select Sound Filter 2"  -name "Cyberware-Select-Sound"
+get-editor "Cyberware Select Sound Filter 2" | close
+get-view "Model Explorer" | get-tree | select "shr5Resources/All/Resourcen/Gear/Cyberware/Cyberware Obvious Foot" 
+    | double-click
+save-editor-image -editorName "Cyberware Obvious Foot" -name "Cyberware-Obvious-Foot"
+get-editor "Cyberware Obvious Foot" | close
+//
 
 
+with [get-view "Model Explorer" | get-tree] {
+    select "shr5Resources/All/Resourcen/Gear/Bioware/Bioware Adrenaline Pump 3" | double-click
+}
+save-editor-image -editorName "Bioware Adrenaline Pump 3" -name "Bioware"
+get-editor "Bioware Adrenaline Pump 3" | close
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Resourcen/Gear/Armors/Clothes Actioneer Business Clothes" | double-click
+save-editor-image -editorName "Clothes Actioneer Business Clothes"  -name "Clothes"
+get-editor "Clothes Actioneer Business Clothes" | close
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Resourcen/Gear/Vehicles/Ground vehicle Dodge Scoot (Scooter)" | double-click
+save-editor-image -editorName "Ground vehicle Dodge Scoot (Scooter)" -name "Vehicle"
+get-editor "Ground vehicle Dodge Scoot (Scooter)" | close
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Resourcen/Gear/Vehicles/Drone Shiawase Kanmushi (Microdrone)" | double-click
+save-editor-image -editorName "Drone Shiawase Kanmushi (Microdrone)" -name "Drone"
+get-editor "Drone Shiawase Kanmushi (Microdrone)" | close
+get-view "Model Explorer" | get-tree | select "shr5Resources/All/Resourcen/Gear/Credsticks/Credstick Standard" 
+    | double-click
+save-editor-image -editorName "Credstick Standard" -name "Credstick"
+get-editor "Credstick Standard" | close
+with [get-view "Model Explorer" | get-tree] {
+    select "shr5Resources/All/Resourcen/Gear/Contracts/License default" | double-click
+}
+save-editor-image -editorName "License default" -name "Lisence"
+get-editor "License default" | close
+get-view "Model Explorer" | get-tree | select "shr5Resources/All/Resourcen/Gear/Contracts/Sin Faked SIN 1" 
+    | double-click
+save-editor-image -editorName "Sin Faked SIN 1" -name "Fake-Sin"
+get-editor "Sin Faked SIN 1" | close
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Resourcen/Gear/Contracts/Interval contract DocWagon Contract, Basic" | double-click
+save-editor-image -editorName "Interval contract DocWagon Contract, Basic" -name "Intervall-Contract"
+get-editor "Interval contract DocWagon Contract, Basic" | close
+get-view "Model Explorer" | get-tree | select "shr5Resources/All/Resourcen/Gear/Sensors/Sensor Function Ultrasound" 
+    | double-click
+save-editor-image -editorName "Sensor Function Ultrasound" -name "Sensor-Function"
+get-editor "Sensor Function Ultrasound" | close
+get-view "Model Explorer" | get-tree | select "shr5Resources/All/Resourcen/Gear/Sensors/Sensor Single Sensor 2" 
+    | double-click
+save-editor-image -editorName "Sensor Single Sensor 2" -name "Single-Sensor"
+get-editor "Sensor Single Sensor 2" | close
+get-view "Model Explorer" | get-tree | select "shr5Resources/All/Resourcen/Gear/Sensors/Sensor Array Sensor Array 2" 
+    | double-click
+save-editor-image -editorName "Sensor Array Sensor Array 2" -name "Sensor-Array"
+get-editor "Sensor Array Sensor Array 2" | close
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
