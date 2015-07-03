@@ -141,6 +141,7 @@ public class PersonaUIToolkit {
         text.setLayoutData(gd_spinner);
         getToolkit().adapt(text);
         getToolkit().paintBordersFor(text);
+        text.setMinimum(0);
 
         
         setDefaultLayout(text);
@@ -169,6 +170,7 @@ public class PersonaUIToolkit {
 
         final Spezies spezies = eObject.getSpezies();
         if (ShadowrunTools.base2SpeciesMin(basefeature) != null && spezies != null) {
+            text.setMinimum((Integer)spezies.eGet(ShadowrunTools.base2SpeciesMin(basefeature)));
             Label minMaxLabel = getToolkit().createLabel(client, "");
             ComputedValue computedValue2 = new ComputedValue() {
 
