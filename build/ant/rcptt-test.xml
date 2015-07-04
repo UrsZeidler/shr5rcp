@@ -76,7 +76,7 @@
       <arg value="${test-path}" />
 
       <arg value="-testOptions" />
-      <arg value="reportingIncludeIgnoredWaitDetails=true;reportingPassedTestDetails=true;runtimeEnableActivityLogs=true;q7ImageCapture=true" />
+      <arg value="testExecTimeout=600;execTimeout=3600;reportingIncludeIgnoredWaitDetails=true;reportingPassedTestDetails=true;runtimeEnableActivityLogs=true;q7ImageCapture=true" />
 
     </java>
   </target>
