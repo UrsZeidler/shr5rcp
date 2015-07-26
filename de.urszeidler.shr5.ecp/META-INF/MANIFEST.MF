@@ -33,9 +33,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.ecp.ui.view.swt,
  org.eclipse.emf.ecp.ui,
  org.eclipse.emf.ecp.workspace.core,
- org.eclipse.emf.ecp.validation,
  org.eclipse.emf.ecp.view.model.provider.generator,
- org.eclipse.emf.ecp.validation.connector,
  org.eclipse.emf.ecp.view.util.swt,
  org.eclipse.emf.ecp.view.core.swt,
  org.eclipse.emf.ecp.edit.swt,
@@ -43,7 +41,9 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.ecp.ui.e3,
  org.eclipse.zest.core,
  org.eclipse.zest.layouts,
- de.urszeidler.fop.help;bundle-version="1.0.0"
+ de.urszeidler.fop.help;bundle-version="1.0.0",
+ org.eclipse.emf.databinding,
+ org.eclipse.emf.databinding.edit
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: de.urszeidler.shr5.ecp,

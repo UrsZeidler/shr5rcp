@@ -87,14 +87,13 @@
 
    <includes
          id="de.urszeidler.shr5.feature"
-         version="0.0.0"
-         optional="true"/>
+         version="0.0.0"/>
 
    <plugin
          id="javax.servlet"
          download-size="0"
          install-size="0"
-         version="3.0.0.v201112011016"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -670,14 +669,14 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.ecf"
+         id="org.eclipse.ecf.identity"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.ecf.identity"
+         id="org.eclipse.ecf"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -785,13 +784,6 @@
          id="org.eclipse.equinox.p2.jarprocessor"
          download-size="66"
          install-size="118"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.equinox.p2.ql"
-         download-size="8"
-         install-size="12"
          version="0.0.0"
          unpack="false"/>
 
@@ -927,5 +919,12 @@
          download-size="0"
          install-size="0"
          version="0.0.0"/>
+
+   <plugin
+         id="org.tukaani.xz"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>

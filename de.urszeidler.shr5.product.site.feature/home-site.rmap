@@ -40,6 +40,29 @@
     </rm:provider>
   </rm:searchPath>
   <rm:searchPath name="org.eclipse.platform">
+  
+      <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="http://download.eclipse.org/eclipse/updates/4.5"/>
+    </rm:provider>
+    <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="http://download.eclipse.org/releases/mars"/>
+    </rm:provider>
+   <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="http://download.eclipse.org/ecp/releases/releases_target_16"/>
+    </rm:provider>
+   <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="http://download.eclipse.org/modeling/emf/emf/updates"/>
+    </rm:provider>
+  
+  <!--
     <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
       <rm:property key="buckminster.source" value="false"/>
       <rm:property key="buckminster.mutable" value="false"/>
@@ -55,6 +78,7 @@
       <rm:property key="buckminster.mutable" value="false"/>
       <rm:uri format="http://download.eclipse.org/rt/ecf/platform/lunasr1/site.p2/"/>
     </rm:provider>
+    -->
     <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
       <rm:property key="buckminster.source" value="false"/>
       <rm:property key="buckminster.mutable" value="false"/>
@@ -81,9 +105,14 @@
     <rm:provider componentTypes="osgi.bundle" readerType="p2" source="false" mutable="false">
       <rm:property key="buckminster.source" value="false"/>
       <rm:property key="buckminster.mutable" value="false"/>
-      <rm:uri format="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/"/>
+      <rm:uri format="http://download.eclipse.org/tools/orbit/downloads/drops/R20150519210750/repository/"/>
     </rm:provider>
     <!--
+    <rm:provider componentTypes="osgi.bundle" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/"/>
+    </rm:provider>
     <rm:provider componentTypes="osgi.bundle" readerType="p2" source="false" mutable="false">
       <rm:property key="buckminster.source" value="false"/>
       <rm:property key="buckminster.mutable" value="false"/>
