@@ -54,7 +54,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
 		<tycho.version>0.20.0</tycho.version>
-		<platform-repo.url>http://download.eclipse.org/releases/luna</platform-repo.url>
+		<platform-repo.url>http://download.eclipse.org/releases/mars</platform-repo.url>
 	</properties>
 
 
@@ -74,7 +74,7 @@
 
 		<repository>
 			<id>ecp</id>
-			<url>http://download.eclipse.org/ecp/releases/releases_14</url>
+			<url>http://download.eclipse.org/ecp/releases/releases_target_16</url>
 			<layout>p2</layout>
 		</repository>
 
@@ -86,13 +86,13 @@
 
 		<repository>
 			<id>babel</id>
-			<url>http://download.eclipse.org/technology/babel/update-site/R0.12.1/luna</url>
+			<url>http://build.eclipse.org/technology/babel/update-site/I20150718-0600/mars/</url>
 			<layout>p2</layout>
 		</repository>
 
 		<repository>
 			<id>orbit</id>
-			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/</url>
+			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20150519210750/repository/</url>
 			<layout>p2</layout>
 		</repository>
 
