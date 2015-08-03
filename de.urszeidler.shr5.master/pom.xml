@@ -86,7 +86,7 @@
 
 		<repository>
 			<id>babel</id>
-			<url>http://build.eclipse.org/technology/babel/update-site/I20150718-0600/mars/</url>
+			<url>http://build.eclipse.org/technology/babel/update-site/RC1/mars/</url>
 			<layout>p2</layout>
 		</repository>
 

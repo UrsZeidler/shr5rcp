@@ -2,7 +2,6 @@
 <?pde version="3.8"?><target includeMode="feature" name="new" sequenceNumber="88">
 <locations>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.jdt.feature.group" version="3.11.0.v20150603-2000"/>
 <repository location="http://download.eclipse.org/releases/mars/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
@@ -40,10 +39,11 @@
 <unit id="org.eclipse.acceleo.source.feature.group" version="3.6.0.201506080954"/>
 <unit id="org.eclipse.zest.sdk.feature.group" version="1.6.0.201506010206"/>
 <unit id="org.eclipse.emf.query.sdk.feature.group" version="1.9.0.201505312221"/>
+<unit id="org.eclipse.ecf.core.feature.group" version="3.10.0.v20150512-1727"/>
+<unit id="org.eclipse.jdt.feature.group" version="3.11.0.v20150603-2000"/>
 <repository location="http://download.eclipse.org/releases/mars/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.ecf.core.feature.group" version="3.10.0.v20150512-1727"/>
 <repository location="http://download.eclipse.org/releases/mars/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
@@ -59,7 +59,7 @@
 <unit id="org.eclipse.babel.nls_tools.pdt_de.feature.group" version="4.5.0.v20150718060002"/>
 <unit id="org.eclipse.babel.nls_eclipse_de.feature.group" version="4.5.0.v20150718060002"/>
 <unit id="org.eclipse.babel.nls_technology.recommenders_de.feature.group" version="4.5.0.v20150718060002"/>
-<repository location="http://build.eclipse.org/technology/babel/update-site/I20150718-0600/mars/"/>
+<repository location="http://build.eclipse.org/technology/babel/update-site/RC1/mars/"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.emf.ecore.edit.feature.group" version="2.9.0.v20150601-0402"/>
