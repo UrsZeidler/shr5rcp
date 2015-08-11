@@ -43,7 +43,9 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.zest.layouts,
  de.urszeidler.fop.help;bundle-version="1.0.0",
  org.eclipse.emf.databinding,
- org.eclipse.emf.databinding.edit
+ org.eclipse.emf.databinding.edit,
+ org.eclipse.emfforms.swt.core.di;bundle-version="1.6.1",
+ org.eclipse.emfforms.swt.core.di.extension;bundle-version="1.6.1"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: de.urszeidler.shr5.ecp,
