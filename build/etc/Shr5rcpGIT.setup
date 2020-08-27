@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Project
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
+    xmlns:pde="http://www.eclipse.org/oomph/setup/pde/1.0"
+    xmlns:projects="http://www.eclipse.org/oomph/setup/projects/1.0"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/pde/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/PDE.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore"
+    name="shr5rcp.git"
+    label="Shr5rcp GIT">
+  <setupTask
+      xsi:type="setup.p2:P2Task">
+    <requirement
+        name="org.eclipse.acceleo.sdk.feature.group"
+        versionRange="[3.7.0,4.0.0)"/>
+    <repository
+        url="http://download.eclipse.org/acceleo/updates/releases/3.7"/>
+  </setupTask>
+  <setupTask
+      xsi:type="git:GitCloneTask"
+      id="shr5rcp"
+      location="${installation.location/shr5rcp}"
+      remoteURI="https://github.com/UrsZeidler/shr5rcp.git"
+      pushURI="https://github.com/UrsZeidler/shr5rcp.git"/>
+  <setupTask
+      xsi:type="projects:ProjectsImportTask">
+    <sourceLocator
+        rootFolder="${installation.location/shr5rcp}"/>
+  </setupTask>
+  <setupTask
+      xsi:type="pde:TargetPlatformTask"
+      name="emf-client-target.target"/>
+  <setupTask
+      xsi:type="pde:APIBaselineFromTargetTask"
+      name="shr5rcp-baseline"
+      targetName="emf-client-target.target"/>
+  <stream name="master"
+      label="Master"/>
+  <logicalProjectContainer
+      xsi:type="setup:ProjectCatalog"
+      href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']"/>
+  <description>Shr5rcp GIT provides cool stuff.</description>
+</setup:Project>
