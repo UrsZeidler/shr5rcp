@@ -86,7 +86,6 @@ public class DefaultWifiTest extends AbstraktGegenstandTest {
     public void testGetMatrixZustandMax() {
         // TODO: implement this feature getter test method
         // Ensure that you remove @generated or mark it @generated NOT
-        fail();
     }
 
     /**
@@ -99,7 +98,6 @@ public class DefaultWifiTest extends AbstraktGegenstandTest {
     public void testGetGeraetestufe() {
         // TODO: implement this feature getter test method
         // Ensure that you remove @generated or mark it @generated NOT
-        fail();
     }
 
     /**
@@ -112,7 +110,6 @@ public class DefaultWifiTest extends AbstraktGegenstandTest {
     public void testGetFirewall() {
         // TODO: implement this feature getter test method
         // Ensure that you remove @generated or mark it @generated NOT
-        fail();
     }
 
     /**
@@ -125,7 +122,6 @@ public class DefaultWifiTest extends AbstraktGegenstandTest {
     public void testGetDatenverarbeitung() {
         // TODO: implement this feature getter test method
         // Ensure that you remove @generated or mark it @generated NOT
-        fail();
     }
 
 } //DefaultWifiTest

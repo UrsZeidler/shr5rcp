@@ -21,15 +21,21 @@ http://www.shadowruntabletop.com/
    </configIni>
 
    <launcherArgs>
-      <programArgs>-data shr_workspace/</programArgs>
+      <programArgs>-data shr_workspace/
+-vm
+/opt/jdk1.7.0_51/bin
+      </programArgs>
       <vmArgs>-XX:MaxPermSize=256m
 -Xms240m
--Xmx768m</vmArgs>
+-Xmx768m
+      </vmArgs>
       <vmArgsLin>-Dorg.eclipse.swt.browser.DefaultType=mozilla
 -XX:MaxPermSize=256m
 -Xms240m
--Xmx768m</vmArgsLin>
-      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+-Xmx768m
+      </vmArgsLin>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
    </launcherArgs>
 
    <windowImages i16="/de.urszeidler.shr5.product/icons/shrImage_6_16.png" i32="/de.urszeidler.shr5.product/icons/shrImage_6_32.png" i48="/de.urszeidler.shr5.product/icons/shrImage_6_48.png" i64="/de.urszeidler.shr5.product/icons/shrImage_6_64.png" i128="/de.urszeidler.shr5.product/icons/shrImage_6_128.png"/>
@@ -41,7 +47,6 @@ http://www.shadowruntabletop.com/
       startupForegroundColor="000000" />
    <launcher name="run_shr">
       <linux icon="/de.urszeidler.shr5.product/icons/shrImage_6_64.xpm"/>
-      <solaris/>
       <win useIco="false">
          <bmp
             winSmallHigh="/de.urszeidler.shr5.product/icons/shrImage_6_16.ico"
@@ -59,6 +64,7 @@ http://www.shadowruntabletop.com/
    <vm>
    </vm>
 
+
    <plugins>
    </plugins>
 
@@ -66,5 +72,22 @@ http://www.shadowruntabletop.com/
       <feature id="de.urszeidler.shr5.product.feature"/>
    </features>
 
+   <configurations>
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.http.registry" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
+      <property name="cssTheme" value="org.eclipse.e4.ui.css.theme.e4_default" />
+      <property name="applicationCSSResources" value="platform:/plugin/org.eclipse.ui.themes/images/" />
+   </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
 
 </product>

@@ -1,0 +1,121 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.urszeidler</groupId>
+	<artifactId>shr5</artifactId>
+	<version>0.3.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<tycho.version>1.4.0</tycho.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<modules>
+		<module>build</module>
+		<module>de.urszeidler.shr5.model</module>
+		<module>de.urszeidler.shr5.model.edit</module>
+		<module>de.urszeidler.shr5.management.model</module>
+		<module>de.urszeidler.shr5.management.model.edit</module>
+		<module>de.urszeidler.shr5.help</module>
+		<module>de.urszeidler.shr5.ecp</module>
+		<module>de.urszeidler.shr5.m2t</module>
+		<module>de.urszeidler.shr5.acceleo</module>
+		<module>de.urszeidler.shr5.product</module>
+		<module>de.urszeidler.shr5.gameplay</module>
+		<module>de.urszeidler.shr5.gameplay.model</module>
+		<module>de.urszeidler.shr5.gameplay.model.edit</module>
+		<module>de.urszeidler.shr5.runtime</module>
+		<module>de.urszeidler.shr5.runtime.edit</module>
+		<module>de.urszeidler.shr5.scripting</module>
+		<module>de.urszeidler.shr5.scripting.edit</module>
+		<module>de.urszeidler.shr5.webserver</module>
+		<module>de.urszeidler.shr5.scripting.ui</module>
+		
+		
+		<module>de.urszeidler.shr5.feature</module>
+		<module>de.urszeidler.shr5.model.feature</module>
+
+		<module>de.urszeidler.shr5.model.tests</module>
+		<module>de.urszeidler.shr5.management.model.tests</module>
+		<module>de.urszeidler.shr5.runtime.tests</module>
+		<module>de.urszeidler.shr5.gameplay.model.tests</module>
+
+
+		<module>de.urszeidler.shr5.product.feature</module>
+		<module>de.urszeidler.shr5.ecp.feature</module>
+		<module>de.urszeidler.shr5.product.site.feature</module>
+		<module>de.urszeidler.shr5.product.build</module>
+		<module>de.urszeidler.shr5.localization.feature</module>
+		<module>de.urszeidler.shr5.test.feature</module>
+
+		<module>de.urszeidler.shr5.updatesite</module> 
+	</modules>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-versions-plugin</artifactId>
+					<version>${tycho.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-packaging-plugin</artifactId>
+					<version>${tycho.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<target>
+						<artifact>
+							<groupId>de.urszeidler</groupId>
+							<artifactId>emf-client-platform-target</artifactId>
+							<version>0.3.0-SNAPSHOT</version>
+						</artifact>
+					</target>
+					<environments>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-versions-plugin</artifactId>
+				<version>${tycho.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-packaging-plugin</artifactId>
+				<version>${tycho.version}</version>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+
