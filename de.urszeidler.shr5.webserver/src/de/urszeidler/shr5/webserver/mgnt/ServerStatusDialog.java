@@ -6,12 +6,14 @@ import java.net.SocketException;
 import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Iterator;
+import java.util.Set;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.beans.PojoObservables;
 import org.eclipse.core.databinding.observable.map.IObservableMap;
 import org.eclipse.core.databinding.observable.set.IObservableSet;
 import org.eclipse.core.databinding.property.Properties;
+import org.eclipse.core.databinding.property.set.ISetProperty;
 import org.eclipse.jface.databinding.viewers.ObservableMapLabelProvider;
 import org.eclipse.jface.databinding.viewers.ObservableSetContentProvider;
 import org.eclipse.jface.dialogs.IDialogConstants;
@@ -195,7 +197,8 @@ public class ServerStatusDialog extends TitleAreaDialog {
         tableViewer.setLabelProvider(new ObservableMapLabelProvider(observeMap));
         tableViewer.setContentProvider(listContentProvider);
         //
-        IObservableSet selfList = Properties.selfSet(PlayerManager.class).observe(registeredPlayers);
+        ISetProperty<Set<PlayerManager>, PlayerManager> selfSet = Properties.selfSet(PlayerManager.class);
+		IObservableSet<PlayerManager> selfList = selfSet.observe((Set<PlayerManager>)registeredPlayers);
         tableViewer.setInput(selfList);
         //
 //        ObservableSetContentProvider setprovider = ObservableSetContentProvider

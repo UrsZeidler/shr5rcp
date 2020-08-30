@@ -18,7 +18,6 @@ import org.eclipse.ui.application.WorkbenchWindowAdvisor;
 import org.eclipse.ui.ide.IDE;
 import org.eclipse.ui.internal.ide.IDEInternalWorkbenchImages;
 import org.eclipse.ui.internal.ide.IDEWorkbenchPlugin;
-import org.eclipse.ui.internal.ide.model.WorkbenchAdapterBuilder;
 import org.osgi.framework.Bundle;
 
 /**
@@ -69,10 +68,6 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 		return new NavigatorRoot();
 	}
 
-	@Override
-	public void preStartup() {
-		WorkbenchAdapterBuilder.registerAdapters();
-	}
 
 	private void declareWorkbenchImages() {
 

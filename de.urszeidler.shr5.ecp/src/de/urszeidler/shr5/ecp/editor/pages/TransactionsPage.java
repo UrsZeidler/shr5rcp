@@ -2,6 +2,7 @@ package de.urszeidler.shr5.ecp.editor.pages;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.core.databinding.DataBindingContext;
@@ -794,7 +795,7 @@ public class TransactionsPage extends AbstractShr5Page<ShoppingTransaction> {
     @SuppressWarnings("unchecked")
     private void addSelectedObjectsToList() {
         StructuredSelection selection = (StructuredSelection)tableViewer_1.getSelection();
-        for (EObject eo : ShadowrunTools.toIterable(selection.iterator())) {
+        for (EObject eo : ShadowrunTools.toIterable((Iterator<EObject>)selection.iterator())) {
             ((ShoppingTransaction)object).getItems().add((GeldWert)eo);
         }
     }
