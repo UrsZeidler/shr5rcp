@@ -7,6 +7,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
+		<rcptt.version>2.5.1</rcptt.version>
 		<tycho.version>1.4.0</tycho.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -42,14 +43,16 @@
 		<module>de.urszeidler.shr5.gameplay.model.tests</module>
 
 
-		<module>de.urszeidler.shr5.product.feature</module>
+<!-- 		<module>de.urszeidler.shr5.product.feature</module> -->
 		<module>de.urszeidler.shr5.ecp.feature</module>
-		<module>de.urszeidler.shr5.product.site.feature</module>
+<!-- 		<module>de.urszeidler.shr5.product.site.feature</module> -->
 		<module>de.urszeidler.shr5.product.build</module>
 		<module>de.urszeidler.shr5.localization.feature</module>
 		<module>de.urszeidler.shr5.test.feature</module>
 
 		<module>de.urszeidler.shr5.updatesite</module> 
+		
+		
 	</modules>
 
 	<build>

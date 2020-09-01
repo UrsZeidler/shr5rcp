@@ -25,8 +25,7 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
 
    <launcherArgs>
       <programArgs>-consoleLog -data shr_workspace/
--vm
-/opt/jdk1.7.0_51/bin
+
       </programArgs>
       <vmArgs>-Dorg.eclipse.equinox.http.jetty.autostart=false
 -Dorg.eclipse.swt.browser.DefaultType=mozilla
@@ -46,16 +45,16 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       startupMessageRect="5,226,490,20"
       startupForegroundColor="000000" />
    <launcher name="run_shr">
-      <linux icon="/de.urszeidler.shr5.product/icons/shrImage_6_64.xpm"/>
+      <linux icon="de.urszeidler.shr5.product/icons/shrImage_6_64.xpm"/>
       <win useIco="false">
          <bmp
-            winSmallHigh="/de.urszeidler.shr5.product/icons/shrImage_6_16.ico"
-            winSmallLow="/de.urszeidler.shr5.product/icons/shrImage_6_16_1.ico"
-            winMediumHigh="/de.urszeidler.shr5.product/icons/shrImage_6_32.ico"
-            winMediumLow="/de.urszeidler.shr5.product/icons/shrImage_6_32_1.ico"
-            winLargeHigh="/de.urszeidler.shr5.product/icons/shrImage_6_48.ico"
-            winLargeLow="/de.urszeidler.shr5.product/icons/shrImage_6_48_1.ico"
-            winExtraLargeHigh="/de.urszeidler.shr5.product/icons/shrImage_6_256.ico"/>
+            winSmallHigh="de.urszeidler.shr5.product/icons/shrImage_6_16.ico"
+            winSmallLow="de.urszeidler.shr5.product/icons/shrImage_6_16_1.ico"
+            winMediumHigh="de.urszeidler.shr5.product/icons/shrImage_6_32.ico"
+            winMediumLow="de.urszeidler.shr5.product/icons/shrImage_6_32_1.ico"
+            winLargeHigh="de.urszeidler.shr5.product/icons/shrImage_6_48.ico"
+            winLargeLow="de.urszeidler.shr5.product/icons/shrImage_6_48_1.ico"
+            winExtraLargeHigh="de.urszeidler.shr5.product/icons/shrImage_6_256.ico"/>
       </win>
    </launcher>
 
@@ -131,7 +130,6 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <plugin id="org.eclipse.core.databinding.property.nl_de" fragment="true"/>
       <plugin id="org.eclipse.core.expressions"/>
       <plugin id="org.eclipse.core.filesystem"/>
-      <plugin id="org.eclipse.core.filesystem.java7" fragment="true"/>
       <plugin id="org.eclipse.core.filesystem.linux.x86_64" fragment="true"/>
       <plugin id="org.eclipse.core.filesystem.linux.x86_64.nl_de" fragment="true"/>
       <plugin id="org.eclipse.core.filesystem.nl_de" fragment="true"/>
@@ -139,7 +137,6 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <plugin id="org.eclipse.core.resources"/>
       <plugin id="org.eclipse.core.resources.nl_de" fragment="true"/>
       <plugin id="org.eclipse.core.runtime"/>
-      <plugin id="org.eclipse.core.runtime.compatibility.registry" fragment="true"/>
       <plugin id="org.eclipse.draw2d"/>
       <plugin id="org.eclipse.e4.core.commands"/>
       <plugin id="org.eclipse.e4.core.commands.nl_de" fragment="true"/>
@@ -248,7 +245,6 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <plugin id="org.eclipse.equinox.security"/>
       <plugin id="org.eclipse.equinox.servletbridge"/>
       <plugin id="org.eclipse.equinox.transforms.hook" fragment="true"/>
-      <plugin id="org.eclipse.equinox.util"/>
       <plugin id="org.eclipse.help"/>
       <plugin id="org.eclipse.help.nl_de" fragment="true"/>
       <plugin id="org.eclipse.jetty.continuation"/>
@@ -280,7 +276,6 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <plugin id="org.eclipse.osgi.services.nl_de" fragment="true"/>
       <plugin id="org.eclipse.swt"/>
       <plugin id="org.eclipse.swt.gtk.linux.x86_64" fragment="true"/>
-      <plugin id="org.eclipse.swt.gtk.linux.x86_64.nl_de" fragment="true"/>
       <plugin id="org.eclipse.swt.nl_de" fragment="true"/>
       <plugin id="org.eclipse.text"/>
       <plugin id="org.eclipse.text.nl_de" fragment="true"/>
