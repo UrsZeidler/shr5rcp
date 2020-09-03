@@ -20,6 +20,7 @@ Require-Bundle: org.eclipse.ui,
  com.ibm.icu,
  org.eclipse.nebula.jface.cdatetime,
  org.eclipse.nebula.widgets.cdatetime
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Import-Package: org.eclipse.emf.edit.domain
+Automatic-Module-Name: de.urszeidler.shr5.scripting.ui

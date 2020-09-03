@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: de.urszeidler.eclipse.shr5.provider.Shr5EditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: de.urszeidler.eclipse.shr5.provider,
  de.urszeidler.eclipse.shr5.util,
  de.urszeidler.shr5.model.edit.preferences
@@ -17,3 +17,4 @@ Require-Bundle: org.eclipse.core.runtime,
  de.urszeidler.emf.commons.ui;bundle-version="1.0.0";visibility:=reexport,
  org.eclipse.ui
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: de.urszeidler.shr5.model.edit

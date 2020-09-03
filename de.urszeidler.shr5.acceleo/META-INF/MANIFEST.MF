@@ -37,4 +37,5 @@ Export-Package: de.urszeidler.shr5.acceleo,
  de.urszeidler.shr5.acceleo.sheets,
  de.urszeidler.shr5.acceleo.util
 Import-Package: org.apache.batik.transcoder;version="1.7.0";resolution:=optional
+Automatic-Module-Name: de.urszeidler.shr5.acceleo
 

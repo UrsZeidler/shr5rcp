@@ -47,7 +47,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emfforms.swt.core.di;bundle-version="1.6.1",
  org.eclipse.emfforms.swt.core.di.extension;bundle-version="1.6.1",
  org.eclipse.ui.views.properties.tabbed;bundle-version="3.6.800"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: de.urszeidler.shr5.ecp,
  de.urszeidler.shr5.ecp.binding,
@@ -71,3 +71,4 @@ Bundle-Vendor: Urs Zeidler
 Bundle-ClassPath: .
 Import-Package: de.urszeidler.shr5.m2t,
  org.eclipse.acceleo.engine.service
+Automatic-Module-Name: de.urszeidler.shr5.ecp

@@ -7,7 +7,8 @@ Bundle-ClassPath: .
 Bundle-Activator: de.urszeidler.eclipse.shr5.runtime.provider.RuntimeEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8,
+ JavaSE-1.7
 Export-Package: de.urszeidler.eclipse.shr5.runtime.provider
 Require-Bundle: org.eclipse.core.runtime,
  de.urszeidler.shr5.runtime;visibility:=reexport,
@@ -17,3 +18,4 @@ Require-Bundle: org.eclipse.core.runtime,
  de.urszeidler.shr5.management.model;visibility:=reexport,
  de.urszeidler.shr5.management.model.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: de.urszeidler.shr5.runtime.edit

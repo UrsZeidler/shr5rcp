@@ -8,7 +8,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.ui.ide;bundle-version="3.10.1",
  org.eclipse.core.resources;bundle-version="3.9.1"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: de.urszeidler.shr5.product.application
 Bundle-Vendor: Urs Zeidler
+Automatic-Module-Name: de.urszeidler.shr5.product
