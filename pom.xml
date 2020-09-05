@@ -8,12 +8,16 @@
 
 	<properties>
 		<rcptt.version>2.5.1</rcptt.version>
-		<tycho.version>1.4.0</tycho.version>
+		<tycho.version>1.7.0</tycho.version>
+		<autPath>${basedir}/../de.urszeidler.shr5.product.simple/target/products/</autPath>
+		
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<modules>
-		<module>build</module>
+		<!-- target platform -->
+		<module>de.urszeidler.shr5.tp</module>
+		<!-- bundels -->
 		<module>de.urszeidler.shr5.model</module>
 		<module>de.urszeidler.shr5.model.edit</module>
 		<module>de.urszeidler.shr5.management.model</module>
@@ -32,26 +36,28 @@
 		<module>de.urszeidler.shr5.scripting.edit</module>
 		<module>de.urszeidler.shr5.webserver</module>
 		<module>de.urszeidler.shr5.scripting.ui</module>
-		
-		
-		<module>de.urszeidler.shr5.feature</module>
-		<module>de.urszeidler.shr5.model.feature</module>
-
+		<!-- tests -->
 		<module>de.urszeidler.shr5.model.tests</module>
 		<module>de.urszeidler.shr5.management.model.tests</module>
 		<module>de.urszeidler.shr5.runtime.tests</module>
 		<module>de.urszeidler.shr5.gameplay.model.tests</module>
-
-
+		
+		<!-- feature -->
+		<module>de.urszeidler.shr5.feature</module>
+		<module>de.urszeidler.shr5.model.feature</module>
 <!-- 		<module>de.urszeidler.shr5.product.feature</module> -->
 		<module>de.urszeidler.shr5.ecp.feature</module>
 <!-- 		<module>de.urszeidler.shr5.product.site.feature</module> -->
-		<module>de.urszeidler.shr5.product.build</module>
 		<module>de.urszeidler.shr5.localization.feature</module>
 		<module>de.urszeidler.shr5.test.feature</module>
-
+		<module>de.urszeidler.shr5.dependecies.feature</module>
+		<!-- updatesite -->
 		<module>de.urszeidler.shr5.updatesite</module> 
-		
+		<!-- products-->
+		<module>de.urszeidler.shr5.product.build</module>
+		<module>de.urszeidler.shr5.product.simple</module>
+		<!-- rcptt tests -->
+<!-- 		<module>de.urszeidler.shr5.ecp.tests</module> -->
 		
 	</modules>
 
@@ -85,7 +91,7 @@
 					<target>
 						<artifact>
 							<groupId>de.urszeidler</groupId>
-							<artifactId>emf-client-platform-target</artifactId>
+							<artifactId>de.urszeidler.shr5.tp</artifactId>
 							<version>0.3.0-SNAPSHOT</version>
 						</artifact>
 					</target>
