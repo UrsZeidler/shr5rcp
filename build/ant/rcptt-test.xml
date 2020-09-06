@@ -1,11 +1,11 @@
 <project name="rcptt-project" default="test" basedir="../">
   <!-- Set properties below -->
-  <property name="runner-path" location="/path/to/runner" />
-  <property name="aut-path" location="/path/to/aut" />
+  <property name="runner-path" location="/home/urs/programme/eclipse-installs/rcptt-runnter-2.5.1/eclipse" />
+  <property name="aut-path" location="${basedir}/../de.urszeidler.shr5.product.simple/target/products/de.urszeidler.shr5.rcp.product.simple/linux/gtk/x86_64/shr5rcptt" />
   <property name="test-path" location="${basedir}/../de.urszeidler.shr5.ecp.tests"/> 
   <property name="images" value="/home/urs/git/shr5rcp.wiki/wiki-images/images"/>
-
-	
+	<property name="language" value="de"/>
+	<property name="skip-tags" value="en"/>	
 	
   <!-- properties below configure all intermediate and result files
        to be put in "results" folder next to a project folder. If
@@ -17,15 +17,17 @@
   <property name="junit-report" location="${test-results}/results.xml"/>
   <property name="html-report" location="${test-results}/results.html"/>
 
-	<property name="erunner" value="org.eclipse.equinox.launcher_1.3.0.v20140415-2008.jar"/>
-	<property name="erunner1" value="org.eclipse.equinox.launcher_1.3.0.v20140415-2008.jar"/>
-	<property name="erunner2" value="org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar"/>
+	<property name="erunner2" value="org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar"/>
 
   <target name="init">
     <delete dir="${test-results}" quiet="true"/>
     <mkdir dir="${test-results}" />
   </target>
 
+	<!--
+	
+	org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar
+	-->
 	<!-- - - - - - - - - - - - - - - - - - 
           target: configure-aut                      
          - - - - - - - - - - - - - - - - - -->
@@ -35,7 +37,7 @@
 -startup plugins/org.eclipse.equinox.launcher_1.3.0.v20140415-2008.jar
 --launcher.library plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.200.v20150204-1316
 -nl 
- en
+${language}
     			
 -vmargs
 -XX:MaxPermSize=256m
@@ -58,7 +60,7 @@
       <arg value="${aut-path}" />
       
       <arg value="-autArgs" />
-      <arg value="'-nl;en'" />
+      <arg value="'-nl;${language}'" />
       	
       <arg value="-autWsPrefix" />
       <arg value="${aut-workspace}" />
@@ -74,6 +76,10 @@
 
       <arg value="-import" />
       <arg value="${test-path}" />
+    	
+      <arg value="-skipTags" />
+      <arg value="${skip-tags}" />
+   	
 
       <arg value="-testOptions" />
       <arg value="testExecTimeout=600;execTimeout=3600;reportingIncludeIgnoredWaitDetails=true;reportingPassedTestDetails=true;runtimeEnableActivityLogs=true;q7ImageCapture=true" />

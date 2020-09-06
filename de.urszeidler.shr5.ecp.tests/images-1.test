@@ -6,9 +6,9 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _PiNz8B8lEeWS-4GHvxJuGA
-Runtime-Version: 2.0.0.201506120617
-Save-Time: 7/5/15 10:57 PM
-Tags: images
+Runtime-Version: 2.5.1.M3
+Save-Time: 9/6/20 3:24 PM
+Tags: images, en
 Testcase-Type: ecl
 
 ------=_.description-216f885c-d591-38ce-8ea2-e4f8cb4d6ffa
@@ -30,7 +30,6 @@ with [get-window "About RCP schadowrun"] {
     wait -ms 400
 	get-window "About RCP schadowrun" | save-window-image -name "version"
     get-window "RCP schadowrun Installation Details" | get-button Close | click
-    get-button OK | click
 }
 
 // the character pages
