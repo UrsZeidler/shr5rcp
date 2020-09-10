@@ -7,6 +7,7 @@ import org.eclipse.core.databinding.Binding;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.conversion.Converter;
+import org.eclipse.core.databinding.conversion.IConverter;
 import org.eclipse.core.databinding.observable.value.ComputedValue;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.runtime.IStatus;
@@ -122,10 +123,9 @@ public class PersonaUIToolkit {
 
         EMFUpdateValueStrategy updateStrategie1 = new EMFUpdateValueStrategy();
         updateStrategie1.setConverter(new EssenzConverter(1, 1));
-        bindObservable(observeValue, observeEditable, updateStrategie1);
-        // Binding binding = ctx.bindValue(observeEditable, observeValue,
-        // updateStrategie1, updateStrategie1);
-        // ctx.addBinding(binding);
+		Binding binding = ctx.bindValue(observeEditable, observeValue, null, updateStrategie1);
+        ctx.addBinding(binding);
+
         getToolkit().createLabel(client, ""); //$NON-NLS-1$
         getToolkit().createLabel(client, "");//$NON-NLS-1$ 
     }
