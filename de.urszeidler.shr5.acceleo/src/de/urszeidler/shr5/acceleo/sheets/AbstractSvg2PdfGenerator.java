@@ -12,8 +12,7 @@ import org.apache.batik.transcoder.TranscoderException;
 import org.apache.batik.transcoder.TranscoderInput;
 import org.apache.batik.transcoder.TranscoderOutput;
 import org.apache.fop.svg.PDFTranscoder;
-import org.apache.pdfbox.exceptions.COSVisitorException;
-import org.apache.pdfbox.util.PDFMergerUtility;
+import org.apache.pdfbox.multipdf.PDFMergerUtility;
 import org.eclipse.acceleo.engine.generation.strategy.IAcceleoGenerationStrategy;
 import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -64,8 +63,6 @@ public abstract class AbstractSvg2PdfGenerator extends AbstractGenerator {
             pdfMergerUtility.mergeDocuments();
         } catch (TranscoderException e) {
             Activator.logError("Error while storing as pdf", e);
-        } catch (COSVisitorException e) {
-            Activator.logError("Error while merging the pdf", e);
         }finally{
             removeTmpFiles();
         }

@@ -9,9 +9,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
-import org.apache.pdfbox.exceptions.CryptographyException;
 import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.util.PDFTextStripper;
+import org.apache.pdfbox.text.PDFTextStripper;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
@@ -481,7 +480,7 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
             pdDocument = PDDocument.load(file);
             if (pdDocument.isEncrypted()) {
                 monitor.setTaskName("decrypt ...");
-                pdDocument.decrypt("");
+//                pdDocument.decrypt("");
                 pdDocument.setAllSecurityToBeRemoved(true);
             }
             bookMap.put(file, pdDocument);
@@ -489,9 +488,9 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
         } catch (IOException e) {
             Activator.logError(e);
             return null;
-        } catch (CryptographyException e) {
-            Activator.logError(e);
-            return null;
+//        } catch (CryptographyException e) {
+//            Activator.logError(e);
+//            return null;
         } finally {
             workingFiles.remove(file);
         }

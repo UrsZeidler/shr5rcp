@@ -10,10 +10,19 @@
  *******************************************************************************/
 package de.urszeidler.shr5.acceleo;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+
+import org.apache.fop.apps.FopFactory;
+import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Plugin;
 import org.eclipse.core.runtime.Status;
 import org.osgi.framework.BundleContext;
+import org.xml.sax.SAXException;
 
 /**
  * The activator class controls the plug-in life cycle.
@@ -29,7 +38,9 @@ public class Activator extends Plugin {
      * The shared instance.
      */
     private static Activator plugin;
-    
+
+    private FopFactory fopFactory;
+
     /**
      * The constructor.
      */
@@ -63,6 +74,24 @@ public class Activator extends Plugin {
      */
     public static Activator getDefault() {
         return plugin;
+    }
+
+    public FopFactory getFopFactory() {
+        if (fopFactory != null)
+            return fopFactory;
+
+        try {
+            URL find = FileLocator.find(getBundle(), new Path("fop.conf/fop.xconf"));
+            URL fileURL = FileLocator.toFileURL(find);
+            fopFactory = FopFactory.newInstance(new File(fileURL.toURI()));
+        } catch (SAXException e) {
+            logError(e);
+        } catch (IOException e) {
+            logError(e);
+        } catch (URISyntaxException e) {
+            logError(e);
+        }
+        return fopFactory;
     }
 
     public static void logError(String message, Exception e) {

@@ -17,8 +17,6 @@ Require-Bundle: org.eclipse.core.runtime,
  com.google.guava,
  de.urszeidler.shr5.management.model.edit,
  de.urszeidler.shr5.model.edit,
- org.apache.batik.util;bundle-version="1.7.0",
- org.apache.xerces,
  de.urszeidler.fop.help;bundle-version="1.0.0",
  org.apache.commons.codec;bundle-version="1.6.0",
  de.urszeidler.shr5.m2t,
@@ -26,8 +24,7 @@ Require-Bundle: org.eclipse.core.runtime,
  de.urszeidler.shr5.runtime.edit,
  de.urszeidler.shr5.scripting,
  de.urszeidler.shr5.scripting.edit,
- de.urszeidler.shr5.ecp,
- org.apache.commons.logging;bundle-version="1.2.0"
+ de.urszeidler.shr5.ecp
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
@@ -36,6 +33,6 @@ Export-Package: de.urszeidler.shr5.acceleo,
  de.urszeidler.shr5.acceleo.main,
  de.urszeidler.shr5.acceleo.sheets,
  de.urszeidler.shr5.acceleo.util
-Import-Package: org.apache.batik.transcoder;version="1.7.0";resolution:=optional
 Automatic-Module-Name: de.urszeidler.shr5.acceleo
+Import-Package: org.apache.batik.transcoder;resolution:=optional
 

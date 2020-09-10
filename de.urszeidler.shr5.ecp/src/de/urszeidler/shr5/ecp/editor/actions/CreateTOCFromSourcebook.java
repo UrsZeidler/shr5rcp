@@ -5,8 +5,9 @@ import java.io.IOException;
 import java.util.Collection;
 
 import org.apache.pdfbox.cos.COSArray;
+import org.apache.pdfbox.cos.COSDictionary;
+import org.apache.pdfbox.cos.COSName;
 import org.apache.pdfbox.cos.COSObject;
-import org.apache.pdfbox.exceptions.CryptographyException;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.common.COSArrayList;
@@ -118,7 +119,7 @@ public class CreateTOCFromSourcebook extends Action {
         try {
             PDDocument pdDocument = PDDocument.load(docFile);
             if (pdDocument.isEncrypted()) {
-                pdDocument.decrypt("");
+                //pdDocument..decrypt("");
                 pdDocument.setAllSecurityToBeRemoved(true);
             }
             PDDocumentOutline root = pdDocument.getDocumentCatalog().getDocumentOutline();
@@ -135,8 +136,6 @@ public class CreateTOCFromSourcebook extends Action {
             }
         } catch (IOException e) {
             Activator.logError(e);
-        } catch (CryptographyException e) {
-            Activator.logError(e);
         }
         return Status.OK_STATUS;
     }
@@ -150,13 +149,17 @@ public class CreateTOCFromSourcebook extends Action {
             try {
                 PDPage page = item.findDestinationPage(doc);
                 if (page != null) {
-                    COSArray pageArray = ((COSArrayList<?>)page.getParent().getKids()).toList();
-                    int indexOfObject = pageArray.indexOfObject(page.getCOSObject());
-                    COSObject cosBase = (COSObject)pageArray.get(indexOfObject);
-                    cosBase.getGenerationNumber();
-                    String objStr = String.valueOf(cosBase.getObjectNumber().intValue());
-                    String genStr = String.valueOf(cosBase.getGenerationNumber().intValue());
-                    Integer integer = doc.getPageMap().get(objStr + "," + genStr);
+                    COSDictionary cosObject = page.getCOSObject();
+                    COSArray cosArray = cosObject.getCOSArray(COSName.PARENT);
+                    Integer integer = doc.getDocumentCatalog().getPages().indexOf(page) + 1;
+                    
+//                    COSArray pageArray = ((COSArrayList<?>)page.getParent().getKids()).toList();
+//                    int indexOfObject = pageArray.indexOfObject(page.getCOSObject());
+//                    COSObject cosBase = (COSObject)pageArray.get(indexOfObject);
+//                    cosBase.getGenerationNumber();
+//                    String objStr = String.valueOf(cosBase.getObjectNumber());
+//                    String genStr = String.valueOf(cosBase.getGenerationNumber());
+//                    Integer integer = doc.getPageMap().get(objStr + "," + genStr);
                     if (integer != null) {
                         integer = integer - offset;
                         link.setPage(integer.toString());
