@@ -20,6 +20,7 @@ import javax.xml.transform.stream.StreamSource;
 import org.apache.fop.apps.FOPException;
 import org.apache.fop.apps.Fop;
 import org.apache.fop.apps.FopFactory;
+import org.apache.fop.apps.MimeConstants;
 import org.eclipse.emf.common.util.Monitor;
 
 import de.urszeidler.shr5.acceleo.Activator;
@@ -61,7 +62,7 @@ public abstract class AbstractFoGenerator extends AbstractGenerator {
 
         try {
             // Step 3: Construct fop with desired output format
-            Fop fop = fopFactory.newFop("application/pdf", out);
+            Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, out);
 
             // Step 4: Setup JAXP using identity transformer
             TransformerFactory factory = TransformerFactory.newInstance();
