@@ -31,10 +31,6 @@
       <import plugin="org.eclipse.acceleo.model"/>
       <import plugin="org.eclipse.acceleo.profiler"/>
       <import plugin="org.eclipse.acceleo.engine"/>
-      <import plugin="com.google.guava"/>
-      <import plugin="org.apache.batik.transcoder"/>
-      <import plugin="org.apache.batik.util"/>
-      <import plugin="org.apache.xerces"/>
       <import plugin="de.urszeidler.fop.help" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="org.apache.commons.codec" version="1.6.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui"/>
@@ -63,6 +59,9 @@
       <import plugin="org.eclipse.zest.layouts"/>
       <import plugin="org.eclipse.emf.databinding"/>
       <import plugin="org.eclipse.emf.databinding.edit"/>
+      <import plugin="org.eclipse.emfforms.swt.core.di" version="1.6.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emfforms.swt.core.di.extension" version="1.6.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.views.properties.tabbed" version="3.6.800" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.edit"/>
       <import plugin="org.eclipse.ui.ide" version="3.10.1" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.resources" version="3.9.1" match="greaterOrEqual"/>
@@ -89,6 +88,7 @@
       <import plugin="org.eclipse.core.databinding.observable"/>
       <import plugin="com.ibm.icu"/>
       <import plugin="org.eclipse.emf.common"/>
+      <import plugin="com.google.guava" version="15.0.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
