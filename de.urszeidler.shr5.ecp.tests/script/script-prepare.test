@@ -1,0 +1,179 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: script-prepare
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _GkVOoPRnEeqk4bmiO2X5JA
+Runtime-Version: 2.5.1.M3
+Save-Time: 9/11/20 10:16 PM
+Tags: de
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-menu -path "Script/start script" | click -metaKeys ""
+with [get-window "Skript zum spielen öffnen."] {
+    get-tree | select "Skript A test Script with thugs."
+    get-button OK | click -metaKeys ""
+}
+get-window "Skript zum spielen öffnen." | get-button Nein | click -metaKeys ""
+with [get-window "Wähle Kampfrundenteilnehmer - Team Players"] {
+    get-table | select "SC Mundane Persona Orc Sam 1" "SC Mundane Persona Rob" "SC Ki Adept Gunter von Kintzel"
+    get-button "Hinzufügen" | click -metaKeys ""
+    get-button OK | click -metaKeys ""
+}
+get-window "Start webserver" | get-button Nein | click -metaKeys ""
+with [get-view "Runtime Script View" | get-section Aktionen | get-table] {
+    get-item -path "Charakter Gu" | click
+    select "Charakter Gu" | double-click
+    get-item -path "Charakter Gu" | click
+}
+get-editor "Charakter Gu" | get-button -after [get-label "In benutzung"] | click -metaKeys ""
+with [get-window "- Charakter Gu"] {
+    get-table 
+        | select "Nahkampfwaffe Kampfmesser" "Kleidung Panzerjacke" "Feuerwaffe Ares Predator V" "Nahkampfwaffe Katana"
+    get-button "Hinzufügen" | click -metaKeys ""
+    get-button OK | click -metaKeys ""
+}
+get-editor "Charakter Gu" | get-link "nichts ausgewählt" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Kleidung Panzerjacke"
+    get-button OK | click -metaKeys ""
+}
+get-editor "Charakter Gu" | get-link "nichts ausgewählt" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Nahkampfwaffe Katana"
+    get-button OK | click -metaKeys ""
+}
+get-editor "Charakter Gu" | get-link "nichts ausgewählt" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Feuerwaffe Ares Predator V"
+    get-button OK | click -metaKeys ""
+}
+get-view "Runtime Script View" | click
+get-editor "Charakter Gu" | close
+with [get-view "Runtime Script View" | get-section Aktionen | get-table] {
+    get-item -path "Charakter Rob" | click
+    select "Charakter Rob" | double-click
+    get-item -path "Charakter Rob" | click
+}
+get-editor "Charakter Rob" | get-button -after [get-label "In benutzung"] | click -metaKeys ""
+with [get-window "- Charakter Rob"] {
+    with [get-table] {
+        select "Nahkampfwaffe Katana" | double-click
+        select "Feuerwaffe Ares Predator V" | double-click
+        select "Kleidung Armor Jacket" | double-click
+    }
+    get-button OK | click -metaKeys ""
+}
+get-editor "Charakter Rob" | get-link "nichts ausgewählt" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Kleidung Armor Jacket"
+    get-button OK | click -metaKeys ""
+}
+get-editor "Charakter Rob" | get-link "nichts ausgewählt" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Nahkampfwaffe Katana"
+    get-button OK | click -metaKeys ""
+}
+get-editor "Charakter Rob" | get-link "nichts ausgewählt" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Feuerwaffe Ares Predator V"
+    get-button OK | click -metaKeys ""
+}
+get-editor "Charakter Rob" | get-table | select "Nahkampfwaffe Katana" | double-click
+get-editor "Nahkampfwaffe Katana" | get-section runtime | click
+get-editor "Charakter Rob" | click
+get-editor "Nahkampfwaffe Katana" | close
+get-view "Runtime Script View" | click
+get-editor "Charakter Rob" | close
+with [get-view "Runtime Script View" | get-section Aktionen | get-table] {
+    get-item -path "Charakter Orc Sam 1" | click
+    select "Charakter Orc Sam 1" | double-click
+    get-item -path "Charakter Orc Sam 1" | click
+}
+get-editor "Charakter Orc Sam 1" | get-button -after [get-label "In benutzung"] | click -metaKeys ""
+with [get-window "- Charakter Orc Sam 1"] {
+    with [get-table] {
+        select "Nahkampfwaffe Kampfaxt" | double-click
+        select "Kleidung Armor Jacket" | double-click
+        select "Feuerwaffe Ruger Super Warhawk" | double-click
+    }
+    get-button OK | click -metaKeys ""
+}
+get-editor "Charakter Orc Sam 1" | get-link "nichts ausgewählt" | click
+get-window -class OwnChooseDialog | get-tree | select "Kleidung Armor Jacket" | double-click
+get-editor "Charakter Orc Sam 1" | get-link "nichts ausgewählt" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Nahkampfwaffe Kampfaxt"
+    get-button OK | click -metaKeys ""
+}
+get-editor "Charakter Orc Sam 1" | get-link "nichts ausgewählt" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Feuerwaffe Ruger Super Warhawk"
+    get-button OK | click -metaKeys ""
+}
+get-editor "Charakter Orc Sam 1" | get-table | select "Nahkampfwaffe Kampfaxt" | double-click
+get-editor "Nahkampfwaffe Kampfaxt" | get-section runtime | click
+get-editor "Charakter Orc Sam 1" | click
+get-editor "Nahkampfwaffe Kampfaxt" | close
+get-editor "Charakter Orc Sam 1" | get-table | select "Feuerwaffe Ruger Super Warhawk" | double-click
+with [get-editor "Feuerwaffe Ruger Super Warhawk" | get-section runtime] {
+    click
+    get-link "nichts ausgewählt" | click
+}
+with [get-window -class OwnChooseDialog] {
+    get-editbox -after [get-label filter] | set-text Pistolen
+    get-tree | select "Fertigkeit Pistolen" | double-click
+}
+get-editor "Charakter Orc Sam 1" | click
+get-editor "Feuerwaffe Ruger Super Warhawk" | close
+get-view "Runtime Script View" | click
+get-editor "Charakter Orc Sam 1" | close
+get-button Minimieren | click -metaKeys ""
+with [get-view "Runtime Script View"] {
+    get-section Hintergrund | click
+    with [get-section "Sag es ihnen in's Gesicht"] {
+        click
+        click
+    }
+    with [get-section Debugging] {
+        click
+        click
+    }
+    get-section Aktionen | get-button "beginne Zeiterfassung" | click -metaKeys ""
+}
+get-window -class TimetrackingDialog | get-button OK | click -metaKeys ""
+with [get-view "Runtime Script View" | get-section Aktionen] {
+    get-button "stoppe Zeiterfassung" | click -metaKeys ""
+    get-table | get-item -path "Charakter Gu" | click
+    get-table -index 1 | select "Fertigkeits Test"
+    get-button "Aktion ausführen" | click -metaKeys ""
+}
+get-window -class ProbeDialog | get-group "Proben data" | get-link "[null]" | click
+with [get-window -class OwnChooseDialog] {
+    get-editbox -after [get-label filter] | set-text ""
+    get-tree | select "Fertigkeit Wahrnehmung"
+    get-button OK | click -metaKeys ""
+}
+get-window -class ProbeDialog | get-button OK | click -metaKeys ""
+get-window -class ProbeDialog | get-button OK | click -metaKeys ""
+get-window -class ProbeDialog | get-button OK | click -metaKeys ""
+get-view "Runtime Script View" | get-section Aktionen | get-button "wechsle Szene" | click -metaKeys ""
+with [get-window "Wähle Szene"] {
+    get-tree | select "Szene get them"
+    get-button OK | click -metaKeys ""
+}
+with [get-view "Runtime Script View"] {
+    get-section "Sag es ihnen in's Gesicht" | click
+    get-section Hintergrund | click
+    get-section "Sag es ihnen in's Gesicht" | click
+    with [get-section Debugging] {
+        click
+        click
+    }
+}
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
