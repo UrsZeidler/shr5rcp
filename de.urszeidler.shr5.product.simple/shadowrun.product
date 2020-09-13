@@ -27,16 +27,14 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <programArgs>-consoleLog -data shr_workspace/
       </programArgs>
       <vmArgs>-Dorg.eclipse.equinox.http.jetty.autostart=false
--Dorg.eclipse.swt.browser.DefaultType=mozilla
--XX:MaxPermSize=256m
 -Xms240m
--Xmx768m
+-Xmx1024m
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
    </launcherArgs>
 
-   <windowImages i16="icons/shrImage_6_16.png" i32="icons/shrImage_6_32.png" i48="icons/shrImage_6_48.png" i64="icons/shrImage_6_64.png" i128="icons/shrImage_6_128.png"/>
+   <windowImages i16="de.urszeidler.shr5.product/icons/shrImage_6_16.png" i32="de.urszeidler.shr5.product/icons/shrImage_6_32.png" i48="de.urszeidler.shr5.product/icons/shrImage_6_48.png" i64="de.urszeidler.shr5.product/icons/shrImage_6_64.png" i128="de.urszeidler.shr5.product/icons/shrImage_6_128.png"/>
 
    <splash
       location="de.urszeidler.shr5.product"
@@ -74,7 +72,6 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
    </features>
 
    <configurations>
-      <plugin id="de.urszeidler.shr5.webserver" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="1" />
