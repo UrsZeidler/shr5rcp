@@ -42,7 +42,7 @@
 		
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.nebula.feature.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/nebula/releases/1.4.0/"/>
+<repository location="http://download.eclipse.org/nebula/releases/2.4.2/"/>
 </location>
 
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
@@ -156,34 +156,15 @@
 
 	
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="file:/home/urs/programme/eclipse-installs/modeling-latest-released20-06/gggg/emf-commons/"/>
+		<repository location="file:/home/urs/git/emf-commons/emf-commons/"/>
 		<unit id="de.urszeidler.emf.commons.feature.feature.group" version="0.0.0"/>
 	</location>
+
+
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 		<repository location="https://download.eclipse.org/technology/babel/update-site/R0.18.0/2020-06/"/>
-		<unit id="org.eclipse.babel.nls_datatools_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_eclipse_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_modeling.emf_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_modeling.graphiti_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_modeling.mdt.bpmn2_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_modeling.tmf.xtext_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_mylyn_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_rt.rap_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_soa.bpmn2-modeler_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_technology.egit_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_technology.handly_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_technology.jgit_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_technology.packaging.mpc_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_technology.packaging_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_technology.passage_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_technology.tm4e_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_tools.cdt_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_tools.gef_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_tools.mat_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_tools.oomph_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_tools.tm_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_tools.tracecompass_de.feature.group" version="4.16.0.v20200711020001"/>
-		<unit id="org.eclipse.babel.nls_webtools_de.feature.group" version="4.16.0.v20200711020001"/>
+		<unit id="org.eclipse.babel.nls_eclipse_de.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.babel.nls_modeling.emf_de.feature.group" version="0.0.0"/>
 	</location>
 </locations>
 </target>
