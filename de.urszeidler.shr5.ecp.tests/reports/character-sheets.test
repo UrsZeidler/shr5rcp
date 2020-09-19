@@ -1,0 +1,53 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _xdZkEO93EeqYI6oYfJ_1jw
+Element-Name: character-sheets
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _jmvK4PIXEeqCOpkEiTC5cw
+Runtime-Version: 2.5.1.M3
+Save-Time: 9/10/20 12:24 AM
+Tags: de
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+proc "gen-sheet" [val editor] [val sheet]{
+    get-editor $editor | get-button "Transform to text" | click -metaKeys ""
+    get-window -class ModelToTextExportDialog | get-combo -after [get-label "Wählen Transformation"] 
+        | select $sheet
+    get-window -class ModelToTextExportDialog | get-button OK | click -metaKeys ""
+
+}
+
+
+
+get-menu -path "Charakter/Öffne Managed Charakter" | click -metaKeys ""
+get-window "Managed Charakter öffnen." | get-tree | select "SC Ki Adept Gunter von Kintzel"  | double-click -metaKeys ""
+exec-with-options {
+    get-editor "SC Ki Adept Gunter von Kintzel" | get-button "Transform to text" | click -metaKeys ""
+    get-window -class ModelToTextExportDialog | get-combo -after [get-label "Wählen Transformation"] 
+        | select "BB Character sheet"
+    set-dialog-result Folder "/home/urs/etc/tmp"
+    get-window -class ModelToTextExportDialog | get-button "..." | click -metaKeys ""
+    get-window -class ModelToTextExportDialog | get-button OK | click -metaKeys ""
+    
+ 	gen-sheet "SC Ki Adept Gunter von Kintzel" "BB Character sheet"
+ 	gen-sheet "SC Ki Adept Gunter von Kintzel" "BB Generator sheet"
+ 	gen-sheet "SC Ki Adept Gunter von Kintzel" "BB Table Character Sheet"
+ 
+ 	gen-sheet "SC Ki Adept Gunter von Kintzel" "pdf fo Character sheet"
+ 	gen-sheet "SC Ki Adept Gunter von Kintzel" "pdf fo Character sheet v2"
+ 	gen-sheet "SC Ki Adept Gunter von Kintzel" "pdf characterSheet"
+ 	gen-sheet "SC Ki Adept Gunter von Kintzel" "pdf simple vehicle" 	
+ 	gen-sheet "SC Ki Adept Gunter von Kintzel" "pdf npc character sheet"
+ 	gen-sheet "SC Ki Adept Gunter von Kintzel" "InventoryCards"
+} -allowStatusDialog
+
+
+
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

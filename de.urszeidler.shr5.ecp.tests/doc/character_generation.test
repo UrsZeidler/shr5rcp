@@ -1,0 +1,201 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _lobIMB9IEeWS-4GHvxJuGA,_RzsBsPhGEeqqg4qXD_ZbOQ
+Element-Name: character_generation
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _C0dh8PhJEeqqg4qXD_ZbOQ
+Runtime-Version: 2.5.1.M3
+Save-Time: 9/18/20 12:21 AM
+Tags: de, doc
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+
+doc-header "#" "Charakter Generator"  "generators"
+
+doc-header "##" "Freestyle Generator"  "generators"
+
+get-menu -path "Charakter/Charakter Generator wizard" | click -metaKeys ""
+get-window "Select generator object to create ..."| get-tree | select "Freestyle Generator"
+get-window "Select generator object to create ..."| screen-shot-doc "freestyle-1" "generators"
+
+get-window "Select generator object to create ..."|  get-button "Weiter >" | click -metaKeys ""
+
+
+with [get-window -class WizardDialog] {
+	screen-shot-doc "freestyle-2" "generators"
+    get-combo -after [get-label "Container auswählen"] | select "Spielleiter stuff"
+	screen-shot-doc "freestyle-3" "generators"
+    get-combo -after [get-label "Wähle Generator System"] | select "Free Style Free Style Generator"
+	screen-shot-doc "freestyle-4" "generators"
+    get-combo -after [get-label "Wähle Gruppe"] | select "Charakter Gruppe npcs"
+	screen-shot-doc "freestyle-5" "generators"
+    get-button Fertigstellen | click -metaKeys ""
+}
+get-eclipse-window | screen-shot-doc  "freestyle-6" "generators"
+with [get-editor "Free Style Generator"] {
+    get-group "Übersicht" | get-editbox -after [get-label "Character Name"] | set-text testeeeee
+    with [get-section "auswählen"] {
+        get-button "Nicht Spieler" | click -metaKeys ""
+        get-link "nichts ausgewählt" | click
+    }
+}
+with [get-window "Wähle einen typen."] {
+	screen-shot-doc  "freestyle-7" "generators"
+    get-tree | select "Mystischer Adept"
+    get-button OK | click -metaKeys ""
+}
+get-editor "Free Style Generator" | get-section "auswählen" | get-link "nichts ausgewählt" | click
+with [get-window -class OwnChooseDialog] {
+	screen-shot-doc  "freestyle-8" "generators"
+    get-tree | select "Spezies Zwerg"
+    get-button OK | click -metaKeys ""
+}
+
+get-eclipse-window | screen-shot-doc  "freestyle-9" "generators"
+
+with [get-editor "Free Style Generator"] {
+	screen-shot-editor-tab-doc "Shr5 generator sheet"  "freestyle-11" "generators"
+	screen-shot-editor-tab-doc "default form"  "freestyle-12" "generators"
+	screen-shot-editor-tab-doc "Freestyle generator"  "freestyle-10" "generators"
+}
+
+with [get-editor "Free Style Generator"] {
+    get-button "Erstelle den Charakter mit den ausgewälten optionen." | click -metaKeys ""
+
+	screen-shot-editor-tab-doc Persona  "freestyle-13" "generators"
+	screen-shot-editor-tab-doc Charakter  "freestyle-14" "generators"
+	screen-shot-editor-tab-doc Steigerungen  "freestyle-15" "generators"
+	screen-shot-editor-tab-doc "Character sheet"  "freestyle-16" "generators"
+	screen-shot-editor-tab-doc "Shr5 generator sheet"  "freestyle-17" "generators"
+	screen-shot-editor-tab-doc "default form"  "freestyle-18" "generators"
+}
+
+get-editor "Free Style Generator" | close
+
+doc-header "##" "Shadowrun 5 Grundregelwerk Generator"  "generators"
+
+get-menu -path "Charakter/Charakter Generator wizard" | click -metaKeys ""
+with [get-window "Select generator object to create ..."] {
+    get-tree | select "Shadowrun 5 Grundregelwerk Generator"
+    screen-shot-doc "core-1" "generators"
+    get-button "Weiter >" | click -metaKeys ""
+}
+with [get-window -class WizardDialog] {
+    get-combo -after [get-label "Container auswählen"] | select "Spielleiter stuff"
+    get-combo -after [get-label "Wähle Generator System"] | select "Regelbasis The basic character generator system."
+    get-combo -after [get-label "Wähle Gruppe"] | select "Charakter Gruppe non player group"
+    screen-shot-doc  "core-2" "generators"
+    get-button Fertigstellen | click -metaKeys ""
+}
+with [get-editor "Shr5 Generator"] {
+    get-section "auswählen" | get-button "Nicht Spieler" | click -metaKeys ""
+    get-button "Wähle die Prioritäten und erzeuge den Charakter." | click -metaKeys ""
+//    screen-shot-doc  "core-3" "generators"
+    get-section "auswählen" | get-link "nichts ausgewählt" | click
+}
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Meta Type E \\[Spezies Mensch\\] \\(1\\)"
+    screen-shot-doc  "core-4" "generators"
+    get-button OK | click -metaKeys ""
+}
+get-editor "Shr5 Generator" | get-section "auswählen" | get-link "nichts ausgewählt" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Attributes B \\(20\\)"
+    screen-shot-doc  "core-5" "generators"
+    get-button OK | click -metaKeys ""
+}
+
+get-editor "Shr5 Generator" | get-section "auswählen" | get-link "nichts ausgewählt" -after [get-label Attribute]  | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Weltlicher E"
+    screen-shot-doc  "core-6" "generators"
+    
+    get-button OK | click -metaKeys ""
+}
+get-editor "Shr5 Generator" | get-section "auswählen" | get-link "nichts ausgewählt" -after [get-label Fertigkeiten] 
+    | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Fertigkeiten A \\(46\\/10\\)"
+    screen-shot-doc  "core-7" "generators"
+    get-button OK | click -metaKeys ""
+}
+get-editor "Shr5 Generator" | get-section "auswählen" | get-link "nichts ausgewählt" -after [get-label Resourcen] 
+    | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Resourcen C \\(140000\\)"
+    screen-shot-doc  "core-8" "generators"
+    get-button OK | click -metaKeys ""
+}
+get-editor "Shr5 Generator" | get-section "auswählen" | get-link "Meta Type E [Spezies Mensch] (1)" | click
+with [get-window -class OwnChooseDialog] {
+    get-tree | select "Meta Type D \\[Spezies Mensch\\] \\(3\\)"
+    screen-shot-doc  "core-9" "generators"
+    get-button OK | click -metaKeys ""
+}
+with [get-editor "Shr5 Generator"] {
+    get-group "Übersicht" | get-editbox -after [get-label "Character Name"] | set-text "test-1"
+    get-section "auswählen" | get-button -after [get-label "Allowed Sources"] | click -metaKeys ""
+}
+with [get-window "- Shr5 Generator test-1"] {
+    get-table | select "Quellenbuch Shadowrun 5th Edition"
+    get-button "Hinzufügen" | click -metaKeys ""
+    screen-shot-doc  "core-99" "generators"
+    get-button OK | click -metaKeys ""
+}
+with [get-editor "Shr5 Generator"] {
+    get-button "Erstelle den Charakter mit den ausgewälten optionen." | click -metaKeys ""
+    screen-shot-editor-tab-doc "Shr5 generator"  "core-100" "generators"
+    screen-shot-editor-tab-doc Persona  "core-10" "generators"
+	screen-shot-editor-tab-doc Steigerungen  "core-12" "generators"
+	screen-shot-editor-tab-doc "Character sheet"  "core-13" "generators"
+	screen-shot-editor-tab-doc "Shr5 generator sheet"  "core-14" "generators"
+	screen-shot-editor-tab-doc "default form"  "core-15" "generators"
+	screen-shot-editor-tab-doc Persona  "core-11" "generators"
+    get-section Inventar | get-button "Füge ein Abstrakt Gegenstand zu dem Inventar feature." | click -metaKeys ""
+}
+with [get-window "Add Inventar - Shr List"] {
+    with [get-table] {
+        select "Gegenstand Kontaktlinsen" | double-click
+        select "Gegenstand Endoskop" | double-click
+        select "Gegenstand Brille" | double-click
+    }
+    screen-shot-doc  "core-15" "generators"
+    with [get-group "Filter Available Choices"] {
+        get-button "display the money value" | click -metaKeys ""
+    }
+    get-table | select "Feuerwaffe Browning Ultra-Power : 640 ¥"
+    get-button "Hinzufügen" | click -metaKeys ""
+    screen-shot-doc  "core-16" "generators"
+    get-button OK | click -metaKeys ""
+}
+
+with [get-editor "Shr5 Generator" | get-section Bodytech] {
+    click
+    get-button "Füge ein Körpermods zu dem Körper Mods feature." | click -metaKeys ""
+}
+with [get-window "Add Körper Mods - Shr List"] {
+    get-group "Filter Available Choices" | get-button "display the money value" | click -metaKeys ""
+    with [get-table] {
+        select "Cyberware Stimmenmodulator 3 : 15.000 ¥" | double-click
+        select "Cyberware Sichtverbesserung 3 : 12.000 ¥" | double-click
+        select "Cyberware Cyberohren 4 : 11.000 ¥" | double-click
+        select "Bioware Zerebralbooster 1 : 31.500 ¥" | double-click
+    }
+    screen-shot-doc  "core-17" "generators"
+    get-button OK | click -metaKeys ""
+}
+with [get-editor "Shr5 Generator"] {
+    screen-shot-editor-tab-doc Persona  "core-18" "generators"
+	screen-shot-editor-tab-doc Charakter  "core-19" "generators"
+	screen-shot-editor-tab-doc "Character sheet"  "core-20" "generators"
+	screen-shot-editor-tab-doc "Shr5 generator sheet"  "core-21" "generators"
+}
+
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

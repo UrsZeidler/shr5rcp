@@ -44,6 +44,7 @@ ${language}
 -Xms240m
 -Xmx768m
 -Dimage.folder=${images}
+-Dbase.folder=${test-results}
 </echo>
     </target>
 

@@ -1,0 +1,39 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Contexts: _CMnogO96EeqYI6oYfJ_1jw
+Element-Name: source_link_test
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _Zfj0gPOhEeqk4bmiO2X5JA
+Runtime-Version: 2.5.1.M3
+Save-Time: 9/11/20 8:29 AM
+Tags: de
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+get-view "Model Explorer" | get-tree | select "shr5Resources/All/Source Link All Sources" | double-click
+get-editor "Source Link All Sources" 
+
+with [get-editor "Source Link All Sources"] {
+    get-button "Create source links from" | click -metaKeys ""
+    get-section "Sub Links" | get-tree | select "Source Link Shadowrun 5th Edition/Random Run Generator page: 478"
+}
+with [get-view "Sourcebook View"] {
+    get-editbox -after [get-label "Quellenbuch Shadowrun 5th Edition page 478"] | set-text-offset 0 49
+    get-button "go to the next page" | click -metaKeys ""
+    get-button "one page back" | click -metaKeys ""
+}
+get-view "Model Explorer" | get-tree 
+    | select "shr5Resources/All/Source Link All Sources/Source Link Shadowrun 5th Edition/Riggers page: 264"
+get-menu -path "Datei/Beenden" | click -metaKeys ""
+with [get-window "Unsaved Projects"] {
+    get-table | select shr5Resources
+    get-button "Alles abwählen" | click -metaKeys ""
+    get-button OK | click -metaKeys ""
+}
+wait-until-eclipse-is-ready
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
