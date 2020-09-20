@@ -66,6 +66,7 @@ public class Activator extends AbstractUIPlugin {
         int http_port = store.getInt(PreferenceConstants.SERVER_PORT);
         dictionary.put(JettyConstants.HTTP_ENABLED, Boolean.TRUE);
         dictionary.put(JettyConstants.HTTP_PORT, http_port);
+        dictionary.put(JettyConstants.HTTP_MAXTHREADS, 8);
 
         try {
             JettyConfigurator.startServer(PLUGIN_ID + ".server", dictionary);

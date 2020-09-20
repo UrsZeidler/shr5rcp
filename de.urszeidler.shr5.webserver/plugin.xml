@@ -5,19 +5,23 @@
          point="org.eclipse.equinox.http.registry.servlets">
       <servlet
             alias="/main"
-            class="de.urszeidler.shr5.webserver.ScriptServlet">
+            class="de.urszeidler.shr5.webserver.ScriptServlet"
+            httpcontextId="shr5runtime">
       </servlet>
       <servlet
             alias="/*.jsp"
-            class="org.eclipse.equinox.jsp.jasper.registry.JSPFactory:/web">
+            class="org.eclipse.equinox.jsp.jasper.registry.JSPFactory:/web"
+            httpcontextId="shr5runtime">
       </servlet>
       <servlet
             alias="/images"
-            class="de.urszeidler.shr5.webserver.ImageServlet">
+            class="de.urszeidler.shr5.webserver.ImageServlet"
+            httpcontextId="shr5runtime">
       </servlet>
       <servlet
             alias="/characterUpload"
-            class="de.urszeidler.shr5.webserver.CharacterUploadServlet">
+            class="de.urszeidler.shr5.webserver.CharacterUploadServlet"
+            httpcontextId="shr5runtime">
       </servlet>
 
    </extension>
@@ -25,7 +29,8 @@
          point="org.eclipse.equinox.http.registry.resources">
       <resource
             alias="/"
-            base-name="/web">
+            base-name="/web"
+            httpcontextId="shr5runtime">
       </resource>
    </extension>
                <!--
@@ -111,6 +116,15 @@
       <initializer
             class="de.urszeidler.shr5.webserver.preferences.PreferenceInitializer">
       </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.equinox.http.registry.httpcontexts">
+      <httpcontext
+            id="shr5runtime">
+         <resource-mapping
+               path="/">
+         </resource-mapping>
+      </httpcontext>
    </extension>
 
 </plugin>

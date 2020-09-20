@@ -944,6 +944,9 @@ public class RuntimeScriptView extends ViewPart implements ScriptViewer, Command
 
             @Override
             public Object convert(Object fromObject) {
+                if(fromObject==null)
+                    return "unset";
+                
                 return dateTimeInstance.format(fromObject);
             }
         });
