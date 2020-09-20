@@ -24,6 +24,7 @@ import de.urszeidler.shr5.ecp.Activator;
 import de.urszeidler.shr5.ecp.service.ScriptService;
 import de.urszeidler.shr5.ecp.util.ShadowrunEditingTools;
 import de.urszeidler.shr5.scripting.Placement;
+import de.urszeidler.shr5.scripting.PlacementOptions;
 import de.urszeidler.shr5.scripting.Script;
 import de.urszeidler.shr5.scripting.ScriptingFactory;
 import de.urszeidler.shr5.scripting.Scripts;
@@ -88,6 +89,8 @@ public class CombatScriptWizard extends Wizard implements INewWizard {
         Placement placement = ScriptingFactory.eINSTANCE.createPlacement();
         placement.setName(sName);
         placement.setActualDate((Date)startDate.getValue());
+        placement.getOptions().add(PlacementOptions.HOME_GROUND);
+        placement.getOptions().add(PlacementOptions.COMBAT);
         
         script.getPlacements().add(placement);
         script.setEntry(placement);
