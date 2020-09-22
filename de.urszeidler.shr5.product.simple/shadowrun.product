@@ -58,7 +58,6 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
    <intro introId="de.urszeidler.shr5.help.intro"/>
 
    <vm>
-      <linux include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8</linux>
    </vm>
 
    <plugins>
