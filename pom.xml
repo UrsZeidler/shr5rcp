@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.urszeidler</groupId>
@@ -9,8 +10,6 @@
 	<properties>
 		<rcptt.version>2.5.1</rcptt.version>
 		<tycho.version>1.7.0</tycho.version>
-		<autPath>${basedir}/../de.urszeidler.shr5.product.simple/target/products/</autPath>
-		
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -41,24 +40,22 @@
 		<module>de.urszeidler.shr5.management.model.tests</module>
 		<module>de.urszeidler.shr5.runtime.tests</module>
 		<module>de.urszeidler.shr5.gameplay.model.tests</module>
-		
+
 		<!-- feature -->
 		<module>de.urszeidler.shr5.feature</module>
 		<module>de.urszeidler.shr5.model.feature</module>
-<!-- 		<module>de.urszeidler.shr5.product.feature</module> -->
+		<!-- <module>de.urszeidler.shr5.product.feature</module> -->
 		<module>de.urszeidler.shr5.ecp.feature</module>
-<!-- 		<module>de.urszeidler.shr5.product.site.feature</module> -->
+		<!-- <module>de.urszeidler.shr5.product.site.feature</module> -->
 		<module>de.urszeidler.shr5.localization.feature</module>
 		<module>de.urszeidler.shr5.test.feature</module>
 		<module>de.urszeidler.shr5.dependecies.feature</module>
 		<!-- updatesite -->
-		<module>de.urszeidler.shr5.updatesite</module> 
-		<!-- products-->
+		<module>de.urszeidler.shr5.updatesite</module>
+		<!-- products -->
 		<module>de.urszeidler.shr5.product.build</module>
 		<module>de.urszeidler.shr5.product.simple</module>
-		<!-- rcptt tests -->
-<!-- 		<module>de.urszeidler.shr5.ecp.tests</module> -->
-		
+
 	</modules>
 
 	<build>
