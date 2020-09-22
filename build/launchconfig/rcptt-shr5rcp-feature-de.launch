@@ -32,7 +32,7 @@
 <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -debugEMFForms"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dimages=/tmp/"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.equinox.http.jetty.autostart=false&#10;-Dbase.folder=/home/urs/programme/eclipse-installs/shr5rcp-git-add_pomless_build/shr5rcp/build/results&#10;-Dimage.folder=/home/urs/programme/eclipse-installs/shr5rcp-git-add_pomless_build/shr5rcp/build/results/screen-shots"/>
 <stringAttribute key="pde.version" value="3.3"/>
 <stringAttribute key="product" value="de.urszeidler.shr5.product.shr5"/>
 <setAttribute key="selected_features">
