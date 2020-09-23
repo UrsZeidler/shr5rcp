@@ -5,14 +5,16 @@ Bundle-SymbolicName: de.urszeidler.shr5.webserver;singleton:=true
 Bundle-Version: 0.3.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: javax.servlet,
- org.eclipse.equinox.http.jetty,
- org.eclipse.jetty.server,
  de.urszeidler.shr5.ecp,
- org.eclipse.core.runtime,
  de.urszeidler.shr5.scripting.edit,
+ org.eclipse.core.runtime,
  org.eclipse.core.databinding,
  org.eclipse.core.databinding.beans,
  org.eclipse.core.databinding.property,
+ org.eclipse.equinox.http.jetty,
+ org.eclipse.equinox.jsp.jasper,
+ org.eclipse.equinox.jsp.jasper.registry,
+ org.eclipse.jetty.server,
  org.eclipse.jface.databinding
 Bundle-Activator: de.urszeidler.shr5.webserver.Activator
 Export-Package: de.urszeidler.shr5.webserver,
