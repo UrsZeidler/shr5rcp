@@ -156,7 +156,7 @@
 
 	
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="file:/home/urs/git/emf-commons/emf-commons/"/>
+		<repository location="http://opensource.urszeidler.de/updatesites/emf-commons/"/>
 		<unit id="de.urszeidler.emf.commons.feature.feature.group" version="0.0.0"/>
 	</location>
 
