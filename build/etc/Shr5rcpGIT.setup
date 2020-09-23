@@ -87,8 +87,8 @@
       xsi:type="pde:APIBaselineFromTargetTask"
       name="shr5rcp-baseline"
       targetName="emf-client-target.target"/>
-  <stream name="add_pomless_build"
-      label="add_pomless_build"/>
+  <stream name="development"
+      label="development"/>
   <logicalProjectContainer
       xsi:type="setup:ProjectCatalog"
       href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']"/>
