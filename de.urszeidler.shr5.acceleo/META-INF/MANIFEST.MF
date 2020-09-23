@@ -11,7 +11,7 @@ Require-Bundle: org.eclipse.core.runtime,
  de.urszeidler.shr5.scripting.edit,
  de.urszeidler.shr5.ecp,
  de.urszeidler.fop.help;bundle-version="1.0.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
 Export-Package: de.urszeidler.shr5.acceleo,
