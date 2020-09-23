@@ -6,25 +6,11 @@ Bundle-Version: 0.3.0.qualifier
 Bundle-Activator: de.urszeidler.shr5.acceleo.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore,
- org.eclipse.emf.ecore.xmi,
- org.eclipse.ocl,
- org.eclipse.ocl.ecore,
- org.eclipse.acceleo.common;visibility:=reexport,
- org.eclipse.acceleo.model;visibility:=reexport,
- org.eclipse.acceleo.profiler;visibility:=reexport,
  org.eclipse.acceleo.engine;visibility:=reexport,
- com.google.guava,
- de.urszeidler.shr5.management.model.edit,
- de.urszeidler.shr5.model.edit,
- de.urszeidler.fop.help;bundle-version="1.0.0",
  org.apache.commons.codec;bundle-version="1.6.0",
- de.urszeidler.shr5.m2t,
- de.urszeidler.shr5.runtime,
- de.urszeidler.shr5.runtime.edit,
- de.urszeidler.shr5.scripting,
  de.urszeidler.shr5.scripting.edit,
- de.urszeidler.shr5.ecp
+ de.urszeidler.shr5.ecp,
+ de.urszeidler.fop.help;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true

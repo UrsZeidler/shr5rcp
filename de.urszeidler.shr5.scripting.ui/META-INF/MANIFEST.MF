@@ -5,19 +5,15 @@ Bundle-SymbolicName: de.urszeidler.shr5.scripting.ui;singleton:=true
 Bundle-Version: 0.3.0.qualifier
 Bundle-Activator: de.urszeidler.shr5.scripting.ui.Activator
 Bundle-Vendor: %Bundle-Vendor
-Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime,
+Require-Bundle: org.eclipse.core.runtime,
  de.urszeidler.shr5.webserver,
  de.urszeidler.shr5.ecp,
  de.urszeidler.shr5.scripting,
  de.urszeidler.shr5.model.edit,
- org.eclipse.core.resources,
- org.eclipse.ui.ide,
  org.eclipse.core.databinding,
  org.eclipse.jface.databinding,
  org.eclipse.core.databinding.property,
  org.eclipse.core.databinding.beans,
- com.ibm.icu,
  org.eclipse.nebula.jface.cdatetime,
  org.eclipse.nebula.widgets.cdatetime
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

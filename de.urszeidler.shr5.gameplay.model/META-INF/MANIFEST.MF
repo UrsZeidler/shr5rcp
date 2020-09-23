@@ -10,11 +10,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: de.urszeidler.eclipse.shr5.gameplay,
  de.urszeidler.eclipse.shr5.gameplay.impl,
  de.urszeidler.eclipse.shr5.gameplay.util
-Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport,
- de.urszeidler.shr5.runtime;visibility:=reexport,
- de.urszeidler.shr5.model;visibility:=reexport,
- de.urszeidler.shr5.management.model;visibility:=reexport,
+Require-Bundle: de.urszeidler.shr5.runtime;visibility:=reexport,
  de.urszeidler.shr5.gameplay
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: de.urszeidler.shr5.gameplay.model

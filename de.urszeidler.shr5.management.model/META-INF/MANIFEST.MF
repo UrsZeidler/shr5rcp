@@ -12,7 +12,6 @@ Export-Package: de.urszeidler.eclipse.shr5Management,
  de.urszeidler.eclipse.shr5Management.impl,
  de.urszeidler.eclipse.shr5Management.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport,
  de.urszeidler.shr5.model;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: de.urszeidler.shr5.management.model

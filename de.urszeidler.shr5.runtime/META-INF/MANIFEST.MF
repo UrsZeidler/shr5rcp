@@ -10,9 +10,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: de.urszeidler.eclipse.shr5.runtime,
  de.urszeidler.eclipse.shr5.runtime.impl,
  de.urszeidler.eclipse.shr5.runtime.util
-Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport,
- de.urszeidler.shr5.model;visibility:=reexport,
- de.urszeidler.shr5.management.model;visibility:=reexport
+Require-Bundle: de.urszeidler.shr5.management.model;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: de.urszeidler.shr5.runtime
