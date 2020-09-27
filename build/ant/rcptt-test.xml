@@ -3,7 +3,6 @@
   <property name="runner-path" location="/home/urs/programme/eclipse-installs/rcptt-runnter-2.5.1/eclipse" />
   <property name="aut-path" location="${basedir}/../de.urszeidler.shr5.product.simple/target/products/de.urszeidler.shr5.rcp.product.simple/linux/gtk/x86_64/shr5rcptt" />
   <property name="test-path" location="${basedir}/../de.urszeidler.shr5.rcptt.tests"/> 
-  <property name="images" value="/home/urs/git/shr5rcp.wiki/wiki-images/images"/>
 	<property name="language" value="de"/>
 	<property name="skip-tags" value="en"/>	
 	
@@ -11,17 +10,18 @@
        to be put in "results" folder next to a project folder. If
        that's ok, you can leave them as is -->
   <property name="test-results" location="${basedir}/results"/>
+  <property name="images" value="${test-results}/screenshots"/>
   <property name="runner-workspace" location="${test-results}/runner-workspace"/>
   <property name="aut-workspace" location="${test-results}/aut-workspace-"/>
   <property name="aut-stdout" location="${test-results}/aut-out-"/>
   <property name="junit-report" location="${test-results}/results.xml"/>
   <property name="html-report" location="${test-results}/results.html"/>
 
-	<property name="erunner2" value="org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar"/>
-
   <target name="init">
     <delete dir="${test-results}" quiet="true"/>
     <mkdir dir="${test-results}" />
+    <mkdir dir="${test-results}/screen-shots" />
+  	<mkdir dir="${test-results}/screenshots" />
   </target>
 
 	<!--
@@ -48,9 +48,22 @@ ${language}
 </echo>
     </target>
 
+	<target name="configure.rcptt.runner">
+		<echo>Configure rcptt runner at ${runner-path}</echo>
+		<path id="rcp-runner">
+			<fileset dir="${runner-path}/plugins" >
+				<include name="org.eclipse.equinox.launcher*" />
+			</fileset>
+		</path>
+
+		<property name="e-runner" refid="rcp-runner"/>
+		<basename property="erunner" file="${e-runner}"/>
+		<echo>found erunner:  ${erunner}</echo>
+	</target>
+
   
-  <target name="test" depends="init,configure-aut">
-    <java jar="${runner-path}/plugins/${erunner2}" fork="true">
+  <target name="test" depends="init,configure-aut,configure.rcptt.runner">
+    <java jar="${runner-path}/plugins/${erunner}" fork="true">
       <arg value="-application" />
       <arg value="org.eclipse.rcptt.runner.headless" />
 
