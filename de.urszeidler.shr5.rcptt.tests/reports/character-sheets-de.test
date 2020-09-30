@@ -1,19 +1,22 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
 Contexts: _xdZkEO93EeqYI6oYfJ_1jw
-Element-Name: character-sheets
+Element-Name: character-sheets-de
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _jmvK4PIXEeqCOpkEiTC5cw
 Runtime-Version: 2.5.1.M3
-Save-Time: 9/10/20 12:24 AM
+Save-Time: 9/30/20 8:39 PM
 Tags: de
 Testcase-Type: ecl
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
 Content-Type: text/ecl
 Entry-Name: .content
+
+global [val reportdir [concat [get-java-property "base.folder"] [get-java-property "file.separator"] "reports"]]
+
 
 proc "gen-sheet" [val editor] [val sheet]{
     get-editor $editor | get-button "Transform to text" | click -metaKeys ""
@@ -31,7 +34,7 @@ exec-with-options {
     get-editor "SC Ki Adept Gunter von Kintzel" | get-button "Transform to text" | click -metaKeys ""
     get-window -class ModelToTextExportDialog | get-combo -after [get-label "Wählen Transformation"] 
         | select "BB Character sheet"
-    set-dialog-result Folder "/home/urs/etc/tmp"
+    set-dialog-result Folder $reportdir
     get-window -class ModelToTextExportDialog | get-button "..." | click -metaKeys ""
     get-window -class ModelToTextExportDialog | get-button OK | click -metaKeys ""
     
