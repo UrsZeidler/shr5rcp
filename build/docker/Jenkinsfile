@@ -1,0 +1,144 @@
+pipeline {
+    agent any
+    tools {
+        maven "m3"
+    }
+    stages {
+    	stage('init') {
+    		steps {
+    		    dir ('shr5rcptt'){
+            		deleteDir()
+            	}
+	       		dir('build/results_en'){
+	           		deleteDir()
+	       		}
+	       		dir('build/results_de'){
+	           		deleteDir()
+	       		}
+	    	}
+	    }
+        stage('Build') {
+            steps {
+                // Get some code from a GitHub repository
+//                git branch: 'development', 
+//                  url: 'https://github.com/UrsZeidler/shr5rcp.git'
+				withMaven(jdk: 'jdk8u265b01', 
+						maven: 'm3', 
+						options: [openTasksPublisher(highPriorityTaskIdentifiers: 'FIXME', normalPriorityTaskIdentifiers: 'TODO', pattern: '*.java'), 
+							artifactsPublisher(disabled: true), 
+							junitPublisher(healthScaleFactor: 0.9, keepLongStdio: true), 
+							dependenciesFingerprintPublisher()])
+				{
+                     // Run the maven build
+                    sh "mvn clean verify -Dmaven.test.failure.ignore=true"
+                } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe & FindBugs & SpotBugs reports...
+            
+                archiveArtifacts allowEmptyArchive: true, 
+                  artifacts: 'de.urszeidler.shr5.product.simple/target/**/shr5*.zip', 
+                  followSymlinks: false
+                  
+                perfReport filterRegex: '', 
+                  sourceDataFiles: '**/Test*.xml'
+                
+            }
+        }
+        stage('rcptt-test-de'){
+            steps {
+                sh '''
+                 cp de.urszeidler.shr5.product.simple/target/products/shr5rcptt-testing-linux*.zip shr5rcptt.zip
+                 unzip -q shr5rcptt.zip
+                 rm -f shr5rcptt.zip
+                 '''
+                
+                wrap([$class: 'Xvfb', 
+                	additionalOptions: '', 
+                	assignedLabels: '', displayNameOffset: 0, 
+                	autoDisplayName: true, debug: true, 
+                	installationName: 'default-xvfb']) {
+                    //ant    
+                    withAnt(installation: 'ant', jdk: 'jdk8u265b01') {
+                       withEnv(["rcptt_runner_HOME=${tool name: 'rcptt-runner', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'}"]) {
+                         sh '''
+                        	ant -buildfile build/ant/rcptt-test.xml test \
+                        	  -Drunner-path=${rcptt_runner_HOME} \
+                        	  -Dlanguage=de \
+                        	  -Daut-path=$WORKSPACE/shr5rcptt
+                        	  
+                        	mv build/results build/results_de
+                        '''
+                        junit 'build/results_de/results.junit.xml'
+                        // some block
+                        }//with env
+                    }// with ant
+                // some block
+                }
+            
+            dir ('shr5rcptt'){
+            	deleteDir()
+            }
+            }//end of steps
+        }//end of stage
+        stage('rcptt-test-en'){
+            steps {
+                sh '''
+                 cp de.urszeidler.shr5.product.simple/target/products/shr5rcptt-testing-linux*.zip shr5rcptt.zip
+                 unzip -q shr5rcptt.zip
+                 rm -f shr5rcptt.zip
+                 '''
+                
+                wrap([$class: 'Xvfb', 
+                	additionalOptions: '', 
+                	assignedLabels: '', displayNameOffset: 0, 
+                	autoDisplayName: true, debug: true, 
+                	installationName: 'default-xvfb']) {
+                    //ant    
+                    withAnt(installation: 'ant', jdk: 'jdk8u265b01') {
+                       withEnv(["rcptt_runner_HOME=${tool name: 'rcptt-runner', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'}"]) {
+                         sh '''
+                        	ant -buildfile build/ant/rcptt-test.xml test \
+                        	  -Drunner-path=${rcptt_runner_HOME} \
+                        	  -Dlanguage=en \
+                        	  -Daut-path=$WORKSPACE/shr5rcptt
+                        	  
+                        	mv build/results build/results_en
+                        '''
+                        junit 'build/results_en/results.junit.xml'
+ 						
+                        // some block
+                        }//with env
+                    }// with ant
+                // some block
+                }
+            dir ('shr5rcptt'){
+            	deleteDir()
+            }
+            }//end of steps
+        }//end of stage
+    }
+    post {
+        always {
+            archiveArtifacts artifacts: 'build/results*/**/*.*', followSymlinks: false
+			
+            publishHTML([allowMissing: false, 
+               alwaysLinkToLastBuild: false, 
+               keepAll: false, 
+               reportDir: 'build/results_de', 
+               reportFiles: 'results.html', 
+               reportName: 'DE HTML Report', reportTitles: ''])
+            
+            publishHTML([allowMissing: false, 
+               alwaysLinkToLastBuild: false, 
+               keepAll: false, 
+               reportDir: 'build/results_en', 
+               reportFiles: 'results.html', 
+               reportName: 'EN HTML Report', reportTitles: ''])
+               
+               
+               
+           perfReport filterRegex: '', 
+                  sourceDataFiles: 'build/results*/results.junit.xml'
+           
+            
+        }
+    }
+}
