@@ -5,6 +5,9 @@ package de.urszeidler.eclipse.shr5.gameplay.tests;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
+
+import org.junit.Ignore;
+
 import de.urszeidler.eclipse.shr5.gameplay.GameplayFactory;
 import de.urszeidler.eclipse.shr5.gameplay.Intervall;
 
@@ -12,8 +15,9 @@ import de.urszeidler.eclipse.shr5.gameplay.Intervall;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Intervall</b></em>'.
  * <!-- end-user-doc -->
- * @generated
+ * @generated not
  */
+@Ignore
 public class IntervallTest extends TestCase {
 
     /**

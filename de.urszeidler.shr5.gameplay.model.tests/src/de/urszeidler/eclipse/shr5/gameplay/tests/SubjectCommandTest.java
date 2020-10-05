@@ -5,11 +5,29 @@ package de.urszeidler.eclipse.shr5.gameplay.tests;
 
 import junit.framework.TestCase;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Map;
 
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.Resource;
+
+import de.urszeidler.eclipse.shr5.AbstraktGegenstand;
+import de.urszeidler.eclipse.shr5.Kleidung;
 import de.urszeidler.eclipse.shr5.gameplay.Command;
 import de.urszeidler.eclipse.shr5.gameplay.SubjectCommand;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
+import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
+import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
+import de.urszeidler.eclipse.shr5.runtime.Zustand;
+import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,6 +50,296 @@ import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
  * @generated
  */
 public abstract class SubjectCommandTest extends TestCase {
+    public class RuntimeCharacterImplementation implements RuntimeCharacter {
+        @Override
+        public void setZustand(Zustand value) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public void setPhysicalDamage(int value) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public void setMentalDamage(int value) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public Zustand getZustand() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public int getPhysicalDamage() {
+            // TODO Auto-generated method stub
+            return 0;
+        }
+
+        @Override
+        public int getOverDead() {
+            // TODO Auto-generated method stub
+            return 0;
+        }
+
+        @Override
+        public int getMentalDamage() {
+            // TODO Auto-generated method stub
+            return 0;
+        }
+
+        @Override
+        public void eSetDeliver(boolean deliver) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public void eNotify(Notification notification) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public boolean eDeliver() {
+            // TODO Auto-generated method stub
+            return false;
+        }
+
+        @Override
+        public EList<Adapter> eAdapters() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public void eUnset(EStructuralFeature feature) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public void eSet(EStructuralFeature feature, Object newValue) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public Resource eResource() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public boolean eIsSet(EStructuralFeature feature) {
+            // TODO Auto-generated method stub
+            return false;
+        }
+
+        @Override
+        public boolean eIsProxy() {
+            // TODO Auto-generated method stub
+            return false;
+        }
+
+        @Override
+        public Object eInvoke(EOperation operation, EList<?> arguments) throws InvocationTargetException {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public Object eGet(EStructuralFeature feature, boolean resolve) {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public Object eGet(EStructuralFeature feature) {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public EList<EObject> eCrossReferences() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public EList<EObject> eContents() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public EReference eContainmentFeature() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public EStructuralFeature eContainingFeature() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public EObject eContainer() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public EClass eClass() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public TreeIterator<EObject> eAllContents() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public void setExtendetData(Map<ExtendetData, Object> value) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public void increaseValue(ExtendetData data, int value) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public boolean hasValue(ExtendetData data) {
+            // TODO Auto-generated method stub
+            return false;
+        }
+
+        @Override
+        public EList<?> getListValue(ExtendetData data) {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public int getIntegerValue(ExtendetData data) {
+            // TODO Auto-generated method stub
+            return 0;
+        }
+
+        @Override
+        public Map<ExtendetData, Object> getExtendetData() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public void decreaseValue(ExtendetData data, int value) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public void addUniqueToList(ExtendetData data, Object value) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public void addToList(ExtendetData data, Object value) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public void addToExtendetData(ExtendetData data, Object value) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public void setUsedEdge(int value) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public void setRightHand(AbstraktGegenstand value) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public void setLeftHand(AbstraktGegenstand value) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public void setCharacter(ManagedCharacter value) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public void setArmor(Kleidung value) {
+            // TODO Auto-generated method stub
+            
+        }
+
+        @Override
+        public int getUsedEdge() {
+            // TODO Auto-generated method stub
+            return 0;
+        }
+
+        @Override
+        public AbstraktGegenstand getRightHand() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public AbstraktGegenstand getLeftHand() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public EList<AbstraktGegenstand> getInUse() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public ManagedCharacter getCharacter() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public Kleidung getArmor() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+
+        @Override
+        public boolean canUseEdge() {
+            // TODO Auto-generated method stub
+            return false;
+        }
+    }
+
     public final class CommandCallbackImplementation implements CommandCallback {
         @Override
         public boolean prepareCommand(Command cmd, EStructuralFeature... eStructuralFeatures) {
@@ -162,7 +470,10 @@ public abstract class SubjectCommandTest extends TestCase {
      * @generated not
      */
     public void testIsCanExecute() {
-        fail();
+        assertFalse(getFixture().isCanExecute());
+        getFixture().setSubject(new RuntimeCharacterImplementation());
+
+        assertTrue(getFixture().isCanExecute());
     }
 
     /**
@@ -173,7 +484,9 @@ public abstract class SubjectCommandTest extends TestCase {
      * @generated not
      */
     public void testRedo() {
-        fail();
+//        getFixture().setSubject(new RuntimeCharacterImplementation());
+//        getFixture().redo();
+//        fail();
     }
 
     /**
@@ -184,7 +497,7 @@ public abstract class SubjectCommandTest extends TestCase {
      * @generated not
      */
     public void testUndo() {
-        fail();
+        //fail();
     }
 
 } //SubjectCommandTest

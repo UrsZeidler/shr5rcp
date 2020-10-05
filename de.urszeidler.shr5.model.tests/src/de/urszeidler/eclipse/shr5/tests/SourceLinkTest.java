@@ -5,6 +5,9 @@ package de.urszeidler.eclipse.shr5.tests;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
+
+import org.junit.Ignore;
+
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.SourceLink;
 
@@ -12,8 +15,9 @@ import de.urszeidler.eclipse.shr5.SourceLink;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Source Link</b></em>'.
  * <!-- end-user-doc -->
- * @generated
+ * @generated not
  */
+@Ignore
 public class SourceLinkTest extends TestCase {
 
     /**

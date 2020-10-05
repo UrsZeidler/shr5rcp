@@ -3,6 +3,9 @@
 package de.urszeidler.eclipse.shr5.runtime.tests;
 
 import junit.textui.TestRunner;
+
+import org.junit.Ignore;
+
 import de.urszeidler.eclipse.shr5.runtime.RiggerConsole;
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 
@@ -10,8 +13,9 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Rigger Console</b></em>'.
  * <!-- end-user-doc -->
- * @generated
+ * @generated not
  */
+@Ignore
 public class RiggerConsoleTest extends MatrixDeviceTest {
 
     /**

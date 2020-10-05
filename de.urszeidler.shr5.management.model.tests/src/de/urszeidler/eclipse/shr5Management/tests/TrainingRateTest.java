@@ -5,6 +5,9 @@ package de.urszeidler.eclipse.shr5Management.tests;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
+
+import org.junit.Ignore;
+
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 import de.urszeidler.eclipse.shr5Management.TrainingRate;
 
@@ -12,8 +15,9 @@ import de.urszeidler.eclipse.shr5Management.TrainingRate;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Training Rate</b></em>'.
  * <!-- end-user-doc -->
- * @generated
+ * @generated not
  */
+@Ignore
 public class TrainingRateTest extends TestCase {
 
     /**

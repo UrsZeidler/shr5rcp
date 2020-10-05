@@ -4,6 +4,9 @@ package de.urszeidler.eclipse.shr5.tests;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
+
+import org.junit.Ignore;
+
 import de.urszeidler.eclipse.shr5.MetaMagie;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 
@@ -11,8 +14,9 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Meta Magie</b></em>'.
  * <!-- end-user-doc -->
- * @generated
+ * @generated not
  */
+@Ignore
 public class MetaMagieTest extends TestCase {
 
 	/**

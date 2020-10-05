@@ -5,6 +5,8 @@ package de.urszeidler.eclipse.shr5Management.tests;
 
 import java.util.Map;
 
+import org.junit.Ignore;
+
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
 import de.urszeidler.eclipse.shr5Management.GeneratorState;
@@ -15,8 +17,9 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Generator State To EString Map Entry</b></em>'.
  * <!-- end-user-doc -->
- * @generated
+ * @generated not
  */
+@Ignore
 public class GeneratorStateToEStringMapEntryTest extends TestCase {
 
 	/**

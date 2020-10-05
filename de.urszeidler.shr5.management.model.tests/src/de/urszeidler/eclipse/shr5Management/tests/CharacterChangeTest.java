@@ -4,6 +4,9 @@
 package de.urszeidler.eclipse.shr5Management.tests;
 
 import junit.textui.TestRunner;
+
+import org.junit.Ignore;
+
 import de.urszeidler.eclipse.shr5Management.CharacterChange;
 import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
 
@@ -11,8 +14,9 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementFactory;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Character Change</b></em>'.
  * <!-- end-user-doc -->
- * @generated
+ * @generated not
  */
+@Ignore
 public class CharacterChangeTest extends DiaryEntryTest {
 
     /**

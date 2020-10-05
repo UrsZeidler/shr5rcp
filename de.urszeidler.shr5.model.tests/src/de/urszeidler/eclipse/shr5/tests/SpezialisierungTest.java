@@ -5,7 +5,25 @@ package de.urszeidler.eclipse.shr5.tests;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
+
+import java.lang.reflect.InvocationTargetException;
+
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.Resource;
+
+import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.Localization;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.SourceBook;
 import de.urszeidler.eclipse.shr5.Spezialisierung;
 
 /**
@@ -85,4 +103,7 @@ public class SpezialisierungTest extends TestCase {
         setFixture(null);
     }
 
+    public void testSetFertigkeit() throws Exception {
+        //
+    }
 } //SpezialisierungTest

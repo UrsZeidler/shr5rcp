@@ -3,6 +3,9 @@
 package de.urszeidler.eclipse.shr5.tests;
 
 import junit.textui.TestRunner;
+
+import org.junit.Ignore;
+
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
 
@@ -10,8 +13,9 @@ import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Wissensfertigkeit</b></em>'.
  * <!-- end-user-doc -->
- * @generated
+ * @generated not
  */
+@Ignore
 public class WissensfertigkeitTest extends FertigkeitTest {
 
 	/**

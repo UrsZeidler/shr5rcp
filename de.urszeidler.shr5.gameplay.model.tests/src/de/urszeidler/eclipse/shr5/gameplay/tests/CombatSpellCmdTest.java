@@ -67,4 +67,10 @@ public class CombatSpellCmdTest extends SpellCommandTest {
         setFixture(null);
     }
 
+    @Override
+    public void testRedo() {
+      getFixture().setSubject(new RuntimeCharacterImplementation());
+      getFixture().redo();
+  }
+
 } //CombatSpellCmdTest

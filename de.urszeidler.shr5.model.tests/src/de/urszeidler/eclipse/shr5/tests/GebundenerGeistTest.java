@@ -5,6 +5,9 @@ package de.urszeidler.eclipse.shr5.tests;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
+
+import org.junit.Ignore;
+
 import de.urszeidler.eclipse.shr5.GebundenerGeist;
 import de.urszeidler.eclipse.shr5.Shr5Factory;
 
@@ -12,8 +15,9 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Gebundener Geist</b></em>'.
  * <!-- end-user-doc -->
- * @generated
+ * @generated not
  */
+@Ignore
 public class GebundenerGeistTest extends TestCase {
 
     /**

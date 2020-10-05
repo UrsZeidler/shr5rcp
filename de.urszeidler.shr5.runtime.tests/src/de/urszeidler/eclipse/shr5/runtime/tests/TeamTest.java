@@ -4,6 +4,9 @@ package de.urszeidler.eclipse.shr5.runtime.tests;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
+
+import org.junit.Ignore;
+
 import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
 import de.urszeidler.eclipse.shr5.runtime.Team;
 
@@ -11,8 +14,9 @@ import de.urszeidler.eclipse.shr5.runtime.Team;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Team</b></em>'.
  * <!-- end-user-doc -->
- * @generated
+ * @generated not
  */
+@Ignore
 public class TeamTest extends TestCase {
 
     /**
