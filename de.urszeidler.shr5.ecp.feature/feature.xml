@@ -29,28 +29,51 @@
          version="0.0.0"/>
 
    <requires>
-      <import plugin="org.eclipse.core.runtime" version="3.4.0" match="compatible"/>
-      <import plugin="org.eclipse.emf.ecp.ui" version="1.3.0" match="compatible"/>
-      <import plugin="org.eclipse.core.expressions" version="3.4.0" match="compatible"/>
-      <import plugin="org.eclipse.emf.ecp.core" version="1.3.0" match="compatible"/>
-      <import plugin="org.eclipse.core.commands"/>
-      <import plugin="org.eclipse.emf.edit.ui"/>
-      <import plugin="org.eclipse.jface"/>
-      <import plugin="org.eclipse.swt"/>
-      <import plugin="org.eclipse.ui.workbench"/>
+      <import plugin="org.eclipse.emf.ecp.core" version="1.26.0"/>
       <import plugin="org.eclipse.net4j.util" version="3.0.0" match="compatible"/>
-      <import plugin="org.eclipse.emf.ecp.edit" version="1.3.0" match="compatible"/>
-      <import plugin="org.eclipse.emf.ecp.view.context" version="1.3.0" match="compatible"/>
-      <import plugin="org.eclipse.ui.views"/>
-      <import plugin="org.eclipse.emf.ecore" version="2.5.0" match="compatible"/>
+      <import plugin="org.eclipse.core.expressions" version="3.4.0" match="compatible"/>
+      <import plugin="org.eclipse.emf.ecp.edit" version="1.26.0"/>
+      <import plugin="org.eclipse.emf.ecp.view.context" version="1.26.0"/>
+      <import plugin="org.eclipse.emf.ecp.common.ui" version="1.26.0"/>
       <import plugin="org.eclipse.emf.edit" version="2.5.0" match="compatible"/>
-      <import plugin="org.eclipse.emf.ecp.ui.e3" version="1.3.0" match="compatible"/>
-      <import plugin="org.eclipse.ui" version="3.0.0" match="compatible"/>
-      <import plugin="org.eclipse.core.resources" version="3.7.0" match="compatible"/>
-      <import plugin="org.eclipse.ui.ide" version="3.7.0" match="compatible"/>
-      <import plugin="org.eclipse.ui.ide.application" version="1.0.0" match="compatible"/>
-      <import plugin="org.eclipse.emf.ecore" version="2.8.0" match="compatible"/>
-      <import plugin="org.eclipse.emf.edit" version="2.7.0" match="compatible"/>
+      <import plugin="org.eclipse.emf.ecp.common" version="1.26.0"/>
+      <import plugin="org.eclipse.emf.edit" version="2.8.0" match="compatible"/>
+      <import plugin="org.eclipse.emf.ecp.view.model" version="1.26.0"/>
+      <import plugin="org.eclipse.core.databinding.observable" version="1.4.0" match="compatible"/>
+      <import plugin="org.eclipse.emfforms.core.services" version="1.26.0"/>
+      <import plugin="org.eclipse.core.databinding.property" version="1.4.0" match="compatible"/>
+      <import plugin="org.eclipse.emf.ecp.ui.view" version="1.26.0"/>
+      <import plugin="org.eclipse.emf.ecp.view.template.model" version="1.26.0"/>
+      <import plugin="org.eclipse.emf.databinding.edit" version="1.3.0" match="compatible"/>
+      <import plugin="org.eclipse.emfforms.localization" version="1.26.0"/>
+      <import plugin="org.eclipse.emfforms.core.services.editsupport" version="1.26.0"/>
+      <import plugin="org.eclipse.emfforms.swt.core" version="1.26.0"/>
+      <import plugin="org.eclipse.emf.ecore.edit" version="2.7.0" match="compatible"/>
+      <import plugin="org.eclipse.emf.ecp.edit.swt" version="1.26.0"/>
+      <import plugin="org.eclipse.emf.ecp.view.model.common" version="1.26.0"/>
+      <import plugin="org.eclipse.emfforms.core.bazaar" version="1.26.0"/>
+      <import plugin="org.eclipse.emf.ecp.view.table.model" version="1.26.0"/>
+      <import plugin="org.eclipse.emf.ecore.xmi" version="2.8.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecp.view.migrator" version="1.26.0"/>
+      <import plugin="org.eclipse.emf.ecp.ui.view.swt" version="1.26.0"/>
+      <import plugin="org.eclipse.core.databinding.property" version="1.4.200" match="compatible"/>
+      <import plugin="org.eclipse.emf.ecp.view.util.swt" version="1.26.0"/>
+      <import plugin="org.eclipse.emf.databinding" version="1.3.0" match="compatible"/>
+      <import plugin="org.eclipse.emfforms.swt.core.di" version="1.26.0"/>
+      <import plugin="org.eclipse.core.databinding" version="1.3.0" match="compatible"/>
+      <import plugin="org.eclipse.core.databinding.observable" version="1.3.0" match="compatible"/>
+      <import plugin="org.eclipse.core.databinding.property" version="1.3.0" match="compatible"/>
+      <import plugin="org.eclipse.emf.ecp.ui" version="1.26.0"/>
+      <import plugin="org.eclipse.emf.databinding" version="1.2.0" match="compatible"/>
+      <import plugin="org.eclipse.emf.ecp.editor.e3" version="1.26.0"/>
+      <import plugin="org.eclipse.emfforms.common" version="1.26.0"/>
+      <import plugin="org.eclipse.emf.ecore" version="2.9.0" match="compatible"/>
+      <import plugin="org.eclipse.emf.edit" version="2.12.0" match="compatible"/>
+      <import plugin="org.eclipse.e4.core.contexts" version="1.3.0" match="compatible"/>
+      <import plugin="org.eclipse.emfforms.core.services.emfspecificservice" version="1.26.0"/>
+      <import plugin="org.eclipse.emfforms.core.services.emf" version="1.26.0"/>
+      <import plugin="org.eclipse.e4.core.di" version="1.3.0" match="compatible"/>
+      <import plugin="org.eclipse.core.runtime" version="3.10.0" match="compatible"/>
    </requires>
 
    <plugin

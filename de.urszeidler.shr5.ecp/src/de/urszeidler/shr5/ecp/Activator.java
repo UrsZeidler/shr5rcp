@@ -29,6 +29,7 @@ import org.eclipse.emf.ecp.core.ECPProvider;
 import org.eclipse.emf.ecp.core.exceptions.ECPProjectWithNameExistsException;
 import org.eclipse.emf.ecp.core.util.ECPProperties;
 import org.eclipse.emf.ecp.core.util.ECPUtil;
+import org.eclipse.emf.ecp.workspace.internal.core.WorkspaceProvider;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
@@ -118,7 +119,8 @@ public class Activator extends AbstractUIPlugin {
 
     public void createECPWorkspace() throws ECPProjectWithNameExistsException {
         String projectName = store.getString(PreferenceConstants.DEFAUL_PROJECT_NAME);
-        ECPProvider provider = ECPUtil.getECPProviderRegistry().getProvider("org.eclipse.emf.ecp.workspace.provider");
+        @SuppressWarnings("restriction")
+        ECPProvider provider = ECPUtil.getECPProviderRegistry().getProvider(WorkspaceProvider.NAME);
         ECPProperties ecpProperties = ECPUtil.createProperties();
         ecpProperties.addProperty("rootURI", PLATFORM_RESOURCE_SHR5_URI);
         ECPProject ecpProject = ECPUtil.getECPProjectManager().getProject(projectName);

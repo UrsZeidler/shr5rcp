@@ -1,5 +1,8 @@
 package de.urszeidler.shr5.product.application;
 
+import de.urszeidler.shr5.ecp.views.SourceBookView;
+
+import org.eclipse.emf.ecp.ui.views.ModelExplorerView;
 import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
 
@@ -8,13 +11,14 @@ public class ShadowrunPerspective implements IPerspectiveFactory {
     /**
      * Creates the initial layout for a page.
      */
+    @SuppressWarnings("restriction")
     public void createInitialLayout(IPageLayout layout) {
         //String editorArea = layout.getEditorArea();
         addFastViews(layout);
         addViewShortcuts(layout);
         addPerspectiveShortcuts(layout);
-        layout.addView("org.eclipse.emf.ecp.ui.ModelExplorerView", IPageLayout.LEFT, 0.3f, IPageLayout.ID_EDITOR_AREA);
-        layout.addView("de.urszeidler.shr5.ecp.views.SourceBookView", IPageLayout.BOTTOM, 0.56f, "org.eclipse.emf.ecp.ui.ModelExplorerView");
+        layout.addView(ModelExplorerView.ID, IPageLayout.LEFT, 0.3f, IPageLayout.ID_EDITOR_AREA);
+        layout.addView(SourceBookView.ID, IPageLayout.BOTTOM, 0.56f, ModelExplorerView.ID);
     }
 
     /**

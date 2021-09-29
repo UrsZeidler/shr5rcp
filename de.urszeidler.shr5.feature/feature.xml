@@ -72,7 +72,6 @@
       <import plugin="org.eclipse.equinox.http.jetty"/>
       <import plugin="org.eclipse.equinox.http.registry"/>
       <import plugin="org.apache.commons.logging"/>
-      <import plugin="org.eclipse.jetty.continuation"/>
       <import plugin="org.eclipse.jetty.http"/>
       <import plugin="org.eclipse.jetty.io"/>
       <import plugin="org.eclipse.jetty.security"/>

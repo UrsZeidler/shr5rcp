@@ -25,7 +25,6 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
 
    <launcherArgs>
       <programArgs>-consoleLog -data shr_workspace/
-
       </programArgs>
       <vmArgs>-Dorg.eclipse.equinox.http.jetty.autostart=false
 -Dorg.eclipse.swt.browser.DefaultType=mozilla
@@ -109,6 +108,7 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <plugin id="org.apache.commons.io"/>
       <plugin id="org.apache.commons.jxpath"/>
       <plugin id="org.apache.commons.logging"/>
+      <plugin id="org.apache.felix.scr"/>
       <plugin id="org.apache.jasper.glassfish"/>
       <plugin id="org.apache.xerces"/>
       <plugin id="org.apache.xml.resolver"/>
@@ -222,7 +222,7 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <plugin id="org.eclipse.equinox.app"/>
       <plugin id="org.eclipse.equinox.bidi"/>
       <plugin id="org.eclipse.equinox.common"/>
-      <plugin id="org.eclipse.equinox.ds"/>
+      <plugin id="org.eclipse.equinox.event"/>
       <plugin id="org.eclipse.equinox.http.jetty"/>
       <plugin id="org.eclipse.equinox.http.registry"/>
       <plugin id="org.eclipse.equinox.http.servlet"/>
@@ -247,7 +247,6 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <plugin id="org.eclipse.equinox.transforms.hook" fragment="true"/>
       <plugin id="org.eclipse.help"/>
       <plugin id="org.eclipse.help.nl_de" fragment="true"/>
-      <plugin id="org.eclipse.jetty.continuation"/>
       <plugin id="org.eclipse.jetty.http"/>
       <plugin id="org.eclipse.jetty.io"/>
       <plugin id="org.eclipse.jetty.security"/>
@@ -300,20 +299,15 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <plugin id="org.w3c.dom.events"/>
       <plugin id="org.w3c.dom.smil"/>
       <plugin id="org.w3c.dom.svg"/>
-         <plugin
-         id="org.eclipse.equinox.event"/>
    </plugins>
-
-   <features>
-   </features>
 
    <configurations>
       <plugin id="de.urszeidler.shr5.webserver" autoStart="true" startLevel="0" />
+      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.http.registry" autoStart="true" startLevel="4" />
-      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.http.registry" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
    </configurations>
 

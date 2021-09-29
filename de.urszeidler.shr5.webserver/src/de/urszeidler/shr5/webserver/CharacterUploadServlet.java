@@ -43,7 +43,7 @@ public class CharacterUploadServlet extends HttpServlet implements Servlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getContentType() != null && request.getContentType().startsWith("multipart/form-data")) {
-            request.setAttribute(Request.MULTIPART_CONFIG_ELEMENT, MULTI_PART_CONFIG);
+            request.setAttribute(Request.__MULTIPART_CONFIG_ELEMENT, MULTI_PART_CONFIG);
         }
 
         // String description = request.getParameter("description"); // Retrieves <input type="text" name="description">
