@@ -1,12 +1,13 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
+Contexts: _xdZkEO93EeqYI6oYfJ_1jw
 Element-Name: script-prepare
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _GkVOoPRnEeqk4bmiO2X5JA
-Runtime-Version: 2.5.1.M3
-Save-Time: 9/11/20 10:16 PM
+Runtime-Version: 2.5.2.202109092356
+Save-Time: 10/3/21, 11:03 PM
 Tags: de
 Testcase-Type: ecl
 
@@ -25,7 +26,10 @@ with [get-window "Wähle Kampfrundenteilnehmer - Team Players"] {
     get-button "Hinzufügen" | click -metaKeys ""
     get-button OK | click -metaKeys ""
 }
-get-window "Start webserver" | get-button Nein | click -metaKeys ""
+try -command {
+	get-window "Start webserver" | get-button Nein | click -metaKeys ""
+} -catch {}
+
 with [get-view "Runtime Script View" | get-section Aktionen | get-table] {
     get-item -path "Charakter Gu" | click
     select "Charakter Gu" | double-click

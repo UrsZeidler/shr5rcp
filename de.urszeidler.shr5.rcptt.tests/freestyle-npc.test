@@ -1,12 +1,13 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
+Contexts: _xdZkEO93EeqYI6oYfJ_1jw
 Element-Name: freestyle-npc
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _s1RRgB_ZEeWSRorpcoiIvw
-Runtime-Version: 2.5.1.M3
-Save-Time: 9/6/20 12:51 PM
+Runtime-Version: 2.5.2.202109092356
+Save-Time: 10/4/21, 12:17 AM
 Tags: freestyle, character-generation, en
 Testcase-Type: ecl
 
@@ -22,13 +23,16 @@ Entry-Name: .content
 
 get-menu "Character/Character Generator wizard" | click
 get-window "Select generator object to create ..." | get-tree | select "Freestyle Generator"
+
+take-screenshot "select freestyle"
 get-window "Select generator object to create ..." | get-button "Next >" | click
+take-screenshot "select freestyle 2"
 with [get-window -class WizardDialog] {
     get-combo -after [get-label "Select Container"] | select "Gamemaster my game stuff"
     get-combo -after [get-label "Select campaign"] | select "Free Style Free Style Generator"
     get-combo -after [get-label "Select Group"] | select "Character Group non player group"
 }
-get-window -class WizardDialog | get-editbox -after [get-label "Create a freestyle Generator"] | get-property text 
+get-window -class WizardDialog | get-label -after [get-label "Create a freestyle Generator"] | get-property text 
     | equals "Creates a freestyle generator object for creating a character without rules." | verify-true
 get-window -class WizardDialog | get-button Finish | click
 get-window -class WizardDialog | get-window "Switch Perspective" 
@@ -222,15 +226,19 @@ get-view "Model Explorer" | get-tree
     | select "shr5Resources/All/Gamemaster my game stuff/Character Group non player group"
 get-menu "Character/Character Generator wizard" | click
 get-window "Select generator object to create ..." | get-button "Next >" | click
+
+take-screenshot "select generator"
+/*
 with [get-window -class WizardDialog] {
-    get-editbox -after [get-label "Create a freestyle Generator"] | get-property text 
+    get-label -after [get-label "Create a freestyle Generator"] | get-property text 
         | equals "Select a system and a group. The system is the campaign like street scrum or core rules, the group will be the container of your character." 
         | verify-true
     get-combo -after [get-label "Select campaign"] | get-property selection | equals "" | verify-true
 }
+*/
 get-window -class WizardDialog | get-combo -after [get-label "Select campaign"] 
     | select "Free Style Free Style Generator"
-get-window -class WizardDialog | get-editbox -after [get-label "Create a freestyle Generator"] | get-property text 
+get-window -class WizardDialog | get-label -after [get-label "Create a freestyle Generator"] | get-property text 
     | equals "Creates a freestyle generator object for creating a character without rules." | verify-true
 with [get-window -class WizardDialog] {
     get-button Finish | click

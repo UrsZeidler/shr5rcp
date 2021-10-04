@@ -5,8 +5,8 @@ Element-Name: documentation
 Element-Type: context
 Element-Version: 2.0
 Id: _RzsBsPhGEeqqg4qXD_ZbOQ
-Runtime-Version: 2.5.1.M3
-Save-Time: 9/16/20 10:27 PM
+Runtime-Version: 2.5.2.202109092356
+Save-Time: 10/10/21, 4:05 PM
 
 ------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
 Content-Type: text/ecl
@@ -16,27 +16,40 @@ proc "image-path" [val name] {
 	concat $imagedir [get-java-property "file.separator"] $name ".png"
 }
 proc "image-doc-path" [val name] {
-	concat "screen-shots" [get-java-property "file.separator"] $name ".png"
+	concat $imagedir [get-java-property "file.separator"] $name ".png"
 }
 proc "doc-path" [val docname] {
 	concat $basedir [get-java-property "file.separator"] $docname ".md"
 }
 
-proc "screen-shot-doc" [val window -input] [val name] [val docname]{
+proc "screen-shot-doc" [val window -input] [val name] [val docname] [val doctext ""]{
+	wait 100
 	$window | get-object | save-screenshot -out [image-path $name]
+	if -condition [eq $doctext ""] -else {
+		concat "\n" $doctext "  " | write-lines -uri [doc-path $docname] -append true
+	} 
 	format "![%s](%s)"  $name [image-doc-path $name] | write-lines -uri [doc-path $docname] -append true
 }
 
-proc "screen-shot-editor-tab-doc" [val editor -input] [val tabname] [val imagename] [val docname]{
+proc "screen-shot-editor-tab-doc" [val editor -input] [val tabname] [val imagename] [val docname] [val doctext ""]{
 	with [$editor] {
 		get-tab-folder | get-tab-item $tabname | click
+		wait 100
 		get-tab-folder | get-object | invoke getParent | save-screenshot -out [image-path $imagename]
+		if -condition [eq $doctext ""] -else {
+			concat "\n" $doctext "  " | write-lines -uri [doc-path $docname] -append true
+		} 
 		format "![%s](%s)"  $imagename [image-doc-path $imagename] | write-lines -uri [doc-path $docname] -append true
-		
 	}
 }
 
 proc "doc-header" [val prefix] [val text] [val docname] {
 	concat $prefix " "  $text "\n" | write-lines -uri [doc-path $docname] -append true
 }
+
+proc "doc-paragraph" [val text] [val docname] {
+	concat $text "\n  " | write-lines -uri [doc-path $docname] -append true
+}
+
+
 ------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998--

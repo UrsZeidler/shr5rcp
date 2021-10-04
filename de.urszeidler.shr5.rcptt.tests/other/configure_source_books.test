@@ -1,13 +1,13 @@
 --- RCPTT testcase ---
 Format-Version: 1.0
-Contexts: _CMnogO96EeqYI6oYfJ_1jw
+Contexts: _xdZkEO93EeqYI6oYfJ_1jw,_CMnogO96EeqYI6oYfJ_1jw
 Element-Name: show_resource_prespective
 Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _-9FcUO93EeqYI6oYfJ_1jw
-Runtime-Version: 2.5.1.M3
-Save-Time: 9/6/20 12:45 PM
+Runtime-Version: 2.5.2.202109092356
+Save-Time: 10/3/21, 10:25 PM
 Tags: de
 Testcase-Type: ecl
 
