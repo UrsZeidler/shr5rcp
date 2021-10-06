@@ -7,6 +7,7 @@ ant
 pipeline-maven
 junit
 cobertura
+jacoco
 github
 code-coverage-api
 git-parameter
@@ -17,4 +18,3 @@ htmlpublisher
 performance
 custom-tools-plugin
 junit-attachments
-tasks

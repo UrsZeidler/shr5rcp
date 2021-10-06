@@ -6,7 +6,7 @@ tool:
       - installSource:
           installers:
           - antFromApache:
-              id: "1.10.8"
+              id: "1.10.11"
   customTool:
     installations:
     - name: "rcptt-runner"
@@ -16,20 +16,20 @@ tool:
           - zip:
               label: "master"
               subdir: "eclipse"
-              url: "http://download.eclipse.org/rcptt/release/2.5.1/runner/rcptt.runner-2.5.1.zip"
+              url: "http://download.eclipse.org/rcptt/nightly/2.5.2/202109092356/runner/rcptt.runner-2.5.2-N202109092356.zip"
   git:
     installations:
     - home: "git"
       name: "Default"
   jdk:
     installations:
-    - name: "jdk8u265b01"
+    - name: "open-jdk-11.0.12"
       properties:
       - installSource:
           installers:
           - zip:
-              subdir: "jdk8u265-b01"
-              url: "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u265-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u265b01.tar.gz"
+              subdir: "jdk-11.0.12+7"
+              url: "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.12%2B7/OpenJDK11U-jdk_x64_linux_hotspot_11.0.12_7.tar.gz"
   maven:
     installations:
     - name: "m3"
@@ -37,8 +37,8 @@ tool:
       - installSource:
           installers:
           - maven:
-              id: "3.6.3"
-  xvfbInstallation:
+              id: "3.8.3"
+  xvfb:
     installations:
     - home: "/usr/bin"
       name: "default-xvfb"
