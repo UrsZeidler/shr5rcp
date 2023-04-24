@@ -79,8 +79,6 @@ Containts the fragments of the bable project.
       <import plugin="org.eclipse.equinox.p2.ui.sdk"/>
       <import plugin="org.eclipse.ui.intro"/>
       <import plugin="org.eclipse.ui.browser"/>
-      <import plugin="org.eclipse.swt" version="3.7.0" match="compatible"/>
-      <import plugin="org.eclipse.emf.ecp.ui" version="1.4.0" match="compatible"/>
    </requires>
 <!--
    <plugin
