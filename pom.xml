@@ -10,7 +10,7 @@
 	<properties>
 <!-- 		<findbugs.version>3.0.1</findbugs.version> -->
 		<rcptt.version>2.5.1</rcptt.version>
-		<tycho.version>2.5.0</tycho.version>
+		<tycho.version>2.7.5</tycho.version>
 		<jacoco.version>0.8.3</jacoco.version>
 		
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -57,7 +57,7 @@
 		<module>de.urszeidler.shr5.updatesite</module>
 		<!-- products -->
 		<module>de.urszeidler.shr5.product.build</module>
-<!-- 		<module>de.urszeidler.shr5.product.simple</module> -->
+ 		<module>de.urszeidler.shr5.product.simple</module>
 
 	</modules>
 
@@ -112,7 +112,8 @@
 							<arch>x86_64</arch>
 						</environment>
 					</environments>
-					<executionEnvironment>JavaSE-11</executionEnvironment>
+					<executionEnvironment>org.eclipse.justj.openjdk.hotspot.jre.full-17</executionEnvironment>
+					<executionEnvironmentDefault>org.eclipse.justj.openjdk.hotspot.jre.full-17</executionEnvironmentDefault>
 				</configuration>
 			</plugin>
 			<plugin>

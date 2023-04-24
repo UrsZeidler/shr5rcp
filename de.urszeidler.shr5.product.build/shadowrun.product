@@ -27,10 +27,6 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <programArgs>-consoleLog -data shr_workspace/
       </programArgs>
       <vmArgs>-Dorg.eclipse.equinox.http.jetty.autostart=false
--Dorg.eclipse.swt.browser.DefaultType=mozilla
--XX:MaxPermSize=256m
--Xms240m
--Xmx768m
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
@@ -259,6 +255,7 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <plugin id="org.eclipse.jface.nl_de" fragment="true"/>
       <plugin id="org.eclipse.jface.text"/>
       <plugin id="org.eclipse.jface.text.nl_de" fragment="true"/>
+      <plugin id="org.eclipse.justj.openjdk.hotspot.jre.full"/>
       <plugin id="org.eclipse.nebula.cwt"/>
       <plugin id="org.eclipse.nebula.jface.cdatetime"/>
       <plugin id="org.eclipse.nebula.paperclips.core"/>
@@ -270,11 +267,8 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <plugin id="org.eclipse.ocl.ecore"/>
       <plugin id="org.eclipse.osgi"/>
       <plugin id="org.eclipse.osgi.compatibility.state" fragment="true"/>
-      <plugin id="org.eclipse.osgi.nl_de" fragment="true"/>
       <plugin id="org.eclipse.osgi.services"/>
-      <plugin id="org.eclipse.osgi.services.nl_de" fragment="true"/>
       <plugin id="org.eclipse.swt"/>
-      <plugin id="org.eclipse.swt.gtk.linux.x86_64" fragment="true"/>
       <plugin id="org.eclipse.swt.nl_de" fragment="true"/>
       <plugin id="org.eclipse.text"/>
       <plugin id="org.eclipse.text.nl_de" fragment="true"/>
@@ -310,5 +304,12 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <plugin id="org.eclipse.equinox.http.registry" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
    </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
 
 </product>
