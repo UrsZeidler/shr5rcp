@@ -27,8 +27,7 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <programArgs>-consoleLog -data shr_workspace/
       </programArgs>
       <vmArgs>-Dorg.eclipse.equinox.http.jetty.autostart=false
--Xms240m
--Xmx1024m
+-Xmx4096m
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
