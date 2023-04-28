@@ -107,6 +107,15 @@
 [**
  * The documentation of the query
  * @param arg0
+ */]
+[query public getAllSkills(arg0 : AbstraktPersona) : Sequence(Beschreibbar)
+	= invoke('de.urszeidler.eclipse.shr5.util.Shr5EditingTools', 'createFertigkeitGroupsRoot(de.urszeidler.eclipse.shr5.AbstraktPersona)', Sequence{arg0})
+/]
+
+
+[**
+ * The documentation of the query
+ * @param arg0
  * @param arg1
  * @param arg2
  */]

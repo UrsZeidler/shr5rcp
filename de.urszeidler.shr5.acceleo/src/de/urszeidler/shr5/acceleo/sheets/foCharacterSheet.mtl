@@ -27,7 +27,7 @@
     <fo:table-body  >
     <fo:table-row >
 <!-- colum one -->
-      <fo:table-cell border-right-width="1px"  border-right-style="outset">
+      <fo:table-cell border-right-width="0.5px"  border-right-style="outset">
 		[comment]<fo:block  >
 [printAttributes(aManagedCharacter)  /]
 		</fo:block  >[/comment]
@@ -37,6 +37,16 @@
 		<fo:block [keepTogetherAlways()/] >
 [printActiveMods(aManagedCharacter.persona)  /]
 		</fo:block  >
+
+		<fo:block  keep-together="always">
+[printContracts(aManagedCharacter)  /]
+		</fo:block  >
+
+		<fo:block  keep-together="always" >
+[printSinLicense(aManagedCharacter)/]
+		</fo:block  >
+
+
 		<fo:block [keepTogetherAlways()/]>
 [printConnections(aManagedCharacter)  /]
 		</fo:block  >
@@ -68,11 +78,6 @@
 <!-- colum two -->
       <fo:table-cell>
 
-		<fo:block   >
-[printGear(aManagedCharacter)  /]
-		</fo:block  >
-
-
 
 
 [if (aManagedCharacter.persona.oclIsKindOf(KoerperPersona))]
@@ -83,9 +88,9 @@
 		<fo:block  keep-together="always">
 [printCyberwares(kp)/]
 		</fo:block  >
-		<fo:block  keep-together="always">
+[comment]		<fo:block  keep-together="always">
 [printBioware(kp)/]
-		</fo:block  >
+		</fo:block  >[/comment]
 [/let]
 [/if]
 [if (not aManagedCharacter.persona.martialartStyles->isEmpty())]
@@ -98,12 +103,11 @@
 [printKiPower(aManagedCharacter.persona.oclAsType(KiAdept))/]
 		</fo:block  >
 [/if] 
-		<fo:block  keep-together="always">
-[printContracts(aManagedCharacter)  /]
+
+		<fo:block   >
+[printGear(aManagedCharacter)  /]
 		</fo:block  >
-		<fo:block  keep-together="always">
-[printNotesOnObjects(aManagedCharacter)/]
-		</fo:block  >
+
 
       </fo:table-cell>
      </fo:table-row>
@@ -111,7 +115,7 @@
    </fo:table>
 
 [comment][printRiggerSection(aManagedCharacter)/][/comment]
-[printSinLicense(aManagedCharacter)/]
+
 
 [if (aManagedCharacter.persona.oclIsKindOf(Zauberer) and not aManagedCharacter.persona.oclAsType(Zauberer).zauber->isEmpty())]
 <fo:block margin-top="10pt" ></fo:block  >
@@ -147,7 +151,7 @@
 		</fo:block  >
 
 
-[if (not aManagedCharacter.inventar->selectByKind(Munition)->isEmpty())]
+[comment][if (not aManagedCharacter.inventar->selectByKind(Munition)->isEmpty())]
 [printSimpleLineBlock()/]
 [printSectionTitel('_UI_Munition_type'.localizedString())/]
 [for (m : Munition | aManagedCharacter.inventar->selectByKind(Munition))]
@@ -155,7 +159,7 @@
 [m.getSimpleText().escapeXML()  /]
 		</fo:block  >
 [/for]
-[/if]
+[/if][/comment]
 [if (not aManagedCharacter.inventar->selectByKind(Magazin)->isEmpty())]
 [printSimpleLineBlock()/]
 [printSectionTitel('_UI_Magazin_type'.localizedString())/]
@@ -195,6 +199,57 @@
     </fo:table-body>
    </fo:table>
 
+[if (not aManagedCharacter.inventar->selectByKind(Munition)->isEmpty())]
+<!-- munition -->
+<fo:block margin-top="10pt" ></fo:block  >
+[printSectionTitel('_UI_Munition_type'.localizedString())/]
+  <fo:table >
+    <fo:table-column column-width="60%" />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
+     <fo:table-row>
+[printCell('')/]
+[printCell('anzahl')/]
+[printCell('power')/]
+[printCell('ac')/]
+[printCell('type')/]
+     </fo:table-row>
+[for (m : Munition | aManagedCharacter.inventar->selectByKind(Munition))]
+     <fo:table-row>
+[printCell(m.getText().substitute('Munition: ', ''))/]
+[printCell(m.anzahl)/]
+[printCell(m.damageMod)/]
+[printCell(m.armorMod)/]
+[printCell(m.damageType)/]
+
+     </fo:table-row>
+
+[/for]
+
+   </fo:table-body>
+   </fo:table>
+[/if]
+[comment credsticks /]
+[if (not aManagedCharacter.inventar->selectByType(Credstick)->isEmpty())]
+<!-- credsticks -->
+<fo:block margin-top="10pt" ></fo:block  >
+  <fo:table  keep-together="always">
+    <fo:table-column  />
+    <fo:table-body  >
+     <fo:table-row>
+      <fo:table-cell>
+       <fo:block  >
+[printAllCredSticks(aManagedCharacter.inventar->selectByType(Credstick))  /]
+		</fo:block  >
+      </fo:table-cell>
+     </fo:table-row>
+   </fo:table-body>
+   </fo:table>
+[/if]
+
 
 [comment diary /]
 [if (aManagedCharacter.oclIsKindOf(PlayerCharacter) and not aManagedCharacter.oclAsType(PlayerCharacter).diary.entries->isEmpty())]
@@ -217,23 +272,13 @@
    </fo:table-body>
    </fo:table>
 [/if] 
-[comment credsticks /]
-[if (not aManagedCharacter.inventar->selectByType(Credstick)->isEmpty())]
-<!-- credsticks -->
-<fo:block margin-top="10pt" ></fo:block  >
-  <fo:table >
-    <fo:table-column  />
-    <fo:table-body  >
-     <fo:table-row>
-      <fo:table-cell>
-       <fo:block  >
-[printAllCredSticks(aManagedCharacter.inventar->selectByType(Credstick))  /]
+
+
+
+		<fo:block  >
+[printNotesOnObjects(aManagedCharacter)/]
 		</fo:block  >
-      </fo:table-cell>
-     </fo:table-row>
-   </fo:table-body>
-   </fo:table>
-[/if]
+
 [printSimpleFoPageEnd()/]	
 [/file]
 [/template]
@@ -253,12 +298,12 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [for (it : OclAny | aManagedCharacter.eContents())]
 [if (it.oclIsKindOf(Beschreibbar) and not it.oclIsKindOf(AbstraktPersona))]
 [if (not it.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())]
-     	<fo:table-row>
-[printCell(it.oclAsType(Beschreibbar).name.getText())/]
+     	<fo:table-row font-weight="bold">
+[printCell(it.oclAsType(Beschreibbar).getSimpleText())/]
     	</fo:table-row>
-     	<fo:table-row>
+     	<fo:table-row wrap-option="wrap">
 [printCell(it.oclAsType(Beschreibbar).beschreibung)/]
-    </fo:table-row>
+    	</fo:table-row>
 [/if]
 [/if]
 [/for]
@@ -326,6 +371,31 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 
 [/template]
 
+[template public printGegenstand(m : Gegenstand, fs: Integer)]
+ <fo:table  [fontSize(fs+'')/]>
+    <fo:table-column  />
+    <fo:table-body  >
+     <fo:table-row >
+[printCellAttribute(m.getSimpleText(),' font-weight="bold"')/]
+     </fo:table-row>
+     <fo:table-row [fontSize(fs-2+'')/]>
+[printCellAttribute(m.kategorie,' ')/]
+     </fo:table-row>
+     <fo:table-row [fontSize(fs-2+'')/]>
+[printCellAttribute('Verfügbarkeit: '+m.verfuegbarkeit+' Wert: '+m.wertValue.formatMoney(),' ')/]
+     </fo:table-row>
+     <fo:table-row>
+      <fo:table-cell>
+       <fo:block  >
+
+		</fo:block  >
+      </fo:table-cell>
+     </fo:table-row>
+   </fo:table-body>
+   </fo:table>
+[/template]
+
+
 [template public printWeapon(m : AbstaktWaffe)]
 [if (m.oclIsKindOf(Nahkampfwaffe))]
 [printMeleeWeapon(m.oclAsType(Nahkampfwaffe))/]
@@ -335,7 +405,11 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [/if]
 [/template]
 
-[template public printMeleeWeapon(m : Nahkampfwaffe)]
+[template public printMeleeWeapon(m : Nahkampfwaffe)
+{ tableHeaderStyle : String = 'font-style="italic" text-align="center" font-size="small" ';
+  tableCellStyle : String = 'font-size="7" font-weight="bold" text-align="center"' 
+}
+]
  <fo:table >
     <fo:table-column  />
     <fo:table-body  >
@@ -352,13 +426,13 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
    <fo:table-column  />
    <fo:table-column  />
     <fo:table-body  >
-     	<fo:table-row>
-[printCellAttribute('dmg'.localizedString(),'  font-style="italic" ')/]	
-[printCellAttribute('acc'.localizedString(),' font-size="small" font-style="italic" ')/]	
-[printCellAttribute('ap'.localizedString(),' font-size="small" font-style="italic" ')/]	
-[printCellAttribute('reach'.localizedString(),' font-size="small" font-style="italic" ')/]	
+     	<fo:table-row [tableHeaderStyle/]>
+[printCellAttribute('dmg'.localizedString(),'')/]	
+[printCellAttribute('acc'.localizedString(),'')/]	
+[printCellAttribute('ap'.localizedString(),'')/]	
+[printCellAttribute('reach'.localizedString(),'')/]	
 		</fo:table-row>
-     	<fo:table-row>
+     	<fo:table-row [tableCellStyle/]>
 [printCell(m.schadenscode)/]	
 [printCell(m.praezision)/]			
 [printCell(m.durchschlagsKraft)/]			
@@ -375,14 +449,63 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [/template]
 
 
-[template public printRangeWeapon(fk : AbstaktFernKampfwaffe, length : Integer)]
+[template public printArmorDetail (k : Kleidung,  fontSize: Integer) 
+{ tableHeaderStyle : String = 'font-style="italic" text-align="center" font-size="'+fontSize+'" ';
+  tableCellStyle : String = 'font-size="'+fontSize+'"  ' 
+}
+]
+ <fo:table >
+    <fo:table-column  />
+    <fo:table-body  >
+     <fo:table-row>
+[printCellAttribute(k.getSimpleText(),' font-weight="bold"')/]
+     </fo:table-row>
+     <fo:table-row>
+      <fo:table-cell>
+       <fo:block  >
+ <fo:table [fontSize((fontSize-2)+'')/]>
+    <fo:table-column  />
+   <fo:table-column  />
+   <fo:table-column column-width="10%" />
+    <fo:table-body  >
+
+     <fo:table-row [tableCellStyle/]>
+[printCellAttribute('Verfügbarkeit: '+k.verfuegbarkeit+' Wert: '+k.wertValue.formatMoney(), columnSpan(3))/]
+     </fo:table-row>
+
+[for (km : KleindungsModifikator | k.kmods)]
+     	<fo:table-row [tableCellStyle/]>
+[printCellAttribute('- '+km.getText(),'')/]	
+[printCellAttribute(km.type ,'')/]	
+[printCellAttribute(km.rating,'')/]	
+		</fo:table-row>
+
+[/for]
+
+
+  	 </fo:table-body>
+  	 </fo:table>
+		</fo:block  >
+      </fo:table-cell>
+     </fo:table-row>
+   </fo:table-body>
+   </fo:table>
+
+[/template]
+
+
+[template public printRangeWeapon(fk : AbstaktFernKampfwaffe, length : Integer)
+{ tableHeaderStyle : String = 'font-style="italic" text-align="center" font-size="7" ';
+  tableCellStyle : String = 'font-size="7" font-weight="bold" text-align="center"' 
+}
+]
  <fo:table >
     <fo:table-column  />
     <fo:table-column  />
     <fo:table-body  >
      <fo:table-row>
 [printCellAttribute(fk.getSimpleText(),' font-weight="bold"')/]
-[printCell(fk.reichweite.getText())/]
+[printCellAttribute(fk.reichweite.getText(), ' font-size="xx-small" ')/]
      </fo:table-row>
      <fo:table-row>
       <fo:table-cell>
@@ -394,21 +517,21 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
    <fo:table-column  />
    <fo:table-column  column-width="40%" />
     <fo:table-body  >
-     	<fo:table-row>
-[printCellAttribute('dmg'.localizedString(),'  font-style="italic" ')/]	
-[printCellAttribute('acc'.localizedString(),' font-size="small" font-style="italic" ')/]	
-[printCellAttribute('ap'.localizedString(),' font-size="small" font-style="italic" ')/]	
-[printCellAttribute('reach'.localizedString(),' font-size="small" font-style="italic" ')/]	
+     	<fo:table-row [tableHeaderStyle/]>
+[printCellAttribute('dmg'.localizedString(),'')/]	
+[printCellAttribute('acc'.localizedString(),'')/]	
+[printCellAttribute('ap'.localizedString(),'')/]	
+[printCellAttribute('reach'.localizedString(),'')/]	
 		</fo:table-row>
-     	<fo:table-row>
+     	<fo:table-row [tableCellStyle/]>
 [printCell(fk.schadenscode)/]	
 [printCell(fk.praezision)/]			
 [printCell(fk.durchschlagsKraft)/]			
-[printCell(fk.reichweite)/]		
+[comment][printCell(fk.reichweite)/]		[/comment]
 		</fo:table-row>
   	 </fo:table-body>
   	 </fo:table>
-
+[printRangeData(fk)/]
 		</fo:block  >
       </fo:table-cell>
      </fo:table-row>
@@ -416,14 +539,18 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
    </fo:table>
 [/template]
 
-[template public printRangeWeapon(fk : Feuerwaffe, length : Integer)]
+[template public printRangeWeapon(fk : Feuerwaffe, length : Integer)
+{ tableHeaderStyle : String = 'font-style="italic" text-align="center" font-size="7" ';
+  tableCellStyle : String = 'font-size="7" font-weight="bold" text-align="center"' 
+}
+]
  <fo:table >
     <fo:table-column  />
-    <fo:table-column column-width="35%" />
+    <fo:table-column column-width="40%" />
     <fo:table-body  >
      <fo:table-row>
 [printCellAttribute(fk.getSimpleText(),' font-weight="bold"')/]
-[printCell(fk.reichweite.getText())/]
+[printCellAttribute(fk.reichweite.getText(), ' font-size="xx-small" ')/]
      </fo:table-row>
      <fo:table-row>
       <fo:table-cell >
@@ -476,57 +603,76 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
   	 </fo:table>
 [/template]
 
-[template public printRangeData(fk : AbstaktFernKampfwaffe)]
+[template public printRangeData(fk : AbstaktFernKampfwaffe)
+{ tableHeaderStyle : String = 'font-style="italic" text-align="center"';
+  tableCellStyle : String = 'font-size="7" font-weight="bold" text-align="center"' 
+}
+]
  <fo:table font-size="small">
     <fo:table-column  />
    <fo:table-column  />
    <fo:table-column  />
    <fo:table-column  />
     <fo:table-body  >
-     	<fo:table-row>
-[printCellAttribute('short',' font-style="italic"')/]	
-[printCellAttribute('medium',' font-style="italic"')/]			
-[printCellAttribute('far',' font-style="italic"')/]			
-[printCellAttribute('extrem',' font-style="italic"')/]		
+     	<fo:table-row  [tableHeaderStyle/]>
+[printCellAttribute('short', '')/]	
+[printCellAttribute('medium','')/]			
+[printCellAttribute('far','')/]			
+[printCellAttribute('extrem','')/]		
 		</fo:table-row>
-     	<fo:table-row>
-[printCellAttribute(fk.reichweite.min+'-'+fk.reichweite.kurz,'font-weight="bold"')/]	
-[printCellAttribute(fk.reichweite.kurz+'-'+fk.reichweite.mittel,'font-weight="bold"')/]			
-[printCellAttribute(fk.reichweite.mittel+'-'+fk.reichweite.weit,'font-weight="bold"')/]			
-[printCellAttribute(fk.reichweite.weit+'-'+fk.reichweite.extrem,'font-weight="bold"')/]		
+     	<fo:table-row [tableCellStyle/] >
+[printCellAttribute(fk.reichweite.min+'-'+fk.reichweite.kurz,'')/]	
+[printCellAttribute(fk.reichweite.kurz+'-'+fk.reichweite.mittel,'')/]			
+[printCellAttribute(fk.reichweite.mittel+'-'+fk.reichweite.weit,'')/]			
+[printCellAttribute(fk.reichweite.weit+'-'+fk.reichweite.extrem,'')/]		
 		</fo:table-row>
 
   	 </fo:table-body>
   	 </fo:table>
 [/template]
 
-[template public printFirearmData(fk : Feuerwaffe)]
+[template public printFirearmData(fk : Feuerwaffe)
+{ tableHeaderStyle : String = 'font-style="italic" text-align="center" font-size="7" ';
+  tableCellStyle : String = 'font-size="7" font-weight="bold" text-align="center"' 
+}
+]
  <fo:table font-size="small">
-    <fo:table-column  />
-   <fo:table-column  />
-   <fo:table-column  />
-   <fo:table-column  column-width="30%" />
-   <fo:table-column  />
-   <fo:table-column column-width="15%" />
+    <fo:table-column column-width="20%" />
+   <fo:table-column  column-width="10%" />
+   <fo:table-column column-width="10%" />
+   <fo:table-column  column-width="35%" />
+   <fo:table-column  column-width="5%"/>
+   <fo:table-column column-width="20%" />
     <fo:table-body  >
-     	<fo:table-row>
-[printCellAttribute('dmg'.localizedString(),'  font-style="italic" ')/]	
-[printCellAttribute('acc'.localizedString(),' font-size="small" font-style="italic" ')/]	
-[printCellAttribute('ap'.localizedString(),' font-size="small" font-style="italic" ')/]	
-[printCellAttribute('mode'.localizedString(),' font-size="small" font-style="italic" ')/]	
-[printCellAttribute('rc'.localizedString(),' font-size="small" font-style="italic" ')/]	
-[printCellAttribute('ammo'.localizedString(),' font-size="small" font-style="italic" ')/]	
+     	<fo:table-row [tableHeaderStyle/]>
+[printCellAttribute('dmg'.localizedString(),'')/]	
+[printCellAttribute('acc'.localizedString(),'')/]	
+[printCellAttribute('ap'.localizedString(),'')/]	
+[printCellAttribute('mode'.localizedString(),'')/]	
+[printCellAttribute('rc'.localizedString(),'')/]	
+[printCellAttribute('ammo'.localizedString(),'')/]	
 		</fo:table-row>
-     	<fo:table-row>
-[printCellAttribute(fk.schadenscode,'font-weight="bold"')/]	
-[printCellAttribute(fk.praezision,'font-weight="bold"')/]			
-[printCellAttribute(fk.durchschlagsKraft,'font-weight="bold"')/]			
-[printCellAttribute(fk.modie,'font-weight="bold"')/]		
-[printCellAttribute(fk.rueckstoss,'font-weight="bold"')/]		
-[printCellAttribute(fk.kapazitaet+' '+ fk.munitionstyp.fwMagazinToName().substring(1,3) ,'font-weight="bold"')/]		
+     	<fo:table-row [tableCellStyle/]>
+[printCellAttribute(fk.schadenscode,'')/]	
+[printCellAttribute(fk.praezision,'')/]			
+[printCellAttribute(fk.durchschlagsKraft,'')/]
+      <fo:table-cell >
+       <fo:block >
+[modieToString(fk.modie,' ')/]
+</fo:block>
+      </fo:table-cell>
+
+[comment][printCellAttribute(fk.modie,'')/]		[/comment]
+[printCellAttribute(fk.rueckstoss,'')/]		
+[printCellAttribute(fk.kapazitaet+' '+ fk.munitionstyp.fwMagazinToName().substring(1,3) ,'')/]		
 		</fo:table-row>
   	 </fo:table-body>
   	 </fo:table>
+[/template]
+
+[template public modieToString(modie : OrderedSet(FeuerModus), del : String )]
+[for (m : FeuerModus | modie) separator (del)]
+[m.fwModusToName()/][/for]
 [/template]
 
 [template public printCharacterAttributes (aManagedCharacter : ManagedCharacter)
@@ -652,7 +798,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 {persona : AbstraktPersona = aManagedCharacter.persona ; }
 ]
 [printSectionTitel('Attributes'.localizedString())/]
-  <fo:table [defaultTableStyle()/]>
+  <fo:table [defaultTableStyle()/]> 
     <fo:table-column column-width="70%" />
     <fo:table-column  />
     <fo:table-column  />
@@ -848,9 +994,65 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
    </fo:table>
 [/template]
 
+[query public filterdList(list : Sequence(Fertigkeit),filter : Boolean) : Sequence(Fertigkeit) = if filter then
+list->select(oclIsTypeOf(Fertigkeit))
+else
+list->selectByKind(Wissensfertigkeit)
+endif /]
+
+
+[template public printSkillList(list : Sequence(Fertigkeit), persona : AbstraktPersona, filter : Boolean)]
+[for (f : Fertigkeit | filterdList(list, filter))]
+[let name : String = f.getText().substring(f.getText().index(' '))]
+[let attributeName : String = f.attribut.getText()]
+[let stufe : Integer = findFertigkeitValue(f, persona)]
+[if (f.ausweichen or stufe>0)]
+     <fo:table-row border-bottom-color="rgb(0,0,0)" border-bottom-style="solid" border-bottom-width="0.2pt"  >
+[if (stufe<1)]
+[printCell(name+'*')/]
+[else]
+[printCell(name)/]
+[/if]
+[printCellRight(findFertigkeitValue(f, persona).toString())/]
+[printCell(attributeName.substring(1, 3))/]
+[printCell((stufe + persona.eGet(f.attribut).oclAsType(Integer)).toString(),'','text-align="right" '+fontStyleBold())/]
+     </fo:table-row>
+[/if]
+[/let][/let][/let]
+[/for]
+[/template]
+
+[template public printAllSkills (aManagedCharacter : ManagedCharacter, filter : Boolean) 
+{persona : AbstraktPersona = aManagedCharacter.persona ; }]
+[comment][printSectionTitel('_UI_AbstraktPersona_fertigkeiten_feature'.localizedString())/][/comment]
+<!-- start of all skills -->
+  <fo:table [defaultTableStyle()/] >
+    <fo:table-column column-width="70%" />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-column  />
+    <fo:table-body  >
+[for (b : Beschreibbar | persona.getAllSkills())]
+[if (b.oclIsKindOf(FertigkeitsGruppe))]
+[let fg : FertigkeitsGruppe = b.oclAsType(FertigkeitsGruppe)]
+<!-- start of [b.getText()/] -->
+[printSkillList(fg.fertigkeiten->asSequence(), persona, filter)/]
+<!-- end of [b.getText()/] -->
+[/let]
+[else]
+[let l : ShrList = b.oclAsType(ShrList)]
+[printSkillList(l.entries->collect(oclAsType(Fertigkeit))->asSequence(), persona, filter)/]
+[/let]
+[/if]
+[/for]
+    </fo:table-body>
+   </fo:table>
+[/template]
+
 [template public printGear (aManagedCharacter : ManagedCharacter) ? (not aManagedCharacter.inventar->isEmpty())
 { w : Sequence(String)=Sequence{'80%','10%','10%'}; }
 ]
+[printSimpleLineBlock()/]
 [printSectionTitel('_UI_ManagedCharacter_inventar_feature'.localizedString())/]
 [printNColumnTable(itemList(aManagedCharacter.inventar),w ,defaultTableStyle())/]
 <!--
@@ -897,28 +1099,28 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
     <fo:table-column  />
     <fo:table-column  />
     <fo:table-column  />
-    <fo:table-column column-width="30%" />
-    <fo:table-column column-width="64px"  />
+    <fo:table-column  />
+    <fo:table-column  />
     <fo:table-body  >
 
      <fo:table-row>
-[printCellSpanned(aManagedCharacter.persona.name,3)/]
-[printCellRight(aManagedCharacter.persona.spezies.getText())/]
-     <fo:table-cell number-rows-spanned="6">
-       <fo:block margin-left="5px" display-align="right" text-align="right">
-[if (not aManagedCharacter.persona.image.oclIsUndefined())]
-<fo:external-graphic  src="url([aManagedCharacter.persona.toBase64Image()/])"/>
-[/if]
-       </fo:block >
-     </fo:table-cell>
-
-
+[printCellSpanned(aManagedCharacter.persona.name,4)/]
+[printCellSpanned(aManagedCharacter.persona.spezies.getText(),1)/]
      </fo:table-row>
      <fo:table-row>
 [printCell('type'.localizedString())/]
 [printCell(aManagedCharacter.persona.eClass().getText())/]
 [printCell('_UI_ManagedCharacter_nativeLanguage_feature'.localizedString())/]
 [printCell(aManagedCharacter.nativeLanguage.getSimpleText())/]
+
+     <fo:table-cell number-rows-spanned="5">
+       <fo:block margin-left="5px" >
+[if (not aManagedCharacter.persona.image.oclIsUndefined())]
+<fo:external-graphic  src="url([aManagedCharacter.persona.toBase64Image()/])"/>
+[/if]
+       </fo:block >
+     </fo:table-cell>
+
      </fo:table-row>
      <fo:table-row>
 [printCell('_UI_ManagedCharacter_sex_feature'.localizedString())/]
@@ -944,6 +1146,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [printCell('_UI_ManagedCharacter_currentKarma_feature'.localizedString())/]
 [printCell(aManagedCharacter.currentKarma)/]
      </fo:table-row>
+
 [printSimpleLine(5)/]
     </fo:table-body>
    </fo:table>
@@ -951,15 +1154,19 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 
 [template public printConnections (aManagedCharacter : ManagedCharacter) ? (not aManagedCharacter.connections->isEmpty())]
 [printSimpleLineBlock()/]
-[printSectionTitel('_UI_ManagedCharacter_connections_feature'.localizedString())/]
-  <fo:table [defaultTableStyle()/]>
+  <fo:table >
     <fo:table-column  />
-    <fo:table-column column-width="10%" />
-    <fo:table-column column-width="10%" />
+    <fo:table-column column-width="15%" />
+    <fo:table-column column-width="15%" />
     <fo:table-body  >
+     <fo:table-row >
+[printCell('_UI_ManagedCharacter_connections_feature'.localizedString(), '', 'font-weight="bold"')/]
+[printCell('influence','', fontSize('9') )/]
+[printCell('loyality','', fontSize('9') )/]
+     </fo:table-row>
 [for (t : Connection | aManagedCharacter.connections )]
-     <fo:table-row>
-[printCell(t.getSimpleText())/]
+     <fo:table-row [fontSize('10')/]>
+[printCell(t.character.persona.name)/]
 [printCellRight(t.influence)/]
 [printCellRight(t.loyality)/]
      </fo:table-row>
@@ -1185,7 +1392,7 @@ and not e.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())
 [/template]
 
 [template public printQuallities (persona : KoerperPersona) ? (not persona.eigenschaften->isEmpty())]
-[printSimpleLineBlock()/]
+[comment][printSimpleLineBlock()/][/comment]
 [printSectionTitel('_UI_KoerperPersona_eigenschaften_feature'.localizedString())/]
   <fo:table [defaultTableStyle()/]>
     <fo:table-column  />

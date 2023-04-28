@@ -1111,6 +1111,7 @@ transform="translate([x/],[y/])"
        y="35"
        id="textAP-[x/]-[y/]"
        sodipodi:linespacing="125%">[fw.durchschlagsKraft/]</text>
+[if (fw.oclIsTypeOf(Feuerwaffe))]
    <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
@@ -1118,8 +1119,8 @@ transform="translate([x/],[y/])"
        y="35"
        textLength="[fw.oclAsType(Feuerwaffe).modie->size() * 15/]"
        id="textMod-[x/]-[y/]"
-       sodipodi:linespacing="125%">[if (fw.oclIsTypeOf(Feuerwaffe))]
-  [fw.oclAsType(Feuerwaffe).modie.fwModusToName()/][/if]</text>
+       sodipodi:linespacing="125%">
+  [fw.oclAsType(Feuerwaffe).modie.fwModusToName()/]</text>
    <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
@@ -1135,6 +1136,7 @@ transform="translate([x/],[y/])"
        id="textMag-[x/]-[y/]"
 	   textLength="50"	
        sodipodi:linespacing="125%">[fw.oclAsType(Feuerwaffe).kapazitaet/] [fw.oclAsType(Feuerwaffe).munitionstyp.fwMagazinToName()/]</text>
+[/if]
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
@@ -1172,7 +1174,7 @@ transform="translate([x/],[y/])"
        y="55"
        id="text4-[x/]-[y/]"
        sodipodi:linespacing="125%">[fw.reichweite.weit/]-[fw.reichweite.extrem/]</text>
-
+[if (fw.oclIsTypeOf(Feuerwaffe))]
    <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
@@ -1183,7 +1185,7 @@ transform="translate([x/],[y/])"
 [for (it : FernkampfwaffeModifikator | fw.oclAsType(Feuerwaffe).einbau)]
 [printSvgLineValue(it.name,190,(25+i*10),10)/]
 [/for]
-
+[/if]
 	</g>
 
 [/template]

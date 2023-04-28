@@ -5,6 +5,7 @@
 [import de::urszeidler::shr5::acceleo::sheets::boardCharacterSheet/]
 [import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
 [import de::urszeidler::shr5::acceleo::common::ShadowrunBBSheetTools  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
 
 [template public boardShr5GeneratorSheetManagedCharacter(aShr5Generator : Shr5Generator)]	
 	[comment @main /]
@@ -20,6 +21,7 @@
 {aManagedCharacter : ManagedCharacter = aShr5Generator.character;
 empty :String =  '.........................' ;
 empty1 :String = '....' ;
+empty2 : String = '                                             ';
 shr5System : Shr5System = aShr5Generator.generator.oclAsType(Shr5System);
 }]
 [printGeneratorReport(aShr5Generator)/]
@@ -33,10 +35,85 @@ Quallity sum       : [sumQuallitiyKarma(aManagedCharacter.persona.oclAsType(Koer
 Connections        : [calcConnectionsPoints(aManagedCharacter, shr5System)/]/[calcConnectionsSpend(aManagedCharacter)/]
 Resources spend    : [calcResourcesSpend(aManagedCharacter)/]
 
+
+[let kp : KoerperPersona = aManagedCharacter.persona.oclAsType(KoerperPersona)]
+[printQualities(kp.eigenschaften, empty2)/]
+
+
+								Verfügbarkeit	Preis		Quelle
+[printAugmentations(kp.koerperMods, empty2)/]
+[/let]
+
+[printGear(aManagedCharacter.inventar->asSequence(), empty2)/]
+
+[printVehicles(aManagedCharacter.vehicels, empty2)/]
+
+[printContracts(aManagedCharacter.contracts->asSequence(),empty)/]
+
+
 [printKarmaBase(aShr5Generator)/]
 
 [printBoardCharacterReport(aManagedCharacter)/]
 [/template]
+
+[template public printVehicles(sg : OrderedSet(Fahrzeug),empty :String)? (not sg->isEmpty())]
+['_UI_ManagedCharacter_vehicels_feature'.localizedString().titelText()/]
+[for (pfg : Fahrzeug | sg)]
+[printVehicle(pfg, empty)/]
+[/for]
+------
+[printTextPlusSpace('sum :', empty)/] [calcListenWertToString(sg->asSequence()) /]
+[/template]
+
+[template private printVehicle(vehicle : Fahrzeug,empty :String)]
+[printTextPlusSpace(vehicle.getText()  ,empty)/]			[vehicle.oclAsType(GeldWert).verfuegbarkeit/]		[vehicle.oclAsType(GeldWert).wert.formatMoney()/]		[vehicle.srcBook.code/] [vehicle.page/]
+[if (not vehicle.modifizierungen->isEmpty())][printGeldwertCollection(vehicle.modifizierungen, vehicle.wert,empty, '- ')/][/if][/template]
+
+
+
+[template public printQualities(gears : OrderedSet(PersonaEigenschaft),empty :String) ? (not gears->isEmpty())]
+['_UI_KoerperPersona_eigenschaften_feature'.localizedString().titelText()/]
+[for (ag : PersonaEigenschaft | gears)]
+[printTextPlusSpace(ag.getText(),empty)/]			[ag.karmaKosten/] 		[ag.srcBook.code/] [ag.page/]
+[/for]
+------
+[printTextPlusSpace('sum :', '....')/]		[sumQuallitiyKarma(gears)/]
+[/template]
+
+
+[template public printAugmentations(gears : OrderedSet(Koerpermods),empty :String) ? (not gears->isEmpty())
+]
+['_UI_KoerperPersona_koerperMods_feature'.localizedString().titelText()/]
+[for (ag : Koerpermods | gears)]
+[printTextPlusSpace(ag.getText(),empty)/]			[ag.oclAsType(GeldWert).verfuegbarkeit/]		[ag.oclAsType(GeldWert).wert.formatMoney()/]		[ag.srcBook.code/] [ag.page/]		[ag.getEssencesValue()/100/]
+[if (ag.oclIsKindOf(Cyberware))]
+[for (ce : CyberwareEnhancement | ag.oclAsType(Cyberware).einbau)]
+-[printTextPlusSpace(ce.getText(),empty)/]			[ce.oclAsType(GeldWert).verfuegbarkeit/]		([ce.oclAsType(GeldWert).wert.formatMoney()/])		[ce.srcBook.code/] [ce.page/]
+[/for]
+[/if]
+[/for]
+--------
+[printTextPlusSpace('sum :', '....')/]		[calcListenWertToString(gears->asSequence())/]
+[/template]
+
+
+[template public printGear(gears : Sequence(AbstraktGegenstand), empty :String)? (not gears->isEmpty())]
+['_UI_ManagedCharacter_inventar_feature'.localizedString().titelText()/]
+[for (ag : AbstraktGegenstand | gears)]
+[printGegenstand(ag, empty)/]
+[/for]
+--------
+[printTextPlusSpace('sum :', '....')/] 		[calcListenWertToString(gears) /] ¥
+[/template]
+
+
+[template private printGegenstand(gegenstand : AbstraktGegenstand,empty :String)]
+[printTextPlusSpace(gegenstand.getText(),empty)/]			[gegenstand.verfuegbarkeit/]		[gegenstand.wert.formatMoney()/]		[gegenstand.srcBook.code/] [gegenstand.page/]
+[/template]
+
+[template private printGegenstand(comlink : Commlink,empty :String)]
+[printTextPlusSpace(comlink.getText()  ,empty)/]			[comlink.verfuegbarkeit/]		[comlink.wertValue.formatMoney() /]		[comlink.srcBook.code/] [comlink.page/]
+[printGeldwertCollection(comlink.storedPrograms, comlink.wert,empty, '- ')/][/template]
 
 [template public printKarmaBase (aShr5Generator : Shr5Generator) 
 {aManagedCharacter : ManagedCharacter = aShr5Generator.character;
