@@ -261,6 +261,13 @@ Limits
 [/for]
 [/template]
 
+[template public printContract(c : Sin,empty :String)]
+[printTextPlusSpace(c.getText(),empty)/] [c.wertValue.formatMoney()/]/[c.wert.formatMoney()/]
+[for (l : Lizenz | c.licences)]
+- [printTextPlusSpace(l.getText(),empty)/] [l.wert.formatMoney()/]
+[/for]
+[/template]
+
 [template public printVehicles(sg : OrderedSet(Fahrzeug),empty :String)? (not sg->isEmpty())]
 ['_UI_ManagedCharacter_vehicels_feature'.localizedString().titelText()/]
 [for (pfg : Fahrzeug | sg)]
@@ -355,7 +362,7 @@ calculated costs: [ta.caculatedCosts.formatMoney()/] (incuding [ta.fee/] fee)
 [printTextPlusSpace(comlink.getText()  ,empty)/] [comlink.wertValue.formatMoney() /]
 [if (not comlink.storedPrograms->isEmpty())][printGeldwertCollection(comlink.storedPrograms, comlink.wert,empty, '- ')/][/if][/template]
 
-[template private printGeldwertCollection(col : OrderedSet(GeldWert),wert: EBigDecimal ,empty :String,prefix : String)? (not col->isEmpty())
+[template public printGeldwertCollection(col : OrderedSet(GeldWert),wert: EBigDecimal ,empty :String,prefix : String)? (not col->isEmpty())
 post(trim())
 ][for (gw : GeldWert | col)]
 [printTextPlusSpace(prefix+gw.getText()  ,empty)/] [gw.wert.formatMoney()/]

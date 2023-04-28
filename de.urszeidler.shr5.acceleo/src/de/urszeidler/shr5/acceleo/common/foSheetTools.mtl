@@ -57,10 +57,10 @@
 [/template]
 
 [template public printSimpleLineBlock(arg : OclAny)]
-<fo:block>
-<fo:leader
+<fo:block  >
+<fo:leader 
 	leader-pattern="rule" leader-length.optimum="100%"
-	rule-style="solid" rule-thickness="1px"/>
+	rule-style="solid" rule-thickness="0.5px"/>
 </fo:block>
 [/template]
 
@@ -181,6 +181,10 @@ height:Integer= (value.div(colCount)+1)*(mHeight+offset);
 [/template]
 
 
+[template public printBlock(expression : OclAny)]
+       <fo:block  >
+[escapeXML(expression)/]</fo:block>[/template]
+
 [template public printCell(expression : OclAny)]
       <fo:table-cell>
        <fo:block  >
@@ -190,7 +194,14 @@ height:Integer= (value.div(colCount)+1)*(mHeight+offset);
 
 [template public printCellAttribute(expression : OclAny, cellAttributes: String)]
       <fo:table-cell [cellAttributes/]>
-       <fo:block  >
+       <fo:block >
+[escapeXML(expression)/]</fo:block>
+      </fo:table-cell>
+[/template]
+
+[template public printCell(expression : OclAny, cellAttributes: String, blockAttributes: String)]
+      <fo:table-cell [cellAttributes/]>
+       <fo:block [blockAttributes/] >
 [escapeXML(expression)/]</fo:block>
       </fo:table-cell>
 [/template]
@@ -262,8 +273,9 @@ border-top-color="rgb(0,0,0)" border-top-style="outset" border-top-width="1pt"
 [query public fontSizeXSmall(a:OclAny) : String = fontSize('xx-small') /]
 [query public fontFamlily(exp : String) : String = 'font-family="'+exp+'"' /]
 [query public fontStyleItalic(a : OclAny) : String = 'font-style="italic"' /]
-
- 
+[query public fontStyleBold(a : OclAny) : String = 'font-weight="bold"' /]
+[query public margin(pos: String, a : Integer) : String = 'margin-' + pos + '="'+a+'pt"' /]
+[query public borderSolid(pos : String) : String = 'border-'+ pos +'-style="solid"' /]
 [query public columnWidth(exp : String) : String = 'column-width="'+exp+'"' /]
 [query public margin(exp : String) : String = 'margin="'+exp+'"' /]
 
@@ -285,12 +297,19 @@ border-top-color="rgb(0,0,0)" border-top-style="outset" border-top-width="1pt"
 	<fo:layout-master-set>
 		<fo:simple-page-master page-height="297mm"
 			master-name="A4_210_x_297_mm" page-width="210mm">
-			<fo:region-body margin-left="10mm" background-color="transparent"
-				region-name="xsl-region-body" margin-bottom="15mm" margin-top="10mm"
-				margin-right="10mm" />
 
-
+			<fo:region-body margin-left="15mm" 
+				region-name="xsl-region-body" margin-bottom="15mm" margin-top="15mm"
+				margin-right="5mm" />
+[comment]                    <fo:region-body region-name="inhalt" margin="30mm" />[/comment]
+                    <fo:region-before region-name="kopf" extent="25mm" />
+[comment]                    <fo:region-after region-name="fuss" extent="20mm" background-color="yellow" />[/comment]
             <fo:region-after region-name="xsl-region-after"  extent="15mm"/>
+                    <fo:region-start extent="25mm"  />
+                    <fo:region-end extent="15mm" />
+
+
+
 
 		</fo:simple-page-master>
 	</fo:layout-master-set>

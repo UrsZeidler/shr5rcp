@@ -3,6 +3,7 @@
 [import de::urszeidler::shr5::acceleo::sheets::foCharacterSheet/]
 [import de::urszeidler::shr5::acceleo::common::foSheetTools  /]
 [import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
 [import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
 
 [template public foInventoryCardManagedCharacter(aManagedCharacter : ManagedCharacter)]
@@ -15,60 +16,472 @@
 [/template]
 
 [template public printInventoryCards (aManagedCharacter : ManagedCharacter) ]
-[printFoPageStart('Inventory Cards'.localizedString())/]
-
-   <fo:table margin="3pt" >
+[printFoPageStart('Inventory Cards'.localizedString()+' '+aManagedCharacter.getText())/]
+[printCharacterCombatInfo(aManagedCharacter)/]
+   <fo:table  >
     <fo:table-column column-width="50%" />
     <fo:table-column column-width="50%" />
     <fo:table-body  >
     <fo:table-row >
 <!-- colum one -->
-      <fo:table-cell>
-[for (fk : AbstaktFernKampfwaffe | aManagedCharacter.inventar->select(oclIsKindOf(AbstaktFernKampfwaffe)))]
-[printAbstaktFernKampfwaffeCard(fk)/]
-[/for]		
+      <fo:table-cell [margin('right', 3)/]>
+[printAllSkills(aManagedCharacter, true)/]
       </fo:table-cell>
 <!-- colum two -->
-      <fo:table-cell >
-[for (fk : Nahkampfwaffe | aManagedCharacter.inventar->select(oclIsKindOf(Nahkampfwaffe)))]
-[printMeleeCard(fk)/]
-[/for]		
+      <fo:table-cell [margin('left', 3)/] >
+[printAllSkills(aManagedCharacter, false)/]
+[gameNotesBlock()/]
+    </fo:table-cell>
+     </fo:table-row>
+    </fo:table-body>
+   </fo:table>
+<fo:block page-break-after="always"/>
+<!-- page 2 -->
+   <fo:table  >
+    <fo:table-column column-width="75%" />
+    <fo:table-body  >
+    <fo:table-row >
+		 <fo:table-cell >
 [for (c : Cyberdeck | aManagedCharacter.inventar->select(oclIsKindOf(Cyberdeck)))]
 [printCyberdeckCard(c)/]
 [/for]		
 [for (c : Commlink | aManagedCharacter.inventar->select(oclIsKindOf(Commlink)))]
 [printCommlinkCard(c)/]
+[/for]	
+[for (c : Kleidung | aManagedCharacter.inventar->select(oclIsKindOf(Kleidung))->collect(oclAsType(Kleidung)))]
+[printArmorCard(c, aManagedCharacter, 12)/]
+[/for]	
+[for (c : Gegenstand | aManagedCharacter.inventar->select(oclIsTypeOf(Gegenstand))->collect(oclAsType(Gegenstand))->sortedBy(getText()))]
+[printGegenstandCard(c, 12)/]
 [/for]		
-    </fo:table-cell>
+
+		</fo:table-cell>
      </fo:table-row>
     </fo:table-body>
    </fo:table>
-<!-- page 2 -->
+
+<fo:block page-break-after="always"/>
+
+<fo:block font-weight="bold" >
+Bioware/Cyberware
+	</fo:block  >
+   <fo:table  >
+    <fo:table-column column-width="75%" />
+    <fo:table-body  >
+    <fo:table-row >
+		 <fo:table-cell >
+[for (c : Beschreibbar | aManagedCharacter.persona.oclAsType(KoerperPersona).koerperMods)]
+[printNoteCard(c, 12)/]
+[/for]
+
+		</fo:table-cell>
+     </fo:table-row>
+    </fo:table-body>
+   </fo:table>
+<fo:block page-break-after="always"/>
+
+<fo:block font-weight="bold" >
+Vor und Nachteile
+	</fo:block  >
+   <fo:table  >
+    <fo:table-column column-width="75%" />
+    <fo:table-body  >
+    <fo:table-row >
+		 <fo:table-cell >
+[for (c : Beschreibbar | aManagedCharacter.persona.oclAsType(KoerperPersona).eigenschaften)]
+[printNoteCard(c, 12)/]
+[/for]
+		</fo:table-cell>
+     </fo:table-row>
+    </fo:table-body>
+   </fo:table>
+<fo:block page-break-after="always"/>
+
+
    <fo:table margin="3pt" >
-    <fo:table-column column-width="50%" />
-    <fo:table-column column-width="50%" />
+    <fo:table-column column-width="67%" />
+    <fo:table-column column-width="33%" />
     <fo:table-body  >
     <fo:table-row >
 <!-- colum one -->
       <fo:table-cell>
+
+[for (fk : AbstaktFernKampfwaffe | aManagedCharacter.inventar->select(oclIsKindOf(AbstaktFernKampfwaffe)))]
+[printAbstaktFernKampfwaffeCard(fk, aManagedCharacter)/]
+[/for]	
+[for (fk : Nahkampfwaffe | aManagedCharacter.inventar->select(oclIsKindOf(Nahkampfwaffe)))]
+[printMeleeCard(fk, aManagedCharacter)/]
+[/for]		
 [for (fk : Fahrzeug | aManagedCharacter.vehicels)]
 [printVehicleCard(fk)/]
-[/for]		
-      </fo:table-cell>
-<!-- colum two -->
-      <fo:table-cell >
-			<fo:block ></fo:block  >
-     </fo:table-cell>
+[/for]	
+
+
+    </fo:table-cell>
+
+      <fo:table-cell>
+ <fo:block  ></fo:block>
+    </fo:table-cell>
+
      </fo:table-row>
     </fo:table-body>
    </fo:table>
+
 
 
 [printSimpleFoPageEnd()/]
 [/template]
 
+[template public gameNotesBlock(any : OclAny)]
+   <fo:table [margin('top', 20)/] >
+    <fo:table-column column-width="10%" />
+    <fo:table-column column-width="10%" />
+    <fo:table-column column-width="80%" />
+    <fo:table-body  >
+    <fo:table-row  >
+	  	<fo:table-cell [columnSpan(2)/] >
+	 		<fo:block  >Date:</fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell border-bottom-style="solid">
+	 		<fo:block  ></fo:block>
+	    </fo:table-cell>
+    </fo:table-row>
+    <fo:table-row >
+	  	<fo:table-cell  [columnSpan(3)/]  >
+	 		<fo:block [margin('top', 10)/] ></fo:block>
+	    </fo:table-cell>
+    </fo:table-row>
+    <fo:table-row >
+	  	<fo:table-cell  border-right-style="solid" border-bottom-style="solid" >
+	 		<fo:block  >Kr</fo:block>
+	    </fo:table-cell>
+	    <fo:table-cell [columnSpan(2)/] border-bottom-style="solid">
+	 		<fo:block  >Ini</fo:block>
+	    </fo:table-cell>
+    </fo:table-row>
+    <fo:table-row height="60mm">
+	  	<fo:table-cell [columnSpan(1)/]  border-right-style="solid">
+	 		<fo:block  ></fo:block>
+	    </fo:table-cell>
+	  	<fo:table-cell [columnSpan(2)/] >
+	 		<fo:block  ></fo:block>
+	    </fo:table-cell>
+    </fo:table-row>
+    </fo:table-body>
+   </fo:table>
+
+
+   <fo:table [margin('top', 20)/] [fontSize('10')/] >
+    <fo:table-column column-width="40%" />
+    <fo:table-column column-width="10%" />
+    <fo:table-column column-width="40%" />
+    <fo:table-body  >
+	<fo:table-row>
+[printCell('Ausweichen'.localizedString())/]
+[printCell('')/]
+[printCell('(INT+REA)')/]
+    </fo:table-row>
+
+	<fo:table-row>
+[printCell('Schadensw.'.localizedString())/]
+[printCell('')/]
+[printCell('(KON)')/]
+    </fo:table-row>
+
+	<fo:table-row>
+[printCell('Rückstoß'.localizedString())/]
+[printCell('')/]
+[printCell(' (1+STR/3)')/]
+    </fo:table-row>
+
+	<fo:table-row>
+[printCell('Lifting/Carrying ')/] 
+[printCell('')/]
+[printCell('(KON+STR)')/]
+    </fo:table-row>
+
+
+	<fo:table-row>
+[printCell('_UI_ChrakterLimits_koerperlich_feature'.localizedString())/] 
+[printCell('')/]
+[printCell('(2*STR+KON+REA/3)')/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_ChrakterLimits_geistig_feature'.localizedString())/]
+[printCell('')/]
+[printCell('(2*LOG+INT+WIL')/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_ChrakterLimits_sozial_feature'.localizedString())/]
+[printCell('')/]
+[printCell('(2*CHA+WIL+ESS)')/]
+    </fo:table-row>
+
+	<fo:table-row>
+[printCell('Selbstbeherrschung')/]
+[printCell('')/]
+[printCell('(WIL+CHA)')/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('Menschenkenntnis')/]
+[printCell('')/]
+[printCell('(INT+CHA)')/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('Erinnerungsvermögen')/]
+[printCell('')/]
+[printCell('(WIL+LOG)')/]
+    </fo:table-row>
+
+
+    <fo:table-row height="100mm">
+	  	<fo:table-cell  [columnSpan(3)/]  >
+	 		<fo:block [margin('top', 10)/] >Notizen</fo:block>
+	    </fo:table-cell>
+    </fo:table-row>
+    </fo:table-body>
+   </fo:table>
+[/template]
+
+
+[template public printCharacterCombatInfo (mc : ManagedCharacter){
+ persona : AbstraktPersona = mc.persona;
+} ]
+<fo:block-container [borderSolid('bottom')/]
+ margin-bottom="2mm" 
+keep-together.within-page="always" 
+font-size="9pt"  >		
+[comment]	<fo:block font-weight="bold" >
+[mc.getSimpleText()/]
+	</fo:block  >[/comment]
+  <fo:table [defaultTableStyle()/]>
+    <fo:table-column column-width="33%" />
+    <fo:table-column column-width="33%" />
+    <fo:table-column  />
+    <fo:table-body  >
+
+	<fo:table-row>
+<!-- 1. coumn -->
+ 	<fo:table-cell>
+<fo:block >
+  <fo:table >
+    <fo:table-column column-width="70%" />
+    <fo:table-column  />
+    <fo:table-body  >
+
+[for (ea : EAttribute | getOrderedAttibutesForPersona(persona))]
+     <fo:table-row>
+[let attributeName : String = getText(base2Calced(ea))]
+[printCell(attributeName)/] 
+      <fo:table-cell>
+       <fo:block >
+[persona.eGet(ea)/][if(not (persona.eGet(ea)=persona.eGet(base2Calced(ea))))]([persona.eGet(base2Calced(ea))/])[/if] 
+</fo:block>
+      </fo:table-cell>
+[/let]
+     </fo:table-row>
+[/for]
+	<fo:table-row>
+[printCell('_UI_SpezielleAttribute_initative_feature'.localizedString(),'',margin('top', 5))/] 
+[printCell(persona.toLocalizedInitative(),'',margin('top', 5))/]
+     </fo:table-row>
+
+	<fo:table-row>
+[printCell('_UI_Panzerung_panzer_feature'.localizedString())/]
+[printCell(persona.oclAsType(KoerperPersona).panzer)/]
+    </fo:table-row>
+
+	<fo:table-row>
+[printCell('Ausweichen'.localizedString())/]
+[printCell(persona.oclAsType(KoerperPersona).ausweichen)/]
+    </fo:table-row>
+
+	<fo:table-row>
+[printCell('Schadensw. '.localizedString())/]
+[printCell(persona.oclAsType(KoerperPersona).konstitution +3)/]
+    </fo:table-row>
+
+	<fo:table-row>
+[printCell('Rückstoß'.localizedString())/]
+[printCell( 1 + ( (persona.oclAsType(KoerperPersona).staerke/3).round() ))/]
+    </fo:table-row>
+
+   </fo:table-body>
+   </fo:table>
+</fo:block >
+ 	</fo:table-cell>
+<!-- 2. coumn -->
+	<fo:table-cell>
+		<fo:block >
+
+  <fo:table >
+    <fo:table-column column-width="70%" />
+    <fo:table-column  />
+    <fo:table-body  >
+
+	<fo:table-row>
+[printCell('_UI_BerechneteAttribute_selbstbeherrschung_feature'.localizedString())/]
+[printCell(persona.oclAsType(KoerperPersona).selbstbeherrschung.toString())/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_BerechneteAttribute_menschenkenntnis_feature'.localizedString())/] 
+[printCell(persona.oclAsType(KoerperPersona).menschenkenntnis)/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_BerechneteAttribute_errinerungsvermoegen_feature'.localizedString())/]
+[printCell(persona.oclAsType(KoerperPersona).errinerungsvermoegen) /]
+    </fo:table-row>
+
+
+	<fo:table-row>
+[printCell('Lifting/Carrying')/] 
+[printCell(persona.liftCarry())/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('Movement')/] 
+[printCell(persona.movement())/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('Limits', columnSpan(2) +' '+ fontStyleItalic(), margin('top',5))/] 
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_ChrakterLimits_koerperlich_feature'.localizedString())/] 
+[printCell(persona.oclAsType(KoerperPersona).koerperlich)/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_ChrakterLimits_geistig_feature'.localizedString())/]
+[printCell(persona.oclAsType(KoerperPersona).geistig)/]
+    </fo:table-row>
+	<fo:table-row>
+[printCell('_UI_ChrakterLimits_sozial_feature'.localizedString())/]
+[printCell(persona.oclAsType(KoerperPersona).sozial)/]
+    </fo:table-row>
+
+
+   <fo:table-row >
+      <fo:table-cell number-columns-spanned="2">
+		<fo:block [margin('top',5)/] >
+[printOneSvgMonitorName('edge', persona.oclAsType(KoerperPersona).edge, 7, 15, 16) /]
+		</fo:block  >
+      </fo:table-cell>
+	</fo:table-row>
+
+   </fo:table-body>
+   </fo:table>
+	</fo:block >
+ 	</fo:table-cell>
+
+<!-- 3. coumn -->
+	<fo:table-cell>
+<fo:block >
+
+   <fo:table  >
+    <fo:table-column />
+    <fo:table-column  />
+    <fo:table-body  >
+
+
+   <fo:table-row >
+      <fo:table-cell>
+		<fo:block >
+[printOneSvgMonitorName('Körperlich'.localizedString(), persona.oclAsType(KoerperPersona).zustandKoerperlichMax, 3, 20, 20) /]
+		</fo:block  >
+      </fo:table-cell>
+     <fo:table-cell>
+		<fo:block  >
+[printOneSvgMonitorName('Geistig'.localizedString(), persona.oclAsType(KoerperPersona).zustandGeistigMax, 3, 20, 20) /]
+		</fo:block  >
+      </fo:table-cell>
+	</fo:table-row>
+
+   <fo:table-row >
+      <fo:table-cell number-columns-spanned="2">
+		<fo:block  >
+[printOneSvgMonitorName('overflow', persona.oclAsType(KoerperPersona).zustandGrenze, 6, 20, 20) /]
+		</fo:block  >
+      </fo:table-cell>
+	</fo:table-row>
+
+[comment]   <fo:table-row >
+      <fo:table-cell number-columns-spanned="2">
+		<fo:block  >
+[printOneSvgMonitorName('edge', persona.oclAsType(KoerperPersona).edge, 6, 20, 20) /]
+		</fo:block  >
+      </fo:table-cell>
+	</fo:table-row>[/comment]
+
+    </fo:table-body>
+   </fo:table>
+
+
+</fo:block >
+ 	</fo:table-cell>
+
+	</fo:table-row>
+   </fo:table-body>
+   </fo:table>
+
+</fo:block-container>
+[/template]
+
+[template public printGegenstandCard (aGegenstand : Gegenstand, fontSize: Integer) ]
+<fo:block-container [containerStyle()/] >		
+	<fo:block >
+[printGegenstand(aGegenstand, fontSize)/]
+[printNotesBlock(aGegenstand, fontSize)/]
+		</fo:block  >
+</fo:block-container>
+
+[/template]
+
+[template public printNoteCard (be : Beschreibbar, fontSize: Integer) ]
+<fo:block-container [fontSize(fontSize.toString())/] [containerStyle()/]  >		
+	<fo:block>
+ <fo:table [fontSize(fontSize.toString())/] >
+    <fo:table-column  />
+    <fo:table-body  >
+     <fo:table-row >
+[printCellAttribute(be.getSimpleText(),' font-weight="bold"')/]
+     </fo:table-row>
+[if (be.oclIsKindOf(Modifizierbar))]
+[let m : Modifizierbar = be.oclAsType(Modifizierbar)]
+[for (am : AttributModifikatorWert | m.mods)]
+     <fo:table-row [fontSize(fontSize-2+'')/] >
+[printCell(am.attribut.getText()+' '+ am.wert)/]
+     </fo:table-row>
+[/for]
+[/let]
+[/if]
+[if (be.oclIsKindOf(Cyberware))]
+[let m : Cyberware = be.oclAsType(Cyberware)]
+[for (ce : CyberwareEnhancement | m.einbau)]
+     <fo:table-row [fontSize(fontSize-2+'')/] >
+[printCell(ce.getText(),'', fontStyleItalic())/]
+     </fo:table-row>
+     <fo:table-row [fontSize(fontSize-3+'')/] >
+[printCell('   '+ce.beschreibung)/]
+     </fo:table-row>
+
+[/for]
+[/let]
+[/if]
+     <fo:table-row>
+      <fo:table-cell>
+       <fo:block  >
+
+		</fo:block  >
+      </fo:table-cell>
+     </fo:table-row>
+   </fo:table-body>
+   </fo:table>
+[printNotesBlock(be, fontSize)/]
+		</fo:block  >
+</fo:block-container>
+
+[/template]
+
 [template public printCyberdeckCard(deck : Cyberdeck)]
-<fo:block-container width="87mm"    margin-top="2mm" [borderStyle()/] >		
+<fo:block-container [containerStyle()/] >		
 	<fo:block >
 [printCyberdeckDetail(deck)/]
 [printNotesBlock(deck)/]
@@ -77,7 +490,7 @@
 [/template]
 
 [template public printVehicleCard(vehicle : Fahrzeug)]
-<fo:block-container width="87mm"   height="62mm" margin-top="2mm" [borderStyle()/] >		
+<fo:block-container [containerStyle()/] >		
 	<fo:block >
 [printVehicle(vehicle)/]
 [printNotesBlock(vehicle)/]
@@ -86,61 +499,349 @@
 [/template]
 
 [template public printCommlinkCard(deck : Commlink)]
-<fo:block-container width="87mm"  height="62mm"  margin-top="2mm" [borderStyle()/] >		
-	<fo:block >
+<fo:block-container [containerStyle()/] >		
+	<fo:block keep-together="always" >
 [printComlinkDetail(deck)/]
 [printNotesBlock(deck)/]
 		</fo:block  >
 </fo:block-container>
 [/template]
 
-[template public printAbstaktFernKampfwaffeCard(fk : AbstaktFernKampfwaffe)]
-<fo:block-container width="87mm"  height="62mm"  margin-top="2mm" [borderStyle()/] >		
+[template public printArmorCard(p : Kleidung, mc : ManagedCharacter, fontSize: Integer)]
+<fo:block-container [containerStyle()/] >		
 	<fo:block >
+[printArmorDetail(p, fontSize-2)/]
+[printArmorCombatInfo(p, mc, fontSize-2)/]
+[printNotesBlock(p, fontSize)/]
+		</fo:block  >
+</fo:block-container>
+[/template]
+
+[template public printArmorCombatInfo (k : Kleidung, mc : ManagedCharacter, fontSize: Integer) ]
+<fo:block-container [fontSize(fontSize.toString())/] >
+  <fo:table >
+    <fo:table-column  />
+    <fo:table-column column-width="10%" />
+    <fo:table-column column-width="10%" />
+    <fo:table-body  >
+
+     	<fo:table-row >
+[printCellAttribute('Basis','')/]	
+[printCellAttribute(k.ruestung ,'')/]	
+[printCellAttribute(k.ruestung + mc.persona.oclAsType(KoerperPersona).panzer,'')/]	
+		</fo:table-row>
+     	<fo:table-row >
+[printCellAttribute('Basis','')/]	
+[printCellAttribute('' ,'')/]	
+[printCellAttribute('','')/]	
+		</fo:table-row>
+
+
+         </fo:table-body>
+    </fo:table>
+</fo:block-container>
+
+[/template]
+
+
+[template public printAbstaktFernKampfwaffeCard(fk : AbstaktFernKampfwaffe, mc : ManagedCharacter)]
+<fo:block-container [containerStyle()/] >		
+	<fo:block  >
 [printRangeWeapon(fk,18)/]
+[if (fk.oclIsTypeOf(Feuerwaffe))]
+[printRangeWeaponCombatInfo(fk.oclAsType(Feuerwaffe),mc)/]
+[/if]
 [printNotesBlock(fk)/]
 		</fo:block  >
 </fo:block-container>
 
  [/template]
 
-[template public printMeleeCard(fk : Nahkampfwaffe)]
-	<fo:block-container width="87mm" height="62mm" margin-top="2mm"  [borderStyle()/]>		
-	<fo:block  keep-together="always">
+
+[template public printRangeWeaponCombatInfo(fk : Feuerwaffe, mc : ManagedCharacter)]
+<fo:block-container [fontSize('7')/] >
+  <fo:table >
+    <fo:table-column  />
+    <fo:table-column column-width="35%" />
+    <fo:table-body  >
+
+     <fo:table-row>
+      <fo:table-cell number-columns-spanned="2">
+       <fo:block  >
+Einsatzdaten:</fo:block>
+      </fo:table-cell>
+     </fo:table-row>
+
+[if (not fk.fertigkeit.oclIsUndefined())]
+     <fo:table-row>
+[let name : String = fk.fertigkeit.getText()]
+[let stufe : Integer = findFertigkeitValue(fk.fertigkeit, mc.persona)]
+[let attributeName : String = fk.fertigkeit.attribut.getText()]
+[let attStufe : Integer = mc.persona.eGet(fk.fertigkeit.attribut).oclAsType(Integer) +stufe ]
+[printCell(name)/]
+[printCell(stufe+' + '+attributeName.substring(1, 3)+' + SMG = '+(attStufe+2))/]
+[/let]
+[/let][/let][/let]
+     </fo:table-row>
+[/if]
+
+[for (m : Munition | mc.inventar->selectByType(Munition))]
+[if (m.type = fk.reichweite)]
+     <fo:table-row>
+[printCell(m.name + ' '+ m.anzahl)/]
+[printCell('dk: '+ m.armorMod+  ' sch: '+ m.damageMod+ '  '+ m.damageType.getText())/]
+     </fo:table-row>
+[/if]
+[/for]
+
+   </fo:table-body>
+   </fo:table>
+
+    <fo:table width="90%"   >
+         <fo:table-column  />
+         <fo:table-column  />
+         <fo:table-column  />
+         <fo:table-column  />
+         <fo:table-body border-width="1pt" padding-start="0pt" >
+              <fo:table-row>
+                   <fo:table-cell>
+                        <fo:block  text-align="left"  >FireMode</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >Action</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >Bullets</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >Defender</fo:block>
+                   </fo:table-cell>
+              </fo:table-row>
+
+[for (m : FeuerModus | fk.modie)]
+[if (m.getText()='EM')]
+              <fo:table-row>
+                   <fo:table-cell>
+                        <fo:block  text-align="left"  >[m.getText()/]</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >simple</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >1</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >0</fo:block>
+                   </fo:table-cell>
+              </fo:table-row>
+[/if]
+[/for]
+[for (m : FeuerModus | fk.modie)]
+[if (m.getText()='HM')]
+              <fo:table-row>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >[m.getText()/]</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >simple</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >1</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >0</fo:block>
+                   </fo:table-cell>
+              </fo:table-row>
+[/if]
+[/for]
+[for (m : FeuerModus | fk.modie)]
+[if (m.getText()='HS')]
+              <fo:table-row>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >[m.getText()/]</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >complex</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >3</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >-2</fo:block>
+                   </fo:table-cell>
+              </fo:table-row>
+[/if]
+[/for]
+[for (m : FeuerModus | fk.modie)]
+[if (m.getText()='SM')]
+              <fo:table-row>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >[m.getText()/]</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >simple</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >3</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >-2</fo:block>
+                   </fo:table-cell>
+              </fo:table-row>
+[/if]
+[/for]
+[for (m : FeuerModus | fk.modie)]
+[if (m.getText()='LS')]
+              <fo:table-row>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >[m.getText()/]</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >complex</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >6</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center"  >-5</fo:block>
+                   </fo:table-cell>
+              </fo:table-row>
+[/if]
+[/for]
+[for (m : FeuerModus | fk.modie)]
+[if (m.getText()='AM')]
+              <fo:table-row>
+                   <fo:table-cell>
+                        <fo:block  text-align="center" >[m.getText()/]</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center" >simple</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center" >6</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center" >-5</fo:block>
+                   </fo:table-cell>
+              </fo:table-row>
+              <fo:table-row>
+                   <fo:table-cell>
+                        <fo:block  text-align="center" >[m.getText()/]</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center" >complex</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center" >10</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center" >-9</fo:block>
+                   </fo:table-cell>
+              </fo:table-row>
+              <fo:table-row>
+                   <fo:table-cell>
+                        <fo:block  text-align="center" >[m.getText()/]</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center" >suppessive</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center" >20</fo:block>
+                   </fo:table-cell>
+                   <fo:table-cell>
+                        <fo:block  text-align="center" >duck</fo:block>
+                   </fo:table-cell>
+              </fo:table-row>
+[/if]
+[/for]
+         </fo:table-body>
+    </fo:table>
+</fo:block-container>
+[/template]
+
+
+[template public printMeleeCard(fk : Nahkampfwaffe, mc : ManagedCharacter)]
+	<fo:block-container [containerStyle()/]>		
+	<fo:block >
 [printMeleeWeapon(fk)  /]
+[printMeleeWeaponCombatInfo(fk, mc)/]
 [printNotesBlock(fk)/]
 		</fo:block  >
 </fo:block-container>
 [/template]
 
-[template public printNotesBlock(fk : Beschreibbar)]
+[template public printMeleeWeaponCombatInfo (nk : Nahkampfwaffe, mc : ManagedCharacter) ]
+<fo:block-container [fontSize('7')/] >
   <fo:table >
-    <fo:table-column />
-    <fo:table-column column-width="64px" />
+    <fo:table-column  />
+    <fo:table-column column-width="35%" />
     <fo:table-body  >
-    <fo:table-row >
-[printCellAttribute('notes'.localizedString(),' font-weight="bold"')/]
-     <fo:table-cell number-rows-spanned="2">
-       <fo:block  display-align="right" text-align="right">
-[if (not fk.image.oclIsUndefined())]
-		<fo:external-graphic  src="url([fk.toBase64Image()/])"/>
+
+     <fo:table-row>
+      <fo:table-cell number-columns-spanned="2">
+       <fo:block  >
+Einsatzdaten:</fo:block>
+      </fo:table-cell>
+     </fo:table-row>
+
+[if (not nk.fertigkeit.oclIsUndefined())]
+     <fo:table-row>
+[let name : String = nk.fertigkeit.getText()]
+[let stufe : Integer = findFertigkeitValue(nk.fertigkeit, mc.persona)]
+[let attributeName : String = nk.fertigkeit.attribut.getText()]
+[let attStufe : Integer = mc.persona.eGet(nk.fertigkeit.attribut).oclAsType(Integer) +stufe ]
+[printCell(name)/]
+[printCell(stufe+' + '+attributeName.substring(1, 3)+' = '+(attStufe))/]
+[/let]
+[/let][/let][/let]
+     </fo:table-row>
 [/if]
+
+   </fo:table-body>
+   </fo:table>
+</fo:block-container>
+[/template]
+
+[template public printNotesBlock(fk : Beschreibbar)]
+[printNotesBlock(fk, 12)/]
+[/template]
+
+[template public printNotesBlock(fk : Beschreibbar, fontsize : Integer)]
+  <fo:table  [fontSize(fontsize.toString())/]>
+    <fo:table-column />
+    <fo:table-column />
+    <fo:table-body  >
+    <fo:table-row  >
+[printCellAttribute('notes'.localizedString(),' font-weight="bold"')/]
+     <fo:table-cell text-align="center" >
+       <fo:block  >
+
+[comment][if (not fk.image.oclIsUndefined())]
+		<fo:external-graphic  src="url([fk.toBase64Image()/])"/>
+[/if][/comment]
        </fo:block >
     </fo:table-cell>
      </fo:table-row>
-    <fo:table-row >
-[printCell(fk.beschreibung)/]
+    <fo:table-row [fontSize(fontsize-2+'')/]   wrap-option="wrap">
+[printCellAttribute(fk.beschreibung, 'number-columns-spanned="2"')/]
      </fo:table-row>
+[let q : Quelle = fk.oclAsType(Quelle)]
+    <fo:table-row [fontSize(fontsize-3+'')/] [fk.fontStyleItalic()/]  >
+[printCell(q.printSource(), 'number-columns-spanned="2"','margin-top="1pt"')/]
+     </fo:table-row>
+[/let]
     </fo:table-body>
    </fo:table>
 [/template]
 
-
+[template public containerStyle(type : OclAny)]
+  margin-top="2mm" keep-together.within-page="always" [borderStyle()/]
+[/template]
 
 [template public borderStyle(type : OclAny)]
 border-right-style="solid" 
 border-left-style="solid" border-top-color="rgb(0,0,0)" 
-background-color="rgb(255,255,255,255)" border-bottom-width="1pt" 
+[comment]background-color="rgb(255,255,255,255)" border-bottom-width="1pt" [/comment]
 border-bottom-style="solid" border-top-style="solid" 
 border-left-width="1pt" border-top-width="1pt" border-left-color="rgb(0,0,0)" 
 border-right-color="rgb(0,0,0)" border-bottom-color="rgb(0,0,0)" border-right-width="1pt" 

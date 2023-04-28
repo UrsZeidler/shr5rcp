@@ -80,6 +80,8 @@ public class ShadowrunTextTools {
     public static String getImageBase64(Object element) {
         if (element instanceof Beschreibbar) {
             Beschreibbar b = (Beschreibbar)element;
+            if(b.getImage()==null || b.getImage().isEmpty())
+                return null;
             Image imageScaledBy = AdapterFactoryUtil.getInstance().getImageScaledBy(64f, b.getImage());
            ImageLoader imageLoader = new ImageLoader();
            imageLoader.data = new ImageData[] {imageScaledBy.getImageData()};
@@ -183,7 +185,7 @@ public class ShadowrunTextTools {
      */
     public static List<String> createNumberList(Integer count) {
         ArrayList<String> list = new ArrayList<String>(count);
-        for (int i = 1; i <= count + 1; i++) {
+        for (int i = 1; i <= count; i++) {
             list.add(i + EMPTY);
         }
         return list;

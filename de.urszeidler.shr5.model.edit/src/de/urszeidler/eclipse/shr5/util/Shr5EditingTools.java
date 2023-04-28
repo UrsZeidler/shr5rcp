@@ -3,15 +3,28 @@
  */
 package de.urszeidler.eclipse.shr5.util;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 
+import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.Beschreibbar;
+import de.urszeidler.eclipse.shr5.Fertigkeit;
+import de.urszeidler.eclipse.shr5.FertigkeitsGruppe;
 import de.urszeidler.eclipse.shr5.Identifiable;
 import de.urszeidler.eclipse.shr5.Localization;
+import de.urszeidler.eclipse.shr5.Shr5Factory;
+import de.urszeidler.eclipse.shr5.Shr5Package;
+import de.urszeidler.eclipse.shr5.ShrList;
+import de.urszeidler.eclipse.shr5.Sprachfertigkeit;
+import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
 
 /**
  * @author urs
@@ -69,4 +82,46 @@ public class Shr5EditingTools {
         return orgText;
     }
     
+    public static List<Object> createFertigkeitGroupsRoot(AbstraktPersona persona) {
+        Collection<EObject> groups = ItemPropertyDescriptor.getReachableObjectsOfType(persona, Shr5Package.Literals.FERTIGKEITS_GRUPPE);
+        Collection<EObject> skill = ItemPropertyDescriptor.getReachableObjectsOfType(persona, Shr5Package.Literals.FERTIGKEIT);
+
+        ShrList root = Shr5Factory.eINSTANCE.createShrList();
+        
+        
+        ShrList ungrouped = Shr5Factory.eINSTANCE.createShrList();
+        ungrouped.setName("ungruppiert");
+        ShrList knownGroup = Shr5Factory.eINSTANCE.createShrList();
+        knownGroup.setName("wissen");
+        ShrList languGoup = Shr5Factory.eINSTANCE.createShrList();
+        languGoup.setName("sprache");
+
+        root.getEntries().add(ungrouped);
+        root.getEntries().add(knownGroup);
+        root.getEntries().add(languGoup);
+        
+        for (EObject eObject : skill) {
+            if (eObject instanceof Sprachfertigkeit) {
+                Sprachfertigkeit wf = (Sprachfertigkeit)eObject;
+                languGoup.getEntries().add(wf);
+            } else if (eObject instanceof Wissensfertigkeit) {
+                Wissensfertigkeit wf = (Wissensfertigkeit)eObject;
+                knownGroup.getEntries().add(wf);
+            } else if (eObject instanceof Fertigkeit) {
+                Fertigkeit f = (Fertigkeit)eObject;
+                if (!Shr5Package.Literals.FERTIGKEITS_GRUPPE__FERTIGKEITEN.equals(f.eContainingFeature())) {
+                    ungrouped.getEntries().add(f);
+                }
+            }
+        }
+
+        List<Object> list = new ArrayList<Object>();
+        list.addAll(groups);
+        list.add(ungrouped);
+        list.add(knownGroup);
+        list.add(languGoup);
+
+        return list;
+    }
+
 }
