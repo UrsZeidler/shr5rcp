@@ -3,6 +3,8 @@ name: Java CI
 on:
   push:
     branches: [ "development" ]
+  pull_request:
+    types: [opened, reopened]
 
 jobs:
   build:
@@ -20,4 +22,8 @@ jobs:
       - name: Publish Test Report
         if: success() || failure()
         uses: scacap/action-surefire-report@v1
-        
+      - name: Publish Test Report 1
+        uses: mikepenz/action-junit-report@v3
+        if: success() || failure() # always run even if the previous step fails
+        with:
+          report_paths: '**/surefire-reports/TEST-*.xml'
