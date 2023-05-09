@@ -188,10 +188,10 @@ public class CharacterDiaryPage extends AbstractShr5Page<CharacterDiary> {
                     public int compare(ContractPayment o2, ContractPayment o1) {
                         if(o1==null && o2==null)
                             return 0;
-                        if(o1.getDate()==null)
-                            return -1;
                         if(o2==null)
                             return 1;
+                        if(o1.getDate()==null)
+                            return -1;
                       return o1.getDate().compareTo(o2.getDate());                   
                     }
                 });

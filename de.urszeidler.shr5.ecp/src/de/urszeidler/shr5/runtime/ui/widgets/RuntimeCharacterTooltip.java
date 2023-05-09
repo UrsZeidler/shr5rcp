@@ -16,7 +16,7 @@ import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.ToolBarManager;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.IWidgetValueProperty;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.swt.typed.WidgetProperties;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.window.ToolTip;
 import org.eclipse.swt.SWT;
@@ -31,6 +31,7 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.ToolBar;
+import org.eclipse.swt.widgets.Widget;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
 import de.urszeidler.eclipse.shr5.KoerperPersona;
@@ -202,12 +203,12 @@ public class RuntimeCharacterTooltip extends ToolTip {
         DataBindingContext bindingContext = new DataBindingContext();
         //
 
-        IWidgetValueProperty image = WidgetProperties.image();
-        ISWTObservableValue observedImage = image.observe(label_image);
-        IObservableValue observeValue = EMFObservables.observeValue(bindingContext.getValidationRealm(),
+        IWidgetValueProperty<Widget, Image> image = org.eclipse.jface.databinding.swt.typed.WidgetProperties.image();
+        ISWTObservableValue<Image> observedImage = image.observe(label_image);
+        IObservableValue<?> observeValue = EMFObservables.observeValue(bindingContext.getValidationRealm(),
                 runtimeCharacter.getCharacter().getPersona(), Shr5Package.Literals.BESCHREIBBAR__IMAGE);
 
-        IConverter converter = null;
+        IConverter<String, Image> converter = null;
 
         converter = new PathToImageConverter(String.class, Image.class, 32);
         UpdateValueStrategy toModel = new UpdateValueStrategy();
@@ -215,27 +216,27 @@ public class RuntimeCharacterTooltip extends ToolTip {
         bindingContext.bindValue(observedImage, observeValue, toModel, toWidget);
         //
         //
-        IObservableValue observeTextLabel_nameObserveWidget_1 = WidgetProperties.text().observe(lblName);
-        IObservableValue characterNameObserveValue = EMFObservables.observeValue(bindingContext.getValidationRealm(), runtimeCharacter.getCharacter()
+        IObservableValue<String> observeTextLabel_nameObserveWidget_1 = WidgetProperties.text().observe(lblName);
+        IObservableValue<?> characterNameObserveValue = EMFObservables.observeValue(bindingContext.getValidationRealm(), runtimeCharacter.getCharacter()
                 .getPersona(), Shr5Package.Literals.BESCHREIBBAR__NAME);
         bindingContext.bindValue(observeTextLabel_nameObserveWidget_1, characterNameObserveValue, new UpdateValueStrategy(
                 UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
         //
         if (stateMonitorWidgetMental != null) {
-            ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetMental);
+            ISWTObservableValue<Integer> observe = new DamageStateValueProperty().observe(stateMonitorWidgetMental);
             IObservableValue observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), runtimeCharacter,
                     RuntimePackage.Literals.PHYICAL_STATE__MENTAL_DAMAGE);
             bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
 
         }
         if (stateMonitorWidgetPhysical != null) {
-            ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetPhysical);
-            IObservableValue observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), runtimeCharacter,
+            ISWTObservableValue<Integer> observe = new DamageStateValueProperty().observe(stateMonitorWidgetPhysical);
+            IObservableValue<Integer> observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), runtimeCharacter,
                     RuntimePackage.Literals.PHYICAL_STATE__PHYSICAL_DAMAGE);
             bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());
         }
         if (stateMonitorWidgetOverDead != null) {
-            ISWTObservableValue observe = new DamageStateValueProperty().observe(stateMonitorWidgetOverDead);
+            ISWTObservableValue<Integer> observe = new DamageStateValueProperty().observe(stateMonitorWidgetOverDead);
             IObservableValue observeValue1 = EMFObservables.observeValue(bindingContext.getValidationRealm(), runtimeCharacter,
                     RuntimePackage.Literals.PHYICAL_STATE__OVER_DEAD);
             bindingContext.bindValue(observe, observeValue1, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), new EMFUpdateValueStrategy());

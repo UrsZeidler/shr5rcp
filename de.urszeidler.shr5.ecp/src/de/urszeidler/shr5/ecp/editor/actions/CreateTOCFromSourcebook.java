@@ -60,11 +60,13 @@ public class CreateTOCFromSourcebook extends Action {
             importAllSources();
             return;
         }
+        if (srcBook == null)
+            return;
         
         final File docFile = SourceBookView.getFileFromPreferences(srcBook);
         final IPreferenceStore store = Activator.getDefault().getPreferenceStore();
         final String id2 = ShadowrunEditingTools.getId(srcBook);
-        if (srcBook == null || docFile == null || id2 == null) {
+        if (docFile == null || id2 == null) {
             MessageDialog.openError(shell, "Sourcebook not configured.",
                     String.format("%s is not configured propertly, you need to set the pdf in the preferences", labelProvider.getText(theObject)));
             return;
@@ -90,10 +92,13 @@ public class CreateTOCFromSourcebook extends Action {
                 
                 for (EObject eObject : collection) {
                     SourceBook srcBook = (SourceBook)eObject;
+                    if (srcBook == null)
+                        continue;
+                    
                     final File docFile = SourceBookView.getFileFromPreferences(srcBook);
                     final IPreferenceStore store = Activator.getDefault().getPreferenceStore();
                     final String id2 = ShadowrunEditingTools.getId(srcBook);
-                    if (srcBook == null || docFile == null || id2 == null) {
+                    if (docFile == null || id2 == null) {
                         continue;
                     }
                     

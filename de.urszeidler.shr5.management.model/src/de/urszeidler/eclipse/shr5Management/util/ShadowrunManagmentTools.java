@@ -970,7 +970,7 @@ public class ShadowrunManagmentTools {
         int rValue = value;
         AttributeChange attributeChange = ShadowrunManagmentTools.findCharacterAdvacements(character, attribute);
         if (attributeChange == null) {
-            if (value == eGet)
+            if (eGet.compareTo(value)==0)
                 return value;
             attributeChange = Shr5managementFactory.eINSTANCE.createAttributeChange();
             character.getChanges().add(attributeChange);
@@ -980,7 +980,7 @@ public class ShadowrunManagmentTools {
             attributeChange.setTo(Math.max(attributeChange.getFrom(),(Integer)value));
             attributeChange.applyChanges();
             rValue = attributeChange.getTo();
-        } else if (eGet == value) {
+        } else if (eGet.compareTo(value)==0) {
             character.getChanges().remove(attributeChange);
             persona.eSet(attribute, eGet);
             rValue = eGet;

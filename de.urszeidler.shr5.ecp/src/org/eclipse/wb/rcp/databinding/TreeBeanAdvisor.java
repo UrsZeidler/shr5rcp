@@ -67,6 +67,6 @@ public final class TreeBeanAdvisor extends TreeStructureAdvisor {
 				return !collection.isEmpty();
 			}
 		}
-		return null;
+		return false;
 	}
 }

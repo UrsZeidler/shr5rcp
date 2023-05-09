@@ -6,6 +6,7 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -58,7 +59,11 @@ public class NewItemDetailWizardPage extends WizardPage {
 
             @Override
             public ImageData getImageData() {
-                return labelProvider.getImage(object).getImageData().scaledTo(32, 32);
+                Image image = labelProvider.getImage(object);
+                if(image==null) 
+                    return null;
+                
+                return image.getImageData().scaledTo(32, 32);
             }
         });
 

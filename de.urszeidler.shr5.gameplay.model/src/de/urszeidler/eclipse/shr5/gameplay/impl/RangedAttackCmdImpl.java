@@ -423,9 +423,9 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
                 damageTest.setDate(getDate());
                 damageTest.setDv(weapon.getDurchschlagsKraft()+munition.getArmorMod());
                 DamageCode damageCode = ShadowrunTools.parseDamageCode(weapon.getSchadenscode());
-                damageCode.setType(munition.getDamageType());
-                damageCode.setPower(damageCode.getPower()+munition.getDamageMod());
                 if (damageCode != null) {
+                    damageCode.setType(munition.getDamageType());
+                    damageCode.setPower(damageCode.getPower()+munition.getDamageMod());
                     int d = damageCode.getPower() - defensTestCmd.getNetHits();
                     damageTest.setDamage(new DamageCode(d, damageCode.getType()).toString());
                     // damageTest.setDamage(damageCode.toString());

@@ -82,7 +82,6 @@ public abstract class AbstractGeneratorPage extends AbstractShr5Page<CharacterGe
     private Image decoratorImage = ResourceManager.getPluginImage("de.urszeidler.shr5.ecp", "images/stcksync_ov.gif"); //$NON-NLS-1$ //$NON-NLS-2$
     protected Map<Object, Object> context;
     protected ValidationService validationService;
-    protected IPreferenceStore store;
     private boolean validating;
 
     public AbstractGeneratorPage(String id, String title) {

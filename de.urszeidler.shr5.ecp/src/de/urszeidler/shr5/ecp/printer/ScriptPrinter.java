@@ -46,7 +46,7 @@ public class ScriptPrinter extends PersonaPrinter {
      * 
      * @return
      */
-    public static ScriptPrinter getInstance() {
+    public static synchronized ScriptPrinter getInstance() {
         if (instance == null)
             instance = new ScriptPrinter();
         return instance;

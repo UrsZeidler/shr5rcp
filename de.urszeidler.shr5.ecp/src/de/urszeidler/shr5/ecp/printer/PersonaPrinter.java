@@ -2140,7 +2140,7 @@ public class PersonaPrinter extends BasicPrinter {
             Integer value = (Integer)persona.eGet(eAttribute);
             Integer calc = (Integer)persona.eGet(base2Calced);
             String a = EMPTY;
-            if (value != calc)
+            if (value.compareTo(calc)!=0)
                 a = "(" + calc + ")";
 
             grid.add(SWT.LEFT, SWT.DEFAULT, new TextPrint(attName, attributeFont), 2);

@@ -233,7 +233,8 @@ public class Activator extends AbstractUIPlugin {
         Bundle extensionBundle = Activator.getDefault().getBundle();
         IContainer target = project;// .getFolder("resource");
         Enumeration<String> entryPaths = extensionBundle.getEntryPaths("shr5Resource");
-        processPath(entryPaths, target, extensionBundle, "shr5Resource");
+        if (entryPaths!=null)
+            processPath(entryPaths, target, extensionBundle, "shr5Resource");
     }
 
     protected void processPath(Enumeration<String> entryPaths, IContainer target, Bundle extensionBundle, String basename) throws CoreException {

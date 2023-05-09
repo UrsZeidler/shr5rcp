@@ -951,7 +951,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
         int pointsSpend = getConnectionSpend();
 
         int diff = allPoints - pointsSpend;
-        if (diff > 0) {
+        if (diff != 0) {
             if (diagnostics != null) {
                 diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, Shr5managementValidator.DIAGNOSTIC_SOURCE,
                         Shr5managementValidator.SHR5_GENERATOR__HAS_SPEND_ALL_CONNECTION_POINTS, ModelPlugin.INSTANCE.getString(

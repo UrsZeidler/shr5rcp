@@ -72,6 +72,6 @@ public final class EMFTreeBeanAdvisor extends TreeStructureAdvisor {
 				}
 			}
 		}
-		return null;
+		return false;
 	}
 }

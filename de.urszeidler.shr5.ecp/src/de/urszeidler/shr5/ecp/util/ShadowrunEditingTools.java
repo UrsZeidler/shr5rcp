@@ -319,7 +319,7 @@ public class ShadowrunEditingTools {
             attributeChange.setTo(value);
             attributeChange.applyChanges();
             persona.eNotify(new ENotificationImpl((InternalEObject)persona, Notification.SET, attribute, eGet, value));
-        } else if (eGet == value) {
+        } else if (value.compareTo(eGet)==0) {
             character.getChanges().remove(attributeChange);
             persona.eSet(attribute, eGet);
         } else {

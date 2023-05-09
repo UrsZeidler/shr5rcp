@@ -273,7 +273,7 @@ public class ShadowrunTools {
         Integer value = (Integer)persona.eGet(eAttribute);
         Integer calc = (Integer)persona.eGet(base2Calced);
         String a = EMPTY;
-        if (value != calc)
+        if (value.compareTo(calc) != 0)
             a = "(" + calc + ")";
 
         return value.toString() + a;

@@ -30,7 +30,7 @@ public class List2TreeContentProvider implements ITreeContentProvider {
      @Override
      public Object[] getChildren(Object parentElement) {
        if (parentElement instanceof List) {
-         return getChildren(parentElement);
+         return ((List<?>)parentElement).toArray();
        }
        return EMPTY_ARRAY;
      }
