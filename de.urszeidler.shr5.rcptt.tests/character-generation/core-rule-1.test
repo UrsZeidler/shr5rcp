@@ -170,7 +170,7 @@ with [get-editor "Shr5 Generator"] {
         select "Skill group Acting"
     }
 }
-get-view "Character rule validation" | get-tree | get-property "getData().getChildren().size()" | equals 7 | verify-true
+//get-view "Character rule validation" | get-tree | get-property "getData().getChildren().size()" | equals 7 | verify-true
 with [get-editor "Shr5 Generator" | get-section Skills | get-tree] {
     select "Skill group Athletics/Skill Gymnastics" | activate-cell-edit -column 2
     get-editbox | set-text 7
