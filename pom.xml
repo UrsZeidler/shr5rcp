@@ -12,9 +12,17 @@
 		<rcptt.version>2.5.1</rcptt.version>
 		<tycho.version>2.7.5</tycho.version>
 		<jacoco.version>0.8.3</jacoco.version>
-		
+		<acceleo-version>3.6.4</acceleo-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>Eclipse - Acceleo Release</id>
+			<url>https://repo.eclipse.org/content/repositories/acceleo-releases</url>
+		</pluginRepository>
+	</pluginRepositories>
+
 
 	<modules>
 		<!-- target platform -->
@@ -74,6 +82,20 @@
 					<artifactId>tycho-packaging-plugin</artifactId>
 					<version>${tycho.version}</version>
 				</plugin>
+				<plugin>
+					<groupId>org.eclipse.acceleo</groupId>
+					<artifactId>org.eclipse.acceleo.maven</artifactId>
+					<version>${acceleo-version}</version>
+					<executions>
+						<execution>
+							<id>acceleo-compile</id>
+							<phase>compile</phase>
+							<goals>
+								<goal>acceleo-compile</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
@@ -119,12 +141,10 @@
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-versions-plugin</artifactId>
-				<version>${tycho.version}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-packaging-plugin</artifactId>
-				<version>${tycho.version}</version>
 			</plugin>
 			
 		<!--  -->	
@@ -163,6 +183,8 @@
 <!-- 				<version>3.7.1</version> -->
 <!-- 			</plugin> -->
 		</plugins>
+
+
 
 	</build>
 
