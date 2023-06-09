@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+ <parent>
+    <groupId>de.urszeidler</groupId>
+    <artifactId>shr5</artifactId>
+    <version>0.3.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>de.urszeidler.shr5.acceleo</artifactId>
+  <packaging>eclipse-plugin</packaging>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.acceleo</groupId>
+				<artifactId>org.eclipse.acceleo.maven</artifactId>
+				<version>${acceleo-version}</version>
+				<configuration>
+					<useBinaryResources>false</useBinaryResources>
+					<usePlatformResourcePath>true</usePlatformResourcePath>
+					<acceleoProject>
+						<root>${project.basedir}</root>
+						<entries>
+							<entry>
+								<input>src</input>
+								<output>target/classes</output>
+							</entry>
+						</entries>
+					</acceleoProject>
+					<packagesToRegister>
+						<packageToRegister>org.eclipse.emf.ecore.EcorePackage</packageToRegister>
+						<packageToRegister>de.urszeidler.eclipse.shr5.Shr5Package</packageToRegister>
+						<packageToRegister>de.urszeidler.eclipse.shr5Management.Shr5managementPackage</packageToRegister>
+						<packageToRegister>de.urszeidler.eclipse.shr5.gameplay.GameplayPackage</packageToRegister>
+						<packageToRegister>de.urszeidler.eclipse.shr5.runtime.RuntimePackage</packageToRegister>
+						<packageToRegister>de.urszeidler.shr5.scripting.ScriptingPackage</packageToRegister>
+					</packagesToRegister>
+					<uriHandler>org.eclipse.acceleo.maven.AcceleoURIHandler</uriHandler>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
