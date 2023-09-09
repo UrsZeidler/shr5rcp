@@ -4,12 +4,11 @@
 <locations>
 
 		<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-			<repository location="http://download.eclipse.org/eclipse/updates/4.20"/>
+			<repository location="http://download.eclipse.org/eclipse/updates/4.23"/>
 			
 			<unit id="org.eclipse.ecf.core.feature.feature.group" version="0.0.0"/>
 			<unit id="org.eclipse.ecf.core.ssl.feature.feature.group" version="0.0.0"/>
 			<unit id="org.eclipse.ecf.filetransfer.feature.feature.group" version="0.0.0"/>
-			<unit id="org.eclipse.ecf.filetransfer.httpclient45.feature.feature.group" version="0.0.0"/>
 			<unit id="org.eclipse.ecf.filetransfer.ssl.feature.feature.group" version="0.0.0"/>
 			
 			<unit id="org.eclipse.platform.sdk" version="0.0.0"/>
@@ -22,26 +21,16 @@
 <unit id="org.eclipse.platform.ide" version="0.0.0"/>
 <unit id="org.eclipse.platform.sdk" version="0.0.0"/>
 
-		</location>
-		
-		<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-			<repository location="http://download.eclipse.org/eclipse/updates/4.20"/>
 <unit id="org.eclipse.ecf.provider.filetransfer.ssl" version="0.0.0"/>
 <unit id="org.eclipse.ecf.ssl" version="0.0.0"/>
 <unit id="org.eclipse.ecf.identity" version="0.0.0"/>
 <unit id="org.eclipse.ecf" version="0.0.0"/>
 <unit id="org.eclipse.ecf.filetransfer" version="0.0.0"/>
 <unit id="org.eclipse.ecf.provider.filetransfer" version="0.0.0"/>
-<unit id="org.apache.httpcomponents.httpclient" version="0.0.0"/>
-<unit id="org.apache.httpcomponents.httpcore" version="0.0.0"/>
+<unit id="org.eclipse.ecf.filetransfer.httpclient5.feature.feature.group" />
+<unit id="org.apache.commons.codec" version="0.0.0" />
+		</location>
 		
-				</location>
-		
-		
-<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.nebula.feature.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/nebula/releases/2.4.2/"/>
-</location>
 
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.acceleo.feature.group" version="0.0.0"/>
@@ -60,7 +49,13 @@
 
 <unit id="org.eclipse.equinox.p2.rcp.feature.feature.group" version="0.0.0"/>
 <unit id="org.eclipse.equinox.p2.core.feature.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/releases/2021-06"/>
+<repository location="http://download.eclipse.org/releases/2022-03"/>
+</location>
+
+		
+<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.nebula.feature.feature.group" version="0.0.0"/>
+<repository location="http://download.eclipse.org/nebula/releases/2.4.2/"/>
 </location>
 
 
