@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.beans.PojoObservables;
+import org.eclipse.core.databinding.beans.typed.PojoProperties;
 import org.eclipse.core.databinding.observable.map.IObservableMap;
 import org.eclipse.core.databinding.observable.set.IObservableSet;
 import org.eclipse.core.databinding.property.Properties;
@@ -191,9 +191,12 @@ public class ServerStatusDialog extends TitleAreaDialog {
         if (viewerWrapper == null)
             return bindingContext;
         //
-        ObservableSetContentProvider listContentProvider = new ObservableSetContentProvider();
-        IObservableMap observeMap = PojoObservables.observeMap(listContentProvider.getKnownElements(), PlayerManager.class,
-                "character.character.persona.name");
+        ObservableSetContentProvider<PlayerManager> listContentProvider = new ObservableSetContentProvider<>();
+        
+        IObservableMap<PlayerManager, String> observeMap = PojoProperties.value(PlayerManager.class, 
+                "character.character.persona.name", String.class).observeDetail(
+                listContentProvider.getKnownElements());
+        
         tableViewer.setLabelProvider(new ObservableMapLabelProvider(observeMap));
         tableViewer.setContentProvider(listContentProvider);
         //

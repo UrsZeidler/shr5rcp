@@ -10,23 +10,22 @@
  *******************************************************************************/
 package org.eclipse.wb.rcp.databinding;
 
-import org.eclipse.core.databinding.beans.BeansObservables;
+import org.eclipse.core.databinding.beans.typed.BeanProperties;
 import org.eclipse.core.databinding.observable.IObservable;
-import org.eclipse.core.databinding.observable.Realm;
 
 /**
  * This class may be freely distributed as part of any application or plugin.
  * 
  * @author lobas_av
  */
-public class BeansListObservableFactory extends BeansObservableFactory {
+public class BeansListObservableFactory<T, E extends IObservable> extends BeansObservableFactory<T,E> {
 	private final String m_propertyName;
 	////////////////////////////////////////////////////////////////////////////
 	//
 	// Constructor
 	//
 	////////////////////////////////////////////////////////////////////////////
-	public BeansListObservableFactory(Class<?> beanClass, String propertyName) {
+	public BeansListObservableFactory(Class<T> beanClass, String propertyName) {
 		super(beanClass);
 		m_propertyName = propertyName;
 	}
@@ -36,7 +35,7 @@ public class BeansListObservableFactory extends BeansObservableFactory {
 	//
 	////////////////////////////////////////////////////////////////////////////
 	@Override
-	protected IObservable createBeanObservable(Object target) {
-		return BeansObservables.observeList(Realm.getDefault(), target, m_propertyName);
+	protected E createBeanObservable(Object target) {
+		return (E)BeanProperties.list(m_propertyName).observe(target);// .observeList(Realm.getDefault(), target, m_propertyName);
 	}
 }

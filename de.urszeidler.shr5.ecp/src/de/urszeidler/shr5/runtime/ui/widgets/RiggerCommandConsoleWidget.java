@@ -6,7 +6,7 @@ import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.swt.typed.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
@@ -113,7 +113,7 @@ public class RiggerCommandConsoleWidget extends Composite {
     protected DataBindingContext initDataBindings() {
         DataBindingContext bindingContext = new DataBindingContext();
         //
-        IObservableValue observeSelectionScaleObserveWidget = WidgetProperties.selection().observe(scale);
+        IObservableValue observeSelectionScaleObserveWidget = WidgetProperties.scaleSelection().observe(scale);
         IObservableValue objectZugriffBasisObserveValue = EMFObservables.observeValue(object, Literals.RIGGER_COMMAND_CONSOLE__ZUGRIFF_BASIS);
         bindingContext.bindValue(observeSelectionScaleObserveWidget, objectZugriffBasisObserveValue, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
         //

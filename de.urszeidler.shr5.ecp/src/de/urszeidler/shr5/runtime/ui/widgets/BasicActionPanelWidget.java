@@ -11,7 +11,7 @@ import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.IWidgetValueProperty;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.swt.typed.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
@@ -23,6 +23,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Widget;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import de.urszeidler.eclipse.shr5.AbstraktPersona;
@@ -291,7 +292,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
     protected DataBindingContext initDataBindings() {
         DataBindingContext bindingContext = new DataBindingContext();
         //
-        IObservableValue observeTextLabelObserveWidget = WidgetProperties.text().observe(label_Phase);
+        IObservableValue<String> observeTextLabelObserveWidget = org.eclipse.jface.databinding.swt.typed.WidgetProperties.text().observe(label_Phase);
         IObservableValue phase1PhaseObserveValue = EMFObservables.observeDetailValue(bindingContext.getValidationRealm(), phase,
                 Literals.PHASE_CMD__PHASE);
         bindingContext.bindValue(observeTextLabelObserveWidget, phase1PhaseObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER),
@@ -299,12 +300,12 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         //
         //
 
-        IWidgetValueProperty image = WidgetProperties.image();
-        ISWTObservableValue observedImage = image.observe(label_image);
+        IWidgetValueProperty<Widget, Image> image = org.eclipse.jface.databinding.swt.typed.WidgetProperties.image();
+        ISWTObservableValue<Image> observedImage = image.observe(label_image);
         IObservableValue observeValue = EMFObservables.observeDetailValue(bindingContext.getValidationRealm(), persona,
                 Shr5Package.Literals.BESCHREIBBAR__IMAGE);
 
-        IConverter converter = null;
+        IConverter<String,Image> converter = null;
 
         converter = new PathToImageConverter(String.class, Image.class, 32);
         UpdateValueStrategy toModel = new UpdateValueStrategy();
@@ -312,7 +313,7 @@ public class BasicActionPanelWidget extends Composite implements IValueChangeLis
         bindingContext.bindValue(observedImage, observeValue, toModel, toWidget);
         //
         //
-        IObservableValue observeTextLabel_nameObserveWidget_1 = WidgetProperties.text().observe(lblName);
+        IObservableValue observeTextLabel_nameObserveWidget_1 = org.eclipse.jface.databinding.swt.typed.WidgetProperties.text().observe(lblName);
         IObservableValue characterNameObserveValue = EMFObservables.observeDetailValue(bindingContext.getValidationRealm(), persona,
                 Shr5Package.Literals.BESCHREIBBAR__NAME);
         bindingContext.bindValue(observeTextLabel_nameObserveWidget_1, characterNameObserveValue, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());

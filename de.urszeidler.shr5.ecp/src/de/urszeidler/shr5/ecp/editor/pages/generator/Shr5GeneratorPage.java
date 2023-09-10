@@ -18,7 +18,7 @@ import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.swt.typed.WidgetProperties;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -679,7 +679,7 @@ public class Shr5GeneratorPage extends AbstractGeneratorPage {
     protected DataBindingContext initDataBindings() {
         DataBindingContext bindingContext = new DataBindingContext();
         //
-        IObservableValue observeSelectionSpinnerObserveWidget = WidgetProperties.selection().observe(spinner);
+        IObservableValue observeSelectionSpinnerObserveWidget = WidgetProperties.spinnerSelection().observe(spinner);
         IObservableValue objectKarmaToResourceObserveValue = EMFEditObservables.observeValue(editingDomain, object,
                 Literals.SHR5_GENERATOR__KARMA_TO_RESOURCE);
         UpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();

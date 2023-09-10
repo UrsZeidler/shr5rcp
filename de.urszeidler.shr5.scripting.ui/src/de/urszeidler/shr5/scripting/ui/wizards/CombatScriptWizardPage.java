@@ -8,8 +8,9 @@ import org.eclipse.core.databinding.observable.list.WritableList;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
-import org.eclipse.jface.databinding.viewers.ViewerProperties;
+import org.eclipse.jface.databinding.swt.typed.WidgetProperties;
+import org.eclipse.jface.databinding.viewers.IViewerObservableValue;
+import org.eclipse.jface.databinding.viewers.typed.ViewerProperties;
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.ComboViewer;
@@ -51,7 +52,7 @@ public class CombatScriptWizardPage extends WizardPage {
     // private List<RuntimeCharacter> runtimeCharacters;
 
     private WritableValue selectedScriptContainer = new WritableValue();
-    private WritableValue selectedScriptName = new WritableValue();
+    private WritableValue<String> selectedScriptName = new WritableValue<>();
     private WritableValue startDate = new WritableValue();
 
     private WritableList runtimeCharacters = new WritableList();
@@ -77,7 +78,7 @@ public class CombatScriptWizardPage extends WizardPage {
     }
 
     public CombatScriptWizardPage(List<EObject> scripts, List<EObject> characters, WritableValue selectedScriptContainer,
-            WritableValue selectedScriptName, WritableValue startCombatTurn, WritableList runtimeCharacters) {
+            WritableValue<String> selectedScriptName, WritableValue startCombatTurn, WritableList runtimeCharacters) {
         super("CombatScriptWizardPage");//$NON-NLS-1$
         setTitle(Messages.CombatScriptWizardPage_titel);
         setDescription(Messages.CombatScriptWizardPage_description);
@@ -244,7 +245,7 @@ public class CombatScriptWizardPage extends WizardPage {
     protected DataBindingContext initDataBindings() {
         DataBindingContext bindingContext = new DataBindingContext();
         //
-        IObservableValue observeSingleSelectionComboViewer = ViewerProperties.singleSelection().observe(comboViewer);
+        IViewerObservableValue<Object> observeSingleSelectionComboViewer = ViewerProperties.singleSelection().observe(comboViewer);
         bindingContext.bindValue(observeSingleSelectionComboViewer, selectedScriptContainer, null, null);
         //
         IObservableValue observeTextTxtScriptnametextObserveWidget = WidgetProperties.text(SWT.Modify).observeDelayed(200, txtScriptnametext);

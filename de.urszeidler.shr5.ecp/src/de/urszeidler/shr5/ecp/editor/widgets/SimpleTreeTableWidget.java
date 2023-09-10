@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.jface.databinding.viewers.IViewerObservableList;
 import org.eclipse.jface.databinding.viewers.ObservableListTreeContentProvider;
-import org.eclipse.jface.databinding.viewers.ViewersObservables;
+import org.eclipse.jface.databinding.viewers.typed.ViewerProperties;
 import org.eclipse.jface.layout.TreeColumnLayout;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ISelection;
@@ -152,7 +152,7 @@ public class SimpleTreeTableWidget extends Composite {
         });
 
         treeViewer.setContentProvider(treeContentProvider);
-        selectionObserver = ViewersObservables.observeMultiSelection(treeViewer);
+        selectionObserver = ViewerProperties.multipleSelection().observe(treeViewer);
 
          IListProperty property = null;
         if (editingDomain != null)

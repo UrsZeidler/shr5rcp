@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
-import org.eclipse.jface.databinding.swt.SWTObservables;
+import org.eclipse.jface.databinding.swt.typed.WidgetProperties;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.swt.SWT;
@@ -103,14 +103,14 @@ public class ReferenceValueDialog extends SimpleEObjectDialog {
         new Label(container, SWT.NONE);
 
         IObservableValue observeValue = EMFObservables.observeValue(eObject, referenceFeature);
-        ISWTObservableValue observeEditable = SWTObservables.observeText(txtReference, SWT.Modify);
+        ISWTObservableValue<String> observeEditable = WidgetProperties.text().observe(txtReference);
         UpdateValueStrategy updateStrategie = new EMFUpdateValueStrategy();
         updateStrategie.setConverter(new ReferenceToStringConverter(AdapterFactoryUtil.getInstance().getLabelProvider()));
         Binding binding = ctx.bindValue(observeEditable, observeValue, null, updateStrategie);
         ctx.addBinding(binding);
 
         IObservableValue observeWertValue = EMFObservables.observeValue(eObject, wertFeature);
-        ISWTObservableValue observeWertEditable = SWTObservables.observeText(txtWerttxt, SWT.Modify);
+        ISWTObservableValue<String> observeWertEditable = WidgetProperties.text().observe(txtWerttxt);
         binding = ctx.bindValue(observeWertEditable, observeWertValue, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
         ctx.addBinding(binding);
 

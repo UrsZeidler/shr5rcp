@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.databinding.viewers.IViewerObservableList;
 import org.eclipse.jface.databinding.viewers.ObservableListTreeContentProvider;
-import org.eclipse.jface.databinding.viewers.ViewersObservables;
+import org.eclipse.jface.databinding.viewers.typed.ViewerProperties;
 import org.eclipse.jface.layout.TreeColumnLayout;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -251,7 +251,7 @@ public class TreeTableWidget extends Composite {
         });
 
         treeViewer.setContentProvider(treeContentProvider);
-        uiObs = ViewersObservables.observeMultiSelection(treeViewer);
+        uiObs =  ViewerProperties.multipleSelection().observe(treeViewer);
 
         optionalToolbar = new ToolBar(sctnNewSection, SWT.FLAT | SWT.RIGHT);
         // toolkit.adapt(optionalToolbar);

@@ -17,7 +17,8 @@ import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.emf.databinding.edit.EMFEditObservables;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.swt.ISWTObservableValue;
+import org.eclipse.jface.databinding.swt.typed.WidgetProperties;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -405,7 +406,7 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
                 UpdateValueStrategy.POLICY_NEVER), null);
 
         //
-        IObservableValue observeSelectionSpinnerObserveWidget = WidgetProperties.selection().observe(spinner);
+        IObservableValue observeSelectionSpinnerObserveWidget = WidgetProperties.spinnerSelection().observe(spinner);
         IObservableValue objectKarmaToResourceObserveValue = EMFEditObservables.observeValue(editingDomain, object,
                 Literals.KARMA_GENERATOR__KARMA_TO_RESOURCE);
         UpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
@@ -438,12 +439,12 @@ public class Shr5KarmaGeneratorPage extends AbstractGeneratorPage {
     }
 
     private void ownBinding(DataBindingContext bindingContext) {
-        IObservableValue observeTextLblKarmaSpendObserveWidget = WidgetProperties.text().observe(lblKarmaSpend);
-        IObservableValue objectKarmaSpendObserveValue = EMFEditObservables.observeValue(editingDomain, object, Literals.KARMA_GENERATOR__KARMA_SPEND);
+        ISWTObservableValue<String> observeTextLblKarmaSpendObserveWidget = WidgetProperties.text().observe(lblKarmaSpend);
+        IObservableValue<Integer> objectKarmaSpendObserveValue = EMFEditObservables.observeValue(editingDomain, object, Literals.KARMA_GENERATOR__KARMA_SPEND);
         EMFUpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();
-        modelToTarget.setConverter(new Converter(Integer.class, String.class) {
+        modelToTarget.setConverter(new Converter<Integer,String>(Integer.class, String.class) {
             @Override
-            public Object convert(Object fromObject) {
+            public String convert(Integer fromObject) {
                 if (object.getGenerator() == null)
                     return Messages.GeneratorPage_left1;
 
