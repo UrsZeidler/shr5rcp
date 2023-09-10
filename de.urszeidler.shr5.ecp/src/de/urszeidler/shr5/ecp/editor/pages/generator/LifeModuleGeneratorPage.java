@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.swt.typed.WidgetProperties;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.swt.SWT;
@@ -700,7 +700,7 @@ LifeModulesSystem shr5System = object.getGenerator();
                 UpdateValueStrategy.POLICY_NEVER), null);
 
         //
-        IObservableValue observeSelectionSpinnerObserveWidget = WidgetProperties.selection().observe(spinner);
+        IObservableValue observeSelectionSpinnerObserveWidget = WidgetProperties.spinnerSelection().observe(spinner);
         IObservableValue objectKarmaToResourceObserveValue = EMFEditObservables.observeValue(editingDomain, object,
                 Literals.KARMA_GENERATOR__KARMA_TO_RESOURCE);
         UpdateValueStrategy modelToTarget = new EMFUpdateValueStrategy();

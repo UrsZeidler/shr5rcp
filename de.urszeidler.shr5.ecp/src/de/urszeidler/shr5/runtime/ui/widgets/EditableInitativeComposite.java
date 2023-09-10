@@ -14,7 +14,7 @@ import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.databinding.EMFUpdateValueStrategy;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.IWidgetValueProperty;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.swt.typed.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
@@ -182,7 +182,7 @@ public class EditableInitativeComposite extends Composite implements IValueChang
         IObservableValue iniIniObserveValue = EMFObservables.observeValue(ini, GameplayPackage.Literals.INITATIVE__INI);
         bindingContext.bindValue(observeTextTxtNewTextObserveWidget, iniIniObserveValue, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
         //
-        IObservableValue observeSelectionBtnCheckButtonObserveWidget = WidgetProperties.selection().observe(btnCheckButton);
+        IObservableValue observeSelectionBtnCheckButtonObserveWidget = WidgetProperties.buttonSelection().observe(btnCheckButton);
         IObservableValue iniSizeInitativeObserveValue = EMFObservables.observeValue(ini, GameplayPackage.Literals.INITATIVE__SIZE_INITATIVE);
         bindingContext.bindValue(observeSelectionBtnCheckButtonObserveWidget, iniSizeInitativeObserveValue, new EMFUpdateValueStrategy(), new EMFUpdateValueStrategy());
         //

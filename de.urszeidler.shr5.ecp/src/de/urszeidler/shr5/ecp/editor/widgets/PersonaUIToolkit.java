@@ -22,8 +22,7 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
-import org.eclipse.jface.databinding.swt.SWTObservables;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.swt.typed.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
@@ -119,7 +118,7 @@ public class PersonaUIToolkit {
 
         Label text = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
         IObservableValue observeValue = createObservableValue(attribute);
-        ISWTObservableValue observeEditable = SWTObservables.observeText(text);
+        ISWTObservableValue observeEditable = WidgetProperties.text().observe(text);
 
         EMFUpdateValueStrategy updateStrategie1 = new EMFUpdateValueStrategy();
         updateStrategie1.setConverter(new EssenzConverter(1, 1));
@@ -166,7 +165,7 @@ public class PersonaUIToolkit {
         Label label2 = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
 //        setDefaultLayout(label2);
 
-        bindObservable(computedValue, SWTObservables.observeText(label2));
+        bindObservable(computedValue, WidgetProperties.text().observe(label2));
 
         final Spezies spezies = eObject.getSpezies();
         if (ShadowrunTools.base2SpeciesMin(basefeature) != null && spezies != null) {
@@ -180,13 +179,13 @@ public class PersonaUIToolkit {
                             spezies.eGet(ShadowrunTools.base2SpeciesMax(basefeature)));
                 }
             };
-            bindObservable(computedValue2, SWTObservables.observeText(minMaxLabel));
+            bindObservable(computedValue2, WidgetProperties.text().observe(minMaxLabel));
         }
     }
 
     private IObservableValue bindTextFeature(Spinner spinner, EAttribute basefeature,
             EMFUpdateValueStrategy targetToModel) {
-        IObservableValue observeWidget = WidgetProperties.selection().observe(spinner);
+        IObservableValue observeWidget = WidgetProperties.spinnerSelection().observe(spinner);
         IObservableValue observeValue = EMFEditObservables.observeValue(editingDomain, eObject, basefeature);
         
         Binding binding = ctx.bindValue(observeWidget, observeValue, targetToModel, new EMFUpdateValueStrategy());
@@ -223,7 +222,7 @@ public class PersonaUIToolkit {
 
         Label label2 = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
 //        setDefaultLayout(label2);
-        bindObservable(computedValue, SWTObservables.observeText(label2));
+        bindObservable(computedValue, WidgetProperties.text().observe(label2));
         label2 = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
 
     }
@@ -244,7 +243,7 @@ public class PersonaUIToolkit {
         };
 
         Label label2 = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
-        bindObservable(computedValue, SWTObservables.observeText(label2));
+        bindObservable(computedValue, WidgetProperties.text().observe(label2));
         label2 = getToolkit().createLabel(client, "");//$NON-NLS-1$ 
     }
 
@@ -368,7 +367,7 @@ public class PersonaUIToolkit {
 //    private IObservableValue bindTextFeature(Text text, EAttribute feature, EMFUpdateValueStrategy updateStrategie,
 //            EMFUpdateValueStrategy targetToModel) {
 //        IObservableValue observeValue = createObservableValue(feature);
-//        ISWTObservableValue observeEditable = SWTObservables.observeText(text, SWT.Modify);
+//        ISWTObservableValue observeEditable = WidgetProperties.text().observe(text, SWT.Modify);
 //        Binding binding = ctx.bindValue(observeEditable, observeValue, targetToModel, updateStrategie);
 //        ctx.addBinding(binding);
 //
@@ -384,7 +383,7 @@ public class PersonaUIToolkit {
      */
     private IObservableValue bindLabelFeature(Label formText, EStructuralFeature feature, EMFUpdateValueStrategy updateStrategie) {
         IObservableValue observeValue = createObservableValue(feature);
-        ISWTObservableValue observeEditable = SWTObservables.observeText(formText);
+        ISWTObservableValue observeEditable = WidgetProperties.text().observe(formText);
         bindObservable(observeValue, observeEditable, updateStrategie);
         return observeValue;
     }

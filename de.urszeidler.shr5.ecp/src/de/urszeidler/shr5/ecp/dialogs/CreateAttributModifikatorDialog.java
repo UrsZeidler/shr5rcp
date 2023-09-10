@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
-import org.eclipse.jface.databinding.swt.SWTObservables;
+import org.eclipse.jface.databinding.swt.typed.WidgetProperties;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.swt.SWT;
@@ -57,7 +57,7 @@ public class CreateAttributModifikatorDialog extends SimpleEObjectDialog {
         @Override
         public IObservableValue bindFeature(Text text, EReference feature) {
             IObservableValue observeValue = EMFObservables.observeValue(eObject, feature);
-            ISWTObservableValue observeEditable = SWTObservables.observeText(text, SWT.Modify);
+            ISWTObservableValue<String> observeEditable = WidgetProperties.text().observe(text);
             UpdateValueStrategy updateStrategie = new EMFUpdateValueStrategy();
             updateStrategie.setConverter(new ReferenceToStringConverter(AdapterFactoryUtil.getInstance().getLabelProvider()));
             Binding binding = ctx.bindValue(observeEditable, observeValue, null, updateStrategie);

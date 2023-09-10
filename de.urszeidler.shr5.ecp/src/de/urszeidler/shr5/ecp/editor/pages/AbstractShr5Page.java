@@ -22,7 +22,8 @@ import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IToolBarManager;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.swt.ISWTObservableValue;
+import org.eclipse.jface.databinding.swt.typed.WidgetProperties;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.AbstractTreeViewer;
@@ -86,7 +87,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
             emfFormBuilder.createConfiguredLable(container, entry, object);
             Label label = emfFormBuilder.createLabel(container);
             label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
-            IObservableValue widgetObserver = WidgetProperties.text().observe(label);
+            ISWTObservableValue<String> widgetObserver = WidgetProperties.text().observe(label);
             IObservableValue objectObserver = EMFEditObservables.observeValue(getEditingDomain(), object, entry.getFeature());
             entry.setUiObservable(widgetObserver);
             entry.setObservable(objectObserver);
@@ -102,7 +103,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
             final LabelProvider provider = emfFormBuilder.createLabelProvider(entry, object);
             Label label = emfFormBuilder.createLabel(container);
             label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
-            IObservableValue widgetObserver = WidgetProperties.text().observe(label);
+            ISWTObservableValue<String> widgetObserver = WidgetProperties.text().observe(label);
             IObservableValue objectObserver = EMFEditObservables.observeValue(getEditingDomain(), object, entry.getFeature());
             entry.setUiObservable(widgetObserver);
             entry.setObservable(objectObserver);
@@ -123,7 +124,7 @@ public abstract class AbstractShr5Page<A extends EObject> extends FormPage imple
             emfFormBuilder.createConfiguredLable(container, entry, object);
             Label label = emfFormBuilder.createLabel(container);
             label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
-            IObservableValue widgetObserver = WidgetProperties.text().observe(label);
+            ISWTObservableValue<String> widgetObserver = WidgetProperties.text().observe(label);
             IObservableValue objectObserver = EMFEditObservables.observeValue(getEditingDomain(), object, entry.getFeature());
             entry.setUiObservable(widgetObserver);
             entry.setObservable(objectObserver);

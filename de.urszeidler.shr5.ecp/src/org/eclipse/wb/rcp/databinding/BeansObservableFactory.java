@@ -18,14 +18,14 @@ import org.eclipse.core.databinding.observable.masterdetail.IObservableFactory;
  * 
  * @author lobas_av
  */
-/*package*/abstract class BeansObservableFactory implements IObservableFactory {
-	private final Class<?> m_beanClass;
+/*package*/abstract class BeansObservableFactory<T, E extends IObservable> implements IObservableFactory<T,E> {
+	protected final Class<T> m_beanClass;
 	////////////////////////////////////////////////////////////////////////////
 	//
 	// Constructor
 	//
 	////////////////////////////////////////////////////////////////////////////
-	public BeansObservableFactory(Class<?> beanClass) {
+	public BeansObservableFactory(Class<T> beanClass) {
 		m_beanClass = beanClass;
 	}
 	////////////////////////////////////////////////////////////////////////////
@@ -34,9 +34,9 @@ import org.eclipse.core.databinding.observable.masterdetail.IObservableFactory;
 	//
 	////////////////////////////////////////////////////////////////////////////
 	@Override
-	public IObservable createObservable(Object target) {
+	public E createObservable(Object target) {
 		if (target instanceof IObservable) {
-			return (IObservable) target;
+			return (E) target;
 		}
 		if (Utils.instanceOf(m_beanClass, target)) {
 			return createBeanObservable(target);
@@ -46,5 +46,5 @@ import org.eclipse.core.databinding.observable.masterdetail.IObservableFactory;
 	/**
 	 * Creates an observable for the given target object.
 	 */
-	protected abstract IObservable createBeanObservable(Object target);
+	protected abstract E createBeanObservable(Object target);
 }
