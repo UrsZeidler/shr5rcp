@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins:lts-jdk11
 
 USER root
 
@@ -22,11 +22,10 @@ ENV LC_ALL en_US.UTF-8
 
 
 ## configure jenkins
-COPY ./jenkins-plugins /usr/share/jenkins/plugins
+#COPY ./jenkins-plugins /usr/share/jenkins/plugins
 
-RUN while read i ; \
-                do /usr/local/bin/install-plugins.sh $i ; \
-        done < /usr/share/jenkins/plugins
+COPY --chown=jenkins:jenkins jenkins-plugins.txt /usr/share/jenkins/ref/plugins.txt
+RUN jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins.txt
 
 #Update the username and password is done in default-user.groovy
 #ENV JENKINS_USER admin
@@ -47,6 +46,6 @@ COPY jenkins-tools.yaml /var/jenkins_home/casc_configs/
 ENV CASC_JENKINS_CONFIG /var/jenkins_home/casc_configs
 
 #copyjob
-COPY ci-job.xml /usr/share/jenkins/ref/jobs/shr5rcp-ci/config.xml
+COPY branch_ci.xml /usr/share/jenkins/ref/jobs/shr5rcp-ci/config.xml
 
-VOLUME /var/jenkins_home        
+VOLUME /var/jenkins_home
