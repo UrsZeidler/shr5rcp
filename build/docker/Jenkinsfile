@@ -19,9 +19,6 @@ pipeline {
 	    }
         stage('Build') {
             steps {
-                // Get some code from a GitHub repository
-                git branch: 'update/update_to_4.20_rcp', 
-                  url: 'https://github.com/UrsZeidler/shr5rcp.git'
 				withMaven(jdk: 'open-jdk-11.0.12', 
 						maven: 'm3', 
 						options: [openTasksPublisher(highPriorityTaskIdentifiers: 'FIXME', normalPriorityTaskIdentifiers: 'TODO', pattern: '*.java'), 
