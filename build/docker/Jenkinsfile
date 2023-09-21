@@ -64,7 +64,7 @@ pipeline {
 
 def run_rcptt(String language,String testList, String skipTags, String reportName){
     sh '''
-     cp de.urszeidler.shr5.product.build/target/products/shr5rcptt-*-linux*.zip shr5rcptt.zip
+     cp de.urszeidler.shr5.product.simple/target/products/shr5rcptt-*-linux*.zip shr5rcptt.zip
      unzip -q shr5rcptt.zip
      rm -f shr5rcptt.zip
      '''
