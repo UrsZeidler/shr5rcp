@@ -73,7 +73,7 @@ def run_rcptt(String language,String testList, String skipTags, String reportNam
     	additionalOptions: '', 
     	assignedLabels: '', 
     	displayNameOffset: 0,
-    	screen: '1200x960x24', 
+    	screen: '1920x1024x24', 
     	autoDisplayName: true, debug: false, 
     	installationName: 'default-xvfb']) {
         //ant    
