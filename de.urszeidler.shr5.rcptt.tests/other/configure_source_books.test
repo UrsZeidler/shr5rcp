@@ -6,8 +6,8 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _-9FcUO93EeqYI6oYfJ_1jw
-Runtime-Version: 2.5.2.202109092356
-Save-Time: 10/3/21, 10:25 PM
+Runtime-Version: 2.5.5.202305081357
+Save-Time: 9/23/23, 10:00 AM
 Tags: de
 Testcase-Type: ecl
 
@@ -21,12 +21,13 @@ with [get-view "Model Explorer" | get-tree] {
     select "shr5Resources/All/Resourcen/Gear/Weapons/Firearm/Feuerwaffe Yamaha Raiden"
     select "shr5Resources/All/Resourcen/Gear/Vehicles/Drohne GM-Nissan Doberman \\(Medium\\)"
     select "shr5Resources/All/Resourcen/Gear/Credsticks/Credstick Silver"
-    select "shr5Resources/All/Resourcen/Skills/Skills/Fertigkeit Projektilwaffen"
     select "shr5Resources/All/Resourcen/Gear/Gears/Kommlink Leviathan Technical LT-2100"
     select "shr5Resources/All/Resourcen/Gear/Gears/Kommlink FTL Quark"
     select "shr5Resources/All/Resourcen/Gear/Bioware/Bioware Schadenskompensator 12"
     select "shr5Resources/All/Resourcen/Gear/Bioware/Bioware Symbionten 4"
     select "shr5Resources/All/Resourcen/Gear/Armors/Kleidung Ares Victory: Industrious"
+    select "shr5Resources/All/Resourcen/Skills/Skills"
+    select "shr5Resources/All/Resourcen/Skills/Skills/Fertigkeit Projektilwaffen"
 }
 
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
