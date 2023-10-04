@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="RCP schadowrun" uid="de.urszeidler.shr5.rcp.product.id" id="de.urszeidler.shr5.product.shr5" application="de.urszeidler.shr5.product.app" version="1.0.0.qualifier" useFeatures="false" includeLaunchers="true">
+<product name="RCP schadowrun" uid="de.urszeidler.shr5.rcp.product.id" id="de.urszeidler.shr5.product.shr5" application="de.urszeidler.shr5.product.app" version="1.0.0.qualifier" useFeatures="false" includeLaunchers="true" autoIncludeRequirements="true">
 
    <aboutInfo>
       <image path="icons/shrImage_6_250.png"/>
@@ -58,6 +58,7 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
 
    <vm>
    </vm>
+
 
    <plugins>
       <plugin id="com.google.guava"/>
@@ -191,30 +192,106 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <plugin id="org.eclipse.emf.ecp.edit.swt"/>
       <plugin id="org.eclipse.emf.ecp.ui"/>
       <plugin id="org.eclipse.emf.ecp.ui.e3"/>
+      <plugin id="org.eclipse.emf.ecp.ui.rcp"/>
       <plugin id="org.eclipse.emf.ecp.ui.view"/>
+      <plugin id="org.eclipse.emf.ecp.ui.view.linewrapper"/>
       <plugin id="org.eclipse.emf.ecp.ui.view.swt"/>
+      <plugin id="org.eclipse.emf.ecp.view.categorization.model"/>
+      <plugin id="org.eclipse.emf.ecp.view.categorization.model.edit"/>
+      <plugin id="org.eclipse.emf.ecp.view.categorization.swt"/>
+      <plugin id="org.eclipse.emf.ecp.view.compoundcontrol.model"/>
+      <plugin id="org.eclipse.emf.ecp.view.compoundcontrol.model.edit"/>
+      <plugin id="org.eclipse.emf.ecp.view.compoundcontrol.swt"/>
+      <plugin id="org.eclipse.emf.ecp.view.compoundcontrol.tooling"/>
       <plugin id="org.eclipse.emf.ecp.view.context"/>
       <plugin id="org.eclipse.emf.ecp.view.context.locale"/>
+      <plugin id="org.eclipse.emf.ecp.view.control.multireference"/>
       <plugin id="org.eclipse.emf.ecp.view.core.swt"/>
+      <plugin id="org.eclipse.emf.ecp.view.custom.model"/>
+      <plugin id="org.eclipse.emf.ecp.view.custom.model.edit"/>
+      <plugin id="org.eclipse.emf.ecp.view.custom.ui.swt"/>
+      <plugin id="org.eclipse.emf.ecp.view.group.model"/>
+      <plugin id="org.eclipse.emf.ecp.view.group.model.edit"/>
+      <plugin id="org.eclipse.emf.ecp.view.group.swt.collapsable"/>
+      <plugin id="org.eclipse.emf.ecp.view.group.swt.embedded"/>
+      <plugin id="org.eclipse.emf.ecp.view.group.ui.swt"/>
+      <plugin id="org.eclipse.emf.ecp.view.horizontal.model"/>
+      <plugin id="org.eclipse.emf.ecp.view.horizontal.model.edit"/>
+      <plugin id="org.eclipse.emf.ecp.view.horizontal.ui.swt"/>
+      <plugin id="org.eclipse.emf.ecp.view.label.model"/>
+      <plugin id="org.eclipse.emf.ecp.view.label.model.edit"/>
+      <plugin id="org.eclipse.emf.ecp.view.label.ui.swt"/>
+      <plugin id="org.eclipse.emf.ecp.view.migrator"/>
       <plugin id="org.eclipse.emf.ecp.view.model"/>
       <plugin id="org.eclipse.emf.ecp.view.model.common"/>
+      <plugin id="org.eclipse.emf.ecp.view.model.common.di"/>
+      <plugin id="org.eclipse.emf.ecp.view.model.edit"/>
       <plugin id="org.eclipse.emf.ecp.view.model.provider.generator"/>
       <plugin id="org.eclipse.emf.ecp.view.model.provider.xmi"/>
+      <plugin id="org.eclipse.emf.ecp.view.rule"/>
+      <plugin id="org.eclipse.emf.ecp.view.rule.model"/>
+      <plugin id="org.eclipse.emf.ecp.view.rule.model.edit"/>
+      <plugin id="org.eclipse.emf.ecp.view.stack.model"/>
+      <plugin id="org.eclipse.emf.ecp.view.stack.model.edit"/>
+      <plugin id="org.eclipse.emf.ecp.view.stack.ui.swt"/>
+      <plugin id="org.eclipse.emf.ecp.view.stack.viewmodel"/>
+      <plugin id="org.eclipse.emf.ecp.view.swt.layout"/>
+      <plugin id="org.eclipse.emf.ecp.view.table.columnservice"/>
+      <plugin id="org.eclipse.emf.ecp.view.table.model"/>
+      <plugin id="org.eclipse.emf.ecp.view.table.model.edit"/>
+      <plugin id="org.eclipse.emf.ecp.view.table.ui.swt"/>
+      <plugin id="org.eclipse.emf.ecp.view.template.annotation.model"/>
+      <plugin id="org.eclipse.emf.ecp.view.template.annotation.model.edit"/>
       <plugin id="org.eclipse.emf.ecp.view.template.model"/>
+      <plugin id="org.eclipse.emf.ecp.view.template.model.edit"/>
+      <plugin id="org.eclipse.emf.ecp.view.template.service"/>
+      <plugin id="org.eclipse.emf.ecp.view.treemasterdetail.model"/>
+      <plugin id="org.eclipse.emf.ecp.view.treemasterdetail.model.edit"/>
+      <plugin id="org.eclipse.emf.ecp.view.treemasterdetail.ui.swt"/>
+      <plugin id="org.eclipse.emf.ecp.view.unset"/>
       <plugin id="org.eclipse.emf.ecp.view.util.swt"/>
-      <plugin id="org.eclipse.emf.ecp.workspace.core"/>
+      <plugin id="org.eclipse.emf.ecp.view.validation"/>
+      <plugin id="org.eclipse.emf.ecp.view.vertical.model"/>
+      <plugin id="org.eclipse.emf.ecp.view.vertical.model.edit"/>
+      <plugin id="org.eclipse.emf.ecp.view.vertical.ui.swt"/>
       <plugin id="org.eclipse.emf.edit"/>
       <plugin id="org.eclipse.emf.edit.nl_de" fragment="true"/>
       <plugin id="org.eclipse.emf.edit.ui"/>
       <plugin id="org.eclipse.emf.edit.ui.nl_de" fragment="true"/>
       <plugin id="org.eclipse.emfforms.common"/>
+      <plugin id="org.eclipse.emfforms.common.validation"/>
+      <plugin id="org.eclipse.emfforms.core.bazaar"/>
       <plugin id="org.eclipse.emfforms.core.services"/>
+      <plugin id="org.eclipse.emfforms.core.services.databinding.featurepath"/>
+      <plugin id="org.eclipse.emfforms.core.services.domainexpander.default"/>
+      <plugin id="org.eclipse.emfforms.core.services.domainexpander.table"/>
       <plugin id="org.eclipse.emfforms.core.services.editsupport"/>
+      <plugin id="org.eclipse.emfforms.core.services.emf"/>
       <plugin id="org.eclipse.emfforms.core.services.emfspecificservice"/>
+      <plugin id="org.eclipse.emfforms.core.services.legacy"/>
+      <plugin id="org.eclipse.emfforms.core.services.locale.default"/>
+      <plugin id="org.eclipse.emfforms.core.services.mappingprovider.default"/>
+      <plugin id="org.eclipse.emfforms.core.services.mappingprovider.table"/>
+      <plugin id="org.eclipse.emfforms.core.services.segments"/>
+      <plugin id="org.eclipse.emfforms.core.services.segments.featurepath"/>
+      <plugin id="org.eclipse.emfforms.core.services.segments.multi"/>
+      <plugin id="org.eclipse.emfforms.core.services.structuralchange"/>
+      <plugin id="org.eclipse.emfforms.core.services.structuralchange.default"/>
+      <plugin id="org.eclipse.emfforms.core.services.structuralchange.table"/>
       <plugin id="org.eclipse.emfforms.localization"/>
       <plugin id="org.eclipse.emfforms.swt.core"/>
       <plugin id="org.eclipse.emfforms.swt.core.di"/>
       <plugin id="org.eclipse.emfforms.swt.core.di.extension"/>
+      <plugin id="org.eclipse.emfforms.swt.core.plugin"/>
+      <plugin id="org.eclipse.emfforms.swt.reference.table"/>
+      <plugin id="org.eclipse.emfforms.swt.table"/>
+      <plugin id="org.eclipse.emfforms.swt.treemasterdetail"/>
+      <plugin id="org.eclipse.emfforms.swt.treemasterdetail.decorator.validation.default"/>
+      <plugin id="org.eclipse.emfforms.view.annotation.model"/>
+      <plugin id="org.eclipse.emfforms.view.annotation.model.edit"/>
+      <plugin id="org.eclipse.emfforms.view.model.localization"/>
+      <plugin id="org.eclipse.emfforms.view.multisegment.model"/>
+      <plugin id="org.eclipse.emfforms.view.multisegment.model.edit"/>
       <plugin id="org.eclipse.equinox.app"/>
       <plugin id="org.eclipse.equinox.bidi"/>
       <plugin id="org.eclipse.equinox.common"/>
