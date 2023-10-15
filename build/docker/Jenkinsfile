@@ -19,8 +19,8 @@ pipeline {
 	    }
         stage('Build') {
             steps {
-				withMaven(jdk: 'open-jdk-11.0.12', 
-						maven: 'm3', 
+				withMaven(jdk: 'open-jdk-17.0.8.1', 
+						maven: 'm3-3.9.0', 
 						options: [openTasksPublisher(highPriorityTaskIdentifiers: 'FIXME', normalPriorityTaskIdentifiers: 'TODO', pattern: '*.java'), 
 							artifactsPublisher(disabled: true), 
 							junitPublisher(healthScaleFactor: 0.9, keepLongStdio: true), 
@@ -77,8 +77,8 @@ def run_rcptt(String language,String testList, String skipTags, String reportNam
     	autoDisplayName: true, debug: false, 
     	installationName: 'default-xvfb']) {
         //ant    
-        withAnt(installation: 'ant', jdk: 'open-jdk-11.0.12') {
-           withEnv(["rcptt_runner_HOME=${tool name: 'rcptt-runner', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'}"]) {
+        withAnt(installation: 'ant', jdk: 'open-jdk-17.0.8.1') {
+           withEnv(["rcptt_runner_HOME=${tool name: 'rcptt-runner-2.5.4', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'}"]) {
              sh """
             	ant -buildfile build/ant/rcptt-test.xml test \
             	  -Drunner-path=${rcptt_runner_HOME} \
