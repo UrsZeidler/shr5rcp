@@ -6,8 +6,8 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _bAKkQB_xEeWSRorpcoiIvw
-Runtime-Version: 2.5.2.202109092356
-Save-Time: 10/7/21, 6:57 PM
+Runtime-Version: 2.5.5.202305081357
+Save-Time: 11/4/23, 7:59 PM
 Tags: character-generation, core-rule, en
 Testcase-Type: ecl
 
@@ -163,6 +163,10 @@ with [get-editor "Shr5 Generator"] {
         get-group Special | get-editbox -after [get-label "Edge base"] | set-text 5
         click
     }
+    with [get-section Description] {//close section to have a better look
+        click
+    }
+    
     with [get-section Skills | get-tree] {
         select "Skill group Acting" | activate-cell-edit -column 2
         get-editbox | set-text 2
@@ -199,9 +203,11 @@ with [get-editor "Shr5 Generator" | get-section Skills | get-tree] {
     select "Skill group Biotech/Skill First Aid" | activate-cell-edit -column 2
     get-editbox | set-text 4
     apply-cell-edit -deactivate
+    try -times 3 -delay 10000 -command {
     select "Knowledge skills/Knowledge skill Alcohol" | activate-cell-edit -column 2
     get-editbox | set-text 4
     apply-cell-edit -deactivate
+    }
     select "Knowledge skills/Knowledge skill Architecture" | activate-cell-edit -column 2
     get-editbox | set-text 4
     apply-cell-edit -deactivate
