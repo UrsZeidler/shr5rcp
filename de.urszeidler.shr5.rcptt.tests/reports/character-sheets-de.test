@@ -6,8 +6,8 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _jmvK4PIXEeqCOpkEiTC5cw
-Runtime-Version: 2.5.1.M3
-Save-Time: 9/30/20 8:39 PM
+Runtime-Version: 2.5.5.202305081357
+Save-Time: 11/4/23, 9:03 AM
 Tags: de
 Testcase-Type: ecl
 
@@ -26,10 +26,11 @@ proc "gen-sheet" [val editor] [val sheet]{
 
 }
 
+try -times 10 -delay 2000 -command {
+	get-menu -path "Charakter/Öffne Managed Charakter" | click -metaKeys ""
+	get-window "Managed Charakter öffnen." | get-tree | select "SC Ki Adept Gunter von Kintzel"  | double-click -metaKeys ""
+} 
 
-
-get-menu -path "Charakter/Öffne Managed Charakter" | click -metaKeys ""
-get-window "Managed Charakter öffnen." | get-tree | select "SC Ki Adept Gunter von Kintzel"  | double-click -metaKeys ""
 exec-with-options {
     get-editor "SC Ki Adept Gunter von Kintzel" | get-button "Transform to text" | click -metaKeys ""
     get-window -class ModelToTextExportDialog | get-combo -after [get-label "Wählen Transformation"] 
