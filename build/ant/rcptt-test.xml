@@ -58,10 +58,8 @@
 ${language}
     			
 -vmargs
--Xms1024m
 -Xmx2048m
 -Dorg.eclipse.equinox.http.jetty.autostart=false
--Dorg.eclipse.swt.browser.DefaultType=mozilla
 -Dimage.folder=${images}
 -Dbase.folder=${test-results}
 </echo>
