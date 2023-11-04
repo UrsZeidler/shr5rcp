@@ -10,8 +10,8 @@
 	<properties>
 <!-- 		<findbugs.version>3.0.1</findbugs.version> -->
 		<rcptt.version>2.5.1</rcptt.version>
-		<tycho.version>2.7.5</tycho.version>
-		<jacoco.version>0.8.3</jacoco.version>
+		<tycho.version>3.0.5</tycho.version>
+		<jacoco.version>0.8.11</jacoco.version>
 		<acceleo-version>3.6.4</acceleo-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>

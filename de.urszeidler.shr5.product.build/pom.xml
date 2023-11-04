@@ -43,6 +43,12 @@
 							<!-- Create ZIP archive of product distribution. -->
 							<goal>archive-products</goal>
 						</goals>
+							<configuration>
+								<formats>
+									<linux>zip</linux>
+									<macosx>zip</macosx>
+								</formats>
+							</configuration>
 					</execution>
 				</executions>
 				<configuration>
