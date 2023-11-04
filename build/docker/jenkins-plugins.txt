@@ -18,3 +18,4 @@ htmlpublisher
 performance
 custom-tools-plugin
 junit-attachments
+test-results-analyzer

@@ -78,7 +78,7 @@ def run_rcptt(String language,String testList, String skipTags, String reportNam
     	installationName: 'default-xvfb']) {
         //ant    
         withAnt(installation: 'ant', jdk: 'open-jdk-17.0.8.1') {
-           withEnv(["rcptt_runner_HOME=${tool name: 'rcptt-runner-2.5.4', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'}"]) {
+           withEnv(["rcptt_runner_HOME=${tool name: 'rcptt-runner-2.5.5', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'}"]) {
              sh """
             	ant -buildfile build/ant/rcptt-test.xml test \
             	  -Drunner-path=${rcptt_runner_HOME} \
