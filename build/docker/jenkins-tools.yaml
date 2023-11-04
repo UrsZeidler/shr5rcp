@@ -1,5 +1,17 @@
 jenkins:
   numExecutors: 1
+  globalConfigFiles:
+    configs:
+    - globalMavenSettings:
+        comment: "Global settings"
+        content: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<settings xmlns=\"http://maven.apache.org/SETTINGS/1.0.0\"\
+          \ \n          xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" \n\
+          \          xsi:schemaLocation=\"http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd\"\
+          >\n  <localRepository>/var/jenkins_home/maven/.m2</localRepository>\n</settings>"
+        id: "d958714b-56dc-4af3-af71-6b816d27011d"
+        isReplaceAll: true
+        name: "MyGlobalSettings"
+        providerId: "org.jenkinsci.plugins.configfiles.maven.GlobalMavenSettingsConfig"
 tool:
   ant:
     installations:
@@ -11,13 +23,13 @@ tool:
               id: "1.10.11"
   customTool:
     installations:
-    - name: "rcptt-runner"
+    - name: "rcptt-runner-2.5.5"
       properties:
       - installSource:
           installers:
           - zip:
               subdir: "eclipse"
-              url: "http://download.eclipse.org/rcptt/nightly/2.5.2/202109092356/runner/rcptt.runner-2.5.2-N202109092356.zip"
+              url: "https://download.eclipse.org/rcptt/nightly/2.5.5/202310231355/runner/rcptt.runner-2.5.5-N202310231355.zip"
     - name: "rcptt-runner-2.5.4"
       properties:
       - installSource:
@@ -58,6 +70,11 @@ tool:
           installers:
           - maven:
               id: "3.9.0"
+  mavenGlobalConfig:
+    globalSettingsProvider:
+      mvn:
+        settingsConfigId: "d958714b-56dc-4af3-af71-6b816d27011d"
+    settingsProvider: "standard"
   xvfb:
     installations:
     - home: "/usr/bin"
