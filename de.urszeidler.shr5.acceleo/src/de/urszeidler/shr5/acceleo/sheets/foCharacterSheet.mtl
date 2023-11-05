@@ -1032,16 +1032,16 @@ endif /]
     <fo:table-column  />
     <fo:table-column  />
     <fo:table-body  >
-[for (b : Beschreibbar | persona.getAllSkills())]
+[for (b : OclAny | persona.getAllSkills())]
 [if (b.oclIsKindOf(FertigkeitsGruppe))]
 [let fg : FertigkeitsGruppe = b.oclAsType(FertigkeitsGruppe)]
-<!-- start of [b.getText()/] -->
+<!-- start of [fg.getText()/] -->
 [printSkillList(fg.fertigkeiten->asSequence(), persona, filter)/]
-<!-- end of [b.getText()/] -->
+<!-- end of [fg.getText()/] -->
 [/let]
 [else]
-[let l : ShrList = b.oclAsType(ShrList)]
-[printSkillList(l.entries->collect(oclAsType(Fertigkeit))->asSequence(), persona, filter)/]
+[let l : Sequence(OclAny) = b]
+[printSkillList(l->collect(oclAsType(Fertigkeit))->asSequence(), persona, filter)/]
 [/let]
 [/if]
 [/for]
