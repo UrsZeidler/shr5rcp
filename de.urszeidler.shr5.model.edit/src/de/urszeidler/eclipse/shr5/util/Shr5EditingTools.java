@@ -10,6 +10,7 @@ import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -85,32 +86,21 @@ public class Shr5EditingTools {
     public static List<Object> createFertigkeitGroupsRoot(AbstraktPersona persona) {
         Collection<EObject> groups = ItemPropertyDescriptor.getReachableObjectsOfType(persona, Shr5Package.Literals.FERTIGKEITS_GRUPPE);
         Collection<EObject> skill = ItemPropertyDescriptor.getReachableObjectsOfType(persona, Shr5Package.Literals.FERTIGKEIT);
-
-        ShrList root = Shr5Factory.eINSTANCE.createShrList();
-        
-        
-        ShrList ungrouped = Shr5Factory.eINSTANCE.createShrList();
-        ungrouped.setName("ungruppiert");
-        ShrList knownGroup = Shr5Factory.eINSTANCE.createShrList();
-        knownGroup.setName("wissen");
-        ShrList languGoup = Shr5Factory.eINSTANCE.createShrList();
-        languGoup.setName("sprache");
-
-        root.getEntries().add(ungrouped);
-        root.getEntries().add(knownGroup);
-        root.getEntries().add(languGoup);
+        List<EObject> ungrouped = new ArrayList<>();
+        List<EObject> knownGroup = new ArrayList<>();
+        List<EObject> languGoup = new ArrayList<>();
         
         for (EObject eObject : skill) {
             if (eObject instanceof Sprachfertigkeit) {
                 Sprachfertigkeit wf = (Sprachfertigkeit)eObject;
-                languGoup.getEntries().add(wf);
+                languGoup.add(wf);
             } else if (eObject instanceof Wissensfertigkeit) {
                 Wissensfertigkeit wf = (Wissensfertigkeit)eObject;
-                knownGroup.getEntries().add(wf);
+                knownGroup.add(wf);
             } else if (eObject instanceof Fertigkeit) {
                 Fertigkeit f = (Fertigkeit)eObject;
                 if (!Shr5Package.Literals.FERTIGKEITS_GRUPPE__FERTIGKEITEN.equals(f.eContainingFeature())) {
-                    ungrouped.getEntries().add(f);
+                    ungrouped.add(f);
                 }
             }
         }
