@@ -30,6 +30,8 @@ pipeline {
                     sh "mvn clean verify -Dmaven.test.failure.ignore=true"
                 } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe & FindBugs & SpotBugs reports...
             
+                perfReport filterRegex: '', showTrendGraphs: true, sourceDataFiles: '**/TEST-*.xml'
+            	
                 archiveArtifacts allowEmptyArchive: true, 
                   artifacts: 'de.urszeidler.shr5.product.build/target/**/shr5*.zip', 
                   followSymlinks: false
@@ -96,6 +98,7 @@ def run_rcptt(String language,String testList, String skipTags, String reportNam
     // some block
     }
     archiveArtifacts artifacts: 'build/results*/**/*.*', followSymlinks: false
+    perfReport filterRegex: '', showTrendGraphs: true, sourceDataFiles: 'build/**/results*.xml'
     publishHTML([allowMissing: false, 
                alwaysLinkToLastBuild: false, 
                keepAll: false, 
