@@ -10,7 +10,7 @@
         <listEntry value="maven.test.failure.ignore=true"/>
     </listAttribute>
     <stringAttribute key="M2_RUNTIME" value="EMBEDDED"/>
-    <booleanAttribute key="M2_SKIP_TESTS" value="true"/>
+    <booleanAttribute key="M2_SKIP_TESTS" value="false"/>
     <intAttribute key="M2_THREADS" value="1"/>
     <booleanAttribute key="M2_UPDATE_SNAPSHOTS" value="false"/>
     <stringAttribute key="M2_USER_SETTINGS" value=""/>
@@ -19,6 +19,6 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
-    <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11/"/>
+    <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17/"/>
     <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:/build}/../"/>
 </launchConfiguration>
