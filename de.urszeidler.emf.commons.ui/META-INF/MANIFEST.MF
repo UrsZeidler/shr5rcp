@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Automatic-Module-Name: de.urszeidler.emf.commons.ui
 Bundle-Name: EMF Commons ui
 Bundle-SymbolicName: de.urszeidler.emf.commons.ui
-Bundle-Version: 1.1.0.qualifier
+Bundle-Version: 2.0.0.qualifier
 Bundle-Vendor: Urs Zeidler
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: org.eclipse.emf.edit.ui;visibility:=reexport,

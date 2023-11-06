@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="RCP schadowrun simple" uid="de.urszeidler.shr5.rcp.product.simple" id="de.urszeidler.shr5.product.shr5" application="de.urszeidler.shr5.product.app" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="RCP schadowrun simple" uid="de.urszeidler.shr5.rcp.product.simple" id="de.urszeidler.shr5.product.shr5" application="de.urszeidler.shr5.product.app" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true" autoIncludeRequirements="true">
 
    <aboutInfo>
       <image path="icons/shrImage_6_250.png"/>
@@ -65,7 +65,6 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
    <features>
       <feature id="de.urszeidler.shr5.dependecies.feature" installMode="root"/>
       <feature id="org.eclipse.justj.openjdk.hotspot.jre.full" installMode="root"/>
-      <feature id="de.urszeidler.emf.commons.feature"/>
       <feature id="de.urszeidler.shr5.feature"/>
       <feature id="de.urszeidler.shr5.localization.feature"/>
    </features>
