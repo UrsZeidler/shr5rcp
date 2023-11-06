@@ -37,7 +37,7 @@
       <import plugin="org.eclipse.core.databinding.beans" version="1.2.200" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.databinding.property" version="1.4.200" match="greaterOrEqual"/>
       <import plugin="org.eclipse.jface.databinding" version="1.6.200" match="greaterOrEqual"/>
-      <import plugin="de.urszeidler.emf.commons.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="de.urszeidler.emf.commons.ui" version="1.1.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.filesystem" version="1.4.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.nebula.paperclips.core" version="2.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.nebula.paperclips.widgets" version="2.0.0" match="greaterOrEqual"/>
@@ -76,8 +76,6 @@
       <import plugin="org.eclipse.jetty.server"/>
       <import plugin="org.eclipse.jetty.servlet"/>
       <import plugin="org.eclipse.jetty.util"/>
-      <import plugin="org.mortbay.jetty.server"/>
-      <import plugin="org.mortbay.jetty.util"/>
       <import plugin="org.eclipse.osgi.services"/>
       <import plugin="org.eclipse.equinox.jsp.jasper"/>
       <import plugin="org.eclipse.equinox.jsp.jasper.registry"/>
@@ -86,6 +84,7 @@
       <import plugin="com.ibm.icu"/>
       <import plugin="org.eclipse.emf.common"/>
       <import plugin="com.google.guava" version="15.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.help.base"/>
    </requires>
 
    <plugin
@@ -211,6 +210,13 @@
          download-size="0"
          install-size="0"
          version="0.3.0.qualifier"
+         unpack="false"/>
+
+   <plugin
+         id="de.urszeidler.emf.commons.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

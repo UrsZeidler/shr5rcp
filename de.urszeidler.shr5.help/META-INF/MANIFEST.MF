@@ -7,8 +7,10 @@ Bundle-Activator: de.urszeidler.shr5.help.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.eclipse.ui.intro,
- de.urszeidler.shr5.ecp
+ org.eclipse.ui.intro;bundle-version="3.6.600",
+ org.eclipse.core.expressions;bundle-version="3.8.200",
+ de.urszeidler.shr5.ecp,
+ org.eclipse.ui.forms;bundle-version="3.11.500"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: de.urszeidler.shr5.help

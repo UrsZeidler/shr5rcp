@@ -4,7 +4,7 @@
 <locations>
 
 		<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-			<repository location="http://download.eclipse.org/eclipse/updates/4.24/"/>
+			<repository location="http://download.eclipse.org/eclipse/updates/4.26/"/>
 			
 			<unit id="org.eclipse.ecf.core.feature.feature.group" version="0.0.0"/>
 			<unit id="org.eclipse.ecf.core.ssl.feature.feature.group" version="0.0.0"/>
@@ -20,6 +20,9 @@
 <unit id="org.eclipse.rcp.feature.group" version="0.0.0"/>
 <unit id="org.eclipse.platform.ide" version="0.0.0"/>
 <unit id="org.eclipse.platform.sdk" version="0.0.0"/>
+<unit id="org.eclipse.osgi.services" version="0.0.0"/>
+<unit id="org.eclipse.osgi.util" version="0.0.0"/>
+<unit id="jakarta.servlet-api" version="0.0.0"/>
 
 <unit id="org.eclipse.ecf.provider.filetransfer.ssl" version="0.0.0"/>
 <unit id="org.eclipse.ecf.ssl" version="0.0.0"/>
@@ -27,8 +30,9 @@
 <unit id="org.eclipse.ecf" version="0.0.0"/>
 <unit id="org.eclipse.ecf.filetransfer" version="0.0.0"/>
 <unit id="org.eclipse.ecf.provider.filetransfer" version="0.0.0"/>
-<unit id="org.eclipse.ecf.filetransfer.httpclient5.feature.feature.group" />
-<unit id="org.apache.commons.codec" version="0.0.0" />
+<unit id="org.eclipse.ecf.filetransfer.httpclient5.feature.feature.group" version="0.0.0"/>
+<unit id="org.eclipse.ecf.filetransfer.ssl.feature.feature.group" version="0.0.0"/>
+<unit id="org.apache.commons.codec" version="0.0.0"/>
 		</location>
 		
 
@@ -46,10 +50,13 @@
 <unit id="org.eclipse.emf.sdk.feature.group" version="0.0.0"/>
 <unit id="org.eclipse.emf.ecore.edit.feature.group" version="0.0.0"/>
 <unit id="org.eclipse.zest.sdk.feature.group" version="0.0.0"/>
-
+<unit id="org.apache.commons.io" version="0.0.0"/>
+<unit id="org.eclipse.jetty.server" version="0.0.0"/>
+<unit id="org.slf4j.api" version="0.0.0"/>
+<unit id="org.eclipse.e4.ui.progress" version="0.0.0"/>
 <unit id="org.eclipse.equinox.p2.rcp.feature.feature.group" version="0.0.0"/>
 <unit id="org.eclipse.equinox.p2.core.feature.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/releases/2022-06"/>
+<repository location="http://download.eclipse.org/releases/2022-12"/>
 </location>
 
 		
@@ -61,68 +68,9 @@
 
 <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 
-		<unit id="org.apache.batik.bridge" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.bridge.source" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.css" version="0.0.0"/>
-		<unit id="org.apache.batik.css.source" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.dom" version="1.7.1.v201505191845"/>
-		<unit id="org.apache.batik.dom.source" version="1.7.1.v201505191845"/>
-		<unit id="org.apache.batik.dom.svg" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.dom.svg.source" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.ext.awt" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.ext.awt.source" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.extension" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.extension.source" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.parser" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.parser.source" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.svggen" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.svggen.source" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.transcoder" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.transcoder.source" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.util" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.util.gui" version="0.0.0"/>
-		<unit id="org.apache.batik.util.gui.source" version="1.7.0.v200903091627"/>
-		<unit id="org.apache.batik.util.source" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.xml" version="1.7.0.v201011041433"/>
-		<unit id="org.apache.batik.xml.source" version="1.7.0.v201011041433"/>
 
 <unit id="javax.servlet.source" version="3.1.0.v201410161800"/>
 <unit id="javax.servlet" version="3.1.0.v201410161800"/>
-<unit id="org.apache.batik.ext.awt" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.ext.awt.source" version="1.7.0.v201011041433"/>
-<unit id="org.apache.jasper" version="7.0.56.v201412180755"/>
-<unit id="org.apache.log4j" version="1.2.15.v201012070815"/>
-<unit id="org.apache.batik.extension.source" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.bridge.source" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.dom.source" version="1.7.1.v201505191845"/>
-<unit id="org.apache.batik.extension" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.bridge" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.dom" version="1.7.1.v201505191845"/>
-<unit id="org.apache.commons.io" version="2.2.0.v201405211200"/>
-<unit id="org.apache.batik.transcoder" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.svggen.source" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.xml.source" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.util" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.css" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.util.gui" version="1.7.0.v200903091627"/>
-<unit id="org.mortbay.jetty.util.source" version="6.1.23.v201012071420"/>
-<unit id="org.apache.batik.svggen" version="1.7.0.v201011041433"/>
-<unit id="org.mortbay.jetty.server" version="6.1.23.v201012071420"/>
-<unit id="org.apache.batik.transcoder.source" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.dom.svg" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.dom.svg.source" version="1.7.0.v201011041433"/>
-<unit id="org.apache.batik.util.source" version="1.7.0.v201011041433"/>
-<unit id="com.google.guava" version="15.0.0.v201403281430"/>
-<unit id="org.mortbay.jetty.server.source" version="6.1.23.v201012071420"/>
-<unit id="org.mortbay.jetty.util" version="6.1.23.v201012071420"/>
-<unit id="org.apache.batik.parser" version="1.7.0.v201011041433"/>
-<unit id="com.google.guava.source" version="15.0.0.v201403281430"/>
-<unit id="org.apache.batik.xml" version="1.7.0.v201011041433"/>
-<unit id="org.json" version="1.0.0.v201011060100"/>
-<unit id="org.apache.xml.resolver" version="1.2.0.v201005080400"/>
-<unit id="org.apache.xml.serializer" version="2.7.1.v201005080400"/>
-<unit id="org.apache.xmlgraphics" version="1.4.0.v201301251218"/>
-<unit id="org.apache.xerces" version="2.9.0.v201101211617"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20150519210750/repository/"/>
 </location>
 
@@ -138,7 +86,7 @@
 <unit id="org.eclipse.emf.ecp.ecore.feature.source.feature.group" version="0.0.0"/>
 <unit id="org.eclipse.emf.ecp.feature.feature.group" version="0.0.0"/>
 <unit id="org.eclipse.emf.ecp.e3.feature.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/ecp/releases/releases_target_126/"/>
+<repository location="http://download.eclipse.org/ecp/releases/releases_target_127/"/>
 </location>
 
 
@@ -150,8 +98,8 @@
 	</location>
 
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<repository location="https://download.eclipse.org/justj/jres/17/updates/release/latest/" />
-		<unit id="org.eclipse.justj.openjdk.hotspot.jre.full.feature.group" version="0.0.0" />
+		<repository location="https://download.eclipse.org/justj/jres/17/updates/release/latest/"/>
+		<unit id="org.eclipse.justj.openjdk.hotspot.jre.full.feature.group" version="0.0.0"/>
 	</location>
 
 	
@@ -163,8 +111,9 @@
 
 	<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 		<repository location="https://download.eclipse.org/technology/babel/update-site/latest/"/>
-		<unit id="org.eclipse.babel.nls_eclipse_de.feature.group" version="0.0.0"/>
-		<unit id="org.eclipse.babel.nls_modeling.emf_de.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.babel.nls_eclipse_de.feature.group" version="4.26.0.v20230220105658"/>
+		<unit id="org.eclipse.babel.nls_modeling.emf_de.feature.group" version="4.26.0.v20230220105658"/>
+
 	</location>
 </locations>
 </target>

@@ -354,68 +354,7 @@
          version="0.0.0"
          unpack="false"/>
 
-   <plugin
-         id="org.apache.batik.svggen"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
 
-   <plugin
-         id="org.apache.batik.transcoder"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.xerces"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.xml.resolver"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.xml.serializer"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.batik.bridge"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.batik.dom"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.batik.dom.svg"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.batik.ext.awt"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
 
    <plugin
          id="org.apache.batik.util"
@@ -425,21 +364,7 @@
          unpack="false"/>
 
    <plugin
-         id="org.apache.batik.xml"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.w3c.dom.svg"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.batik.parser"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -489,13 +414,6 @@
 
    <plugin
          id="org.eclipse.equinox.http.servletbridge"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.jetty.continuation"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -565,20 +483,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.mortbay.jetty.server"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.mortbay.jetty.util"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.equinox.servletbridge"
          download-size="0"
          install-size="0"
@@ -586,7 +490,7 @@
          unpack="false"/>
 
    <plugin
-         id="javax.servlet.jsp"
+         id="javax.servlet.jsp-api"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -646,14 +550,6 @@
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.ecf.provider.filetransfer.httpclient4.ssl"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
@@ -815,16 +711,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.equinox.security.win32.x86"
-         os="win32"
-         arch="x86"
-         download-size="22"
-         install-size="47"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.equinox.security.win32.x86_64"
          os="win32"
          arch="x86_64"
@@ -884,27 +770,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.ecf.provider.filetransfer.httpclient4"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.httpcomponents.httpclient"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.httpcomponents.httpcore"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.ui.cheatsheets"
          download-size="0"
          install-size="0"
@@ -926,6 +791,27 @@
 
    <plugin
          id="org.tukaani.xz"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ecf.provider.filetransfer.httpclient5"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.httpcomponents.client5.httpclient5"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.httpcomponents.core5.httpcore5"
          download-size="0"
          install-size="0"
          version="0.0.0"
