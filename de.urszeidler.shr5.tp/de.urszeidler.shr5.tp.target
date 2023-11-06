@@ -4,7 +4,7 @@
 <locations>
 
 		<location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-			<repository location="http://download.eclipse.org/eclipse/updates/4.23"/>
+			<repository location="http://download.eclipse.org/eclipse/updates/4.24/"/>
 			
 			<unit id="org.eclipse.ecf.core.feature.feature.group" version="0.0.0"/>
 			<unit id="org.eclipse.ecf.core.ssl.feature.feature.group" version="0.0.0"/>
@@ -49,7 +49,7 @@
 
 <unit id="org.eclipse.equinox.p2.rcp.feature.feature.group" version="0.0.0"/>
 <unit id="org.eclipse.equinox.p2.core.feature.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/releases/2022-03"/>
+<repository location="http://download.eclipse.org/releases/2022-06"/>
 </location>
 
 		
