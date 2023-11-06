@@ -1,5 +1,6 @@
 jenkins:
   numExecutors: 1
+unclassified:
   globalConfigFiles:
     configs:
     - globalMavenSettings:
