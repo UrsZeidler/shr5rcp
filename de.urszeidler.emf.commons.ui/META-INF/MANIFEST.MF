@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Automatic-Module-Name: de.urszeidler.emf.commons.ui
+Bundle-Name: EMF Commons ui
+Bundle-SymbolicName: de.urszeidler.emf.commons.ui
+Bundle-Version: 1.1.0.qualifier
+Bundle-Vendor: Urs Zeidler
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: org.eclipse.emf.edit.ui;visibility:=reexport,
+ org.eclipse.emf.databinding;resolution:=optional,
+ org.eclipse.emf.databinding.edit;resolution:=optional,
+ org.eclipse.jface.databinding;resolution:=optional,
+ org.eclipse.core.runtime;resolution:=optional,
+ org.eclipse.ui.browser;resolution:=optional,
+ org.eclipse.ui.views.properties.tabbed;resolution:=optional,
+ org.eclipse.ui.forms;resolution:=optional,
+ org.eclipse.core.databinding.property;resolution:=optional,
+ org.eclipse.ui.ide;resolution:=optional,
+ org.eclipse.core.resources;resolution:=optional,
+ org.eclipse.core.databinding.beans;resolution:=optional,
+ com.ibm.icu;resolution:=optional
+Export-Package: de.urszeidler.commons,
+ de.urszeidler.commons.eclipse.preferences.editor,
+ de.urszeidler.commons.functors,
+ de.urszeidler.commons.security,
+ de.urszeidler.emf.commons.ui.actions,
+ de.urszeidler.emf.commons.ui.binding,
+ de.urszeidler.emf.commons.ui.dialogs,
+ de.urszeidler.emf.commons.ui.editor,
+ de.urszeidler.emf.commons.ui.util,
+ de.urszeidler.emf.commons.ui.util.converter,
+ de.urszeidler.emf.commons.ui.validators,
+ de.urszeidler.emf.commons.ui.view
+
