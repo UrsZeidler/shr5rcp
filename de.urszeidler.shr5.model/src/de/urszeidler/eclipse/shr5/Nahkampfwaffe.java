@@ -10,10 +10,10 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Nahkampfwaffe#getReichweite <em>Reichweite</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getNahkampfwaffe()
  * @model

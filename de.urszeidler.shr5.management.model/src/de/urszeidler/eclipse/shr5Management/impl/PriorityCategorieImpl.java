@@ -17,11 +17,11 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PriorityCategorieImpl#getCategorieName <em>Categorie Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PriorityCategorieImpl#getCost <em>Cost</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -90,7 +90,8 @@ public abstract class PriorityCategorieImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getCategorieName() {
+	@Override
+    public String getCategorieName() {
         return categorieName;
     }
 
@@ -99,7 +100,8 @@ public abstract class PriorityCategorieImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setCategorieName(String newCategorieName) {
+	@Override
+    public void setCategorieName(String newCategorieName) {
         String oldCategorieName = categorieName;
         categorieName = newCategorieName;
         if (eNotificationRequired())
@@ -111,6 +113,7 @@ public abstract class PriorityCategorieImpl extends MinimalEObjectImpl.Container
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getCost() {
         return cost;
     }
@@ -120,6 +123,7 @@ public abstract class PriorityCategorieImpl extends MinimalEObjectImpl.Container
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCost(int newCost) {
         int oldCost = cost;
         cost = newCost;
@@ -204,7 +208,7 @@ public abstract class PriorityCategorieImpl extends MinimalEObjectImpl.Container
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (categorieName: ");
         result.append(categorieName);
         result.append(", cost: ");

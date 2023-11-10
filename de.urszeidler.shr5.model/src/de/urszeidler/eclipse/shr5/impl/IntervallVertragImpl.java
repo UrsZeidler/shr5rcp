@@ -19,12 +19,12 @@ import de.urszeidler.eclipse.shr5.TimeUnits;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.IntervallVertragImpl#getFaelligkeitsIntervall <em>Faelligkeits Intervall</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.IntervallVertragImpl#getUnit <em>Unit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.IntervallVertragImpl#getBegin <em>Begin</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -113,6 +113,7 @@ public class IntervallVertragImpl extends VertragImpl implements IntervallVertra
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getFaelligkeitsIntervall() {
         return faelligkeitsIntervall;
     }
@@ -122,6 +123,7 @@ public class IntervallVertragImpl extends VertragImpl implements IntervallVertra
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setFaelligkeitsIntervall(int newFaelligkeitsIntervall) {
         int oldFaelligkeitsIntervall = faelligkeitsIntervall;
         faelligkeitsIntervall = newFaelligkeitsIntervall;
@@ -134,6 +136,7 @@ public class IntervallVertragImpl extends VertragImpl implements IntervallVertra
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public TimeUnits getUnit() {
         return unit;
     }
@@ -143,6 +146,7 @@ public class IntervallVertragImpl extends VertragImpl implements IntervallVertra
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setUnit(TimeUnits newUnit) {
         TimeUnits oldUnit = unit;
         unit = newUnit == null ? UNIT_EDEFAULT : newUnit;
@@ -155,6 +159,7 @@ public class IntervallVertragImpl extends VertragImpl implements IntervallVertra
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getBegin() {
         return begin;
     }
@@ -164,6 +169,7 @@ public class IntervallVertragImpl extends VertragImpl implements IntervallVertra
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBegin(Date newBegin) {
         Date oldBegin = begin;
         begin = newBegin;
@@ -258,7 +264,7 @@ public class IntervallVertragImpl extends VertragImpl implements IntervallVertra
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (faelligkeitsIntervall: ");
         result.append(faelligkeitsIntervall);
         result.append(", unit: ");

@@ -25,6 +25,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl#getDate <em>Date</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl#getKarmaCost <em>Karma Cost</em>}</li>
@@ -32,7 +33,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl#isChangeApplied <em>Change Applied</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ChangesImpl#getDateApplied <em>Date Applied</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -131,6 +131,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getDate() {
         return date;
     }
@@ -140,6 +141,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDate(Date newDate) {
         Date oldDate = date;
         date = newDate;
@@ -162,6 +164,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ManagedCharacter getCharacter() {
         if (eContainerFeatureID() != Shr5managementPackage.CHANGES__CHARACTER) return null;
         return (ManagedCharacter)eInternalContainer();
@@ -182,6 +185,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCharacter(ManagedCharacter newCharacter) {
         if (newCharacter != eInternalContainer() || (eContainerFeatureID() != Shr5managementPackage.CHANGES__CHARACTER && newCharacter != null)) {
             if (EcoreUtil.isAncestor(this, newCharacter))
@@ -203,6 +207,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isChangeApplied() {
         return changeApplied;
     }
@@ -212,6 +217,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setChangeApplied(boolean newChangeApplied) {
         boolean oldChangeApplied = changeApplied;
         changeApplied = newChangeApplied;
@@ -224,6 +230,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getDateApplied() {
         return dateApplied;
     }
@@ -233,6 +240,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDateApplied(Date newDateApplied) {
         Date oldDateApplied = dateApplied;
         dateApplied = newDateApplied;
@@ -410,7 +418,7 @@ public abstract class ChangesImpl extends MinimalEObjectImpl.Container implement
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (date: ");
         result.append(date);
         result.append(", changeApplied: ");

@@ -17,11 +17,11 @@ import org.eclipse.emf.ecore.EReference;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ModuleFeatureChange#getFeature <em>Feature</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ModuleFeatureChange#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getModuleFeatureChange()
  * @model

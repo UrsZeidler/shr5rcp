@@ -20,10 +20,10 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SuccesTestCmdImpl#getDicePool <em>Dice Pool</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -72,6 +72,7 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getDicePool() {
         return dicePool;
     }
@@ -81,6 +82,7 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDicePool(int newDicePool) {
         int oldDicePool = dicePool;
         dicePool = newDicePool;
@@ -155,7 +157,7 @@ public class SuccesTestCmdImpl extends ProbeCommandImpl implements SuccesTestCmd
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (dicePool: ");
         result.append(dicePool);
         result.append(')');

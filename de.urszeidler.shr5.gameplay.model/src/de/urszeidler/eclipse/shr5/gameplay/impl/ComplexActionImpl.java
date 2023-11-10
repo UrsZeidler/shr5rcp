@@ -12,8 +12,6 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Complex Action</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

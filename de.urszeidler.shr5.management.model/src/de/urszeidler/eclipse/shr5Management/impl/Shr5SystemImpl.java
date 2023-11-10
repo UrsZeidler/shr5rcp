@@ -20,6 +20,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getKarmaToResourceFactor <em>Karma To Resource Factor</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getKarmaToMagicFactor <em>Karma To Magic Factor</em>}</li>
@@ -39,7 +40,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getMaxMartialArtStyles <em>Max Martial Art Styles</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5SystemImpl#getSumToTenValue <em>Sum To Ten Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -377,7 +377,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getKarmaToResourceFactor() {
+	@Override
+    public int getKarmaToResourceFactor() {
         return karmaToResourceFactor;
     }
 
@@ -386,7 +387,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setKarmaToResourceFactor(int newKarmaToResourceFactor) {
+	@Override
+    public void setKarmaToResourceFactor(int newKarmaToResourceFactor) {
         int oldKarmaToResourceFactor = karmaToResourceFactor;
         karmaToResourceFactor = newKarmaToResourceFactor;
         if (eNotificationRequired())
@@ -398,7 +400,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getKarmaToMagicFactor() {
+	@Override
+    public int getKarmaToMagicFactor() {
         return karmaToMagicFactor;
     }
 
@@ -407,7 +410,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setKarmaToMagicFactor(int newKarmaToMagicFactor) {
+	@Override
+    public void setKarmaToMagicFactor(int newKarmaToMagicFactor) {
         int oldKarmaToMagicFactor = karmaToMagicFactor;
         karmaToMagicFactor = newKarmaToMagicFactor;
         if (eNotificationRequired())
@@ -419,7 +423,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getNumberOfMaxAttributes() {
+	@Override
+    public int getNumberOfMaxAttributes() {
         return numberOfMaxAttributes;
     }
 
@@ -428,7 +433,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setNumberOfMaxAttributes(int newNumberOfMaxAttributes) {
+	@Override
+    public void setNumberOfMaxAttributes(int newNumberOfMaxAttributes) {
         int oldNumberOfMaxAttributes = numberOfMaxAttributes;
         numberOfMaxAttributes = newNumberOfMaxAttributes;
         if (eNotificationRequired())
@@ -440,7 +446,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getKnowlegeSkillFactor() {
+	@Override
+    public int getKnowlegeSkillFactor() {
         return knowlegeSkillFactor;
     }
 
@@ -449,7 +456,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setKnowlegeSkillFactor(int newKnowlegeSkillFactor) {
+	@Override
+    public void setKnowlegeSkillFactor(int newKnowlegeSkillFactor) {
         int oldKnowlegeSkillFactor = knowlegeSkillFactor;
         knowlegeSkillFactor = newKnowlegeSkillFactor;
         if (eNotificationRequired())
@@ -461,7 +469,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getCharismaToConnectionFactor() {
+	@Override
+    public int getCharismaToConnectionFactor() {
         return charismaToConnectionFactor;
     }
 
@@ -470,7 +479,8 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setCharismaToConnectionFactor(int newCharismaToConnectionFactor) {
+	@Override
+    public void setCharismaToConnectionFactor(int newCharismaToConnectionFactor) {
         int oldCharismaToConnectionFactor = charismaToConnectionFactor;
         charismaToConnectionFactor = newCharismaToConnectionFactor;
         if (eNotificationRequired())
@@ -482,6 +492,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getMaxResourceToKeep() {
         return maxResourceToKeep;
     }
@@ -491,6 +502,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMaxResourceToKeep(int newMaxResourceToKeep) {
         int oldMaxResourceToKeep = maxResourceToKeep;
         maxResourceToKeep = newMaxResourceToKeep;
@@ -503,6 +515,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getMaxKarmaToResources() {
         return maxKarmaToResources;
     }
@@ -512,6 +525,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMaxKarmaToResources(int newMaxKarmaToResources) {
         int oldMaxKarmaToResources = maxKarmaToResources;
         maxKarmaToResources = newMaxKarmaToResources;
@@ -524,6 +538,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getMaxKarmaToKeep() {
         return maxKarmaToKeep;
     }
@@ -533,6 +548,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMaxKarmaToKeep(int newMaxKarmaToKeep) {
         int oldMaxKarmaToKeep = maxKarmaToKeep;
         maxKarmaToKeep = newMaxKarmaToKeep;
@@ -545,6 +561,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getSkillMax() {
         return skillMax;
     }
@@ -554,6 +571,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSkillMax(int newSkillMax) {
         int oldSkillMax = skillMax;
         skillMax = newSkillMax;
@@ -566,6 +584,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getNumberOfSpecalism() {
         return numberOfSpecalism;
     }
@@ -575,6 +594,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setNumberOfSpecalism(int newNumberOfSpecalism) {
         int oldNumberOfSpecalism = numberOfSpecalism;
         numberOfSpecalism = newNumberOfSpecalism;
@@ -587,6 +607,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getKarmaToConnectionFactor() {
         return karmaToConnectionFactor;
     }
@@ -596,6 +617,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setKarmaToConnectionFactor(int newKarmaToConnectionFactor) {
         int oldKarmaToConnectionFactor = karmaToConnectionFactor;
         karmaToConnectionFactor = newKarmaToConnectionFactor;
@@ -608,6 +630,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getBoundSprititServiceCost() {
         return boundSprititServiceCost;
     }
@@ -617,6 +640,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBoundSprititServiceCost(int newBoundSprititServiceCost) {
         int oldBoundSprititServiceCost = boundSprititServiceCost;
         boundSprititServiceCost = newBoundSprititServiceCost;
@@ -629,6 +653,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<EClass> getApplicableGenerators() {
         if (applicableGenerators == null) {
             applicableGenerators = new EObjectResolvingEList<EClass>(EClass.class, this, Shr5managementPackage.SHR5_SYSTEM__APPLICABLE_GENERATORS);
@@ -641,6 +666,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getMaxConnectionRating() {
         return maxConnectionRating;
     }
@@ -650,6 +676,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMaxConnectionRating(int newMaxConnectionRating) {
         int oldMaxConnectionRating = maxConnectionRating;
         maxConnectionRating = newMaxConnectionRating;
@@ -662,6 +689,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getFreeMartialArtTechniques() {
         return freeMartialArtTechniques;
     }
@@ -671,6 +699,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setFreeMartialArtTechniques(int newFreeMartialArtTechniques) {
         int oldFreeMartialArtTechniques = freeMartialArtTechniques;
         freeMartialArtTechniques = newFreeMartialArtTechniques;
@@ -683,6 +712,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getMaxMartialArtStyles() {
         return maxMartialArtStyles;
     }
@@ -692,6 +722,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMaxMartialArtStyles(int newMaxMartialArtStyles) {
         int oldMaxMartialArtStyles = maxMartialArtStyles;
         maxMartialArtStyles = newMaxMartialArtStyles;
@@ -704,6 +735,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getSumToTenValue() {
         return sumToTenValue;
     }
@@ -713,6 +745,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSumToTenValue(int newSumToTenValue) {
         int oldSumToTenValue = sumToTenValue;
         sumToTenValue = newSumToTenValue;
@@ -949,7 +982,7 @@ public class Shr5SystemImpl extends PrioritySystemImpl implements Shr5System {
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (karmaToResourceFactor: ");
         result.append(karmaToResourceFactor);
         result.append(", karmaToMagicFactor: ");

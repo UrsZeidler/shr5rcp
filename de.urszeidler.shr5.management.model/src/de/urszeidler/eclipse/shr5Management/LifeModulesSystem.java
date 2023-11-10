@@ -12,11 +12,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.LifeModulesSystem#getModules <em>Modules</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.LifeModulesSystem#getKnowlegeSkillMax <em>Knowlege Skill Max</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getLifeModulesSystem()
  * @model

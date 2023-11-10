@@ -18,11 +18,11 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitsGruppeImpl#getStufe <em>Stufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitsGruppeImpl#getGruppe <em>Gruppe</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -81,7 +81,8 @@ public class PersonaFertigkeitsGruppeImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public FertigkeitsGruppe getGruppe() {
+	@Override
+    public FertigkeitsGruppe getGruppe() {
         if (gruppe != null && gruppe.eIsProxy()) {
             InternalEObject oldGruppe = (InternalEObject)gruppe;
             gruppe = (FertigkeitsGruppe)eResolveProxy(oldGruppe);
@@ -107,7 +108,8 @@ public class PersonaFertigkeitsGruppeImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setGruppe(FertigkeitsGruppe newGruppe) {
+	@Override
+    public void setGruppe(FertigkeitsGruppe newGruppe) {
         FertigkeitsGruppe oldGruppe = gruppe;
         gruppe = newGruppe;
         if (eNotificationRequired())
@@ -119,7 +121,8 @@ public class PersonaFertigkeitsGruppeImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getStufe() {
+	@Override
+    public int getStufe() {
         return stufe;
     }
 
@@ -128,7 +131,8 @@ public class PersonaFertigkeitsGruppeImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setStufe(int newStufe) {
+	@Override
+    public void setStufe(int newStufe) {
         int oldStufe = stufe;
         stufe = newStufe;
         if (eNotificationRequired())
@@ -213,7 +217,7 @@ public class PersonaFertigkeitsGruppeImpl extends MinimalEObjectImpl.Container i
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (stufe: ");
         result.append(stufe);
         result.append(')');

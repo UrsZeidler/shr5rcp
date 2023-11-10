@@ -19,13 +19,13 @@ import de.urszeidler.eclipse.shr5.ZauberArt;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CritterKraftImpl#getArt <em>Art</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CritterKraftImpl#getHandlung <em>Handlung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CritterKraftImpl#getReichweite <em>Reichweite</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CritterKraftImpl#getDauer <em>Dauer</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -134,7 +134,8 @@ public class CritterKraftImpl extends MagischeModsImpl implements CritterKraft {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public ZauberArt getArt() {
+	@Override
+    public ZauberArt getArt() {
         return art;
     }
 
@@ -143,7 +144,8 @@ public class CritterKraftImpl extends MagischeModsImpl implements CritterKraft {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setArt(ZauberArt newArt) {
+	@Override
+    public void setArt(ZauberArt newArt) {
         ZauberArt oldArt = art;
         art = newArt == null ? ART_EDEFAULT : newArt;
         if (eNotificationRequired())
@@ -155,7 +157,8 @@ public class CritterKraftImpl extends MagischeModsImpl implements CritterKraft {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public CritterHandlung getHandlung() {
+	@Override
+    public CritterHandlung getHandlung() {
         return handlung;
     }
 
@@ -164,7 +167,8 @@ public class CritterKraftImpl extends MagischeModsImpl implements CritterKraft {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setHandlung(CritterHandlung newHandlung) {
+	@Override
+    public void setHandlung(CritterHandlung newHandlung) {
         CritterHandlung oldHandlung = handlung;
         handlung = newHandlung == null ? HANDLUNG_EDEFAULT : newHandlung;
         if (eNotificationRequired())
@@ -176,7 +180,8 @@ public class CritterKraftImpl extends MagischeModsImpl implements CritterKraft {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public CritterReichweite getReichweite() {
+	@Override
+    public CritterReichweite getReichweite() {
         return reichweite;
     }
 
@@ -185,7 +190,8 @@ public class CritterKraftImpl extends MagischeModsImpl implements CritterKraft {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setReichweite(CritterReichweite newReichweite) {
+	@Override
+    public void setReichweite(CritterReichweite newReichweite) {
         CritterReichweite oldReichweite = reichweite;
         reichweite = newReichweite == null ? REICHWEITE_EDEFAULT : newReichweite;
         if (eNotificationRequired())
@@ -197,7 +203,8 @@ public class CritterKraftImpl extends MagischeModsImpl implements CritterKraft {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public CritterDauer getDauer() {
+	@Override
+    public CritterDauer getDauer() {
         return dauer;
     }
 
@@ -206,7 +213,8 @@ public class CritterKraftImpl extends MagischeModsImpl implements CritterKraft {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setDauer(CritterDauer newDauer) {
+	@Override
+    public void setDauer(CritterDauer newDauer) {
         CritterDauer oldDauer = dauer;
         dauer = newDauer == null ? DAUER_EDEFAULT : newDauer;
         if (eNotificationRequired())
@@ -310,7 +318,7 @@ public class CritterKraftImpl extends MagischeModsImpl implements CritterKraft {
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (art: ");
         result.append(art);
         result.append(", handlung: ");

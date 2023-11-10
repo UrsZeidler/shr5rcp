@@ -22,10 +22,10 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GamemasterManagementImpl#getGrunts <em>Grunts</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -64,6 +64,7 @@ public class GamemasterManagementImpl extends PlayerManagementImpl implements Ga
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<GruntGroup> getGrunts() {
         if (grunts == null) {
             grunts = new EObjectContainmentEList<GruntGroup>(GruntGroup.class, this, Shr5managementPackage.GAMEMASTER_MANAGEMENT__GRUNTS);

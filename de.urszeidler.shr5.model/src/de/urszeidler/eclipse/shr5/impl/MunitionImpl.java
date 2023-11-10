@@ -22,6 +22,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getAnzahl <em>Anzahl</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getProAnzahl <em>Pro Anzahl</em>}</li>
@@ -30,7 +31,6 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getArmorMod <em>Armor Mod</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MunitionImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -169,6 +169,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getAnzahl() {
         return anzahl;
     }
@@ -191,6 +192,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getProAnzahl() {
         return proAnzahl;
     }
@@ -213,6 +215,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SchadensTyp getDamageType() {
         return damageType;
     }
@@ -222,6 +225,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDamageType(SchadensTyp newDamageType) {
         SchadensTyp oldDamageType = damageType;
         damageType = newDamageType == null ? DAMAGE_TYPE_EDEFAULT : newDamageType;
@@ -234,6 +238,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getDamageMod() {
         return damageMod;
     }
@@ -243,6 +248,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDamageMod(int newDamageMod) {
         int oldDamageMod = damageMod;
         damageMod = newDamageMod;
@@ -255,6 +261,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getArmorMod() {
         return armorMod;
     }
@@ -264,6 +271,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setArmorMod(int newArmorMod) {
         int oldArmorMod = armorMod;
         armorMod = newArmorMod;
@@ -295,6 +303,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Reichweite getType() {
         if (type != null && type.eIsProxy()) {
             InternalEObject oldType = (InternalEObject)type;
@@ -321,6 +330,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setType(Reichweite newType) {
         Reichweite oldType = type;
         type = newType;
@@ -480,7 +490,7 @@ public class MunitionImpl extends AbstraktGegenstandImpl implements Munition {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (anzahl: ");
         result.append(anzahl);
         result.append(", proAnzahl: ");

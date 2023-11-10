@@ -15,12 +15,12 @@ package de.urszeidler.eclipse.shr5.gameplay;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTest#getThresholds <em>Thresholds</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTest#getNetHits <em>Net Hits</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTest#getTestState <em>Test State</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSuccesTest()
  * @model interface="true" abstract="true"

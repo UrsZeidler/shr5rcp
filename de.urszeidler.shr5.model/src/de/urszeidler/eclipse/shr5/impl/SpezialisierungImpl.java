@@ -32,6 +32,7 @@ import de.urszeidler.eclipse.shr5.Spezialisierung;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpezialisierungImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpezialisierungImpl#getImage <em>Image</em>}</li>
@@ -42,7 +43,6 @@ import de.urszeidler.eclipse.shr5.Spezialisierung;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpezialisierungImpl#getSrcBook <em>Src Book</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpezialisierungImpl#getFertigkeit <em>Fertigkeit</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -191,6 +191,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -200,6 +201,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -212,6 +214,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -221,6 +224,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -233,6 +237,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -242,6 +247,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -254,6 +260,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -263,6 +270,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -275,6 +283,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.SPEZIALISIERUNG__LOCALIZATIONS);
@@ -287,6 +296,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getPage() {
         return page;
     }
@@ -296,6 +306,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
@@ -308,6 +319,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
@@ -334,6 +346,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
@@ -346,6 +359,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Fertigkeit getFertigkeit() {
         if (eContainerFeatureID() != Shr5Package.SPEZIALISIERUNG__FERTIGKEIT) return null;
         return (Fertigkeit)eInternalContainer();
@@ -366,6 +380,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setFertigkeit(Fertigkeit newFertigkeit) {
         if (newFertigkeit != eInternalContainer() || (eContainerFeatureID() != Shr5Package.SPEZIALISIERUNG__FERTIGKEIT && newFertigkeit != null)) {
             if (EcoreUtil.isAncestor(this, newFertigkeit))
@@ -636,7 +651,7 @@ public class SpezialisierungImpl extends MinimalEObjectImpl.Container implements
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EAttribute;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getProgramSlots <em>Program Slots</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getAttribute1 <em>Attribute1</em>}</li>
@@ -28,7 +29,6 @@ import org.eclipse.emf.ecore.EAttribute;
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getRunningPrograms <em>Running Programs</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberdeck#getModManager <em>Mod Manager</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberdeck()
  * @model

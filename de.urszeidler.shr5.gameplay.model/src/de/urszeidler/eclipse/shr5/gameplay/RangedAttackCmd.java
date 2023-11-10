@@ -17,13 +17,13 @@ import de.urszeidler.eclipse.shr5.FeuerModus;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getModus <em>Modus</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getRange <em>Range</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getWeapon <em>Weapon</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.RangedAttackCmd#getNumberOfShoots <em>Number Of Shoots</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getRangedAttackCmd()
  * @model

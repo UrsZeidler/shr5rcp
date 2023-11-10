@@ -21,11 +21,11 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.OpposedSkillTestCmdImpl#getObject <em>Object</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.OpposedSkillTestCmdImpl#getObjectSkill <em>Object Skill</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -74,6 +74,7 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public RuntimeCharacter getObject() {
         if (object != null && object.eIsProxy()) {
             InternalEObject oldObject = (InternalEObject)object;
@@ -100,6 +101,7 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setObject(RuntimeCharacter newObject) {
         RuntimeCharacter oldObject = object;
         object = newObject;
@@ -112,6 +114,7 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Fertigkeit getObjectSkill() {
         if (objectSkill != null && objectSkill.eIsProxy()) {
             InternalEObject oldObjectSkill = (InternalEObject)objectSkill;
@@ -138,6 +141,7 @@ public class OpposedSkillTestCmdImpl extends SkillTestCmdImpl implements Opposed
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setObjectSkill(Fertigkeit newObjectSkill) {
         Fertigkeit oldObjectSkill = objectSkill;
         objectSkill = newObjectSkill;

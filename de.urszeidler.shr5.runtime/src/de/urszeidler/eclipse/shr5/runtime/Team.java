@@ -13,10 +13,10 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.Team#getMembers <em>Members</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.runtime.RuntimePackage#getTeam()
  * @model

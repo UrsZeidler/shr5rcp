@@ -16,10 +16,10 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.KarmaGaintImpl#getKarma <em>Karma</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -68,7 +68,8 @@ public class KarmaGaintImpl extends ChangesImpl implements KarmaGaint {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getKarma() {
+	@Override
+    public int getKarma() {
         return karma;
     }
 
@@ -77,7 +78,8 @@ public class KarmaGaintImpl extends ChangesImpl implements KarmaGaint {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setKarma(int newKarma) {
+	@Override
+    public void setKarma(int newKarma) {
         int oldKarma = karma;
         karma = newKarma;
         if (eNotificationRequired())
@@ -171,7 +173,7 @@ public class KarmaGaintImpl extends ChangesImpl implements KarmaGaint {
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (karma: ");
         result.append(karma);
         result.append(')');

@@ -11,12 +11,12 @@ import java.util.Date;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.SourceBook#getStartShrTime <em>Start Shr Time</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.SourceBook#getEndShrTime <em>End Shr Time</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.SourceBook#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getSourceBook()
  * @model

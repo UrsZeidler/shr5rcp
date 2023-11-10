@@ -35,11 +35,11 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Skill</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.SkillImpl#getSkillPoints <em>Skill Points</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.SkillImpl#getGroupPoints <em>Group Points</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -101,6 +101,7 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getSkillPoints() {
         return skillPoints;
     }
@@ -109,6 +110,7 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSkillPoints(int newSkillPoints) {
         int oldSkillPoints = skillPoints;
         skillPoints = newSkillPoints;
@@ -120,6 +122,7 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getGroupPoints() {
         return groupPoints;
     }
@@ -128,6 +131,7 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setGroupPoints(int newGroupPoints) {
         int oldGroupPoints = groupPoints;
         groupPoints = newGroupPoints;
@@ -330,7 +334,7 @@ public class SkillImpl extends PriorityCategorieImpl implements Skill {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (skillPoints: ");
         result.append(skillPoints);
         result.append(", groupPoints: ");

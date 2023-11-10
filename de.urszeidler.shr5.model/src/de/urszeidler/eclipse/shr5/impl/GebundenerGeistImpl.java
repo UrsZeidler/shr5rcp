@@ -20,11 +20,11 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GebundenerGeistImpl#getDienste <em>Dienste</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GebundenerGeistImpl#getGeist <em>Geist</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -83,6 +83,7 @@ public class GebundenerGeistImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getDienste() {
         return dienste;
     }
@@ -92,6 +93,7 @@ public class GebundenerGeistImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDienste(int newDienste) {
         int oldDienste = dienste;
         dienste = newDienste;
@@ -104,6 +106,7 @@ public class GebundenerGeistImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Geist getGeist() {
         return geist;
     }
@@ -128,6 +131,7 @@ public class GebundenerGeistImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setGeist(Geist newGeist) {
         if (newGeist != geist) {
             NotificationChain msgs = null;
@@ -233,7 +237,7 @@ public class GebundenerGeistImpl extends MinimalEObjectImpl.Container implements
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (dienste: ");
         result.append(dienste);
         result.append(')');

@@ -19,11 +19,11 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.DiaryEntryImpl#getDate <em>Date</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.DiaryEntryImpl#getMessage <em>Message</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -92,6 +92,7 @@ public class DiaryEntryImpl extends MinimalEObjectImpl.Container implements Diar
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getDate() {
         return date;
     }
@@ -101,6 +102,7 @@ public class DiaryEntryImpl extends MinimalEObjectImpl.Container implements Diar
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDate(Date newDate) {
         Date oldDate = date;
         date = newDate;
@@ -113,6 +115,7 @@ public class DiaryEntryImpl extends MinimalEObjectImpl.Container implements Diar
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getMessage() {
         return message;
     }
@@ -122,6 +125,7 @@ public class DiaryEntryImpl extends MinimalEObjectImpl.Container implements Diar
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMessage(String newMessage) {
         String oldMessage = message;
         message = newMessage;
@@ -206,7 +210,7 @@ public class DiaryEntryImpl extends MinimalEObjectImpl.Container implements Diar
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (date: ");
         result.append(date);
         result.append(", message: ");

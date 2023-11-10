@@ -30,6 +30,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KleidungImpl#getCapacityFeature <em>Capacity Feature</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KleidungImpl#getCapacity <em>Capacity</em>}</li>
@@ -37,7 +38,6 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KleidungImpl#getRuestung <em>Ruestung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KleidungImpl#getKmods <em>Kmods</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -139,6 +139,7 @@ public class KleidungImpl extends AbstraktGegenstandImpl implements Kleidung {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCapacityFeature() {
         EReference capacityFeature = basicGetCapacityFeature();
         return capacityFeature != null && capacityFeature.eIsProxy() ? (EReference)eResolveProxy((InternalEObject)capacityFeature) : capacityFeature;
@@ -181,7 +182,8 @@ public class KleidungImpl extends AbstraktGegenstandImpl implements Kleidung {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getRuestung() {
+	@Override
+    public int getRuestung() {
         return ruestung;
     }
 
@@ -190,7 +192,8 @@ public class KleidungImpl extends AbstraktGegenstandImpl implements Kleidung {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setRuestung(int newRuestung) {
+	@Override
+    public void setRuestung(int newRuestung) {
         int oldRuestung = ruestung;
         ruestung = newRuestung;
         if (eNotificationRequired())
@@ -202,6 +205,7 @@ public class KleidungImpl extends AbstraktGegenstandImpl implements Kleidung {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<KleindungsModifikator> getKmods() {
         if (kmods == null) {
             kmods = new EObjectContainmentEList<KleindungsModifikator>(KleindungsModifikator.class, this, Shr5Package.KLEIDUNG__KMODS);
@@ -394,7 +398,7 @@ public class KleidungImpl extends AbstraktGegenstandImpl implements Kleidung {
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (ruestung: ");
         result.append(ruestung);
         result.append(')');

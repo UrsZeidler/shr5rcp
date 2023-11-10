@@ -14,11 +14,11 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Bodenfahrzeug#getHandlingGelaende <em>Handling Gelaende</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Bodenfahrzeug#getGeschwindigkeitGelaende <em>Geschwindigkeit Gelaende</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getBodenfahrzeug()
  * @model

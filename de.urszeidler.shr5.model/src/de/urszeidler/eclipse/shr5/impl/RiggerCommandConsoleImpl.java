@@ -33,6 +33,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.RiggerCommandConsoleImpl#getMatrixZustandMax <em>Matrix Zustand Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.RiggerCommandConsoleImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
@@ -49,7 +50,6 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.RiggerCommandConsoleImpl#getStoredPrograms <em>Stored Programs</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.RiggerCommandConsoleImpl#getRunningPrograms <em>Running Programs</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -346,6 +346,7 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public InterfaceModus getCurrentModus() {
         return currentModus;
     }
@@ -355,6 +356,7 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCurrentModus(InterfaceModus newCurrentModus) {
         InterfaceModus oldCurrentModus = currentModus;
         currentModus = newCurrentModus == null ? CURRENT_MODUS_EDEFAULT : newCurrentModus;
@@ -367,6 +369,7 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public PersonalAreaNetwork getPan() {
         return pan;
     }
@@ -391,6 +394,7 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPan(PersonalAreaNetwork newPan) {
         if (newPan != pan) {
             NotificationChain msgs = null;
@@ -410,6 +414,7 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getDeviceRating() {
         return deviceRating;
     }
@@ -419,6 +424,7 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDeviceRating(int newDeviceRating) {
         int oldDeviceRating = deviceRating;
         deviceRating = newDeviceRating;
@@ -431,6 +437,7 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getDatenverarbeitungBasis() {
         return datenverarbeitungBasis;
     }
@@ -440,6 +447,7 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDatenverarbeitungBasis(int newDatenverarbeitungBasis) {
         int oldDatenverarbeitungBasis = datenverarbeitungBasis;
         datenverarbeitungBasis = newDatenverarbeitungBasis;
@@ -452,6 +460,7 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getFirewallBasis() {
         return firewallBasis;
     }
@@ -461,6 +470,7 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setFirewallBasis(int newFirewallBasis) {
         int oldFirewallBasis = firewallBasis;
         firewallBasis = newFirewallBasis;
@@ -473,6 +483,7 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getZugriffBasis() {
         return zugriffBasis;
     }
@@ -498,6 +509,7 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<RiggerProgram> getStoredPrograms() {
         if (storedPrograms == null) {
             storedPrograms = new EObjectContainmentEList<RiggerProgram>(RiggerProgram.class, this, Shr5Package.RIGGER_COMMAND_CONSOLE__STORED_PROGRAMS);
@@ -510,6 +522,7 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<RiggerProgram> getRunningPrograms() {
         if (runningPrograms == null) {
             runningPrograms = new EObjectResolvingEList<RiggerProgram>(RiggerProgram.class, this, Shr5Package.RIGGER_COMMAND_CONSOLE__RUNNING_PROGRAMS);
@@ -789,7 +802,7 @@ public class RiggerCommandConsoleImpl extends AbstraktGegenstandImpl implements 
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (currentModus: ");
         result.append(currentModus);
         result.append(", deviceRating: ");

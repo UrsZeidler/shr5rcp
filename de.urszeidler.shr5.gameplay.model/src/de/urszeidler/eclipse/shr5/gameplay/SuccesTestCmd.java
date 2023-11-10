@@ -15,10 +15,10 @@ package de.urszeidler.eclipse.shr5.gameplay;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd#getDicePool <em>Dice Pool</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSuccesTestCmd()
  * @model

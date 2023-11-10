@@ -32,6 +32,7 @@ import de.urszeidler.eclipse.shr5.Spezies;
  * <em><b>Abstrakt Persona</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktPersonaImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktPersonaImpl#getImage <em>Image</em>}</li>
@@ -67,7 +68,6 @@ import de.urszeidler.eclipse.shr5.Spezies;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktPersonaImpl#getModManager <em>Mod Manager</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktPersonaImpl#getMartialartStyles <em>Martialart Styles</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -547,7 +547,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public String getName() {
+	@Override
+    public String getName() {
         return name;
     }
 
@@ -555,7 +556,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public void setName(String newName) {
+	@Override
+    public void setName(String newName) {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
@@ -566,7 +568,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public String getBeschreibung() {
+	@Override
+    public String getBeschreibung() {
         return beschreibung;
     }
 
@@ -574,7 +577,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public void setBeschreibung(String newBeschreibung) {
+	@Override
+    public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
         if (eNotificationRequired())
@@ -585,7 +589,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public String getImage() {
+	@Override
+    public String getImage() {
         return image;
     }
 
@@ -593,7 +598,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public void setImage(String newImage) {
+	@Override
+    public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
         if (eNotificationRequired())
@@ -688,7 +694,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public int getEdgeBasis() {
+	@Override
+    public int getEdgeBasis() {
         return edgeBasis;
     }
 
@@ -696,7 +703,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public void setEdgeBasis(int newEdgeBasis) {
+	@Override
+    public void setEdgeBasis(int newEdgeBasis) {
         int oldEdgeBasis = edgeBasis;
         edgeBasis = newEdgeBasis;
         if (eNotificationRequired())
@@ -793,7 +801,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public int getKonstitutionBasis() {
+	@Override
+    public int getKonstitutionBasis() {
         return konstitutionBasis;
     }
 
@@ -817,7 +826,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public int getGeschicklichkeitBasis() {
+	@Override
+    public int getGeschicklichkeitBasis() {
         return geschicklichkeitBasis;
     }
 
@@ -825,7 +835,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public void setGeschicklichkeitBasis(int newGeschicklichkeitBasis) {
+	@Override
+    public void setGeschicklichkeitBasis(int newGeschicklichkeitBasis) {
         int oldGeschicklichkeitBasis = geschicklichkeitBasis;
         geschicklichkeitBasis = newGeschicklichkeitBasis;
         if (eNotificationRequired())
@@ -836,7 +847,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public int getReaktionBasis() {
+	@Override
+    public int getReaktionBasis() {
         return reaktionBasis;
     }
 
@@ -869,7 +881,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public int getStaerkeBasis() {
+	@Override
+    public int getStaerkeBasis() {
         return staerkeBasis;
     }
 
@@ -894,7 +907,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public int getCharismaBasis() {
+	@Override
+    public int getCharismaBasis() {
         return charismaBasis;
     }
 
@@ -919,7 +933,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public int getWillenskraftBasis() {
+	@Override
+    public int getWillenskraftBasis() {
         return willenskraftBasis;
     }
 
@@ -945,7 +960,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public int getIntuitionBasis() {
+	@Override
+    public int getIntuitionBasis() {
         return intuitionBasis;
     }
 
@@ -975,7 +991,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public int getLogikBasis() {
+	@Override
+    public int getLogikBasis() {
         return logikBasis;
     }
 
@@ -996,7 +1013,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public EList<PersonaFertigkeit> getFertigkeiten() {
+	@Override
+    public EList<PersonaFertigkeit> getFertigkeiten() {
         if (fertigkeiten == null) {
             fertigkeiten = new EObjectContainmentEList<PersonaFertigkeit>(PersonaFertigkeit.class, this, Shr5Package.ABSTRAKT_PERSONA__FERTIGKEITEN);
         }
@@ -1007,7 +1025,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public EList<PersonaFertigkeitsGruppe> getFertigkeitsGruppen() {
+	@Override
+    public EList<PersonaFertigkeitsGruppe> getFertigkeitsGruppen() {
         if (fertigkeitsGruppen == null) {
             fertigkeitsGruppen = new EObjectContainmentEList<PersonaFertigkeitsGruppe>(PersonaFertigkeitsGruppe.class, this, Shr5Package.ABSTRAKT_PERSONA__FERTIGKEITS_GRUPPEN);
         }
@@ -1018,7 +1037,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public Spezies getSpezies() {
+	@Override
+    public Spezies getSpezies() {
         if (spezies != null && spezies.eIsProxy()) {
             InternalEObject oldSpezies = (InternalEObject)spezies;
             spezies = (Spezies)eResolveProxy(oldSpezies);
@@ -1042,7 +1062,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public void setSpezies(Spezies newSpezies) {
+	@Override
+    public void setSpezies(Spezies newSpezies) {
         Spezies oldSpezies = spezies;
         spezies = newSpezies;
         if (eNotificationRequired())
@@ -1053,7 +1074,8 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public ModSetter getModManager() {
+	@Override
+    public ModSetter getModManager() {
         return modManager;
     }
 
@@ -1062,6 +1084,7 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<PersonaMartialartStyle> getMartialartStyles() {
         if (martialartStyles == null) {
             martialartStyles = new EObjectContainmentEList<PersonaMartialartStyle>(PersonaMartialartStyle.class, this, Shr5Package.ABSTRAKT_PERSONA__MARTIALART_STYLES);
@@ -1473,7 +1496,7 @@ public abstract class AbstraktPersonaImpl extends MinimalEObjectImpl.Container i
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

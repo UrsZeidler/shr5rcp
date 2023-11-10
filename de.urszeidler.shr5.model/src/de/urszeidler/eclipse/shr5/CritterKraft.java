@@ -10,13 +10,13 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.CritterKraft#getArt <em>Art</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.CritterKraft#getHandlung <em>Handlung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.CritterKraft#getReichweite <em>Reichweite</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.CritterKraft#getDauer <em>Dauer</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getCritterKraft()
  * @model

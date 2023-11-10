@@ -23,11 +23,11 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DrainCommandImpl#getDamage <em>Damage</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DrainCommandImpl#getDamageType <em>Damage Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -96,6 +96,7 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getDamage() {
         return damage;
     }
@@ -105,6 +106,7 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDamage(int newDamage) {
         int oldDamage = damage;
         damage = newDamage;
@@ -117,6 +119,7 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SchadensTyp getDamageType() {
         return damageType;
     }
@@ -126,6 +129,7 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDamageType(SchadensTyp newDamageType) {
         SchadensTyp oldDamageType = damageType;
         damageType = newDamageType == null ? DAMAGE_TYPE_EDEFAULT : newDamageType;
@@ -262,7 +266,7 @@ public class DrainCommandImpl extends ProbeCommandImpl implements DrainCommand {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (damage: ");
         result.append(damage);
         result.append(", damageType: ");

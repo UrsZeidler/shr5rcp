@@ -20,10 +20,10 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ModuleSkillGroupChangeImpl#getSkillGroup <em>Skill Group</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +87,7 @@ public class ModuleSkillGroupChangeImpl extends ModuleTypeChangeImpl<Fertigkeits
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public FertigkeitsGruppe getSkillGroup() {
         if (skillGroup != null && skillGroup.eIsProxy()) {
             InternalEObject oldSkillGroup = (InternalEObject)skillGroup;
@@ -113,6 +114,7 @@ public class ModuleSkillGroupChangeImpl extends ModuleTypeChangeImpl<Fertigkeits
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSkillGroup(FertigkeitsGruppe newSkillGroup) {
         FertigkeitsGruppe oldSkillGroup = skillGroup;
         skillGroup = newSkillGroup;

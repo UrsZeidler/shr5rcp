@@ -123,7 +123,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
 
     /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-     * 
+     *
      * <p>This method is used to initialize {@link ScriptingPackage#eINSTANCE} when that field is accessed.
      * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
      * <!-- begin-user-doc -->
@@ -137,12 +137,16 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         if (isInited) return (ScriptingPackage)EPackage.Registry.INSTANCE.getEPackage(ScriptingPackage.eNS_URI);
 
         // Obtain or create and register package
-        ScriptingPackageImpl theScriptingPackage = (ScriptingPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ScriptingPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ScriptingPackageImpl());
+        Object registeredScriptingPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+        ScriptingPackageImpl theScriptingPackage = registeredScriptingPackage instanceof ScriptingPackageImpl ? (ScriptingPackageImpl)registeredScriptingPackage : new ScriptingPackageImpl();
 
         isInited = true;
 
         // Initialize simple dependencies
         GameplayPackage.eINSTANCE.eClass();
+        RuntimePackage.eINSTANCE.eClass();
+        Shr5Package.eINSTANCE.eClass();
+        Shr5managementPackage.eINSTANCE.eClass();
 
         // Create package meta-data objects
         theScriptingPackage.createPackageContents();
@@ -153,7 +157,6 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
         // Mark meta-data to indicate it can't be changed
         theScriptingPackage.freeze();
 
-  
         // Update the registry and return the package
         EPackage.Registry.INSTANCE.put(ScriptingPackage.eNS_URI, theScriptingPackage);
         return theScriptingPackage;
@@ -164,6 +167,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getScript() {
         return scriptEClass;
     }
@@ -173,6 +177,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getScript_Placements() {
         return (EReference)scriptEClass.getEStructuralFeatures().get(0);
     }
@@ -182,6 +187,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getScript_AllTeams() {
         return (EReference)scriptEClass.getEStructuralFeatures().get(1);
     }
@@ -191,6 +197,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getScript_Player() {
         return (EReference)scriptEClass.getEStructuralFeatures().get(2);
     }
@@ -200,6 +207,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getScript_Management() {
         return (EReference)scriptEClass.getEStructuralFeatures().get(3);
     }
@@ -209,6 +217,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getScript_Entry() {
         return (EReference)scriptEClass.getEStructuralFeatures().get(4);
     }
@@ -218,6 +227,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getScript_History() {
         return (EReference)scriptEClass.getEStructuralFeatures().get(5);
     }
@@ -227,6 +237,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getPlacement() {
         return placementEClass;
     }
@@ -236,6 +247,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getPlacement_NextPlacements() {
         return (EReference)placementEClass.getEStructuralFeatures().get(0);
     }
@@ -245,6 +257,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getPlacement_Teams() {
         return (EReference)placementEClass.getEStructuralFeatures().get(1);
     }
@@ -254,6 +267,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getPlacement_Background() {
         return (EAttribute)placementEClass.getEStructuralFeatures().get(2);
     }
@@ -263,6 +277,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getPlacement_InTheirFace() {
         return (EAttribute)placementEClass.getEStructuralFeatures().get(3);
     }
@@ -272,6 +287,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getPlacement_Script() {
         return (EReference)placementEClass.getEStructuralFeatures().get(4);
     }
@@ -281,6 +297,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getPlacement_Debugging() {
         return (EAttribute)placementEClass.getEStructuralFeatures().get(5);
     }
@@ -290,6 +307,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getPlacement_Enviorment() {
         return (EReference)placementEClass.getEStructuralFeatures().get(6);
     }
@@ -299,6 +317,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getPlacement_Options() {
         return (EAttribute)placementEClass.getEStructuralFeatures().get(7);
     }
@@ -308,6 +327,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getPlacement_Handouts() {
         return (EReference)placementEClass.getEStructuralFeatures().get(8);
     }
@@ -317,6 +337,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getPlacement_Sections() {
         return (EReference)placementEClass.getEStructuralFeatures().get(9);
     }
@@ -326,6 +347,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getTimeFrame() {
         return timeFrameEClass;
     }
@@ -335,6 +357,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getTimeFrame_StartDate() {
         return (EAttribute)timeFrameEClass.getEStructuralFeatures().get(0);
     }
@@ -344,6 +367,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getTimeFrame_EndDate() {
         return (EAttribute)timeFrameEClass.getEStructuralFeatures().get(1);
     }
@@ -353,6 +377,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getTimeFrame_ActualDate() {
         return (EAttribute)timeFrameEClass.getEStructuralFeatures().get(2);
     }
@@ -362,6 +387,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getScriptHistory() {
         return scriptHistoryEClass;
     }
@@ -371,6 +397,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getScriptHistory_CommandStack() {
         return (EReference)scriptHistoryEClass.getEStructuralFeatures().get(0);
     }
@@ -380,6 +407,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getScriptHistory_CurrentDate() {
         return (EAttribute)scriptHistoryEClass.getEStructuralFeatures().get(1);
     }
@@ -389,6 +417,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getScriptHistory_CurrentPlacement() {
         return (EReference)scriptHistoryEClass.getEStructuralFeatures().get(2);
     }
@@ -398,6 +427,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getScriptHistory_WrittenProtokol() {
         return (EAttribute)scriptHistoryEClass.getEStructuralFeatures().get(3);
     }
@@ -407,6 +437,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getScripts() {
         return scriptsEClass;
     }
@@ -416,6 +447,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getScripts_Stories() {
         return (EReference)scriptsEClass.getEStructuralFeatures().get(0);
     }
@@ -425,6 +457,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getScripts_Name() {
         return (EAttribute)scriptsEClass.getEStructuralFeatures().get(1);
     }
@@ -434,6 +467,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getHandout() {
         return handoutEClass;
     }
@@ -443,6 +477,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getHandout_Type() {
         return (EAttribute)handoutEClass.getEStructuralFeatures().get(0);
     }
@@ -452,6 +487,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getHandout_Url() {
         return (EAttribute)handoutEClass.getEStructuralFeatures().get(1);
     }
@@ -461,6 +497,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSection() {
         return sectionEClass;
     }
@@ -470,6 +507,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSection_Titel() {
         return (EAttribute)sectionEClass.getEStructuralFeatures().get(0);
     }
@@ -479,6 +517,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSection_Text() {
         return (EAttribute)sectionEClass.getEStructuralFeatures().get(1);
     }
@@ -488,6 +527,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getPlacementOptions() {
         return placementOptionsEEnum;
     }
@@ -497,6 +537,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getHandoutType() {
         return handoutTypeEEnum;
     }
@@ -506,6 +547,7 @@ public class ScriptingPackageImpl extends EPackageImpl implements ScriptingPacka
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ScriptingFactory getScriptingFactory() {
         return (ScriptingFactory)getEFactoryInstance();
     }

@@ -20,13 +20,13 @@ import de.urszeidler.eclipse.shr5.Quelle;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getInstructions <em>Instructions</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getLifestyleToStartMoney <em>Lifestyle To Start Money</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getCharacterAdvancements <em>Character Advancements</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem#getAdditionalConstrains <em>Additional Constrains</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getCharacterGeneratorSystem()
  * @model abstract="true"
@@ -46,7 +46,7 @@ public interface CharacterGeneratorSystem extends Beschreibbar, Quelle {
 	 * <!-- end-user-doc -->
      * @return the value of the '<em>Instructions</em>' map.
      * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getCharacterGeneratorSystem_Instructions()
-     * @model mapType="de.urszeidler.eclipse.shr5Management.GeneratorStateToEStringMapEntry<de.urszeidler.eclipse.shr5Management.GeneratorState, org.eclipse.emf.ecore.EString>"
+     * @model mapType="de.urszeidler.eclipse.shr5Management.GeneratorStateToEStringMapEntry&lt;de.urszeidler.eclipse.shr5Management.GeneratorState, org.eclipse.emf.ecore.EString&gt;"
      * @generated
      */
 	EMap<GeneratorState, String> getInstructions();

@@ -15,11 +15,11 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.BodenfahrzeugImpl#getHandlingGelaende <em>Handling Gelaende</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.BodenfahrzeugImpl#getGeschwindigkeitGelaende <em>Geschwindigkeit Gelaende</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -88,7 +88,8 @@ public class BodenfahrzeugImpl extends PassagierFahrzeugImpl implements Bodenfah
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getHandlingGelaende() {
+	@Override
+    public int getHandlingGelaende() {
         return handlingGelaende;
     }
 
@@ -97,7 +98,8 @@ public class BodenfahrzeugImpl extends PassagierFahrzeugImpl implements Bodenfah
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setHandlingGelaende(int newHandlingGelaende) {
+	@Override
+    public void setHandlingGelaende(int newHandlingGelaende) {
         int oldHandlingGelaende = handlingGelaende;
         handlingGelaende = newHandlingGelaende;
         if (eNotificationRequired())
@@ -109,6 +111,7 @@ public class BodenfahrzeugImpl extends PassagierFahrzeugImpl implements Bodenfah
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getGeschwindigkeitGelaende() {
         return geschwindigkeitGelaende;
     }
@@ -118,6 +121,7 @@ public class BodenfahrzeugImpl extends PassagierFahrzeugImpl implements Bodenfah
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setGeschwindigkeitGelaende(int newGeschwindigkeitGelaende) {
         int oldGeschwindigkeitGelaende = geschwindigkeitGelaende;
         geschwindigkeitGelaende = newGeschwindigkeitGelaende;
@@ -202,7 +206,7 @@ public class BodenfahrzeugImpl extends PassagierFahrzeugImpl implements Bodenfah
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (handlingGelaende: ");
         result.append(handlingGelaende);
         result.append(", geschwindigkeitGelaende: ");

@@ -19,12 +19,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Credstick#getMaxValue <em>Max Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Credstick#getTransactionlog <em>Transactionlog</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Credstick#getCurrentValue <em>Current Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getCredstick()
  * @model

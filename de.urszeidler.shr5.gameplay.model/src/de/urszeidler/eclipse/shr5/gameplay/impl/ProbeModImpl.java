@@ -20,11 +20,11 @@ import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeModImpl#getValue <em>Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeModImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -83,6 +83,7 @@ public class ProbeModImpl extends MinimalEObjectImpl.Container implements ProbeM
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getValue() {
         return value;
     }
@@ -92,6 +93,7 @@ public class ProbeModImpl extends MinimalEObjectImpl.Container implements ProbeM
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setValue(int newValue) {
         int oldValue = value;
         value = newValue;
@@ -104,6 +106,7 @@ public class ProbeModImpl extends MinimalEObjectImpl.Container implements ProbeM
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ExtendetData getType() {
         return type;
     }
@@ -128,6 +131,7 @@ public class ProbeModImpl extends MinimalEObjectImpl.Container implements ProbeM
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setType(ExtendetData newType) {
         if (newType != type) {
             NotificationChain msgs = null;
@@ -233,7 +237,7 @@ public class ProbeModImpl extends MinimalEObjectImpl.Container implements ProbeM
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (value: ");
         result.append(value);
         result.append(')');

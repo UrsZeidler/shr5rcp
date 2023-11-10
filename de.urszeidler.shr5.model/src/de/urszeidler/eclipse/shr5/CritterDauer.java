@@ -170,6 +170,8 @@ public enum CritterDauer implements Enumerator {
      * Returns the '<em><b>Critter Dauer</b></em>' literal with the specified literal value.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+     * @param literal the literal.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
 	public static CritterDauer get(String literal) {
@@ -186,6 +188,8 @@ public enum CritterDauer implements Enumerator {
      * Returns the '<em><b>Critter Dauer</b></em>' literal with the specified name.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+     * @param name the name.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
 	public static CritterDauer getByName(String name) {
@@ -202,6 +206,8 @@ public enum CritterDauer implements Enumerator {
      * Returns the '<em><b>Critter Dauer</b></em>' literal with the specified integer value.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+     * @param value the integer value.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
 	public static CritterDauer get(int value) {
@@ -253,7 +259,8 @@ public enum CritterDauer implements Enumerator {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getValue() {
+	@Override
+    public int getValue() {
       return value;
     }
 
@@ -262,7 +269,8 @@ public enum CritterDauer implements Enumerator {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getName() {
+	@Override
+    public String getName() {
       return name;
     }
 
@@ -271,7 +279,8 @@ public enum CritterDauer implements Enumerator {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getLiteral() {
+	@Override
+    public String getLiteral() {
       return literal;
     }
 

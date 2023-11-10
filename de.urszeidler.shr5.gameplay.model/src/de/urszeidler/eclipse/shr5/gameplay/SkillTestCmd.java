@@ -16,10 +16,10 @@ import de.urszeidler.eclipse.shr5.Fertigkeit;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd#getSkill <em>Skill</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSkillTestCmd()
  * @model

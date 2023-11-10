@@ -18,12 +18,12 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.GruntGroup#getMembers <em>Members</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.GruntGroup#getLeader <em>Leader</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.GruntGroup#getProfessionalRating <em>Professional Rating</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getGruntGroup()
  * @model

@@ -23,12 +23,12 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShoppingTransactionImpl#getItems <em>Items</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShoppingTransactionImpl#getFee <em>Fee</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShoppingTransactionImpl#getCaculatedCosts <em>Caculated Costs</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -119,6 +119,7 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<GeldWert> getItems() {
         if (items == null) {
             items = new EObjectResolvingEList<GeldWert>(GeldWert.class, this, Shr5Package.SHOPPING_TRANSACTION__ITEMS);
@@ -131,6 +132,7 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public double getFee() {
         return fee;
     }
@@ -140,6 +142,7 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setFee(double newFee) {
         double oldFee = fee;
         fee = newFee;
@@ -254,7 +257,7 @@ public class ShoppingTransactionImpl extends CredstickTransactionImpl implements
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (fee: ");
         result.append(fee);
         result.append(')');

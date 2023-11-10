@@ -25,11 +25,11 @@ import de.urszeidler.eclipse.shr5Management.TrainingRate;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.IncreaseCharacterPartImpl#getRangeTableEntries <em>Range Table Entries</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.IncreaseCharacterPartImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -77,6 +77,7 @@ public class IncreaseCharacterPartImpl extends AdvancementImpl implements Increa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<TrainingRate> getRangeTableEntries() {
         if (rangeTableEntries == null) {
             rangeTableEntries = new EObjectContainmentEList<TrainingRate>(TrainingRate.class, this, Shr5managementPackage.INCREASE_CHARACTER_PART__RANGE_TABLE_ENTRIES);
@@ -89,7 +90,8 @@ public class IncreaseCharacterPartImpl extends AdvancementImpl implements Increa
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getType() {
+	@Override
+    public EClass getType() {
         if (type != null && type.eIsProxy()) {
             InternalEObject oldType = (InternalEObject)type;
             type = (EClass)eResolveProxy(oldType);
@@ -115,7 +117,8 @@ public class IncreaseCharacterPartImpl extends AdvancementImpl implements Increa
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setType(EClass newType) {
+	@Override
+    public void setType(EClass newType) {
         EClass oldType = type;
         type = newType;
         if (eNotificationRequired())

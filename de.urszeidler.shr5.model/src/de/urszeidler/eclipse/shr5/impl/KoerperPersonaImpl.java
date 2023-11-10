@@ -27,6 +27,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getPanzer <em>Panzer</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandKoerperlichMax <em>Zustand Koerperlich Max</em>}</li>
@@ -40,7 +41,6 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandKoerperlich <em>Zustand Koerperlich</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KoerperPersonaImpl#getZustandGeistig <em>Zustand Geistig</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -269,6 +269,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Koerpermods> getKoerperMods() {
         if (koerperMods == null) {
             koerperMods = new EObjectContainmentEList<Koerpermods>(Koerpermods.class, this, Shr5Package.KOERPER_PERSONA__KOERPER_MODS);
@@ -281,6 +282,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<PersonaEigenschaft> getEigenschaften() {
         if (eigenschaften == null) {
             eigenschaften = new EObjectContainmentEList<PersonaEigenschaft>(PersonaEigenschaft.class, this, Shr5Package.KOERPER_PERSONA__EIGENSCHAFTEN);
@@ -293,6 +295,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getZustandKoerperlich() {
         return zustandKoerperlich;
     }
@@ -302,6 +305,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setZustandKoerperlich(int newZustandKoerperlich) {
         int oldZustandKoerperlich = zustandKoerperlich;
         zustandKoerperlich = newZustandKoerperlich;
@@ -314,6 +318,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getZustandGeistig() {
         return zustandGeistig;
     }
@@ -323,6 +328,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setZustandGeistig(int newZustandGeistig) {
         int oldZustandGeistig = zustandGeistig;
         zustandGeistig = newZustandGeistig;
@@ -538,7 +544,7 @@ public abstract class KoerperPersonaImpl extends AbstraktPersonaImpl implements 
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (zustandKoerperlich: ");
         result.append(zustandKoerperlich);
         result.append(", zustandGeistig: ");

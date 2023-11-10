@@ -12,8 +12,6 @@ import de.urszeidler.eclipse.shr5.gameplay.SimpleAction;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Simple Action</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

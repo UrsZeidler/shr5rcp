@@ -24,12 +24,12 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.QuellenConstrainImpl#getSource <em>Source</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.QuellenConstrainImpl#getTargets <em>Targets</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.QuellenConstrainImpl#getConstrainType <em>Constrain Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,6 +98,7 @@ public class QuellenConstrainImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Quelle getSource() {
         if (source != null && source.eIsProxy()) {
             InternalEObject oldSource = (InternalEObject)source;
@@ -124,6 +125,7 @@ public class QuellenConstrainImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSource(Quelle newSource) {
         Quelle oldSource = source;
         source = newSource;
@@ -136,6 +138,7 @@ public class QuellenConstrainImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Quelle> getTargets() {
         if (targets == null) {
             targets = new EObjectResolvingEList<Quelle>(Quelle.class, this, Shr5managementPackage.QUELLEN_CONSTRAIN__TARGETS);
@@ -148,6 +151,7 @@ public class QuellenConstrainImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public QuellenConstrainType getConstrainType() {
         return constrainType;
     }
@@ -157,6 +161,7 @@ public class QuellenConstrainImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setConstrainType(QuellenConstrainType newConstrainType) {
         QuellenConstrainType oldConstrainType = constrainType;
         constrainType = newConstrainType == null ? CONSTRAIN_TYPE_EDEFAULT : newConstrainType;
@@ -254,7 +259,7 @@ public class QuellenConstrainImpl extends MinimalEObjectImpl.Container implement
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (constrainType: ");
         result.append(constrainType);
         result.append(')');

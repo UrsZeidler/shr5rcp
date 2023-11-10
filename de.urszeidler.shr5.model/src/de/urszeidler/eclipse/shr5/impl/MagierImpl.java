@@ -27,6 +27,7 @@ import de.urszeidler.eclipse.shr5.Zauberer;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagierImpl#getZauber <em>Zauber</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagierImpl#getEnzug <em>Enzug</em>}</li>
@@ -42,7 +43,6 @@ import de.urszeidler.eclipse.shr5.Zauberer;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagierImpl#getAstraleInitativWuerfel <em>Astrale Initativ Wuerfel</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagierImpl#getAstralePanzerung <em>Astrale Panzerung</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -193,7 +193,8 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<PersonaZauber> getZauber() {
+	@Override
+    public EList<PersonaZauber> getZauber() {
         if (zauber == null) {
             zauber = new EObjectContainmentEList<PersonaZauber>(PersonaZauber.class, this, Shr5Package.MAGIER__ZAUBER);
         }
@@ -226,7 +227,8 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public MagischeTradition getTradition() {
+	@Override
+    public MagischeTradition getTradition() {
         if (tradition != null && tradition.eIsProxy()) {
             InternalEObject oldTradition = (InternalEObject)tradition;
             tradition = (MagischeTradition)eResolveProxy(oldTradition);
@@ -252,7 +254,8 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setTradition(MagischeTradition newTradition) {
+	@Override
+    public void setTradition(MagischeTradition newTradition) {
         MagischeTradition oldTradition = tradition;
         tradition = newTradition;
         if (eNotificationRequired())
@@ -264,6 +267,7 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<GebundenerGeist> getGebundeneGeister() {
         if (gebundeneGeister == null) {
             gebundeneGeister = new EObjectContainmentEList<GebundenerGeist>(GebundenerGeist.class, this, Shr5Package.MAGIER__GEBUNDENE_GEISTER);
@@ -276,6 +280,7 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public GebundenerGeist getUngebundenerGeist() {
         return ungebundenerGeist;
     }
@@ -300,6 +305,7 @@ public class MagierImpl extends MagischePersonaImpl implements Magier {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setUngebundenerGeist(GebundenerGeist newUngebundenerGeist) {
         if (newUngebundenerGeist != ungebundenerGeist) {
             NotificationChain msgs = null;

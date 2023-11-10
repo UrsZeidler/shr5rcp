@@ -26,6 +26,7 @@ import de.urszeidler.eclipse.shr5.Zauberer;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MysticAdeptImpl#getZauber <em>Zauber</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MysticAdeptImpl#getEnzug <em>Enzug</em>}</li>
@@ -33,7 +34,6 @@ import de.urszeidler.eclipse.shr5.Zauberer;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MysticAdeptImpl#getUngebundenerGeist <em>Ungebundener Geist</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MysticAdeptImpl#getTradition <em>Tradition</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -111,7 +111,8 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<PersonaZauber> getZauber() {
+	@Override
+    public EList<PersonaZauber> getZauber() {
         if (zauber == null) {
             zauber = new EObjectContainmentEList<PersonaZauber>(PersonaZauber.class, this, Shr5Package.MYSTIC_ADEPT__ZAUBER);
         }
@@ -144,7 +145,8 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public MagischeTradition getTradition() {
+	@Override
+    public MagischeTradition getTradition() {
         if (tradition != null && tradition.eIsProxy()) {
             InternalEObject oldTradition = (InternalEObject)tradition;
             tradition = (MagischeTradition)eResolveProxy(oldTradition);
@@ -170,7 +172,8 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setTradition(MagischeTradition newTradition) {
+	@Override
+    public void setTradition(MagischeTradition newTradition) {
         MagischeTradition oldTradition = tradition;
         tradition = newTradition;
         if (eNotificationRequired())
@@ -182,6 +185,7 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<GebundenerGeist> getGebundeneGeister() {
         if (gebundeneGeister == null) {
             gebundeneGeister = new EObjectContainmentEList<GebundenerGeist>(GebundenerGeist.class, this, Shr5Package.MYSTIC_ADEPT__GEBUNDENE_GEISTER);
@@ -194,6 +198,7 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public GebundenerGeist getUngebundenerGeist() {
         return ungebundenerGeist;
     }
@@ -218,6 +223,7 @@ public class MysticAdeptImpl extends KiAdeptImpl implements MysticAdept {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setUngebundenerGeist(GebundenerGeist newUngebundenerGeist) {
         if (newUngebundenerGeist != ungebundenerGeist) {
             NotificationChain msgs = null;

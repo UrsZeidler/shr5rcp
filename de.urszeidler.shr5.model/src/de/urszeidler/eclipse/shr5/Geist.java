@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Geist#getKonstitutionBasis <em>Konstitution Basis</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Geist#getGeschicklichkeitBasis <em>Geschicklichkeit Basis</em>}</li>
@@ -29,7 +30,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.eclipse.shr5.Geist#getPowers <em>Powers</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Geist#getOptionalPowers <em>Optional Powers</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getGeist()
  * @model

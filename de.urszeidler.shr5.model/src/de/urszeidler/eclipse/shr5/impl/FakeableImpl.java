@@ -18,11 +18,11 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FakeableImpl#getStufe <em>Stufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FakeableImpl#isGefaelscht <em>Gefaelscht</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -91,6 +91,7 @@ public abstract class FakeableImpl extends VertragImpl implements Fakeable {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getStufe() {
         return stufe;
     }
@@ -100,6 +101,7 @@ public abstract class FakeableImpl extends VertragImpl implements Fakeable {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setStufe(int newStufe) {
         int oldStufe = stufe;
         stufe = newStufe;
@@ -112,6 +114,7 @@ public abstract class FakeableImpl extends VertragImpl implements Fakeable {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isGefaelscht() {
         return gefaelscht;
     }
@@ -121,6 +124,7 @@ public abstract class FakeableImpl extends VertragImpl implements Fakeable {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setGefaelscht(boolean newGefaelscht) {
         boolean oldGefaelscht = gefaelscht;
         gefaelscht = newGefaelscht;
@@ -218,7 +222,7 @@ public abstract class FakeableImpl extends VertragImpl implements Fakeable {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (stufe: ");
         result.append(stufe);
         result.append(", gefaelscht: ");

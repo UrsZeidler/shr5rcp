@@ -180,7 +180,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
 
     /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-     * 
+     *
      * <p>This method is used to initialize {@link RuntimePackage#eINSTANCE} when that field is accessed.
      * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
      * <!-- begin-user-doc -->
@@ -194,11 +194,13 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
         if (isInited) return (RuntimePackage)EPackage.Registry.INSTANCE.getEPackage(RuntimePackage.eNS_URI);
 
         // Obtain or create and register package
-        RuntimePackageImpl theRuntimePackage = (RuntimePackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof RuntimePackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new RuntimePackageImpl());
+        Object registeredRuntimePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+        RuntimePackageImpl theRuntimePackage = registeredRuntimePackage instanceof RuntimePackageImpl ? (RuntimePackageImpl)registeredRuntimePackage : new RuntimePackageImpl();
 
         isInited = true;
 
         // Initialize simple dependencies
+        Shr5Package.eINSTANCE.eClass();
         Shr5managementPackage.eINSTANCE.eClass();
 
         // Create package meta-data objects
@@ -210,7 +212,6 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
         // Mark meta-data to indicate it can't be changed
         theRuntimePackage.freeze();
 
-  
         // Update the registry and return the package
         EPackage.Registry.INSTANCE.put(RuntimePackage.eNS_URI, theRuntimePackage);
         return theRuntimePackage;
@@ -221,6 +222,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getExtendetData() {
         return extendetDataEClass;
     }
@@ -230,6 +232,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getExtendetData_EObject() {
         return (EReference)extendetDataEClass.getEStructuralFeatures().get(0);
     }
@@ -239,6 +242,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getExtendetData_EFeature() {
         return (EReference)extendetDataEClass.getEStructuralFeatures().get(1);
     }
@@ -248,6 +252,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getEnviorment() {
         return enviormentEClass;
     }
@@ -257,6 +262,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getNahkampModifikationen() {
         return nahkampModifikationenEClass;
     }
@@ -266,6 +272,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getNahkampModifikationen_ChracterIsDown() {
         return (EAttribute)nahkampModifikationenEClass.getEStructuralFeatures().get(0);
     }
@@ -275,6 +282,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getNahkampModifikationen_EnemyCloseCombat() {
         return (EAttribute)nahkampModifikationenEClass.getEStructuralFeatures().get(1);
     }
@@ -284,6 +292,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getNahkampModifikationen_CharacterRunning() {
         return (EAttribute)nahkampModifikationenEClass.getEStructuralFeatures().get(2);
     }
@@ -293,6 +302,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getNahkampModifikationen_CharacterProne() {
         return (EAttribute)nahkampModifikationenEClass.getEStructuralFeatures().get(3);
     }
@@ -302,6 +312,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getExtendetDataAware() {
         return extendetDataAwareEClass;
     }
@@ -311,6 +322,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getExtendetDataAware_ExtendetData() {
         return (EAttribute)extendetDataAwareEClass.getEStructuralFeatures().get(0);
     }
@@ -320,6 +332,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getExtendetDataAware__AddToExtendetData__ExtendetData_Object() {
         return extendetDataAwareEClass.getEOperations().get(0);
     }
@@ -329,6 +342,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getExtendetDataAware__GetIntegerValue__ExtendetData() {
         return extendetDataAwareEClass.getEOperations().get(1);
     }
@@ -338,6 +352,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getExtendetDataAware__IncreaseValue__ExtendetData_int() {
         return extendetDataAwareEClass.getEOperations().get(2);
     }
@@ -347,6 +362,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getExtendetDataAware__DecreaseValue__ExtendetData_int() {
         return extendetDataAwareEClass.getEOperations().get(3);
     }
@@ -356,6 +372,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getExtendetDataAware__HasValue__ExtendetData() {
         return extendetDataAwareEClass.getEOperations().get(4);
     }
@@ -365,6 +382,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getExtendetDataAware__AddToList__ExtendetData_Object() {
         return extendetDataAwareEClass.getEOperations().get(5);
     }
@@ -374,6 +392,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getExtendetDataAware__AddUniqueToList__ExtendetData_Object() {
         return extendetDataAwareEClass.getEOperations().get(6);
     }
@@ -383,6 +402,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getExtendetDataAware__GetListValue__ExtendetData() {
         return extendetDataAwareEClass.getEOperations().get(7);
     }
@@ -392,6 +412,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getPhyicalState() {
         return phyicalStateEClass;
     }
@@ -401,6 +422,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getPhyicalState_PhysicalDamage() {
         return (EAttribute)phyicalStateEClass.getEStructuralFeatures().get(0);
     }
@@ -410,6 +432,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getPhyicalState_MentalDamage() {
         return (EAttribute)phyicalStateEClass.getEStructuralFeatures().get(1);
     }
@@ -419,6 +442,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getPhyicalState_Zustand() {
         return (EAttribute)phyicalStateEClass.getEStructuralFeatures().get(2);
     }
@@ -428,6 +452,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getPhyicalState_OverDead() {
         return (EAttribute)phyicalStateEClass.getEStructuralFeatures().get(3);
     }
@@ -437,6 +462,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getRuntimeCharacter() {
         return runtimeCharacterEClass;
     }
@@ -446,6 +472,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getRuntimeCharacter_Character() {
         return (EReference)runtimeCharacterEClass.getEStructuralFeatures().get(0);
     }
@@ -455,6 +482,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getRuntimeCharacter_RightHand() {
         return (EReference)runtimeCharacterEClass.getEStructuralFeatures().get(1);
     }
@@ -464,6 +492,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getRuntimeCharacter_LeftHand() {
         return (EReference)runtimeCharacterEClass.getEStructuralFeatures().get(2);
     }
@@ -473,6 +502,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getRuntimeCharacter_InUse() {
         return (EReference)runtimeCharacterEClass.getEStructuralFeatures().get(3);
     }
@@ -482,6 +512,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getRuntimeCharacter_Armor() {
         return (EReference)runtimeCharacterEClass.getEStructuralFeatures().get(4);
     }
@@ -491,6 +522,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getRuntimeCharacter_UsedEdge() {
         return (EAttribute)runtimeCharacterEClass.getEStructuralFeatures().get(5);
     }
@@ -500,6 +532,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getRuntimeCharacter__CanUseEdge() {
         return runtimeCharacterEClass.getEOperations().get(0);
     }
@@ -509,6 +542,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getTeam() {
         return teamEClass;
     }
@@ -518,6 +552,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getTeam_Members() {
         return (EReference)teamEClass.getEStructuralFeatures().get(0);
     }
@@ -527,6 +562,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getAbstractExtendetDataAware() {
         return abstractExtendetDataAwareEClass;
     }
@@ -536,6 +572,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getGruntTeam() {
         return gruntTeamEClass;
     }
@@ -545,6 +582,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getGruntTeam_GruntGroup() {
         return (EReference)gruntTeamEClass.getEStructuralFeatures().get(0);
     }
@@ -554,6 +592,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getGruntTeam__BuildMembers() {
         return gruntTeamEClass.getEOperations().get(0);
     }
@@ -563,6 +602,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getGruntRuntimeCharacter() {
         return gruntRuntimeCharacterEClass;
     }
@@ -572,6 +612,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getVehicle() {
         return vehicleEClass;
     }
@@ -581,6 +622,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getVehicle_Vehicle() {
         return (EReference)vehicleEClass.getEStructuralFeatures().get(0);
     }
@@ -590,6 +632,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getVehicle_VehicleCondition() {
         return (EAttribute)vehicleEClass.getEStructuralFeatures().get(1);
     }
@@ -599,6 +642,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getVehicle_Modus() {
         return (EAttribute)vehicleEClass.getEStructuralFeatures().get(2);
     }
@@ -608,6 +652,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getVehicle_CurrentSpeed() {
         return (EAttribute)vehicleEClass.getEStructuralFeatures().get(3);
     }
@@ -617,6 +662,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getDrone() {
         return droneEClass;
     }
@@ -626,6 +672,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getMatrixDevice() {
         return matrixDeviceEClass;
     }
@@ -635,6 +682,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getMatrixDevice_Device() {
         return (EReference)matrixDeviceEClass.getEStructuralFeatures().get(0);
     }
@@ -644,6 +692,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getMatrixDevice_MatrixCondition() {
         return (EAttribute)matrixDeviceEClass.getEStructuralFeatures().get(1);
     }
@@ -653,6 +702,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getMatrixDevice_Marks() {
         return (EAttribute)matrixDeviceEClass.getEStructuralFeatures().get(2);
     }
@@ -662,6 +712,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getRiggerConsole() {
         return riggerConsoleEClass;
     }
@@ -671,6 +722,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getCyberdeck() {
         return cyberdeckEClass;
     }
@@ -680,6 +732,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getZustand() {
         return zustandEEnum;
     }
@@ -689,6 +742,7 @@ public class RuntimePackageImpl extends EPackageImpl implements RuntimePackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public RuntimeFactory getRuntimeFactory() {
         return (RuntimeFactory)getEFactoryInstance();
     }

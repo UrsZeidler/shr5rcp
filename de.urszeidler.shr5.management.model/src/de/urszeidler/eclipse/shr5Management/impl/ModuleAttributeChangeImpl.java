@@ -20,10 +20,10 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ModuleAttributeChangeImpl#getAttribute <em>Attribute</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +87,7 @@ public class ModuleAttributeChangeImpl extends ModuleTypeChangeImpl<EAttribute> 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getAttribute() {
         if (attribute != null && attribute.eIsProxy()) {
             InternalEObject oldAttribute = (InternalEObject)attribute;
@@ -113,6 +114,7 @@ public class ModuleAttributeChangeImpl extends ModuleTypeChangeImpl<EAttribute> 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAttribute(EAttribute newAttribute) {
         EAttribute oldAttribute = attribute;
         attribute = newAttribute;

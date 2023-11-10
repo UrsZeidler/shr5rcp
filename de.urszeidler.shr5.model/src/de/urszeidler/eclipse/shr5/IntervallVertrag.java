@@ -17,12 +17,12 @@ import java.util.Date;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.IntervallVertrag#getFaelligkeitsIntervall <em>Faelligkeits Intervall</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.IntervallVertrag#getUnit <em>Unit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.IntervallVertrag#getBegin <em>Begin</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getIntervallVertrag()
  * @model

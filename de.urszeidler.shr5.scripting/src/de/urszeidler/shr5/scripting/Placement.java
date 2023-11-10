@@ -20,6 +20,7 @@ import de.urszeidler.eclipse.shr5.runtime.Team;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.shr5.scripting.Placement#getNextPlacements <em>Next Placements</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Placement#getTeams <em>Teams</em>}</li>
@@ -32,7 +33,6 @@ import de.urszeidler.eclipse.shr5.runtime.Team;
  *   <li>{@link de.urszeidler.shr5.scripting.Placement#getHandouts <em>Handouts</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Placement#getSections <em>Sections</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.shr5.scripting.ScriptingPackage#getPlacement()
  * @model

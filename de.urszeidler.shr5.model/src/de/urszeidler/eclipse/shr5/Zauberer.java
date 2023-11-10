@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getZauber <em>Zauber</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getEnzug <em>Enzug</em>}</li>
@@ -19,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getUngebundenerGeist <em>Ungebundener Geist</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauberer#getTradition <em>Tradition</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getZauberer()
  * @model interface="true" abstract="true"

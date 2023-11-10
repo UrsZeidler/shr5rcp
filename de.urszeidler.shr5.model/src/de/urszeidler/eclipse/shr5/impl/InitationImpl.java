@@ -18,11 +18,11 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.InitationImpl#getStufe <em>Stufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.InitationImpl#getErlernt <em>Erlernt</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -81,7 +81,8 @@ public class InitationImpl extends MinimalEObjectImpl.Container implements Inita
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getStufe() {
+	@Override
+    public int getStufe() {
         return stufe;
     }
 
@@ -90,7 +91,8 @@ public class InitationImpl extends MinimalEObjectImpl.Container implements Inita
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setStufe(int newStufe) {
+	@Override
+    public void setStufe(int newStufe) {
         int oldStufe = stufe;
         stufe = newStufe;
         if (eNotificationRequired())
@@ -102,7 +104,8 @@ public class InitationImpl extends MinimalEObjectImpl.Container implements Inita
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public MetaMagie getErlernt() {
+	@Override
+    public MetaMagie getErlernt() {
         if (erlernt != null && erlernt.eIsProxy()) {
             InternalEObject oldErlernt = (InternalEObject)erlernt;
             erlernt = (MetaMagie)eResolveProxy(oldErlernt);
@@ -128,7 +131,8 @@ public class InitationImpl extends MinimalEObjectImpl.Container implements Inita
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setErlernt(MetaMagie newErlernt) {
+	@Override
+    public void setErlernt(MetaMagie newErlernt) {
         MetaMagie oldErlernt = erlernt;
         erlernt = newErlernt;
         if (eNotificationRequired())
@@ -213,7 +217,7 @@ public class InitationImpl extends MinimalEObjectImpl.Container implements Inita
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (stufe: ");
         result.append(stufe);
         result.append(')');

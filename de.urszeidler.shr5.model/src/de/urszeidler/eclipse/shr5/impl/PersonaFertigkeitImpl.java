@@ -23,12 +23,12 @@ import de.urszeidler.eclipse.shr5.Spezialisierung;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitImpl#getStufe <em>Stufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitImpl#getFertigkeit <em>Fertigkeit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaFertigkeitImpl#getSpezialisierungen <em>Spezialisierungen</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -97,7 +97,8 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Fertigkeit getFertigkeit() {
+	@Override
+    public Fertigkeit getFertigkeit() {
         if (fertigkeit != null && fertigkeit.eIsProxy()) {
             InternalEObject oldFertigkeit = (InternalEObject)fertigkeit;
             fertigkeit = (Fertigkeit)eResolveProxy(oldFertigkeit);
@@ -123,7 +124,8 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setFertigkeit(Fertigkeit newFertigkeit) {
+	@Override
+    public void setFertigkeit(Fertigkeit newFertigkeit) {
         Fertigkeit oldFertigkeit = fertigkeit;
         fertigkeit = newFertigkeit;
         if (eNotificationRequired())
@@ -135,6 +137,7 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Spezialisierung> getSpezialisierungen() {
         if (spezialisierungen == null) {
             spezialisierungen = new EObjectResolvingEList<Spezialisierung>(Spezialisierung.class, this, Shr5Package.PERSONA_FERTIGKEIT__SPEZIALISIERUNGEN);
@@ -147,7 +150,8 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getStufe() {
+	@Override
+    public int getStufe() {
         return stufe;
     }
 
@@ -156,7 +160,8 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setStufe(int newStufe) {
+	@Override
+    public void setStufe(int newStufe) {
         int oldStufe = stufe;
         stufe = newStufe;
         if (eNotificationRequired())
@@ -253,7 +258,7 @@ public class PersonaFertigkeitImpl extends MinimalEObjectImpl.Container implemen
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (stufe: ");
         result.append(stufe);
         result.append(')');

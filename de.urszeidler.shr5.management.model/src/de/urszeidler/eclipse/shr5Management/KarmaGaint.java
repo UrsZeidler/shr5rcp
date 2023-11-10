@@ -15,10 +15,10 @@ package de.urszeidler.eclipse.shr5Management;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.KarmaGaint#getKarma <em>Karma</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getKarmaGaint()
  * @model

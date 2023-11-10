@@ -14,10 +14,10 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.AbstraktGegenstand#getWifi <em>Wifi</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getAbstraktGegenstand()
  * @model abstract="true"

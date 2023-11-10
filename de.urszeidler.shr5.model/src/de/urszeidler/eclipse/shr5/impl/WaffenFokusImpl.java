@@ -21,11 +21,11 @@ import de.urszeidler.eclipse.shr5.WaffenFokus;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.WaffenFokusImpl#getStufe <em>Stufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.WaffenFokusImpl#getBindungskosten <em>Bindungskosten</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -84,6 +84,7 @@ public class WaffenFokusImpl extends NahkampfwaffeImpl implements WaffenFokus {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getStufe() {
         return stufe;
     }
@@ -93,6 +94,7 @@ public class WaffenFokusImpl extends NahkampfwaffeImpl implements WaffenFokus {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setStufe(int newStufe) {
         int oldStufe = stufe;
         stufe = newStufe;
@@ -234,7 +236,7 @@ public class WaffenFokusImpl extends NahkampfwaffeImpl implements WaffenFokus {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (stufe: ");
         result.append(stufe);
         result.append(')');

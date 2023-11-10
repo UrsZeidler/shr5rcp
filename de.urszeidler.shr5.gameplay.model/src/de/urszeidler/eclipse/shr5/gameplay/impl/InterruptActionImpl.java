@@ -31,11 +31,11 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeFactory;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InterruptActionImpl#getIniCost <em>Ini Cost</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InterruptActionImpl#getInterruptType <em>Interrupt Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -102,6 +102,7 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getIniCost() {
         return iniCost;
     }
@@ -111,6 +112,7 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setIniCost(int newIniCost) {
         int oldIniCost = iniCost;
         iniCost = newIniCost;
@@ -123,6 +125,7 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public InterruptType getInterruptType() {
         return interruptType;
     }
@@ -132,6 +135,7 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setInterruptType(InterruptType newInterruptType) {
         InterruptType oldInterruptType = interruptType;
         interruptType = newInterruptType == null ? INTERRUPT_TYPE_EDEFAULT : newInterruptType;
@@ -216,7 +220,7 @@ public class InterruptActionImpl extends SubjectCommandImpl implements Interrupt
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (iniCost: ");
         result.append(iniCost);
         result.append(", interruptType: ");

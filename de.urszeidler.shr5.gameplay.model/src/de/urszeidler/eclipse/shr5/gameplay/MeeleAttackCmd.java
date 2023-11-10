@@ -16,10 +16,10 @@ import de.urszeidler.eclipse.shr5.Nahkampfwaffe;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.MeeleAttackCmd#getWeapon <em>Weapon</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getMeeleAttackCmd()
  * @model

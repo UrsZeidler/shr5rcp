@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Webserver
 Bundle-SymbolicName: de.urszeidler.shr5.webserver;singleton:=true
 Bundle-Version: 0.3.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: javax.servlet,
  de.urszeidler.shr5.ecp,
  de.urszeidler.shr5.scripting.edit,

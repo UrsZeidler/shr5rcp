@@ -11,8 +11,6 @@ import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Wissensfertigkeit</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

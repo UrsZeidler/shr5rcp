@@ -19,11 +19,11 @@ import de.urszeidler.eclipse.shr5.gameplay.SimpleActions;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SimpleActionsImpl#getAction1 <em>Action1</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SimpleActionsImpl#getAction2 <em>Action2</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -72,6 +72,7 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SimpleAction getAction1() {
         return action1;
     }
@@ -96,6 +97,7 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAction1(SimpleAction newAction1) {
         if (newAction1 != action1) {
             NotificationChain msgs = null;
@@ -115,6 +117,7 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SimpleAction getAction2() {
         return action2;
     }
@@ -139,6 +142,7 @@ public class SimpleActionsImpl extends CommandWrapperImpl implements SimpleActio
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAction2(SimpleAction newAction2) {
         if (newAction2 != action2) {
             NotificationChain msgs = null;

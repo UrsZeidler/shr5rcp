@@ -19,10 +19,10 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaMartialartTechniqueImpl#getTechnique <em>Technique</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class PersonaMartialartTechniqueImpl extends MinimalEObjectImpl.Container
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MartialartTechnique getTechnique() {
         if (technique != null && technique.eIsProxy()) {
             InternalEObject oldTechnique = (InternalEObject)technique;
@@ -87,6 +88,7 @@ public class PersonaMartialartTechniqueImpl extends MinimalEObjectImpl.Container
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setTechnique(MartialartTechnique newTechnique) {
         MartialartTechnique oldTechnique = technique;
         technique = newTechnique;

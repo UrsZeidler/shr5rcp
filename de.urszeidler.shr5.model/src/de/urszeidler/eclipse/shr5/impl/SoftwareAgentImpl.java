@@ -33,6 +33,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getWert <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
@@ -47,7 +48,6 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getMods <em>Mods</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SoftwareAgentImpl#getRating <em>Rating</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -288,6 +288,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getVerfuegbarkeit() {
         return verfuegbarkeit;
     }
@@ -297,6 +298,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setVerfuegbarkeit(String newVerfuegbarkeit) {
         String oldVerfuegbarkeit = verfuegbarkeit;
         verfuegbarkeit = newVerfuegbarkeit;
@@ -309,6 +311,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public BigDecimal getWertValue() {
         return wertValue;
     }
@@ -331,6 +334,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -340,6 +344,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -352,6 +357,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -361,6 +367,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -373,6 +380,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -382,6 +390,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -394,6 +403,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -403,6 +413,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -415,6 +426,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.SOFTWARE_AGENT__LOCALIZATIONS);
@@ -427,6 +439,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getPage() {
         return page;
     }
@@ -436,6 +449,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
@@ -448,6 +462,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
@@ -474,6 +489,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
@@ -486,6 +502,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<AttributModifikatorWert> getMods() {
         if (mods == null) {
             mods = new EObjectContainmentWithInverseEList<AttributModifikatorWert>(AttributModifikatorWert.class, this, Shr5Package.SOFTWARE_AGENT__MODS, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
@@ -498,6 +515,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getRating() {
         return rating;
     }
@@ -797,7 +815,7 @@ public class SoftwareAgentImpl extends MinimalEObjectImpl.Container implements S
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (verfuegbarkeit: ");
         result.append(verfuegbarkeit);
         result.append(", wertValue: ");

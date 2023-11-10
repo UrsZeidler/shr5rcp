@@ -13,11 +13,11 @@ import de.urszeidler.eclipse.shr5.TimeUnits;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.TrainingRate#getFactor <em>Factor</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.TrainingRate#getTimeUnit <em>Time Unit</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getTrainingRate()
  * @model

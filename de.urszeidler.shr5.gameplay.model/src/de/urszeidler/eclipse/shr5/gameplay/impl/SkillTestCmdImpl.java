@@ -23,10 +23,10 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SkillTestCmdImpl#getSkill <em>Skill</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,6 +65,7 @@ public class SkillTestCmdImpl extends ProbeCommandImpl implements SkillTestCmd {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Fertigkeit getSkill() {
         if (skill != null && skill.eIsProxy()) {
             InternalEObject oldSkill = (InternalEObject)skill;

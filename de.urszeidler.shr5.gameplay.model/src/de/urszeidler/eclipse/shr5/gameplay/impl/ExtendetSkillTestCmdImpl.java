@@ -23,11 +23,11 @@ import de.urszeidler.eclipse.shr5.gameplay.SkillTestCmd;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ExtendetSkillTestCmdImpl#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ExtendetSkillTestCmdImpl#getIntervall <em>Intervall</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -84,6 +84,7 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getStartDate() {
         return startDate;
     }
@@ -93,6 +94,7 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setStartDate(Date newStartDate) {
         Date oldStartDate = startDate;
         startDate = newStartDate;
@@ -105,6 +107,7 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Intervall getIntervall() {
         return intervall;
     }
@@ -129,6 +132,7 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setIntervall(Intervall newIntervall) {
         if (newIntervall != intervall) {
             NotificationChain msgs = null;
@@ -234,7 +238,7 @@ public class ExtendetSkillTestCmdImpl extends SkillTestCmdImpl implements Extend
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (startDate: ");
         result.append(startDate);
         result.append(')');

@@ -15,6 +15,7 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#getCharacter <em>Character</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#getRightHand <em>Right Hand</em>}</li>
@@ -23,7 +24,6 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#getArmor <em>Armor</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter#getUsedEdge <em>Used Edge</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.runtime.RuntimePackage#getRuntimeCharacter()
  * @model

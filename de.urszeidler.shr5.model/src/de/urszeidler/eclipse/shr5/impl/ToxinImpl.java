@@ -21,12 +21,12 @@ import de.urszeidler.eclipse.shr5.Toxin;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ToxinImpl#getPower <em>Power</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ToxinImpl#getPenetration <em>Penetration</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ToxinImpl#getEffect <em>Effect</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -105,6 +105,7 @@ public class ToxinImpl extends SubstanceImpl implements Toxin {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getPower() {
         return power;
     }
@@ -114,6 +115,7 @@ public class ToxinImpl extends SubstanceImpl implements Toxin {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPower(int newPower) {
         int oldPower = power;
         power = newPower;
@@ -126,6 +128,7 @@ public class ToxinImpl extends SubstanceImpl implements Toxin {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getPenetration() {
         return penetration;
     }
@@ -135,6 +138,7 @@ public class ToxinImpl extends SubstanceImpl implements Toxin {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPenetration(int newPenetration) {
         int oldPenetration = penetration;
         penetration = newPenetration;
@@ -147,6 +151,7 @@ public class ToxinImpl extends SubstanceImpl implements Toxin {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<SubstanceEffect> getEffect() {
         if (effect == null) {
             effect = new EDataTypeUniqueEList<SubstanceEffect>(SubstanceEffect.class, this, Shr5Package.TOXIN__EFFECT);
@@ -243,7 +248,7 @@ public class ToxinImpl extends SubstanceImpl implements Toxin {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (power: ");
         result.append(power);
         result.append(", penetration: ");

@@ -32,6 +32,7 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getProbe <em>Probe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getSuccesses <em>Successes</em>}</li>
@@ -48,7 +49,6 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getTestState <em>Test State</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ProbeCommandImpl#getMods <em>Mods</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -326,6 +326,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Integer> getProbe() {
         if (probe == null) {
             probe = new EDataTypeEList<Integer>(Integer.class, this, GameplayPackage.PROBE_COMMAND__PROBE);
@@ -338,6 +339,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getSuccesses() {
         return successes;
     }
@@ -347,6 +349,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSuccesses(int newSuccesses) {
         int oldSuccesses = successes;
         successes = newSuccesses;
@@ -359,6 +362,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getGlitches() {
         return glitches;
     }
@@ -368,6 +372,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setGlitches(int newGlitches) {
         int oldGlitches = glitches;
         glitches = newGlitches;
@@ -380,6 +385,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getLimit() {
         return limit;
     }
@@ -389,6 +395,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setLimit(int newLimit) {
         int oldLimit = limit;
         limit = newLimit;
@@ -403,6 +410,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void unsetLimit() {
         int oldLimit = limit;
         boolean oldLimitESet = limitESet;
@@ -417,6 +425,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isSetLimit() {
         return limitESet;
     }
@@ -446,6 +455,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<ProbeMod> getProbeMods() {
         if (probeMods == null) {
             probeMods = new EObjectContainmentEList<ProbeMod>(ProbeMod.class, this, GameplayPackage.PROBE_COMMAND__PROBE_MODS);
@@ -458,6 +468,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isSkipTest() {
         return skipTest;
     }
@@ -467,6 +478,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSkipTest(boolean newSkipTest) {
         boolean oldSkipTest = skipTest;
         skipTest = newSkipTest;
@@ -479,6 +491,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isPushTheLimit() {
         return pushTheLimit;
     }
@@ -488,6 +501,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPushTheLimit(boolean newPushTheLimit) {
         boolean oldPushTheLimit = pushTheLimit;
         pushTheLimit = newPushTheLimit;
@@ -500,6 +514,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isSecondChance() {
         return secondChance;
     }
@@ -509,6 +524,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSecondChance(boolean newSecondChance) {
         boolean oldSecondChance = secondChance;
         secondChance = newSecondChance;
@@ -521,6 +537,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isCloseCall() {
         return closeCall;
     }
@@ -530,6 +547,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCloseCall(boolean newCloseCall) {
         boolean oldCloseCall = closeCall;
         closeCall = newCloseCall;
@@ -542,6 +560,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getThresholds() {
         return thresholds;
     }
@@ -551,6 +570,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setThresholds(int newThresholds) {
         int oldThresholds = thresholds;
         thresholds = newThresholds;
@@ -563,6 +583,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getNetHits() {
         return netHits;
     }
@@ -572,6 +593,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setNetHits(int newNetHits) {
         int oldNetHits = netHits;
         netHits = newNetHits;
@@ -597,6 +619,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getMods() {
         return mods;
     }
@@ -606,6 +629,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMods(int newMods) {
         int oldMods = mods;
         mods = newMods;
@@ -874,7 +898,7 @@ public abstract class ProbeCommandImpl extends SubjectCommandImpl implements Pro
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (probe: ");
         result.append(probe);
         result.append(", successes: ");

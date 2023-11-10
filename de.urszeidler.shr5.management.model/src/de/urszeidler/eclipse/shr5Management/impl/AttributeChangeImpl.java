@@ -23,10 +23,10 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.AttributeChangeImpl#getAttibute <em>Attibute</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,6 +65,7 @@ public class AttributeChangeImpl extends PersonaValueChangeImpl implements Attri
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getAttibute() {
         if (attibute != null && attibute.eIsProxy()) {
             InternalEObject oldAttibute = (InternalEObject)attibute;

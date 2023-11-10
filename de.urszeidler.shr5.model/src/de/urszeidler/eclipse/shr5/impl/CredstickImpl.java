@@ -26,12 +26,12 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CredstickImpl#getMaxValue <em>Max Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CredstickImpl#getTransactionlog <em>Transactionlog</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CredstickImpl#getCurrentValue <em>Current Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -121,6 +121,7 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getMaxValue() {
         return maxValue;
     }
@@ -130,6 +131,7 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMaxValue(int newMaxValue) {
         int oldMaxValue = maxValue;
         maxValue = newMaxValue;
@@ -142,6 +144,7 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<CredstickTransaction> getTransactionlog() {
         if (transactionlog == null) {
             transactionlog = new EObjectContainmentEList<CredstickTransaction>(CredstickTransaction.class, this, Shr5Package.CREDSTICK__TRANSACTIONLOG);
@@ -262,7 +265,7 @@ public class CredstickImpl extends AbstraktGegenstandImpl implements Credstick {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (maxValue: ");
         result.append(maxValue);
         result.append(')');

@@ -27,6 +27,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagazinImpl#getCapacityFeature <em>Capacity Feature</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagazinImpl#getCapacity <em>Capacity</em>}</li>
@@ -34,7 +35,6 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagazinImpl#getType <em>Type</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagazinImpl#getBullets <em>Bullets</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -103,6 +103,7 @@ public class MagazinImpl extends AbstraktGegenstandImpl implements Magazin {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCapacityFeature() {
         EReference capacityFeature = basicGetCapacityFeature();
         return capacityFeature != null && capacityFeature.eIsProxy() ? (EReference)eResolveProxy((InternalEObject)capacityFeature) : capacityFeature;
@@ -144,6 +145,7 @@ public class MagazinImpl extends AbstraktGegenstandImpl implements Magazin {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Feuerwaffe getType() {
         if (type != null && type.eIsProxy()) {
             InternalEObject oldType = (InternalEObject)type;
@@ -170,6 +172,7 @@ public class MagazinImpl extends AbstraktGegenstandImpl implements Magazin {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setType(Feuerwaffe newType) {
         Feuerwaffe oldType = type;
         type = newType;

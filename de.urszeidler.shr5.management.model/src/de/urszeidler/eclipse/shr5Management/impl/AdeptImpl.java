@@ -21,10 +21,10 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.AdeptImpl#getMagic <em>Magic</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -73,7 +73,8 @@ public class AdeptImpl extends SpecialTypeImpl implements Adept {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getMagic() {
+	@Override
+    public int getMagic() {
         return magic;
     }
 
@@ -82,7 +83,8 @@ public class AdeptImpl extends SpecialTypeImpl implements Adept {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setMagic(int newMagic) {
+	@Override
+    public void setMagic(int newMagic) {
         int oldMagic = magic;
         magic = newMagic;
         if (eNotificationRequired())
@@ -182,7 +184,7 @@ public class AdeptImpl extends SpecialTypeImpl implements Adept {
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (magic: ");
         result.append(magic);
         result.append(')');

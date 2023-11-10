@@ -17,12 +17,12 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.LocalizationImpl#getLocal <em>Local</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.LocalizationImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.LocalizationImpl#getPage <em>Page</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -111,6 +111,7 @@ public class LocalizationImpl extends MinimalEObjectImpl.Container implements Lo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getLocal() {
         return local;
     }
@@ -120,6 +121,7 @@ public class LocalizationImpl extends MinimalEObjectImpl.Container implements Lo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setLocal(String newLocal) {
         String oldLocal = local;
         local = newLocal;
@@ -132,6 +134,7 @@ public class LocalizationImpl extends MinimalEObjectImpl.Container implements Lo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -141,6 +144,7 @@ public class LocalizationImpl extends MinimalEObjectImpl.Container implements Lo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -153,6 +157,7 @@ public class LocalizationImpl extends MinimalEObjectImpl.Container implements Lo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getPage() {
         return page;
     }
@@ -162,6 +167,7 @@ public class LocalizationImpl extends MinimalEObjectImpl.Container implements Lo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPage(int newPage) {
         int oldPage = page;
         page = newPage;
@@ -256,7 +262,7 @@ public class LocalizationImpl extends MinimalEObjectImpl.Container implements Lo
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (local: ");
         result.append(local);
         result.append(", name: ");

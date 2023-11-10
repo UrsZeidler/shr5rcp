@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetDataAware#getExtendetData <em>Extendet Data</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.runtime.RuntimePackage#getExtendetDataAware()
  * @model interface="true" abstract="true"

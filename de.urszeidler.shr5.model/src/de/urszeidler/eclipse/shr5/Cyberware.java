@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberware#getPersona <em>Persona</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberware#getEinbau <em>Einbau</em>}</li>
@@ -18,7 +19,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberware#getType <em>Type</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Cyberware#getWifi <em>Wifi</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberware()
  * @model

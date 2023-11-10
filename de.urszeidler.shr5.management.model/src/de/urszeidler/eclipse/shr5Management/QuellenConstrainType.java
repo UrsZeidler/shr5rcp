@@ -26,6 +26,9 @@ public enum QuellenConstrainType implements Enumerator {
      * The '<em><b>Not Together</b></em>' literal object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * No element refers in targets are allow to be in the character togther with the source.
+     * <!-- end-model-doc -->
      * @see #NOT_TOGETHER_VALUE
      * @generated
      * @ordered
@@ -36,6 +39,9 @@ public enum QuellenConstrainType implements Enumerator {
      * The '<em><b>Need One Of</b></em>' literal object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * One or ore element refers in targets need  to be in the character togther with the source.
+     * <!-- end-model-doc -->
      * @see #NEED_ONE_OF_VALUE
      * @generated
      * @ordered
@@ -94,6 +100,8 @@ public enum QuellenConstrainType implements Enumerator {
      * Returns the '<em><b>Quellen Constrain Type</b></em>' literal with the specified literal value.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @param literal the literal.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static QuellenConstrainType get(String literal) {
@@ -110,6 +118,8 @@ public enum QuellenConstrainType implements Enumerator {
      * Returns the '<em><b>Quellen Constrain Type</b></em>' literal with the specified name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @param name the name.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static QuellenConstrainType getByName(String name) {
@@ -126,6 +136,8 @@ public enum QuellenConstrainType implements Enumerator {
      * Returns the '<em><b>Quellen Constrain Type</b></em>' literal with the specified integer value.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @param value the integer value.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static QuellenConstrainType get(int value) {
@@ -174,6 +186,7 @@ public enum QuellenConstrainType implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getValue() {
       return value;
     }
@@ -183,6 +196,7 @@ public enum QuellenConstrainType implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
       return name;
     }
@@ -192,6 +206,7 @@ public enum QuellenConstrainType implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getLiteral() {
       return literal;
     }

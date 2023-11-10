@@ -54,6 +54,7 @@ import de.urszeidler.eclipse.shr5.gameplay.SuccesTestCmd;
 import de.urszeidler.eclipse.shr5.gameplay.SuccesTestState;
 import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
 import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
+import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -356,7 +357,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
 
     /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-     * 
+     *
      * <p>This method is used to initialize {@link GameplayPackage#eINSTANCE} when that field is accessed.
      * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
      * <!-- begin-user-doc -->
@@ -370,12 +371,15 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         if (isInited) return (GameplayPackage)EPackage.Registry.INSTANCE.getEPackage(GameplayPackage.eNS_URI);
 
         // Obtain or create and register package
-        GameplayPackageImpl theGameplayPackage = (GameplayPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof GameplayPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new GameplayPackageImpl());
+        Object registeredGameplayPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+        GameplayPackageImpl theGameplayPackage = registeredGameplayPackage instanceof GameplayPackageImpl ? (GameplayPackageImpl)registeredGameplayPackage : new GameplayPackageImpl();
 
         isInited = true;
 
         // Initialize simple dependencies
         RuntimePackage.eINSTANCE.eClass();
+        Shr5Package.eINSTANCE.eClass();
+        Shr5managementPackage.eINSTANCE.eClass();
 
         // Create package meta-data objects
         theGameplayPackage.createPackageContents();
@@ -386,7 +390,6 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
         // Mark meta-data to indicate it can't be changed
         theGameplayPackage.freeze();
 
-  
         // Update the registry and return the package
         EPackage.Registry.INSTANCE.put(GameplayPackage.eNS_URI, theGameplayPackage);
         return theGameplayPackage;
@@ -397,6 +400,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getExecutionStack() {
         return executionStackEClass;
     }
@@ -406,6 +410,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getExecutionStack_CurrentCommand() {
         return (EReference)executionStackEClass.getEStructuralFeatures().get(0);
     }
@@ -415,6 +420,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getExecutionStack_Protocol() {
         return (EReference)executionStackEClass.getEStructuralFeatures().get(1);
     }
@@ -424,6 +430,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getExecutionStack__Redo() {
         return executionStackEClass.getEOperations().get(0);
     }
@@ -433,6 +440,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getDamageTest() {
         return damageTestEClass;
     }
@@ -442,6 +450,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getDamageTest_Damage() {
         return (EAttribute)damageTestEClass.getEStructuralFeatures().get(0);
     }
@@ -451,6 +460,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getDamageTest_Dv() {
         return (EAttribute)damageTestEClass.getEStructuralFeatures().get(1);
     }
@@ -460,6 +470,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getDamageTest_EffectiveDamage() {
         return (EAttribute)damageTestEClass.getEStructuralFeatures().get(2);
     }
@@ -469,6 +480,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getCommand() {
         return commandEClass;
     }
@@ -478,6 +490,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCommand_Executed() {
         return (EAttribute)commandEClass.getEStructuralFeatures().get(0);
     }
@@ -487,6 +500,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCommand_SubCommands() {
         return (EReference)commandEClass.getEStructuralFeatures().get(1);
     }
@@ -496,6 +510,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCommand_Date() {
         return (EAttribute)commandEClass.getEStructuralFeatures().get(2);
     }
@@ -505,6 +520,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCommand_CmdCallback() {
         return (EAttribute)commandEClass.getEStructuralFeatures().get(3);
     }
@@ -514,6 +530,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCommand_Executing() {
         return (EAttribute)commandEClass.getEStructuralFeatures().get(4);
     }
@@ -523,6 +540,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCommand_CanExecute() {
         return (EAttribute)commandEClass.getEStructuralFeatures().get(5);
     }
@@ -532,6 +550,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCommand_Hidden() {
         return (EAttribute)commandEClass.getEStructuralFeatures().get(6);
     }
@@ -541,6 +560,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getCommand__Redo() {
         return commandEClass.getEOperations().get(0);
     }
@@ -550,6 +570,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getCommand__Undo() {
         return commandEClass.getEOperations().get(1);
     }
@@ -559,6 +580,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSubjectCommand() {
         return subjectCommandEClass;
     }
@@ -568,6 +590,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSubjectCommand_Subject() {
         return (EReference)subjectCommandEClass.getEStructuralFeatures().get(0);
     }
@@ -577,6 +600,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSkillTestCmd() {
         return skillTestCmdEClass;
     }
@@ -586,6 +610,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSkillTestCmd_Skill() {
         return (EReference)skillTestCmdEClass.getEStructuralFeatures().get(0);
     }
@@ -595,6 +620,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getOpposedSkillTestCmd() {
         return opposedSkillTestCmdEClass;
     }
@@ -604,6 +630,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getOpposedSkillTestCmd_Object() {
         return (EReference)opposedSkillTestCmdEClass.getEStructuralFeatures().get(0);
     }
@@ -613,6 +640,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getOpposedSkillTestCmd_ObjectSkill() {
         return (EReference)opposedSkillTestCmdEClass.getEStructuralFeatures().get(1);
     }
@@ -622,6 +650,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getInitative() {
         return initativeEClass;
     }
@@ -631,6 +660,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getInitative_Ini() {
         return (EAttribute)initativeEClass.getEStructuralFeatures().get(0);
     }
@@ -640,6 +670,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getInitative_ActualIni() {
         return (EAttribute)initativeEClass.getEStructuralFeatures().get(1);
     }
@@ -649,6 +680,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getInitative_SizeInitative() {
         return (EAttribute)initativeEClass.getEStructuralFeatures().get(2);
     }
@@ -658,6 +690,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getInitative__NextPass__int() {
         return initativeEClass.getEOperations().get(0);
     }
@@ -667,6 +700,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getExecutionProtocol() {
         return executionProtocolEClass;
     }
@@ -676,6 +710,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getExecutionProtocol_Commands() {
         return (EReference)executionProtocolEClass.getEStructuralFeatures().get(0);
     }
@@ -685,6 +720,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getProbe() {
         return probeEClass;
     }
@@ -694,6 +730,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getProbe_Probe() {
         return (EAttribute)probeEClass.getEStructuralFeatures().get(0);
     }
@@ -703,6 +740,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getProbe_Successes() {
         return (EAttribute)probeEClass.getEStructuralFeatures().get(1);
     }
@@ -712,6 +750,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getProbe_Glitches() {
         return (EAttribute)probeEClass.getEStructuralFeatures().get(2);
     }
@@ -721,6 +760,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getProbe_Limit() {
         return (EAttribute)probeEClass.getEStructuralFeatures().get(3);
     }
@@ -730,6 +770,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getProbe_ProbeState() {
         return (EAttribute)probeEClass.getEStructuralFeatures().get(4);
     }
@@ -739,6 +780,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getProbe_ProbeMods() {
         return (EReference)probeEClass.getEStructuralFeatures().get(5);
     }
@@ -748,6 +790,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getProbe_SkipTest() {
         return (EAttribute)probeEClass.getEStructuralFeatures().get(6);
     }
@@ -757,6 +800,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getProbe_PushTheLimit() {
         return (EAttribute)probeEClass.getEStructuralFeatures().get(7);
     }
@@ -766,6 +810,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getProbe_SecondChance() {
         return (EAttribute)probeEClass.getEStructuralFeatures().get(8);
     }
@@ -775,6 +820,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getProbe_CloseCall() {
         return (EAttribute)probeEClass.getEStructuralFeatures().get(9);
     }
@@ -784,6 +830,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getProbeCommand() {
         return probeCommandEClass;
     }
@@ -793,6 +840,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getProbeCommand_Mods() {
         return (EAttribute)probeCommandEClass.getEStructuralFeatures().get(0);
     }
@@ -802,6 +850,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getPhaseCmd() {
         return phaseCmdEClass;
     }
@@ -811,6 +860,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getPhaseCmd_Phase() {
         return (EAttribute)phaseCmdEClass.getEStructuralFeatures().get(0);
     }
@@ -820,6 +870,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getCombatTurn() {
         return combatTurnEClass;
     }
@@ -829,6 +880,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCombatTurn_Combatants() {
         return (EReference)combatTurnEClass.getEStructuralFeatures().get(0);
     }
@@ -838,6 +890,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCombatTurn_ActionPhases() {
         return (EReference)combatTurnEClass.getEStructuralFeatures().get(1);
     }
@@ -847,6 +900,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCombatTurn_CurrentTurn() {
         return (EReference)combatTurnEClass.getEStructuralFeatures().get(2);
     }
@@ -856,6 +910,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCombatTurn_Sequence() {
         return (EAttribute)combatTurnEClass.getEStructuralFeatures().get(3);
     }
@@ -865,6 +920,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getCombatTurn__DoTurn() {
         return combatTurnEClass.getEOperations().get(0);
     }
@@ -874,6 +930,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSuccesTest() {
         return succesTestEClass;
     }
@@ -883,6 +940,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSuccesTest_Thresholds() {
         return (EAttribute)succesTestEClass.getEStructuralFeatures().get(0);
     }
@@ -892,6 +950,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSuccesTest_NetHits() {
         return (EAttribute)succesTestEClass.getEStructuralFeatures().get(1);
     }
@@ -901,6 +960,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSuccesTest_TestState() {
         return (EAttribute)succesTestEClass.getEStructuralFeatures().get(2);
     }
@@ -910,6 +970,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getExtendetSkillTestCmd() {
         return extendetSkillTestCmdEClass;
     }
@@ -919,6 +980,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getExtendetSkillTestCmd_StartDate() {
         return (EAttribute)extendetSkillTestCmdEClass.getEStructuralFeatures().get(0);
     }
@@ -928,6 +990,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getExtendetSkillTestCmd_Intervall() {
         return (EReference)extendetSkillTestCmdEClass.getEStructuralFeatures().get(1);
     }
@@ -937,6 +1000,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getDefensTestCmd() {
         return defensTestCmdEClass;
     }
@@ -946,6 +1010,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getDefensTestCmd_AttackersHits() {
         return (EAttribute)defensTestCmdEClass.getEStructuralFeatures().get(0);
     }
@@ -955,6 +1020,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSuccesTestCmd() {
         return succesTestCmdEClass;
     }
@@ -964,6 +1030,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSuccesTestCmd_DicePool() {
         return (EAttribute)succesTestCmdEClass.getEStructuralFeatures().get(0);
     }
@@ -973,6 +1040,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getInitativePass() {
         return initativePassEClass;
     }
@@ -982,6 +1050,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getInitativePass_Turn() {
         return (EAttribute)initativePassEClass.getEStructuralFeatures().get(0);
     }
@@ -991,6 +1060,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getInitativePass_SizeInitative() {
         return (EAttribute)initativePassEClass.getEStructuralFeatures().get(1);
     }
@@ -1000,6 +1070,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getInitativePass_Action() {
         return (EReference)initativePassEClass.getEStructuralFeatures().get(2);
     }
@@ -1009,6 +1080,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getInitativePass_FreeAction() {
         return (EReference)initativePassEClass.getEStructuralFeatures().get(3);
     }
@@ -1018,6 +1090,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getInitativePass_InterruptAction() {
         return (EReference)initativePassEClass.getEStructuralFeatures().get(4);
     }
@@ -1027,6 +1100,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getCommandWrapper() {
         return commandWrapperEClass;
     }
@@ -1036,6 +1110,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getComplexAction() {
         return complexActionEClass;
     }
@@ -1045,6 +1120,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSimpleAction() {
         return simpleActionEClass;
     }
@@ -1054,6 +1130,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSimpleActions() {
         return simpleActionsEClass;
     }
@@ -1063,6 +1140,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSimpleActions_Action1() {
         return (EReference)simpleActionsEClass.getEStructuralFeatures().get(0);
     }
@@ -1072,6 +1150,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSimpleActions_Action2() {
         return (EReference)simpleActionsEClass.getEStructuralFeatures().get(1);
     }
@@ -1081,6 +1160,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getFreeAction() {
         return freeActionEClass;
     }
@@ -1090,6 +1170,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getInterruptAction() {
         return interruptActionEClass;
     }
@@ -1099,6 +1180,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getInterruptAction_IniCost() {
         return (EAttribute)interruptActionEClass.getEStructuralFeatures().get(0);
     }
@@ -1108,6 +1190,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getInterruptAction_InterruptType() {
         return (EAttribute)interruptActionEClass.getEStructuralFeatures().get(1);
     }
@@ -1117,6 +1200,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSetFeatureCommand() {
         return setFeatureCommandEClass;
     }
@@ -1126,6 +1210,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSetFeatureCommand_Value() {
         return (EAttribute)setFeatureCommandEClass.getEStructuralFeatures().get(0);
     }
@@ -1135,6 +1220,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSetFeatureCommand_Object() {
         return (EReference)setFeatureCommandEClass.getEStructuralFeatures().get(1);
     }
@@ -1144,6 +1230,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSetFeatureCommand_Feature() {
         return (EReference)setFeatureCommandEClass.getEStructuralFeatures().get(2);
     }
@@ -1153,6 +1240,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getMeeleAttackCmd() {
         return meeleAttackCmdEClass;
     }
@@ -1162,6 +1250,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getMeeleAttackCmd_Weapon() {
         return (EReference)meeleAttackCmdEClass.getEStructuralFeatures().get(0);
     }
@@ -1171,6 +1260,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getRangedAttackCmd() {
         return rangedAttackCmdEClass;
     }
@@ -1180,6 +1270,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getRangedAttackCmd_Modus() {
         return (EAttribute)rangedAttackCmdEClass.getEStructuralFeatures().get(0);
     }
@@ -1189,6 +1280,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getRangedAttackCmd_Range() {
         return (EAttribute)rangedAttackCmdEClass.getEStructuralFeatures().get(1);
     }
@@ -1198,6 +1290,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getRangedAttackCmd_Weapon() {
         return (EReference)rangedAttackCmdEClass.getEStructuralFeatures().get(2);
     }
@@ -1207,6 +1300,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getRangedAttackCmd_NumberOfShoots() {
         return (EAttribute)rangedAttackCmdEClass.getEStructuralFeatures().get(3);
     }
@@ -1216,6 +1310,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getIntervall() {
         return intervallEClass;
     }
@@ -1225,6 +1320,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getIntervall_Quantities() {
         return (EAttribute)intervallEClass.getEStructuralFeatures().get(0);
     }
@@ -1234,6 +1330,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getIntervall_Units() {
         return (EAttribute)intervallEClass.getEStructuralFeatures().get(1);
     }
@@ -1243,6 +1340,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getProbeMod() {
         return probeModEClass;
     }
@@ -1252,6 +1350,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getProbeMod_Value() {
         return (EAttribute)probeModEClass.getEStructuralFeatures().get(0);
     }
@@ -1261,6 +1360,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getProbeMod_Type() {
         return (EReference)probeModEClass.getEStructuralFeatures().get(1);
     }
@@ -1270,6 +1370,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSetExtendetData() {
         return setExtendetDataEClass;
     }
@@ -1279,6 +1380,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSetExtendetData_DataAware() {
         return (EReference)setExtendetDataEClass.getEStructuralFeatures().get(0);
     }
@@ -1288,6 +1390,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSetExtendetData_Data() {
         return (EReference)setExtendetDataEClass.getEStructuralFeatures().get(1);
     }
@@ -1297,6 +1400,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSetExtendetData_Value() {
         return (EAttribute)setExtendetDataEClass.getEStructuralFeatures().get(2);
     }
@@ -1306,6 +1410,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSemanticAction() {
         return semanticActionEClass;
     }
@@ -1315,6 +1420,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSemanticAction_Type() {
         return (EAttribute)semanticActionEClass.getEStructuralFeatures().get(0);
     }
@@ -1324,6 +1430,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSemanticAction_Message() {
         return (EAttribute)semanticActionEClass.getEStructuralFeatures().get(1);
     }
@@ -1333,6 +1440,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getDrainCommand() {
         return drainCommandEClass;
     }
@@ -1342,6 +1450,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getDrainCommand_Damage() {
         return (EAttribute)drainCommandEClass.getEStructuralFeatures().get(0);
     }
@@ -1351,6 +1460,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getDrainCommand_DamageType() {
         return (EAttribute)drainCommandEClass.getEStructuralFeatures().get(1);
     }
@@ -1360,6 +1470,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSpellCommand() {
         return spellCommandEClass;
     }
@@ -1369,6 +1480,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSpellCommand_Spell() {
         return (EReference)spellCommandEClass.getEStructuralFeatures().get(0);
     }
@@ -1378,6 +1490,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getCombatSpellCmd() {
         return combatSpellCmdEClass;
     }
@@ -1387,6 +1500,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getInterruptType() {
         return interruptTypeEEnum;
     }
@@ -1396,6 +1510,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getProbeState() {
         return probeStateEEnum;
     }
@@ -1405,6 +1520,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getSuccesTestState() {
         return succesTestStateEEnum;
     }
@@ -1414,6 +1530,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getSemanticType() {
         return semanticTypeEEnum;
     }
@@ -1423,6 +1540,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EDataType getCommandCallback() {
         return commandCallbackEDataType;
     }
@@ -1432,6 +1550,7 @@ public class GameplayPackageImpl extends EPackageImpl implements GameplayPackage
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public GameplayFactory getGameplayFactory() {
         return (GameplayFactory)getEFactoryInstance();
     }

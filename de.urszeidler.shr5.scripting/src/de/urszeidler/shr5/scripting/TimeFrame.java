@@ -17,12 +17,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.shr5.scripting.TimeFrame#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.TimeFrame#getEndDate <em>End Date</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.TimeFrame#getActualDate <em>Actual Date</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.shr5.scripting.ScriptingPackage#getTimeFrame()
  * @model interface="true" abstract="true"

@@ -15,11 +15,11 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SchutzgeistImpl#getVorteile <em>Vorteile</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SchutzgeistImpl#getNachteile <em>Nachteile</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -88,7 +88,8 @@ public class SchutzgeistImpl extends MagischeModsImpl implements Schutzgeist {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getVorteile() {
+	@Override
+    public String getVorteile() {
         return vorteile;
     }
 
@@ -97,7 +98,8 @@ public class SchutzgeistImpl extends MagischeModsImpl implements Schutzgeist {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setVorteile(String newVorteile) {
+	@Override
+    public void setVorteile(String newVorteile) {
         String oldVorteile = vorteile;
         vorteile = newVorteile;
         if (eNotificationRequired())
@@ -109,7 +111,8 @@ public class SchutzgeistImpl extends MagischeModsImpl implements Schutzgeist {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getNachteile() {
+	@Override
+    public String getNachteile() {
         return nachteile;
     }
 
@@ -118,7 +121,8 @@ public class SchutzgeistImpl extends MagischeModsImpl implements Schutzgeist {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setNachteile(String newNachteile) {
+	@Override
+    public void setNachteile(String newNachteile) {
         String oldNachteile = nachteile;
         nachteile = newNachteile;
         if (eNotificationRequired())
@@ -202,7 +206,7 @@ public class SchutzgeistImpl extends MagischeModsImpl implements Schutzgeist {
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (vorteile: ");
         result.append(vorteile);
         result.append(", nachteile: ");

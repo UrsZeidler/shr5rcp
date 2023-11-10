@@ -226,6 +226,8 @@ public enum TimeUnits implements Enumerator {
      * Returns the '<em><b>Time Units</b></em>' literal with the specified literal value.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @param literal the literal.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static TimeUnits get(String literal) {
@@ -242,6 +244,8 @@ public enum TimeUnits implements Enumerator {
      * Returns the '<em><b>Time Units</b></em>' literal with the specified name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @param name the name.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static TimeUnits getByName(String name) {
@@ -258,6 +262,8 @@ public enum TimeUnits implements Enumerator {
      * Returns the '<em><b>Time Units</b></em>' literal with the specified integer value.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @param value the integer value.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static TimeUnits get(int value) {
@@ -311,6 +317,7 @@ public enum TimeUnits implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getValue() {
       return value;
     }
@@ -320,6 +327,7 @@ public enum TimeUnits implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
       return name;
     }
@@ -329,6 +337,7 @@ public enum TimeUnits implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getLiteral() {
       return literal;
     }

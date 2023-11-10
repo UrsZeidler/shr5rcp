@@ -22,12 +22,12 @@ import de.urszeidler.shr5.gameplay.dice.IniDice;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativeImpl#getIni <em>Ini</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativeImpl#getActualIni <em>Actual Ini</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativeImpl#isSizeInitative <em>Size Initative</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -116,6 +116,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getIni() {
         return ini;
     }
@@ -125,6 +126,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setIni(int newIni) {
         int oldIni = ini;
         ini = newIni;
@@ -137,6 +139,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getActualIni() {
         return actualIni;
     }
@@ -146,6 +149,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setActualIni(int newActualIni) {
         int oldActualIni = actualIni;
         actualIni = newActualIni;
@@ -158,6 +162,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isSizeInitative() {
         return sizeInitative;
     }
@@ -167,6 +172,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSizeInitative(boolean newSizeInitative) {
         boolean oldSizeInitative = sizeInitative;
         sizeInitative = newSizeInitative;
@@ -313,7 +319,7 @@ public class InitativeImpl extends SubjectCommandImpl implements Initative {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (ini: ");
         result.append(ini);
         result.append(", actualIni: ");

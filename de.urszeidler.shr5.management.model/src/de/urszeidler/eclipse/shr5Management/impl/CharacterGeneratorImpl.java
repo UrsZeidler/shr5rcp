@@ -25,6 +25,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <em><b>Character Generator</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorImpl#getCharacter <em>Character</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorImpl#getGenerator <em>Generator</em>}</li>
@@ -33,7 +34,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorImpl#getCharacterName <em>Character Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorImpl#getCurrentInstruction <em>Current Instruction</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -194,7 +194,8 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public ManagedCharacter getCharacter() {
+	@Override
+    public ManagedCharacter getCharacter() {
         if (character != null && character.eIsProxy()) {
             InternalEObject oldCharacter = (InternalEObject)character;
             character = (ManagedCharacter)eResolveProxy(oldCharacter);
@@ -248,7 +249,8 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public void setCharacter(ManagedCharacter newCharacter) {
+	@Override
+    public void setCharacter(ManagedCharacter newCharacter) {
         if (newCharacter != character) {
             NotificationChain msgs = null;
             if (character != null)
@@ -267,6 +269,7 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
      * @generated
      */
 	@SuppressWarnings("unchecked")
+    @Override
     public G getGenerator() {
         if (generator != null && generator.eIsProxy()) {
             InternalEObject oldGenerator = (InternalEObject)generator;
@@ -292,6 +295,7 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setGenerator(G newGenerator) {
         G oldGenerator = generator;
         generator = newGenerator;
@@ -303,7 +307,8 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public GeneratorState getState() {
+	@Override
+    public GeneratorState getState() {
         return state;
     }
 
@@ -344,7 +349,8 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public CharacterGroup getSelectedGroup() {
+	@Override
+    public CharacterGroup getSelectedGroup() {
         if (selectedGroup != null && selectedGroup.eIsProxy()) {
             InternalEObject oldSelectedGroup = (InternalEObject)selectedGroup;
             selectedGroup = (CharacterGroup)eResolveProxy(oldSelectedGroup);
@@ -368,7 +374,8 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public void setSelectedGroup(CharacterGroup newSelectedGroup) {
+	@Override
+    public void setSelectedGroup(CharacterGroup newSelectedGroup) {
         CharacterGroup oldSelectedGroup = selectedGroup;
         selectedGroup = newSelectedGroup;
         if (eNotificationRequired())
@@ -379,7 +386,8 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public String getCharacterName() {
+	@Override
+    public String getCharacterName() {
         return characterName;
     }
 
@@ -387,7 +395,8 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
-	public void setCharacterName(String newCharacterName) {
+	@Override
+    public void setCharacterName(String newCharacterName) {
         String oldCharacterName = characterName;
         characterName = newCharacterName;
         if (eNotificationRequired())
@@ -544,7 +553,7 @@ public abstract class CharacterGeneratorImpl<G extends CharacterGeneratorSystem>
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (state: ");
         result.append(state);
         result.append(", characterName: ");

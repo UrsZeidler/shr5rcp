@@ -18,11 +18,11 @@ import de.urszeidler.eclipse.shr5.gameplay.Intervall;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.IntervallImpl#getQuantities <em>Quantities</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.IntervallImpl#getUnits <em>Units</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -91,6 +91,7 @@ public class IntervallImpl extends MinimalEObjectImpl.Container implements Inter
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getQuantities() {
         return quantities;
     }
@@ -100,6 +101,7 @@ public class IntervallImpl extends MinimalEObjectImpl.Container implements Inter
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setQuantities(int newQuantities) {
         int oldQuantities = quantities;
         quantities = newQuantities;
@@ -112,6 +114,7 @@ public class IntervallImpl extends MinimalEObjectImpl.Container implements Inter
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public TimeUnits getUnits() {
         return units;
     }
@@ -121,6 +124,7 @@ public class IntervallImpl extends MinimalEObjectImpl.Container implements Inter
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setUnits(TimeUnits newUnits) {
         TimeUnits oldUnits = units;
         units = newUnits == null ? UNITS_EDEFAULT : newUnits;
@@ -205,7 +209,7 @@ public class IntervallImpl extends MinimalEObjectImpl.Container implements Inter
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (quantities: ");
         result.append(quantities);
         result.append(", units: ");

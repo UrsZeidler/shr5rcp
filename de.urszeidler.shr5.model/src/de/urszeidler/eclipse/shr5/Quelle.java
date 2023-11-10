@@ -10,11 +10,11 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Quelle#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Quelle#getSrcBook <em>Src Book</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getQuelle()
  * @model interface="true" abstract="true"

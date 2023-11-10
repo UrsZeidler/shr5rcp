@@ -19,12 +19,12 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ConnectionImpl#getInfluence <em>Influence</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ConnectionImpl#getLoyality <em>Loyality</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ConnectionImpl#getCharacter <em>Character</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -103,7 +103,8 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getInfluence() {
+	@Override
+    public int getInfluence() {
         return influence;
     }
 
@@ -112,7 +113,8 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setInfluence(int newInfluence) {
+	@Override
+    public void setInfluence(int newInfluence) {
         int oldInfluence = influence;
         influence = newInfluence;
         if (eNotificationRequired())
@@ -124,7 +126,8 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getLoyality() {
+	@Override
+    public int getLoyality() {
         return loyality;
     }
 
@@ -133,7 +136,8 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setLoyality(int newLoyality) {
+	@Override
+    public void setLoyality(int newLoyality) {
         int oldLoyality = loyality;
         loyality = newLoyality;
         if (eNotificationRequired())
@@ -145,7 +149,8 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public ManagedCharacter getCharacter() {
+	@Override
+    public ManagedCharacter getCharacter() {
         if (character != null && character.eIsProxy()) {
             InternalEObject oldCharacter = (InternalEObject)character;
             character = (ManagedCharacter)eResolveProxy(oldCharacter);
@@ -171,7 +176,8 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setCharacter(ManagedCharacter newCharacter) {
+	@Override
+    public void setCharacter(ManagedCharacter newCharacter) {
         ManagedCharacter oldCharacter = character;
         character = newCharacter;
         if (eNotificationRequired())
@@ -266,7 +272,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (influence: ");
         result.append(influence);
         result.append(", loyality: ");

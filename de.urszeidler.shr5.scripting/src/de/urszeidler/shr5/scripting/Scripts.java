@@ -16,11 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.shr5.scripting.Scripts#getStories <em>Stories</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Scripts#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScripts()
  * @model

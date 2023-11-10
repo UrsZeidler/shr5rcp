@@ -40,6 +40,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getMatrixZustandMax <em>Matrix Zustand Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
@@ -63,7 +64,6 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getRunningPrograms <em>Running Programs</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberdeckImpl#getModManager <em>Mod Manager</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -458,6 +458,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCapacityFeature() {
         EReference capacityFeature = basicGetCapacityFeature();
         return capacityFeature != null && capacityFeature.eIsProxy() ? (EReference)eResolveProxy((InternalEObject)capacityFeature) : capacityFeature;
@@ -536,6 +537,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public InterfaceModus getCurrentModus() {
         return currentModus;
     }
@@ -545,6 +547,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCurrentModus(InterfaceModus newCurrentModus) {
         InterfaceModus oldCurrentModus = currentModus;
         currentModus = newCurrentModus == null ? CURRENT_MODUS_EDEFAULT : newCurrentModus;
@@ -557,6 +560,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public PersonalAreaNetwork getPan() {
         return pan;
     }
@@ -581,6 +585,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPan(PersonalAreaNetwork newPan) {
         if (newPan != pan) {
             NotificationChain msgs = null;
@@ -600,6 +605,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getDeviceRating() {
         return deviceRating;
     }
@@ -609,6 +615,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDeviceRating(int newDeviceRating) {
         int oldDeviceRating = deviceRating;
         deviceRating = newDeviceRating;
@@ -628,6 +635,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getProgramSlots() {
         return programSlots;
     }
@@ -637,6 +645,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setProgramSlots(int newProgramSlots) {
         int oldProgramSlots = programSlots;
         programSlots = newProgramSlots;
@@ -649,6 +658,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getAttribute1() {
         return attribute1;
     }
@@ -658,6 +668,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAttribute1(int newAttribute1) {
         int oldAttribute1 = attribute1;
         attribute1 = newAttribute1;
@@ -670,6 +681,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getAttribute2() {
         return attribute2;
     }
@@ -679,6 +691,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAttribute2(int newAttribute2) {
         int oldAttribute2 = attribute2;
         attribute2 = newAttribute2;
@@ -691,6 +704,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getAttribute3() {
         return attribute3;
     }
@@ -700,6 +714,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAttribute3(int newAttribute3) {
         int oldAttribute3 = attribute3;
         attribute3 = newAttribute3;
@@ -712,6 +727,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getAttribute4() {
         return attribute4;
     }
@@ -721,6 +737,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAttribute4(int newAttribute4) {
         int oldAttribute4 = attribute4;
         attribute4 = newAttribute4;
@@ -733,6 +750,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<EAttribute> getConfiguration() {
         if (configuration == null) {
             configuration = new EObjectResolvingEList<EAttribute>(EAttribute.class, this, Shr5Package.CYBERDECK__CONFIGURATION);
@@ -745,6 +763,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<MatrixProgram> getStoredPrograms() {
         if (storedPrograms == null) {
             storedPrograms = new EObjectContainmentEList<MatrixProgram>(MatrixProgram.class, this, Shr5Package.CYBERDECK__STORED_PROGRAMS);
@@ -757,6 +776,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<MatrixProgram> getRunningPrograms() {
         if (runningPrograms == null) {
             runningPrograms = new EObjectResolvingEList<MatrixProgram>(MatrixProgram.class, this, Shr5Package.CYBERDECK__RUNNING_PROGRAMS);
@@ -769,6 +789,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ModSetter getModManager() {
         return modManager;
     }
@@ -1185,7 +1206,7 @@ public class CyberdeckImpl extends AbstraktGegenstandImpl implements Cyberdeck {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (currentModus: ");
         result.append(currentModus);
         result.append(", deviceRating: ");

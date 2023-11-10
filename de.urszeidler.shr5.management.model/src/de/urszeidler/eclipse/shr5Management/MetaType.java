@@ -16,11 +16,11 @@ import de.urszeidler.eclipse.shr5.Spezies;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.MetaType#getChoosableTypes <em>Choosable Types</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.MetaType#getSpecialPoints <em>Special Points</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getMetaType()
  * @model

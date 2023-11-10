@@ -14,10 +14,10 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.CharacterAdvancementSystem#getCharacterAdvancements <em>Character Advancements</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getCharacterAdvancementSystem()
  * @model

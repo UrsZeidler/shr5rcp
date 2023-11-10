@@ -19,11 +19,11 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ModuleFeatureChangeImpl#getFeature <em>Feature</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ModuleFeatureChangeImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -72,6 +72,7 @@ public class ModuleFeatureChangeImpl extends ModuleChangeImpl implements ModuleF
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getFeature() {
         if (feature != null && feature.eIsProxy()) {
             InternalEObject oldFeature = (InternalEObject)feature;
@@ -98,6 +99,7 @@ public class ModuleFeatureChangeImpl extends ModuleChangeImpl implements ModuleF
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setFeature(EReference newFeature) {
         EReference oldFeature = feature;
         feature = newFeature;
@@ -110,6 +112,7 @@ public class ModuleFeatureChangeImpl extends ModuleChangeImpl implements ModuleF
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EObject getValue() {
         if (value != null && value.eIsProxy()) {
             InternalEObject oldValue = (InternalEObject)value;
@@ -136,6 +139,7 @@ public class ModuleFeatureChangeImpl extends ModuleChangeImpl implements ModuleF
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setValue(EObject newValue) {
         EObject oldValue = value;
         value = newValue;

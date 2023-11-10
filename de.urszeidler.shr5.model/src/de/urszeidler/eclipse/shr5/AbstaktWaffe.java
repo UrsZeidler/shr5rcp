@@ -10,13 +10,13 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.AbstaktWaffe#getSchadenscode <em>Schadenscode</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AbstaktWaffe#getSchadesTyp <em>Schades Typ</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AbstaktWaffe#getPraezision <em>Praezision</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AbstaktWaffe#getDurchschlagsKraft <em>Durchschlags Kraft</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getAbstaktWaffe()
  * @model abstract="true"

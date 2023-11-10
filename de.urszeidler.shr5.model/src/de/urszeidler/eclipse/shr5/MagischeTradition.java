@@ -12,11 +12,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.MagischeTradition#getEnzug <em>Enzug</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.MagischeTradition#getBeschwoerbar <em>Beschwoerbar</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getMagischeTradition()
  * @model

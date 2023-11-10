@@ -10,7 +10,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.resources;bundle-version="3.9.1",
  org.eclipse.emf.ecp.ui.e3;bundle-version="1.26.1",
  de.urszeidler.shr5.ecp
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ActivationPolicy: lazy
 Export-Package: de.urszeidler.shr5.product.application
 Bundle-Vendor: Urs Zeidler

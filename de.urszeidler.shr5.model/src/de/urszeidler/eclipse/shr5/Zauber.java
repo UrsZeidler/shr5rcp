@@ -10,6 +10,7 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauber#getArt <em>Art</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauber#getReichweite <em>Reichweite</em>}</li>
@@ -19,7 +20,6 @@ package de.urszeidler.eclipse.shr5;
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauber#getKategorie <em>Kategorie</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Zauber#getMerkmale <em>Merkmale</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getZauber()
  * @model

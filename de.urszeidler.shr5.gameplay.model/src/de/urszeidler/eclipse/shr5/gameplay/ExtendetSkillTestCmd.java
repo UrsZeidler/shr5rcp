@@ -13,11 +13,11 @@ import java.util.Date;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd#getStartDate <em>Start Date</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.ExtendetSkillTestCmd#getIntervall <em>Intervall</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getExtendetSkillTestCmd()
  * @model

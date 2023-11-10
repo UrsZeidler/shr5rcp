@@ -28,6 +28,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MartialartTechniqueImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MartialartTechniqueImpl#getImage <em>Image</em>}</li>
@@ -37,7 +38,6 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MartialartTechniqueImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MartialartTechniqueImpl#getSrcBook <em>Src Book</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -186,6 +186,7 @@ public class MartialartTechniqueImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -195,6 +196,7 @@ public class MartialartTechniqueImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -207,6 +209,7 @@ public class MartialartTechniqueImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -216,6 +219,7 @@ public class MartialartTechniqueImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -228,6 +232,7 @@ public class MartialartTechniqueImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -237,6 +242,7 @@ public class MartialartTechniqueImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -249,6 +255,7 @@ public class MartialartTechniqueImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -258,6 +265,7 @@ public class MartialartTechniqueImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -270,6 +278,7 @@ public class MartialartTechniqueImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.MARTIALART_TECHNIQUE__LOCALIZATIONS);
@@ -282,6 +291,7 @@ public class MartialartTechniqueImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getPage() {
         return page;
     }
@@ -291,6 +301,7 @@ public class MartialartTechniqueImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
@@ -303,6 +314,7 @@ public class MartialartTechniqueImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
@@ -329,6 +341,7 @@ public class MartialartTechniqueImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
@@ -528,7 +541,7 @@ public class MartialartTechniqueImpl extends MinimalEObjectImpl.Container implem
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

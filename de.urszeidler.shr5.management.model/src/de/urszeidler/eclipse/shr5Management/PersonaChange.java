@@ -12,10 +12,10 @@ import de.urszeidler.eclipse.shr5.Erlernbar;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.PersonaChange#getChangeable <em>Changeable</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getPersonaChange()
  * @model

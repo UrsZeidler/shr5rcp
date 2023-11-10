@@ -50,13 +50,13 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#getDaysTrained <em>Days Trained</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#getDaysRemains <em>Days Remains</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#isTrainingComplete <em>Training Complete</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingsTimeImpl#getTraining <em>Training</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -262,6 +262,7 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isTrainingComplete() {
         return trainingComplete;
     }
@@ -271,6 +272,7 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setTrainingComplete(boolean newTrainingComplete) {
         boolean oldTrainingComplete = trainingComplete;
         trainingComplete = newTrainingComplete;
@@ -283,6 +285,7 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<TrainingRange> getTraining() {
         if (training == null) {
             training = new EObjectContainmentWithInverseEList<TrainingRange>(TrainingRange.class, this, Shr5managementPackage.TRAININGS_TIME__TRAINING, Shr5managementPackage.TRAINING_RANGE__TRAINING_TIME);
@@ -468,7 +471,7 @@ public class TrainingsTimeImpl extends CharacterChangeImpl implements TrainingsT
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (trainingComplete: ");
         result.append(trainingComplete);
         result.append(')');

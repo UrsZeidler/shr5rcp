@@ -93,6 +93,8 @@ public enum MatrixProgramType implements Enumerator {
      * Returns the '<em><b>Matrix Program Type</b></em>' literal with the specified literal value.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @param literal the literal.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static MatrixProgramType get(String literal) {
@@ -109,6 +111,8 @@ public enum MatrixProgramType implements Enumerator {
      * Returns the '<em><b>Matrix Program Type</b></em>' literal with the specified name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @param name the name.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static MatrixProgramType getByName(String name) {
@@ -125,6 +129,8 @@ public enum MatrixProgramType implements Enumerator {
      * Returns the '<em><b>Matrix Program Type</b></em>' literal with the specified integer value.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @param value the integer value.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static MatrixProgramType get(int value) {
@@ -173,6 +179,7 @@ public enum MatrixProgramType implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getValue() {
       return value;
     }
@@ -182,6 +189,7 @@ public enum MatrixProgramType implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
       return name;
     }
@@ -191,6 +199,7 @@ public enum MatrixProgramType implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getLiteral() {
       return literal;
     }

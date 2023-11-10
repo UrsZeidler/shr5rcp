@@ -15,10 +15,10 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PassagierFahrzeugImpl#getSitze <em>Sitze</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -67,7 +67,8 @@ public class PassagierFahrzeugImpl extends FahrzeugImpl implements PassagierFahr
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getSitze() {
+	@Override
+    public int getSitze() {
         return sitze;
     }
 
@@ -76,7 +77,8 @@ public class PassagierFahrzeugImpl extends FahrzeugImpl implements PassagierFahr
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSitze(int newSitze) {
+	@Override
+    public void setSitze(int newSitze) {
         int oldSitze = sitze;
         sitze = newSitze;
         if (eNotificationRequired())
@@ -150,7 +152,7 @@ public class PassagierFahrzeugImpl extends FahrzeugImpl implements PassagierFahr
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (sitze: ");
         result.append(sitze);
         result.append(')');

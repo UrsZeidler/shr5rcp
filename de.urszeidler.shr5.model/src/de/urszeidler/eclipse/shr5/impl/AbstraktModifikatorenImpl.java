@@ -30,6 +30,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktModifikatorenImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktModifikatorenImpl#getImage <em>Image</em>}</li>
@@ -40,7 +41,6 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktModifikatorenImpl#getPage <em>Page</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktModifikatorenImpl#getSrcBook <em>Src Book</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -199,7 +199,8 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getName() {
+	@Override
+    public String getName() {
         return name;
     }
 
@@ -208,7 +209,8 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setName(String newName) {
+	@Override
+    public void setName(String newName) {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
@@ -220,7 +222,8 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getBeschreibung() {
+	@Override
+    public String getBeschreibung() {
         return beschreibung;
     }
 
@@ -229,7 +232,8 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setBeschreibung(String newBeschreibung) {
+	@Override
+    public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
         if (eNotificationRequired())
@@ -241,7 +245,8 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getImage() {
+	@Override
+    public String getImage() {
         return image;
     }
 
@@ -250,7 +255,8 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setImage(String newImage) {
+	@Override
+    public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
         if (eNotificationRequired())
@@ -262,7 +268,8 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<AttributModifikatorWert> getMods() {
+	@Override
+    public EList<AttributModifikatorWert> getMods() {
         if (mods == null) {
             mods = new EObjectContainmentWithInverseEList<AttributModifikatorWert>(AttributModifikatorWert.class, this, Shr5Package.ABSTRAKT_MODIFIKATOREN__MODS, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
         }
@@ -274,6 +281,7 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -283,6 +291,7 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -295,6 +304,7 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.ABSTRAKT_MODIFIKATOREN__LOCALIZATIONS);
@@ -307,7 +317,8 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getPage() {
+	@Override
+    public String getPage() {
         return page;
     }
 
@@ -316,7 +327,8 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setPage(String newPage) {
+	@Override
+    public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
         if (eNotificationRequired())
@@ -328,7 +340,8 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public SourceBook getSrcBook() {
+	@Override
+    public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
             srcBook = (SourceBook)eResolveProxy(oldSrcBook);
@@ -354,7 +367,8 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSrcBook(SourceBook newSrcBook) {
+	@Override
+    public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
         if (eNotificationRequired())
@@ -593,7 +607,7 @@ public abstract class AbstraktModifikatorenImpl extends MinimalEObjectImpl.Conta
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

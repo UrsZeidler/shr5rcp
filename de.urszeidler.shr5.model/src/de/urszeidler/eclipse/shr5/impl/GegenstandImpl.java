@@ -15,11 +15,11 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GegenstandImpl#getKategorie <em>Kategorie</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GegenstandImpl#getStufe <em>Stufe</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -88,7 +88,8 @@ public class GegenstandImpl extends AbstraktGegenstandImpl implements Gegenstand
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getKategorie() {
+	@Override
+    public String getKategorie() {
         return kategorie;
     }
 
@@ -97,7 +98,8 @@ public class GegenstandImpl extends AbstraktGegenstandImpl implements Gegenstand
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setKategorie(String newKategorie) {
+	@Override
+    public void setKategorie(String newKategorie) {
         String oldKategorie = kategorie;
         kategorie = newKategorie;
         if (eNotificationRequired())
@@ -109,7 +111,8 @@ public class GegenstandImpl extends AbstraktGegenstandImpl implements Gegenstand
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getStufe() {
+	@Override
+    public int getStufe() {
         return stufe;
     }
 
@@ -118,7 +121,8 @@ public class GegenstandImpl extends AbstraktGegenstandImpl implements Gegenstand
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setStufe(int newStufe) {
+	@Override
+    public void setStufe(int newStufe) {
         int oldStufe = stufe;
         stufe = newStufe;
         if (eNotificationRequired())
@@ -202,7 +206,7 @@ public class GegenstandImpl extends AbstraktGegenstandImpl implements Gegenstand
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (kategorie: ");
         result.append(kategorie);
         result.append(", stufe: ");

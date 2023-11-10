@@ -20,10 +20,10 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ModuleTeachableChangeImpl#getTeachable <em>Teachable</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +87,7 @@ public class ModuleTeachableChangeImpl extends ModuleTypeChangeImpl<Erlernbar> i
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Erlernbar getTeachable() {
         if (teachable != null && teachable.eIsProxy()) {
             InternalEObject oldTeachable = (InternalEObject)teachable;
@@ -113,6 +114,7 @@ public class ModuleTeachableChangeImpl extends ModuleTypeChangeImpl<Erlernbar> i
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setTeachable(Erlernbar newTeachable) {
         Erlernbar oldTeachable = teachable;
         teachable = newTeachable;

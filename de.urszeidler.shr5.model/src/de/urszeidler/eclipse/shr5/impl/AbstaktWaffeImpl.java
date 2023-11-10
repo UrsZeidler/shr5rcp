@@ -16,13 +16,13 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstaktWaffeImpl#getSchadenscode <em>Schadenscode</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstaktWaffeImpl#getSchadesTyp <em>Schades Typ</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstaktWaffeImpl#getPraezision <em>Praezision</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstaktWaffeImpl#getDurchschlagsKraft <em>Durchschlags Kraft</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -131,7 +131,8 @@ public abstract class AbstaktWaffeImpl extends AbstraktGegenstandImpl implements
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getSchadenscode() {
+	@Override
+    public String getSchadenscode() {
         return schadenscode;
     }
 
@@ -140,7 +141,8 @@ public abstract class AbstaktWaffeImpl extends AbstraktGegenstandImpl implements
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSchadenscode(String newSchadenscode) {
+	@Override
+    public void setSchadenscode(String newSchadenscode) {
         String oldSchadenscode = schadenscode;
         schadenscode = newSchadenscode;
         if (eNotificationRequired())
@@ -152,7 +154,8 @@ public abstract class AbstaktWaffeImpl extends AbstraktGegenstandImpl implements
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public SchadensTyp getSchadesTyp() {
+	@Override
+    public SchadensTyp getSchadesTyp() {
         return schadesTyp;
     }
 
@@ -161,7 +164,8 @@ public abstract class AbstaktWaffeImpl extends AbstraktGegenstandImpl implements
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSchadesTyp(SchadensTyp newSchadesTyp) {
+	@Override
+    public void setSchadesTyp(SchadensTyp newSchadesTyp) {
         SchadensTyp oldSchadesTyp = schadesTyp;
         schadesTyp = newSchadesTyp == null ? SCHADES_TYP_EDEFAULT : newSchadesTyp;
         if (eNotificationRequired())
@@ -173,7 +177,8 @@ public abstract class AbstaktWaffeImpl extends AbstraktGegenstandImpl implements
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getPraezision() {
+	@Override
+    public int getPraezision() {
         return praezision;
     }
 
@@ -182,7 +187,8 @@ public abstract class AbstaktWaffeImpl extends AbstraktGegenstandImpl implements
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setPraezision(int newPraezision) {
+	@Override
+    public void setPraezision(int newPraezision) {
         int oldPraezision = praezision;
         praezision = newPraezision;
         if (eNotificationRequired())
@@ -194,7 +200,8 @@ public abstract class AbstaktWaffeImpl extends AbstraktGegenstandImpl implements
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getDurchschlagsKraft() {
+	@Override
+    public int getDurchschlagsKraft() {
         return durchschlagsKraft;
     }
 
@@ -203,7 +210,8 @@ public abstract class AbstaktWaffeImpl extends AbstraktGegenstandImpl implements
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setDurchschlagsKraft(int newDurchschlagsKraft) {
+	@Override
+    public void setDurchschlagsKraft(int newDurchschlagsKraft) {
         int oldDurchschlagsKraft = durchschlagsKraft;
         durchschlagsKraft = newDurchschlagsKraft;
         if (eNotificationRequired())
@@ -307,7 +315,7 @@ public abstract class AbstaktWaffeImpl extends AbstraktGegenstandImpl implements
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (schadenscode: ");
         result.append(schadenscode);
         result.append(", schadesTyp: ");

@@ -25,13 +25,13 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGroupImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGroupImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGroupImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGroupImpl#getMembers <em>Members</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -130,7 +130,8 @@ public class CharacterGroupImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getBeschreibung() {
+	@Override
+    public String getBeschreibung() {
         return beschreibung;
     }
 
@@ -139,7 +140,8 @@ public class CharacterGroupImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setBeschreibung(String newBeschreibung) {
+	@Override
+    public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
         if (eNotificationRequired())
@@ -151,7 +153,8 @@ public class CharacterGroupImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getImage() {
+	@Override
+    public String getImage() {
         return image;
     }
 
@@ -160,7 +163,8 @@ public class CharacterGroupImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setImage(String newImage) {
+	@Override
+    public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
         if (eNotificationRequired())
@@ -172,7 +176,8 @@ public class CharacterGroupImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getName() {
+	@Override
+    public String getName() {
         return name;
     }
 
@@ -181,7 +186,8 @@ public class CharacterGroupImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setName(String newName) {
+	@Override
+    public void setName(String newName) {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
@@ -193,7 +199,8 @@ public class CharacterGroupImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<ManagedCharacter> getMembers() {
+	@Override
+    public EList<ManagedCharacter> getMembers() {
         if (members == null) {
             members = new EObjectContainmentEList<ManagedCharacter>(ManagedCharacter.class, this, Shr5managementPackage.CHARACTER_GROUP__MEMBERS);
         }
@@ -313,7 +320,7 @@ public class CharacterGroupImpl extends MinimalEObjectImpl.Container implements 
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

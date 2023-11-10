@@ -30,6 +30,7 @@ import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetExtendetDataImpl#isExecuted <em>Executed</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetExtendetDataImpl#getSubCommands <em>Sub Commands</em>}</li>
@@ -42,7 +43,6 @@ import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetExtendetDataImpl#getData <em>Data</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetExtendetDataImpl#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -240,6 +240,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isExecuted() {
         return executed;
     }
@@ -249,6 +250,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setExecuted(boolean newExecuted) {
         boolean oldExecuted = executed;
         executed = newExecuted;
@@ -261,6 +263,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Command> getSubCommands() {
         if (subCommands == null) {
             subCommands = new EObjectContainmentEList<Command>(Command.class, this, GameplayPackage.SET_EXTENDET_DATA__SUB_COMMANDS);
@@ -273,6 +276,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getDate() {
         return date;
     }
@@ -282,6 +286,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDate(Date newDate) {
         Date oldDate = date;
         date = newDate;
@@ -294,6 +299,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CommandCallback getCmdCallback() {
         return cmdCallback;
     }
@@ -303,6 +309,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCmdCallback(CommandCallback newCmdCallback) {
         CommandCallback oldCmdCallback = cmdCallback;
         cmdCallback = newCmdCallback;
@@ -317,6 +324,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void unsetCmdCallback() {
         CommandCallback oldCmdCallback = cmdCallback;
         boolean oldCmdCallbackESet = cmdCallbackESet;
@@ -331,6 +339,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isSetCmdCallback() {
         return cmdCallbackESet;
     }
@@ -340,6 +349,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isExecuting() {
         return executing;
     }
@@ -349,6 +359,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setExecuting(boolean newExecuting) {
         boolean oldExecuting = executing;
         executing = newExecuting;
@@ -370,6 +381,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isHidden() {
         return hidden;
     }
@@ -379,6 +391,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setHidden(boolean newHidden) {
         boolean oldHidden = hidden;
         hidden = newHidden;
@@ -391,6 +404,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public AbstractExtendetDataAware getDataAware() {
         if (dataAware != null && dataAware.eIsProxy()) {
             InternalEObject oldDataAware = (InternalEObject)dataAware;
@@ -417,6 +431,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDataAware(AbstractExtendetDataAware newDataAware) {
         AbstractExtendetDataAware oldDataAware = dataAware;
         dataAware = newDataAware;
@@ -429,6 +444,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ExtendetData getData() {
         return data;
     }
@@ -453,6 +469,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setData(ExtendetData newData) {
         if (newData != data) {
             NotificationChain msgs = null;
@@ -472,6 +489,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Object getValue() {
         return value;
     }
@@ -481,6 +499,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setValue(Object newValue) {
         Object oldValue = value;
         value = newValue;
@@ -510,6 +529,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void undo() {
         // TODO: implement this method
         // Ensure that you remove @generated or mark it @generated NOT
@@ -704,7 +724,7 @@ public class SetExtendetDataImpl extends MinimalEObjectImpl.Container implements
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (executed: ");
         result.append(executed);
         result.append(", date: ");

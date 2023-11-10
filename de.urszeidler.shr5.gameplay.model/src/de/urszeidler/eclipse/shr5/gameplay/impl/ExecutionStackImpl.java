@@ -24,11 +24,11 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ExecutionStackImpl#getCurrentCommand <em>Current Command</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ExecutionStackImpl#getProtocol <em>Protocol</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -77,6 +77,7 @@ public class ExecutionStackImpl extends MinimalEObjectImpl.Container implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Command getCurrentCommand() {
         if (currentCommand != null && currentCommand.eIsProxy()) {
             InternalEObject oldCurrentCommand = (InternalEObject)currentCommand;
@@ -144,6 +145,7 @@ public class ExecutionStackImpl extends MinimalEObjectImpl.Container implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ExecutionProtocol getProtocol() {
         return protocol;
     }
@@ -168,6 +170,7 @@ public class ExecutionStackImpl extends MinimalEObjectImpl.Container implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setProtocol(ExecutionProtocol newProtocol) {
         if (newProtocol != protocol) {
             NotificationChain msgs = null;

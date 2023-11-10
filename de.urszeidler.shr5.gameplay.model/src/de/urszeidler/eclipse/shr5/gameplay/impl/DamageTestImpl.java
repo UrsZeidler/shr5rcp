@@ -27,12 +27,12 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DamageTestImpl#getDamage <em>Damage</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DamageTestImpl#getDv <em>Dv</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DamageTestImpl#getEffectiveDamage <em>Effective Damage</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -121,6 +121,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getDamage() {
         return damage;
     }
@@ -130,6 +131,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDamage(String newDamage) {
         String oldDamage = damage;
         damage = newDamage;
@@ -142,6 +144,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getDv() {
         return dv;
     }
@@ -151,6 +154,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDv(int newDv) {
         int oldDv = dv;
         dv = newDv;
@@ -163,6 +167,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getEffectiveDamage() {
         return effectiveDamage;
     }
@@ -172,6 +177,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setEffectiveDamage(String newEffectiveDamage) {
         String oldEffectiveDamage = effectiveDamage;
         effectiveDamage = newEffectiveDamage;
@@ -266,7 +272,7 @@ public class DamageTestImpl extends ProbeCommandImpl implements DamageTest {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (damage: ");
         result.append(damage);
         result.append(", dv: ");

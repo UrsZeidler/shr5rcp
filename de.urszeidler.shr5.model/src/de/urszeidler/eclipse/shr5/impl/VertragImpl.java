@@ -29,6 +29,7 @@ import de.urszeidler.eclipse.shr5.Vertrag;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.VertragImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.VertragImpl#getImage <em>Image</em>}</li>
@@ -41,7 +42,6 @@ import de.urszeidler.eclipse.shr5.Vertrag;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.VertragImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.VertragImpl#getWertValue <em>Wert Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -240,7 +240,8 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getBeschreibung() {
+	@Override
+    public String getBeschreibung() {
         return beschreibung;
     }
 
@@ -249,7 +250,8 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setBeschreibung(String newBeschreibung) {
+	@Override
+    public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
         if (eNotificationRequired())
@@ -261,7 +263,8 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getImage() {
+	@Override
+    public String getImage() {
         return image;
     }
 
@@ -270,7 +273,8 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setImage(String newImage) {
+	@Override
+    public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
         if (eNotificationRequired())
@@ -282,7 +286,8 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getName() {
+	@Override
+    public String getName() {
         return name;
     }
 
@@ -291,7 +296,8 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setName(String newName) {
+	@Override
+    public void setName(String newName) {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
@@ -303,6 +309,7 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -312,6 +319,7 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -324,6 +332,7 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.VERTRAG__LOCALIZATIONS);
@@ -336,7 +345,8 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getPage() {
+	@Override
+    public String getPage() {
         return page;
     }
 
@@ -345,7 +355,8 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setPage(String newPage) {
+	@Override
+    public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
         if (eNotificationRequired())
@@ -357,7 +368,8 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public SourceBook getSrcBook() {
+	@Override
+    public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
             srcBook = (SourceBook)eResolveProxy(oldSrcBook);
@@ -383,7 +395,8 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSrcBook(SourceBook newSrcBook) {
+	@Override
+    public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
         if (eNotificationRequired())
@@ -404,7 +417,8 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getVerfuegbarkeit() {
+	@Override
+    public String getVerfuegbarkeit() {
         return verfuegbarkeit;
     }
 
@@ -413,7 +427,8 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setVerfuegbarkeit(String newVerfuegbarkeit) {
+	@Override
+    public void setVerfuegbarkeit(String newVerfuegbarkeit) {
         String oldVerfuegbarkeit = verfuegbarkeit;
         verfuegbarkeit = newVerfuegbarkeit;
         if (eNotificationRequired())
@@ -425,6 +440,7 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public BigDecimal getWertValue() {
         return wertValue;
     }
@@ -674,7 +690,7 @@ public class VertragImpl extends MinimalEObjectImpl.Container implements Vertrag
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

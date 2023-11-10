@@ -20,6 +20,7 @@ import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.shr5.scripting.Script#getPlacements <em>Placements</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Script#getAllTeams <em>All Teams</em>}</li>
@@ -28,7 +29,6 @@ import de.urszeidler.eclipse.shr5Management.GamemasterManagement;
  *   <li>{@link de.urszeidler.shr5.scripting.Script#getEntry <em>Entry</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Script#getHistory <em>History</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScript()
  * @model

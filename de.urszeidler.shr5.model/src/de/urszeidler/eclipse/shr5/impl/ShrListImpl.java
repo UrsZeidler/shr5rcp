@@ -26,6 +26,7 @@ import de.urszeidler.eclipse.shr5.ShrList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShrListImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShrListImpl#getImage <em>Image</em>}</li>
@@ -34,7 +35,6 @@ import de.urszeidler.eclipse.shr5.ShrList;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShrListImpl#getLocalizations <em>Localizations</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ShrListImpl#getEntries <em>Entries</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -163,7 +163,8 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getName() {
+	@Override
+    public String getName() {
         return name;
     }
 
@@ -172,7 +173,8 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setName(String newName) {
+	@Override
+    public void setName(String newName) {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
@@ -184,6 +186,7 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -193,6 +196,7 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -205,6 +209,7 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.SHR_LIST__LOCALIZATIONS);
@@ -217,7 +222,8 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getBeschreibung() {
+	@Override
+    public String getBeschreibung() {
         return beschreibung;
     }
 
@@ -226,7 +232,8 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setBeschreibung(String newBeschreibung) {
+	@Override
+    public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
         if (eNotificationRequired())
@@ -238,7 +245,8 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getImage() {
+	@Override
+    public String getImage() {
         return image;
     }
 
@@ -247,7 +255,8 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setImage(String newImage) {
+	@Override
+    public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
         if (eNotificationRequired())
@@ -259,7 +268,8 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<EObject> getEntries() {
+	@Override
+    public EList<EObject> getEntries() {
         if (entries == null) {
             entries = new EObjectContainmentEList<EObject>(EObject.class, this, Shr5Package.SHR_LIST__ENTRIES);
         }
@@ -436,7 +446,7 @@ public class ShrListImpl extends MinimalEObjectImpl.Container implements ShrList
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

@@ -30,6 +30,7 @@ import de.urszeidler.eclipse.shr5.ZauberReichweite;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ZauberImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ZauberImpl#getImage <em>Image</em>}</li>
@@ -46,7 +47,6 @@ import de.urszeidler.eclipse.shr5.ZauberReichweite;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ZauberImpl#getKategorie <em>Kategorie</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.ZauberImpl#getMerkmale <em>Merkmale</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -335,7 +335,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getName() {
+	@Override
+    public String getName() {
         return name;
     }
 
@@ -344,7 +345,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setName(String newName) {
+	@Override
+    public void setName(String newName) {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
@@ -356,6 +358,7 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -365,6 +368,7 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -377,6 +381,7 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.ZAUBER__LOCALIZATIONS);
@@ -389,7 +394,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getBeschreibung() {
+	@Override
+    public String getBeschreibung() {
         return beschreibung;
     }
 
@@ -398,7 +404,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setBeschreibung(String newBeschreibung) {
+	@Override
+    public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
         if (eNotificationRequired())
@@ -410,7 +417,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getImage() {
+	@Override
+    public String getImage() {
         return image;
     }
 
@@ -419,7 +427,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setImage(String newImage) {
+	@Override
+    public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
         if (eNotificationRequired())
@@ -431,7 +440,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getPage() {
+	@Override
+    public String getPage() {
         return page;
     }
 
@@ -440,7 +450,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setPage(String newPage) {
+	@Override
+    public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
         if (eNotificationRequired())
@@ -452,7 +463,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public SourceBook getSrcBook() {
+	@Override
+    public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
             srcBook = (SourceBook)eResolveProxy(oldSrcBook);
@@ -478,7 +490,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSrcBook(SourceBook newSrcBook) {
+	@Override
+    public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
         if (eNotificationRequired())
@@ -490,7 +503,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public ZauberArt getArt() {
+	@Override
+    public ZauberArt getArt() {
         return art;
     }
 
@@ -499,7 +513,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setArt(ZauberArt newArt) {
+	@Override
+    public void setArt(ZauberArt newArt) {
         ZauberArt oldArt = art;
         art = newArt == null ? ART_EDEFAULT : newArt;
         if (eNotificationRequired())
@@ -511,7 +526,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public ZauberReichweite getReichweite() {
+	@Override
+    public ZauberReichweite getReichweite() {
         return reichweite;
     }
 
@@ -520,7 +536,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setReichweite(ZauberReichweite newReichweite) {
+	@Override
+    public void setReichweite(ZauberReichweite newReichweite) {
         ZauberReichweite oldReichweite = reichweite;
         reichweite = newReichweite == null ? REICHWEITE_EDEFAULT : newReichweite;
         if (eNotificationRequired())
@@ -532,7 +549,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getSchaden() {
+	@Override
+    public String getSchaden() {
         return schaden;
     }
 
@@ -541,7 +559,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSchaden(String newSchaden) {
+	@Override
+    public void setSchaden(String newSchaden) {
         String oldSchaden = schaden;
         schaden = newSchaden;
         if (eNotificationRequired())
@@ -553,7 +572,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public ZauberDauer getDauer() {
+	@Override
+    public ZauberDauer getDauer() {
         return dauer;
     }
 
@@ -562,7 +582,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setDauer(ZauberDauer newDauer) {
+	@Override
+    public void setDauer(ZauberDauer newDauer) {
         ZauberDauer oldDauer = dauer;
         dauer = newDauer == null ? DAUER_EDEFAULT : newDauer;
         if (eNotificationRequired())
@@ -574,7 +595,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getEntzug() {
+	@Override
+    public String getEntzug() {
         return entzug;
     }
 
@@ -583,7 +605,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setEntzug(String newEntzug) {
+	@Override
+    public void setEntzug(String newEntzug) {
         String oldEntzug = entzug;
         entzug = newEntzug;
         if (eNotificationRequired())
@@ -595,7 +618,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getKategorie() {
+	@Override
+    public String getKategorie() {
         return kategorie;
     }
 
@@ -604,7 +628,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setKategorie(String newKategorie) {
+	@Override
+    public void setKategorie(String newKategorie) {
         String oldKategorie = kategorie;
         kategorie = newKategorie;
         if (eNotificationRequired())
@@ -616,7 +641,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getMerkmale() {
+	@Override
+    public String getMerkmale() {
         return merkmale;
     }
 
@@ -625,7 +651,8 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setMerkmale(String newMerkmale) {
+	@Override
+    public void setMerkmale(String newMerkmale) {
         String oldMerkmale = merkmale;
         merkmale = newMerkmale;
         if (eNotificationRequired())
@@ -894,7 +921,7 @@ public class ZauberImpl extends MinimalEObjectImpl.Container implements Zauber {
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

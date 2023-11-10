@@ -16,11 +16,11 @@ import org.eclipse.emf.ecore.EStructuralFeature;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetData#getEObject <em>EObject</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.ExtendetData#getEFeature <em>EFeature</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.runtime.RuntimePackage#getExtendetData()
  * @model

@@ -21,13 +21,13 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.FreeStyleGeneratorImpl#getFreestyleGenerator <em>Freestyle Generator</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.FreeStyleGeneratorImpl#getSelectedPersona <em>Selected Persona</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.FreeStyleGeneratorImpl#getSelectedSpecies <em>Selected Species</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.FreeStyleGeneratorImpl#getSelectedType <em>Selected Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -95,6 +95,7 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl<FreeStyle> im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public FreeStyle getFreestyleGenerator() {
         FreeStyle freestyleGenerator = basicGetFreestyleGenerator();
         return freestyleGenerator != null && freestyleGenerator.eIsProxy() ? (FreeStyle)eResolveProxy((InternalEObject)freestyleGenerator) : freestyleGenerator;
@@ -119,6 +120,7 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl<FreeStyle> im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public AbstraktPersona getSelectedPersona() {
         if (selectedPersona != null && selectedPersona.eIsProxy()) {
             InternalEObject oldSelectedPersona = (InternalEObject)selectedPersona;
@@ -163,6 +165,7 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl<FreeStyle> im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Spezies getSelectedSpecies() {
         if (selectedSpecies != null && selectedSpecies.eIsProxy()) {
             InternalEObject oldSelectedSpecies = (InternalEObject)selectedSpecies;
@@ -189,6 +192,7 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl<FreeStyle> im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSelectedSpecies(Spezies newSelectedSpecies) {
         Spezies oldSelectedSpecies = selectedSpecies;
         selectedSpecies = newSelectedSpecies;
@@ -201,6 +205,7 @@ public class FreeStyleGeneratorImpl extends CharacterGeneratorImpl<FreeStyle> im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSelectedType() {
         if (selectedType != null && selectedType.eIsProxy()) {
             InternalEObject oldSelectedType = (InternalEObject)selectedType;

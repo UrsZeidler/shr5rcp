@@ -27,6 +27,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PlayerManagementImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PlayerManagementImpl#getImage <em>Image</em>}</li>
@@ -35,7 +36,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PlayerManagementImpl#getGenerators <em>Generators</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PlayerManagementImpl#getEntries <em>Entries</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -154,6 +154,7 @@ public class PlayerManagementImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -163,6 +164,7 @@ public class PlayerManagementImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -175,6 +177,7 @@ public class PlayerManagementImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -184,6 +187,7 @@ public class PlayerManagementImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -196,6 +200,7 @@ public class PlayerManagementImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -205,6 +210,7 @@ public class PlayerManagementImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -217,6 +223,7 @@ public class PlayerManagementImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<CharacterGroup> getGroups() {
         if (groups == null) {
             groups = new EObjectContainmentEList<CharacterGroup>(CharacterGroup.class, this, Shr5managementPackage.PLAYER_MANAGEMENT__GROUPS);
@@ -229,6 +236,7 @@ public class PlayerManagementImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<CharacterGenerator<CharacterGeneratorSystem>> getGenerators() {
         if (generators == null) {
             generators = new EObjectContainmentEList<CharacterGenerator<CharacterGeneratorSystem>>(CharacterGenerator.class, this, Shr5managementPackage.PLAYER_MANAGEMENT__GENERATORS);
@@ -241,6 +249,7 @@ public class PlayerManagementImpl extends MinimalEObjectImpl.Container implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<PlayerManagement> getEntries() {
         if (entries == null) {
             entries = new EObjectContainmentEList<PlayerManagement>(PlayerManagement.class, this, Shr5managementPackage.PLAYER_MANAGEMENT__ENTRIES);
@@ -387,7 +396,7 @@ public class PlayerManagementImpl extends MinimalEObjectImpl.Container implement
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

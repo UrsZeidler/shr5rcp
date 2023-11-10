@@ -23,8 +23,6 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Sum To Ten Generator</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

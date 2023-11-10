@@ -22,13 +22,13 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AttributModifikatorWertImpl#getAttribut <em>Attribut</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AttributModifikatorWertImpl#getWert <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AttributModifikatorWertImpl#getModifiziertes <em>Modifiziertes</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AttributModifikatorWertImpl#getModifyable <em>Modifyable</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -97,7 +97,8 @@ public class AttributModifikatorWertImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAttribut() {
+	@Override
+    public EAttribute getAttribut() {
         if (attribut != null && attribut.eIsProxy()) {
             InternalEObject oldAttribut = (InternalEObject)attribut;
             attribut = (EAttribute)eResolveProxy(oldAttribut);
@@ -138,7 +139,8 @@ public class AttributModifikatorWertImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getWert() {
+	@Override
+    public int getWert() {
         return wert;
     }
 
@@ -147,7 +149,8 @@ public class AttributModifikatorWertImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setWert(int newWert) {
+	@Override
+    public void setWert(int newWert) {
         int oldWert = wert;
         wert = newWert;
         if (eNotificationRequired())
@@ -159,7 +162,8 @@ public class AttributModifikatorWertImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Modifizierbar getModifiziertes() {
+	@Override
+    public Modifizierbar getModifiziertes() {
         if (eContainerFeatureID() != Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES) return null;
         return (Modifizierbar)eInternalContainer();
     }
@@ -179,7 +183,8 @@ public class AttributModifikatorWertImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setModifiziertes(Modifizierbar newModifiziertes) {
+	@Override
+    public void setModifiziertes(Modifizierbar newModifiziertes) {
         if (newModifiziertes != eInternalContainer() || (eContainerFeatureID() != Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES && newModifiziertes != null)) {
             if (EcoreUtil.isAncestor(this, newModifiziertes))
                 throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
@@ -200,6 +205,7 @@ public class AttributModifikatorWertImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Modifyable getModifyable() {
         if (modifyable != null && modifyable.eIsProxy()) {
             InternalEObject oldModifyable = (InternalEObject)modifyable;
@@ -378,7 +384,7 @@ public class AttributModifikatorWertImpl extends MinimalEObjectImpl.Container im
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (wert: ");
         result.append(wert);
         result.append(')');

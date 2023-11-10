@@ -14,12 +14,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.ShoppingTransaction#getItems <em>Items</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.ShoppingTransaction#getFee <em>Fee</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.ShoppingTransaction#getCaculatedCosts <em>Caculated Costs</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getShoppingTransaction()
  * @model

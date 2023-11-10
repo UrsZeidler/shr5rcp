@@ -21,6 +21,7 @@ import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#isExecuted <em>Executed</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#getSubCommands <em>Sub Commands</em>}</li>
@@ -30,7 +31,6 @@ import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#isCanExecute <em>Can Execute</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Command#isHidden <em>Hidden</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCommand()
  * @model interface="true" abstract="true"

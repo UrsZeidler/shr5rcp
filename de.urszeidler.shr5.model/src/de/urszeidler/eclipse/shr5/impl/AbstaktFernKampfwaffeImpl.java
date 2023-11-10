@@ -17,10 +17,10 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstaktFernKampfwaffeImpl#getReichweite <em>Reichweite</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -59,7 +59,8 @@ public abstract class AbstaktFernKampfwaffeImpl extends AbstaktWaffeImpl impleme
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Reichweite getReichweite() {
+	@Override
+    public Reichweite getReichweite() {
         if (reichweite != null && reichweite.eIsProxy()) {
             InternalEObject oldReichweite = (InternalEObject)reichweite;
             reichweite = (Reichweite)eResolveProxy(oldReichweite);
@@ -85,7 +86,8 @@ public abstract class AbstaktFernKampfwaffeImpl extends AbstaktWaffeImpl impleme
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setReichweite(Reichweite newReichweite) {
+	@Override
+    public void setReichweite(Reichweite newReichweite) {
         Reichweite oldReichweite = reichweite;
         reichweite = newReichweite;
         if (eNotificationRequired())

@@ -34,6 +34,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWert <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
@@ -47,7 +48,6 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getType <em>Type</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberwareImpl#getWifi <em>Wifi</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -253,6 +253,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getVerfuegbarkeit() {
         return verfuegbarkeit;
     }
@@ -262,6 +263,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setVerfuegbarkeit(String newVerfuegbarkeit) {
         String oldVerfuegbarkeit = verfuegbarkeit;
         verfuegbarkeit = newVerfuegbarkeit;
@@ -274,6 +276,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public BigDecimal getWertValue() {
         return wertValue;
     }
@@ -298,6 +301,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCapacityFeature() {
         EReference capacityFeature = basicGetCapacityFeature();
         return capacityFeature != null && capacityFeature.eIsProxy() ? (EReference)eResolveProxy((InternalEObject)capacityFeature) : capacityFeature;
@@ -343,6 +347,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public AbstraktPersona getPersona() {
         if (persona != null && persona.eIsProxy()) {
             InternalEObject oldPersona = (InternalEObject)persona;
@@ -369,6 +374,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPersona(AbstraktPersona newPersona) {
         AbstraktPersona oldPersona = persona;
         persona = newPersona;
@@ -381,6 +387,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<CyberwareEnhancement> getEinbau() {
         if (einbau == null) {
             einbau = new EObjectContainmentEList<CyberwareEnhancement>(CyberwareEnhancement.class, this, Shr5Package.CYBERWARE__EINBAU);
@@ -393,6 +400,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getCyberwareCapacity() {
         return cyberwareCapacity;
     }
@@ -402,6 +410,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCyberwareCapacity(int newCyberwareCapacity) {
         int oldCyberwareCapacity = cyberwareCapacity;
         cyberwareCapacity = newCyberwareCapacity;
@@ -414,6 +423,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CyberwareType getType() {
         return type;
     }
@@ -423,6 +433,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setType(CyberwareType newType) {
         CyberwareType oldType = type;
         type = newType == null ? TYPE_EDEFAULT : newType;
@@ -435,6 +446,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<DefaultWifi> getWifi() {
         if (wifi == null) {
             wifi = new EObjectContainmentEList<DefaultWifi>(DefaultWifi.class, this, Shr5Package.CYBERWARE__WIFI);
@@ -707,7 +719,7 @@ public class CyberwareImpl extends KoerpermodsImpl implements Cyberware {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (verfuegbarkeit: ");
         result.append(verfuegbarkeit);
         result.append(", wertValue: ");

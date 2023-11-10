@@ -26,11 +26,11 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterDiaryImpl#getCharacterDate <em>Character Date</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterDiaryImpl#getEntries <em>Entries</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -89,6 +89,7 @@ public class CharacterDiaryImpl extends MinimalEObjectImpl.Container implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getCharacterDate() {
         return characterDate;
     }
@@ -98,6 +99,7 @@ public class CharacterDiaryImpl extends MinimalEObjectImpl.Container implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCharacterDate(Date newCharacterDate) {
         Date oldCharacterDate = characterDate;
         characterDate = newCharacterDate;
@@ -110,6 +112,7 @@ public class CharacterDiaryImpl extends MinimalEObjectImpl.Container implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<DiaryEntry> getEntries() {
         if (entries == null) {
             entries = new EObjectContainmentEList<DiaryEntry>(DiaryEntry.class, this, Shr5managementPackage.CHARACTER_DIARY__ENTRIES);
@@ -210,7 +213,7 @@ public class CharacterDiaryImpl extends MinimalEObjectImpl.Container implements 
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (characterDate: ");
         result.append(characterDate);
         result.append(')');

@@ -24,13 +24,13 @@ import de.urszeidler.eclipse.shr5.runtime.Team;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.TeamImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.TeamImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.TeamImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.TeamImpl#getMembers <em>Members</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -129,6 +129,7 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -138,6 +139,7 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -150,6 +152,7 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -159,6 +162,7 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -171,6 +175,7 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -180,6 +185,7 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -192,6 +198,7 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<RuntimeCharacter> getMembers() {
         if (members == null) {
             members = new EObjectContainmentEList<RuntimeCharacter>(RuntimeCharacter.class, this, RuntimePackage.TEAM__MEMBERS);
@@ -312,7 +319,7 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

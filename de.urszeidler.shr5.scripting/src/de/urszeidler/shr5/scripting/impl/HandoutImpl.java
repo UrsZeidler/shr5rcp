@@ -17,6 +17,7 @@ import de.urszeidler.shr5.scripting.ScriptingPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.HandoutImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.HandoutImpl#getImage <em>Image</em>}</li>
@@ -24,7 +25,6 @@ import de.urszeidler.shr5.scripting.ScriptingPackage;
  *   <li>{@link de.urszeidler.shr5.scripting.impl.HandoutImpl#getType <em>Type</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.HandoutImpl#getUrl <em>Url</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -153,6 +153,7 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -162,6 +163,7 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -174,6 +176,7 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -183,6 +186,7 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -195,6 +199,7 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -204,6 +209,7 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -216,6 +222,7 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public HandoutType getType() {
         return type;
     }
@@ -225,6 +232,7 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setType(HandoutType newType) {
         HandoutType oldType = type;
         type = newType == null ? TYPE_EDEFAULT : newType;
@@ -237,6 +245,7 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getUrl() {
         return url;
     }
@@ -246,6 +255,7 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setUrl(String newUrl) {
         String oldUrl = url;
         url = newUrl;
@@ -360,7 +370,7 @@ public class HandoutImpl extends MinimalEObjectImpl.Container implements Handout
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.AbstraktPersona#getKonstitutionBasis <em>Konstitution Basis</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AbstraktPersona#getGeschicklichkeitBasis <em>Geschicklichkeit Basis</em>}</li>
@@ -26,7 +27,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.eclipse.shr5.AbstraktPersona#getModManager <em>Mod Manager</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AbstraktPersona#getMartialartStyles <em>Martialart Styles</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getAbstraktPersona()
  * @model abstract="true"

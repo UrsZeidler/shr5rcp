@@ -12,13 +12,13 @@ import de.urszeidler.eclipse.shr5.InterfaceModus;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.Vehicle#getVehicle <em>Vehicle</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.Vehicle#getVehicleCondition <em>Vehicle Condition</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.Vehicle#getModus <em>Modus</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.Vehicle#getCurrentSpeed <em>Current Speed</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.runtime.RuntimePackage#getVehicle()
  * @model abstract="true"

@@ -20,11 +20,11 @@ import de.urszeidler.eclipse.shr5.Tutorsoft;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl#getRating <em>Rating</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TutorsoftImpl#getSkill <em>Skill</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -92,6 +92,7 @@ public class TutorsoftImpl extends BasicProgramImpl implements Tutorsoft {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getRating() {
         return rating;
     }
@@ -114,6 +115,7 @@ public class TutorsoftImpl extends BasicProgramImpl implements Tutorsoft {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Fertigkeit getSkill() {
         if (skill != null && skill.eIsProxy()) {
             InternalEObject oldSkill = (InternalEObject)skill;
@@ -140,6 +142,7 @@ public class TutorsoftImpl extends BasicProgramImpl implements Tutorsoft {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSkill(Fertigkeit newSkill) {
         Fertigkeit oldSkill = skill;
         skill = newSkill;
@@ -225,7 +228,7 @@ public class TutorsoftImpl extends BasicProgramImpl implements Tutorsoft {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (rating: ");
         result.append(rating);
         result.append(')');
