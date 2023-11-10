@@ -24,11 +24,11 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesSystemImpl#getModules <em>Modules</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesSystemImpl#getKnowlegeSkillMax <em>Knowlege Skill Max</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -86,6 +86,7 @@ public class LifeModulesSystemImpl extends Shr5SystemImpl implements LifeModules
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<LifeModule> getModules() {
         if (modules == null) {
             modules = new EObjectContainmentEList<LifeModule>(LifeModule.class, this, Shr5managementPackage.LIFE_MODULES_SYSTEM__MODULES);
@@ -98,6 +99,7 @@ public class LifeModulesSystemImpl extends Shr5SystemImpl implements LifeModules
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getKnowlegeSkillMax() {
         return knowlegeSkillMax;
     }
@@ -107,6 +109,7 @@ public class LifeModulesSystemImpl extends Shr5SystemImpl implements LifeModules
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setKnowlegeSkillMax(int newKnowlegeSkillMax) {
         int oldKnowlegeSkillMax = knowlegeSkillMax;
         knowlegeSkillMax = newKnowlegeSkillMax;
@@ -207,7 +210,7 @@ public class LifeModulesSystemImpl extends Shr5SystemImpl implements LifeModules
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (knowlegeSkillMax: ");
         result.append(knowlegeSkillMax);
         result.append(')');

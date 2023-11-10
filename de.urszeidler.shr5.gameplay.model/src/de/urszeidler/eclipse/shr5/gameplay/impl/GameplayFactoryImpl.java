@@ -163,6 +163,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ExecutionStack createExecutionStack() {
         ExecutionStackImpl executionStack = new ExecutionStackImpl();
         return executionStack;
@@ -173,6 +174,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public DamageTest createDamageTest() {
         DamageTestImpl damageTest = new DamageTestImpl();
         return damageTest;
@@ -183,6 +185,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SkillTestCmd createSkillTestCmd() {
         SkillTestCmdImpl skillTestCmd = new SkillTestCmdImpl();
         return skillTestCmd;
@@ -193,6 +196,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public OpposedSkillTestCmd createOpposedSkillTestCmd() {
         OpposedSkillTestCmdImpl opposedSkillTestCmd = new OpposedSkillTestCmdImpl();
         return opposedSkillTestCmd;
@@ -203,6 +207,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Initative createInitative() {
         InitativeImpl initative = new InitativeImpl();
         return initative;
@@ -213,6 +218,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ExecutionProtocol createExecutionProtocol() {
         ExecutionProtocolImpl executionProtocol = new ExecutionProtocolImpl();
         return executionProtocol;
@@ -223,6 +229,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CombatTurn createCombatTurn() {
         CombatTurnImpl combatTurn = new CombatTurnImpl();
         return combatTurn;
@@ -233,6 +240,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ExtendetSkillTestCmd createExtendetSkillTestCmd() {
         ExtendetSkillTestCmdImpl extendetSkillTestCmd = new ExtendetSkillTestCmdImpl();
         return extendetSkillTestCmd;
@@ -243,6 +251,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public DefensTestCmd createDefensTestCmd() {
         DefensTestCmdImpl defensTestCmd = new DefensTestCmdImpl();
         return defensTestCmd;
@@ -253,6 +262,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SuccesTestCmd createSuccesTestCmd() {
         SuccesTestCmdImpl succesTestCmd = new SuccesTestCmdImpl();
         return succesTestCmd;
@@ -263,6 +273,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public InitativePass createInitativePass() {
         InitativePassImpl initativePass = new InitativePassImpl();
         return initativePass;
@@ -273,6 +284,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ComplexAction createComplexAction() {
         ComplexActionImpl complexAction = new ComplexActionImpl();
         return complexAction;
@@ -283,6 +295,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SimpleAction createSimpleAction() {
         SimpleActionImpl simpleAction = new SimpleActionImpl();
         return simpleAction;
@@ -293,6 +306,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SimpleActions createSimpleActions() {
         SimpleActionsImpl simpleActions = new SimpleActionsImpl();
         return simpleActions;
@@ -303,6 +317,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public FreeAction createFreeAction() {
         FreeActionImpl freeAction = new FreeActionImpl();
         return freeAction;
@@ -313,6 +328,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public InterruptAction createInterruptAction() {
         InterruptActionImpl interruptAction = new InterruptActionImpl();
         return interruptAction;
@@ -323,6 +339,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SetFeatureCommand createSetFeatureCommand() {
         SetFeatureCommandImpl setFeatureCommand = new SetFeatureCommandImpl();
         return setFeatureCommand;
@@ -333,6 +350,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MeeleAttackCmd createMeeleAttackCmd() {
         MeeleAttackCmdImpl meeleAttackCmd = new MeeleAttackCmdImpl();
         return meeleAttackCmd;
@@ -343,6 +361,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public RangedAttackCmd createRangedAttackCmd() {
         RangedAttackCmdImpl rangedAttackCmd = new RangedAttackCmdImpl();
         return rangedAttackCmd;
@@ -353,6 +372,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Intervall createIntervall() {
         IntervallImpl intervall = new IntervallImpl();
         return intervall;
@@ -363,6 +383,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ProbeMod createProbeMod() {
         ProbeModImpl probeMod = new ProbeModImpl();
         return probeMod;
@@ -373,6 +394,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SetExtendetData createSetExtendetData() {
         SetExtendetDataImpl setExtendetData = new SetExtendetDataImpl();
         return setExtendetData;
@@ -383,6 +405,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SemanticAction createSemanticAction() {
         SemanticActionImpl semanticAction = new SemanticActionImpl();
         return semanticAction;
@@ -393,6 +416,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public DrainCommand createDrainCommand() {
         DrainCommandImpl drainCommand = new DrainCommandImpl();
         return drainCommand;
@@ -403,6 +427,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CombatSpellCmd createCombatSpellCmd() {
         CombatSpellCmdImpl combatSpellCmd = new CombatSpellCmdImpl();
         return combatSpellCmd;
@@ -493,6 +518,7 @@ public class GameplayFactoryImpl extends EFactoryImpl implements GameplayFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public GameplayPackage getGameplayPackage() {
         return (GameplayPackage)getEPackage();
     }

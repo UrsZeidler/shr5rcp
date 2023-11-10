@@ -40,6 +40,7 @@ import de.urszeidler.eclipse.shr5.Spezialisierung;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktFokusImpl#getStufe <em>Stufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktFokusImpl#getBindungskosten <em>Bindungskosten</em>}</li>
@@ -58,7 +59,6 @@ import de.urszeidler.eclipse.shr5.Spezialisierung;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktFokusImpl#getSpezialisierung <em>Spezialisierung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktFokusImpl#getWifi <em>Wifi</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -327,6 +327,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getStufe() {
         return stufe;
     }
@@ -350,6 +351,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -359,6 +361,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -371,6 +374,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -380,6 +384,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -392,6 +397,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -401,6 +407,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -413,6 +420,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -422,6 +430,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -434,6 +443,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.ABSTRAKT_FOKUS__LOCALIZATIONS);
@@ -446,6 +456,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getPage() {
         return page;
     }
@@ -455,6 +466,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
@@ -467,6 +479,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
@@ -493,6 +506,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
@@ -517,6 +531,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getVerfuegbarkeit() {
         return verfuegbarkeit;
     }
@@ -526,6 +541,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setVerfuegbarkeit(String newVerfuegbarkeit) {
         String oldVerfuegbarkeit = verfuegbarkeit;
         verfuegbarkeit = newVerfuegbarkeit;
@@ -538,6 +554,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public BigDecimal getWertValue() {
         return wertValue;
     }
@@ -570,6 +587,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<AttributModifikatorWert> getMods() {
         if (mods == null) {
             mods = new EObjectContainmentWithInverseEList<AttributModifikatorWert>(AttributModifikatorWert.class, this, Shr5Package.ABSTRAKT_FOKUS__MODS, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
@@ -582,6 +600,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Fertigkeit getFertigkeit() {
         if (fertigkeit != null && fertigkeit.eIsProxy()) {
             InternalEObject oldFertigkeit = (InternalEObject)fertigkeit;
@@ -608,6 +627,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setFertigkeit(Fertigkeit newFertigkeit) {
         Fertigkeit oldFertigkeit = fertigkeit;
         fertigkeit = newFertigkeit;
@@ -620,6 +640,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Spezialisierung getSpezialisierung() {
         if (spezialisierung != null && spezialisierung.eIsProxy()) {
             InternalEObject oldSpezialisierung = (InternalEObject)spezialisierung;
@@ -646,6 +667,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSpezialisierung(Spezialisierung newSpezialisierung) {
         Spezialisierung oldSpezialisierung = spezialisierung;
         spezialisierung = newSpezialisierung;
@@ -658,6 +680,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MatrixDevice getWifi() {
         return wifi;
     }
@@ -682,6 +705,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setWifi(MatrixDevice newWifi) {
         if (newWifi != wifi) {
             NotificationChain msgs = null;
@@ -1068,7 +1092,7 @@ public abstract class AbstraktFokusImpl extends MinimalEObjectImpl.Container imp
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (stufe: ");
         result.append(stufe);
         result.append(", parentId: ");

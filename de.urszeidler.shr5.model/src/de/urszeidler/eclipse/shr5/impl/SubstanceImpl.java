@@ -32,6 +32,7 @@ import de.urszeidler.eclipse.shr5.SubstanceVector;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SubstanceImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SubstanceImpl#getImage <em>Image</em>}</li>
@@ -48,7 +49,6 @@ import de.urszeidler.eclipse.shr5.SubstanceVector;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SubstanceImpl#getVector <em>Vector</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SubstanceImpl#getSpeed <em>Speed</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -327,6 +327,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -336,6 +337,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -348,6 +350,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -357,6 +360,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -369,6 +373,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -378,6 +383,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -390,6 +396,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -399,6 +406,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -411,6 +419,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.SUBSTANCE__LOCALIZATIONS);
@@ -423,6 +432,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getPage() {
         return page;
     }
@@ -432,6 +442,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
@@ -444,6 +455,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
@@ -470,6 +482,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
@@ -500,6 +513,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getVerfuegbarkeit() {
         return verfuegbarkeit;
     }
@@ -509,6 +523,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setVerfuegbarkeit(String newVerfuegbarkeit) {
         String oldVerfuegbarkeit = verfuegbarkeit;
         verfuegbarkeit = newVerfuegbarkeit;
@@ -521,6 +536,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public BigDecimal getWertValue() {
         return wertValue;
     }
@@ -530,6 +546,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setWertValue(BigDecimal newWertValue) {
         BigDecimal oldWertValue = wertValue;
         wertValue = newWertValue;
@@ -542,6 +559,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getAnzahl() {
         return anzahl;
     }
@@ -551,6 +569,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAnzahl(int newAnzahl) {
         int oldAnzahl = anzahl;
         anzahl = newAnzahl;
@@ -563,6 +582,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getProAnzahl() {
         return proAnzahl;
     }
@@ -572,6 +592,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setProAnzahl(int newProAnzahl) {
         int oldProAnzahl = proAnzahl;
         proAnzahl = newProAnzahl;
@@ -584,6 +605,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SubstanceVector getVector() {
         return vector;
     }
@@ -593,6 +615,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setVector(SubstanceVector newVector) {
         SubstanceVector oldVector = vector;
         vector = newVector == null ? VECTOR_EDEFAULT : newVector;
@@ -605,6 +628,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getSpeed() {
         return speed;
     }
@@ -614,6 +638,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSpeed(String newSpeed) {
         String oldSpeed = speed;
         speed = newSpeed;
@@ -907,7 +932,7 @@ public abstract class SubstanceImpl extends MinimalEObjectImpl.Container impleme
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

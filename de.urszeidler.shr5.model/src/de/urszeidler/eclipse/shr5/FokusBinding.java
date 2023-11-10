@@ -16,11 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.FokusBinding#getFokus <em>Fokus</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.FokusBinding#isActive <em>Active</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getFokusBinding()
  * @model

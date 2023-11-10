@@ -20,13 +20,13 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.BioWareImpl#getWert <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.BioWareImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.BioWareImpl#getWertValue <em>Wert Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.BioWareImpl#getPersona <em>Persona</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -124,7 +124,8 @@ public class BioWareImpl extends KoerpermodsImpl implements BioWare {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getVerfuegbarkeit() {
+	@Override
+    public String getVerfuegbarkeit() {
         return verfuegbarkeit;
     }
 
@@ -133,7 +134,8 @@ public class BioWareImpl extends KoerpermodsImpl implements BioWare {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setVerfuegbarkeit(String newVerfuegbarkeit) {
+	@Override
+    public void setVerfuegbarkeit(String newVerfuegbarkeit) {
         String oldVerfuegbarkeit = verfuegbarkeit;
         verfuegbarkeit = newVerfuegbarkeit;
         if (eNotificationRequired())
@@ -145,6 +147,7 @@ public class BioWareImpl extends KoerpermodsImpl implements BioWare {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public BigDecimal getWertValue() {
         return wertValue;
     }
@@ -167,7 +170,8 @@ public class BioWareImpl extends KoerpermodsImpl implements BioWare {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public AbstraktPersona getPersona() {
+	@Override
+    public AbstraktPersona getPersona() {
         if (persona != null && persona.eIsProxy()) {
             InternalEObject oldPersona = (InternalEObject)persona;
             persona = (AbstraktPersona)eResolveProxy(oldPersona);
@@ -193,7 +197,8 @@ public class BioWareImpl extends KoerpermodsImpl implements BioWare {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setPersona(AbstraktPersona newPersona) {
+	@Override
+    public void setPersona(AbstraktPersona newPersona) {
         AbstraktPersona oldPersona = persona;
         persona = newPersona;
         if (eNotificationRequired())
@@ -328,7 +333,7 @@ public class BioWareImpl extends KoerpermodsImpl implements BioWare {
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (verfuegbarkeit: ");
         result.append(verfuegbarkeit);
         result.append(", wertValue: ");

@@ -208,7 +208,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public NonPlayerCharacter createNonPlayerCharacter() {
+	@Override
+    public NonPlayerCharacter createNonPlayerCharacter() {
         NonPlayerCharacterImpl nonPlayerCharacter = new NonPlayerCharacterImpl();
         return nonPlayerCharacter;
     }
@@ -218,7 +219,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public KarmaGaint createKarmaGaint() {
+	@Override
+    public KarmaGaint createKarmaGaint() {
         KarmaGaintImpl karmaGaint = new KarmaGaintImpl();
         return karmaGaint;
     }
@@ -228,7 +230,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public FreeStyle createFreeStyle() {
+	@Override
+    public FreeStyle createFreeStyle() {
         FreeStyleImpl freeStyle = new FreeStyleImpl();
         return freeStyle;
     }
@@ -238,7 +241,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Shr5System createShr5System() {
+	@Override
+    public Shr5System createShr5System() {
         Shr5SystemImpl shr5System = new Shr5SystemImpl();
         return shr5System;
     }
@@ -248,7 +252,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public MetaType createMetaType() {
+	@Override
+    public MetaType createMetaType() {
         MetaTypeImpl metaType = new MetaTypeImpl();
         return metaType;
     }
@@ -258,7 +263,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Attributes createAttributes() {
+	@Override
+    public Attributes createAttributes() {
         AttributesImpl attributes = new AttributesImpl();
         return attributes;
     }
@@ -268,7 +274,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Skill createSkill() {
+	@Override
+    public Skill createSkill() {
         SkillImpl skill = new SkillImpl();
         return skill;
     }
@@ -278,7 +285,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Resourcen createResourcen() {
+	@Override
+    public Resourcen createResourcen() {
         ResourcenImpl resourcen = new ResourcenImpl();
         return resourcen;
     }
@@ -288,7 +296,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Technomancer createTechnomancer() {
+	@Override
+    public Technomancer createTechnomancer() {
         TechnomancerImpl technomancer = new TechnomancerImpl();
         return technomancer;
     }
@@ -298,7 +307,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Spellcaster createSpellcaster() {
+	@Override
+    public Spellcaster createSpellcaster() {
         SpellcasterImpl spellcaster = new SpellcasterImpl();
         return spellcaster;
     }
@@ -308,7 +318,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Adept createAdept() {
+	@Override
+    public Adept createAdept() {
         AdeptImpl adept = new AdeptImpl();
         return adept;
     }
@@ -318,7 +329,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public FreeStyleGenerator createFreeStyleGenerator() {
+	@Override
+    public FreeStyleGenerator createFreeStyleGenerator() {
         FreeStyleGeneratorImpl freeStyleGenerator = new FreeStyleGeneratorImpl();
         return freeStyleGenerator;
     }
@@ -328,7 +340,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Shr5Generator createShr5Generator() {
+	@Override
+    public Shr5Generator createShr5Generator() {
         Shr5GeneratorImpl shr5Generator = new Shr5GeneratorImpl();
         return shr5Generator;
     }
@@ -338,7 +351,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public AttributeChange createAttributeChange() {
+	@Override
+    public AttributeChange createAttributeChange() {
         AttributeChangeImpl attributeChange = new AttributeChangeImpl();
         return attributeChange;
     }
@@ -348,7 +362,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public PlayerCharacter createPlayerCharacter() {
+	@Override
+    public PlayerCharacter createPlayerCharacter() {
         PlayerCharacterImpl playerCharacter = new PlayerCharacterImpl();
         return playerCharacter;
     }
@@ -358,7 +373,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Mudan createMudan() {
+	@Override
+    public Mudan createMudan() {
         MudanImpl mudan = new MudanImpl();
         return mudan;
     }
@@ -368,7 +384,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public CharacterGroup createCharacterGroup() {
+	@Override
+    public CharacterGroup createCharacterGroup() {
         CharacterGroupImpl characterGroup = new CharacterGroupImpl();
         return characterGroup;
     }
@@ -378,7 +395,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Connection createConnection() {
+	@Override
+    public Connection createConnection() {
         ConnectionImpl connection = new ConnectionImpl();
         return connection;
     }
@@ -388,6 +406,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public PersonaChange createPersonaChange() {
         PersonaChangeImpl personaChange = new PersonaChangeImpl();
         return personaChange;
@@ -408,7 +427,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public IncreaseCharacterPart createIncreaseCharacterPart() {
+	@Override
+    public IncreaseCharacterPart createIncreaseCharacterPart() {
         IncreaseCharacterPartImpl increaseCharacterPart = new IncreaseCharacterPartImpl();
         return increaseCharacterPart;
     }
@@ -418,6 +438,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public LifestyleToStartMoney createLifestyleToStartMoney() {
         LifestyleToStartMoneyImpl lifestyleToStartMoney = new LifestyleToStartMoneyImpl();
         return lifestyleToStartMoney;
@@ -428,6 +449,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public GruntGroup createGruntGroup() {
         GruntGroupImpl gruntGroup = new GruntGroupImpl();
         return gruntGroup;
@@ -438,6 +460,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public GruntMembers createGruntMembers() {
         GruntMembersImpl gruntMembers = new GruntMembersImpl();
         return gruntMembers;
@@ -448,6 +471,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public PlayerManagement createPlayerManagement() {
         PlayerManagementImpl playerManagement = new PlayerManagementImpl();
         return playerManagement;
@@ -458,6 +482,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public GamemasterManagement createGamemasterManagement() {
         GamemasterManagementImpl gamemasterManagement = new GamemasterManagementImpl();
         return gamemasterManagement;
@@ -468,6 +493,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CharacterAdvancementSystem createCharacterAdvancementSystem() {
         CharacterAdvancementSystemImpl characterAdvancementSystem = new CharacterAdvancementSystemImpl();
         return characterAdvancementSystem;
@@ -478,6 +504,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Shr5KarmaGenerator createShr5KarmaGenerator() {
         Shr5KarmaGeneratorImpl shr5KarmaGenerator = new Shr5KarmaGeneratorImpl();
         return shr5KarmaGenerator;
@@ -488,6 +515,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public TrainingRate createTrainingRate() {
         TrainingRateImpl trainingRate = new TrainingRateImpl();
         return trainingRate;
@@ -498,6 +526,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public TrainingsTime createTrainingsTime() {
         TrainingsTimeImpl trainingsTime = new TrainingsTimeImpl();
         return trainingsTime;
@@ -508,6 +537,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public PersonaMartialArtChange createPersonaMartialArtChange() {
         PersonaMartialArtChangeImpl personaMartialArtChange = new PersonaMartialArtChangeImpl();
         return personaMartialArtChange;
@@ -518,6 +548,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public TrainingRange createTrainingRange() {
         TrainingRangeImpl trainingRange = new TrainingRangeImpl();
         return trainingRange;
@@ -528,6 +559,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public QuellenConstrain createQuellenConstrain() {
         QuellenConstrainImpl quellenConstrain = new QuellenConstrainImpl();
         return quellenConstrain;
@@ -538,6 +570,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Pack createPack() {
         PackImpl pack = new PackImpl();
         return pack;
@@ -548,6 +581,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CharacterDiary createCharacterDiary() {
         CharacterDiaryImpl characterDiary = new CharacterDiaryImpl();
         return characterDiary;
@@ -558,6 +592,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public DiaryEntry createDiaryEntry() {
         DiaryEntryImpl diaryEntry = new DiaryEntryImpl();
         return diaryEntry;
@@ -568,6 +603,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ContractPayment createContractPayment() {
         ContractPaymentImpl contractPayment = new ContractPaymentImpl();
         return contractPayment;
@@ -578,6 +614,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CharacterChange createCharacterChange() {
         CharacterChangeImpl characterChange = new CharacterChangeImpl();
         return characterChange;
@@ -588,6 +625,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SumToTenGenerator createSumToTenGenerator() {
         SumToTenGeneratorImpl sumToTenGenerator = new SumToTenGeneratorImpl();
         return sumToTenGenerator;
@@ -598,6 +636,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public LifeModulesGenerator createLifeModulesGenerator() {
         LifeModulesGeneratorImpl lifeModulesGenerator = new LifeModulesGeneratorImpl();
         return lifeModulesGenerator;
@@ -608,6 +647,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public LifeModulesSystem createLifeModulesSystem() {
         LifeModulesSystemImpl lifeModulesSystem = new LifeModulesSystemImpl();
         return lifeModulesSystem;
@@ -618,6 +658,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public LifeModule createLifeModule() {
         LifeModuleImpl lifeModule = new LifeModuleImpl();
         return lifeModule;
@@ -628,6 +669,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ModuleSkillChange createModuleSkillChange() {
         ModuleSkillChangeImpl moduleSkillChange = new ModuleSkillChangeImpl();
         return moduleSkillChange;
@@ -638,6 +680,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ModuleTeachableChange createModuleTeachableChange() {
         ModuleTeachableChangeImpl moduleTeachableChange = new ModuleTeachableChangeImpl();
         return moduleTeachableChange;
@@ -648,6 +691,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ModuleAttributeChange createModuleAttributeChange() {
         ModuleAttributeChangeImpl moduleAttributeChange = new ModuleAttributeChangeImpl();
         return moduleAttributeChange;
@@ -658,6 +702,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ModuleFeatureChange createModuleFeatureChange() {
         ModuleFeatureChangeImpl moduleFeatureChange = new ModuleFeatureChangeImpl();
         return moduleFeatureChange;
@@ -668,6 +713,7 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ModuleSkillGroupChange createModuleSkillGroupChange() {
         ModuleSkillGroupChangeImpl moduleSkillGroupChange = new ModuleSkillGroupChangeImpl();
         return moduleSkillGroupChange;
@@ -758,7 +804,8 @@ public class Shr5managementFactoryImpl extends EFactoryImpl implements Shr5manag
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Shr5managementPackage getShr5managementPackage() {
+	@Override
+    public Shr5managementPackage getShr5managementPackage() {
         return (Shr5managementPackage)getEPackage();
     }
 

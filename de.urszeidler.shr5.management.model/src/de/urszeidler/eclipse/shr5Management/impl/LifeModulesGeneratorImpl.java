@@ -38,6 +38,7 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl#getNationality <em>Nationality</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl#getFormativeYears <em>Formative Years</em>}</li>
@@ -47,7 +48,6 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl#getModuleKarmaCost <em>Module Karma Cost</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModulesGeneratorImpl#getStartingAge <em>Starting Age</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -170,6 +170,7 @@ public class LifeModulesGeneratorImpl extends KarmaGeneratorImpl<LifeModulesSyst
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public LifeModule getNationality() {
         if (nationality != null && nationality.eIsProxy()) {
             InternalEObject oldNationality = (InternalEObject)nationality;
@@ -196,6 +197,7 @@ public class LifeModulesGeneratorImpl extends KarmaGeneratorImpl<LifeModulesSyst
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setNationality(LifeModule newNationality) {
         LifeModule oldNationality = nationality;
         nationality = newNationality;
@@ -208,6 +210,7 @@ public class LifeModulesGeneratorImpl extends KarmaGeneratorImpl<LifeModulesSyst
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public LifeModule getFormativeYears() {
         if (formativeYears != null && formativeYears.eIsProxy()) {
             InternalEObject oldFormativeYears = (InternalEObject)formativeYears;
@@ -234,6 +237,7 @@ public class LifeModulesGeneratorImpl extends KarmaGeneratorImpl<LifeModulesSyst
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setFormativeYears(LifeModule newFormativeYears) {
         LifeModule oldFormativeYears = formativeYears;
         formativeYears = newFormativeYears;
@@ -246,6 +250,7 @@ public class LifeModulesGeneratorImpl extends KarmaGeneratorImpl<LifeModulesSyst
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public LifeModule getTeenYears() {
         if (teenYears != null && teenYears.eIsProxy()) {
             InternalEObject oldTeenYears = (InternalEObject)teenYears;
@@ -272,6 +277,7 @@ public class LifeModulesGeneratorImpl extends KarmaGeneratorImpl<LifeModulesSyst
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setTeenYears(LifeModule newTeenYears) {
         LifeModule oldTeenYears = teenYears;
         teenYears = newTeenYears;
@@ -284,6 +290,7 @@ public class LifeModulesGeneratorImpl extends KarmaGeneratorImpl<LifeModulesSyst
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public LifeModule getFurtherEducation() {
         if (furtherEducation != null && furtherEducation.eIsProxy()) {
             InternalEObject oldFurtherEducation = (InternalEObject)furtherEducation;
@@ -310,6 +317,7 @@ public class LifeModulesGeneratorImpl extends KarmaGeneratorImpl<LifeModulesSyst
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setFurtherEducation(LifeModule newFurtherEducation) {
         LifeModule oldFurtherEducation = furtherEducation;
         furtherEducation = newFurtherEducation;
@@ -322,6 +330,7 @@ public class LifeModulesGeneratorImpl extends KarmaGeneratorImpl<LifeModulesSyst
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<LifeModule> getRealLife() {
         if (realLife == null) {
             realLife = new EObjectResolvingEList<LifeModule>(LifeModule.class, this, Shr5managementPackage.LIFE_MODULES_GENERATOR__REAL_LIFE);

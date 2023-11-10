@@ -18,10 +18,10 @@ import de.urszeidler.eclipse.shr5.gameplay.SpellCommand;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SpellCommandImpl#getSpell <em>Spell</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -60,6 +60,7 @@ public abstract class SpellCommandImpl extends ProbeCommandImpl implements Spell
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Zauber getSpell() {
         if (spell != null && spell.eIsProxy()) {
             InternalEObject oldSpell = (InternalEObject)spell;
@@ -86,6 +87,7 @@ public abstract class SpellCommandImpl extends ProbeCommandImpl implements Spell
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSpell(Zauber newSpell) {
         Zauber oldSpell = spell;
         spell = newSpell;

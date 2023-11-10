@@ -17,11 +17,11 @@ import de.urszeidler.eclipse.shr5.gameplay.SemanticType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SemanticActionImpl#getType <em>Type</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SemanticActionImpl#getMessage <em>Message</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -90,6 +90,7 @@ public class SemanticActionImpl extends SubjectCommandImpl implements SemanticAc
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SemanticType getType() {
         return type;
     }
@@ -99,6 +100,7 @@ public class SemanticActionImpl extends SubjectCommandImpl implements SemanticAc
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setType(SemanticType newType) {
         SemanticType oldType = type;
         type = newType == null ? TYPE_EDEFAULT : newType;
@@ -111,6 +113,7 @@ public class SemanticActionImpl extends SubjectCommandImpl implements SemanticAc
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getMessage() {
         return message;
     }
@@ -120,6 +123,7 @@ public class SemanticActionImpl extends SubjectCommandImpl implements SemanticAc
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMessage(String newMessage) {
         String oldMessage = message;
         message = newMessage;
@@ -220,7 +224,7 @@ public class SemanticActionImpl extends SubjectCommandImpl implements SemanticAc
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (type: ");
         result.append(type);
         result.append(", message: ");

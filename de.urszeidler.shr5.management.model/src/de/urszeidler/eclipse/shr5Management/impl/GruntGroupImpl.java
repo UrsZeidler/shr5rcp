@@ -25,6 +25,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl#getImage <em>Image</em>}</li>
@@ -33,7 +34,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl#getLeader <em>Leader</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntGroupImpl#getProfessionalRating <em>Professional Rating</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -162,6 +162,7 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -171,6 +172,7 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -183,6 +185,7 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -192,6 +195,7 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -204,6 +208,7 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -213,6 +218,7 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -225,6 +231,7 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<GruntMembers> getMembers() {
         if (members == null) {
             members = new EObjectContainmentEList<GruntMembers>(GruntMembers.class, this, Shr5managementPackage.GRUNT_GROUP__MEMBERS);
@@ -237,6 +244,7 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public GruntMembers getLeader() {
         return leader;
     }
@@ -261,6 +269,7 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setLeader(GruntMembers newLeader) {
         if (newLeader != leader) {
             NotificationChain msgs = null;
@@ -280,6 +289,7 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getProfessionalRating() {
         return professionalRating;
     }
@@ -289,6 +299,7 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setProfessionalRating(int newProfessionalRating) {
         int oldProfessionalRating = professionalRating;
         professionalRating = newProfessionalRating;
@@ -431,7 +442,7 @@ public class GruntGroupImpl extends MinimalEObjectImpl.Container implements Grun
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

@@ -53,10 +53,10 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5RuleGeneratorImpl#getAllowedSources <em>Allowed Sources</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -119,6 +119,7 @@ public abstract class Shr5RuleGeneratorImpl<G extends Shr5System> extends Charac
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<SourceBook> getAllowedSources() {
         if (allowedSources == null) {
             allowedSources = new EObjectResolvingEList<SourceBook>(SourceBook.class, this, Shr5managementPackage.SHR5_RULE_GENERATOR__ALLOWED_SOURCES);

@@ -21,11 +21,11 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TechnomancerImpl#getResonanz <em>Resonanz</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TechnomancerImpl#getComplexForms <em>Complex Forms</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -94,7 +94,8 @@ public class TechnomancerImpl extends SpecialTypeImpl implements Technomancer {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getResonanz() {
+	@Override
+    public int getResonanz() {
         return resonanz;
     }
 
@@ -103,7 +104,8 @@ public class TechnomancerImpl extends SpecialTypeImpl implements Technomancer {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setResonanz(int newResonanz) {
+	@Override
+    public void setResonanz(int newResonanz) {
         int oldResonanz = resonanz;
         resonanz = newResonanz;
         if (eNotificationRequired())
@@ -115,7 +117,8 @@ public class TechnomancerImpl extends SpecialTypeImpl implements Technomancer {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getComplexForms() {
+	@Override
+    public int getComplexForms() {
         return complexForms;
     }
 
@@ -124,7 +127,8 @@ public class TechnomancerImpl extends SpecialTypeImpl implements Technomancer {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setComplexForms(int newComplexForms) {
+	@Override
+    public void setComplexForms(int newComplexForms) {
         int oldComplexForms = complexForms;
         complexForms = newComplexForms;
         if (eNotificationRequired())
@@ -242,7 +246,7 @@ public class TechnomancerImpl extends SpecialTypeImpl implements Technomancer {
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (resonanz: ");
         result.append(resonanz);
         result.append(", complexForms: ");

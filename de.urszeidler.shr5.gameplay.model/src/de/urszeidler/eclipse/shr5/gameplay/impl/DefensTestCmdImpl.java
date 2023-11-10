@@ -20,10 +20,10 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.DefensTestCmdImpl#getAttackersHits <em>Attackers Hits</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -72,6 +72,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getAttackersHits() {
         return attackersHits;
     }
@@ -81,6 +82,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAttackersHits(int newAttackersHits) {
         int oldAttackersHits = attackersHits;
         attackersHits = newAttackersHits;
@@ -196,7 +198,7 @@ public class DefensTestCmdImpl extends ProbeCommandImpl implements DefensTestCmd
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (attackersHits: ");
         result.append(attackersHits);
         result.append(')');

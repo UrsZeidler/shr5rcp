@@ -17,12 +17,12 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.MatrixDeviceImpl#getDevice <em>Device</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.MatrixDeviceImpl#getMatrixCondition <em>Matrix Condition</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.MatrixDeviceImpl#getMarks <em>Marks</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -102,6 +102,7 @@ public class MatrixDeviceImpl<M extends MatrixDevice> extends MinimalEObjectImpl
      * @generated
      */
     @SuppressWarnings("unchecked")
+    @Override
     public M getDevice() {
         if (device != null && device.eIsProxy()) {
             InternalEObject oldDevice = (InternalEObject)device;
@@ -128,6 +129,7 @@ public class MatrixDeviceImpl<M extends MatrixDevice> extends MinimalEObjectImpl
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDevice(M newDevice) {
         M oldDevice = device;
         device = newDevice;
@@ -140,6 +142,7 @@ public class MatrixDeviceImpl<M extends MatrixDevice> extends MinimalEObjectImpl
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getMatrixCondition() {
         return matrixCondition;
     }
@@ -149,6 +152,7 @@ public class MatrixDeviceImpl<M extends MatrixDevice> extends MinimalEObjectImpl
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMatrixCondition(int newMatrixCondition) {
         int oldMatrixCondition = matrixCondition;
         matrixCondition = newMatrixCondition;
@@ -161,6 +165,7 @@ public class MatrixDeviceImpl<M extends MatrixDevice> extends MinimalEObjectImpl
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getMarks() {
         return marks;
     }
@@ -170,6 +175,7 @@ public class MatrixDeviceImpl<M extends MatrixDevice> extends MinimalEObjectImpl
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMarks(int newMarks) {
         int oldMarks = marks;
         marks = newMarks;
@@ -266,7 +272,7 @@ public class MatrixDeviceImpl<M extends MatrixDevice> extends MinimalEObjectImpl
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (matrixCondition: ");
         result.append(matrixCondition);
         result.append(", marks: ");

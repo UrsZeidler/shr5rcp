@@ -17,12 +17,12 @@ import org.eclipse.emf.ecore.EStructuralFeature;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand#getValue <em>Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand#getObject <em>Object</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SetFeatureCommand#getFeature <em>Feature</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSetFeatureCommand()
  * @model

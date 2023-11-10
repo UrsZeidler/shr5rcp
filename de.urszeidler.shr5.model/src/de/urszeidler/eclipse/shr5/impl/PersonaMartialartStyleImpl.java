@@ -25,11 +25,11 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaMartialartStyleImpl#getStyle <em>Style</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaMartialartStyleImpl#getTechniques <em>Techniques</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -78,6 +78,7 @@ public class PersonaMartialartStyleImpl extends SpezialisierungImpl implements P
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MartialartStyle getStyle() {
         if (style != null && style.eIsProxy()) {
             InternalEObject oldStyle = (InternalEObject)style;
@@ -123,6 +124,7 @@ public class PersonaMartialartStyleImpl extends SpezialisierungImpl implements P
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<PersonaMartialartTechnique> getTechniques() {
         if (techniques == null) {
             techniques = new EObjectContainmentEList<PersonaMartialartTechnique>(PersonaMartialartTechnique.class, this, Shr5Package.PERSONA_MARTIALART_STYLE__TECHNIQUES);

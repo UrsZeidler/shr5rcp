@@ -26,11 +26,11 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.LifestyleImpl#getOptions <em>Options</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.LifestyleImpl#isOwned <em>Owned</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -103,6 +103,7 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<LifestyleOption> getOptions() {
         if (options == null) {
             options = new EObjectContainmentEList<LifestyleOption>(LifestyleOption.class, this, Shr5Package.LIFESTYLE__OPTIONS);
@@ -115,6 +116,7 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isOwned() {
         return owned;
     }
@@ -124,6 +126,7 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setOwned(boolean newOwned) {
         boolean oldOwned = owned;
         owned = newOwned;
@@ -238,7 +241,7 @@ public class LifestyleImpl extends IntervallVertragImpl implements Lifestyle {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (owned: ");
         result.append(owned);
         result.append(')');

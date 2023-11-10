@@ -20,13 +20,13 @@ import de.urszeidler.eclipse.shr5.gameplay.ExecutionStack;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.shr5.scripting.ScriptHistory#getCommandStack <em>Command Stack</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.ScriptHistory#getCurrentDate <em>Current Date</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.ScriptHistory#getCurrentPlacement <em>Current Placement</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.ScriptHistory#getWrittenProtokol <em>Written Protokol</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.shr5.scripting.ScriptingPackage#getScriptHistory()
  * @model

@@ -25,13 +25,13 @@ import de.urszeidler.shr5.scripting.ScriptingPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptHistoryImpl#getCommandStack <em>Command Stack</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptHistoryImpl#getCurrentDate <em>Current Date</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptHistoryImpl#getCurrentPlacement <em>Current Placement</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptHistoryImpl#getWrittenProtokol <em>Written Protokol</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -110,6 +110,7 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ExecutionStack getCommandStack() {
         return commandStack;
     }
@@ -134,6 +135,7 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCommandStack(ExecutionStack newCommandStack) {
         if (newCommandStack != commandStack) {
             NotificationChain msgs = null;
@@ -153,6 +155,7 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getCurrentDate() {
         return currentDate;
     }
@@ -162,6 +165,7 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCurrentDate(Date newCurrentDate) {
         Date oldCurrentDate = currentDate;
         currentDate = newCurrentDate;
@@ -174,6 +178,7 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Placement getCurrentPlacement() {
         if (currentPlacement != null && currentPlacement.eIsProxy()) {
             InternalEObject oldCurrentPlacement = (InternalEObject)currentPlacement;
@@ -200,6 +205,7 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCurrentPlacement(Placement newCurrentPlacement) {
         Placement oldCurrentPlacement = currentPlacement;
         currentPlacement = newCurrentPlacement;
@@ -213,6 +219,7 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<String> getWrittenProtokol() {
         if (writtenProtokol == null) {
             writtenProtokol = new EDataTypeEList<String>(String.class, this, ScriptingPackage.SCRIPT_HISTORY__WRITTEN_PROTOKOL);
@@ -334,7 +341,7 @@ public class ScriptHistoryImpl extends MinimalEObjectImpl.Container implements S
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (currentDate: ");
         result.append(currentDate);
         result.append(", writtenProtokol: ");

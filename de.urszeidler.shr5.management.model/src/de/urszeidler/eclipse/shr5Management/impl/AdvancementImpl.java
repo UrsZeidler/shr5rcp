@@ -17,10 +17,10 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.AdvancementImpl#getKarmaFactor <em>Karma Factor</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -69,7 +69,8 @@ public abstract class AdvancementImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getKarmaFactor() {
+	@Override
+    public int getKarmaFactor() {
         return karmaFactor;
     }
 
@@ -78,7 +79,8 @@ public abstract class AdvancementImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setKarmaFactor(int newKarmaFactor) {
+	@Override
+    public void setKarmaFactor(int newKarmaFactor) {
         int oldKarmaFactor = karmaFactor;
         karmaFactor = newKarmaFactor;
         if (eNotificationRequired())
@@ -152,7 +154,7 @@ public abstract class AdvancementImpl extends MinimalEObjectImpl.Container imple
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (karmaFactor: ");
         result.append(karmaFactor);
         result.append(')');

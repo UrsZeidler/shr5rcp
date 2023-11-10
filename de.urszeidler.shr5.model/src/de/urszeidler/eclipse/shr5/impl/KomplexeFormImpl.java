@@ -28,6 +28,7 @@ import de.urszeidler.eclipse.shr5.ZauberDauer;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl#getParentId <em>Parent Id</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl#getLocalizations <em>Localizations</em>}</li>
@@ -40,7 +41,6 @@ import de.urszeidler.eclipse.shr5.ZauberDauer;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl#getDauer <em>Dauer</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KomplexeFormImpl#getSchwund <em>Schwund</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -249,6 +249,7 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -258,6 +259,7 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -270,6 +272,7 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.KOMPLEXE_FORM__LOCALIZATIONS);
@@ -282,7 +285,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getPage() {
+	@Override
+    public String getPage() {
         return page;
     }
 
@@ -291,7 +295,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setPage(String newPage) {
+	@Override
+    public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
         if (eNotificationRequired())
@@ -303,7 +308,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public SourceBook getSrcBook() {
+	@Override
+    public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
             srcBook = (SourceBook)eResolveProxy(oldSrcBook);
@@ -329,7 +335,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSrcBook(SourceBook newSrcBook) {
+	@Override
+    public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
         if (eNotificationRequired())
@@ -341,7 +348,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getBeschreibung() {
+	@Override
+    public String getBeschreibung() {
         return beschreibung;
     }
 
@@ -350,7 +358,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setBeschreibung(String newBeschreibung) {
+	@Override
+    public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
         if (eNotificationRequired())
@@ -362,7 +371,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getImage() {
+	@Override
+    public String getImage() {
         return image;
     }
 
@@ -371,7 +381,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setImage(String newImage) {
+	@Override
+    public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
         if (eNotificationRequired())
@@ -383,7 +394,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getName() {
+	@Override
+    public String getName() {
         return name;
     }
 
@@ -392,7 +404,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setName(String newName) {
+	@Override
+    public void setName(String newName) {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
@@ -404,7 +417,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public ResonanzZiel getZiel() {
+	@Override
+    public ResonanzZiel getZiel() {
         return ziel;
     }
 
@@ -413,7 +427,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setZiel(ResonanzZiel newZiel) {
+	@Override
+    public void setZiel(ResonanzZiel newZiel) {
         ResonanzZiel oldZiel = ziel;
         ziel = newZiel == null ? ZIEL_EDEFAULT : newZiel;
         if (eNotificationRequired())
@@ -425,7 +440,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public ZauberDauer getDauer() {
+	@Override
+    public ZauberDauer getDauer() {
         return dauer;
     }
 
@@ -434,7 +450,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setDauer(ZauberDauer newDauer) {
+	@Override
+    public void setDauer(ZauberDauer newDauer) {
         ZauberDauer oldDauer = dauer;
         dauer = newDauer == null ? DAUER_EDEFAULT : newDauer;
         if (eNotificationRequired())
@@ -446,7 +463,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getSchwund() {
+	@Override
+    public String getSchwund() {
         return schwund;
     }
 
@@ -455,7 +473,8 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSchwund(String newSchwund) {
+	@Override
+    public void setSchwund(String newSchwund) {
         String oldSchwund = schwund;
         schwund = newSchwund;
         if (eNotificationRequired())
@@ -672,7 +691,7 @@ public class KomplexeFormImpl extends MinimalEObjectImpl.Container implements Ko
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (parentId: ");
         result.append(parentId);
         result.append(", page: ");

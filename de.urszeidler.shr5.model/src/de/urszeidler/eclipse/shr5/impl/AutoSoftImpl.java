@@ -33,6 +33,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getWert <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
@@ -49,7 +50,6 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getWeapon <em>Weapon</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AutoSoftImpl#getModel <em>Model</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -291,6 +291,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getVerfuegbarkeit() {
         return verfuegbarkeit;
     }
@@ -300,6 +301,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setVerfuegbarkeit(String newVerfuegbarkeit) {
         String oldVerfuegbarkeit = verfuegbarkeit;
         verfuegbarkeit = newVerfuegbarkeit;
@@ -312,6 +314,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public BigDecimal getWertValue() {
         return wertValue;
     }
@@ -336,6 +339,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -345,6 +349,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -357,6 +362,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -366,6 +372,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -378,6 +385,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -387,6 +395,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -399,6 +408,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -408,6 +418,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -420,6 +431,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.AUTO_SOFT__LOCALIZATIONS);
@@ -432,6 +444,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getPage() {
         return page;
     }
@@ -441,6 +454,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
@@ -453,6 +467,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
@@ -479,6 +494,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
@@ -491,6 +507,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getRating() {
         return rating;
     }
@@ -515,6 +532,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Fertigkeit getSkill() {
         if (skill != null && skill.eIsProxy()) {
             InternalEObject oldSkill = (InternalEObject)skill;
@@ -541,6 +559,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSkill(Fertigkeit newSkill) {
         Fertigkeit oldSkill = skill;
         skill = newSkill;
@@ -553,6 +572,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public AbstaktWaffe getWeapon() {
         if (weapon != null && weapon.eIsProxy()) {
             InternalEObject oldWeapon = (InternalEObject)weapon;
@@ -579,6 +599,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setWeapon(AbstaktWaffe newWeapon) {
         AbstaktWaffe oldWeapon = weapon;
         weapon = newWeapon;
@@ -591,6 +612,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Drohne getModel() {
         if (model != null && model.eIsProxy()) {
             InternalEObject oldModel = (InternalEObject)model;
@@ -617,6 +639,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setModel(Drohne newModel) {
         Drohne oldModel = model;
         model = newModel;
@@ -899,7 +922,7 @@ public class AutoSoftImpl extends MinimalEObjectImpl.Container implements AutoSo
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (verfuegbarkeit: ");
         result.append(verfuegbarkeit);
         result.append(", wertValue: ");

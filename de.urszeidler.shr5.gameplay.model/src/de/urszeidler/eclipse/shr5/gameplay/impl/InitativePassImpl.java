@@ -23,6 +23,7 @@ import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativePassImpl#getPhase <em>Phase</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativePassImpl#getTurn <em>Turn</em>}</li>
@@ -31,7 +32,6 @@ import de.urszeidler.eclipse.shr5.gameplay.util.GameplayTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativePassImpl#getFreeAction <em>Free Action</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.InitativePassImpl#getInterruptAction <em>Interrupt Action</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -187,6 +187,7 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getPhase() {
         return phase;
     }
@@ -196,6 +197,7 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPhase(int newPhase) {
         int oldPhase = phase;
         phase = newPhase;
@@ -208,6 +210,7 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getTurn() {
         return turn;
     }
@@ -217,6 +220,7 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setTurn(int newTurn) {
         int oldTurn = turn;
         turn = newTurn;
@@ -229,6 +233,7 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isSizeInitative() {
         return sizeInitative;
     }
@@ -238,6 +243,7 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSizeInitative(boolean newSizeInitative) {
         boolean oldSizeInitative = sizeInitative;
         sizeInitative = newSizeInitative;
@@ -250,6 +256,7 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CommandWrapper getAction() {
         return action;
     }
@@ -296,6 +303,7 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public FreeAction getFreeAction() {
         return freeAction;
     }
@@ -342,6 +350,7 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public InterruptAction getInterruptAction() {
         return interruptAction;
     }
@@ -550,7 +559,7 @@ public class InitativePassImpl extends SubjectCommandImpl implements InitativePa
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (phase: ");
         result.append(phase);
         result.append(", turn: ");

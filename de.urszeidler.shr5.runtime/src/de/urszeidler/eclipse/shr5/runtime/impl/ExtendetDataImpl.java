@@ -19,11 +19,11 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.ExtendetDataImpl#getEObject <em>EObject</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.ExtendetDataImpl#getEFeature <em>EFeature</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -72,6 +72,7 @@ public class ExtendetDataImpl extends MinimalEObjectImpl.Container implements Ex
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EObject getEObject() {
         if (eObject != null && eObject.eIsProxy()) {
             InternalEObject oldEObject = (InternalEObject)eObject;
@@ -98,6 +99,7 @@ public class ExtendetDataImpl extends MinimalEObjectImpl.Container implements Ex
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setEObject(EObject newEObject) {
         EObject oldEObject = eObject;
         eObject = newEObject;
@@ -110,6 +112,7 @@ public class ExtendetDataImpl extends MinimalEObjectImpl.Container implements Ex
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EStructuralFeature getEFeature() {
         if (eFeature != null && eFeature.eIsProxy()) {
             InternalEObject oldEFeature = (InternalEObject)eFeature;
@@ -136,6 +139,7 @@ public class ExtendetDataImpl extends MinimalEObjectImpl.Container implements Ex
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setEFeature(EStructuralFeature newEFeature) {
         EStructuralFeature oldEFeature = eFeature;
         eFeature = newEFeature;

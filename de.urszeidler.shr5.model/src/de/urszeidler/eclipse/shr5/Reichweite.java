@@ -14,6 +14,7 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Reichweite#getMin <em>Min</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Reichweite#getKurz <em>Kurz</em>}</li>
@@ -21,7 +22,6 @@ package de.urszeidler.eclipse.shr5;
  *   <li>{@link de.urszeidler.eclipse.shr5.Reichweite#getWeit <em>Weit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Reichweite#getExtrem <em>Extrem</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getReichweite()
  * @model

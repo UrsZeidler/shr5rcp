@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getRauschunterdrueckung <em>Rauschunterdrueckung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getZugriff <em>Zugriff</em>}</li>
@@ -26,7 +27,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getStoredPrograms <em>Stored Programs</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.RiggerCommandConsole#getRunningPrograms <em>Running Programs</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getRiggerCommandConsole()
  * @model

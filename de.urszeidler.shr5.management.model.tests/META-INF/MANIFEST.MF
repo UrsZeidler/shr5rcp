@@ -6,7 +6,7 @@ Bundle-Version: 0.3.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: de.urszeidler.eclipse.shr5Management.tests
 Require-Bundle: org.eclipse.core.runtime,
  de.urszeidler.shr5.management.model;visibility:=reexport,

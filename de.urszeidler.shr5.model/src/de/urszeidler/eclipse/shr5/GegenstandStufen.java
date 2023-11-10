@@ -10,6 +10,7 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.GegenstandStufen#getComputer <em>Computer</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.GegenstandStufen#getElektronik <em>Elektronik</em>}</li>
@@ -18,7 +19,6 @@ package de.urszeidler.eclipse.shr5;
  *   <li>{@link de.urszeidler.eclipse.shr5.GegenstandStufen#getProtection <em>Protection</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.GegenstandStufen#getAntiProtection <em>Anti Protection</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getGegenstandStufen()
  * @model interface="true" abstract="true"

@@ -15,10 +15,10 @@ package de.urszeidler.eclipse.shr5.gameplay;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.DefensTestCmd#getAttackersHits <em>Attackers Hits</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getDefensTestCmd()
  * @model

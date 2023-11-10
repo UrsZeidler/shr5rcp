@@ -31,6 +31,7 @@ import de.urszeidler.eclipse.shr5.Spezialisierung;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitImpl#getImage <em>Image</em>}</li>
@@ -44,7 +45,6 @@ import de.urszeidler.eclipse.shr5.Spezialisierung;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitImpl#getAttribut <em>Attribut</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FertigkeitImpl#getSpezialisierungen <em>Spezialisierungen</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -253,7 +253,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getName() {
+	@Override
+    public String getName() {
         return name;
     }
 
@@ -262,7 +263,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setName(String newName) {
+	@Override
+    public void setName(String newName) {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
@@ -274,7 +276,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getBeschreibung() {
+	@Override
+    public String getBeschreibung() {
         return beschreibung;
     }
 
@@ -283,7 +286,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setBeschreibung(String newBeschreibung) {
+	@Override
+    public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
         if (eNotificationRequired())
@@ -295,7 +299,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getImage() {
+	@Override
+    public String getImage() {
         return image;
     }
 
@@ -304,7 +309,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setImage(String newImage) {
+	@Override
+    public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
         if (eNotificationRequired())
@@ -316,7 +322,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getPage() {
+	@Override
+    public String getPage() {
         return page;
     }
 
@@ -325,7 +332,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setPage(String newPage) {
+	@Override
+    public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
         if (eNotificationRequired())
@@ -337,7 +345,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public SourceBook getSrcBook() {
+	@Override
+    public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
             srcBook = (SourceBook)eResolveProxy(oldSrcBook);
@@ -363,7 +372,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSrcBook(SourceBook newSrcBook) {
+	@Override
+    public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
         if (eNotificationRequired())
@@ -375,6 +385,7 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -384,6 +395,7 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -396,6 +408,7 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.FERTIGKEIT__LOCALIZATIONS);
@@ -408,7 +421,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getKategorie() {
+	@Override
+    public String getKategorie() {
         return kategorie;
     }
 
@@ -417,7 +431,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setKategorie(String newKategorie) {
+	@Override
+    public void setKategorie(String newKategorie) {
         String oldKategorie = kategorie;
         kategorie = newKategorie;
         if (eNotificationRequired())
@@ -429,7 +444,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public boolean isAusweichen() {
+	@Override
+    public boolean isAusweichen() {
         return ausweichen;
     }
 
@@ -438,7 +454,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setAusweichen(boolean newAusweichen) {
+	@Override
+    public void setAusweichen(boolean newAusweichen) {
         boolean oldAusweichen = ausweichen;
         ausweichen = newAusweichen;
         if (eNotificationRequired())
@@ -450,7 +467,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAttribut() {
+	@Override
+    public EAttribute getAttribut() {
         if (attribut != null && attribut.eIsProxy()) {
             InternalEObject oldAttribut = (InternalEObject)attribut;
             attribut = (EAttribute)eResolveProxy(oldAttribut);
@@ -476,7 +494,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setAttribut(EAttribute newAttribut) {
+	@Override
+    public void setAttribut(EAttribute newAttribut) {
         EAttribute oldAttribut = attribut;
         attribut = newAttribut;
         if (eNotificationRequired())
@@ -488,7 +507,8 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<Spezialisierung> getSpezialisierungen() {
+	@Override
+    public EList<Spezialisierung> getSpezialisierungen() {
         if (spezialisierungen == null) {
             spezialisierungen = new EObjectContainmentWithInverseEList<Spezialisierung>(Spezialisierung.class, this, Shr5Package.FERTIGKEIT__SPEZIALISIERUNGEN, Shr5Package.SPEZIALISIERUNG__FERTIGKEIT);
         }
@@ -756,7 +776,7 @@ public class FertigkeitImpl extends MinimalEObjectImpl.Container implements Fert
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

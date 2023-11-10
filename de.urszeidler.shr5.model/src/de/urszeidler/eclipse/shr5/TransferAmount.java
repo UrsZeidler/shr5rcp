@@ -13,12 +13,12 @@ import java.math.BigDecimal;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.TransferAmount#getSource <em>Source</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.TransferAmount#getDest <em>Dest</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.TransferAmount#getAmountToTransfer <em>Amount To Transfer</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getTransferAmount()
  * @model

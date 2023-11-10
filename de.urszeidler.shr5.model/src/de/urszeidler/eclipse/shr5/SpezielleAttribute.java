@@ -10,6 +10,7 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitative <em>Initative</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getInitativWuerfel <em>Initativ Wuerfel</em>}</li>
@@ -18,7 +19,6 @@ package de.urszeidler.eclipse.shr5;
  *   <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getEdgeBasis <em>Edge Basis</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.SpezielleAttribute#getEdge <em>Edge</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getSpezielleAttribute()
  * @model interface="true" abstract="true"

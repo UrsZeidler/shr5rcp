@@ -16,11 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.RangeTableEntry#getFrom <em>From</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.RangeTableEntry#getTo <em>To</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getRangeTableEntry()
  * @model interface="true" abstract="true"

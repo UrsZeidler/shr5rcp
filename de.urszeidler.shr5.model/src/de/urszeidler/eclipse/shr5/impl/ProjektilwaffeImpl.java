@@ -11,8 +11,6 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Projektilwaffe</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

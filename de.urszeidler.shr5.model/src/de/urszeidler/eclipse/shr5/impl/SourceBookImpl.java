@@ -26,6 +26,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SourceBookImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SourceBookImpl#getImage <em>Image</em>}</li>
@@ -36,7 +37,6 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SourceBookImpl#getEndShrTime <em>End Shr Time</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SourceBookImpl#getCode <em>Code</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -215,7 +215,8 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getName() {
+	@Override
+    public String getName() {
         return name;
     }
 
@@ -224,7 +225,8 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setName(String newName) {
+	@Override
+    public void setName(String newName) {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
@@ -236,6 +238,7 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -245,6 +248,7 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -257,6 +261,7 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.SOURCE_BOOK__LOCALIZATIONS);
@@ -269,7 +274,8 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getBeschreibung() {
+	@Override
+    public String getBeschreibung() {
         return beschreibung;
     }
 
@@ -278,7 +284,8 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setBeschreibung(String newBeschreibung) {
+	@Override
+    public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
         if (eNotificationRequired())
@@ -290,7 +297,8 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getImage() {
+	@Override
+    public String getImage() {
         return image;
     }
 
@@ -299,7 +307,8 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setImage(String newImage) {
+	@Override
+    public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
         if (eNotificationRequired())
@@ -311,7 +320,8 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Date getStartShrTime() {
+	@Override
+    public Date getStartShrTime() {
         return startShrTime;
     }
 
@@ -320,7 +330,8 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setStartShrTime(Date newStartShrTime) {
+	@Override
+    public void setStartShrTime(Date newStartShrTime) {
         Date oldStartShrTime = startShrTime;
         startShrTime = newStartShrTime;
         if (eNotificationRequired())
@@ -332,7 +343,8 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Date getEndShrTime() {
+	@Override
+    public Date getEndShrTime() {
         return endShrTime;
     }
 
@@ -341,7 +353,8 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setEndShrTime(Date newEndShrTime) {
+	@Override
+    public void setEndShrTime(Date newEndShrTime) {
         Date oldEndShrTime = endShrTime;
         endShrTime = newEndShrTime;
         if (eNotificationRequired())
@@ -353,6 +366,7 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getCode() {
         return code;
     }
@@ -362,6 +376,7 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCode(String newCode) {
         String oldCode = code;
         code = newCode;
@@ -556,7 +571,7 @@ public class SourceBookImpl extends MinimalEObjectImpl.Container implements Sour
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

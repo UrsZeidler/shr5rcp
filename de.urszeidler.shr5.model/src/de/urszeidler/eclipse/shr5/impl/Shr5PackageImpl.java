@@ -1456,7 +1456,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 
 	/**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-     * 
+     *
      * <p>This method is used to initialize {@link Shr5Package#eINSTANCE} when that field is accessed.
      * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
      * <!-- begin-user-doc -->
@@ -1470,7 +1470,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         if (isInited) return (Shr5Package)EPackage.Registry.INSTANCE.getEPackage(Shr5Package.eNS_URI);
 
         // Obtain or create and register package
-        Shr5PackageImpl theShr5Package = (Shr5PackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof Shr5PackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new Shr5PackageImpl());
+        Object registeredShr5Package = EPackage.Registry.INSTANCE.get(eNS_URI);
+        Shr5PackageImpl theShr5Package = registeredShr5Package instanceof Shr5PackageImpl ? (Shr5PackageImpl)registeredShr5Package : new Shr5PackageImpl();
 
         isInited = true;
 
@@ -1483,7 +1484,6 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
         // Mark meta-data to indicate it can't be changed
         theShr5Package.freeze();
 
-  
         // Update the registry and return the package
         EPackage.Registry.INSTANCE.put(Shr5Package.eNS_URI, theShr5Package);
         return theShr5Package;
@@ -1494,7 +1494,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getBeschreibbar() {
+	@Override
+    public EClass getBeschreibbar() {
         return beschreibbarEClass;
     }
 
@@ -1503,7 +1504,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getBeschreibbar_Name() {
+	@Override
+    public EAttribute getBeschreibbar_Name() {
         return (EAttribute)beschreibbarEClass.getEStructuralFeatures().get(2);
     }
 
@@ -1512,7 +1514,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getBeschreibbar_Beschreibung() {
+	@Override
+    public EAttribute getBeschreibbar_Beschreibung() {
         return (EAttribute)beschreibbarEClass.getEStructuralFeatures().get(0);
     }
 
@@ -1521,7 +1524,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getBeschreibbar_Image() {
+	@Override
+    public EAttribute getBeschreibbar_Image() {
         return (EAttribute)beschreibbarEClass.getEStructuralFeatures().get(1);
     }
 
@@ -1530,7 +1534,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getQuelle() {
+	@Override
+    public EClass getQuelle() {
         return quelleEClass;
     }
 
@@ -1539,7 +1544,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getQuelle_Page() {
+	@Override
+    public EAttribute getQuelle_Page() {
         return (EAttribute)quelleEClass.getEStructuralFeatures().get(0);
     }
 
@@ -1548,7 +1554,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getQuelle_SrcBook() {
+	@Override
+    public EReference getQuelle_SrcBook() {
         return (EReference)quelleEClass.getEStructuralFeatures().get(1);
     }
 
@@ -1557,7 +1564,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getSourceBook() {
+	@Override
+    public EClass getSourceBook() {
         return sourceBookEClass;
     }
 
@@ -1566,7 +1574,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSourceBook_StartShrTime() {
+	@Override
+    public EAttribute getSourceBook_StartShrTime() {
         return (EAttribute)sourceBookEClass.getEStructuralFeatures().get(0);
     }
 
@@ -1575,7 +1584,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSourceBook_EndShrTime() {
+	@Override
+    public EAttribute getSourceBook_EndShrTime() {
         return (EAttribute)sourceBookEClass.getEStructuralFeatures().get(1);
     }
 
@@ -1584,6 +1594,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSourceBook_Code() {
         return (EAttribute)sourceBookEClass.getEStructuralFeatures().get(2);
     }
@@ -1593,7 +1604,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getAbstraktPersona() {
+	@Override
+    public EClass getAbstraktPersona() {
         return abstraktPersonaEClass;
     }
 
@@ -1602,7 +1614,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAbstraktPersona_KonstitutionBasis() {
+	@Override
+    public EAttribute getAbstraktPersona_KonstitutionBasis() {
         return (EAttribute)abstraktPersonaEClass.getEStructuralFeatures().get(0);
     }
 
@@ -1611,7 +1624,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAbstraktPersona_GeschicklichkeitBasis() {
+	@Override
+    public EAttribute getAbstraktPersona_GeschicklichkeitBasis() {
         return (EAttribute)abstraktPersonaEClass.getEStructuralFeatures().get(1);
     }
 
@@ -1620,7 +1634,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAbstraktPersona_ReaktionBasis() {
+	@Override
+    public EAttribute getAbstraktPersona_ReaktionBasis() {
         return (EAttribute)abstraktPersonaEClass.getEStructuralFeatures().get(2);
     }
 
@@ -1629,7 +1644,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAbstraktPersona_StaerkeBasis() {
+	@Override
+    public EAttribute getAbstraktPersona_StaerkeBasis() {
         return (EAttribute)abstraktPersonaEClass.getEStructuralFeatures().get(3);
     }
 
@@ -1638,7 +1654,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAbstraktPersona_CharismaBasis() {
+	@Override
+    public EAttribute getAbstraktPersona_CharismaBasis() {
         return (EAttribute)abstraktPersonaEClass.getEStructuralFeatures().get(4);
     }
 
@@ -1647,7 +1664,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAbstraktPersona_WillenskraftBasis() {
+	@Override
+    public EAttribute getAbstraktPersona_WillenskraftBasis() {
         return (EAttribute)abstraktPersonaEClass.getEStructuralFeatures().get(5);
     }
 
@@ -1656,7 +1674,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAbstraktPersona_IntuitionBasis() {
+	@Override
+    public EAttribute getAbstraktPersona_IntuitionBasis() {
         return (EAttribute)abstraktPersonaEClass.getEStructuralFeatures().get(6);
     }
 
@@ -1665,7 +1684,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAbstraktPersona_LogikBasis() {
+	@Override
+    public EAttribute getAbstraktPersona_LogikBasis() {
         return (EAttribute)abstraktPersonaEClass.getEStructuralFeatures().get(7);
     }
 
@@ -1674,7 +1694,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getAbstraktPersona_Fertigkeiten() {
+	@Override
+    public EReference getAbstraktPersona_Fertigkeiten() {
         return (EReference)abstraktPersonaEClass.getEStructuralFeatures().get(8);
     }
 
@@ -1683,7 +1704,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getAbstraktPersona_FertigkeitsGruppen() {
+	@Override
+    public EReference getAbstraktPersona_FertigkeitsGruppen() {
         return (EReference)abstraktPersonaEClass.getEStructuralFeatures().get(9);
     }
 
@@ -1692,7 +1714,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getAbstraktPersona_Spezies() {
+	@Override
+    public EReference getAbstraktPersona_Spezies() {
         return (EReference)abstraktPersonaEClass.getEStructuralFeatures().get(10);
     }
 
@@ -1701,7 +1724,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAbstraktPersona_ModManager() {
+	@Override
+    public EAttribute getAbstraktPersona_ModManager() {
         return (EAttribute)abstraktPersonaEClass.getEStructuralFeatures().get(11);
     }
 
@@ -1710,6 +1734,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getAbstraktPersona_MartialartStyles() {
         return (EReference)abstraktPersonaEClass.getEStructuralFeatures().get(12);
     }
@@ -1719,7 +1744,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getGegenstand() {
+	@Override
+    public EClass getGegenstand() {
         return gegenstandEClass;
     }
 
@@ -1728,7 +1754,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getGegenstand_Kategorie() {
+	@Override
+    public EAttribute getGegenstand_Kategorie() {
         return (EAttribute)gegenstandEClass.getEStructuralFeatures().get(0);
     }
 
@@ -1737,7 +1764,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getGegenstand_Stufe() {
+	@Override
+    public EAttribute getGegenstand_Stufe() {
         return (EAttribute)gegenstandEClass.getEStructuralFeatures().get(1);
     }
 
@@ -1746,7 +1774,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getGeldWert() {
+	@Override
+    public EClass getGeldWert() {
         return geldWertEClass;
     }
 
@@ -1755,7 +1784,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getGeldWert_Wert() {
+	@Override
+    public EAttribute getGeldWert_Wert() {
         return (EAttribute)geldWertEClass.getEStructuralFeatures().get(0);
     }
 
@@ -1764,7 +1794,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getGeldWert_Verfuegbarkeit() {
+	@Override
+    public EAttribute getGeldWert_Verfuegbarkeit() {
         return (EAttribute)geldWertEClass.getEStructuralFeatures().get(1);
     }
 
@@ -1773,6 +1804,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getGeldWert_WertValue() {
         return (EAttribute)geldWertEClass.getEStructuralFeatures().get(2);
     }
@@ -1782,7 +1814,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getReichweite() {
+	@Override
+    public EClass getReichweite() {
         return reichweiteEClass;
     }
 
@@ -1791,7 +1824,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getReichweite_Min() {
+	@Override
+    public EAttribute getReichweite_Min() {
         return (EAttribute)reichweiteEClass.getEStructuralFeatures().get(0);
     }
 
@@ -1800,7 +1834,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getReichweite_Kurz() {
+	@Override
+    public EAttribute getReichweite_Kurz() {
         return (EAttribute)reichweiteEClass.getEStructuralFeatures().get(1);
     }
 
@@ -1809,7 +1844,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getReichweite_Mittel() {
+	@Override
+    public EAttribute getReichweite_Mittel() {
         return (EAttribute)reichweiteEClass.getEStructuralFeatures().get(2);
     }
 
@@ -1818,7 +1854,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getReichweite_Weit() {
+	@Override
+    public EAttribute getReichweite_Weit() {
         return (EAttribute)reichweiteEClass.getEStructuralFeatures().get(3);
     }
 
@@ -1827,7 +1864,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getReichweite_Extrem() {
+	@Override
+    public EAttribute getReichweite_Extrem() {
         return (EAttribute)reichweiteEClass.getEStructuralFeatures().get(4);
     }
 
@@ -1836,7 +1874,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getAttributModifikatorWert() {
+	@Override
+    public EClass getAttributModifikatorWert() {
         return attributModifikatorWertEClass;
     }
 
@@ -1845,7 +1884,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getAttributModifikatorWert_Attribut() {
+	@Override
+    public EReference getAttributModifikatorWert_Attribut() {
         return (EReference)attributModifikatorWertEClass.getEStructuralFeatures().get(0);
     }
 
@@ -1854,7 +1894,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAttributModifikatorWert_Wert() {
+	@Override
+    public EAttribute getAttributModifikatorWert_Wert() {
         return (EAttribute)attributModifikatorWertEClass.getEStructuralFeatures().get(1);
     }
 
@@ -1863,7 +1904,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getAttributModifikatorWert_Modifiziertes() {
+	@Override
+    public EReference getAttributModifikatorWert_Modifiziertes() {
         return (EReference)attributModifikatorWertEClass.getEStructuralFeatures().get(2);
     }
 
@@ -1872,6 +1914,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getAttributModifikatorWert_Modifyable() {
         return (EReference)attributModifikatorWertEClass.getEStructuralFeatures().get(3);
     }
@@ -1881,7 +1924,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getModifizierbar() {
+	@Override
+    public EClass getModifizierbar() {
         return modifizierbarEClass;
     }
 
@@ -1890,7 +1934,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getModifizierbar_Mods() {
+	@Override
+    public EReference getModifizierbar_Mods() {
         return (EReference)modifizierbarEClass.getEStructuralFeatures().get(0);
     }
 
@@ -1899,7 +1944,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getKoerperlicheAttribute() {
+	@Override
+    public EClass getKoerperlicheAttribute() {
         return koerperlicheAttributeEClass;
     }
 
@@ -1908,7 +1954,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getKoerperlicheAttribute_Konstitution() {
+	@Override
+    public EAttribute getKoerperlicheAttribute_Konstitution() {
         return (EAttribute)koerperlicheAttributeEClass.getEStructuralFeatures().get(0);
     }
 
@@ -1917,7 +1964,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getKoerperlicheAttribute_Geschicklichkeit() {
+	@Override
+    public EAttribute getKoerperlicheAttribute_Geschicklichkeit() {
         return (EAttribute)koerperlicheAttributeEClass.getEStructuralFeatures().get(1);
     }
 
@@ -1926,7 +1974,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getKoerperlicheAttribute_Reaktion() {
+	@Override
+    public EAttribute getKoerperlicheAttribute_Reaktion() {
         return (EAttribute)koerperlicheAttributeEClass.getEStructuralFeatures().get(2);
     }
 
@@ -1935,7 +1984,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getKoerperlicheAttribute_Staerke() {
+	@Override
+    public EAttribute getKoerperlicheAttribute_Staerke() {
         return (EAttribute)koerperlicheAttributeEClass.getEStructuralFeatures().get(3);
     }
 
@@ -1944,7 +1994,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getSpezielleAttribute() {
+	@Override
+    public EClass getSpezielleAttribute() {
         return spezielleAttributeEClass;
     }
 
@@ -1953,7 +2004,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezielleAttribute_Initative() {
+	@Override
+    public EAttribute getSpezielleAttribute_Initative() {
         return (EAttribute)spezielleAttributeEClass.getEStructuralFeatures().get(0);
     }
 
@@ -1962,7 +2014,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezielleAttribute_InitativWuerfel() {
+	@Override
+    public EAttribute getSpezielleAttribute_InitativWuerfel() {
         return (EAttribute)spezielleAttributeEClass.getEStructuralFeatures().get(1);
     }
 
@@ -1971,7 +2024,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezielleAttribute_Ausweichen() {
+	@Override
+    public EAttribute getSpezielleAttribute_Ausweichen() {
         return (EAttribute)spezielleAttributeEClass.getEStructuralFeatures().get(2);
     }
 
@@ -1980,7 +2034,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezielleAttribute_Essenz() {
+	@Override
+    public EAttribute getSpezielleAttribute_Essenz() {
         return (EAttribute)spezielleAttributeEClass.getEStructuralFeatures().get(3);
     }
 
@@ -1989,7 +2044,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezielleAttribute_EdgeBasis() {
+	@Override
+    public EAttribute getSpezielleAttribute_EdgeBasis() {
         return (EAttribute)spezielleAttributeEClass.getEStructuralFeatures().get(4);
     }
 
@@ -1998,7 +2054,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezielleAttribute_Edge() {
+	@Override
+    public EAttribute getSpezielleAttribute_Edge() {
         return (EAttribute)spezielleAttributeEClass.getEStructuralFeatures().get(5);
     }
 
@@ -2007,7 +2064,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getAbstraktGegenstand() {
+	@Override
+    public EClass getAbstraktGegenstand() {
         return abstraktGegenstandEClass;
     }
 
@@ -2016,6 +2074,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getAbstraktGegenstand_Wifi() {
         return (EReference)abstraktGegenstandEClass.getEStructuralFeatures().get(0);
     }
@@ -2025,7 +2084,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getAbstaktFernKampfwaffe() {
+	@Override
+    public EClass getAbstaktFernKampfwaffe() {
         return abstaktFernKampfwaffeEClass;
     }
 
@@ -2034,7 +2094,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getAbstaktFernKampfwaffe_Reichweite() {
+	@Override
+    public EReference getAbstaktFernKampfwaffe_Reichweite() {
         return (EReference)abstaktFernKampfwaffeEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2043,7 +2104,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getAbstaktWaffe() {
+	@Override
+    public EClass getAbstaktWaffe() {
         return abstaktWaffeEClass;
     }
 
@@ -2052,7 +2114,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAbstaktWaffe_Schadenscode() {
+	@Override
+    public EAttribute getAbstaktWaffe_Schadenscode() {
         return (EAttribute)abstaktWaffeEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2061,7 +2124,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAbstaktWaffe_SchadesTyp() {
+	@Override
+    public EAttribute getAbstaktWaffe_SchadesTyp() {
         return (EAttribute)abstaktWaffeEClass.getEStructuralFeatures().get(1);
     }
 
@@ -2070,7 +2134,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAbstaktWaffe_Praezision() {
+	@Override
+    public EAttribute getAbstaktWaffe_Praezision() {
         return (EAttribute)abstaktWaffeEClass.getEStructuralFeatures().get(2);
     }
 
@@ -2079,7 +2144,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAbstaktWaffe_DurchschlagsKraft() {
+	@Override
+    public EAttribute getAbstaktWaffe_DurchschlagsKraft() {
         return (EAttribute)abstaktWaffeEClass.getEStructuralFeatures().get(3);
     }
 
@@ -2088,7 +2154,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getNahkampfwaffe() {
+	@Override
+    public EClass getNahkampfwaffe() {
         return nahkampfwaffeEClass;
     }
 
@@ -2097,7 +2164,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getNahkampfwaffe_Reichweite() {
+	@Override
+    public EAttribute getNahkampfwaffe_Reichweite() {
         return (EAttribute)nahkampfwaffeEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2106,7 +2174,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getFeuerwaffe() {
+	@Override
+    public EClass getFeuerwaffe() {
         return feuerwaffeEClass;
     }
 
@@ -2115,7 +2184,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFeuerwaffe_Munitionstyp() {
+	@Override
+    public EAttribute getFeuerwaffe_Munitionstyp() {
         return (EAttribute)feuerwaffeEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2124,7 +2194,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFeuerwaffe_Modie() {
+	@Override
+    public EAttribute getFeuerwaffe_Modie() {
         return (EAttribute)feuerwaffeEClass.getEStructuralFeatures().get(1);
     }
 
@@ -2133,7 +2204,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFeuerwaffe_Kapazitaet() {
+	@Override
+    public EAttribute getFeuerwaffe_Kapazitaet() {
         return (EAttribute)feuerwaffeEClass.getEStructuralFeatures().get(2);
     }
 
@@ -2142,7 +2214,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFeuerwaffe_Erweiterung() {
+	@Override
+    public EAttribute getFeuerwaffe_Erweiterung() {
         return (EAttribute)feuerwaffeEClass.getEStructuralFeatures().get(3);
     }
 
@@ -2151,7 +2224,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFeuerwaffe_Rueckstoss() {
+	@Override
+    public EAttribute getFeuerwaffe_Rueckstoss() {
         return (EAttribute)feuerwaffeEClass.getEStructuralFeatures().get(4);
     }
 
@@ -2160,7 +2234,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getFeuerwaffe_Einbau() {
+	@Override
+    public EReference getFeuerwaffe_Einbau() {
         return (EReference)feuerwaffeEClass.getEStructuralFeatures().get(5);
     }
 
@@ -2169,6 +2244,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getFeuerwaffe_Magazin() {
         return (EReference)feuerwaffeEClass.getEStructuralFeatures().get(6);
     }
@@ -2178,7 +2254,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getWurfwaffe() {
+	@Override
+    public EClass getWurfwaffe() {
         return wurfwaffeEClass;
     }
 
@@ -2187,7 +2264,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getShrList() {
+	@Override
+    public EClass getShrList() {
         return shrListEClass;
     }
 
@@ -2196,7 +2274,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getShrList_Entries() {
+	@Override
+    public EReference getShrList_Entries() {
         return (EReference)shrListEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2205,7 +2284,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getProjektilwaffe() {
+	@Override
+    public EClass getProjektilwaffe() {
         return projektilwaffeEClass;
     }
 
@@ -2214,7 +2294,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getFertigkeitsGruppe() {
+	@Override
+    public EClass getFertigkeitsGruppe() {
         return fertigkeitsGruppeEClass;
     }
 
@@ -2223,7 +2304,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getFertigkeitsGruppe_Fertigkeiten() {
+	@Override
+    public EReference getFertigkeitsGruppe_Fertigkeiten() {
         return (EReference)fertigkeitsGruppeEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2232,7 +2314,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getFertigkeit() {
+	@Override
+    public EClass getFertigkeit() {
         return fertigkeitEClass;
     }
 
@@ -2241,7 +2324,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFertigkeit_Kategorie() {
+	@Override
+    public EAttribute getFertigkeit_Kategorie() {
         return (EAttribute)fertigkeitEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2250,7 +2334,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFertigkeit_Ausweichen() {
+	@Override
+    public EAttribute getFertigkeit_Ausweichen() {
         return (EAttribute)fertigkeitEClass.getEStructuralFeatures().get(1);
     }
 
@@ -2259,7 +2344,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getFertigkeit_Attribut() {
+	@Override
+    public EReference getFertigkeit_Attribut() {
         return (EReference)fertigkeitEClass.getEStructuralFeatures().get(2);
     }
 
@@ -2268,7 +2354,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getFertigkeit_Spezialisierungen() {
+	@Override
+    public EReference getFertigkeit_Spezialisierungen() {
         return (EReference)fertigkeitEClass.getEStructuralFeatures().get(3);
     }
 
@@ -2277,7 +2364,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getPersonaFertigkeit() {
+	@Override
+    public EClass getPersonaFertigkeit() {
         return personaFertigkeitEClass;
     }
 
@@ -2286,7 +2374,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getPersonaFertigkeit_Fertigkeit() {
+	@Override
+    public EReference getPersonaFertigkeit_Fertigkeit() {
         return (EReference)personaFertigkeitEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2295,6 +2384,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getPersonaFertigkeit_Spezialisierungen() {
         return (EReference)personaFertigkeitEClass.getEStructuralFeatures().get(1);
     }
@@ -2304,7 +2394,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getPersonaFertigkeitsGruppe() {
+	@Override
+    public EClass getPersonaFertigkeitsGruppe() {
         return personaFertigkeitsGruppeEClass;
     }
 
@@ -2313,7 +2404,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getPersonaFertigkeitsGruppe_Gruppe() {
+	@Override
+    public EReference getPersonaFertigkeitsGruppe_Gruppe() {
         return (EReference)personaFertigkeitsGruppeEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2322,7 +2414,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getCyberware() {
+	@Override
+    public EClass getCyberware() {
         return cyberwareEClass;
     }
 
@@ -2331,7 +2424,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getCyberware_Persona() {
+	@Override
+    public EReference getCyberware_Persona() {
         return (EReference)cyberwareEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2340,7 +2434,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getCyberware_Einbau() {
+	@Override
+    public EReference getCyberware_Einbau() {
         return (EReference)cyberwareEClass.getEStructuralFeatures().get(1);
     }
 
@@ -2349,6 +2444,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCyberware_CyberwareCapacity() {
         return (EAttribute)cyberwareEClass.getEStructuralFeatures().get(2);
     }
@@ -2358,6 +2454,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCyberware_Type() {
         return (EAttribute)cyberwareEClass.getEStructuralFeatures().get(3);
     }
@@ -2367,6 +2464,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCyberware_Wifi() {
         return (EReference)cyberwareEClass.getEStructuralFeatures().get(4);
     }
@@ -2376,7 +2474,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getBioWare() {
+	@Override
+    public EClass getBioWare() {
         return bioWareEClass;
     }
 
@@ -2385,7 +2484,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getBioWare_Persona() {
+	@Override
+    public EReference getBioWare_Persona() {
         return (EReference)bioWareEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2394,7 +2494,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getKoerpermods() {
+	@Override
+    public EClass getKoerpermods() {
         return koerpermodsEClass;
     }
 
@@ -2403,7 +2504,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getAbstraktModifikatoren() {
+	@Override
+    public EClass getAbstraktModifikatoren() {
         return abstraktModifikatorenEClass;
     }
 
@@ -2412,7 +2514,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getGeistigeAttribute() {
+	@Override
+    public EClass getGeistigeAttribute() {
         return geistigeAttributeEClass;
     }
 
@@ -2421,7 +2524,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getGeistigeAttribute_Charisma() {
+	@Override
+    public EAttribute getGeistigeAttribute_Charisma() {
         return (EAttribute)geistigeAttributeEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2430,7 +2534,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getGeistigeAttribute_Willenskraft() {
+	@Override
+    public EAttribute getGeistigeAttribute_Willenskraft() {
         return (EAttribute)geistigeAttributeEClass.getEStructuralFeatures().get(1);
     }
 
@@ -2439,7 +2544,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getGeistigeAttribute_Intuition() {
+	@Override
+    public EAttribute getGeistigeAttribute_Intuition() {
         return (EAttribute)geistigeAttributeEClass.getEStructuralFeatures().get(2);
     }
 
@@ -2448,7 +2554,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getGeistigeAttribute_Logik() {
+	@Override
+    public EAttribute getGeistigeAttribute_Logik() {
         return (EAttribute)geistigeAttributeEClass.getEStructuralFeatures().get(3);
     }
 
@@ -2457,7 +2564,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getMudanPersona() {
+	@Override
+    public EClass getMudanPersona() {
         return mudanPersonaEClass;
     }
 
@@ -2466,7 +2574,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getKoerperPersona() {
+	@Override
+    public EClass getKoerperPersona() {
         return koerperPersonaEClass;
     }
 
@@ -2475,7 +2584,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getKoerperPersona_KoerperMods() {
+	@Override
+    public EReference getKoerperPersona_KoerperMods() {
         return (EReference)koerperPersonaEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2484,7 +2594,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getKoerperPersona_Eigenschaften() {
+	@Override
+    public EReference getKoerperPersona_Eigenschaften() {
         return (EReference)koerperPersonaEClass.getEStructuralFeatures().get(1);
     }
 
@@ -2493,6 +2604,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getKoerperPersona_ZustandKoerperlich() {
         return (EAttribute)koerperPersonaEClass.getEStructuralFeatures().get(2);
     }
@@ -2502,6 +2614,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getKoerperPersona_ZustandGeistig() {
         return (EAttribute)koerperPersonaEClass.getEStructuralFeatures().get(3);
     }
@@ -2511,7 +2624,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getMagischeMods() {
+	@Override
+    public EClass getMagischeMods() {
         return magischeModsEClass;
     }
 
@@ -2520,7 +2634,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getKiKraft() {
+	@Override
+    public EClass getKiKraft() {
         return kiKraftEClass;
     }
 
@@ -2529,7 +2644,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getKiKraft_Kraftpunkte() {
+	@Override
+    public EAttribute getKiKraft_Kraftpunkte() {
         return (EAttribute)kiKraftEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2538,7 +2654,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getMagischePersona() {
+	@Override
+    public EClass getMagischePersona() {
         return magischePersonaEClass;
     }
 
@@ -2547,7 +2664,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getMagischePersona_Mentor() {
+	@Override
+    public EReference getMagischePersona_Mentor() {
         return (EReference)magischePersonaEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2556,7 +2674,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getBaseMagischePersona() {
+	@Override
+    public EClass getBaseMagischePersona() {
         return baseMagischePersonaEClass;
     }
 
@@ -2565,7 +2684,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getBaseMagischePersona_Magie() {
+	@Override
+    public EAttribute getBaseMagischePersona_Magie() {
         return (EAttribute)baseMagischePersonaEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2574,7 +2694,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getBaseMagischePersona_Initationen() {
+	@Override
+    public EReference getBaseMagischePersona_Initationen() {
         return (EReference)baseMagischePersonaEClass.getEStructuralFeatures().get(1);
     }
 
@@ -2583,7 +2704,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getBaseMagischePersona_MagieBasis() {
+	@Override
+    public EAttribute getBaseMagischePersona_MagieBasis() {
         return (EAttribute)baseMagischePersonaEClass.getEStructuralFeatures().get(2);
     }
 
@@ -2592,6 +2714,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getBaseMagischePersona_BoundFoki() {
         return (EReference)baseMagischePersonaEClass.getEStructuralFeatures().get(3);
     }
@@ -2601,7 +2724,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getFernkampfwaffenModifikatoren() {
+	@Override
+    public EClass getFernkampfwaffenModifikatoren() {
         return fernkampfwaffenModifikatorenEClass;
     }
 
@@ -2610,7 +2734,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFernkampfwaffenModifikatoren_Smartgun() {
+	@Override
+    public EAttribute getFernkampfwaffenModifikatoren_Smartgun() {
         return (EAttribute)fernkampfwaffenModifikatorenEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2619,7 +2744,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFernkampfwaffenModifikatoren_Rueckstoss() {
+	@Override
+    public EAttribute getFernkampfwaffenModifikatoren_Rueckstoss() {
         return (EAttribute)fernkampfwaffenModifikatorenEClass.getEStructuralFeatures().get(1);
     }
 
@@ -2628,7 +2754,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFernkampfwaffenModifikatoren_LasterPointer() {
+	@Override
+    public EAttribute getFernkampfwaffenModifikatoren_LasterPointer() {
         return (EAttribute)fernkampfwaffenModifikatorenEClass.getEStructuralFeatures().get(2);
     }
 
@@ -2637,7 +2764,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFernkampfwaffenModifikatoren_Schalldaempfer() {
+	@Override
+    public EAttribute getFernkampfwaffenModifikatoren_Schalldaempfer() {
         return (EAttribute)fernkampfwaffenModifikatorenEClass.getEStructuralFeatures().get(3);
     }
 
@@ -2646,7 +2774,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFernkampfwaffenModifikatoren_Vergroesserung() {
+	@Override
+    public EAttribute getFernkampfwaffenModifikatoren_Vergroesserung() {
         return (EAttribute)fernkampfwaffenModifikatorenEClass.getEStructuralFeatures().get(4);
     }
 
@@ -2655,6 +2784,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getFernkampfwaffenModifikatoren_Sichtverbesserung() {
         return (EAttribute)fernkampfwaffenModifikatorenEClass.getEStructuralFeatures().get(5);
     }
@@ -2664,7 +2794,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getSichtverhaeltnisse() {
+	@Override
+    public EClass getSichtverhaeltnisse() {
         return sichtverhaeltnisseEClass;
     }
 
@@ -2673,7 +2804,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSichtverhaeltnisse_Restlichtverstaerkung() {
+	@Override
+    public EAttribute getSichtverhaeltnisse_Restlichtverstaerkung() {
         return (EAttribute)sichtverhaeltnisseEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2682,7 +2814,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSichtverhaeltnisse_Infrarot() {
+	@Override
+    public EAttribute getSichtverhaeltnisse_Infrarot() {
         return (EAttribute)sichtverhaeltnisseEClass.getEStructuralFeatures().get(1);
     }
 
@@ -2691,7 +2824,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSichtverhaeltnisse_Ultrasound() {
+	@Override
+    public EAttribute getSichtverhaeltnisse_Ultrasound() {
         return (EAttribute)sichtverhaeltnisseEClass.getEStructuralFeatures().get(2);
     }
 
@@ -2700,7 +2834,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getSpezies() {
+	@Override
+    public EClass getSpezies() {
         return speziesEClass;
     }
 
@@ -2709,7 +2844,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_KonstitutionMin() {
+	@Override
+    public EAttribute getSpezies_KonstitutionMin() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2718,7 +2854,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_GeschicklichkeitMin() {
+	@Override
+    public EAttribute getSpezies_GeschicklichkeitMin() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(1);
     }
 
@@ -2727,7 +2864,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_ReaktionMin() {
+	@Override
+    public EAttribute getSpezies_ReaktionMin() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(2);
     }
 
@@ -2736,7 +2874,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_StaerkeMin() {
+	@Override
+    public EAttribute getSpezies_StaerkeMin() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(3);
     }
 
@@ -2745,7 +2884,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_CharismaMin() {
+	@Override
+    public EAttribute getSpezies_CharismaMin() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(4);
     }
 
@@ -2754,7 +2894,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_WillenskraftMin() {
+	@Override
+    public EAttribute getSpezies_WillenskraftMin() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(5);
     }
 
@@ -2763,7 +2904,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_IntuitionMin() {
+	@Override
+    public EAttribute getSpezies_IntuitionMin() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(6);
     }
 
@@ -2772,7 +2914,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_LogikMin() {
+	@Override
+    public EAttribute getSpezies_LogikMin() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(7);
     }
 
@@ -2781,7 +2924,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_EdgeMin() {
+	@Override
+    public EAttribute getSpezies_EdgeMin() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(8);
     }
 
@@ -2790,7 +2934,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_MagieMin() {
+	@Override
+    public EAttribute getSpezies_MagieMin() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(9);
     }
 
@@ -2799,7 +2944,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_ResonanzMin() {
+	@Override
+    public EAttribute getSpezies_ResonanzMin() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(10);
     }
 
@@ -2808,7 +2954,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_EssenzMin() {
+	@Override
+    public EAttribute getSpezies_EssenzMin() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(11);
     }
 
@@ -2817,7 +2964,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_KonstitutionMax() {
+	@Override
+    public EAttribute getSpezies_KonstitutionMax() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(12);
     }
 
@@ -2826,7 +2974,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_GeschicklichkeitMax() {
+	@Override
+    public EAttribute getSpezies_GeschicklichkeitMax() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(13);
     }
 
@@ -2835,7 +2984,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_ReaktionMax() {
+	@Override
+    public EAttribute getSpezies_ReaktionMax() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(14);
     }
 
@@ -2844,7 +2994,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_StaerkeMax() {
+	@Override
+    public EAttribute getSpezies_StaerkeMax() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(15);
     }
 
@@ -2853,7 +3004,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_CharismaMax() {
+	@Override
+    public EAttribute getSpezies_CharismaMax() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(16);
     }
 
@@ -2862,7 +3014,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_WillenskraftMax() {
+	@Override
+    public EAttribute getSpezies_WillenskraftMax() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(17);
     }
 
@@ -2871,7 +3024,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_IntuitionMax() {
+	@Override
+    public EAttribute getSpezies_IntuitionMax() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(18);
     }
 
@@ -2880,7 +3034,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_LogikMax() {
+	@Override
+    public EAttribute getSpezies_LogikMax() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(19);
     }
 
@@ -2889,7 +3044,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_EdgeMax() {
+	@Override
+    public EAttribute getSpezies_EdgeMax() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(20);
     }
 
@@ -2898,7 +3054,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_MagieMax() {
+	@Override
+    public EAttribute getSpezies_MagieMax() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(21);
     }
 
@@ -2907,7 +3064,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_ResonanzMax() {
+	@Override
+    public EAttribute getSpezies_ResonanzMax() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(22);
     }
 
@@ -2916,7 +3074,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_EssenzMax() {
+	@Override
+    public EAttribute getSpezies_EssenzMax() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(23);
     }
 
@@ -2925,7 +3084,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_Laufen() {
+	@Override
+    public EAttribute getSpezies_Laufen() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(24);
     }
 
@@ -2934,7 +3094,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_Rennen() {
+	@Override
+    public EAttribute getSpezies_Rennen() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(25);
     }
 
@@ -2943,7 +3104,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSpezies_Sprinten() {
+	@Override
+    public EAttribute getSpezies_Sprinten() {
         return (EAttribute)speziesEClass.getEStructuralFeatures().get(26);
     }
 
@@ -2952,6 +3114,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSpezies_Angriff() {
         return (EReference)speziesEClass.getEStructuralFeatures().get(27);
     }
@@ -2961,7 +3124,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getGegenstandStufen() {
+	@Override
+    public EClass getGegenstandStufen() {
         return gegenstandStufenEClass;
     }
 
@@ -2970,7 +3134,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getGegenstandStufen_Computer() {
+	@Override
+    public EAttribute getGegenstandStufen_Computer() {
         return (EAttribute)gegenstandStufenEClass.getEStructuralFeatures().get(0);
     }
 
@@ -2979,7 +3144,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getGegenstandStufen_Elektronik() {
+	@Override
+    public EAttribute getGegenstandStufen_Elektronik() {
         return (EAttribute)gegenstandStufenEClass.getEStructuralFeatures().get(1);
     }
 
@@ -2988,7 +3154,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getGegenstandStufen_Tracing() {
+	@Override
+    public EAttribute getGegenstandStufen_Tracing() {
         return (EAttribute)gegenstandStufenEClass.getEStructuralFeatures().get(2);
     }
 
@@ -2997,7 +3164,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getGegenstandStufen_AntiTracing() {
+	@Override
+    public EAttribute getGegenstandStufen_AntiTracing() {
         return (EAttribute)gegenstandStufenEClass.getEStructuralFeatures().get(3);
     }
 
@@ -3006,7 +3174,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getGegenstandStufen_Protection() {
+	@Override
+    public EAttribute getGegenstandStufen_Protection() {
         return (EAttribute)gegenstandStufenEClass.getEStructuralFeatures().get(4);
     }
 
@@ -3015,7 +3184,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getGegenstandStufen_AntiProtection() {
+	@Override
+    public EAttribute getGegenstandStufen_AntiProtection() {
         return (EAttribute)gegenstandStufenEClass.getEStructuralFeatures().get(5);
     }
 
@@ -3024,7 +3194,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getKiAdept() {
+	@Override
+    public EClass getKiAdept() {
         return kiAdeptEClass;
     }
 
@@ -3033,7 +3204,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getKiAdept_Kikraft() {
+	@Override
+    public EReference getKiAdept_Kikraft() {
         return (EReference)kiAdeptEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3042,7 +3214,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getKleidung() {
+	@Override
+    public EClass getKleidung() {
         return kleidungEClass;
     }
 
@@ -3051,7 +3224,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getKleidung_Ruestung() {
+	@Override
+    public EAttribute getKleidung_Ruestung() {
         return (EAttribute)kleidungEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3060,6 +3234,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getKleidung_Kmods() {
         return (EReference)kleidungEClass.getEStructuralFeatures().get(1);
     }
@@ -3069,7 +3244,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getFernkampfwaffeModifikator() {
+	@Override
+    public EClass getFernkampfwaffeModifikator() {
         return fernkampfwaffeModifikatorEClass;
     }
 
@@ -3078,7 +3254,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFernkampfwaffeModifikator_Ep() {
+	@Override
+    public EAttribute getFernkampfwaffeModifikator_Ep() {
         return (EAttribute)fernkampfwaffeModifikatorEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3087,7 +3264,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getAnwendbar() {
+	@Override
+    public EClass getAnwendbar() {
         return anwendbarEClass;
     }
 
@@ -3096,7 +3274,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getAnwendbar_Fertigkeit() {
+	@Override
+    public EReference getAnwendbar_Fertigkeit() {
         return (EReference)anwendbarEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3105,6 +3284,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getAnwendbar_Spezialisierung() {
         return (EReference)anwendbarEClass.getEStructuralFeatures().get(1);
     }
@@ -3114,7 +3294,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getPersonaEigenschaft() {
+	@Override
+    public EClass getPersonaEigenschaft() {
         return personaEigenschaftEClass;
     }
 
@@ -3123,7 +3304,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getPersonaEigenschaft_KarmaKosten() {
+	@Override
+    public EAttribute getPersonaEigenschaft_KarmaKosten() {
         return (EAttribute)personaEigenschaftEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3132,7 +3314,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getProbenModifikatoren() {
+	@Override
+    public EClass getProbenModifikatoren() {
         return probenModifikatorenEClass;
     }
 
@@ -3141,7 +3324,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getProbenModifikatoren_Schadenswiederstand() {
+	@Override
+    public EAttribute getProbenModifikatoren_Schadenswiederstand() {
         return (EAttribute)probenModifikatorenEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3150,7 +3334,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getProbenModifikatoren_Heilung() {
+	@Override
+    public EAttribute getProbenModifikatoren_Heilung() {
         return (EAttribute)probenModifikatorenEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3159,7 +3344,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getMagier() {
+	@Override
+    public EClass getMagier() {
         return magierEClass;
     }
 
@@ -3168,7 +3354,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getZauberer() {
+	@Override
+    public EClass getZauberer() {
         return zaubererEClass;
     }
 
@@ -3177,7 +3364,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getZauberer_Zauber() {
+	@Override
+    public EReference getZauberer_Zauber() {
         return (EReference)zaubererEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3186,7 +3374,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getZauberer_Enzug() {
+	@Override
+    public EAttribute getZauberer_Enzug() {
         return (EAttribute)zaubererEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3195,7 +3384,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getZauberer_Tradition() {
+	@Override
+    public EReference getZauberer_Tradition() {
         return (EReference)zaubererEClass.getEStructuralFeatures().get(4);
     }
 
@@ -3204,6 +3394,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getZauberer_GebundeneGeister() {
         return (EReference)zaubererEClass.getEStructuralFeatures().get(2);
     }
@@ -3213,6 +3404,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getZauberer_UngebundenerGeist() {
         return (EReference)zaubererEClass.getEStructuralFeatures().get(3);
     }
@@ -3222,7 +3414,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getMysticAdept() {
+	@Override
+    public EClass getMysticAdept() {
         return mysticAdeptEClass;
     }
 
@@ -3231,7 +3424,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getPersonaZauber() {
+	@Override
+    public EClass getPersonaZauber() {
         return personaZauberEClass;
     }
 
@@ -3240,7 +3434,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getPersonaZauber_Stufe() {
+	@Override
+    public EAttribute getPersonaZauber_Stufe() {
         return (EAttribute)personaZauberEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3249,7 +3444,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getPersonaZauber_Formel() {
+	@Override
+    public EReference getPersonaZauber_Formel() {
         return (EReference)personaZauberEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3258,7 +3454,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getZauber() {
+	@Override
+    public EClass getZauber() {
         return zauberEClass;
     }
 
@@ -3267,7 +3464,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getZauber_Art() {
+	@Override
+    public EAttribute getZauber_Art() {
         return (EAttribute)zauberEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3276,7 +3474,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getZauber_Reichweite() {
+	@Override
+    public EAttribute getZauber_Reichweite() {
         return (EAttribute)zauberEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3285,7 +3484,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getZauber_Schaden() {
+	@Override
+    public EAttribute getZauber_Schaden() {
         return (EAttribute)zauberEClass.getEStructuralFeatures().get(2);
     }
 
@@ -3294,7 +3494,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getZauber_Dauer() {
+	@Override
+    public EAttribute getZauber_Dauer() {
         return (EAttribute)zauberEClass.getEStructuralFeatures().get(3);
     }
 
@@ -3303,7 +3504,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getZauber_Entzug() {
+	@Override
+    public EAttribute getZauber_Entzug() {
         return (EAttribute)zauberEClass.getEStructuralFeatures().get(4);
     }
 
@@ -3312,7 +3514,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getZauber_Kategorie() {
+	@Override
+    public EAttribute getZauber_Kategorie() {
         return (EAttribute)zauberEClass.getEStructuralFeatures().get(5);
     }
 
@@ -3321,7 +3524,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getZauber_Merkmale() {
+	@Override
+    public EAttribute getZauber_Merkmale() {
         return (EAttribute)zauberEClass.getEStructuralFeatures().get(6);
     }
 
@@ -3330,7 +3534,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getChrakterLimits() {
+	@Override
+    public EClass getChrakterLimits() {
         return chrakterLimitsEClass;
     }
 
@@ -3339,7 +3544,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getChrakterLimits_Koerperlich() {
+	@Override
+    public EAttribute getChrakterLimits_Koerperlich() {
         return (EAttribute)chrakterLimitsEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3348,7 +3554,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getChrakterLimits_Geistig() {
+	@Override
+    public EAttribute getChrakterLimits_Geistig() {
         return (EAttribute)chrakterLimitsEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3357,7 +3564,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getChrakterLimits_Sozial() {
+	@Override
+    public EAttribute getChrakterLimits_Sozial() {
         return (EAttribute)chrakterLimitsEClass.getEStructuralFeatures().get(2);
     }
 
@@ -3366,7 +3574,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getPanzerung() {
+	@Override
+    public EClass getPanzerung() {
         return panzerungEClass;
     }
 
@@ -3375,7 +3584,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getPanzerung_Panzer() {
+	@Override
+    public EAttribute getPanzerung_Panzer() {
         return (EAttribute)panzerungEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3384,7 +3594,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getAspektMagier() {
+	@Override
+    public EClass getAspektMagier() {
         return aspektMagierEClass;
     }
 
@@ -3393,7 +3604,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getAspektMagier_Aspekt() {
+	@Override
+    public EReference getAspektMagier_Aspekt() {
         return (EReference)aspektMagierEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3402,7 +3614,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getAstraleProjektion() {
+	@Override
+    public EClass getAstraleProjektion() {
         return astraleProjektionEClass;
     }
 
@@ -3411,7 +3624,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAstraleProjektion_AstralesLimit() {
+	@Override
+    public EAttribute getAstraleProjektion_AstralesLimit() {
         return (EAttribute)astraleProjektionEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3420,7 +3634,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAstraleProjektion_AstraleKonstitution() {
+	@Override
+    public EAttribute getAstraleProjektion_AstraleKonstitution() {
         return (EAttribute)astraleProjektionEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3429,7 +3644,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAstraleProjektion_AstraleGeschicklichkeit() {
+	@Override
+    public EAttribute getAstraleProjektion_AstraleGeschicklichkeit() {
         return (EAttribute)astraleProjektionEClass.getEStructuralFeatures().get(2);
     }
 
@@ -3438,7 +3654,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAstraleProjektion_AstraleReaktion() {
+	@Override
+    public EAttribute getAstraleProjektion_AstraleReaktion() {
         return (EAttribute)astraleProjektionEClass.getEStructuralFeatures().get(3);
     }
 
@@ -3447,7 +3664,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAstraleProjektion_AstraleStaerke() {
+	@Override
+    public EAttribute getAstraleProjektion_AstraleStaerke() {
         return (EAttribute)astraleProjektionEClass.getEStructuralFeatures().get(4);
     }
 
@@ -3456,7 +3674,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAstraleProjektion_AstraleInitative() {
+	@Override
+    public EAttribute getAstraleProjektion_AstraleInitative() {
         return (EAttribute)astraleProjektionEClass.getEStructuralFeatures().get(5);
     }
 
@@ -3465,7 +3684,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAstraleProjektion_AstraleInitativWuerfel() {
+	@Override
+    public EAttribute getAstraleProjektion_AstraleInitativWuerfel() {
         return (EAttribute)astraleProjektionEClass.getEStructuralFeatures().get(6);
     }
 
@@ -3474,7 +3694,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getAstraleProjektion_AstralePanzerung() {
+	@Override
+    public EAttribute getAstraleProjektion_AstralePanzerung() {
         return (EAttribute)astraleProjektionEClass.getEStructuralFeatures().get(7);
     }
 
@@ -3483,7 +3704,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getSchutzgeist() {
+	@Override
+    public EClass getSchutzgeist() {
         return schutzgeistEClass;
     }
 
@@ -3492,7 +3714,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSchutzgeist_Vorteile() {
+	@Override
+    public EAttribute getSchutzgeist_Vorteile() {
         return (EAttribute)schutzgeistEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3501,7 +3724,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSchutzgeist_Nachteile() {
+	@Override
+    public EAttribute getSchutzgeist_Nachteile() {
         return (EAttribute)schutzgeistEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3510,7 +3734,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getInitation() {
+	@Override
+    public EClass getInitation() {
         return initationEClass;
     }
 
@@ -3519,7 +3744,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getInitation_Erlernt() {
+	@Override
+    public EReference getInitation_Erlernt() {
         return (EReference)initationEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3528,7 +3754,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getMetaMagie() {
+	@Override
+    public EClass getMetaMagie() {
         return metaMagieEClass;
     }
 
@@ -3537,7 +3764,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getCritterKraft() {
+	@Override
+    public EClass getCritterKraft() {
         return critterKraftEClass;
     }
 
@@ -3546,7 +3774,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getCritterKraft_Art() {
+	@Override
+    public EAttribute getCritterKraft_Art() {
         return (EAttribute)critterKraftEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3555,7 +3784,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getCritterKraft_Handlung() {
+	@Override
+    public EAttribute getCritterKraft_Handlung() {
         return (EAttribute)critterKraftEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3564,7 +3794,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getCritterKraft_Reichweite() {
+	@Override
+    public EAttribute getCritterKraft_Reichweite() {
         return (EAttribute)critterKraftEClass.getEStructuralFeatures().get(2);
     }
 
@@ -3573,7 +3804,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getCritterKraft_Dauer() {
+	@Override
+    public EAttribute getCritterKraft_Dauer() {
         return (EAttribute)critterKraftEClass.getEStructuralFeatures().get(3);
     }
 
@@ -3582,7 +3814,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getFahrzeug() {
+	@Override
+    public EClass getFahrzeug() {
         return fahrzeugEClass;
     }
 
@@ -3591,7 +3824,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFahrzeug_Handling() {
+	@Override
+    public EAttribute getFahrzeug_Handling() {
         return (EAttribute)fahrzeugEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3600,7 +3834,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFahrzeug_Geschwindigkeit() {
+	@Override
+    public EAttribute getFahrzeug_Geschwindigkeit() {
         return (EAttribute)fahrzeugEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3609,7 +3844,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFahrzeug_Beschleunigung() {
+	@Override
+    public EAttribute getFahrzeug_Beschleunigung() {
         return (EAttribute)fahrzeugEClass.getEStructuralFeatures().get(2);
     }
 
@@ -3618,7 +3854,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFahrzeug_Rumpf() {
+	@Override
+    public EAttribute getFahrzeug_Rumpf() {
         return (EAttribute)fahrzeugEClass.getEStructuralFeatures().get(3);
     }
 
@@ -3627,7 +3864,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFahrzeug_Pilot() {
+	@Override
+    public EAttribute getFahrzeug_Pilot() {
         return (EAttribute)fahrzeugEClass.getEStructuralFeatures().get(4);
     }
 
@@ -3636,7 +3874,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFahrzeug_Sensor() {
+	@Override
+    public EAttribute getFahrzeug_Sensor() {
         return (EAttribute)fahrzeugEClass.getEStructuralFeatures().get(5);
     }
 
@@ -3645,7 +3884,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getFahrzeug_FahrzeugTyp() {
+	@Override
+    public EAttribute getFahrzeug_FahrzeugTyp() {
         return (EAttribute)fahrzeugEClass.getEStructuralFeatures().get(6);
     }
 
@@ -3654,7 +3894,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getFahrzeug_Modifizierungen() {
+	@Override
+    public EReference getFahrzeug_Modifizierungen() {
         return (EReference)fahrzeugEClass.getEStructuralFeatures().get(7);
     }
 
@@ -3663,6 +3904,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getFahrzeug_Panzer() {
         return (EAttribute)fahrzeugEClass.getEStructuralFeatures().get(8);
     }
@@ -3672,6 +3914,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getFahrzeug_WeaponMounts() {
         return (EAttribute)fahrzeugEClass.getEStructuralFeatures().get(9);
     }
@@ -3681,6 +3924,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getFahrzeug_SensorArray() {
         return (EReference)fahrzeugEClass.getEStructuralFeatures().get(10);
     }
@@ -3690,7 +3934,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getBodenfahrzeug() {
+	@Override
+    public EClass getBodenfahrzeug() {
         return bodenfahrzeugEClass;
     }
 
@@ -3699,7 +3944,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getBodenfahrzeug_HandlingGelaende() {
+	@Override
+    public EAttribute getBodenfahrzeug_HandlingGelaende() {
         return (EAttribute)bodenfahrzeugEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3708,6 +3954,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getBodenfahrzeug_GeschwindigkeitGelaende() {
         return (EAttribute)bodenfahrzeugEClass.getEStructuralFeatures().get(1);
     }
@@ -3717,7 +3964,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getPassagierFahrzeug() {
+	@Override
+    public EClass getPassagierFahrzeug() {
         return passagierFahrzeugEClass;
     }
 
@@ -3726,7 +3974,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getPassagierFahrzeug_Sitze() {
+	@Override
+    public EAttribute getPassagierFahrzeug_Sitze() {
         return (EAttribute)passagierFahrzeugEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3735,7 +3984,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getDrohne() {
+	@Override
+    public EClass getDrohne() {
         return drohneEClass;
     }
 
@@ -3744,6 +3994,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getDrohne_ProgramSlotCount() {
         return (EAttribute)drohneEClass.getEStructuralFeatures().get(0);
     }
@@ -3753,6 +4004,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getDrohne_RunningPrograms() {
         return (EReference)drohneEClass.getEStructuralFeatures().get(1);
     }
@@ -3762,6 +4014,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getDrohne_StoredPrograms() {
         return (EReference)drohneEClass.getEStructuralFeatures().get(2);
     }
@@ -3771,7 +4024,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getFahrzeugModifikation() {
+	@Override
+    public EClass getFahrzeugModifikation() {
         return fahrzeugModifikationEClass;
     }
 
@@ -3780,6 +4034,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getFahrzeugModifikation_CapacityUsed() {
         return (EAttribute)fahrzeugModifikationEClass.getEStructuralFeatures().get(0);
     }
@@ -3789,7 +4044,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getTechnomancer() {
+	@Override
+    public EClass getTechnomancer() {
         return technomancerEClass;
     }
 
@@ -3798,7 +4054,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getTechnomancer_ComplexForms() {
+	@Override
+    public EReference getTechnomancer_ComplexForms() {
         return (EReference)technomancerEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3807,7 +4064,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getTechnomancer_Echos() {
+	@Override
+    public EReference getTechnomancer_Echos() {
         return (EReference)technomancerEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3816,7 +4074,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getResonanzPersona() {
+	@Override
+    public EClass getResonanzPersona() {
         return resonanzPersonaEClass;
     }
 
@@ -3825,7 +4084,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getResonanzPersona_Resonanz() {
+	@Override
+    public EAttribute getResonanzPersona_Resonanz() {
         return (EAttribute)resonanzPersonaEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3834,7 +4094,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getResonanzPersona_ResonanzBasis() {
+	@Override
+    public EAttribute getResonanzPersona_ResonanzBasis() {
         return (EAttribute)resonanzPersonaEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3843,7 +4104,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getKomplexeForm() {
+	@Override
+    public EClass getKomplexeForm() {
         return komplexeFormEClass;
     }
 
@@ -3852,7 +4114,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getKomplexeForm_Ziel() {
+	@Override
+    public EAttribute getKomplexeForm_Ziel() {
         return (EAttribute)komplexeFormEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3861,7 +4124,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getKomplexeForm_Dauer() {
+	@Override
+    public EAttribute getKomplexeForm_Dauer() {
         return (EAttribute)komplexeFormEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3870,7 +4134,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getKomplexeForm_Schwund() {
+	@Override
+    public EAttribute getKomplexeForm_Schwund() {
         return (EAttribute)komplexeFormEClass.getEStructuralFeatures().get(2);
     }
 
@@ -3879,7 +4144,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getPersonaKomplexForm() {
+	@Override
+    public EClass getPersonaKomplexForm() {
         return personaKomplexFormEClass;
     }
 
@@ -3888,7 +4154,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EReference getPersonaKomplexForm_Form() {
+	@Override
+    public EReference getPersonaKomplexForm_Form() {
         return (EReference)personaKomplexFormEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3897,7 +4164,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getPersonaKomplexForm_Stufe() {
+	@Override
+    public EAttribute getPersonaKomplexForm_Stufe() {
         return (EAttribute)personaKomplexFormEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3906,7 +4174,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getSprite() {
+	@Override
+    public EClass getSprite() {
         return spriteEClass;
     }
 
@@ -3915,7 +4184,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSprite_Stufe() {
+	@Override
+    public EAttribute getSprite_Stufe() {
         return (EAttribute)spriteEClass.getEStructuralFeatures().get(0);
     }
 
@@ -3924,7 +4194,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSprite_AngriffMod() {
+	@Override
+    public EAttribute getSprite_AngriffMod() {
         return (EAttribute)spriteEClass.getEStructuralFeatures().get(1);
     }
 
@@ -3933,7 +4204,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSprite_SchleicherMod() {
+	@Override
+    public EAttribute getSprite_SchleicherMod() {
         return (EAttribute)spriteEClass.getEStructuralFeatures().get(2);
     }
 
@@ -3942,7 +4214,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSprite_DatenverarbeitungMod() {
+	@Override
+    public EAttribute getSprite_DatenverarbeitungMod() {
         return (EAttribute)spriteEClass.getEStructuralFeatures().get(3);
     }
 
@@ -3951,7 +4224,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSprite_FirewallMod() {
+	@Override
+    public EAttribute getSprite_FirewallMod() {
         return (EAttribute)spriteEClass.getEStructuralFeatures().get(4);
     }
 
@@ -3960,7 +4234,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EAttribute getSprite_InitativeMod() {
+	@Override
+    public EAttribute getSprite_InitativeMod() {
         return (EAttribute)spriteEClass.getEStructuralFeatures().get(5);
     }
 
@@ -3969,7 +4244,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getEcho() {
+	@Override
+    public EClass getEcho() {
         return echoEClass;
     }
 
@@ -3978,7 +4254,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getVertrag() {
+	@Override
+    public EClass getVertrag() {
         return vertragEClass;
     }
 
@@ -3987,7 +4264,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getLifestyle() {
+	@Override
+    public EClass getLifestyle() {
         return lifestyleEClass;
     }
 
@@ -3996,6 +4274,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getLifestyle_Options() {
         return (EReference)lifestyleEClass.getEStructuralFeatures().get(0);
     }
@@ -4005,6 +4284,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getLifestyle_Owned() {
         return (EAttribute)lifestyleEClass.getEStructuralFeatures().get(1);
     }
@@ -4014,7 +4294,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getWissensfertigkeit() {
+	@Override
+    public EClass getWissensfertigkeit() {
         return wissensfertigkeitEClass;
     }
 
@@ -4023,7 +4304,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getSprachfertigkeit() {
+	@Override
+    public EClass getSprachfertigkeit() {
         return sprachfertigkeitEClass;
     }
 
@@ -4032,6 +4314,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getPersonaZustand() {
         return personaZustandEClass;
     }
@@ -4041,6 +4324,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getPersonaZustand_ZustandKoerperlichMax() {
         return (EAttribute)personaZustandEClass.getEStructuralFeatures().get(0);
     }
@@ -4050,6 +4334,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getPersonaZustand_ZustandGeistigMax() {
         return (EAttribute)personaZustandEClass.getEStructuralFeatures().get(1);
     }
@@ -4059,6 +4344,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getPersonaZustand_ZustandGrenze() {
         return (EAttribute)personaZustandEClass.getEStructuralFeatures().get(2);
     }
@@ -4068,6 +4354,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getCritter() {
         return critterEClass;
     }
@@ -4077,6 +4364,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCritter_Powers() {
         return (EReference)critterEClass.getEStructuralFeatures().get(0);
     }
@@ -4086,6 +4374,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getIntervallVertrag() {
         return intervallVertragEClass;
     }
@@ -4095,6 +4384,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getIntervallVertrag_FaelligkeitsIntervall() {
         return (EAttribute)intervallVertragEClass.getEStructuralFeatures().get(0);
     }
@@ -4104,6 +4394,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getIntervallVertrag_Unit() {
         return (EAttribute)intervallVertragEClass.getEStructuralFeatures().get(1);
     }
@@ -4113,6 +4404,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getIntervallVertrag_Begin() {
         return (EAttribute)intervallVertragEClass.getEStructuralFeatures().get(2);
     }
@@ -4122,6 +4414,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSin() {
         return sinEClass;
     }
@@ -4131,6 +4424,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSin_Licences() {
         return (EReference)sinEClass.getEStructuralFeatures().get(0);
     }
@@ -4140,6 +4434,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getLizenz() {
         return lizenzEClass;
     }
@@ -4149,6 +4444,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getLizenz_LizenGegenstand() {
         return (EAttribute)lizenzEClass.getEStructuralFeatures().get(0);
     }
@@ -4158,6 +4454,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getLizenz_LizenzTraeger() {
         return (EReference)lizenzEClass.getEStructuralFeatures().get(1);
     }
@@ -4167,6 +4464,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getFakeable() {
         return fakeableEClass;
     }
@@ -4176,6 +4474,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getFakeable_Stufe() {
         return (EAttribute)fakeableEClass.getEStructuralFeatures().get(0);
     }
@@ -4185,6 +4484,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getFakeable_Gefaelscht() {
         return (EAttribute)fakeableEClass.getEStructuralFeatures().get(1);
     }
@@ -4194,6 +4494,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSteigerbar() {
         return steigerbarEClass;
     }
@@ -4203,6 +4504,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSteigerbar_Stufe() {
         return (EAttribute)steigerbarEClass.getEStructuralFeatures().get(0);
     }
@@ -4212,6 +4514,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getErlernbar() {
         return erlernbarEClass;
     }
@@ -4221,6 +4524,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getCredstick() {
         return credstickEClass;
     }
@@ -4230,6 +4534,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCredstick_MaxValue() {
         return (EAttribute)credstickEClass.getEStructuralFeatures().get(0);
     }
@@ -4239,6 +4544,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCredstick_Transactionlog() {
         return (EReference)credstickEClass.getEStructuralFeatures().get(1);
     }
@@ -4248,6 +4554,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCredstick_CurrentValue() {
         return (EAttribute)credstickEClass.getEStructuralFeatures().get(2);
     }
@@ -4257,6 +4564,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getMenge() {
         return mengeEClass;
     }
@@ -4266,6 +4574,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getMenge_Anzahl() {
         return (EAttribute)mengeEClass.getEStructuralFeatures().get(0);
     }
@@ -4275,6 +4584,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getMenge_ProAnzahl() {
         return (EAttribute)mengeEClass.getEStructuralFeatures().get(1);
     }
@@ -4284,6 +4594,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getMunition() {
         return munitionEClass;
     }
@@ -4293,6 +4604,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getMunition_DamageType() {
         return (EAttribute)munitionEClass.getEStructuralFeatures().get(0);
     }
@@ -4302,6 +4614,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getMunition_DamageMod() {
         return (EAttribute)munitionEClass.getEStructuralFeatures().get(1);
     }
@@ -4311,6 +4624,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getMunition_ArmorMod() {
         return (EAttribute)munitionEClass.getEStructuralFeatures().get(2);
     }
@@ -4320,6 +4634,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getMunition_Type() {
         return (EReference)munitionEClass.getEStructuralFeatures().get(3);
     }
@@ -4329,6 +4644,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getModifikatorAttribute() {
         return modifikatorAttributeEClass;
     }
@@ -4338,6 +4654,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getGebundenerGeist() {
         return gebundenerGeistEClass;
     }
@@ -4347,6 +4664,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getGebundenerGeist_Dienste() {
         return (EAttribute)gebundenerGeistEClass.getEStructuralFeatures().get(0);
     }
@@ -4356,6 +4674,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getGebundenerGeist_Geist() {
         return (EReference)gebundenerGeistEClass.getEStructuralFeatures().get(1);
     }
@@ -4365,6 +4684,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getStufenPersona() {
         return stufenPersonaEClass;
     }
@@ -4374,6 +4694,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getStufenPersona_Stufe() {
         return (EAttribute)stufenPersonaEClass.getEStructuralFeatures().get(0);
     }
@@ -4383,6 +4704,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getStufenPersona_SkillGroups() {
         return (EReference)stufenPersonaEClass.getEStructuralFeatures().get(1);
     }
@@ -4392,6 +4714,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getStufenPersona_Skills() {
         return (EReference)stufenPersonaEClass.getEStructuralFeatures().get(2);
     }
@@ -4401,6 +4724,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getGeist() {
         return geistEClass;
     }
@@ -4410,6 +4734,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getGeist_KonstitutionBasis() {
         return (EAttribute)geistEClass.getEStructuralFeatures().get(0);
     }
@@ -4419,6 +4744,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getGeist_GeschicklichkeitBasis() {
         return (EAttribute)geistEClass.getEStructuralFeatures().get(1);
     }
@@ -4428,6 +4754,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getGeist_ReaktionBasis() {
         return (EAttribute)geistEClass.getEStructuralFeatures().get(2);
     }
@@ -4437,6 +4764,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getGeist_StaerkeBasis() {
         return (EAttribute)geistEClass.getEStructuralFeatures().get(3);
     }
@@ -4446,6 +4774,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getGeist_CharismaBasis() {
         return (EAttribute)geistEClass.getEStructuralFeatures().get(4);
     }
@@ -4455,6 +4784,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getGeist_WillenskraftBasis() {
         return (EAttribute)geistEClass.getEStructuralFeatures().get(5);
     }
@@ -4464,6 +4794,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getGeist_IntuitionBasis() {
         return (EAttribute)geistEClass.getEStructuralFeatures().get(6);
     }
@@ -4473,6 +4804,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getGeist_LogikBasis() {
         return (EAttribute)geistEClass.getEStructuralFeatures().get(7);
     }
@@ -4482,6 +4814,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getGeist_Powers() {
         return (EReference)geistEClass.getEStructuralFeatures().get(8);
     }
@@ -4491,6 +4824,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getGeist_OptionalPowers() {
         return (EReference)geistEClass.getEStructuralFeatures().get(9);
     }
@@ -4500,6 +4834,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getIdentifiable() {
         return identifiableEClass;
     }
@@ -4509,6 +4844,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getIdentifiable_ParentId() {
         return (EAttribute)identifiableEClass.getEStructuralFeatures().get(0);
     }
@@ -4518,6 +4854,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getIdentifiable_Localizations() {
         return (EReference)identifiableEClass.getEStructuralFeatures().get(1);
     }
@@ -4527,6 +4864,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getCredstickTransaction() {
         return credstickTransactionEClass;
     }
@@ -4536,6 +4874,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCredstickTransaction_Amount() {
         return (EAttribute)credstickTransactionEClass.getEStructuralFeatures().get(0);
     }
@@ -4545,6 +4884,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCredstickTransaction_Date() {
         return (EAttribute)credstickTransactionEClass.getEStructuralFeatures().get(1);
     }
@@ -4554,6 +4894,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCredstickTransaction_Description() {
         return (EAttribute)credstickTransactionEClass.getEStructuralFeatures().get(2);
     }
@@ -4563,6 +4904,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSpezialisierung() {
         return spezialisierungEClass;
     }
@@ -4572,6 +4914,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSpezialisierung_Fertigkeit() {
         return (EReference)spezialisierungEClass.getEStructuralFeatures().get(0);
     }
@@ -4581,6 +4924,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getMatrixAttributes() {
         return matrixAttributesEClass;
     }
@@ -4590,6 +4934,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getMatrixAttributes_Geraetestufe() {
         return (EAttribute)matrixAttributesEClass.getEStructuralFeatures().get(0);
     }
@@ -4599,6 +4944,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getMatrixAttributes_Firewall() {
         return (EAttribute)matrixAttributesEClass.getEStructuralFeatures().get(1);
     }
@@ -4608,6 +4954,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getMatrixAttributes_Datenverarbeitung() {
         return (EAttribute)matrixAttributesEClass.getEStructuralFeatures().get(2);
     }
@@ -4617,6 +4964,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getMatrixAttributes_CurrentModus() {
         return (EAttribute)matrixAttributesEClass.getEStructuralFeatures().get(3);
     }
@@ -4626,6 +4974,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getMatrixDevice() {
         return matrixDeviceEClass;
     }
@@ -4635,6 +4984,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getMatrixDevice_Pan() {
         return (EReference)matrixDeviceEClass.getEStructuralFeatures().get(0);
     }
@@ -4644,6 +4994,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getCommonProgram() {
         return commonProgramEClass;
     }
@@ -4653,6 +5004,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCommonProgram_ProgramType() {
         return (EAttribute)commonProgramEClass.getEStructuralFeatures().get(0);
     }
@@ -4662,6 +5014,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getWeaponMount() {
         return weaponMountEClass;
     }
@@ -4671,6 +5024,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getWeaponMount_Weapon() {
         return (EReference)weaponMountEClass.getEStructuralFeatures().get(0);
     }
@@ -4680,6 +5034,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getLifestyleOption() {
         return lifestyleOptionEClass;
     }
@@ -4689,6 +5044,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getPercentLifestyleOption() {
         return percentLifestyleOptionEClass;
     }
@@ -4698,6 +5054,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getLocalization() {
         return localizationEClass;
     }
@@ -4707,6 +5064,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getLocalization_Local() {
         return (EAttribute)localizationEClass.getEStructuralFeatures().get(0);
     }
@@ -4716,6 +5074,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getLocalization_Name() {
         return (EAttribute)localizationEClass.getEStructuralFeatures().get(1);
     }
@@ -4725,6 +5084,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getLocalization_Page() {
         return (EAttribute)localizationEClass.getEStructuralFeatures().get(2);
     }
@@ -4734,6 +5094,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getBerechneteAttribute() {
         return berechneteAttributeEClass;
     }
@@ -4743,6 +5104,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getBerechneteAttribute_Errinerungsvermoegen() {
         return (EAttribute)berechneteAttributeEClass.getEStructuralFeatures().get(0);
     }
@@ -4752,6 +5114,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getBerechneteAttribute_Menschenkenntnis() {
         return (EAttribute)berechneteAttributeEClass.getEStructuralFeatures().get(1);
     }
@@ -4761,6 +5124,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getBerechneteAttribute_Selbstbeherrschung() {
         return (EAttribute)berechneteAttributeEClass.getEStructuralFeatures().get(2);
     }
@@ -4770,6 +5134,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getMagischeStufe() {
         return magischeStufeEClass;
     }
@@ -4779,6 +5144,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getMagischeStufe_Stufe() {
         return (EAttribute)magischeStufeEClass.getEStructuralFeatures().get(0);
     }
@@ -4788,6 +5154,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getFokus() {
         return fokusEClass;
     }
@@ -4797,6 +5164,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getFokus_Bindungskosten() {
         return (EAttribute)fokusEClass.getEStructuralFeatures().get(0);
     }
@@ -4806,6 +5174,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getAbstraktFokus() {
         return abstraktFokusEClass;
     }
@@ -4815,6 +5184,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getQiFokus() {
         return qiFokusEClass;
     }
@@ -4824,6 +5194,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getQiFokus_Power() {
         return (EReference)qiFokusEClass.getEStructuralFeatures().get(0);
     }
@@ -4833,6 +5204,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getWaffenFokus() {
         return waffenFokusEClass;
     }
@@ -4842,6 +5214,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getMagieFokus() {
         return magieFokusEClass;
     }
@@ -4851,6 +5224,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getMagieFokus_BindungsFaktor() {
         return (EAttribute)magieFokusEClass.getEStructuralFeatures().get(0);
     }
@@ -4860,6 +5234,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getFokusBinding() {
         return fokusBindingEClass;
     }
@@ -4869,6 +5244,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getFokusBinding_Fokus() {
         return (EReference)fokusBindingEClass.getEStructuralFeatures().get(0);
     }
@@ -4878,6 +5254,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getFokusBinding_Active() {
         return (EAttribute)fokusBindingEClass.getEStructuralFeatures().get(1);
     }
@@ -4887,6 +5264,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSubstance() {
         return substanceEClass;
     }
@@ -4896,6 +5274,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSubstance_Vector() {
         return (EAttribute)substanceEClass.getEStructuralFeatures().get(0);
     }
@@ -4905,6 +5284,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSubstance_Speed() {
         return (EAttribute)substanceEClass.getEStructuralFeatures().get(1);
     }
@@ -4914,6 +5294,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getToxin() {
         return toxinEClass;
     }
@@ -4923,6 +5304,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getToxin_Power() {
         return (EAttribute)toxinEClass.getEStructuralFeatures().get(0);
     }
@@ -4932,6 +5314,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getToxin_Penetration() {
         return (EAttribute)toxinEClass.getEStructuralFeatures().get(1);
     }
@@ -4941,6 +5324,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getToxin_Effect() {
         return (EAttribute)toxinEClass.getEStructuralFeatures().get(2);
     }
@@ -4950,6 +5334,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getDrug() {
         return drugEClass;
     }
@@ -4959,6 +5344,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getDrug_Duration() {
         return (EAttribute)drugEClass.getEStructuralFeatures().get(0);
     }
@@ -4968,6 +5354,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getDrug_AddictionType() {
         return (EAttribute)drugEClass.getEStructuralFeatures().get(1);
     }
@@ -4977,6 +5364,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getMagazin() {
         return magazinEClass;
     }
@@ -4986,6 +5374,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getMagazin_Type() {
         return (EReference)magazinEClass.getEStructuralFeatures().get(0);
     }
@@ -4995,6 +5384,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getMagazin_Bullets() {
         return (EReference)magazinEClass.getEStructuralFeatures().get(1);
     }
@@ -5004,6 +5394,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getDefaultWifi() {
         return defaultWifiEClass;
     }
@@ -5013,6 +5404,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSubstanceContainer() {
         return substanceContainerEClass;
     }
@@ -5022,6 +5414,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSubstanceContainer_Substance() {
         return (EReference)substanceContainerEClass.getEStructuralFeatures().get(0);
     }
@@ -5031,6 +5424,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getCapacity() {
         return capacityEClass;
     }
@@ -5040,6 +5434,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCapacity_CapacityFeature() {
         return (EReference)capacityEClass.getEStructuralFeatures().get(0);
     }
@@ -5049,6 +5444,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCapacity_Capacity() {
         return (EAttribute)capacityEClass.getEStructuralFeatures().get(1);
     }
@@ -5058,6 +5454,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCapacity_CapacityRemains() {
         return (EAttribute)capacityEClass.getEStructuralFeatures().get(2);
     }
@@ -5067,6 +5464,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EOperation getCapacity__CanAdd__EObject() {
         return capacityEClass.getEOperations().get(0);
     }
@@ -5076,6 +5474,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getCyberwareEnhancement() {
         return cyberwareEnhancementEClass;
     }
@@ -5085,6 +5484,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCyberwareEnhancement_CapacityUse() {
         return (EAttribute)cyberwareEnhancementEClass.getEStructuralFeatures().get(0);
     }
@@ -5094,6 +5494,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCyberwareEnhancement_Type() {
         return (EAttribute)cyberwareEnhancementEClass.getEStructuralFeatures().get(1);
     }
@@ -5103,6 +5504,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getCyberImplantWeapon() {
         return cyberImplantWeaponEClass;
     }
@@ -5112,6 +5514,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCyberImplantWeapon_Weapon() {
         return (EReference)cyberImplantWeaponEClass.getEStructuralFeatures().get(0);
     }
@@ -5121,6 +5524,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getActiveMatixDevice() {
         return activeMatixDeviceEClass;
     }
@@ -5130,6 +5534,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getActiveMatixDevice_Angriff() {
         return (EAttribute)activeMatixDeviceEClass.getEStructuralFeatures().get(0);
     }
@@ -5139,6 +5544,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getActiveMatixDevice_Schleicher() {
         return (EAttribute)activeMatixDeviceEClass.getEStructuralFeatures().get(1);
     }
@@ -5148,6 +5554,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getCommlink() {
         return commlinkEClass;
     }
@@ -5157,6 +5564,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCommlink_StoredPrograms() {
         return (EReference)commlinkEClass.getEStructuralFeatures().get(0);
     }
@@ -5166,6 +5574,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCommlink_StoredSins() {
         return (EReference)commlinkEClass.getEStructuralFeatures().get(1);
     }
@@ -5175,6 +5584,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getMatixConditionMonitor() {
         return matixConditionMonitorEClass;
     }
@@ -5184,6 +5594,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getMatixConditionMonitor_MatrixZustandMax() {
         return (EAttribute)matixConditionMonitorEClass.getEStructuralFeatures().get(0);
     }
@@ -5193,6 +5604,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getCyberdeck() {
         return cyberdeckEClass;
     }
@@ -5202,6 +5614,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCyberdeck_ProgramSlots() {
         return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(0);
     }
@@ -5211,6 +5624,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCyberdeck_Attribute1() {
         return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(1);
     }
@@ -5220,6 +5634,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCyberdeck_Attribute2() {
         return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(2);
     }
@@ -5229,6 +5644,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCyberdeck_Attribute3() {
         return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(3);
     }
@@ -5238,6 +5654,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCyberdeck_Attribute4() {
         return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(4);
     }
@@ -5247,6 +5664,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCyberdeck_Configuration() {
         return (EReference)cyberdeckEClass.getEStructuralFeatures().get(5);
     }
@@ -5256,6 +5674,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCyberdeck_StoredPrograms() {
         return (EReference)cyberdeckEClass.getEStructuralFeatures().get(6);
     }
@@ -5265,6 +5684,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCyberdeck_RunningPrograms() {
         return (EReference)cyberdeckEClass.getEStructuralFeatures().get(7);
     }
@@ -5274,6 +5694,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCyberdeck_ModManager() {
         return (EAttribute)cyberdeckEClass.getEStructuralFeatures().get(8);
     }
@@ -5283,6 +5704,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSoftwareAgent() {
         return softwareAgentEClass;
     }
@@ -5292,6 +5714,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSoftwareAgent_Rating() {
         return (EAttribute)softwareAgentEClass.getEStructuralFeatures().get(0);
     }
@@ -5301,6 +5724,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getHost() {
         return hostEClass;
     }
@@ -5310,6 +5734,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getHost_HostRating() {
         return (EAttribute)hostEClass.getEStructuralFeatures().get(0);
     }
@@ -5319,6 +5744,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getHost_BaseFirewall() {
         return (EAttribute)hostEClass.getEStructuralFeatures().get(1);
     }
@@ -5328,6 +5754,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getHost_BaseDatenverarbeitung() {
         return (EAttribute)hostEClass.getEStructuralFeatures().get(2);
     }
@@ -5337,6 +5764,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getHost_BaseAngriff() {
         return (EAttribute)hostEClass.getEStructuralFeatures().get(3);
     }
@@ -5346,6 +5774,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getHost_BaseSchleicher() {
         return (EAttribute)hostEClass.getEStructuralFeatures().get(4);
     }
@@ -5355,6 +5784,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getCyberwareModifikatioren() {
         return cyberwareModifikatiorenEClass;
     }
@@ -5364,6 +5794,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCyberwareModifikatioren_DirectNeuralInterface() {
         return (EAttribute)cyberwareModifikatiorenEClass.getEStructuralFeatures().get(0);
     }
@@ -5373,6 +5804,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCyberwareModifikatioren_UniversalDataConnector() {
         return (EAttribute)cyberwareModifikatiorenEClass.getEStructuralFeatures().get(1);
     }
@@ -5382,6 +5814,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCyberwareModifikatioren_ControlRig() {
         return (EAttribute)cyberwareModifikatiorenEClass.getEStructuralFeatures().get(2);
     }
@@ -5391,6 +5824,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCyberwareModifikatioren_SimRig() {
         return (EAttribute)cyberwareModifikatiorenEClass.getEStructuralFeatures().get(3);
     }
@@ -5400,6 +5834,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getCyberwareModifikatioren_RiggerInterface() {
         return (EAttribute)cyberwareModifikatiorenEClass.getEStructuralFeatures().get(4);
     }
@@ -5409,6 +5844,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getRiggerCommandConsole() {
         return riggerCommandConsoleEClass;
     }
@@ -5418,6 +5854,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getRiggerCommandConsole_Rauschunterdrueckung() {
         return (EAttribute)riggerCommandConsoleEClass.getEStructuralFeatures().get(0);
     }
@@ -5427,6 +5864,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getRiggerCommandConsole_Zugriff() {
         return (EAttribute)riggerCommandConsoleEClass.getEStructuralFeatures().get(1);
     }
@@ -5436,6 +5874,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getRiggerCommandConsole_DatenverarbeitungBasis() {
         return (EAttribute)riggerCommandConsoleEClass.getEStructuralFeatures().get(2);
     }
@@ -5445,6 +5884,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getRiggerCommandConsole_FirewallBasis() {
         return (EAttribute)riggerCommandConsoleEClass.getEStructuralFeatures().get(3);
     }
@@ -5454,6 +5894,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getRiggerCommandConsole_ZugriffBasis() {
         return (EAttribute)riggerCommandConsoleEClass.getEStructuralFeatures().get(4);
     }
@@ -5463,6 +5904,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getRiggerCommandConsole_StoredPrograms() {
         return (EReference)riggerCommandConsoleEClass.getEStructuralFeatures().get(5);
     }
@@ -5472,6 +5914,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getRiggerCommandConsole_RunningPrograms() {
         return (EReference)riggerCommandConsoleEClass.getEStructuralFeatures().get(6);
     }
@@ -5481,6 +5924,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getAutoSoft() {
         return autoSoftEClass;
     }
@@ -5490,6 +5934,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getAutoSoft_Rating() {
         return (EAttribute)autoSoftEClass.getEStructuralFeatures().get(0);
     }
@@ -5499,6 +5944,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getAutoSoft_Skill() {
         return (EReference)autoSoftEClass.getEStructuralFeatures().get(1);
     }
@@ -5508,6 +5954,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getAutoSoft_Weapon() {
         return (EReference)autoSoftEClass.getEStructuralFeatures().get(2);
     }
@@ -5517,6 +5964,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getAutoSoft_Model() {
         return (EReference)autoSoftEClass.getEStructuralFeatures().get(3);
     }
@@ -5526,6 +5974,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSoftware() {
         return softwareEClass;
     }
@@ -5535,6 +5984,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getMatrixProgram() {
         return matrixProgramEClass;
     }
@@ -5544,6 +5994,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getTutorsoft() {
         return tutorsoftEClass;
     }
@@ -5553,6 +6004,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getTutorsoft_Rating() {
         return (EAttribute)tutorsoftEClass.getEStructuralFeatures().get(0);
     }
@@ -5562,6 +6014,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getTutorsoft_Skill() {
         return (EReference)tutorsoftEClass.getEStructuralFeatures().get(1);
     }
@@ -5571,6 +6024,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSkillSoft() {
         return skillSoftEClass;
     }
@@ -5580,6 +6034,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSkillSoft_Skill() {
         return (EReference)skillSoftEClass.getEStructuralFeatures().get(0);
     }
@@ -5589,6 +6044,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSkillSoft_Rating() {
         return (EAttribute)skillSoftEClass.getEStructuralFeatures().get(1);
     }
@@ -5598,6 +6054,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getFahrzeugZustand() {
         return fahrzeugZustandEClass;
     }
@@ -5607,6 +6064,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getFahrzeugZustand_ZustandMax() {
         return (EAttribute)fahrzeugZustandEClass.getEStructuralFeatures().get(0);
     }
@@ -5616,6 +6074,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getPersonalAreaNetwork() {
         return personalAreaNetworkEClass;
     }
@@ -5625,6 +6084,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getPersonalAreaNetwork_Slaves() {
         return (EReference)personalAreaNetworkEClass.getEStructuralFeatures().get(0);
     }
@@ -5634,6 +6094,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getPersonalAreaNetwork_Master() {
         return (EReference)personalAreaNetworkEClass.getEStructuralFeatures().get(1);
     }
@@ -5643,6 +6104,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getPersonalAreaNetwork_SlaveMax() {
         return (EAttribute)personalAreaNetworkEClass.getEStructuralFeatures().get(2);
     }
@@ -5652,6 +6114,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getBasicProgram() {
         return basicProgramEClass;
     }
@@ -5661,6 +6124,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getDatasoft() {
         return datasoftEClass;
     }
@@ -5670,6 +6134,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getDatasoft_Skill() {
         return (EReference)datasoftEClass.getEStructuralFeatures().get(0);
     }
@@ -5679,6 +6144,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getAbstractMatrixDevice() {
         return abstractMatrixDeviceEClass;
     }
@@ -5688,6 +6154,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getAbstractMatrixDevice_DeviceRating() {
         return (EAttribute)abstractMatrixDeviceEClass.getEStructuralFeatures().get(0);
     }
@@ -5697,6 +6164,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getConsumerSoft() {
         return consumerSoftEClass;
     }
@@ -5706,6 +6174,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getConsumerSoft_Type() {
         return (EAttribute)consumerSoftEClass.getEStructuralFeatures().get(0);
     }
@@ -5715,6 +6184,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getRiggerProgram() {
         return riggerProgramEClass;
     }
@@ -5724,7 +6194,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EEnum getFeuerModus() {
+	@Override
+    public EEnum getFeuerModus() {
         return feuerModusEEnum;
     }
 
@@ -5733,7 +6204,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EEnum getSchadensTyp() {
+	@Override
+    public EEnum getSchadensTyp() {
         return schadensTypEEnum;
     }
 
@@ -5742,7 +6214,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EEnum getMagazinTyp() {
+	@Override
+    public EEnum getMagazinTyp() {
         return magazinTypEEnum;
     }
 
@@ -5751,7 +6224,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EEnum getFeuwerwaffenErweiterung() {
+	@Override
+    public EEnum getFeuwerwaffenErweiterung() {
         return feuwerwaffenErweiterungEEnum;
     }
 
@@ -5760,7 +6234,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EEnum getModifikatorType() {
+	@Override
+    public EEnum getModifikatorType() {
         return modifikatorTypeEEnum;
     }
 
@@ -5769,7 +6244,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EEnum getSmartgunType() {
+	@Override
+    public EEnum getSmartgunType() {
         return smartgunTypeEEnum;
     }
 
@@ -5778,7 +6254,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EEnum getZauberArt() {
+	@Override
+    public EEnum getZauberArt() {
         return zauberArtEEnum;
     }
 
@@ -5787,7 +6264,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EEnum getZauberReichweite() {
+	@Override
+    public EEnum getZauberReichweite() {
         return zauberReichweiteEEnum;
     }
 
@@ -5796,7 +6274,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EEnum getZauberDauer() {
+	@Override
+    public EEnum getZauberDauer() {
         return zauberDauerEEnum;
     }
 
@@ -5805,7 +6284,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getMagischeTradition() {
+	@Override
+    public EClass getMagischeTradition() {
         return magischeTraditionEClass;
     }
 
@@ -5814,6 +6294,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getMagischeTradition_Enzug() {
         return (EAttribute)magischeTraditionEClass.getEStructuralFeatures().get(0);
     }
@@ -5823,6 +6304,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getMagischeTradition_Beschwoerbar() {
         return (EReference)magischeTraditionEClass.getEStructuralFeatures().get(1);
     }
@@ -5832,6 +6314,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getShoppingTransaction() {
         return shoppingTransactionEClass;
     }
@@ -5841,6 +6324,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getShoppingTransaction_Items() {
         return (EReference)shoppingTransactionEClass.getEStructuralFeatures().get(0);
     }
@@ -5850,6 +6334,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getShoppingTransaction_Fee() {
         return (EAttribute)shoppingTransactionEClass.getEStructuralFeatures().get(1);
     }
@@ -5859,6 +6344,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getShoppingTransaction_CaculatedCosts() {
         return (EAttribute)shoppingTransactionEClass.getEStructuralFeatures().get(2);
     }
@@ -5868,6 +6354,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getTransferAmount() {
         return transferAmountEClass;
     }
@@ -5877,6 +6364,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getTransferAmount_Source() {
         return (EReference)transferAmountEClass.getEStructuralFeatures().get(0);
     }
@@ -5886,6 +6374,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getTransferAmount_Dest() {
         return (EReference)transferAmountEClass.getEStructuralFeatures().get(1);
     }
@@ -5895,6 +6384,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getTransferAmount_AmountToTransfer() {
         return (EAttribute)transferAmountEClass.getEStructuralFeatures().get(2);
     }
@@ -5904,6 +6394,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getKleindungsModifikator() {
         return kleindungsModifikatorEClass;
     }
@@ -5913,6 +6404,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getKleindungsModifikator_Rating() {
         return (EAttribute)kleindungsModifikatorEClass.getEStructuralFeatures().get(0);
     }
@@ -5922,6 +6414,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getKleindungsModifikator_Type() {
         return (EAttribute)kleindungsModifikatorEClass.getEStructuralFeatures().get(1);
     }
@@ -5931,6 +6424,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getKleindungsModifikator_Capacity() {
         return (EAttribute)kleindungsModifikatorEClass.getEStructuralFeatures().get(2);
     }
@@ -5940,6 +6434,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getModifyable() {
         return modifyableEClass;
     }
@@ -5949,6 +6444,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSensor() {
         return sensorEClass;
     }
@@ -5958,6 +6454,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSensor_Functions() {
         return (EReference)sensorEClass.getEStructuralFeatures().get(0);
     }
@@ -5967,6 +6464,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSensor_Rating() {
         return (EAttribute)sensorEClass.getEStructuralFeatures().get(1);
     }
@@ -5976,6 +6474,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSensor_CapacityValue() {
         return (EAttribute)sensorEClass.getEStructuralFeatures().get(2);
     }
@@ -5985,6 +6484,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSensorArray() {
         return sensorArrayEClass;
     }
@@ -5994,6 +6494,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSensorFunction() {
         return sensorFunctionEClass;
     }
@@ -6003,6 +6504,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getSensorFunction_MaxRange() {
         return (EAttribute)sensorFunctionEClass.getEStructuralFeatures().get(0);
     }
@@ -6012,6 +6514,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getMartialartStyle() {
         return martialartStyleEClass;
     }
@@ -6021,6 +6524,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getMartialartStyle_Techniques() {
         return (EReference)martialartStyleEClass.getEStructuralFeatures().get(0);
     }
@@ -6030,6 +6534,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getMartialartStyle_UsableWith() {
         return (EReference)martialartStyleEClass.getEStructuralFeatures().get(1);
     }
@@ -6039,6 +6544,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getMartialartTechnique() {
         return martialartTechniqueEClass;
     }
@@ -6048,6 +6554,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getPersonaMartialartStyle() {
         return personaMartialartStyleEClass;
     }
@@ -6057,6 +6564,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getPersonaMartialartStyle_Style() {
         return (EReference)personaMartialartStyleEClass.getEStructuralFeatures().get(0);
     }
@@ -6066,6 +6574,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getPersonaMartialartStyle_Techniques() {
         return (EReference)personaMartialartStyleEClass.getEStructuralFeatures().get(1);
     }
@@ -6075,6 +6584,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getPersonaMartialartTechnique() {
         return personaMartialartTechniqueEClass;
     }
@@ -6084,6 +6594,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getPersonaMartialartTechnique_Technique() {
         return (EReference)personaMartialartTechniqueEClass.getEStructuralFeatures().get(0);
     }
@@ -6093,6 +6604,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getFahrzeugErweiterung() {
         return fahrzeugErweiterungEClass;
     }
@@ -6102,6 +6614,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getAbtraktGranate() {
         return abtraktGranateEClass;
     }
@@ -6111,6 +6624,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getAbtraktGranate_Blast() {
         return (EAttribute)abtraktGranateEClass.getEStructuralFeatures().get(0);
     }
@@ -6120,6 +6634,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getAbtraktGranate_Chemical() {
         return (EReference)abtraktGranateEClass.getEStructuralFeatures().get(1);
     }
@@ -6129,6 +6644,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getMiniGrenate() {
         return miniGrenateEClass;
     }
@@ -6138,6 +6654,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getGranate() {
         return granateEClass;
     }
@@ -6147,6 +6664,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EClass getSourceLink() {
         return sourceLinkEClass;
     }
@@ -6156,6 +6674,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getSourceLink_SubLinks() {
         return (EReference)sourceLinkEClass.getEStructuralFeatures().get(0);
     }
@@ -6165,7 +6684,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EEnum getCritterHandlung() {
+	@Override
+    public EEnum getCritterHandlung() {
         return critterHandlungEEnum;
     }
 
@@ -6174,7 +6694,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EEnum getCritterReichweite() {
+	@Override
+    public EEnum getCritterReichweite() {
         return critterReichweiteEEnum;
     }
 
@@ -6183,7 +6704,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EEnum getCritterDauer() {
+	@Override
+    public EEnum getCritterDauer() {
         return critterDauerEEnum;
     }
 
@@ -6192,7 +6714,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EEnum getResonanzZiel() {
+	@Override
+    public EEnum getResonanzZiel() {
         return resonanzZielEEnum;
     }
 
@@ -6201,6 +6724,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getInterfaceModus() {
         return interfaceModusEEnum;
     }
@@ -6210,6 +6734,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getProgramType() {
         return programTypeEEnum;
     }
@@ -6219,6 +6744,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getMatrixProgramType() {
         return matrixProgramTypeEEnum;
     }
@@ -6228,6 +6754,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getSubstanceVector() {
         return substanceVectorEEnum;
     }
@@ -6237,6 +6764,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getSubstanceEffect() {
         return substanceEffectEEnum;
     }
@@ -6246,6 +6774,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getAddictionType() {
         return addictionTypeEEnum;
     }
@@ -6255,6 +6784,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getTimeUnits() {
         return timeUnitsEEnum;
     }
@@ -6264,6 +6794,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getCyberwareType() {
         return cyberwareTypeEEnum;
     }
@@ -6273,6 +6804,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getEnzug() {
         return enzugEEnum;
     }
@@ -6282,6 +6814,7 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EEnum getarmorModificationType() {
         return armorModificationTypeEEnum;
     }
@@ -6291,7 +6824,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EDataType getShrDate() {
+	@Override
+    public EDataType getShrDate() {
         return shrDateEDataType;
     }
 
@@ -6300,7 +6834,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EDataType getModificationManager() {
+	@Override
+    public EDataType getModificationManager() {
         return modificationManagerEDataType;
     }
 
@@ -6309,7 +6844,8 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Shr5Factory getShr5Factory() {
+	@Override
+    public Shr5Factory getShr5Factory() {
         return (Shr5Factory)getEFactoryInstance();
     }
 
@@ -8088,12 +8624,12 @@ public class Shr5PackageImpl extends EPackageImpl implements Shr5Package {
      * @generated
      */
     protected void createArchetypeAnnotations() {
-        String source = "http://www.obeo.fr/dsl/dnc/archetype";	
+        String source = "http://www.obeo.fr/dsl/dnc/archetype";
         addAnnotation
-          (koerpermodsEClass, 
-           source, 
+          (koerpermodsEClass,
+           source,
            new String[] {
-             "archetype", "Description"
+               "archetype", "Description"
            });
     }
 

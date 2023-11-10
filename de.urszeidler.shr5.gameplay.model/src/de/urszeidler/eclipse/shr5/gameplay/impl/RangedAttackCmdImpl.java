@@ -31,13 +31,13 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl#getModus <em>Modus</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl#getRange <em>Range</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl#getWeapon <em>Weapon</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.RangedAttackCmdImpl#getNumberOfShoots <em>Number Of Shoots</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -136,6 +136,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public FeuerModus getModus() {
         return modus;
     }
@@ -145,6 +146,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setModus(FeuerModus newModus) {
         FeuerModus oldModus = modus;
         modus = newModus == null ? MODUS_EDEFAULT : newModus;
@@ -157,6 +159,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getRange() {
         return range;
     }
@@ -180,6 +183,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public AbstaktFernKampfwaffe getWeapon() {
         if (weapon != null && weapon.eIsProxy()) {
             InternalEObject oldWeapon = (InternalEObject)weapon;
@@ -223,6 +227,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getNumberOfShoots() {
         return numberOfShoots;
     }
@@ -232,6 +237,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setNumberOfShoots(int newNumberOfShoots) {
         int oldNumberOfShoots = numberOfShoots;
         numberOfShoots = newNumberOfShoots;
@@ -337,7 +343,7 @@ public class RangedAttackCmdImpl extends OpposedSkillTestCmdImpl implements Rang
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (modus: ");
         result.append(modus);
         result.append(", range: ");

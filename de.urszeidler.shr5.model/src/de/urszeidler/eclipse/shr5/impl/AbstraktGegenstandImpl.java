@@ -35,6 +35,7 @@ import de.urszeidler.eclipse.shr5.Spezialisierung;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl#getParentId <em>Parent Id</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl#getLocalizations <em>Localizations</em>}</li>
@@ -51,7 +52,6 @@ import de.urszeidler.eclipse.shr5.Spezialisierung;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl#getSpezialisierung <em>Spezialisierung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AbstraktGegenstandImpl#getWifi <em>Wifi</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -298,6 +298,7 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -307,6 +308,7 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -319,6 +321,7 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.ABSTRAKT_GEGENSTAND__LOCALIZATIONS);
@@ -331,7 +334,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getPage() {
+	@Override
+    public String getPage() {
         return page;
     }
 
@@ -340,7 +344,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setPage(String newPage) {
+	@Override
+    public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
         if (eNotificationRequired())
@@ -352,7 +357,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public SourceBook getSrcBook() {
+	@Override
+    public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
             srcBook = (SourceBook)eResolveProxy(oldSrcBook);
@@ -378,7 +384,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSrcBook(SourceBook newSrcBook) {
+	@Override
+    public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
         if (eNotificationRequired())
@@ -399,7 +406,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getVerfuegbarkeit() {
+	@Override
+    public String getVerfuegbarkeit() {
         return verfuegbarkeit;
     }
 
@@ -408,7 +416,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setVerfuegbarkeit(String newVerfuegbarkeit) {
+	@Override
+    public void setVerfuegbarkeit(String newVerfuegbarkeit) {
         String oldVerfuegbarkeit = verfuegbarkeit;
         verfuegbarkeit = newVerfuegbarkeit;
         if (eNotificationRequired())
@@ -420,6 +429,7 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public BigDecimal getWertValue() {
         return wertValue;
     }
@@ -442,7 +452,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getName() {
+	@Override
+    public String getName() {
         return name;
     }
 
@@ -451,7 +462,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setName(String newName) {
+	@Override
+    public void setName(String newName) {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
@@ -463,7 +475,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getBeschreibung() {
+	@Override
+    public String getBeschreibung() {
         return beschreibung;
     }
 
@@ -472,7 +485,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setBeschreibung(String newBeschreibung) {
+	@Override
+    public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
         if (eNotificationRequired())
@@ -484,7 +498,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getImage() {
+	@Override
+    public String getImage() {
         return image;
     }
 
@@ -493,7 +508,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setImage(String newImage) {
+	@Override
+    public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
         if (eNotificationRequired())
@@ -505,7 +521,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<AttributModifikatorWert> getMods() {
+	@Override
+    public EList<AttributModifikatorWert> getMods() {
         if (mods == null) {
             mods = new EObjectContainmentWithInverseEList<AttributModifikatorWert>(AttributModifikatorWert.class, this, Shr5Package.ABSTRAKT_GEGENSTAND__MODS, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
         }
@@ -517,7 +534,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Fertigkeit getFertigkeit() {
+	@Override
+    public Fertigkeit getFertigkeit() {
         if (fertigkeit != null && fertigkeit.eIsProxy()) {
             InternalEObject oldFertigkeit = (InternalEObject)fertigkeit;
             fertigkeit = (Fertigkeit)eResolveProxy(oldFertigkeit);
@@ -543,7 +561,8 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setFertigkeit(Fertigkeit newFertigkeit) {
+	@Override
+    public void setFertigkeit(Fertigkeit newFertigkeit) {
         Fertigkeit oldFertigkeit = fertigkeit;
         fertigkeit = newFertigkeit;
         if (eNotificationRequired())
@@ -555,6 +574,7 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Spezialisierung getSpezialisierung() {
         if (spezialisierung != null && spezialisierung.eIsProxy()) {
             InternalEObject oldSpezialisierung = (InternalEObject)spezialisierung;
@@ -581,6 +601,7 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSpezialisierung(Spezialisierung newSpezialisierung) {
         Spezialisierung oldSpezialisierung = spezialisierung;
         spezialisierung = newSpezialisierung;
@@ -593,6 +614,7 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MatrixDevice getWifi() {
         return wifi;
     }
@@ -617,6 +639,7 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setWifi(MatrixDevice newWifi) {
         if (newWifi != wifi) {
             NotificationChain msgs = null;
@@ -939,7 +962,7 @@ public abstract class AbstraktGegenstandImpl extends MinimalEObjectImpl.Containe
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (parentId: ");
         result.append(parentId);
         result.append(", page: ");

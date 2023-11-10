@@ -29,6 +29,7 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.RuntimeCharacterImpl#getPhysicalDamage <em>Physical Damage</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.RuntimeCharacterImpl#getMentalDamage <em>Mental Damage</em>}</li>
@@ -41,7 +42,6 @@ import de.urszeidler.eclipse.shr5Management.ManagedCharacter;
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.RuntimeCharacterImpl#getArmor <em>Armor</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.RuntimeCharacterImpl#getUsedEdge <em>Used Edge</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -210,6 +210,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getPhysicalDamage() {
         return physicalDamage;
     }
@@ -244,6 +245,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getMentalDamage() {
         return mentalDamage;
     }
@@ -287,6 +289,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Zustand getZustand() {
         return zustand;
     }
@@ -296,6 +299,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setZustand(Zustand newZustand) {
         Zustand oldZustand = zustand;
         zustand = newZustand == null ? ZUSTAND_EDEFAULT : newZustand;
@@ -329,6 +333,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ManagedCharacter getCharacter() {
         if (character != null && character.eIsProxy()) {
             InternalEObject oldCharacter = (InternalEObject)character;
@@ -355,6 +360,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCharacter(ManagedCharacter newCharacter) {
         ManagedCharacter oldCharacter = character;
         character = newCharacter;
@@ -367,6 +373,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public AbstraktGegenstand getRightHand() {
         if (rightHand != null && rightHand.eIsProxy()) {
             InternalEObject oldRightHand = (InternalEObject)rightHand;
@@ -393,6 +400,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setRightHand(AbstraktGegenstand newRightHand) {
         AbstraktGegenstand oldRightHand = rightHand;
         rightHand = newRightHand;
@@ -405,6 +413,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public AbstraktGegenstand getLeftHand() {
         if (leftHand != null && leftHand.eIsProxy()) {
             InternalEObject oldLeftHand = (InternalEObject)leftHand;
@@ -431,6 +440,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setLeftHand(AbstraktGegenstand newLeftHand) {
         AbstraktGegenstand oldLeftHand = leftHand;
         leftHand = newLeftHand;
@@ -443,6 +453,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<AbstraktGegenstand> getInUse() {
         if (inUse == null) {
             inUse = new EObjectResolvingEList<AbstraktGegenstand>(AbstraktGegenstand.class, this, RuntimePackage.RUNTIME_CHARACTER__IN_USE);
@@ -455,6 +466,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Kleidung getArmor() {
         if (armor != null && armor.eIsProxy()) {
             InternalEObject oldArmor = (InternalEObject)armor;
@@ -481,6 +493,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setArmor(Kleidung newArmor) {
         Kleidung oldArmor = armor;
         armor = newArmor;
@@ -493,6 +506,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getUsedEdge() {
         return usedEdge;
     }
@@ -502,6 +516,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setUsedEdge(int newUsedEdge) {
         int oldUsedEdge = usedEdge;
         usedEdge = newUsedEdge;
@@ -730,7 +745,7 @@ public class RuntimeCharacterImpl extends AbstractExtendetDataAwareImpl implemen
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (physicalDamage: ");
         result.append(physicalDamage);
         result.append(", mentalDamage: ");

@@ -15,10 +15,10 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaEigenschaftImpl#getKarmaKosten <em>Karma Kosten</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -67,7 +67,8 @@ public class PersonaEigenschaftImpl extends AbstraktModifikatorenImpl implements
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getKarmaKosten() {
+	@Override
+    public int getKarmaKosten() {
         return karmaKosten;
     }
 
@@ -76,7 +77,8 @@ public class PersonaEigenschaftImpl extends AbstraktModifikatorenImpl implements
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setKarmaKosten(int newKarmaKosten) {
+	@Override
+    public void setKarmaKosten(int newKarmaKosten) {
         int oldKarmaKosten = karmaKosten;
         karmaKosten = newKarmaKosten;
         if (eNotificationRequired())
@@ -150,7 +152,7 @@ public class PersonaEigenschaftImpl extends AbstraktModifikatorenImpl implements
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (karmaKosten: ");
         result.append(karmaKosten);
         result.append(')');

@@ -15,11 +15,11 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.CyberwareEnhancement#getCapacityUse <em>Capacity Use</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.CyberwareEnhancement#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberwareEnhancement()
  * @model

@@ -26,6 +26,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagischePersonaImpl#getMagie <em>Magie</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagischePersonaImpl#getInitationen <em>Initationen</em>}</li>
@@ -33,7 +34,6 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagischePersonaImpl#getBoundFoki <em>Bound Foki</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagischePersonaImpl#getMentor <em>Mentor</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -132,7 +132,8 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<Initation> getInitationen() {
+	@Override
+    public EList<Initation> getInitationen() {
         if (initationen == null) {
             initationen = new EObjectContainmentEList<Initation>(Initation.class, this, Shr5Package.MAGISCHE_PERSONA__INITATIONEN);
         }
@@ -144,7 +145,8 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getMagieBasis() {
+	@Override
+    public int getMagieBasis() {
         return magieBasis;
     }
 
@@ -153,7 +155,8 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setMagieBasis(int newMagieBasis) {
+	@Override
+    public void setMagieBasis(int newMagieBasis) {
         int oldMagieBasis = magieBasis;
         magieBasis = newMagieBasis;
         if (eNotificationRequired())
@@ -165,6 +168,7 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<FokusBinding> getBoundFoki() {
         if (boundFoki == null) {
             boundFoki = new EObjectContainmentEList<FokusBinding>(FokusBinding.class, this, Shr5Package.MAGISCHE_PERSONA__BOUND_FOKI);
@@ -177,7 +181,8 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Schutzgeist getMentor() {
+	@Override
+    public Schutzgeist getMentor() {
         if (mentor != null && mentor.eIsProxy()) {
             InternalEObject oldMentor = (InternalEObject)mentor;
             mentor = (Schutzgeist)eResolveProxy(oldMentor);
@@ -203,7 +208,8 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setMentor(Schutzgeist newMentor) {
+	@Override
+    public void setMentor(Schutzgeist newMentor) {
         Schutzgeist oldMentor = mentor;
         mentor = newMentor;
         if (eNotificationRequired())
@@ -369,7 +375,7 @@ public abstract class MagischePersonaImpl extends KoerperPersonaImpl implements 
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (magieBasis: ");
         result.append(magieBasis);
         result.append(')');

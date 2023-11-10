@@ -114,6 +114,7 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Script createScript() {
         ScriptImpl script = new ScriptImpl();
         return script;
@@ -124,6 +125,7 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Placement createPlacement() {
         PlacementImpl placement = new PlacementImpl();
         return placement;
@@ -134,6 +136,7 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ScriptHistory createScriptHistory() {
         ScriptHistoryImpl scriptHistory = new ScriptHistoryImpl();
         return scriptHistory;
@@ -144,6 +147,7 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Scripts createScripts() {
         ScriptsImpl scripts = new ScriptsImpl();
         return scripts;
@@ -154,6 +158,7 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Handout createHandout() {
         HandoutImpl handout = new HandoutImpl();
         return handout;
@@ -164,6 +169,7 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Section createSection() {
         SectionImpl section = new SectionImpl();
         return section;
@@ -214,6 +220,7 @@ public class ScriptingFactoryImpl extends EFactoryImpl implements ScriptingFacto
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ScriptingPackage getScriptingPackage() {
         return (ScriptingPackage)getEPackage();
     }

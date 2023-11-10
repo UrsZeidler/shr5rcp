@@ -25,10 +25,10 @@ import de.urszeidler.eclipse.shr5Management.GruntMembers;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.GruntTeamImpl#getGruntGroup <em>Grunt Group</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -67,6 +67,7 @@ public class GruntTeamImpl extends TeamImpl implements GruntTeam {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public GruntGroup getGruntGroup() {
         if (gruntGroup != null && gruntGroup.eIsProxy()) {
             InternalEObject oldGruntGroup = (InternalEObject)gruntGroup;

@@ -19,11 +19,11 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntMembersImpl#getCount <em>Count</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GruntMembersImpl#getNsc <em>Nsc</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -82,6 +82,7 @@ public class GruntMembersImpl extends MinimalEObjectImpl.Container implements Gr
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getCount() {
         return count;
     }
@@ -91,6 +92,7 @@ public class GruntMembersImpl extends MinimalEObjectImpl.Container implements Gr
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCount(int newCount) {
         int oldCount = count;
         count = newCount;
@@ -103,6 +105,7 @@ public class GruntMembersImpl extends MinimalEObjectImpl.Container implements Gr
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public NonPlayerCharacter getNsc() {
         if (nsc != null && nsc.eIsProxy()) {
             InternalEObject oldNsc = (InternalEObject)nsc;
@@ -129,6 +132,7 @@ public class GruntMembersImpl extends MinimalEObjectImpl.Container implements Gr
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setNsc(NonPlayerCharacter newNsc) {
         NonPlayerCharacter oldNsc = nsc;
         nsc = newNsc;
@@ -214,7 +218,7 @@ public class GruntMembersImpl extends MinimalEObjectImpl.Container implements Gr
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (count: ");
         result.append(count);
         result.append(')');

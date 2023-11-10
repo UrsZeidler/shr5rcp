@@ -2313,6 +2313,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ComposeableAdapterFactory getRootAdapterFactory() {
         return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
     }
@@ -2323,6 +2324,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
         this.parentAdapterFactory = parentAdapterFactory;
     }
@@ -2371,6 +2373,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void addListener(INotifyChangedListener notifyChangedListener) {
         changeNotifier.addListener(notifyChangedListener);
     }
@@ -2381,6 +2384,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void removeListener(INotifyChangedListener notifyChangedListener) {
         changeNotifier.removeListener(notifyChangedListener);
     }
@@ -2391,6 +2395,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void fireNotifyChanged(Notification notification) {
         changeNotifier.fireNotifyChanged(notification);
 
@@ -2405,6 +2410,7 @@ public class Shr5ItemProviderAdapterFactory extends Shr5AdapterFactory implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void dispose() {
         if (sourceBookItemProvider != null) sourceBookItemProvider.dispose();
         if (gegenstandItemProvider != null) gegenstandItemProvider.dispose();

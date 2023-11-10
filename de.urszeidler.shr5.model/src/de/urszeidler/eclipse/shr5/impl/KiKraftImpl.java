@@ -15,10 +15,10 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KiKraftImpl#getKraftpunkte <em>Kraftpunkte</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -66,7 +66,8 @@ public class KiKraftImpl extends MagischeModsImpl implements KiKraft {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getKraftpunkte() {
+	@Override
+    public int getKraftpunkte() {
         return kraftpunkte;
     }
 
@@ -75,7 +76,8 @@ public class KiKraftImpl extends MagischeModsImpl implements KiKraft {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setKraftpunkte(int newKraftpunkte) {
+	@Override
+    public void setKraftpunkte(int newKraftpunkte) {
         int oldKraftpunkte = kraftpunkte;
         kraftpunkte = newKraftpunkte;
         if (eNotificationRequired())
@@ -149,7 +151,7 @@ public class KiKraftImpl extends MagischeModsImpl implements KiKraft {
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (kraftpunkte: ");
         result.append(kraftpunkte);
         result.append(')');

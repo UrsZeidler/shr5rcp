@@ -18,10 +18,10 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterChangeImpl#getChange <em>Change</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -60,6 +60,7 @@ public class CharacterChangeImpl extends DiaryEntryImpl implements CharacterChan
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Changes getChange() {
         if (change != null && change.eIsProxy()) {
             InternalEObject oldChange = (InternalEObject)change;
@@ -86,6 +87,7 @@ public class CharacterChangeImpl extends DiaryEntryImpl implements CharacterChan
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setChange(Changes newChange) {
         Changes oldChange = change;
         change = newChange;

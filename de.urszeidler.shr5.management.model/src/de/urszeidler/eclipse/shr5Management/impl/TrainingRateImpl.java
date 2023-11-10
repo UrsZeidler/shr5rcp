@@ -18,13 +18,13 @@ import de.urszeidler.eclipse.shr5Management.TrainingRate;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRateImpl#getFrom <em>From</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRateImpl#getTo <em>To</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRateImpl#getFactor <em>Factor</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRateImpl#getTimeUnit <em>Time Unit</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -133,6 +133,7 @@ public class TrainingRateImpl extends MinimalEObjectImpl.Container implements Tr
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getFrom() {
         return from;
     }
@@ -142,6 +143,7 @@ public class TrainingRateImpl extends MinimalEObjectImpl.Container implements Tr
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setFrom(int newFrom) {
         int oldFrom = from;
         from = newFrom;
@@ -154,6 +156,7 @@ public class TrainingRateImpl extends MinimalEObjectImpl.Container implements Tr
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getTo() {
         return to;
     }
@@ -163,6 +166,7 @@ public class TrainingRateImpl extends MinimalEObjectImpl.Container implements Tr
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setTo(int newTo) {
         int oldTo = to;
         to = newTo;
@@ -175,6 +179,7 @@ public class TrainingRateImpl extends MinimalEObjectImpl.Container implements Tr
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getFactor() {
         return factor;
     }
@@ -184,6 +189,7 @@ public class TrainingRateImpl extends MinimalEObjectImpl.Container implements Tr
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setFactor(int newFactor) {
         int oldFactor = factor;
         factor = newFactor;
@@ -196,6 +202,7 @@ public class TrainingRateImpl extends MinimalEObjectImpl.Container implements Tr
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public TimeUnits getTimeUnit() {
         return timeUnit;
     }
@@ -205,6 +212,7 @@ public class TrainingRateImpl extends MinimalEObjectImpl.Container implements Tr
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setTimeUnit(TimeUnits newTimeUnit) {
         TimeUnits oldTimeUnit = timeUnit;
         timeUnit = newTimeUnit == null ? TIME_UNIT_EDEFAULT : newTimeUnit;
@@ -309,7 +317,7 @@ public class TrainingRateImpl extends MinimalEObjectImpl.Container implements Tr
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (from: ");
         result.append(from);
         result.append(", to: ");

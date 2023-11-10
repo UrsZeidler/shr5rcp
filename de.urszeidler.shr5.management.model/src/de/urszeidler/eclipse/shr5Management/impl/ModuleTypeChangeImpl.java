@@ -22,12 +22,12 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ModuleTypeChangeImpl#getGrade <em>Grade</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ModuleTypeChangeImpl#getSelected <em>Selected</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ModuleTypeChangeImpl#getSelectOne <em>Select One</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -96,6 +96,7 @@ public abstract class ModuleTypeChangeImpl<T> extends ModuleChangeImpl implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getGrade() {
         return grade;
     }
@@ -105,6 +106,7 @@ public abstract class ModuleTypeChangeImpl<T> extends ModuleChangeImpl implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setGrade(int newGrade) {
         int oldGrade = grade;
         grade = newGrade;
@@ -118,6 +120,7 @@ public abstract class ModuleTypeChangeImpl<T> extends ModuleChangeImpl implement
      * @generated
      */
     @SuppressWarnings("unchecked")
+    @Override
     public T getSelected() {
         if (selected != null && ((EObject)selected).eIsProxy()) {
             InternalEObject oldSelected = (InternalEObject)selected;
@@ -144,6 +147,7 @@ public abstract class ModuleTypeChangeImpl<T> extends ModuleChangeImpl implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSelected(T newSelected) {
         T oldSelected = selected;
         selected = newSelected;
@@ -156,6 +160,7 @@ public abstract class ModuleTypeChangeImpl<T> extends ModuleChangeImpl implement
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<T> getSelectOne() {
         if (selectOne == null) {
             selectOne = new EObjectResolvingEList<T>(EObject.class, this, Shr5managementPackage.MODULE_TYPE_CHANGE__SELECT_ONE);
@@ -253,7 +258,7 @@ public abstract class ModuleTypeChangeImpl<T> extends ModuleChangeImpl implement
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (grade: ");
         result.append(grade);
         result.append(')');

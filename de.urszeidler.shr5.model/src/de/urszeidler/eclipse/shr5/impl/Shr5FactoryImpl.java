@@ -284,7 +284,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public SourceBook createSourceBook() {
+	@Override
+    public SourceBook createSourceBook() {
         SourceBookImpl sourceBook = new SourceBookImpl();
         return sourceBook;
     }
@@ -294,7 +295,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Gegenstand createGegenstand() {
+	@Override
+    public Gegenstand createGegenstand() {
         GegenstandImpl gegenstand = new GegenstandImpl();
         return gegenstand;
     }
@@ -304,7 +306,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Reichweite createReichweite() {
+	@Override
+    public Reichweite createReichweite() {
         ReichweiteImpl reichweite = new ReichweiteImpl();
         return reichweite;
     }
@@ -314,7 +317,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public AttributModifikatorWert createAttributModifikatorWert() {
+	@Override
+    public AttributModifikatorWert createAttributModifikatorWert() {
         AttributModifikatorWertImpl attributModifikatorWert = new AttributModifikatorWertImpl();
         return attributModifikatorWert;
     }
@@ -324,7 +328,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Nahkampfwaffe createNahkampfwaffe() {
+	@Override
+    public Nahkampfwaffe createNahkampfwaffe() {
         NahkampfwaffeImpl nahkampfwaffe = new NahkampfwaffeImpl();
         return nahkampfwaffe;
     }
@@ -334,7 +339,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Feuerwaffe createFeuerwaffe() {
+	@Override
+    public Feuerwaffe createFeuerwaffe() {
         FeuerwaffeImpl feuerwaffe = new FeuerwaffeImpl();
         return feuerwaffe;
     }
@@ -344,7 +350,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Wurfwaffe createWurfwaffe() {
+	@Override
+    public Wurfwaffe createWurfwaffe() {
         WurfwaffeImpl wurfwaffe = new WurfwaffeImpl();
         return wurfwaffe;
     }
@@ -354,7 +361,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public ShrList createShrList() {
+	@Override
+    public ShrList createShrList() {
         ShrListImpl shrList = new ShrListImpl();
         return shrList;
     }
@@ -364,7 +372,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Projektilwaffe createProjektilwaffe() {
+	@Override
+    public Projektilwaffe createProjektilwaffe() {
         ProjektilwaffeImpl projektilwaffe = new ProjektilwaffeImpl();
         return projektilwaffe;
     }
@@ -374,7 +383,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public FertigkeitsGruppe createFertigkeitsGruppe() {
+	@Override
+    public FertigkeitsGruppe createFertigkeitsGruppe() {
         FertigkeitsGruppeImpl fertigkeitsGruppe = new FertigkeitsGruppeImpl();
         return fertigkeitsGruppe;
     }
@@ -384,7 +394,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Fertigkeit createFertigkeit() {
+	@Override
+    public Fertigkeit createFertigkeit() {
         FertigkeitImpl fertigkeit = new FertigkeitImpl();
         return fertigkeit;
     }
@@ -394,7 +405,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public PersonaFertigkeit createPersonaFertigkeit() {
+	@Override
+    public PersonaFertigkeit createPersonaFertigkeit() {
         PersonaFertigkeitImpl personaFertigkeit = new PersonaFertigkeitImpl();
         return personaFertigkeit;
     }
@@ -404,7 +416,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public PersonaFertigkeitsGruppe createPersonaFertigkeitsGruppe() {
+	@Override
+    public PersonaFertigkeitsGruppe createPersonaFertigkeitsGruppe() {
         PersonaFertigkeitsGruppeImpl personaFertigkeitsGruppe = new PersonaFertigkeitsGruppeImpl();
         return personaFertigkeitsGruppe;
     }
@@ -414,7 +427,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Cyberware createCyberware() {
+	@Override
+    public Cyberware createCyberware() {
         CyberwareImpl cyberware = new CyberwareImpl();
         return cyberware;
     }
@@ -424,7 +438,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public BioWare createBioWare() {
+	@Override
+    public BioWare createBioWare() {
         BioWareImpl bioWare = new BioWareImpl();
         return bioWare;
     }
@@ -434,7 +449,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public MudanPersona createMudanPersona() {
+	@Override
+    public MudanPersona createMudanPersona() {
         MudanPersonaImpl mudanPersona = new MudanPersonaImpl();
         return mudanPersona;
     }
@@ -444,7 +460,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public KiKraft createKiKraft() {
+	@Override
+    public KiKraft createKiKraft() {
         KiKraftImpl kiKraft = new KiKraftImpl();
         return kiKraft;
     }
@@ -454,7 +471,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Spezies createSpezies() {
+	@Override
+    public Spezies createSpezies() {
         SpeziesImpl spezies = new SpeziesImpl();
         return spezies;
     }
@@ -464,7 +482,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public KiAdept createKiAdept() {
+	@Override
+    public KiAdept createKiAdept() {
         KiAdeptImpl kiAdept = new KiAdeptImpl();
         return kiAdept;
     }
@@ -474,7 +493,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Kleidung createKleidung() {
+	@Override
+    public Kleidung createKleidung() {
         KleidungImpl kleidung = new KleidungImpl();
         return kleidung;
     }
@@ -484,7 +504,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public FernkampfwaffeModifikator createFernkampfwaffeModifikator() {
+	@Override
+    public FernkampfwaffeModifikator createFernkampfwaffeModifikator() {
         FernkampfwaffeModifikatorImpl fernkampfwaffeModifikator = new FernkampfwaffeModifikatorImpl();
         return fernkampfwaffeModifikator;
     }
@@ -494,7 +515,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public PersonaEigenschaft createPersonaEigenschaft() {
+	@Override
+    public PersonaEigenschaft createPersonaEigenschaft() {
         PersonaEigenschaftImpl personaEigenschaft = new PersonaEigenschaftImpl();
         return personaEigenschaft;
     }
@@ -504,7 +526,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Magier createMagier() {
+	@Override
+    public Magier createMagier() {
         MagierImpl magier = new MagierImpl();
         return magier;
     }
@@ -514,7 +537,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public MysticAdept createMysticAdept() {
+	@Override
+    public MysticAdept createMysticAdept() {
         MysticAdeptImpl mysticAdept = new MysticAdeptImpl();
         return mysticAdept;
     }
@@ -524,7 +548,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public PersonaZauber createPersonaZauber() {
+	@Override
+    public PersonaZauber createPersonaZauber() {
         PersonaZauberImpl personaZauber = new PersonaZauberImpl();
         return personaZauber;
     }
@@ -534,7 +559,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Zauber createZauber() {
+	@Override
+    public Zauber createZauber() {
         ZauberImpl zauber = new ZauberImpl();
         return zauber;
     }
@@ -544,7 +570,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public AspektMagier createAspektMagier() {
+	@Override
+    public AspektMagier createAspektMagier() {
         AspektMagierImpl aspektMagier = new AspektMagierImpl();
         return aspektMagier;
     }
@@ -554,7 +581,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Schutzgeist createSchutzgeist() {
+	@Override
+    public Schutzgeist createSchutzgeist() {
         SchutzgeistImpl schutzgeist = new SchutzgeistImpl();
         return schutzgeist;
     }
@@ -564,7 +592,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Initation createInitation() {
+	@Override
+    public Initation createInitation() {
         InitationImpl initation = new InitationImpl();
         return initation;
     }
@@ -574,7 +603,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public MetaMagie createMetaMagie() {
+	@Override
+    public MetaMagie createMetaMagie() {
         MetaMagieImpl metaMagie = new MetaMagieImpl();
         return metaMagie;
     }
@@ -584,7 +614,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public CritterKraft createCritterKraft() {
+	@Override
+    public CritterKraft createCritterKraft() {
         CritterKraftImpl critterKraft = new CritterKraftImpl();
         return critterKraft;
     }
@@ -594,7 +625,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Bodenfahrzeug createBodenfahrzeug() {
+	@Override
+    public Bodenfahrzeug createBodenfahrzeug() {
         BodenfahrzeugImpl bodenfahrzeug = new BodenfahrzeugImpl();
         return bodenfahrzeug;
     }
@@ -604,7 +636,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public PassagierFahrzeug createPassagierFahrzeug() {
+	@Override
+    public PassagierFahrzeug createPassagierFahrzeug() {
         PassagierFahrzeugImpl passagierFahrzeug = new PassagierFahrzeugImpl();
         return passagierFahrzeug;
     }
@@ -614,7 +647,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Drohne createDrohne() {
+	@Override
+    public Drohne createDrohne() {
         DrohneImpl drohne = new DrohneImpl();
         return drohne;
     }
@@ -624,7 +658,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Technomancer createTechnomancer() {
+	@Override
+    public Technomancer createTechnomancer() {
         TechnomancerImpl technomancer = new TechnomancerImpl();
         return technomancer;
     }
@@ -634,7 +669,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public KomplexeForm createKomplexeForm() {
+	@Override
+    public KomplexeForm createKomplexeForm() {
         KomplexeFormImpl komplexeForm = new KomplexeFormImpl();
         return komplexeForm;
     }
@@ -644,7 +680,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public PersonaKomplexForm createPersonaKomplexForm() {
+	@Override
+    public PersonaKomplexForm createPersonaKomplexForm() {
         PersonaKomplexFormImpl personaKomplexForm = new PersonaKomplexFormImpl();
         return personaKomplexForm;
     }
@@ -654,7 +691,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Sprite createSprite() {
+	@Override
+    public Sprite createSprite() {
         SpriteImpl sprite = new SpriteImpl();
         return sprite;
     }
@@ -664,7 +702,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Echo createEcho() {
+	@Override
+    public Echo createEcho() {
         EchoImpl echo = new EchoImpl();
         return echo;
     }
@@ -674,7 +713,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Vertrag createVertrag() {
+	@Override
+    public Vertrag createVertrag() {
         VertragImpl vertrag = new VertragImpl();
         return vertrag;
     }
@@ -684,7 +724,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Lifestyle createLifestyle() {
+	@Override
+    public Lifestyle createLifestyle() {
         LifestyleImpl lifestyle = new LifestyleImpl();
         return lifestyle;
     }
@@ -694,7 +735,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Wissensfertigkeit createWissensfertigkeit() {
+	@Override
+    public Wissensfertigkeit createWissensfertigkeit() {
         WissensfertigkeitImpl wissensfertigkeit = new WissensfertigkeitImpl();
         return wissensfertigkeit;
     }
@@ -704,7 +746,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Sprachfertigkeit createSprachfertigkeit() {
+	@Override
+    public Sprachfertigkeit createSprachfertigkeit() {
         SprachfertigkeitImpl sprachfertigkeit = new SprachfertigkeitImpl();
         return sprachfertigkeit;
     }
@@ -714,6 +757,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Critter createCritter() {
         CritterImpl critter = new CritterImpl();
         return critter;
@@ -724,6 +768,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public IntervallVertrag createIntervallVertrag() {
         IntervallVertragImpl intervallVertrag = new IntervallVertragImpl();
         return intervallVertrag;
@@ -734,6 +779,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Sin createSin() {
         SinImpl sin = new SinImpl();
         return sin;
@@ -744,6 +790,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Lizenz createLizenz() {
         LizenzImpl lizenz = new LizenzImpl();
         return lizenz;
@@ -754,6 +801,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Credstick createCredstick() {
         CredstickImpl credstick = new CredstickImpl();
         return credstick;
@@ -764,6 +812,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Munition createMunition() {
         MunitionImpl munition = new MunitionImpl();
         return munition;
@@ -774,6 +823,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public GebundenerGeist createGebundenerGeist() {
         GebundenerGeistImpl gebundenerGeist = new GebundenerGeistImpl();
         return gebundenerGeist;
@@ -784,6 +834,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Geist createGeist() {
         GeistImpl geist = new GeistImpl();
         return geist;
@@ -794,6 +845,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CredstickTransaction createCredstickTransaction() {
         CredstickTransactionImpl credstickTransaction = new CredstickTransactionImpl();
         return credstickTransaction;
@@ -804,6 +856,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Spezialisierung createSpezialisierung() {
         SpezialisierungImpl spezialisierung = new SpezialisierungImpl();
         return spezialisierung;
@@ -814,6 +867,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Commlink createCommlink() {
         CommlinkImpl commlink = new CommlinkImpl();
         return commlink;
@@ -824,6 +878,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Cyberdeck createCyberdeck() {
         CyberdeckImpl cyberdeck = new CyberdeckImpl();
         return cyberdeck;
@@ -834,6 +889,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SoftwareAgent createSoftwareAgent() {
         SoftwareAgentImpl softwareAgent = new SoftwareAgentImpl();
         return softwareAgent;
@@ -844,6 +900,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Host createHost() {
         HostImpl host = new HostImpl();
         return host;
@@ -854,6 +911,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public RiggerCommandConsole createRiggerCommandConsole() {
         RiggerCommandConsoleImpl riggerCommandConsole = new RiggerCommandConsoleImpl();
         return riggerCommandConsole;
@@ -864,6 +922,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public AutoSoft createAutoSoft() {
         AutoSoftImpl autoSoft = new AutoSoftImpl();
         return autoSoft;
@@ -874,6 +933,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Tutorsoft createTutorsoft() {
         TutorsoftImpl tutorsoft = new TutorsoftImpl();
         return tutorsoft;
@@ -884,6 +944,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SkillSoft createSkillSoft() {
         SkillSoftImpl skillSoft = new SkillSoftImpl();
         return skillSoft;
@@ -894,6 +955,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public PersonalAreaNetwork createPersonalAreaNetwork() {
         PersonalAreaNetworkImpl personalAreaNetwork = new PersonalAreaNetworkImpl();
         return personalAreaNetwork;
@@ -904,6 +966,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Datasoft createDatasoft() {
         DatasoftImpl datasoft = new DatasoftImpl();
         return datasoft;
@@ -914,6 +977,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ConsumerSoft createConsumerSoft() {
         ConsumerSoftImpl consumerSoft = new ConsumerSoftImpl();
         return consumerSoft;
@@ -924,6 +988,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CommonProgram createCommonProgram() {
         CommonProgramImpl commonProgram = new CommonProgramImpl();
         return commonProgram;
@@ -934,6 +999,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WeaponMount createWeaponMount() {
         WeaponMountImpl weaponMount = new WeaponMountImpl();
         return weaponMount;
@@ -944,6 +1010,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public LifestyleOption createLifestyleOption() {
         LifestyleOptionImpl lifestyleOption = new LifestyleOptionImpl();
         return lifestyleOption;
@@ -954,6 +1021,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public PercentLifestyleOption createPercentLifestyleOption() {
         PercentLifestyleOptionImpl percentLifestyleOption = new PercentLifestyleOptionImpl();
         return percentLifestyleOption;
@@ -964,6 +1032,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Localization createLocalization() {
         LocalizationImpl localization = new LocalizationImpl();
         return localization;
@@ -974,6 +1043,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public QiFokus createQiFokus() {
         QiFokusImpl qiFokus = new QiFokusImpl();
         return qiFokus;
@@ -984,6 +1054,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WaffenFokus createWaffenFokus() {
         WaffenFokusImpl waffenFokus = new WaffenFokusImpl();
         return waffenFokus;
@@ -994,6 +1065,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MagieFokus createMagieFokus() {
         MagieFokusImpl magieFokus = new MagieFokusImpl();
         return magieFokus;
@@ -1004,6 +1076,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public FokusBinding createFokusBinding() {
         FokusBindingImpl fokusBinding = new FokusBindingImpl();
         return fokusBinding;
@@ -1014,6 +1087,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Toxin createToxin() {
         ToxinImpl toxin = new ToxinImpl();
         return toxin;
@@ -1024,6 +1098,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Drug createDrug() {
         DrugImpl drug = new DrugImpl();
         return drug;
@@ -1034,6 +1109,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Magazin createMagazin() {
         MagazinImpl magazin = new MagazinImpl();
         return magazin;
@@ -1044,6 +1120,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public DefaultWifi createDefaultWifi() {
         DefaultWifiImpl defaultWifi = new DefaultWifiImpl();
         return defaultWifi;
@@ -1054,6 +1131,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SubstanceContainer createSubstanceContainer() {
         SubstanceContainerImpl substanceContainer = new SubstanceContainerImpl();
         return substanceContainer;
@@ -1064,6 +1142,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CyberwareEnhancement createCyberwareEnhancement() {
         CyberwareEnhancementImpl cyberwareEnhancement = new CyberwareEnhancementImpl();
         return cyberwareEnhancement;
@@ -1074,6 +1153,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CyberImplantWeapon createCyberImplantWeapon() {
         CyberImplantWeaponImpl cyberImplantWeapon = new CyberImplantWeaponImpl();
         return cyberImplantWeapon;
@@ -1084,6 +1164,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MagischeTradition createMagischeTradition() {
         MagischeTraditionImpl magischeTradition = new MagischeTraditionImpl();
         return magischeTradition;
@@ -1094,6 +1175,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ShoppingTransaction createShoppingTransaction() {
         ShoppingTransactionImpl shoppingTransaction = new ShoppingTransactionImpl();
         return shoppingTransaction;
@@ -1104,6 +1186,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public TransferAmount createTransferAmount() {
         TransferAmountImpl transferAmount = new TransferAmountImpl();
         return transferAmount;
@@ -1114,6 +1197,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public KleindungsModifikator createKleindungsModifikator() {
         KleindungsModifikatorImpl kleindungsModifikator = new KleindungsModifikatorImpl();
         return kleindungsModifikator;
@@ -1124,6 +1208,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Sensor createSensor() {
         SensorImpl sensor = new SensorImpl();
         return sensor;
@@ -1134,6 +1219,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SensorArray createSensorArray() {
         SensorArrayImpl sensorArray = new SensorArrayImpl();
         return sensorArray;
@@ -1144,6 +1230,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SensorFunction createSensorFunction() {
         SensorFunctionImpl sensorFunction = new SensorFunctionImpl();
         return sensorFunction;
@@ -1154,6 +1241,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MartialartStyle createMartialartStyle() {
         MartialartStyleImpl martialartStyle = new MartialartStyleImpl();
         return martialartStyle;
@@ -1164,6 +1252,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MartialartTechnique createMartialartTechnique() {
         MartialartTechniqueImpl martialartTechnique = new MartialartTechniqueImpl();
         return martialartTechnique;
@@ -1174,6 +1263,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public PersonaMartialartStyle createPersonaMartialartStyle() {
         PersonaMartialartStyleImpl personaMartialartStyle = new PersonaMartialartStyleImpl();
         return personaMartialartStyle;
@@ -1184,6 +1274,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public PersonaMartialartTechnique createPersonaMartialartTechnique() {
         PersonaMartialartTechniqueImpl personaMartialartTechnique = new PersonaMartialartTechniqueImpl();
         return personaMartialartTechnique;
@@ -1194,6 +1285,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public FahrzeugErweiterung createFahrzeugErweiterung() {
         FahrzeugErweiterungImpl fahrzeugErweiterung = new FahrzeugErweiterungImpl();
         return fahrzeugErweiterung;
@@ -1204,6 +1296,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MiniGrenate createMiniGrenate() {
         MiniGrenateImpl miniGrenate = new MiniGrenateImpl();
         return miniGrenate;
@@ -1214,6 +1307,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Granate createGranate() {
         GranateImpl granate = new GranateImpl();
         return granate;
@@ -1224,6 +1318,7 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SourceLink createSourceLink() {
         SourceLinkImpl sourceLink = new SourceLinkImpl();
         return sourceLink;
@@ -1712,7 +1807,8 @@ public class Shr5FactoryImpl extends EFactoryImpl implements Shr5Factory {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Shr5Package getShr5Package() {
+	@Override
+    public Shr5Package getShr5Package() {
         return (Shr5Package)getEPackage();
     }
 

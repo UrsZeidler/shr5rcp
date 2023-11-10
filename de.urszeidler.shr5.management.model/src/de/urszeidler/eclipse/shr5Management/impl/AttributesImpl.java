@@ -24,10 +24,10 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.AttributesImpl#getAttibutePoints <em>Attibute Points</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -76,6 +76,7 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getAttibutePoints() {
         return attibutePoints;
     }
@@ -85,6 +86,7 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAttibutePoints(int newAttibutePoints) {
         int oldAttibutePoints = attibutePoints;
         attibutePoints = newAttibutePoints;
@@ -208,7 +210,7 @@ public class AttributesImpl extends PriorityCategorieImpl implements Attributes 
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (attibutePoints: ");
         result.append(attibutePoints);
         result.append(')');

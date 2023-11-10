@@ -7,7 +7,7 @@ Bundle-Activator: de.urszeidler.shr5.m2t.Activator
 Bundle-Vendor: Urs Zeidler
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ActivationPolicy: lazy
 Import-Package: org.eclipse.acceleo.engine.service,
  org.eclipse.emf.common,

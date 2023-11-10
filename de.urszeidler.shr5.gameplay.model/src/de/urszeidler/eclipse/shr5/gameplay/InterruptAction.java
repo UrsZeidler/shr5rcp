@@ -11,11 +11,11 @@ package de.urszeidler.eclipse.shr5.gameplay;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.InterruptAction#getIniCost <em>Ini Cost</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.InterruptAction#getInterruptType <em>Interrupt Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getInterruptAction()
  * @model

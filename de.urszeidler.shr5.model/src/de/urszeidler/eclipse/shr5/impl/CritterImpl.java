@@ -22,10 +22,10 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CritterImpl#getPowers <em>Powers</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,6 +63,7 @@ public class CritterImpl extends SpeziesImpl implements Critter {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<CritterKraft> getPowers() {
         if (powers == null) {
             powers = new EObjectContainmentEList<CritterKraft>(CritterKraft.class, this, Shr5Package.CRITTER__POWERS);

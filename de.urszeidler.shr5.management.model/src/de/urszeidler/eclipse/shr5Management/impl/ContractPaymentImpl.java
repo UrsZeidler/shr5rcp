@@ -18,11 +18,11 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ContractPaymentImpl#getContractToPay <em>Contract To Pay</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ContractPaymentImpl#isPayed <em>Payed</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -81,6 +81,7 @@ public class ContractPaymentImpl extends DiaryEntryImpl implements ContractPayme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Vertrag getContractToPay() {
         if (contractToPay != null && contractToPay.eIsProxy()) {
             InternalEObject oldContractToPay = (InternalEObject)contractToPay;
@@ -107,6 +108,7 @@ public class ContractPaymentImpl extends DiaryEntryImpl implements ContractPayme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setContractToPay(Vertrag newContractToPay) {
         Vertrag oldContractToPay = contractToPay;
         contractToPay = newContractToPay;
@@ -119,6 +121,7 @@ public class ContractPaymentImpl extends DiaryEntryImpl implements ContractPayme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isPayed() {
         return payed;
     }
@@ -128,6 +131,7 @@ public class ContractPaymentImpl extends DiaryEntryImpl implements ContractPayme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPayed(boolean newPayed) {
         boolean oldPayed = payed;
         payed = newPayed;
@@ -213,7 +217,7 @@ public class ContractPaymentImpl extends DiaryEntryImpl implements ContractPayme
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (payed: ");
         result.append(payed);
         result.append(')');

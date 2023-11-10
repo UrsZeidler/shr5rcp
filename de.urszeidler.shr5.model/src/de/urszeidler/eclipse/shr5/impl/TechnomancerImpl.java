@@ -29,6 +29,7 @@ import de.urszeidler.eclipse.shr5.Technomancer;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getMatrixZustandMax <em>Matrix Zustand Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
@@ -42,7 +43,6 @@ import de.urszeidler.eclipse.shr5.Technomancer;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getComplexForms <em>Complex Forms</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TechnomancerImpl#getEchos <em>Echos</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -255,6 +255,7 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public InterfaceModus getCurrentModus() {
         return currentModus;
     }
@@ -264,6 +265,7 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCurrentModus(InterfaceModus newCurrentModus) {
         InterfaceModus oldCurrentModus = currentModus;
         currentModus = newCurrentModus == null ? CURRENT_MODUS_EDEFAULT : newCurrentModus;
@@ -285,7 +287,8 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getResonanzBasis() {
+	@Override
+    public int getResonanzBasis() {
         return resonanzBasis;
     }
 
@@ -294,7 +297,8 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setResonanzBasis(int newResonanzBasis) {
+	@Override
+    public void setResonanzBasis(int newResonanzBasis) {
         int oldResonanzBasis = resonanzBasis;
         resonanzBasis = newResonanzBasis;
         if (eNotificationRequired())
@@ -306,7 +310,8 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<PersonaKomplexForm> getComplexForms() {
+	@Override
+    public EList<PersonaKomplexForm> getComplexForms() {
         if (complexForms == null) {
             complexForms = new EObjectContainmentEList<PersonaKomplexForm>(PersonaKomplexForm.class, this, Shr5Package.TECHNOMANCER__COMPLEX_FORMS);
         }
@@ -318,7 +323,8 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<Echo> getEchos() {
+	@Override
+    public EList<Echo> getEchos() {
         if (echos == null) {
             echos = new EObjectContainmentEList<Echo>(Echo.class, this, Shr5Package.TECHNOMANCER__ECHOS);
         }
@@ -547,7 +553,7 @@ public class TechnomancerImpl extends KoerperPersonaImpl implements Technomancer
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (currentModus: ");
         result.append(currentModus);
         result.append(", resonanzBasis: ");

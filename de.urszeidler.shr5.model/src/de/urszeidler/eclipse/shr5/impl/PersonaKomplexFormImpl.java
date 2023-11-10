@@ -18,11 +18,11 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaKomplexFormImpl#getForm <em>Form</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaKomplexFormImpl#getStufe <em>Stufe</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -81,7 +81,8 @@ public class PersonaKomplexFormImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public KomplexeForm getForm() {
+	@Override
+    public KomplexeForm getForm() {
         if (form != null && form.eIsProxy()) {
             InternalEObject oldForm = (InternalEObject)form;
             form = (KomplexeForm)eResolveProxy(oldForm);
@@ -107,7 +108,8 @@ public class PersonaKomplexFormImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setForm(KomplexeForm newForm) {
+	@Override
+    public void setForm(KomplexeForm newForm) {
         KomplexeForm oldForm = form;
         form = newForm;
         if (eNotificationRequired())
@@ -119,7 +121,8 @@ public class PersonaKomplexFormImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getStufe() {
+	@Override
+    public int getStufe() {
         return stufe;
     }
 
@@ -128,7 +131,8 @@ public class PersonaKomplexFormImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setStufe(int newStufe) {
+	@Override
+    public void setStufe(int newStufe) {
         int oldStufe = stufe;
         stufe = newStufe;
         if (eNotificationRequired())
@@ -213,7 +217,7 @@ public class PersonaKomplexFormImpl extends MinimalEObjectImpl.Container impleme
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (stufe: ");
         result.append(stufe);
         result.append(')');

@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="2014 Urs Zeidler" modelDirectory="/de.urszeidler.shr5.model/src"
     modelPluginID="de.urszeidler.shr5.model" modelName="Shr5" generateSchema="true"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="6.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+    complianceLevel="11.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>shr5.ecore</foreignModel>
   <genPackages prefix="Shr5" basePackage="de.urszeidler.eclipse" resource="XMI" disposableProviderFactory="true"
       ecorePackage="shr5.ecore#/">

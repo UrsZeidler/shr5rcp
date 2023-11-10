@@ -20,11 +20,11 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GeneratorStateToEStringMapEntryImpl#getTypedKey <em>Key</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.GeneratorStateToEStringMapEntryImpl#getTypedValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -135,7 +135,8 @@ public class GeneratorStateToEStringMapEntryImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public GeneratorState getKey() {
+	@Override
+    public GeneratorState getKey() {
         return getTypedKey();
     }
 
@@ -144,7 +145,8 @@ public class GeneratorStateToEStringMapEntryImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setKey(GeneratorState key) {
+	@Override
+    public void setKey(GeneratorState key) {
         setTypedKey(key);
     }
 
@@ -153,7 +155,8 @@ public class GeneratorStateToEStringMapEntryImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getValue() {
+	@Override
+    public String getValue() {
         return getTypedValue();
     }
 
@@ -162,7 +165,8 @@ public class GeneratorStateToEStringMapEntryImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String setValue(String value) {
+	@Override
+    public String setValue(String value) {
         String oldValue = getValue();
         setTypedValue(value);
         return oldValue;
@@ -256,7 +260,7 @@ public class GeneratorStateToEStringMapEntryImpl extends MinimalEObjectImpl.Cont
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (key: ");
         result.append(key);
         result.append(", value: ");
@@ -277,7 +281,8 @@ public class GeneratorStateToEStringMapEntryImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getHash() {
+	@Override
+    public int getHash() {
         if (hash == -1) {
             Object theKey = getKey();
             hash = (theKey == null ? 0 : theKey.hashCode());
@@ -290,7 +295,8 @@ public class GeneratorStateToEStringMapEntryImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setHash(int hash) {
+	@Override
+    public void setHash(int hash) {
         this.hash = hash;
     }
 

@@ -26,12 +26,12 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrugImpl#getMods <em>Mods</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrugImpl#getDuration <em>Duration</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrugImpl#getAddictionType <em>Addiction Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -110,6 +110,7 @@ public class DrugImpl extends SubstanceImpl implements Drug {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<AttributModifikatorWert> getMods() {
         if (mods == null) {
             mods = new EObjectContainmentWithInverseEList<AttributModifikatorWert>(AttributModifikatorWert.class, this, Shr5Package.DRUG__MODS, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
@@ -122,6 +123,7 @@ public class DrugImpl extends SubstanceImpl implements Drug {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getDuration() {
         return duration;
     }
@@ -131,6 +133,7 @@ public class DrugImpl extends SubstanceImpl implements Drug {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDuration(String newDuration) {
         String oldDuration = duration;
         duration = newDuration;
@@ -143,6 +146,7 @@ public class DrugImpl extends SubstanceImpl implements Drug {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public AddictionType getAddictionType() {
         return addictionType;
     }
@@ -152,6 +156,7 @@ public class DrugImpl extends SubstanceImpl implements Drug {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAddictionType(AddictionType newAddictionType) {
         AddictionType oldAddictionType = addictionType;
         addictionType = newAddictionType == null ? ADDICTION_TYPE_EDEFAULT : newAddictionType;
@@ -309,7 +314,7 @@ public class DrugImpl extends SubstanceImpl implements Drug {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (duration: ");
         result.append(duration);
         result.append(", addictionType: ");

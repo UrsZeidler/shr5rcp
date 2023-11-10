@@ -36,6 +36,7 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SensorImpl#getCapacityFeature <em>Capacity Feature</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SensorImpl#getCapacity <em>Capacity</em>}</li>
@@ -54,7 +55,6 @@ import de.urszeidler.eclipse.shr5.SourceBook;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SensorImpl#getRating <em>Rating</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SensorImpl#getCapacityValue <em>Capacity Value</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -323,6 +323,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCapacityFeature() {
         EReference capacityFeature = basicGetCapacityFeature();
         return capacityFeature != null && capacityFeature.eIsProxy() ? (EReference)eResolveProxy((InternalEObject)capacityFeature) : capacityFeature;
@@ -360,6 +361,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -369,6 +371,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -381,6 +384,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -390,6 +394,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -402,6 +407,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -411,6 +417,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -423,6 +430,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -432,6 +440,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -444,6 +453,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.SENSOR__LOCALIZATIONS);
@@ -456,6 +466,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getPage() {
         return page;
     }
@@ -465,6 +476,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
@@ -477,6 +489,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
@@ -503,6 +516,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
@@ -527,6 +541,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getVerfuegbarkeit() {
         return verfuegbarkeit;
     }
@@ -536,6 +551,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setVerfuegbarkeit(String newVerfuegbarkeit) {
         String oldVerfuegbarkeit = verfuegbarkeit;
         verfuegbarkeit = newVerfuegbarkeit;
@@ -548,6 +564,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public BigDecimal getWertValue() {
         return wertValue;
     }
@@ -571,6 +588,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<SensorFunction> getFunctions() {
         if (functions == null) {
             functions = new EObjectResolvingEList<SensorFunction>(SensorFunction.class, this, Shr5Package.SENSOR__FUNCTIONS);
@@ -583,6 +601,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getRating() {
         return rating;
     }
@@ -606,6 +625,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getCapacityValue() {
         return capacityValue;
     }
@@ -615,6 +635,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCapacityValue(int newCapacityValue) {
         int oldCapacityValue = capacityValue;
         capacityValue = newCapacityValue;
@@ -937,7 +958,7 @@ public class SensorImpl extends MinimalEObjectImpl.Container implements Sensor {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

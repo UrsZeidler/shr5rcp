@@ -15,12 +15,12 @@ package de.urszeidler.eclipse.shr5.gameplay;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.DamageTest#getDamage <em>Damage</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.DamageTest#getDv <em>Dv</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.DamageTest#getEffectiveDamage <em>Effective Damage</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getDamageTest()
  * @model

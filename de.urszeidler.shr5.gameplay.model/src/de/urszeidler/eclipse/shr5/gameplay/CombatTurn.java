@@ -18,13 +18,13 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getCombatants <em>Combatants</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getActionPhases <em>Action Phases</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getCurrentTurn <em>Current Turn</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.CombatTurn#getSequence <em>Sequence</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getCombatTurn()
  * @model

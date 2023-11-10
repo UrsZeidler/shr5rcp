@@ -29,11 +29,11 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaMartialArtChangeImpl#getStyle <em>Style</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaMartialArtChangeImpl#getTechnique <em>Technique</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -82,6 +82,7 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MartialartStyle getStyle() {
         if (style != null && style.eIsProxy()) {
             InternalEObject oldStyle = (InternalEObject)style;
@@ -128,6 +129,7 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MartialartTechnique getTechnique() {
         if (technique != null && technique.eIsProxy()) {
             InternalEObject oldTechnique = (InternalEObject)technique;
@@ -154,6 +156,7 @@ public class PersonaMartialArtChangeImpl extends PersonaChangeImpl implements Pe
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setTechnique(MartialartTechnique newTechnique) {
         MartialartTechnique oldTechnique = technique;
         technique = newTechnique;

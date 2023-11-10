@@ -16,11 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.AbtraktGranate#getBlast <em>Blast</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AbtraktGranate#getChemical <em>Chemical</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getAbtraktGranate()
  * @model interface="true" abstract="true"

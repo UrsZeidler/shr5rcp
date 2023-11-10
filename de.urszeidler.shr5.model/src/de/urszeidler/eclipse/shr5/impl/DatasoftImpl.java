@@ -18,10 +18,10 @@ import de.urszeidler.eclipse.shr5.Wissensfertigkeit;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DatasoftImpl#getSkill <em>Skill</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -60,6 +60,7 @@ public class DatasoftImpl extends BasicProgramImpl implements Datasoft {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Wissensfertigkeit getSkill() {
         if (skill != null && skill.eIsProxy()) {
             InternalEObject oldSkill = (InternalEObject)skill;
@@ -86,6 +87,7 @@ public class DatasoftImpl extends BasicProgramImpl implements Datasoft {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSkill(Wissensfertigkeit newSkill) {
         Wissensfertigkeit oldSkill = skill;
         skill = newSkill;

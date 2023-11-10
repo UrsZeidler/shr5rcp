@@ -12,11 +12,11 @@ import de.urszeidler.eclipse.shr5.SchadensTyp;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.DrainCommand#getDamage <em>Damage</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.DrainCommand#getDamageType <em>Damage Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getDrainCommand()
  * @model

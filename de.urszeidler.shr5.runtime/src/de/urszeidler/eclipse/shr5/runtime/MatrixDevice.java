@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.MatrixDevice#getDevice <em>Device</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.MatrixDevice#getMatrixCondition <em>Matrix Condition</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.MatrixDevice#getMarks <em>Marks</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.runtime.RuntimePackage#getMatrixDevice()
  * @model

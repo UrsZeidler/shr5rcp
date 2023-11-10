@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.shr5.scripting.Section#getTitel <em>Titel</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Section#getText <em>Text</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.shr5.scripting.ScriptingPackage#getSection()
  * @model

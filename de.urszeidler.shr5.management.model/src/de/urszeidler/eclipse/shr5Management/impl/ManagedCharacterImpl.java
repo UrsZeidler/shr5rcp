@@ -38,6 +38,7 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Managed Character</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getPersona <em>Persona</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getChanges <em>Changes</em>}</li>
@@ -60,7 +61,6 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getDateofbirth <em>Dateofbirth</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ManagedCharacterImpl#getWeight <em>Weight</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -337,6 +337,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public AbstraktPersona getPersona() {
         return persona;
     }
@@ -359,6 +360,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPersona(AbstraktPersona newPersona) {
         if (newPersona != persona) {
             NotificationChain msgs = null;
@@ -377,6 +379,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Changes> getChanges() {
         if (changes == null) {
             changes = new EObjectContainmentWithInverseEList<Changes>(Changes.class, this, Shr5managementPackage.MANAGED_CHARACTER__CHANGES, Shr5managementPackage.CHANGES__CHARACTER);
@@ -388,6 +391,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CharacterGenerator<?> getChracterSource() {
         if (chracterSource != null && chracterSource.eIsProxy()) {
             InternalEObject oldChracterSource = (InternalEObject)chracterSource;
@@ -426,6 +430,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setChracterSource(CharacterGenerator<?> newChracterSource) {
         if (newChracterSource != chracterSource) {
             NotificationChain msgs = null;
@@ -444,6 +449,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<AbstraktGegenstand> getInventar() {
         if (inventar == null) {
             inventar = new EObjectContainmentEList<AbstraktGegenstand>(AbstraktGegenstand.class, this, Shr5managementPackage.MANAGED_CHARACTER__INVENTAR);
@@ -455,6 +461,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Vertrag> getContracts() {
         if (contracts == null) {
             contracts = new EObjectContainmentEList<Vertrag>(Vertrag.class, this, Shr5managementPackage.MANAGED_CHARACTER__CONTRACTS);
@@ -466,6 +473,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Sex getSex() {
         return sex;
     }
@@ -474,6 +482,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSex(Sex newSex) {
         Sex oldSex = sex;
         sex = newSex == null ? SEX_EDEFAULT : newSex;
@@ -485,6 +494,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Connection> getConnections() {
         if (connections == null) {
             connections = new EObjectContainmentEList<Connection>(Connection.class, this, Shr5managementPackage.MANAGED_CHARACTER__CONNECTIONS);
@@ -496,6 +506,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Fahrzeug> getVehicels() {
         if (vehicels == null) {
             vehicels = new EObjectContainmentEList<Fahrzeug>(Fahrzeug.class, this, Shr5managementPackage.MANAGED_CHARACTER__VEHICELS);
@@ -507,6 +518,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Lifestyle getChoosenLifestyle() {
         if (choosenLifestyle != null && choosenLifestyle.eIsProxy()) {
             InternalEObject oldChoosenLifestyle = (InternalEObject)choosenLifestyle;
@@ -531,6 +543,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setChoosenLifestyle(Lifestyle newChoosenLifestyle) {
         Lifestyle oldChoosenLifestyle = choosenLifestyle;
         choosenLifestyle = newChoosenLifestyle;
@@ -542,6 +555,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Sprachfertigkeit getNativeLanguage() {
         if (nativeLanguage != null && nativeLanguage.eIsProxy()) {
             InternalEObject oldNativeLanguage = (InternalEObject)nativeLanguage;
@@ -566,6 +580,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setNativeLanguage(Sprachfertigkeit newNativeLanguage) {
         Sprachfertigkeit oldNativeLanguage = nativeLanguage;
         nativeLanguage = newNativeLanguage;
@@ -596,6 +611,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getNotorietyBasic() {
         return notorietyBasic;
     }
@@ -604,6 +620,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setNotorietyBasic(int newNotorietyBasic) {
         int oldNotorietyBasic = notorietyBasic;
         notorietyBasic = newNotorietyBasic;
@@ -616,6 +633,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getPublicAwareness() {
         return publicAwareness;
     }
@@ -625,6 +643,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPublicAwareness(int newPublicAwareness) {
         int oldPublicAwareness = publicAwareness;
         publicAwareness = newPublicAwareness;
@@ -680,6 +699,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CharacterGenerator<?> getGeneratorSrc() {
         return generatorSrc;
     }
@@ -704,6 +724,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setGeneratorSrc(CharacterGenerator<?> newGeneratorSrc) {
         if (newGeneratorSrc != generatorSrc) {
             NotificationChain msgs = null;
@@ -723,6 +744,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getHeight() {
         return height;
     }
@@ -732,6 +754,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setHeight(int newHeight) {
         int oldHeight = height;
         height = newHeight;
@@ -744,6 +767,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getDateofbirth() {
         return dateofbirth;
     }
@@ -753,6 +777,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDateofbirth(Date newDateofbirth) {
         Date oldDateofbirth = dateofbirth;
         dateofbirth = newDateofbirth;
@@ -765,6 +790,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getWeight() {
         return weight;
     }
@@ -774,6 +800,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setWeight(int newWeight) {
         int oldWeight = weight;
         weight = newWeight;
@@ -1063,7 +1090,7 @@ public abstract class ManagedCharacterImpl extends MinimalEObjectImpl.Container 
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (sex: ");
         result.append(sex);
         result.append(", notorietyBasic: ");

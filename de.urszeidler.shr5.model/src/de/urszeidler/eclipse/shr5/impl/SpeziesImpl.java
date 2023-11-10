@@ -31,6 +31,7 @@ import de.urszeidler.eclipse.shr5.Spezies;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getImage <em>Image</em>}</li>
@@ -69,7 +70,6 @@ import de.urszeidler.eclipse.shr5.Spezies;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getSprinten <em>Sprinten</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpeziesImpl#getAngriff <em>Angriff</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -778,7 +778,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getName() {
+	@Override
+    public String getName() {
         return name;
     }
 
@@ -787,7 +788,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setName(String newName) {
+	@Override
+    public void setName(String newName) {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
@@ -799,7 +801,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getBeschreibung() {
+	@Override
+    public String getBeschreibung() {
         return beschreibung;
     }
 
@@ -808,7 +811,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setBeschreibung(String newBeschreibung) {
+	@Override
+    public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
         if (eNotificationRequired())
@@ -820,7 +824,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getImage() {
+	@Override
+    public String getImage() {
         return image;
     }
 
@@ -829,7 +834,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setImage(String newImage) {
+	@Override
+    public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
         if (eNotificationRequired())
@@ -841,7 +847,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<AttributModifikatorWert> getMods() {
+	@Override
+    public EList<AttributModifikatorWert> getMods() {
         if (mods == null) {
             mods = new EObjectContainmentWithInverseEList<AttributModifikatorWert>(AttributModifikatorWert.class, this, Shr5Package.SPEZIES__MODS, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
         }
@@ -853,6 +860,7 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -862,6 +870,7 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -874,6 +883,7 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.SPEZIES__LOCALIZATIONS);
@@ -886,7 +896,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getPage() {
+	@Override
+    public String getPage() {
         return page;
     }
 
@@ -895,7 +906,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setPage(String newPage) {
+	@Override
+    public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
         if (eNotificationRequired())
@@ -907,7 +919,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public SourceBook getSrcBook() {
+	@Override
+    public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
             srcBook = (SourceBook)eResolveProxy(oldSrcBook);
@@ -933,7 +946,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSrcBook(SourceBook newSrcBook) {
+	@Override
+    public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
         if (eNotificationRequired())
@@ -945,7 +959,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getKonstitutionMin() {
+	@Override
+    public int getKonstitutionMin() {
         return konstitutionMin;
     }
 
@@ -954,7 +969,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setKonstitutionMin(int newKonstitutionMin) {
+	@Override
+    public void setKonstitutionMin(int newKonstitutionMin) {
         int oldKonstitutionMin = konstitutionMin;
         konstitutionMin = newKonstitutionMin;
         if (eNotificationRequired())
@@ -966,7 +982,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getGeschicklichkeitMin() {
+	@Override
+    public int getGeschicklichkeitMin() {
         return geschicklichkeitMin;
     }
 
@@ -975,7 +992,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setGeschicklichkeitMin(int newGeschicklichkeitMin) {
+	@Override
+    public void setGeschicklichkeitMin(int newGeschicklichkeitMin) {
         int oldGeschicklichkeitMin = geschicklichkeitMin;
         geschicklichkeitMin = newGeschicklichkeitMin;
         if (eNotificationRequired())
@@ -987,7 +1005,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getReaktionMin() {
+	@Override
+    public int getReaktionMin() {
         return reaktionMin;
     }
 
@@ -996,7 +1015,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setReaktionMin(int newReaktionMin) {
+	@Override
+    public void setReaktionMin(int newReaktionMin) {
         int oldReaktionMin = reaktionMin;
         reaktionMin = newReaktionMin;
         if (eNotificationRequired())
@@ -1008,7 +1028,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getStaerkeMin() {
+	@Override
+    public int getStaerkeMin() {
         return staerkeMin;
     }
 
@@ -1017,7 +1038,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setStaerkeMin(int newStaerkeMin) {
+	@Override
+    public void setStaerkeMin(int newStaerkeMin) {
         int oldStaerkeMin = staerkeMin;
         staerkeMin = newStaerkeMin;
         if (eNotificationRequired())
@@ -1029,7 +1051,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getCharismaMin() {
+	@Override
+    public int getCharismaMin() {
         return charismaMin;
     }
 
@@ -1038,7 +1061,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setCharismaMin(int newCharismaMin) {
+	@Override
+    public void setCharismaMin(int newCharismaMin) {
         int oldCharismaMin = charismaMin;
         charismaMin = newCharismaMin;
         if (eNotificationRequired())
@@ -1050,7 +1074,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getWillenskraftMin() {
+	@Override
+    public int getWillenskraftMin() {
         return willenskraftMin;
     }
 
@@ -1059,7 +1084,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setWillenskraftMin(int newWillenskraftMin) {
+	@Override
+    public void setWillenskraftMin(int newWillenskraftMin) {
         int oldWillenskraftMin = willenskraftMin;
         willenskraftMin = newWillenskraftMin;
         if (eNotificationRequired())
@@ -1071,7 +1097,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getIntuitionMin() {
+	@Override
+    public int getIntuitionMin() {
         return intuitionMin;
     }
 
@@ -1080,7 +1107,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setIntuitionMin(int newIntuitionMin) {
+	@Override
+    public void setIntuitionMin(int newIntuitionMin) {
         int oldIntuitionMin = intuitionMin;
         intuitionMin = newIntuitionMin;
         if (eNotificationRequired())
@@ -1092,7 +1120,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getLogikMin() {
+	@Override
+    public int getLogikMin() {
         return logikMin;
     }
 
@@ -1101,7 +1130,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setLogikMin(int newLogikMin) {
+	@Override
+    public void setLogikMin(int newLogikMin) {
         int oldLogikMin = logikMin;
         logikMin = newLogikMin;
         if (eNotificationRequired())
@@ -1113,7 +1143,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getEdgeMin() {
+	@Override
+    public int getEdgeMin() {
         return edgeMin;
     }
 
@@ -1122,7 +1153,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setEdgeMin(int newEdgeMin) {
+	@Override
+    public void setEdgeMin(int newEdgeMin) {
         int oldEdgeMin = edgeMin;
         edgeMin = newEdgeMin;
         if (eNotificationRequired())
@@ -1134,7 +1166,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getMagieMin() {
+	@Override
+    public int getMagieMin() {
         return magieMin;
     }
 
@@ -1143,7 +1176,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setMagieMin(int newMagieMin) {
+	@Override
+    public void setMagieMin(int newMagieMin) {
         int oldMagieMin = magieMin;
         magieMin = newMagieMin;
         if (eNotificationRequired())
@@ -1155,7 +1189,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getResonanzMin() {
+	@Override
+    public int getResonanzMin() {
         return resonanzMin;
     }
 
@@ -1164,7 +1199,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setResonanzMin(int newResonanzMin) {
+	@Override
+    public void setResonanzMin(int newResonanzMin) {
         int oldResonanzMin = resonanzMin;
         resonanzMin = newResonanzMin;
         if (eNotificationRequired())
@@ -1176,7 +1212,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getEssenzMin() {
+	@Override
+    public int getEssenzMin() {
         return essenzMin;
     }
 
@@ -1185,7 +1222,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setEssenzMin(int newEssenzMin) {
+	@Override
+    public void setEssenzMin(int newEssenzMin) {
         int oldEssenzMin = essenzMin;
         essenzMin = newEssenzMin;
         if (eNotificationRequired())
@@ -1197,7 +1235,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getKonstitutionMax() {
+	@Override
+    public int getKonstitutionMax() {
         return konstitutionMax;
     }
 
@@ -1206,7 +1245,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setKonstitutionMax(int newKonstitutionMax) {
+	@Override
+    public void setKonstitutionMax(int newKonstitutionMax) {
         int oldKonstitutionMax = konstitutionMax;
         konstitutionMax = newKonstitutionMax;
         if (eNotificationRequired())
@@ -1218,7 +1258,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getGeschicklichkeitMax() {
+	@Override
+    public int getGeschicklichkeitMax() {
         return geschicklichkeitMax;
     }
 
@@ -1227,7 +1268,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setGeschicklichkeitMax(int newGeschicklichkeitMax) {
+	@Override
+    public void setGeschicklichkeitMax(int newGeschicklichkeitMax) {
         int oldGeschicklichkeitMax = geschicklichkeitMax;
         geschicklichkeitMax = newGeschicklichkeitMax;
         if (eNotificationRequired())
@@ -1239,7 +1281,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getReaktionMax() {
+	@Override
+    public int getReaktionMax() {
         return reaktionMax;
     }
 
@@ -1248,7 +1291,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setReaktionMax(int newReaktionMax) {
+	@Override
+    public void setReaktionMax(int newReaktionMax) {
         int oldReaktionMax = reaktionMax;
         reaktionMax = newReaktionMax;
         if (eNotificationRequired())
@@ -1260,7 +1304,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getStaerkeMax() {
+	@Override
+    public int getStaerkeMax() {
         return staerkeMax;
     }
 
@@ -1269,7 +1314,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setStaerkeMax(int newStaerkeMax) {
+	@Override
+    public void setStaerkeMax(int newStaerkeMax) {
         int oldStaerkeMax = staerkeMax;
         staerkeMax = newStaerkeMax;
         if (eNotificationRequired())
@@ -1281,7 +1327,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getCharismaMax() {
+	@Override
+    public int getCharismaMax() {
         return charismaMax;
     }
 
@@ -1290,7 +1337,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setCharismaMax(int newCharismaMax) {
+	@Override
+    public void setCharismaMax(int newCharismaMax) {
         int oldCharismaMax = charismaMax;
         charismaMax = newCharismaMax;
         if (eNotificationRequired())
@@ -1302,7 +1350,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getWillenskraftMax() {
+	@Override
+    public int getWillenskraftMax() {
         return willenskraftMax;
     }
 
@@ -1311,7 +1360,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setWillenskraftMax(int newWillenskraftMax) {
+	@Override
+    public void setWillenskraftMax(int newWillenskraftMax) {
         int oldWillenskraftMax = willenskraftMax;
         willenskraftMax = newWillenskraftMax;
         if (eNotificationRequired())
@@ -1323,7 +1373,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getIntuitionMax() {
+	@Override
+    public int getIntuitionMax() {
         return intuitionMax;
     }
 
@@ -1332,7 +1383,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setIntuitionMax(int newIntuitionMax) {
+	@Override
+    public void setIntuitionMax(int newIntuitionMax) {
         int oldIntuitionMax = intuitionMax;
         intuitionMax = newIntuitionMax;
         if (eNotificationRequired())
@@ -1344,7 +1396,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getLogikMax() {
+	@Override
+    public int getLogikMax() {
         return logikMax;
     }
 
@@ -1353,7 +1406,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setLogikMax(int newLogikMax) {
+	@Override
+    public void setLogikMax(int newLogikMax) {
         int oldLogikMax = logikMax;
         logikMax = newLogikMax;
         if (eNotificationRequired())
@@ -1365,7 +1419,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getEdgeMax() {
+	@Override
+    public int getEdgeMax() {
         return edgeMax;
     }
 
@@ -1374,7 +1429,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setEdgeMax(int newEdgeMax) {
+	@Override
+    public void setEdgeMax(int newEdgeMax) {
         int oldEdgeMax = edgeMax;
         edgeMax = newEdgeMax;
         if (eNotificationRequired())
@@ -1386,7 +1442,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getMagieMax() {
+	@Override
+    public int getMagieMax() {
         return magieMax;
     }
 
@@ -1395,7 +1452,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setMagieMax(int newMagieMax) {
+	@Override
+    public void setMagieMax(int newMagieMax) {
         int oldMagieMax = magieMax;
         magieMax = newMagieMax;
         if (eNotificationRequired())
@@ -1407,7 +1465,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getResonanzMax() {
+	@Override
+    public int getResonanzMax() {
         return resonanzMax;
     }
 
@@ -1416,7 +1475,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setResonanzMax(int newResonanzMax) {
+	@Override
+    public void setResonanzMax(int newResonanzMax) {
         int oldResonanzMax = resonanzMax;
         resonanzMax = newResonanzMax;
         if (eNotificationRequired())
@@ -1428,7 +1488,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getEssenzMax() {
+	@Override
+    public int getEssenzMax() {
         return essenzMax;
     }
 
@@ -1437,7 +1498,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setEssenzMax(int newEssenzMax) {
+	@Override
+    public void setEssenzMax(int newEssenzMax) {
         int oldEssenzMax = essenzMax;
         essenzMax = newEssenzMax;
         if (eNotificationRequired())
@@ -1449,7 +1511,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getLaufen() {
+	@Override
+    public int getLaufen() {
         return laufen;
     }
 
@@ -1458,7 +1521,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setLaufen(int newLaufen) {
+	@Override
+    public void setLaufen(int newLaufen) {
         int oldLaufen = laufen;
         laufen = newLaufen;
         if (eNotificationRequired())
@@ -1470,7 +1534,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getRennen() {
+	@Override
+    public int getRennen() {
         return rennen;
     }
 
@@ -1479,7 +1544,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setRennen(int newRennen) {
+	@Override
+    public void setRennen(int newRennen) {
         int oldRennen = rennen;
         rennen = newRennen;
         if (eNotificationRequired())
@@ -1491,7 +1557,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getSprinten() {
+	@Override
+    public int getSprinten() {
         return sprinten;
     }
 
@@ -1500,7 +1567,8 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSprinten(int newSprinten) {
+	@Override
+    public void setSprinten(int newSprinten) {
         int oldSprinten = sprinten;
         sprinten = newSprinten;
         if (eNotificationRequired())
@@ -1512,6 +1580,7 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Nahkampfwaffe getAngriff() {
         return angriff;
     }
@@ -1536,6 +1605,7 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAngriff(Nahkampfwaffe newAngriff) {
         if (newAngriff != angriff) {
             NotificationChain msgs = null;
@@ -2064,7 +2134,7 @@ public class SpeziesImpl extends MinimalEObjectImpl.Container implements Spezies
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

@@ -20,12 +20,12 @@ import de.urszeidler.eclipse.shr5.TransferAmount;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TransferAmountImpl#getSource <em>Source</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TransferAmountImpl#getDest <em>Dest</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.TransferAmountImpl#getAmountToTransfer <em>Amount To Transfer</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -94,6 +94,7 @@ public class TransferAmountImpl extends CredstickTransactionImpl implements Tran
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Credstick getSource() {
         if (source != null && source.eIsProxy()) {
             InternalEObject oldSource = (InternalEObject)source;
@@ -120,6 +121,7 @@ public class TransferAmountImpl extends CredstickTransactionImpl implements Tran
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSource(Credstick newSource) {
         Credstick oldSource = source;
         source = newSource;
@@ -132,6 +134,7 @@ public class TransferAmountImpl extends CredstickTransactionImpl implements Tran
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Credstick getDest() {
         if (dest != null && dest.eIsProxy()) {
             InternalEObject oldDest = (InternalEObject)dest;
@@ -158,6 +161,7 @@ public class TransferAmountImpl extends CredstickTransactionImpl implements Tran
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDest(Credstick newDest) {
         Credstick oldDest = dest;
         dest = newDest;
@@ -170,6 +174,7 @@ public class TransferAmountImpl extends CredstickTransactionImpl implements Tran
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public BigDecimal getAmountToTransfer() {
         return amountToTransfer;
     }
@@ -179,6 +184,7 @@ public class TransferAmountImpl extends CredstickTransactionImpl implements Tran
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAmountToTransfer(BigDecimal newAmountToTransfer) {
         BigDecimal oldAmountToTransfer = amountToTransfer;
         amountToTransfer = newAmountToTransfer;
@@ -275,7 +281,7 @@ public class TransferAmountImpl extends CredstickTransactionImpl implements Tran
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (amountToTransfer: ");
         result.append(amountToTransfer);
         result.append(')');

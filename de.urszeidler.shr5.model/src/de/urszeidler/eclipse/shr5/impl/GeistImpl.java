@@ -39,6 +39,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getParentId <em>Parent Id</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getLocalizations <em>Localizations</em>}</li>
@@ -87,7 +88,6 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getPowers <em>Powers</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GeistImpl#getOptionalPowers <em>Optional Powers</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -726,6 +726,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -735,6 +736,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -747,6 +749,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.GEIST__LOCALIZATIONS);
@@ -759,6 +762,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getPage() {
         return page;
     }
@@ -768,6 +772,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
@@ -780,6 +785,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
@@ -806,6 +812,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
@@ -904,6 +911,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getKonstitutionBasis() {
         return konstitutionBasis;
     }
@@ -913,6 +921,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setKonstitutionBasis(int newKonstitutionBasis) {
         int oldKonstitutionBasis = konstitutionBasis;
         konstitutionBasis = newKonstitutionBasis;
@@ -925,6 +934,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getGeschicklichkeitBasis() {
         return geschicklichkeitBasis;
     }
@@ -934,6 +944,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setGeschicklichkeitBasis(int newGeschicklichkeitBasis) {
         int oldGeschicklichkeitBasis = geschicklichkeitBasis;
         geschicklichkeitBasis = newGeschicklichkeitBasis;
@@ -946,6 +957,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getReaktionBasis() {
         return reaktionBasis;
     }
@@ -955,6 +967,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setReaktionBasis(int newReaktionBasis) {
         int oldReaktionBasis = reaktionBasis;
         reaktionBasis = newReaktionBasis;
@@ -967,6 +980,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getStaerkeBasis() {
         return staerkeBasis;
     }
@@ -976,6 +990,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setStaerkeBasis(int newStaerkeBasis) {
         int oldStaerkeBasis = staerkeBasis;
         staerkeBasis = newStaerkeBasis;
@@ -988,6 +1003,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getCharismaBasis() {
         return charismaBasis;
     }
@@ -997,6 +1013,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCharismaBasis(int newCharismaBasis) {
         int oldCharismaBasis = charismaBasis;
         charismaBasis = newCharismaBasis;
@@ -1009,6 +1026,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getWillenskraftBasis() {
         return willenskraftBasis;
     }
@@ -1018,6 +1036,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setWillenskraftBasis(int newWillenskraftBasis) {
         int oldWillenskraftBasis = willenskraftBasis;
         willenskraftBasis = newWillenskraftBasis;
@@ -1030,6 +1049,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getIntuitionBasis() {
         return intuitionBasis;
     }
@@ -1039,6 +1059,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setIntuitionBasis(int newIntuitionBasis) {
         int oldIntuitionBasis = intuitionBasis;
         intuitionBasis = newIntuitionBasis;
@@ -1051,6 +1072,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getLogikBasis() {
         return logikBasis;
     }
@@ -1060,6 +1082,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setLogikBasis(int newLogikBasis) {
         int oldLogikBasis = logikBasis;
         logikBasis = newLogikBasis;
@@ -1072,6 +1095,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<CritterKraft> getPowers() {
         if (powers == null) {
             powers = new EObjectContainmentEList<CritterKraft>(CritterKraft.class, this, Shr5Package.GEIST__POWERS);
@@ -1084,6 +1108,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<CritterKraft> getOptionalPowers() {
         if (optionalPowers == null) {
             optionalPowers = new EObjectContainmentEList<CritterKraft>(CritterKraft.class, this, Shr5Package.GEIST__OPTIONAL_POWERS);
@@ -1641,7 +1666,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (parentId: ");
         result.append(parentId);
         result.append(", page: ");
@@ -1777,6 +1802,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -1786,6 +1812,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -1798,6 +1825,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -1807,6 +1835,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -1819,6 +1848,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -1828,6 +1858,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -1932,6 +1963,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getEdgeBasis() {
         return edgeBasis;
     }
@@ -1941,6 +1973,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setEdgeBasis(int newEdgeBasis) {
         int oldEdgeBasis = edgeBasis;
         edgeBasis = newEdgeBasis;
@@ -1965,6 +1998,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getStufe() {
         return stufe;
     }
@@ -1974,6 +2008,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setStufe(int newStufe) {
         int oldStufe = stufe;
         stufe = newStufe;
@@ -1986,6 +2021,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<FertigkeitsGruppe> getSkillGroups() {
         if (skillGroups == null) {
             skillGroups = new EObjectResolvingEList<FertigkeitsGruppe>(FertigkeitsGruppe.class, this, Shr5Package.GEIST__SKILL_GROUPS);
@@ -1998,6 +2034,7 @@ public class GeistImpl extends MinimalEObjectImpl.Container implements Geist {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Fertigkeit> getSkills() {
         if (skills == null) {
             skills = new EObjectResolvingEList<Fertigkeit>(Fertigkeit.class, this, Shr5Package.GEIST__SKILLS);

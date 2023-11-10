@@ -24,11 +24,11 @@ import de.urszeidler.shr5.scripting.Scripts;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptsImpl#getStories <em>Stories</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptsImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +87,7 @@ public class ScriptsImpl extends MinimalEObjectImpl.Container implements Scripts
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Script> getStories() {
         if (stories == null) {
             stories = new EObjectContainmentEList<Script>(Script.class, this, ScriptingPackage.SCRIPTS__STORIES);
@@ -99,6 +100,7 @@ public class ScriptsImpl extends MinimalEObjectImpl.Container implements Scripts
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -108,6 +110,7 @@ public class ScriptsImpl extends MinimalEObjectImpl.Container implements Scripts
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -208,7 +211,7 @@ public class ScriptsImpl extends MinimalEObjectImpl.Container implements Scripts
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (name: ");
         result.append(name);
         result.append(')');

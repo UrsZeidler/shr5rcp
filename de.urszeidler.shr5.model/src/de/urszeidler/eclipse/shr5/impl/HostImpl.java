@@ -25,6 +25,7 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getImage <em>Image</em>}</li>
@@ -43,7 +44,6 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBaseAngriff <em>Base Angriff</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.HostImpl#getBaseSchleicher <em>Base Schleicher</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -362,6 +362,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public InterfaceModus getCurrentModus() {
         return currentModus;
     }
@@ -371,6 +372,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCurrentModus(InterfaceModus newCurrentModus) {
         InterfaceModus oldCurrentModus = currentModus;
         currentModus = newCurrentModus == null ? CURRENT_MODUS_EDEFAULT : newCurrentModus;
@@ -383,6 +385,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public PersonalAreaNetwork getPan() {
         return pan;
     }
@@ -407,6 +410,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPan(PersonalAreaNetwork newPan) {
         if (newPan != pan) {
             NotificationChain msgs = null;
@@ -446,6 +450,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getHostRating() {
         return hostRating;
     }
@@ -455,6 +460,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setHostRating(int newHostRating) {
         int oldHostRating = hostRating;
         hostRating = newHostRating;
@@ -467,6 +473,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getBaseFirewall() {
         return baseFirewall;
     }
@@ -476,6 +483,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBaseFirewall(int newBaseFirewall) {
         int oldBaseFirewall = baseFirewall;
         baseFirewall = newBaseFirewall;
@@ -488,6 +496,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getBaseDatenverarbeitung() {
         return baseDatenverarbeitung;
     }
@@ -497,6 +506,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBaseDatenverarbeitung(int newBaseDatenverarbeitung) {
         int oldBaseDatenverarbeitung = baseDatenverarbeitung;
         baseDatenverarbeitung = newBaseDatenverarbeitung;
@@ -509,6 +519,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getBaseAngriff() {
         return baseAngriff;
     }
@@ -518,6 +529,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBaseAngriff(int newBaseAngriff) {
         int oldBaseAngriff = baseAngriff;
         baseAngriff = newBaseAngriff;
@@ -530,6 +542,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getBaseSchleicher() {
         return baseSchleicher;
     }
@@ -539,6 +552,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBaseSchleicher(int newBaseSchleicher) {
         int oldBaseSchleicher = baseSchleicher;
         baseSchleicher = newBaseSchleicher;
@@ -551,6 +565,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -560,6 +575,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -572,6 +588,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -581,6 +598,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -593,6 +611,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -602,6 +621,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -896,7 +916,7 @@ public class HostImpl extends MinimalEObjectImpl.Container implements Host {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

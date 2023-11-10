@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Beschreibbar#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Beschreibbar#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Beschreibbar#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getBeschreibbar()
  * @model interface="true" abstract="true"

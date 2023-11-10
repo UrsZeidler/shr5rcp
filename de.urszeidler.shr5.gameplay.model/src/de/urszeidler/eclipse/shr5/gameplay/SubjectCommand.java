@@ -16,10 +16,10 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SubjectCommand#getSubject <em>Subject</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSubjectCommand()
  * @model abstract="true"

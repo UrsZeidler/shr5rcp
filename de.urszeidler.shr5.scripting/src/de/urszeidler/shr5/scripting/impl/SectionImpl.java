@@ -16,11 +16,11 @@ import de.urszeidler.shr5.scripting.Section;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.SectionImpl#getTitel <em>Titel</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.SectionImpl#getText <em>Text</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -89,6 +89,7 @@ public class SectionImpl extends MinimalEObjectImpl.Container implements Section
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getTitel() {
         return titel;
     }
@@ -98,6 +99,7 @@ public class SectionImpl extends MinimalEObjectImpl.Container implements Section
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setTitel(String newTitel) {
         String oldTitel = titel;
         titel = newTitel;
@@ -110,6 +112,7 @@ public class SectionImpl extends MinimalEObjectImpl.Container implements Section
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getText() {
         return text;
     }
@@ -119,6 +122,7 @@ public class SectionImpl extends MinimalEObjectImpl.Container implements Section
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setText(String newText) {
         String oldText = text;
         text = newText;
@@ -203,7 +207,7 @@ public class SectionImpl extends MinimalEObjectImpl.Container implements Section
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (titel: ");
         result.append(titel);
         result.append(", text: ");

@@ -22,12 +22,12 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifestyleToStartMoneyImpl#getNumberOfW <em>Number Of W</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifestyleToStartMoneyImpl#getMoneyFactor <em>Money Factor</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifestyleToStartMoneyImpl#getLifeStyles <em>Life Styles</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -106,6 +106,7 @@ public class LifestyleToStartMoneyImpl extends MinimalEObjectImpl.Container impl
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getNumberOfW() {
         return numberOfW;
     }
@@ -115,6 +116,7 @@ public class LifestyleToStartMoneyImpl extends MinimalEObjectImpl.Container impl
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setNumberOfW(int newNumberOfW) {
         int oldNumberOfW = numberOfW;
         numberOfW = newNumberOfW;
@@ -127,6 +129,7 @@ public class LifestyleToStartMoneyImpl extends MinimalEObjectImpl.Container impl
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getMoneyFactor() {
         return moneyFactor;
     }
@@ -136,6 +139,7 @@ public class LifestyleToStartMoneyImpl extends MinimalEObjectImpl.Container impl
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMoneyFactor(int newMoneyFactor) {
         int oldMoneyFactor = moneyFactor;
         moneyFactor = newMoneyFactor;
@@ -148,6 +152,7 @@ public class LifestyleToStartMoneyImpl extends MinimalEObjectImpl.Container impl
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Lifestyle> getLifeStyles() {
         if (lifeStyles == null) {
             lifeStyles = new EObjectResolvingEList<Lifestyle>(Lifestyle.class, this, Shr5managementPackage.LIFESTYLE_TO_START_MONEY__LIFE_STYLES);
@@ -244,7 +249,7 @@ public class LifestyleToStartMoneyImpl extends MinimalEObjectImpl.Container impl
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (numberOfW: ");
         result.append(numberOfW);
         result.append(", moneyFactor: ");

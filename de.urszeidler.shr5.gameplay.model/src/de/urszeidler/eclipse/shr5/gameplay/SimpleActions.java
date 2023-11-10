@@ -11,11 +11,11 @@ package de.urszeidler.eclipse.shr5.gameplay;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SimpleActions#getAction1 <em>Action1</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SimpleActions#getAction2 <em>Action2</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSimpleActions()
  * @model

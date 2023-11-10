@@ -31,6 +31,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModuleImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModuleImpl#getImage <em>Image</em>}</li>
@@ -44,7 +45,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModuleImpl#getModuleType <em>Module Type</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.LifeModuleImpl#getTime <em>Time</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -263,6 +263,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -272,6 +273,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -284,6 +286,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -293,6 +296,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -305,6 +309,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -314,6 +319,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -326,6 +332,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -335,6 +342,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -347,6 +355,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5managementPackage.LIFE_MODULE__LOCALIZATIONS);
@@ -359,6 +368,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getPage() {
         return page;
     }
@@ -368,6 +378,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
@@ -380,6 +391,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
@@ -406,6 +418,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
@@ -418,6 +431,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getKarmaCost() {
         return karmaCost;
     }
@@ -427,6 +441,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setKarmaCost(int newKarmaCost) {
         int oldKarmaCost = karmaCost;
         karmaCost = newKarmaCost;
@@ -439,6 +454,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<ModuleChange> getCharacterChanges() {
         if (characterChanges == null) {
             characterChanges = new EObjectContainmentEList<ModuleChange>(ModuleChange.class, this, Shr5managementPackage.LIFE_MODULE__CHARACTER_CHANGES);
@@ -451,6 +467,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public LifeModuleType getModuleType() {
         return moduleType;
     }
@@ -460,6 +477,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setModuleType(LifeModuleType newModuleType) {
         LifeModuleType oldModuleType = moduleType;
         moduleType = newModuleType == null ? MODULE_TYPE_EDEFAULT : newModuleType;
@@ -472,6 +490,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getTime() {
         return time;
     }
@@ -481,6 +500,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setTime(int newTime) {
         int oldTime = time;
         time = newTime;
@@ -723,7 +743,7 @@ public class LifeModuleImpl extends MinimalEObjectImpl.Container implements Life
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

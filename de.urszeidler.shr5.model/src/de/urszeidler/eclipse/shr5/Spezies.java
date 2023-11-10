@@ -10,6 +10,7 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Spezies#getKonstitutionMin <em>Konstitution Min</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Spezies#getGeschicklichkeitMin <em>Geschicklichkeit Min</em>}</li>
@@ -40,7 +41,6 @@ package de.urszeidler.eclipse.shr5;
  *   <li>{@link de.urszeidler.eclipse.shr5.Spezies#getSprinten <em>Sprinten</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Spezies#getAngriff <em>Angriff</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getSpezies()
  * @model

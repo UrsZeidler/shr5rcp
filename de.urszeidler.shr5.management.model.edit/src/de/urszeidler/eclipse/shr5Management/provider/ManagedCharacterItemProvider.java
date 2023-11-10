@@ -629,6 +629,16 @@ public class ManagedCharacterItemProvider
 
         newChildDescriptors.add
             (createChildParameter
+                (Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR,
+                 Shr5Factory.eINSTANCE.createMiniGrenate()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.MANAGED_CHARACTER__INVENTAR,
+                 Shr5Factory.eINSTANCE.createGranate()));
+
+        newChildDescriptors.add
+            (createChildParameter
                 (Shr5managementPackage.Literals.MANAGED_CHARACTER__CONTRACTS,
                  Shr5Factory.eINSTANCE.createVertrag()));
 

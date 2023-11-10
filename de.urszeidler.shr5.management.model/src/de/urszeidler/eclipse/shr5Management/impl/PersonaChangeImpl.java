@@ -49,10 +49,10 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaChangeImpl#getChangeable <em>Changeable</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -91,6 +91,7 @@ public class PersonaChangeImpl extends PersonaValueChangeImpl implements Persona
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Erlernbar getChangeable() {
         if (changeable != null && changeable.eIsProxy()) {
             InternalEObject oldChangeable = (InternalEObject)changeable;

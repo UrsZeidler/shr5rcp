@@ -28,6 +28,7 @@ import de.urszeidler.eclipse.shr5Management.SpecialType;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.SpecialTypeImpl#getSelectableTypes <em>Selectable Types</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.SpecialTypeImpl#getSkillValue <em>Skill Value</em>}</li>
@@ -35,7 +36,6 @@ import de.urszeidler.eclipse.shr5Management.SpecialType;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.SpecialTypeImpl#getSelectableSkills <em>Selectable Skills</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.SpecialTypeImpl#getSelectableSkillGroups <em>Selectable Skill Groups</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -134,7 +134,8 @@ public abstract class SpecialTypeImpl extends PriorityCategorieImpl implements S
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EClass getSelectableTypes() {
+	@Override
+    public EClass getSelectableTypes() {
         if (selectableTypes != null && selectableTypes.eIsProxy()) {
             InternalEObject oldSelectableTypes = (InternalEObject)selectableTypes;
             selectableTypes = (EClass)eResolveProxy(oldSelectableTypes);
@@ -160,7 +161,8 @@ public abstract class SpecialTypeImpl extends PriorityCategorieImpl implements S
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSelectableTypes(EClass newSelectableTypes) {
+	@Override
+    public void setSelectableTypes(EClass newSelectableTypes) {
         EClass oldSelectableTypes = selectableTypes;
         selectableTypes = newSelectableTypes;
         if (eNotificationRequired())
@@ -172,7 +174,8 @@ public abstract class SpecialTypeImpl extends PriorityCategorieImpl implements S
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getSkillValue() {
+	@Override
+    public int getSkillValue() {
         return skillValue;
     }
 
@@ -181,7 +184,8 @@ public abstract class SpecialTypeImpl extends PriorityCategorieImpl implements S
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSkillValue(int newSkillValue) {
+	@Override
+    public void setSkillValue(int newSkillValue) {
         int oldSkillValue = skillValue;
         skillValue = newSkillValue;
         if (eNotificationRequired())
@@ -193,7 +197,8 @@ public abstract class SpecialTypeImpl extends PriorityCategorieImpl implements S
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getSkillNumber() {
+	@Override
+    public int getSkillNumber() {
         return skillNumber;
     }
 
@@ -202,7 +207,8 @@ public abstract class SpecialTypeImpl extends PriorityCategorieImpl implements S
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSkillNumber(int newSkillNumber) {
+	@Override
+    public void setSkillNumber(int newSkillNumber) {
         int oldSkillNumber = skillNumber;
         skillNumber = newSkillNumber;
         if (eNotificationRequired())
@@ -214,7 +220,8 @@ public abstract class SpecialTypeImpl extends PriorityCategorieImpl implements S
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<Fertigkeit> getSelectableSkills() {
+	@Override
+    public EList<Fertigkeit> getSelectableSkills() {
         if (selectableSkills == null) {
             selectableSkills = new EObjectResolvingEList<Fertigkeit>(Fertigkeit.class, this, Shr5managementPackage.SPECIAL_TYPE__SELECTABLE_SKILLS);
         }
@@ -226,7 +233,8 @@ public abstract class SpecialTypeImpl extends PriorityCategorieImpl implements S
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<FertigkeitsGruppe> getSelectableSkillGroups() {
+	@Override
+    public EList<FertigkeitsGruppe> getSelectableSkillGroups() {
         if (selectableSkillGroups == null) {
             selectableSkillGroups = new EObjectResolvingEList<FertigkeitsGruppe>(FertigkeitsGruppe.class, this, Shr5managementPackage.SPECIAL_TYPE__SELECTABLE_SKILL_GROUPS);
         }
@@ -393,7 +401,7 @@ public abstract class SpecialTypeImpl extends PriorityCategorieImpl implements S
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (skillValue: ");
         result.append(skillValue);
         result.append(", skillNumber: ");

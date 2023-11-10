@@ -15,13 +15,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.KoerperPersona#getKoerperMods <em>Koerper Mods</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.KoerperPersona#getEigenschaften <em>Eigenschaften</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.KoerperPersona#getZustandKoerperlich <em>Zustand Koerperlich</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.KoerperPersona#getZustandGeistig <em>Zustand Geistig</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getKoerperPersona()
  * @model abstract="true"

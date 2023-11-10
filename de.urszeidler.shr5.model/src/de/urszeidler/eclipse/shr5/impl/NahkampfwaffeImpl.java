@@ -15,10 +15,10 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.NahkampfwaffeImpl#getReichweite <em>Reichweite</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -67,7 +67,8 @@ public class NahkampfwaffeImpl extends AbstaktWaffeImpl implements Nahkampfwaffe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getReichweite() {
+	@Override
+    public int getReichweite() {
         return reichweite;
     }
 
@@ -76,7 +77,8 @@ public class NahkampfwaffeImpl extends AbstaktWaffeImpl implements Nahkampfwaffe
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setReichweite(int newReichweite) {
+	@Override
+    public void setReichweite(int newReichweite) {
         int oldReichweite = reichweite;
         reichweite = newReichweite;
         if (eNotificationRequired())
@@ -150,7 +152,7 @@ public class NahkampfwaffeImpl extends AbstaktWaffeImpl implements Nahkampfwaffe
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (reichweite: ");
         result.append(reichweite);
         result.append(')');

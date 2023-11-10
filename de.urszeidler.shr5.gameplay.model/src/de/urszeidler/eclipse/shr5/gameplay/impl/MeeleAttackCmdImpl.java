@@ -28,10 +28,10 @@ import de.urszeidler.shr5.gameplay.dice.W6Dice;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.MeeleAttackCmdImpl#getWeapon <em>Weapon</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -70,6 +70,7 @@ public class MeeleAttackCmdImpl extends OpposedSkillTestCmdImpl implements Meele
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Nahkampfwaffe getWeapon() {
         if (weapon != null && weapon.eIsProxy()) {
             InternalEObject oldWeapon = (InternalEObject)weapon;

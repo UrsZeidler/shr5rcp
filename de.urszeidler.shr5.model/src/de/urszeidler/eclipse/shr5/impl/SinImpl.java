@@ -22,10 +22,10 @@ import de.urszeidler.eclipse.shr5.Sin;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SinImpl#getLicences <em>Licences</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -64,6 +64,7 @@ public class SinImpl extends FakeableImpl implements Sin {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Lizenz> getLicences() {
         if (licences == null) {
             licences = new EObjectWithInverseResolvingEList<Lizenz>(Lizenz.class, this, Shr5Package.SIN__LICENCES, Shr5Package.LIZENZ__LIZENZ_TRAEGER);

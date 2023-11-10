@@ -12,8 +12,6 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Rigger Console</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

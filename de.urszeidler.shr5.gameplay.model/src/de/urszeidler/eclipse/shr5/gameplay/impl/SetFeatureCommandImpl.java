@@ -31,6 +31,7 @@ import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#isExecuted <em>Executed</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getSubCommands <em>Sub Commands</em>}</li>
@@ -43,7 +44,6 @@ import de.urszeidler.eclipse.shr5.gameplay.util.CommandCallback;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getObject <em>Object</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SetFeatureCommandImpl#getFeature <em>Feature</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -243,6 +243,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isExecuted() {
         return executed;
     }
@@ -252,6 +253,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setExecuted(boolean newExecuted) {
         boolean oldExecuted = executed;
         executed = newExecuted;
@@ -264,6 +266,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Command> getSubCommands() {
         if (subCommands == null) {
             subCommands = new EObjectContainmentEList<Command>(Command.class, this, GameplayPackage.SET_FEATURE_COMMAND__SUB_COMMANDS);
@@ -276,6 +279,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getDate() {
         return date;
     }
@@ -285,6 +289,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDate(Date newDate) {
         Date oldDate = date;
         date = newDate;
@@ -297,6 +302,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CommandCallback getCmdCallback() {
         return cmdCallback;
     }
@@ -306,6 +312,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCmdCallback(CommandCallback newCmdCallback) {
         CommandCallback oldCmdCallback = cmdCallback;
         cmdCallback = newCmdCallback;
@@ -320,6 +327,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void unsetCmdCallback() {
         CommandCallback oldCmdCallback = cmdCallback;
         boolean oldCmdCallbackESet = cmdCallbackESet;
@@ -334,6 +342,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isSetCmdCallback() {
         return cmdCallbackESet;
     }
@@ -343,6 +352,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isExecuting() {
         return executing;
     }
@@ -352,6 +362,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setExecuting(boolean newExecuting) {
         boolean oldExecuting = executing;
         executing = newExecuting;
@@ -374,6 +385,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isHidden() {
         return hidden;
     }
@@ -383,6 +395,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setHidden(boolean newHidden) {
         boolean oldHidden = hidden;
         hidden = newHidden;
@@ -395,6 +408,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Object getValue() {
         return value;
     }
@@ -404,6 +418,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setValue(Object newValue) {
         Object oldValue = value;
         value = newValue;
@@ -416,6 +431,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EObject getObject() {
         if (object != null && object.eIsProxy()) {
             InternalEObject oldObject = (InternalEObject)object;
@@ -442,6 +458,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setObject(EObject newObject) {
         EObject oldObject = object;
         object = newObject;
@@ -454,6 +471,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EStructuralFeature getFeature() {
         if (feature != null && feature.eIsProxy()) {
             InternalEObject oldFeature = (InternalEObject)feature;
@@ -480,6 +498,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setFeature(EStructuralFeature newFeature) {
         EStructuralFeature oldFeature = feature;
         feature = newFeature;
@@ -515,6 +534,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void undo() {
         // TODO: implement this method
         // Ensure that you remove @generated or mark it @generated NOT
@@ -708,7 +728,7 @@ public class SetFeatureCommandImpl extends MinimalEObjectImpl.Container implemen
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (executed: ");
         result.append(executed);
         result.append(", date: ");

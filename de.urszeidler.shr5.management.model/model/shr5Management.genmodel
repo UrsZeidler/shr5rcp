@@ -4,7 +4,7 @@
     modelPluginID="de.urszeidler.shr5.management.model" modelName="Shr5Management"
     modelPluginClass="de.urszeidler.eclipse.shr5Management.ModelPlugin" generateSchema="true"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../de.urszeidler.shr5.model/model/shr5.genmodel#//shr5"
+    complianceLevel="11.0" copyrightFields="false" usedGenPackages="../../de.urszeidler.shr5.model/model/shr5.genmodel#//shr5"
     operationReflection="true" importOrganizing="true">
   <foreignModel>shr5Management.ecore</foreignModel>
   <genPackages prefix="Shr5management" basePackage="de.urszeidler.eclipse" disposableProviderFactory="true"

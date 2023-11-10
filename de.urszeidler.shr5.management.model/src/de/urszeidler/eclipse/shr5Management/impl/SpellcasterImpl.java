@@ -22,10 +22,10 @@ import de.urszeidler.eclipse.shr5Management.Spellcaster;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.SpellcasterImpl#getSpellPoints <em>Spell Points</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -74,7 +74,8 @@ public class SpellcasterImpl extends AdeptImpl implements Spellcaster {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getSpellPoints() {
+	@Override
+    public int getSpellPoints() {
         return spellPoints;
     }
 
@@ -83,7 +84,8 @@ public class SpellcasterImpl extends AdeptImpl implements Spellcaster {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSpellPoints(int newSpellPoints) {
+	@Override
+    public void setSpellPoints(int newSpellPoints) {
         int oldSpellPoints = spellPoints;
         spellPoints = newSpellPoints;
         if (eNotificationRequired())
@@ -191,7 +193,7 @@ public class SpellcasterImpl extends AdeptImpl implements Spellcaster {
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (spellPoints: ");
         result.append(spellPoints);
         result.append(')');

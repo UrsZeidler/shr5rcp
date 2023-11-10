@@ -13,8 +13,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Karma Generator</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

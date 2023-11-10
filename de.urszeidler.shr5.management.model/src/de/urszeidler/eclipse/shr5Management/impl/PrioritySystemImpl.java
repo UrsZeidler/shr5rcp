@@ -24,11 +24,11 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PrioritySystemImpl#getPriorities <em>Priorities</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PrioritySystemImpl#getKarmaPoints <em>Karma Points</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -86,7 +86,8 @@ public abstract class PrioritySystemImpl extends CharacterGeneratorSystemImpl im
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<PriorityCategorie> getPriorities() {
+	@Override
+    public EList<PriorityCategorie> getPriorities() {
         if (priorities == null) {
             priorities = new EObjectContainmentEList<PriorityCategorie>(PriorityCategorie.class, this, Shr5managementPackage.PRIORITY_SYSTEM__PRIORITIES);
         }
@@ -98,7 +99,8 @@ public abstract class PrioritySystemImpl extends CharacterGeneratorSystemImpl im
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getKarmaPoints() {
+	@Override
+    public int getKarmaPoints() {
         return karmaPoints;
     }
 
@@ -107,7 +109,8 @@ public abstract class PrioritySystemImpl extends CharacterGeneratorSystemImpl im
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setKarmaPoints(int newKarmaPoints) {
+	@Override
+    public void setKarmaPoints(int newKarmaPoints) {
         int oldKarmaPoints = karmaPoints;
         karmaPoints = newKarmaPoints;
         if (eNotificationRequired())
@@ -207,7 +210,7 @@ public abstract class PrioritySystemImpl extends CharacterGeneratorSystemImpl im
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (karmaPoints: ");
         result.append(karmaPoints);
         result.append(')');

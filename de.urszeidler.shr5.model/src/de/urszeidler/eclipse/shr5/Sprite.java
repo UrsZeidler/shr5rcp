@@ -10,6 +10,7 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Sprite#getStufe <em>Stufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Sprite#getAngriffMod <em>Angriff Mod</em>}</li>
@@ -18,7 +19,6 @@ package de.urszeidler.eclipse.shr5;
  *   <li>{@link de.urszeidler.eclipse.shr5.Sprite#getFirewallMod <em>Firewall Mod</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Sprite#getInitativeMod <em>Initative Mod</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getSprite()
  * @model

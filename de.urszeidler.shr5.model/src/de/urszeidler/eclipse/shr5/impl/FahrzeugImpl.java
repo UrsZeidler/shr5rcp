@@ -44,6 +44,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getImage <em>Image</em>}</li>
@@ -74,7 +75,6 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getWeaponMounts <em>Weapon Mounts</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FahrzeugImpl#getSensorArray <em>Sensor Array</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -540,6 +540,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -549,6 +550,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -561,6 +563,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -570,6 +573,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -582,6 +586,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.FAHRZEUG__LOCALIZATIONS);
@@ -594,6 +599,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -603,6 +609,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -615,6 +622,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -624,6 +632,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -636,6 +645,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getPage() {
         return page;
     }
@@ -645,6 +655,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
@@ -657,6 +668,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
@@ -683,6 +695,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
@@ -713,6 +726,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getVerfuegbarkeit() {
         return verfuegbarkeit;
     }
@@ -722,6 +736,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setVerfuegbarkeit(String newVerfuegbarkeit) {
         String oldVerfuegbarkeit = verfuegbarkeit;
         verfuegbarkeit = newVerfuegbarkeit;
@@ -734,6 +749,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public BigDecimal getWertValue() {
         return wertValue;
     }
@@ -758,6 +774,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Fertigkeit getFertigkeit() {
         if (fertigkeit != null && fertigkeit.eIsProxy()) {
             InternalEObject oldFertigkeit = (InternalEObject)fertigkeit;
@@ -784,6 +801,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setFertigkeit(Fertigkeit newFertigkeit) {
         Fertigkeit oldFertigkeit = fertigkeit;
         fertigkeit = newFertigkeit;
@@ -796,6 +814,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Spezialisierung getSpezialisierung() {
         if (spezialisierung != null && spezialisierung.eIsProxy()) {
             InternalEObject oldSpezialisierung = (InternalEObject)spezialisierung;
@@ -822,6 +841,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSpezialisierung(Spezialisierung newSpezialisierung) {
         Spezialisierung oldSpezialisierung = spezialisierung;
         spezialisierung = newSpezialisierung;
@@ -834,6 +854,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<AttributModifikatorWert> getMods() {
         if (mods == null) {
             mods = new EObjectContainmentWithInverseEList<AttributModifikatorWert>(AttributModifikatorWert.class, this, Shr5Package.FAHRZEUG__MODS, Shr5Package.ATTRIBUT_MODIFIKATOR_WERT__MODIFIZIERTES);
@@ -856,6 +877,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getCapacityFeature() {
         EReference capacityFeature = basicGetCapacityFeature();
         return capacityFeature != null && capacityFeature.eIsProxy() ? (EReference)eResolveProxy((InternalEObject)capacityFeature) : capacityFeature;
@@ -898,6 +920,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getHandling() {
         return handling;
     }
@@ -907,6 +930,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setHandling(int newHandling) {
         int oldHandling = handling;
         handling = newHandling;
@@ -919,6 +943,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getGeschwindigkeit() {
         return geschwindigkeit;
     }
@@ -928,6 +953,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setGeschwindigkeit(int newGeschwindigkeit) {
         int oldGeschwindigkeit = geschwindigkeit;
         geschwindigkeit = newGeschwindigkeit;
@@ -940,6 +966,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getBeschleunigung() {
         return beschleunigung;
     }
@@ -949,6 +976,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschleunigung(int newBeschleunigung) {
         int oldBeschleunigung = beschleunigung;
         beschleunigung = newBeschleunigung;
@@ -961,6 +989,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getRumpf() {
         return rumpf;
     }
@@ -970,6 +999,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setRumpf(int newRumpf) {
         int oldRumpf = rumpf;
         rumpf = newRumpf;
@@ -982,6 +1012,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getPilot() {
         return pilot;
     }
@@ -991,6 +1022,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPilot(int newPilot) {
         int oldPilot = pilot;
         pilot = newPilot;
@@ -1003,6 +1035,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getSensor() {
         return sensor;
     }
@@ -1012,6 +1045,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSensor(int newSensor) {
         int oldSensor = sensor;
         sensor = newSensor;
@@ -1024,6 +1058,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getFahrzeugTyp() {
         return fahrzeugTyp;
     }
@@ -1033,6 +1068,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setFahrzeugTyp(String newFahrzeugTyp) {
         String oldFahrzeugTyp = fahrzeugTyp;
         fahrzeugTyp = newFahrzeugTyp;
@@ -1045,6 +1081,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<FahrzeugModifikation> getModifizierungen() {
         if (modifizierungen == null) {
             modifizierungen = new EObjectContainmentEList<FahrzeugModifikation>(FahrzeugModifikation.class, this, Shr5Package.FAHRZEUG__MODIFIZIERUNGEN);
@@ -1057,6 +1094,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getPanzer() {
         return panzer;
     }
@@ -1066,6 +1104,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPanzer(int newPanzer) {
         int oldPanzer = panzer;
         panzer = newPanzer;
@@ -1088,6 +1127,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SensorArray getSensorArray() {
         return sensorArray;
     }
@@ -1112,6 +1152,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSensorArray(SensorArray newSensorArray) {
         if (newSensorArray != sensorArray) {
             NotificationChain msgs = null;
@@ -1657,7 +1698,7 @@ public abstract class FahrzeugImpl extends MinimalEObjectImpl.Container implemen
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

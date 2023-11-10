@@ -19,11 +19,11 @@ import de.urszeidler.eclipse.shr5.Sin;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.LizenzImpl#getLizenGegenstand <em>Lizen Gegenstand</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.LizenzImpl#getLizenzTraeger <em>Lizenz Traeger</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -82,6 +82,7 @@ public class LizenzImpl extends FakeableImpl implements Lizenz {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getLizenGegenstand() {
         return lizenGegenstand;
     }
@@ -91,6 +92,7 @@ public class LizenzImpl extends FakeableImpl implements Lizenz {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setLizenGegenstand(String newLizenGegenstand) {
         String oldLizenGegenstand = lizenGegenstand;
         lizenGegenstand = newLizenGegenstand;
@@ -103,6 +105,7 @@ public class LizenzImpl extends FakeableImpl implements Lizenz {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Sin getLizenzTraeger() {
         if (lizenzTraeger != null && lizenzTraeger.eIsProxy()) {
             InternalEObject oldLizenzTraeger = (InternalEObject)lizenzTraeger;
@@ -144,6 +147,7 @@ public class LizenzImpl extends FakeableImpl implements Lizenz {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setLizenzTraeger(Sin newLizenzTraeger) {
         if (newLizenzTraeger != lizenzTraeger) {
             NotificationChain msgs = null;
@@ -266,7 +270,7 @@ public class LizenzImpl extends FakeableImpl implements Lizenz {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (lizenGegenstand: ");
         result.append(lizenGegenstand);
         result.append(')');

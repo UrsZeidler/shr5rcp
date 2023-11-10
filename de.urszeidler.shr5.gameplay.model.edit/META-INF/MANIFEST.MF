@@ -7,11 +7,17 @@ Bundle-ClassPath: .
 Bundle-Activator: de.urszeidler.eclipse.shr5.gameplay.provider.GameplayEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: de.urszeidler.eclipse.shr5.gameplay.provider,
  de.urszeidler.eclipse.shr5.gameplay.provider.util
 Require-Bundle: org.eclipse.core.runtime,
  de.urszeidler.shr5.gameplay.model;visibility:=reexport,
- de.urszeidler.shr5.runtime.edit;visibility:=reexport
+ org.eclipse.emf.edit;visibility:=reexport,
+ de.urszeidler.shr5.runtime;visibility:=reexport,
+ de.urszeidler.shr5.runtime.edit;visibility:=reexport,
+ de.urszeidler.shr5.model;visibility:=reexport,
+ de.urszeidler.shr5.model.edit;visibility:=reexport,
+ de.urszeidler.shr5.management.model;visibility:=reexport,
+ de.urszeidler.shr5.management.model.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: de.urszeidler.shr5.gameplay.model.edit

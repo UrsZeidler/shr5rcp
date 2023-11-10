@@ -764,6 +764,21 @@ public class PackItemProvider
             (createChildParameter
                 (Shr5managementPackage.Literals.PACK__ITEMS,
                  Shr5Factory.eINSTANCE.createFahrzeugErweiterung()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createMiniGrenate()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createGranate()));
+
+        newChildDescriptors.add
+            (createChildParameter
+                (Shr5managementPackage.Literals.PACK__ITEMS,
+                 Shr5Factory.eINSTANCE.createSourceLink()));
     }
 
     /**

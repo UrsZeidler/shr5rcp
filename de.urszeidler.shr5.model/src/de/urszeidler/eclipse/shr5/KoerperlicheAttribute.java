@@ -10,13 +10,13 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getKonstitution <em>Konstitution</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getGeschicklichkeit <em>Geschicklichkeit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getReaktion <em>Reaktion</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.KoerperlicheAttribute#getStaerke <em>Staerke</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getKoerperlicheAttribute()
  * @model interface="true" abstract="true"

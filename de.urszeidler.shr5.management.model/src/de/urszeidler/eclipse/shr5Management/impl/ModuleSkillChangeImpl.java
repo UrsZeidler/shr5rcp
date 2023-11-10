@@ -20,10 +20,10 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ModuleSkillChangeImpl#getSkill <em>Skill</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +87,7 @@ public class ModuleSkillChangeImpl extends ModuleTypeChangeImpl<Fertigkeit> impl
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Fertigkeit getSkill() {
         if (skill != null && skill.eIsProxy()) {
             InternalEObject oldSkill = (InternalEObject)skill;
@@ -113,6 +114,7 @@ public class ModuleSkillChangeImpl extends ModuleTypeChangeImpl<Fertigkeit> impl
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSkill(Fertigkeit newSkill) {
         Fertigkeit oldSkill = skill;
         skill = newSkill;

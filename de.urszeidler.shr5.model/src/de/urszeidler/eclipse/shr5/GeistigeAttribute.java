@@ -10,13 +10,13 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getCharisma <em>Charisma</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getWillenskraft <em>Willenskraft</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getIntuition <em>Intuition</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.GeistigeAttribute#getLogik <em>Logik</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getGeistigeAttribute()
  * @model interface="true" abstract="true"

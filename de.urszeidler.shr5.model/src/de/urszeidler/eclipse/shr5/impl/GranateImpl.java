@@ -22,11 +22,11 @@ import de.urszeidler.eclipse.shr5.Substance;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GranateImpl#getBlast <em>Blast</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.GranateImpl#getChemical <em>Chemical</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -85,6 +85,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBlast() {
         return blast;
     }
@@ -94,6 +95,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBlast(String newBlast) {
         String oldBlast = blast;
         blast = newBlast;
@@ -106,6 +108,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Substance getChemical() {
         return chemical;
     }
@@ -137,6 +140,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setChemical(Substance newChemical) {
         if (newChemical != chemical) {
             NotificationChain msgs = null;
@@ -276,7 +280,7 @@ public class GranateImpl extends WurfwaffeImpl implements Granate {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (blast: ");
         result.append(blast);
         result.append(')');

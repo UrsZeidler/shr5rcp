@@ -24,6 +24,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DefaultWifiImpl#getMatrixZustandMax <em>Matrix Zustand Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DefaultWifiImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
@@ -33,7 +34,6 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DefaultWifiImpl#getPan <em>Pan</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DefaultWifiImpl#getDeviceRating <em>Device Rating</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -193,6 +193,7 @@ public class DefaultWifiImpl extends AbstraktGegenstandImpl implements DefaultWi
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public InterfaceModus getCurrentModus() {
         return currentModus;
     }
@@ -202,6 +203,7 @@ public class DefaultWifiImpl extends AbstraktGegenstandImpl implements DefaultWi
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCurrentModus(InterfaceModus newCurrentModus) {
         InterfaceModus oldCurrentModus = currentModus;
         currentModus = newCurrentModus == null ? CURRENT_MODUS_EDEFAULT : newCurrentModus;
@@ -214,6 +216,7 @@ public class DefaultWifiImpl extends AbstraktGegenstandImpl implements DefaultWi
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public PersonalAreaNetwork getPan() {
         return pan;
     }
@@ -238,6 +241,7 @@ public class DefaultWifiImpl extends AbstraktGegenstandImpl implements DefaultWi
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPan(PersonalAreaNetwork newPan) {
         if (newPan != pan) {
             NotificationChain msgs = null;
@@ -257,6 +261,7 @@ public class DefaultWifiImpl extends AbstraktGegenstandImpl implements DefaultWi
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getDeviceRating() {
         return deviceRating;
     }
@@ -266,6 +271,7 @@ public class DefaultWifiImpl extends AbstraktGegenstandImpl implements DefaultWi
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDeviceRating(int newDeviceRating) {
         int oldDeviceRating = deviceRating;
         deviceRating = newDeviceRating;
@@ -468,7 +474,7 @@ public class DefaultWifiImpl extends AbstraktGegenstandImpl implements DefaultWi
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (currentModus: ");
         result.append(currentModus);
         result.append(", deviceRating: ");

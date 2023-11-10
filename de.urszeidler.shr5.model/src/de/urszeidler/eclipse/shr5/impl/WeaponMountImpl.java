@@ -21,10 +21,10 @@ import de.urszeidler.eclipse.shr5.WeaponMount;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.WeaponMountImpl#getWeapon <em>Weapon</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,6 +63,7 @@ public class WeaponMountImpl extends FahrzeugModifikationImpl implements WeaponM
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public AbstaktWaffe getWeapon() {
         return weapon;
     }
@@ -96,6 +97,7 @@ public class WeaponMountImpl extends FahrzeugModifikationImpl implements WeaponM
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setWeapon(AbstaktWaffe newWeapon) {
         if (newWeapon != weapon) {
             NotificationChain msgs = null;

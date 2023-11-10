@@ -15,13 +15,13 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.AutoSoft#getRating <em>Rating</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AutoSoft#getSkill <em>Skill</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AutoSoft#getWeapon <em>Weapon</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AutoSoft#getModel <em>Model</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getAutoSoft()
  * @model

@@ -24,13 +24,13 @@ import de.urszeidler.eclipse.shr5Management.TrainingsTime;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRangeImpl#getStart <em>Start</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRangeImpl#getEnd <em>End</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRangeImpl#getDaysTrained <em>Days Trained</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.TrainingRangeImpl#getTrainingTime <em>Training Time</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -109,6 +109,7 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getStart() {
         return start;
     }
@@ -133,6 +134,7 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getEnd() {
         return end;
     }
@@ -219,6 +221,7 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public TrainingsTime getTrainingTime() {
         if (eContainerFeatureID() != Shr5managementPackage.TRAINING_RANGE__TRAINING_TIME) return null;
         return (TrainingsTime)eInternalContainer();
@@ -249,6 +252,7 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setTrainingTime(TrainingsTime newTrainingTime) {
         if (newTrainingTime != eInternalContainer() || (eContainerFeatureID() != Shr5managementPackage.TRAINING_RANGE__TRAINING_TIME && newTrainingTime != null)) {
             if (EcoreUtil.isAncestor(this, newTrainingTime))
@@ -400,7 +404,7 @@ public class TrainingRangeImpl extends MinimalEObjectImpl.Container implements T
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (start: ");
         result.append(start);
         result.append(", end: ");

@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.AstraleProjektion#getAstralesLimit <em>Astrales Limit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AstraleProjektion#getAstraleKonstitution <em>Astrale Konstitution</em>}</li>
@@ -25,7 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.urszeidler.eclipse.shr5.AstraleProjektion#getAstraleInitativWuerfel <em>Astrale Initativ Wuerfel</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.AstraleProjektion#getAstralePanzerung <em>Astrale Panzerung</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getAstraleProjektion()
  * @model interface="true" abstract="true"

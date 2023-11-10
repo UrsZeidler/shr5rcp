@@ -18,13 +18,13 @@ import de.urszeidler.eclipse.shr5.runtime.Vehicle;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.VehicleImpl#getVehicle <em>Vehicle</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.VehicleImpl#getVehicleCondition <em>Vehicle Condition</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.VehicleImpl#getModus <em>Modus</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.VehicleImpl#getCurrentSpeed <em>Current Speed</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -119,6 +119,7 @@ public abstract class VehicleImpl<V extends Fahrzeug> extends AbstractExtendetDa
      * @generated
      */
     @SuppressWarnings("unchecked")
+    @Override
     public V getVehicle() {
         if (vehicle != null && vehicle.eIsProxy()) {
             InternalEObject oldVehicle = (InternalEObject)vehicle;
@@ -145,6 +146,7 @@ public abstract class VehicleImpl<V extends Fahrzeug> extends AbstractExtendetDa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setVehicle(V newVehicle) {
         V oldVehicle = vehicle;
         vehicle = newVehicle;
@@ -157,6 +159,7 @@ public abstract class VehicleImpl<V extends Fahrzeug> extends AbstractExtendetDa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getVehicleCondition() {
         return vehicleCondition;
     }
@@ -166,6 +169,7 @@ public abstract class VehicleImpl<V extends Fahrzeug> extends AbstractExtendetDa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setVehicleCondition(int newVehicleCondition) {
         int oldVehicleCondition = vehicleCondition;
         vehicleCondition = newVehicleCondition;
@@ -178,6 +182,7 @@ public abstract class VehicleImpl<V extends Fahrzeug> extends AbstractExtendetDa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public InterfaceModus getModus() {
         return modus;
     }
@@ -187,6 +192,7 @@ public abstract class VehicleImpl<V extends Fahrzeug> extends AbstractExtendetDa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setModus(InterfaceModus newModus) {
         InterfaceModus oldModus = modus;
         modus = newModus == null ? MODUS_EDEFAULT : newModus;
@@ -199,6 +205,7 @@ public abstract class VehicleImpl<V extends Fahrzeug> extends AbstractExtendetDa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getCurrentSpeed() {
         return currentSpeed;
     }
@@ -208,6 +215,7 @@ public abstract class VehicleImpl<V extends Fahrzeug> extends AbstractExtendetDa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCurrentSpeed(int newCurrentSpeed) {
         int oldCurrentSpeed = currentSpeed;
         currentSpeed = newCurrentSpeed;
@@ -314,7 +322,7 @@ public abstract class VehicleImpl<V extends Fahrzeug> extends AbstractExtendetDa
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (vehicleCondition: ");
         result.append(vehicleCondition);
         result.append(", modus: ");

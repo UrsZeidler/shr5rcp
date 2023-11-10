@@ -10,12 +10,12 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Sichtverhaeltnisse#getRestlichtverstaerkung <em>Restlichtverstaerkung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Sichtverhaeltnisse#getInfrarot <em>Infrarot</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Sichtverhaeltnisse#getUltrasound <em>Ultrasound</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getSichtverhaeltnisse()
  * @model interface="true" abstract="true"

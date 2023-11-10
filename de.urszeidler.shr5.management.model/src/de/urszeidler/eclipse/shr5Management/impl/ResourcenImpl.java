@@ -22,10 +22,10 @@ import de.urszeidler.eclipse.shr5Management.util.ShadowrunManagmentTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.ResourcenImpl#getResource <em>Resource</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -74,6 +74,7 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getResource() {
         return resource;
     }
@@ -83,6 +84,7 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setResource(int newResource) {
         int oldResource = resource;
         resource = newResource;
@@ -185,7 +187,7 @@ public class ResourcenImpl extends PriorityCategorieImpl implements Resourcen {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (resource: ");
         result.append(resource);
         result.append(')');

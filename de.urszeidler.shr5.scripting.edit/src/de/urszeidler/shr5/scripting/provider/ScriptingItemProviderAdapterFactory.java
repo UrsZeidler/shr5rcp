@@ -214,6 +214,7 @@ public class ScriptingItemProviderAdapterFactory extends ScriptingAdapterFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ComposeableAdapterFactory getRootAdapterFactory() {
         return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
     }
@@ -224,6 +225,7 @@ public class ScriptingItemProviderAdapterFactory extends ScriptingAdapterFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
         this.parentAdapterFactory = parentAdapterFactory;
     }
@@ -272,6 +274,7 @@ public class ScriptingItemProviderAdapterFactory extends ScriptingAdapterFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void addListener(INotifyChangedListener notifyChangedListener) {
         changeNotifier.addListener(notifyChangedListener);
     }
@@ -282,6 +285,7 @@ public class ScriptingItemProviderAdapterFactory extends ScriptingAdapterFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void removeListener(INotifyChangedListener notifyChangedListener) {
         changeNotifier.removeListener(notifyChangedListener);
     }
@@ -292,6 +296,7 @@ public class ScriptingItemProviderAdapterFactory extends ScriptingAdapterFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void fireNotifyChanged(Notification notification) {
         changeNotifier.fireNotifyChanged(notification);
 
@@ -306,6 +311,7 @@ public class ScriptingItemProviderAdapterFactory extends ScriptingAdapterFactory
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void dispose() {
         if (scriptItemProvider != null) scriptItemProvider.dispose();
         if (placementItemProvider != null) placementItemProvider.dispose();

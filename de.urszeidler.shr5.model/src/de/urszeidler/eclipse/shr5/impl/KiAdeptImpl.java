@@ -21,10 +21,10 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.KiAdeptImpl#getKikraft <em>Kikraft</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,7 +63,8 @@ public class KiAdeptImpl extends MagischePersonaImpl implements KiAdept {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<KiKraft> getKikraft() {
+	@Override
+    public EList<KiKraft> getKikraft() {
         if (kikraft == null) {
             kikraft = new EObjectContainmentEList<KiKraft>(KiKraft.class, this, Shr5Package.KI_ADEPT__KIKRAFT);
         }

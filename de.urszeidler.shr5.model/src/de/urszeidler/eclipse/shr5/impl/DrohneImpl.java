@@ -29,6 +29,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getMatrixZustandMax <em>Matrix Zustand Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
@@ -39,7 +40,6 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getRunningPrograms <em>Running Programs</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.DrohneImpl#getStoredPrograms <em>Stored Programs</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -191,6 +191,7 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public InterfaceModus getCurrentModus() {
         return currentModus;
     }
@@ -200,6 +201,7 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCurrentModus(InterfaceModus newCurrentModus) {
         InterfaceModus oldCurrentModus = currentModus;
         currentModus = newCurrentModus == null ? CURRENT_MODUS_EDEFAULT : newCurrentModus;
@@ -223,6 +225,7 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<RiggerProgram> getRunningPrograms() {
         if (runningPrograms == null) {
             runningPrograms = new EObjectResolvingEList<RiggerProgram>(RiggerProgram.class, this, Shr5Package.DROHNE__RUNNING_PROGRAMS);
@@ -235,6 +238,7 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<RiggerProgram> getStoredPrograms() {
         if (storedPrograms == null) {
             storedPrograms = new EObjectContainmentEList<RiggerProgram>(RiggerProgram.class, this, Shr5Package.DROHNE__STORED_PROGRAMS);
@@ -416,7 +420,7 @@ public class DrohneImpl extends FahrzeugImpl implements Drohne {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (currentModus: ");
         result.append(currentModus);
         result.append(')');

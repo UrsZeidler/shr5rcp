@@ -27,6 +27,7 @@ import de.urszeidler.eclipse.shr5.Zauberer;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AspektMagierImpl#getZauber <em>Zauber</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AspektMagierImpl#getEnzug <em>Enzug</em>}</li>
@@ -35,7 +36,6 @@ import de.urszeidler.eclipse.shr5.Zauberer;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AspektMagierImpl#getTradition <em>Tradition</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.AspektMagierImpl#getAspekt <em>Aspekt</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -124,6 +124,7 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<PersonaZauber> getZauber() {
         if (zauber == null) {
             zauber = new EObjectContainmentEList<PersonaZauber>(PersonaZauber.class, this, Shr5Package.ASPEKT_MAGIER__ZAUBER);
@@ -158,6 +159,7 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MagischeTradition getTradition() {
         if (tradition != null && tradition.eIsProxy()) {
             InternalEObject oldTradition = (InternalEObject)tradition;
@@ -184,6 +186,7 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setTradition(MagischeTradition newTradition) {
         MagischeTradition oldTradition = tradition;
         tradition = newTradition;
@@ -196,6 +199,7 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<GebundenerGeist> getGebundeneGeister() {
         if (gebundeneGeister == null) {
             gebundeneGeister = new EObjectContainmentEList<GebundenerGeist>(GebundenerGeist.class, this, Shr5Package.ASPEKT_MAGIER__GEBUNDENE_GEISTER);
@@ -208,6 +212,7 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public GebundenerGeist getUngebundenerGeist() {
         return ungebundenerGeist;
     }
@@ -232,6 +237,7 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setUngebundenerGeist(GebundenerGeist newUngebundenerGeist) {
         if (newUngebundenerGeist != ungebundenerGeist) {
             NotificationChain msgs = null;
@@ -251,6 +257,7 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public FertigkeitsGruppe getAspekt() {
         if (aspekt != null && aspekt.eIsProxy()) {
             InternalEObject oldAspekt = (InternalEObject)aspekt;
@@ -277,6 +284,7 @@ public class AspektMagierImpl extends MagischePersonaImpl implements AspektMagie
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAspekt(FertigkeitsGruppe newAspekt) {
         FertigkeitsGruppe oldAspekt = aspekt;
         aspekt = newAspekt;

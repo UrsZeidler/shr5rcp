@@ -18,11 +18,11 @@ import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.ProbeMod#getValue <em>Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.ProbeMod#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getProbeMod()
  * @model

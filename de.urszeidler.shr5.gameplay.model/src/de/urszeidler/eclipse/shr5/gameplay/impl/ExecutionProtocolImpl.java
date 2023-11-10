@@ -23,10 +23,10 @@ import de.urszeidler.eclipse.shr5.gameplay.GameplayPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.ExecutionProtocolImpl#getCommands <em>Commands</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,6 +65,7 @@ public class ExecutionProtocolImpl extends MinimalEObjectImpl.Container implemen
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Command> getCommands() {
         if (commands == null) {
             commands = new EObjectContainmentEList<Command>(Command.class, this, GameplayPackage.EXECUTION_PROTOCOL__COMMANDS);

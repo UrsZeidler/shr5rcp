@@ -19,13 +19,13 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FernkampfwaffeModifikatorImpl#getWert <em>Wert</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FernkampfwaffeModifikatorImpl#getVerfuegbarkeit <em>Verfuegbarkeit</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FernkampfwaffeModifikatorImpl#getWertValue <em>Wert Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FernkampfwaffeModifikatorImpl#getEp <em>Ep</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -133,6 +133,7 @@ public class FernkampfwaffeModifikatorImpl extends AbstraktModifikatorenImpl imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getVerfuegbarkeit() {
         return verfuegbarkeit;
     }
@@ -142,6 +143,7 @@ public class FernkampfwaffeModifikatorImpl extends AbstraktModifikatorenImpl imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setVerfuegbarkeit(String newVerfuegbarkeit) {
         String oldVerfuegbarkeit = verfuegbarkeit;
         verfuegbarkeit = newVerfuegbarkeit;
@@ -154,6 +156,7 @@ public class FernkampfwaffeModifikatorImpl extends AbstraktModifikatorenImpl imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public BigDecimal getWertValue() {
         return wertValue;
     }
@@ -163,6 +166,7 @@ public class FernkampfwaffeModifikatorImpl extends AbstraktModifikatorenImpl imp
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setWertValue(BigDecimal newWertValue) {
         BigDecimal oldWertValue = wertValue;
         wertValue = newWertValue;
@@ -175,7 +179,8 @@ public class FernkampfwaffeModifikatorImpl extends AbstraktModifikatorenImpl imp
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public FeuwerwaffenErweiterung getEp() {
+	@Override
+    public FeuwerwaffenErweiterung getEp() {
         return ep;
     }
 
@@ -184,7 +189,8 @@ public class FernkampfwaffeModifikatorImpl extends AbstraktModifikatorenImpl imp
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setEp(FeuwerwaffenErweiterung newEp) {
+	@Override
+    public void setEp(FeuwerwaffenErweiterung newEp) {
         FeuwerwaffenErweiterung oldEp = ep;
         ep = newEp == null ? EP_EDEFAULT : newEp;
         if (eNotificationRequired())
@@ -318,7 +324,7 @@ public class FernkampfwaffeModifikatorImpl extends AbstraktModifikatorenImpl imp
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (verfuegbarkeit: ");
         result.append(verfuegbarkeit);
         result.append(", wertValue: ");

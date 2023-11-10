@@ -14,11 +14,11 @@ import de.urszeidler.eclipse.shr5.TimeUnits;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Intervall#getQuantities <em>Quantities</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.Intervall#getUnits <em>Units</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getIntervall()
  * @model

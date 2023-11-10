@@ -19,10 +19,10 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CyberImplantWeaponImpl#getWeapon <em>Weapon</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -61,6 +61,7 @@ public class CyberImplantWeaponImpl extends CyberwareEnhancementImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public AbstaktWaffe getWeapon() {
         return weapon;
     }
@@ -85,6 +86,7 @@ public class CyberImplantWeaponImpl extends CyberwareEnhancementImpl implements 
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setWeapon(AbstaktWaffe newWeapon) {
         if (newWeapon != weapon) {
             NotificationChain msgs = null;

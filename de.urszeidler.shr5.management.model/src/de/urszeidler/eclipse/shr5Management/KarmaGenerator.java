@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#getMetaType <em>Meta Type</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#getCharacterConcept <em>Character Concept</em>}</li>
@@ -29,7 +30,6 @@ import org.eclipse.emf.common.util.DiagnosticChain;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#getStartResources <em>Start Resources</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.KarmaGenerator#getChoiseKarmaCost <em>Choise Karma Cost</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getKarmaGenerator()
  * @model abstract="true"

@@ -16,11 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.GruntMembers#getCount <em>Count</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.GruntMembers#getNsc <em>Nsc</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getGruntMembers()
  * @model

@@ -25,13 +25,13 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterAdvancementSystemImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterAdvancementSystemImpl#getImage <em>Image</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterAdvancementSystemImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterAdvancementSystemImpl#getCharacterAdvancements <em>Character Advancements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -130,6 +130,7 @@ public class CharacterAdvancementSystemImpl extends MinimalEObjectImpl.Container
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -139,6 +140,7 @@ public class CharacterAdvancementSystemImpl extends MinimalEObjectImpl.Container
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -151,6 +153,7 @@ public class CharacterAdvancementSystemImpl extends MinimalEObjectImpl.Container
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -160,6 +163,7 @@ public class CharacterAdvancementSystemImpl extends MinimalEObjectImpl.Container
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -172,6 +176,7 @@ public class CharacterAdvancementSystemImpl extends MinimalEObjectImpl.Container
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -181,6 +186,7 @@ public class CharacterAdvancementSystemImpl extends MinimalEObjectImpl.Container
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -193,6 +199,7 @@ public class CharacterAdvancementSystemImpl extends MinimalEObjectImpl.Container
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Advancement> getCharacterAdvancements() {
         if (characterAdvancements == null) {
             characterAdvancements = new EObjectContainmentEList<Advancement>(Advancement.class, this, Shr5managementPackage.CHARACTER_ADVANCEMENT_SYSTEM__CHARACTER_ADVANCEMENTS);
@@ -313,7 +320,7 @@ public class CharacterAdvancementSystemImpl extends MinimalEObjectImpl.Container
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

@@ -12,13 +12,13 @@ import org.eclipse.emf.ecore.EAttribute;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Fertigkeit#getKategorie <em>Kategorie</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Fertigkeit#isAusweichen <em>Ausweichen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Fertigkeit#getAttribut <em>Attribut</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Fertigkeit#getSpezialisierungen <em>Spezialisierungen</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getFertigkeit()
  * @model

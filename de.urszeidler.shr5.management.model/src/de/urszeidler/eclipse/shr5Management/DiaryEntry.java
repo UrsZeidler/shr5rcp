@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.DiaryEntry#getDate <em>Date</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.DiaryEntry#getMessage <em>Message</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getDiaryEntry()
  * @model

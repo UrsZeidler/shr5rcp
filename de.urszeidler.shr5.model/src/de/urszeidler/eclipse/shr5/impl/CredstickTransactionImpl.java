@@ -20,12 +20,12 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CredstickTransactionImpl#getAmount <em>Amount</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CredstickTransactionImpl#getDate <em>Date</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CredstickTransactionImpl#getDescription <em>Description</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -114,6 +114,7 @@ public class CredstickTransactionImpl extends MinimalEObjectImpl.Container imple
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public BigDecimal getAmount() {
         return amount;
     }
@@ -123,6 +124,7 @@ public class CredstickTransactionImpl extends MinimalEObjectImpl.Container imple
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAmount(BigDecimal newAmount) {
         BigDecimal oldAmount = amount;
         amount = newAmount;
@@ -135,6 +137,7 @@ public class CredstickTransactionImpl extends MinimalEObjectImpl.Container imple
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getDate() {
         return date;
     }
@@ -144,6 +147,7 @@ public class CredstickTransactionImpl extends MinimalEObjectImpl.Container imple
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDate(Date newDate) {
         Date oldDate = date;
         date = newDate;
@@ -156,6 +160,7 @@ public class CredstickTransactionImpl extends MinimalEObjectImpl.Container imple
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getDescription() {
         return description;
     }
@@ -165,6 +170,7 @@ public class CredstickTransactionImpl extends MinimalEObjectImpl.Container imple
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDescription(String newDescription) {
         String oldDescription = description;
         description = newDescription;
@@ -259,7 +265,7 @@ public class CredstickTransactionImpl extends MinimalEObjectImpl.Container imple
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (amount: ");
         result.append(amount);
         result.append(", date: ");

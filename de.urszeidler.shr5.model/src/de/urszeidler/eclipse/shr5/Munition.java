@@ -15,13 +15,13 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Munition#getDamageType <em>Damage Type</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Munition#getDamageMod <em>Damage Mod</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Munition#getArmorMod <em>Armor Mod</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Munition#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getMunition()
  * @model

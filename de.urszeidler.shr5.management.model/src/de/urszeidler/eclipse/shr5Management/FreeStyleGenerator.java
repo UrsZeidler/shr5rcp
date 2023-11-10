@@ -16,13 +16,13 @@ import de.urszeidler.eclipse.shr5.Spezies;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.FreeStyleGenerator#getFreestyleGenerator <em>Freestyle Generator</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.FreeStyleGenerator#getSelectedPersona <em>Selected Persona</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.FreeStyleGenerator#getSelectedSpecies <em>Selected Species</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.FreeStyleGenerator#getSelectedType <em>Selected Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getFreeStyleGenerator()
  * @model

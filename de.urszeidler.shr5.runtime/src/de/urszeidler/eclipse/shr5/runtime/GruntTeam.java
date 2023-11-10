@@ -12,10 +12,10 @@ import de.urszeidler.eclipse.shr5Management.GruntGroup;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.GruntTeam#getGruntGroup <em>Grunt Group</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.runtime.RuntimePackage#getGruntTeam()
  * @model

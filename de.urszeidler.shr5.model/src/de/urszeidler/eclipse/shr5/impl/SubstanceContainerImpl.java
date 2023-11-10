@@ -21,10 +21,10 @@ import de.urszeidler.eclipse.shr5.SubstanceContainer;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SubstanceContainerImpl#getSubstance <em>Substance</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -63,6 +63,7 @@ public class SubstanceContainerImpl extends AbstraktGegenstandImpl implements Su
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Substance getSubstance() {
         return substance;
     }
@@ -87,6 +88,7 @@ public class SubstanceContainerImpl extends AbstraktGegenstandImpl implements Su
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSubstance(Substance newSubstance) {
         if (newSubstance != substance) {
             NotificationChain msgs = null;

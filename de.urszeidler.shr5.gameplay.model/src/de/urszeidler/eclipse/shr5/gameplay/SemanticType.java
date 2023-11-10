@@ -120,6 +120,8 @@ public enum SemanticType implements Enumerator {
      * Returns the '<em><b>Semantic Type</b></em>' literal with the specified literal value.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @param literal the literal.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static SemanticType get(String literal) {
@@ -136,6 +138,8 @@ public enum SemanticType implements Enumerator {
      * Returns the '<em><b>Semantic Type</b></em>' literal with the specified name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @param name the name.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static SemanticType getByName(String name) {
@@ -152,6 +156,8 @@ public enum SemanticType implements Enumerator {
      * Returns the '<em><b>Semantic Type</b></em>' literal with the specified integer value.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @param value the integer value.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
     public static SemanticType get(int value) {
@@ -201,6 +207,7 @@ public enum SemanticType implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getValue() {
       return value;
     }
@@ -210,6 +217,7 @@ public enum SemanticType implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
       return name;
     }
@@ -219,6 +227,7 @@ public enum SemanticType implements Enumerator {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getLiteral() {
       return literal;
     }

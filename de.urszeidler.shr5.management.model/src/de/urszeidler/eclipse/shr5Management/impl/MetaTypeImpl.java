@@ -27,11 +27,11 @@ import de.urszeidler.eclipse.shr5Management.Technomancer;
  * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Meta Type</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.MetaTypeImpl#getChoosableTypes <em>Choosable Types</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.MetaTypeImpl#getSpecialPoints <em>Special Points</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -87,6 +87,7 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Spezies getChoosableTypes() {
         if (choosableTypes != null && choosableTypes.eIsProxy()) {
             InternalEObject oldChoosableTypes = (InternalEObject)choosableTypes;
@@ -111,6 +112,7 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setChoosableTypes(Spezies newChoosableTypes) {
         Spezies oldChoosableTypes = choosableTypes;
         choosableTypes = newChoosableTypes;
@@ -122,6 +124,7 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getSpecialPoints() {
         return specialPoints;
     }
@@ -130,6 +133,7 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSpecialPoints(int newSpecialPoints) {
         int oldSpecialPoints = specialPoints;
         specialPoints = newSpecialPoints;
@@ -270,7 +274,7 @@ public class MetaTypeImpl extends PriorityCategorieImpl implements MetaType {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (specialPoints: ");
         result.append(specialPoints);
         result.append(')');

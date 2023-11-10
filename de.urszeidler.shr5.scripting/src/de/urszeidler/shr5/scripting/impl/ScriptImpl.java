@@ -28,6 +28,7 @@ import de.urszeidler.shr5.scripting.ScriptingPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptImpl#getImage <em>Image</em>}</li>
@@ -39,7 +40,6 @@ import de.urszeidler.shr5.scripting.ScriptingPackage;
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptImpl#getEntry <em>Entry</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.ScriptImpl#getHistory <em>History</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -188,6 +188,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -197,6 +198,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -209,6 +211,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -218,6 +221,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -230,6 +234,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -239,6 +244,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -251,6 +257,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Placement> getPlacements() {
         if (placements == null) {
             placements = new EObjectContainmentWithInverseEList<Placement>(Placement.class, this, ScriptingPackage.SCRIPT__PLACEMENTS, ScriptingPackage.PLACEMENT__SCRIPT);
@@ -263,6 +270,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Team> getAllTeams() {
         if (allTeams == null) {
             allTeams = new EObjectContainmentEList<Team>(Team.class, this, ScriptingPackage.SCRIPT__ALL_TEAMS);
@@ -275,6 +283,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Team getPlayer() {
         return player;
     }
@@ -299,6 +308,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPlayer(Team newPlayer) {
         if (newPlayer != player) {
             NotificationChain msgs = null;
@@ -318,6 +328,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public GamemasterManagement getManagement() {
         return management;
     }
@@ -342,6 +353,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setManagement(GamemasterManagement newManagement) {
         if (newManagement != management) {
             NotificationChain msgs = null;
@@ -361,6 +373,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Placement getEntry() {
         if (entry != null && entry.eIsProxy()) {
             InternalEObject oldEntry = (InternalEObject)entry;
@@ -387,6 +400,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setEntry(Placement newEntry) {
         Placement oldEntry = entry;
         entry = newEntry;
@@ -399,6 +413,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ScriptHistory getHistory() {
         return history;
     }
@@ -423,6 +438,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setHistory(ScriptHistory newHistory) {
         if (newHistory != history) {
             NotificationChain msgs = null;
@@ -625,7 +641,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

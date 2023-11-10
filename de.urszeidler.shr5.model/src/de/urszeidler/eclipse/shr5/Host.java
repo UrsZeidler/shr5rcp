@@ -15,6 +15,7 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Host#getHostRating <em>Host Rating</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Host#getBaseFirewall <em>Base Firewall</em>}</li>
@@ -22,7 +23,6 @@ package de.urszeidler.eclipse.shr5;
  *   <li>{@link de.urszeidler.eclipse.shr5.Host#getBaseAngriff <em>Base Angriff</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Host#getBaseSchleicher <em>Base Schleicher</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getHost()
  * @model

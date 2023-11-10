@@ -31,6 +31,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FeuerwaffeImpl#getMunitionstyp <em>Munitionstyp</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FeuerwaffeImpl#getModie <em>Modie</em>}</li>
@@ -40,7 +41,6 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FeuerwaffeImpl#getEinbau <em>Einbau</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FeuerwaffeImpl#getMagazin <em>Magazin</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -189,7 +189,8 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public MagazinTyp getMunitionstyp() {
+	@Override
+    public MagazinTyp getMunitionstyp() {
         return munitionstyp;
     }
 
@@ -198,7 +199,8 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setMunitionstyp(MagazinTyp newMunitionstyp) {
+	@Override
+    public void setMunitionstyp(MagazinTyp newMunitionstyp) {
         MagazinTyp oldMunitionstyp = munitionstyp;
         munitionstyp = newMunitionstyp == null ? MUNITIONSTYP_EDEFAULT : newMunitionstyp;
         if (eNotificationRequired())
@@ -210,7 +212,8 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<FeuerModus> getModie() {
+	@Override
+    public EList<FeuerModus> getModie() {
         if (modie == null) {
             modie = new EDataTypeUniqueEList<FeuerModus>(FeuerModus.class, this, Shr5Package.FEUERWAFFE__MODIE);
         }
@@ -222,7 +225,8 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getKapazitaet() {
+	@Override
+    public int getKapazitaet() {
         return kapazitaet;
     }
 
@@ -231,7 +235,8 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setKapazitaet(int newKapazitaet) {
+	@Override
+    public void setKapazitaet(int newKapazitaet) {
         int oldKapazitaet = kapazitaet;
         kapazitaet = newKapazitaet;
         if (eNotificationRequired())
@@ -243,7 +248,8 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<FeuwerwaffenErweiterung> getErweiterung() {
+	@Override
+    public EList<FeuwerwaffenErweiterung> getErweiterung() {
         if (erweiterung == null) {
             erweiterung = new EDataTypeUniqueEList<FeuwerwaffenErweiterung>(FeuwerwaffenErweiterung.class, this, Shr5Package.FEUERWAFFE__ERWEITERUNG);
         }
@@ -255,7 +261,8 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getRueckstoss() {
+	@Override
+    public int getRueckstoss() {
         return rueckstoss;
     }
 
@@ -264,7 +271,8 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setRueckstoss(int newRueckstoss) {
+	@Override
+    public void setRueckstoss(int newRueckstoss) {
         int oldRueckstoss = rueckstoss;
         rueckstoss = newRueckstoss;
         if (eNotificationRequired())
@@ -276,7 +284,8 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EList<FernkampfwaffeModifikator> getEinbau() {
+	@Override
+    public EList<FernkampfwaffeModifikator> getEinbau() {
         if (einbau == null) {
             einbau = new EObjectContainmentEList<FernkampfwaffeModifikator>(FernkampfwaffeModifikator.class, this, Shr5Package.FEUERWAFFE__EINBAU);
         }
@@ -288,6 +297,7 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Magazin getMagazin() {
         return magazin;
     }
@@ -313,6 +323,7 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMagazin(Magazin newMagazin) {
         if (newMagazin != magazin) {
             NotificationChain msgs = null;
@@ -484,7 +495,7 @@ public class FeuerwaffeImpl extends AbstaktFernKampfwaffeImpl implements Feuerwa
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (munitionstyp: ");
         result.append(munitionstyp);
         result.append(", modie: ");

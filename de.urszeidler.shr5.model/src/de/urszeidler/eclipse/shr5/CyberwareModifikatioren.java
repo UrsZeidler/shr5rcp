@@ -15,6 +15,7 @@ package de.urszeidler.eclipse.shr5;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren#isDirectNeuralInterface <em>Direct Neural Interface</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren#isUniversalDataConnector <em>Universal Data Connector</em>}</li>
@@ -22,7 +23,6 @@ package de.urszeidler.eclipse.shr5;
  *   <li>{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren#getSimRig <em>Sim Rig</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.CyberwareModifikatioren#isRiggerInterface <em>Rigger Interface</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getCyberwareModifikatioren()
  * @model interface="true" abstract="true"

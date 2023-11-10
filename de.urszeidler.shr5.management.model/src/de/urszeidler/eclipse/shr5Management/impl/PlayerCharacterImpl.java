@@ -22,11 +22,11 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PlayerCharacterImpl#getDiary <em>Diary</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PlayerCharacterImpl#getAge <em>Age</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -75,6 +75,7 @@ public class PlayerCharacterImpl extends ManagedCharacterImpl implements PlayerC
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CharacterDiary getDiary() {
         return diary;
     }
@@ -99,6 +100,7 @@ public class PlayerCharacterImpl extends ManagedCharacterImpl implements PlayerC
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDiary(CharacterDiary newDiary) {
         if (newDiary != diary) {
             NotificationChain msgs = null;

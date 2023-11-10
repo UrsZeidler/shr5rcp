@@ -30,6 +30,7 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#isExecuted <em>Executed</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getSubCommands <em>Sub Commands</em>}</li>
@@ -40,7 +41,6 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimeCharacter;
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#isHidden <em>Hidden</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.impl.SubjectCommandImpl#getSubject <em>Subject</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -210,6 +210,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isExecuted() {
         return executed;
     }
@@ -219,6 +220,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setExecuted(boolean newExecuted) {
         boolean oldExecuted = executed;
         executed = newExecuted;
@@ -231,6 +233,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Command> getSubCommands() {
         if (subCommands == null) {
             subCommands = new EObjectContainmentEList<Command>(Command.class, this, GameplayPackage.SUBJECT_COMMAND__SUB_COMMANDS);
@@ -243,6 +246,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getDate() {
         return date;
     }
@@ -252,6 +256,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDate(Date newDate) {
         Date oldDate = date;
         date = newDate;
@@ -264,6 +269,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public CommandCallback getCmdCallback() {
         return cmdCallback;
     }
@@ -273,6 +279,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCmdCallback(CommandCallback newCmdCallback) {
         CommandCallback oldCmdCallback = cmdCallback;
         cmdCallback = newCmdCallback;
@@ -287,6 +294,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void unsetCmdCallback() {
         CommandCallback oldCmdCallback = cmdCallback;
         boolean oldCmdCallbackESet = cmdCallbackESet;
@@ -301,6 +309,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isSetCmdCallback() {
         return cmdCallbackESet;
     }
@@ -310,6 +319,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isExecuting() {
         return executing;
     }
@@ -319,6 +329,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setExecuting(boolean newExecuting) {
         boolean oldExecuting = executing;
         executing = newExecuting;
@@ -341,6 +352,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isHidden() {
         return hidden;
     }
@@ -350,6 +362,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setHidden(boolean newHidden) {
         boolean oldHidden = hidden;
         hidden = newHidden;
@@ -362,6 +375,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public RuntimeCharacter getSubject() {
         if (subject != null && subject.eIsProxy()) {
             InternalEObject oldSubject = (InternalEObject)subject;
@@ -388,6 +402,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSubject(RuntimeCharacter newSubject) {
         RuntimeCharacter oldSubject = subject;
         subject = newSubject;
@@ -466,6 +481,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void undo() {
         // TODO: implement this method
         // Ensure that you remove @generated or mark it @generated NOT
@@ -638,7 +654,7 @@ public abstract class SubjectCommandImpl extends MinimalEObjectImpl.Container im
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (executed: ");
         result.append(executed);
         result.append(", date: ");

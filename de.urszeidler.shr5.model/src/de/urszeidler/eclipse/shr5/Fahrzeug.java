@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getHandling <em>Handling</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getGeschwindigkeit <em>Geschwindigkeit</em>}</li>
@@ -28,7 +29,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getWeaponMounts <em>Weapon Mounts</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.Fahrzeug#getSensorArray <em>Sensor Array</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.Shr5Package#getFahrzeug()
  * @model abstract="true"

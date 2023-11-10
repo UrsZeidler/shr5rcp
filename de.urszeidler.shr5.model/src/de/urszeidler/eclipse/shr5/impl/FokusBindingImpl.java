@@ -19,11 +19,11 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FokusBindingImpl#getFokus <em>Fokus</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.FokusBindingImpl#isActive <em>Active</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -82,6 +82,7 @@ public class FokusBindingImpl extends MinimalEObjectImpl.Container implements Fo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Fokus getFokus() {
         if (fokus != null && fokus.eIsProxy()) {
             InternalEObject oldFokus = (InternalEObject)fokus;
@@ -108,6 +109,7 @@ public class FokusBindingImpl extends MinimalEObjectImpl.Container implements Fo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setFokus(Fokus newFokus) {
         Fokus oldFokus = fokus;
         fokus = newFokus;
@@ -120,6 +122,7 @@ public class FokusBindingImpl extends MinimalEObjectImpl.Container implements Fo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public boolean isActive() {
         return active;
     }
@@ -129,6 +132,7 @@ public class FokusBindingImpl extends MinimalEObjectImpl.Container implements Fo
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setActive(boolean newActive) {
         boolean oldActive = active;
         active = newActive;
@@ -214,7 +218,7 @@ public class FokusBindingImpl extends MinimalEObjectImpl.Container implements Fo
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (active: ");
         result.append(active);
         result.append(')');

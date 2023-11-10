@@ -36,6 +36,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getImage <em>Image</em>}</li>
@@ -49,7 +50,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getCharacterAdvancements <em>Character Advancements</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.CharacterGeneratorSystemImpl#getAdditionalConstrains <em>Additional Constrains</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -238,7 +238,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getName() {
+	@Override
+    public String getName() {
         return name;
     }
 
@@ -247,7 +248,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setName(String newName) {
+	@Override
+    public void setName(String newName) {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
@@ -259,6 +261,7 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -268,6 +271,7 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -280,6 +284,7 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LOCALIZATIONS);
@@ -292,7 +297,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getBeschreibung() {
+	@Override
+    public String getBeschreibung() {
         return beschreibung;
     }
 
@@ -301,7 +307,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setBeschreibung(String newBeschreibung) {
+	@Override
+    public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
         if (eNotificationRequired())
@@ -313,7 +320,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getImage() {
+	@Override
+    public String getImage() {
         return image;
     }
 
@@ -322,7 +330,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setImage(String newImage) {
+	@Override
+    public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
         if (eNotificationRequired())
@@ -334,7 +343,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getPage() {
+	@Override
+    public String getPage() {
         return page;
     }
 
@@ -343,7 +353,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setPage(String newPage) {
+	@Override
+    public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
         if (eNotificationRequired())
@@ -355,7 +366,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public SourceBook getSrcBook() {
+	@Override
+    public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
             srcBook = (SourceBook)eResolveProxy(oldSrcBook);
@@ -381,7 +393,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSrcBook(SourceBook newSrcBook) {
+	@Override
+    public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
         if (eNotificationRequired())
@@ -393,7 +406,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public EMap<GeneratorState, String> getInstructions() {
+	@Override
+    public EMap<GeneratorState, String> getInstructions() {
         if (instructions == null) {
             instructions = new EcoreEMap<GeneratorState,String>(Shr5managementPackage.Literals.GENERATOR_STATE_TO_ESTRING_MAP_ENTRY, GeneratorStateToEStringMapEntryImpl.class, this, Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__INSTRUCTIONS);
         }
@@ -405,7 +419,8 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public CharacterAdvancementSystem getCharacterAdvancements() {
+	@Override
+    public CharacterAdvancementSystem getCharacterAdvancements() {
         if (characterAdvancements != null && characterAdvancements.eIsProxy()) {
             InternalEObject oldCharacterAdvancements = (InternalEObject)characterAdvancements;
             characterAdvancements = (CharacterAdvancementSystem)eResolveProxy(oldCharacterAdvancements);
@@ -431,6 +446,7 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCharacterAdvancements(CharacterAdvancementSystem newCharacterAdvancements) {
         CharacterAdvancementSystem oldCharacterAdvancements = characterAdvancements;
         characterAdvancements = newCharacterAdvancements;
@@ -443,6 +459,7 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<QuellenConstrain> getAdditionalConstrains() {
         if (additionalConstrains == null) {
             additionalConstrains = new EObjectContainmentEList<QuellenConstrain>(QuellenConstrain.class, this, Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__ADDITIONAL_CONSTRAINS);
@@ -455,6 +472,7 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<LifestyleToStartMoney> getLifestyleToStartMoney() {
         if (lifestyleToStartMoney == null) {
             lifestyleToStartMoney = new EObjectContainmentEList<LifestyleToStartMoney>(LifestyleToStartMoney.class, this, Shr5managementPackage.CHARACTER_GENERATOR_SYSTEM__LIFESTYLE_TO_START_MONEY);
@@ -704,7 +722,7 @@ public abstract class CharacterGeneratorSystemImpl extends MinimalEObjectImpl.Co
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

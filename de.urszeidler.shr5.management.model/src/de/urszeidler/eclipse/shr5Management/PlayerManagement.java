@@ -18,12 +18,12 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.PlayerManagement#getGroups <em>Groups</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.PlayerManagement#getGenerators <em>Generators</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.PlayerManagement#getEntries <em>Entries</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getPlayerManagement()
  * @model
@@ -48,7 +48,7 @@ public interface PlayerManagement extends Beschreibbar {
 
     /**
      * Returns the value of the '<em><b>Generators</b></em>' containment reference list.
-     * The list contents are of type {@link de.urszeidler.eclipse.shr5Management.CharacterGenerator}&lt;de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem>.
+     * The list contents are of type {@link de.urszeidler.eclipse.shr5Management.CharacterGenerator}<code>&lt;de.urszeidler.eclipse.shr5Management.CharacterGeneratorSystem&gt;</code>.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Generators</em>' containment reference list isn't clear,

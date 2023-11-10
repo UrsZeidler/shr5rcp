@@ -34,6 +34,7 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl#getMatrixZustandMax <em>Matrix Zustand Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
@@ -45,7 +46,6 @@ import de.urszeidler.eclipse.shr5.util.ShadowrunTools;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl#getStoredPrograms <em>Stored Programs</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.CommlinkImpl#getStoredSins <em>Stored Sins</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -193,6 +193,7 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<BasicProgram> getStoredPrograms() {
         if (storedPrograms == null) {
             storedPrograms = new EObjectContainmentEList<BasicProgram>(BasicProgram.class, this, Shr5Package.COMMLINK__STORED_PROGRAMS);
@@ -205,6 +206,7 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Sin> getStoredSins() {
         if (storedSins == null) {
             storedSins = new EObjectResolvingEList<Sin>(Sin.class, this, Shr5Package.COMMLINK__STORED_SINS);
@@ -273,6 +275,7 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public InterfaceModus getCurrentModus() {
         return currentModus;
     }
@@ -282,6 +285,7 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCurrentModus(InterfaceModus newCurrentModus) {
         InterfaceModus oldCurrentModus = currentModus;
         currentModus = newCurrentModus == null ? CURRENT_MODUS_EDEFAULT : newCurrentModus;
@@ -294,6 +298,7 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public PersonalAreaNetwork getPan() {
         return pan;
     }
@@ -318,6 +323,7 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPan(PersonalAreaNetwork newPan) {
         if (newPan != pan) {
             NotificationChain msgs = null;
@@ -337,6 +343,7 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getDeviceRating() {
         return deviceRating;
     }
@@ -346,6 +353,7 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDeviceRating(int newDeviceRating) {
         int oldDeviceRating = deviceRating;
         deviceRating = newDeviceRating;
@@ -557,7 +565,7 @@ public class CommlinkImpl extends AbstraktGegenstandImpl implements Commlink {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (currentModus: ");
         result.append(currentModus);
         result.append(", deviceRating: ");

@@ -25,12 +25,12 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonalAreaNetworkImpl#getSlaves <em>Slaves</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonalAreaNetworkImpl#getMaster <em>Master</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonalAreaNetworkImpl#getSlaveMax <em>Slave Max</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -79,6 +79,7 @@ public class PersonalAreaNetworkImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<MatrixDevice> getSlaves() {
         if (slaves == null) {
             slaves = new EObjectResolvingEList<MatrixDevice>(MatrixDevice.class, this, Shr5Package.PERSONAL_AREA_NETWORK__SLAVES);
@@ -91,6 +92,7 @@ public class PersonalAreaNetworkImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MatrixDevice getMaster() {
         if (eContainerFeatureID() != Shr5Package.PERSONAL_AREA_NETWORK__MASTER) return null;
         return (MatrixDevice)eInternalContainer();
@@ -111,6 +113,7 @@ public class PersonalAreaNetworkImpl extends MinimalEObjectImpl.Container implem
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMaster(MatrixDevice newMaster) {
         if (newMaster != eInternalContainer() || (eContainerFeatureID() != Shr5Package.PERSONAL_AREA_NETWORK__MASTER && newMaster != null)) {
             if (EcoreUtil.isAncestor(this, newMaster))

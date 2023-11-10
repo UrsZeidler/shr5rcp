@@ -25,10 +25,10 @@ import de.urszeidler.eclipse.shr5.runtime.RuntimePackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.runtime.impl.AbstractExtendetDataAwareImpl#getExtendetData <em>Extendet Data</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -68,6 +68,7 @@ public abstract class AbstractExtendetDataAwareImpl extends MinimalEObjectImpl.C
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Map<ExtendetData, Object> getExtendetData() {
         return extendetData;
     }
@@ -77,6 +78,7 @@ public abstract class AbstractExtendetDataAwareImpl extends MinimalEObjectImpl.C
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setExtendetData(Map<ExtendetData, Object> newExtendetData) {
         Map<ExtendetData, Object> oldExtendetData = extendetData;
         extendetData = newExtendetData;
@@ -311,7 +313,7 @@ public abstract class AbstractExtendetDataAwareImpl extends MinimalEObjectImpl.C
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (extendetData: ");
         result.append(extendetData);
         result.append(')');

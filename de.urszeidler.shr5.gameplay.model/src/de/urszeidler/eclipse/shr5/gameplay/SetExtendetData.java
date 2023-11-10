@@ -17,12 +17,12 @@ import de.urszeidler.eclipse.shr5.runtime.ExtendetData;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData#getDataAware <em>Data Aware</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData#getData <em>Data</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.gameplay.SetExtendetData#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5.gameplay.GameplayPackage#getSetExtendetData()
  * @model

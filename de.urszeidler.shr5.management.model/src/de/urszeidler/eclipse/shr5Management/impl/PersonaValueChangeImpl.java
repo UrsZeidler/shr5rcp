@@ -16,11 +16,11 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaValueChangeImpl#getFrom <em>From</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PersonaValueChangeImpl#getTo <em>To</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -89,7 +89,8 @@ public abstract class PersonaValueChangeImpl extends ChangesImpl implements Pers
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getFrom() {
+	@Override
+    public int getFrom() {
         return from;
     }
 
@@ -115,7 +116,8 @@ public abstract class PersonaValueChangeImpl extends ChangesImpl implements Pers
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getTo() {
+	@Override
+    public int getTo() {
         return to;
     }
 
@@ -213,7 +215,7 @@ public abstract class PersonaValueChangeImpl extends ChangesImpl implements Pers
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (from: ");
         result.append(from);
         result.append(", to: ");

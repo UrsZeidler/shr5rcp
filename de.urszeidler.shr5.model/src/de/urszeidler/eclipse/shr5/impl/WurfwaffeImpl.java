@@ -18,11 +18,11 @@ import de.urszeidler.eclipse.shr5.Wurfwaffe;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.WurfwaffeImpl#getAnzahl <em>Anzahl</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.WurfwaffeImpl#getProAnzahl <em>Pro Anzahl</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -88,6 +88,7 @@ public class WurfwaffeImpl extends AbstaktFernKampfwaffeImpl implements Wurfwaff
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getAnzahl() {
         return anzahl;
     }
@@ -97,6 +98,7 @@ public class WurfwaffeImpl extends AbstaktFernKampfwaffeImpl implements Wurfwaff
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAnzahl(int newAnzahl) {
         int oldAnzahl = anzahl;
         anzahl = newAnzahl;
@@ -109,6 +111,7 @@ public class WurfwaffeImpl extends AbstaktFernKampfwaffeImpl implements Wurfwaff
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getProAnzahl() {
         return proAnzahl;
     }
@@ -118,6 +121,7 @@ public class WurfwaffeImpl extends AbstaktFernKampfwaffeImpl implements Wurfwaff
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setProAnzahl(int newProAnzahl) {
         int oldProAnzahl = proAnzahl;
         proAnzahl = newProAnzahl;
@@ -236,7 +240,7 @@ public class WurfwaffeImpl extends AbstaktFernKampfwaffeImpl implements Wurfwaff
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (anzahl: ");
         result.append(anzahl);
         result.append(", proAnzahl: ");

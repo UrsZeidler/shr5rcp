@@ -18,11 +18,11 @@ import de.urszeidler.eclipse.shr5.Zauber;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaZauberImpl#getStufe <em>Stufe</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.PersonaZauberImpl#getFormel <em>Formel</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -81,7 +81,8 @@ public class PersonaZauberImpl extends MinimalEObjectImpl.Container implements P
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getStufe() {
+	@Override
+    public int getStufe() {
         return stufe;
     }
 
@@ -90,7 +91,8 @@ public class PersonaZauberImpl extends MinimalEObjectImpl.Container implements P
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setStufe(int newStufe) {
+	@Override
+    public void setStufe(int newStufe) {
         int oldStufe = stufe;
         stufe = newStufe;
         if (eNotificationRequired())
@@ -102,7 +104,8 @@ public class PersonaZauberImpl extends MinimalEObjectImpl.Container implements P
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public Zauber getFormel() {
+	@Override
+    public Zauber getFormel() {
         if (formel != null && formel.eIsProxy()) {
             InternalEObject oldFormel = (InternalEObject)formel;
             formel = (Zauber)eResolveProxy(oldFormel);
@@ -128,7 +131,8 @@ public class PersonaZauberImpl extends MinimalEObjectImpl.Container implements P
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setFormel(Zauber newFormel) {
+	@Override
+    public void setFormel(Zauber newFormel) {
         Zauber oldFormel = formel;
         formel = newFormel;
         if (eNotificationRequired())
@@ -213,7 +217,7 @@ public class PersonaZauberImpl extends MinimalEObjectImpl.Container implements P
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (stufe: ");
         result.append(stufe);
         result.append(')');

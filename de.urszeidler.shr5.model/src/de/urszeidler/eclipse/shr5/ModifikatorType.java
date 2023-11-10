@@ -118,6 +118,8 @@ public enum ModifikatorType implements Enumerator {
      * Returns the '<em><b>Modifikator Type</b></em>' literal with the specified literal value.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+     * @param literal the literal.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
 	public static ModifikatorType get(String literal) {
@@ -134,6 +136,8 @@ public enum ModifikatorType implements Enumerator {
      * Returns the '<em><b>Modifikator Type</b></em>' literal with the specified name.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+     * @param name the name.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
 	public static ModifikatorType getByName(String name) {
@@ -150,6 +154,8 @@ public enum ModifikatorType implements Enumerator {
      * Returns the '<em><b>Modifikator Type</b></em>' literal with the specified integer value.
      * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+     * @param value the integer value.
+     * @return the matching enumerator or <code>null</code>.
      * @generated
      */
 	public static ModifikatorType get(int value) {
@@ -199,7 +205,8 @@ public enum ModifikatorType implements Enumerator {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getValue() {
+	@Override
+    public int getValue() {
       return value;
     }
 
@@ -208,7 +215,8 @@ public enum ModifikatorType implements Enumerator {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getName() {
+	@Override
+    public String getName() {
       return name;
     }
 
@@ -217,7 +225,8 @@ public enum ModifikatorType implements Enumerator {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getLiteral() {
+	@Override
+    public String getLiteral() {
       return literal;
     }
 

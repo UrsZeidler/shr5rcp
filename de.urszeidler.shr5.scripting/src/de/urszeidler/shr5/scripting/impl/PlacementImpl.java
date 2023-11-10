@@ -34,6 +34,7 @@ import de.urszeidler.shr5.scripting.TimeFrame;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getImage <em>Image</em>}</li>
@@ -52,7 +53,6 @@ import de.urszeidler.shr5.scripting.TimeFrame;
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getHandouts <em>Handouts</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.impl.PlacementImpl#getSections <em>Sections</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -321,6 +321,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -330,6 +331,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -342,6 +344,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -351,6 +354,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -363,6 +367,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -372,6 +377,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -384,6 +390,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getStartDate() {
         return startDate;
     }
@@ -393,6 +400,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setStartDate(Date newStartDate) {
         Date oldStartDate = startDate;
         startDate = newStartDate;
@@ -405,6 +413,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getEndDate() {
         return endDate;
     }
@@ -414,6 +423,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setEndDate(Date newEndDate) {
         Date oldEndDate = endDate;
         endDate = newEndDate;
@@ -426,6 +436,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Date getActualDate() {
         return actualDate;
     }
@@ -435,6 +446,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setActualDate(Date newActualDate) {
         Date oldActualDate = actualDate;
         actualDate = newActualDate;
@@ -447,6 +459,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Placement> getNextPlacements() {
         if (nextPlacements == null) {
             nextPlacements = new EObjectResolvingEList<Placement>(Placement.class, this, ScriptingPackage.PLACEMENT__NEXT_PLACEMENTS);
@@ -459,6 +472,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Team> getTeams() {
         if (teams == null) {
             teams = new EObjectResolvingEList<Team>(Team.class, this, ScriptingPackage.PLACEMENT__TEAMS);
@@ -471,6 +485,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBackground() {
         return background;
     }
@@ -480,6 +495,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBackground(String newBackground) {
         String oldBackground = background;
         background = newBackground;
@@ -492,6 +508,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getInTheirFace() {
         return inTheirFace;
     }
@@ -501,6 +518,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setInTheirFace(String newInTheirFace) {
         String oldInTheirFace = inTheirFace;
         inTheirFace = newInTheirFace;
@@ -513,6 +531,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Script getScript() {
         if (eContainerFeatureID() != ScriptingPackage.PLACEMENT__SCRIPT) return null;
         return (Script)eInternalContainer();
@@ -533,6 +552,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setScript(Script newScript) {
         if (newScript != eInternalContainer() || (eContainerFeatureID() != ScriptingPackage.PLACEMENT__SCRIPT && newScript != null)) {
             if (EcoreUtil.isAncestor(this, newScript))
@@ -554,6 +574,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getDebugging() {
         return debugging;
     }
@@ -563,6 +584,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setDebugging(String newDebugging) {
         String oldDebugging = debugging;
         debugging = newDebugging;
@@ -575,6 +597,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Enviorment getEnviorment() {
         return enviorment;
     }
@@ -599,6 +622,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setEnviorment(Enviorment newEnviorment) {
         if (newEnviorment != enviorment) {
             NotificationChain msgs = null;
@@ -618,6 +642,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<PlacementOptions> getOptions() {
         if (options == null) {
             options = new EDataTypeUniqueEList<PlacementOptions>(PlacementOptions.class, this, ScriptingPackage.PLACEMENT__OPTIONS);
@@ -630,6 +655,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Handout> getHandouts() {
         if (handouts == null) {
             handouts = new EObjectContainmentEList<Handout>(Handout.class, this, ScriptingPackage.PLACEMENT__HANDOUTS);
@@ -642,6 +668,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Section> getSections() {
         if (sections == null) {
             sections = new EObjectContainmentEList<Section>(Section.class, this, ScriptingPackage.PLACEMENT__SECTIONS);
@@ -958,7 +985,7 @@ public class PlacementImpl extends MinimalEObjectImpl.Container implements Place
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

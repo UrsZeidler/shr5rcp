@@ -11,11 +11,11 @@ import de.urszeidler.eclipse.shr5.Beschreibbar;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.shr5.scripting.Handout#getType <em>Type</em>}</li>
  *   <li>{@link de.urszeidler.shr5.scripting.Handout#getUrl <em>Url</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.shr5.scripting.ScriptingPackage#getHandout()
  * @model

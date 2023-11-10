@@ -16,10 +16,10 @@ import de.urszeidler.eclipse.shr5.Shr5Package;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.MagieFokusImpl#getBindungsFaktor <em>Bindungs Faktor</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -67,6 +67,7 @@ public class MagieFokusImpl extends AbstraktFokusImpl implements MagieFokus {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getBindungsFaktor() {
         return bindungsFaktor;
     }
@@ -152,7 +153,7 @@ public class MagieFokusImpl extends AbstraktFokusImpl implements MagieFokus {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (bindungsFaktor: ");
         result.append(bindungsFaktor);
         result.append(')');

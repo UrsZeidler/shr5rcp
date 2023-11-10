@@ -29,6 +29,7 @@ import de.urszeidler.eclipse.shr5.Sprite;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getMatrixZustandMax <em>Matrix Zustand Max</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getGeraetestufe <em>Geraetestufe</em>}</li>
@@ -53,7 +54,6 @@ import de.urszeidler.eclipse.shr5.Sprite;
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getFirewallMod <em>Firewall Mod</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5.impl.SpriteImpl#getInitativeMod <em>Initative Mod</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -487,6 +487,7 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public InterfaceModus getCurrentModus() {
         return currentModus;
     }
@@ -496,6 +497,7 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCurrentModus(InterfaceModus newCurrentModus) {
         InterfaceModus oldCurrentModus = currentModus;
         currentModus = newCurrentModus == null ? CURRENT_MODUS_EDEFAULT : newCurrentModus;
@@ -517,7 +519,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getResonanzBasis() {
+	@Override
+    public int getResonanzBasis() {
         return resonanzBasis;
     }
 
@@ -526,7 +529,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setResonanzBasis(int newResonanzBasis) {
+	@Override
+    public void setResonanzBasis(int newResonanzBasis) {
         int oldResonanzBasis = resonanzBasis;
         resonanzBasis = newResonanzBasis;
         if (eNotificationRequired())
@@ -538,7 +542,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getBeschreibung() {
+	@Override
+    public String getBeschreibung() {
         return beschreibung;
     }
 
@@ -547,7 +552,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setBeschreibung(String newBeschreibung) {
+	@Override
+    public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
         if (eNotificationRequired())
@@ -559,7 +565,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getImage() {
+	@Override
+    public String getImage() {
         return image;
     }
 
@@ -568,7 +575,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setImage(String newImage) {
+	@Override
+    public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
         if (eNotificationRequired())
@@ -580,7 +588,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getName() {
+	@Override
+    public String getName() {
         return name;
     }
 
@@ -589,7 +598,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setName(String newName) {
+	@Override
+    public void setName(String newName) {
         String oldName = name;
         name = newName;
         if (eNotificationRequired())
@@ -601,6 +611,7 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -610,6 +621,7 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -622,6 +634,7 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5Package.SPRITE__LOCALIZATIONS);
@@ -634,7 +647,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public String getPage() {
+	@Override
+    public String getPage() {
         return page;
     }
 
@@ -643,7 +657,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setPage(String newPage) {
+	@Override
+    public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
         if (eNotificationRequired())
@@ -655,7 +670,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public SourceBook getSrcBook() {
+	@Override
+    public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
             srcBook = (SourceBook)eResolveProxy(oldSrcBook);
@@ -681,7 +697,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSrcBook(SourceBook newSrcBook) {
+	@Override
+    public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
         if (eNotificationRequired())
@@ -693,7 +710,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getStufe() {
+	@Override
+    public int getStufe() {
         return stufe;
     }
 
@@ -702,7 +720,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setStufe(int newStufe) {
+	@Override
+    public void setStufe(int newStufe) {
         int oldStufe = stufe;
         stufe = newStufe;
         if (eNotificationRequired())
@@ -714,7 +733,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getAngriffMod() {
+	@Override
+    public int getAngriffMod() {
         return angriffMod;
     }
 
@@ -723,7 +743,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setAngriffMod(int newAngriffMod) {
+	@Override
+    public void setAngriffMod(int newAngriffMod) {
         int oldAngriffMod = angriffMod;
         angriffMod = newAngriffMod;
         if (eNotificationRequired())
@@ -735,7 +756,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getSchleicherMod() {
+	@Override
+    public int getSchleicherMod() {
         return schleicherMod;
     }
 
@@ -744,7 +766,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setSchleicherMod(int newSchleicherMod) {
+	@Override
+    public void setSchleicherMod(int newSchleicherMod) {
         int oldSchleicherMod = schleicherMod;
         schleicherMod = newSchleicherMod;
         if (eNotificationRequired())
@@ -756,7 +779,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getDatenverarbeitungMod() {
+	@Override
+    public int getDatenverarbeitungMod() {
         return datenverarbeitungMod;
     }
 
@@ -765,7 +789,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setDatenverarbeitungMod(int newDatenverarbeitungMod) {
+	@Override
+    public void setDatenverarbeitungMod(int newDatenverarbeitungMod) {
         int oldDatenverarbeitungMod = datenverarbeitungMod;
         datenverarbeitungMod = newDatenverarbeitungMod;
         if (eNotificationRequired())
@@ -777,7 +802,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getFirewallMod() {
+	@Override
+    public int getFirewallMod() {
         return firewallMod;
     }
 
@@ -786,7 +812,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setFirewallMod(int newFirewallMod) {
+	@Override
+    public void setFirewallMod(int newFirewallMod) {
         int oldFirewallMod = firewallMod;
         firewallMod = newFirewallMod;
         if (eNotificationRequired())
@@ -798,7 +825,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public int getInitativeMod() {
+	@Override
+    public int getInitativeMod() {
         return initativeMod;
     }
 
@@ -807,7 +835,8 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	 * <!-- end-user-doc -->
      * @generated
      */
-	public void setInitativeMod(int newInitativeMod) {
+	@Override
+    public void setInitativeMod(int newInitativeMod) {
         int oldInitativeMod = initativeMod;
         initativeMod = newInitativeMod;
         if (eNotificationRequired())
@@ -1130,7 +1159,7 @@ public class SpriteImpl extends MinimalEObjectImpl.Container implements Sprite {
 	public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (currentModus: ");
         result.append(currentModus);
         result.append(", resonanzBasis: ");

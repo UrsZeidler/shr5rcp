@@ -32,6 +32,7 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.KarmaGeneratorImpl#getMetaType <em>Meta Type</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.KarmaGeneratorImpl#getCharacterConcept <em>Character Concept</em>}</li>
@@ -42,7 +43,6 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.KarmaGeneratorImpl#getStartResources <em>Start Resources</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.KarmaGeneratorImpl#getChoiseKarmaCost <em>Choise Karma Cost</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -181,6 +181,7 @@ public abstract class KarmaGeneratorImpl<G extends Shr5System> extends Shr5RuleG
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MetaType getMetaType() {
         if (metaType != null && metaType.eIsProxy()) {
             InternalEObject oldMetaType = (InternalEObject)metaType;
@@ -221,6 +222,7 @@ public abstract class KarmaGeneratorImpl<G extends Shr5System> extends Shr5RuleG
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SpecialType getCharacterConcept() {
         if (characterConcept != null && characterConcept.eIsProxy()) {
             InternalEObject oldCharacterConcept = (InternalEObject)characterConcept;
@@ -247,6 +249,7 @@ public abstract class KarmaGeneratorImpl<G extends Shr5System> extends Shr5RuleG
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setCharacterConcept(SpecialType newCharacterConcept) {
         SpecialType oldCharacterConcept = characterConcept;
         characterConcept = newCharacterConcept;
@@ -259,6 +262,7 @@ public abstract class KarmaGeneratorImpl<G extends Shr5System> extends Shr5RuleG
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getKarmaToResource() {
         return karmaToResource;
     }
@@ -319,6 +323,7 @@ public abstract class KarmaGeneratorImpl<G extends Shr5System> extends Shr5RuleG
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getStartKarma() {
         return startKarma;
     }
@@ -328,6 +333,7 @@ public abstract class KarmaGeneratorImpl<G extends Shr5System> extends Shr5RuleG
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setStartKarma(int newStartKarma) {
         int oldStartKarma = startKarma;
         startKarma = newStartKarma;
@@ -340,6 +346,7 @@ public abstract class KarmaGeneratorImpl<G extends Shr5System> extends Shr5RuleG
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getStartResources() {
         return startResources;
     }
@@ -349,6 +356,7 @@ public abstract class KarmaGeneratorImpl<G extends Shr5System> extends Shr5RuleG
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setStartResources(int newStartResources) {
         int oldStartResources = startResources;
         startResources = newStartResources;
@@ -588,7 +596,7 @@ public abstract class KarmaGeneratorImpl<G extends Shr5System> extends Shr5RuleG
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (karmaToResource: ");
         result.append(karmaToResource);
         result.append(", startKarma: ");

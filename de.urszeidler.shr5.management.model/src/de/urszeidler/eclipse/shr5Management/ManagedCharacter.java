@@ -26,6 +26,7 @@ import de.urszeidler.eclipse.shr5.Vertrag;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getPersona <em>Persona</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getChanges <em>Changes</em>}</li>
@@ -48,7 +49,6 @@ import de.urszeidler.eclipse.shr5.Vertrag;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getDateofbirth <em>Dateofbirth</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.ManagedCharacter#getWeight <em>Weight</em>}</li>
  * </ul>
- * </p>
  *
  * @see de.urszeidler.eclipse.shr5Management.Shr5managementPackage#getManagedCharacter()
  * @model abstract="true"

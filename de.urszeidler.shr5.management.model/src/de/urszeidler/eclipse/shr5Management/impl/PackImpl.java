@@ -33,6 +33,7 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getBeschreibung <em>Beschreibung</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getImage <em>Image</em>}</li>
@@ -46,7 +47,6 @@ import de.urszeidler.eclipse.shr5Management.Shr5managementPackage;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getWertValue <em>Wert Value</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.PackImpl#getItems <em>Items</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -271,6 +271,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getBeschreibung() {
         return beschreibung;
     }
@@ -280,6 +281,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setBeschreibung(String newBeschreibung) {
         String oldBeschreibung = beschreibung;
         beschreibung = newBeschreibung;
@@ -292,6 +294,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getImage() {
         return image;
     }
@@ -301,6 +304,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setImage(String newImage) {
         String oldImage = image;
         image = newImage;
@@ -313,6 +317,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getName() {
         return name;
     }
@@ -322,6 +327,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setName(String newName) {
         String oldName = name;
         name = newName;
@@ -334,6 +340,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getParentId() {
         return parentId;
     }
@@ -343,6 +350,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentId(String newParentId) {
         String oldParentId = parentId;
         parentId = newParentId;
@@ -355,6 +363,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Localization> getLocalizations() {
         if (localizations == null) {
             localizations = new EObjectContainmentEList<Localization>(Localization.class, this, Shr5managementPackage.PACK__LOCALIZATIONS);
@@ -367,6 +376,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getPage() {
         return page;
     }
@@ -376,6 +386,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setPage(String newPage) {
         String oldPage = page;
         page = newPage;
@@ -388,6 +399,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SourceBook getSrcBook() {
         if (srcBook != null && srcBook.eIsProxy()) {
             InternalEObject oldSrcBook = (InternalEObject)srcBook;
@@ -414,6 +426,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSrcBook(SourceBook newSrcBook) {
         SourceBook oldSrcBook = srcBook;
         srcBook = newSrcBook;
@@ -440,6 +453,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public String getVerfuegbarkeit() {
         return verfuegbarkeit;
     }
@@ -449,6 +463,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setVerfuegbarkeit(String newVerfuegbarkeit) {
         String oldVerfuegbarkeit = verfuegbarkeit;
         verfuegbarkeit = newVerfuegbarkeit;
@@ -461,6 +476,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public BigDecimal getWertValue() {
         return wertValue;
     }
@@ -485,6 +501,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EList<Quelle> getItems() {
         if (items == null) {
             items = new EObjectContainmentEList<Quelle>(Quelle.class, this, Shr5managementPackage.PACK__ITEMS);
@@ -737,7 +754,7 @@ public class PackImpl extends MinimalEObjectImpl.Container implements Pack {
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (beschreibung: ");
         result.append(beschreibung);
         result.append(", image: ");

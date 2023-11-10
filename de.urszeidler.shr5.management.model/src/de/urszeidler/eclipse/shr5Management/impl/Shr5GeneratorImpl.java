@@ -54,6 +54,7 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  * <!-- begin-user-doc --> An implementation of the model object ' <em><b>Shr5 Generator</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getResourcen <em>Resourcen</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getSkills <em>Skills</em>}</li>
@@ -73,7 +74,6 @@ import de.urszeidler.eclipse.shr5Management.util.Shr5managementValidator;
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getStartKarma <em>Start Karma</em>}</li>
  *   <li>{@link de.urszeidler.eclipse.shr5Management.impl.Shr5GeneratorImpl#getStartResources <em>Start Resources</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -293,6 +293,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Resourcen getResourcen() {
         if (resourcen != null && resourcen.eIsProxy()) {
             InternalEObject oldResourcen = (InternalEObject)resourcen;
@@ -317,6 +318,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setResourcen(Resourcen newResourcen) {
         Resourcen oldResourcen = resourcen;
         resourcen = newResourcen;
@@ -328,6 +330,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Skill getSkills() {
         if (skills != null && skills.eIsProxy()) {
             InternalEObject oldSkills = (InternalEObject)skills;
@@ -352,6 +355,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setSkills(Skill newSkills) {
         Skill oldSkills = skills;
         skills = newSkills;
@@ -363,6 +367,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public Attributes getAttribute() {
         if (attribute != null && attribute.eIsProxy()) {
             InternalEObject oldAttribute = (InternalEObject)attribute;
@@ -387,6 +392,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setAttribute(Attributes newAttribute) {
         Attributes oldAttribute = attribute;
         attribute = newAttribute;
@@ -398,6 +404,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MetaType getMetaType() {
         if (metaType != null && metaType.eIsProxy()) {
             InternalEObject oldMetaType = (InternalEObject)metaType;
@@ -422,6 +429,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMetaType(MetaType newMetaType) {
         MetaType oldMetaType = metaType;
         metaType = newMetaType;
@@ -433,6 +441,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public SpecialType getMagic() {
         if (magic != null && magic.eIsProxy()) {
             InternalEObject oldMagic = (InternalEObject)magic;
@@ -457,6 +466,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setMagic(SpecialType newMagic) {
         SpecialType oldMagic = magic;
         magic = newMagic;
@@ -468,6 +478,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getKarmaToResource() {
         return karmaToResource;
     }
@@ -676,6 +687,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getStartKarma() {
         return startKarma;
     }
@@ -685,6 +697,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setStartKarma(int newStartKarma) {
         int oldStartKarma = startKarma;
         startKarma = newStartKarma;
@@ -697,6 +710,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public int getStartResources() {
         return startResources;
     }
@@ -706,6 +720,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setStartResources(int newStartResources) {
         int oldStartResources = startResources;
         startResources = newStartResources;
@@ -1463,7 +1478,7 @@ public class Shr5GeneratorImpl extends Shr5RuleGeneratorImpl<Shr5System> impleme
     public String toString() {
         if (eIsProxy()) return super.toString();
 
-        StringBuffer result = new StringBuffer(super.toString());
+        StringBuilder result = new StringBuilder(super.toString());
         result.append(" (karmaToResource: ");
         result.append(karmaToResource);
         result.append(", startKarma: ");
