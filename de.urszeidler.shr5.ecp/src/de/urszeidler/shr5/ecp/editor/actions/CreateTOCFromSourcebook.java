@@ -7,10 +7,8 @@ import java.util.Collection;
 import org.apache.pdfbox.cos.COSArray;
 import org.apache.pdfbox.cos.COSDictionary;
 import org.apache.pdfbox.cos.COSName;
-import org.apache.pdfbox.cos.COSObject;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
-import org.apache.pdfbox.pdmodel.common.COSArrayList;
 import org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDDocumentOutline;
 import org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDOutlineItem;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -122,7 +120,7 @@ public class CreateTOCFromSourcebook extends Action {
         SourceLink link = Shr5Factory.eINSTANCE.createSourceLink();
         link.setSrcBook(srcBook);
         try {
-            PDDocument pdDocument = PDDocument.load(docFile);
+            PDDocument pdDocument = org.apache.pdfbox.Loader.loadPDF(docFile);
             if (pdDocument.isEncrypted()) {
                 //pdDocument..decrypt("");
                 pdDocument.setAllSecurityToBeRemoved(true);

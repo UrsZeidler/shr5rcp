@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="lib/fop-2.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/fop-core-2.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/fop-events-2.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/fop-util-2.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-anim-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-awt-util-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-bridge-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-codec-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-constants-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-css-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-dom-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-ext-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-extension-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-gvt-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-i18n-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-parser-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-script-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-shared-resources-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-svg-dom-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-svggen-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-transcoder-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-util-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/batik-xml-1.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-io-2.11.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-logging-1.0.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/fontbox-2.0.27.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/xmlgraphics-commons-2.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/pdfbox-app-3.0.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

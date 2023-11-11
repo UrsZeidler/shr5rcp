@@ -60,7 +60,7 @@ public abstract class AbstractSvg2PdfGenerator extends AbstractGenerator {
             }
             monitor.subTask("merging ...");
             pdfMergerUtility.setDestinationFileName(getFilename());
-            pdfMergerUtility.mergeDocuments();
+            pdfMergerUtility.mergeDocuments(null);
         } catch (TranscoderException e) {
             Activator.logError("Error while storing as pdf", e);
         }finally{

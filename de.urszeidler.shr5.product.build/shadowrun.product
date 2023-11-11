@@ -87,7 +87,6 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <plugin id="javax.inject"/>
       <plugin id="javax.servlet"/>
       <plugin id="javax.servlet.jsp-api"/>
-      <plugin id="javax.xml"/>
       <plugin id="lpg.runtime.java"/>
       <plugin id="org.apache.batik.css"/>
       <plugin id="org.apache.batik.util"/>

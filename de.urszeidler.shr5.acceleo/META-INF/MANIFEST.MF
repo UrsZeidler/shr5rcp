@@ -10,7 +10,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.apache.commons.codec;bundle-version="1.6.0",
  de.urszeidler.shr5.scripting.edit,
  de.urszeidler.shr5.ecp,
- de.urszeidler.fop.help;bundle-version="1.0.0"
+ org.apache.xmlgraphics;bundle-version="2.7.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
@@ -19,6 +19,10 @@ Export-Package: de.urszeidler.shr5.acceleo,
  de.urszeidler.shr5.acceleo.main,
  de.urszeidler.shr5.acceleo.sheets,
  de.urszeidler.shr5.acceleo.util
+Import-Package: org.apache.batik.transcoder,
+ org.apache.fop,
+ org.apache.fop.apps,
+ org.apache.fop.svg,
+ org.apache.pdfbox.multipdf
 Automatic-Module-Name: de.urszeidler.shr5.acceleo
-Import-Package: org.apache.batik.transcoder;resolution:=optional
 
