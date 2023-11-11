@@ -57,6 +57,8 @@ pipeline {
             	*/
             	run_rcptt('en','*.test', 'de;doc', 'en_all')
             	run_rcptt('de','*.test', 'en;doc', 'de_all')
+            	perfReport filterRegex: '', showTrendGraphs: true, sourceDataFiles: 'build/**/*junit.xml'
+            	
 //				perfReport filterRegex: '', sourceDataFiles: 'build/results_'+language+'/results.junit.xml'
              }//end of steps
         }//end of stage
@@ -91,14 +93,13 @@ def run_rcptt(String language,String testList, String skipTags, String reportNam
             	  
             	mv build/results build/results_${language}
             """
-            junit 'build/results_'+language+'/results.junit.xml'
+            junit 'build/results_'+language+'/results.'+language+'-junit.xml'
 			            
             }//with env
         }// with ant
     // some block
     }
     archiveArtifacts artifacts: 'build/results*/**/*.*', followSymlinks: false
-    perfReport filterRegex: '', showTrendGraphs: true, sourceDataFiles: 'build/**/results*.xml'
     publishHTML([allowMissing: false, 
                alwaysLinkToLastBuild: false, 
                keepAll: false, 
