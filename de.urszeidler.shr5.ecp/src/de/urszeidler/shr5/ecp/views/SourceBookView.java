@@ -477,7 +477,7 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
 
         monitor.setTaskName("load ..." + file.getName());
         try {
-            pdDocument = PDDocument.load(file);
+            pdDocument = org.apache.pdfbox.Loader.loadPDF(file);
             if (pdDocument.isEncrypted()) {
                 monitor.setTaskName("decrypt ...");
 //                pdDocument.decrypt("");

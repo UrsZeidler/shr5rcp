@@ -47,6 +47,7 @@
 		<module>de.urszeidler.shr5.webserver</module>
 		<module>de.urszeidler.shr5.scripting.ui</module>
 		<module>de.urszeidler.emf.commons.ui</module>
+		<module>de.urszeidler.fop.help</module>
 		<!-- tests -->
 		<module>de.urszeidler.shr5.model.tests</module>
 		<module>de.urszeidler.shr5.management.model.tests</module>
