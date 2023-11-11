@@ -40,7 +40,7 @@
 		</path>
     	<property name="s-runner" refid="shr5-runner"/>
     	<basename property="s.launcher" file="${s-runner}"/>
-    	<echo>found verinice.launcher:  ${s.launcher}</echo>
+    	<echo>found launcher:  ${s.launcher}</echo>
 
     	<path id="shr5-starter">
     			<dirset  dir="${aut-path}/plugins">
@@ -49,7 +49,7 @@
     	</path>
     	<property name="s-launcher" refid="shr5-starter"/>
     	<basename property="s.starter" file="${s-launcher}"/>
-    	<echo>found verinice.starter:  ${s.starter}</echo>
+    	<echo>found starter:  ${s.starter}</echo>
     	
             <delete file="${aut-path}/run_shr.ini" />
     		<echo  file="${aut-path}/run_shr.ini">-startup plugins/${s.launcher}
@@ -78,7 +78,16 @@ ${language}
 		<echo>found erunner:  ${erunner}</echo>
 	</target>
 
-  
+	<!-- - - - - - - - - - - - - - - - - - 
+          target: fix-junit-result-xml                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="fix-junit-result-xml">
+    	<replaceregexp file="${test-results}/results.junit.xml" flags="g"
+    		match='testcase[ \n\r\t]name="([^"]*)"'
+    		replace='testcase classname="${language}TEST" name="\1"' 	/>
+    	<move verbose="true" file="${test-results}/results.junit.xml" tofile="${test-results}/results.${language}-junit.xml"/>
+    </target>
+
   <target name="test" depends="init,configure-aut,configure.rcptt.runner">
     <java jar="${runner-path}/plugins/${erunner}" fork="true">
       <arg value="-application" />
@@ -119,5 +128,6 @@ ${language}
       <arg value="testExecTimeout=600;execTimeout=3600;reportingIncludeIgnoredWaitDetails=true;reportingPassedTestDetails=true;runtimeEnableActivityLogs=true;q7ImageCapture=true" />
 
     </java>
+  	<antcall target="fix-junit-result-xml"/>
   </target>
 </project>
