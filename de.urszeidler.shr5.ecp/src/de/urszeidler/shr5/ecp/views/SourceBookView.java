@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
+import org.apache.pdfbox.io.RandomAccessReadBufferedFile;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.eclipse.core.databinding.DataBindingContext;
@@ -477,7 +478,7 @@ public class SourceBookView extends ViewPart implements ISelectionListener {
 
         monitor.setTaskName("load ..." + file.getName());
         try {
-            pdDocument = org.apache.pdfbox.Loader.loadPDF(file);
+            pdDocument = org.apache.pdfbox.Loader.loadPDF(new RandomAccessReadBufferedFile(file));
             if (pdDocument.isEncrypted()) {
                 monitor.setTaskName("decrypt ...");
 //                pdDocument.decrypt("");
