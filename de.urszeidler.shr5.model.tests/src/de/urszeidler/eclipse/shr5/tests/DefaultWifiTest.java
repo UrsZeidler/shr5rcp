@@ -14,12 +14,13 @@ import de.urszeidler.eclipse.shr5.Shr5Factory;
  * <p>
  * The following features are tested:
  * <ul>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}</li>
- *   <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}</li>
+ * <li>{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}</li>
  * </ul>
  * </p>
+ * 
  * @generated
  */
 public class DefaultWifiTest extends AbstraktGegenstandTest {
@@ -27,6 +28,7 @@ public class DefaultWifiTest extends AbstraktGegenstandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public static void main(String[] args) {
@@ -37,6 +39,7 @@ public class DefaultWifiTest extends AbstraktGegenstandTest {
      * Constructs a new Default Wifi test case with the given name.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     public DefaultWifiTest(String name) {
@@ -47,6 +50,7 @@ public class DefaultWifiTest extends AbstraktGegenstandTest {
      * Returns the fixture for this Default Wifi test case.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -57,6 +61,7 @@ public class DefaultWifiTest extends AbstraktGegenstandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#setUp()
      * @generated
      */
@@ -68,6 +73,7 @@ public class DefaultWifiTest extends AbstraktGegenstandTest {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see junit.framework.TestCase#tearDown()
      * @generated
      */
@@ -80,52 +86,51 @@ public class DefaultWifiTest extends AbstraktGegenstandTest {
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax() <em>Matrix Zustand Max</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.MatixConditionMonitor#getMatrixZustandMax()
-     * @generated
+     * @generated NOT
      */
     public void testGetMatrixZustandMax() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        assertEquals(8, getFixture().getMatrixZustandMax());
     }
 
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe() <em>Geraetestufe</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getGeraetestufe()
-     * @generated
+     * @generated NOT
      */
     public void testGetGeraetestufe() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        getFixture().setDeviceRating(1);
+        assertEquals(1, getFixture().getGeraetestufe());
     }
 
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall() <em>Firewall</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getFirewall()
-     * @generated
+     * @generated NOT
      */
     public void testGetFirewall() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        getFixture().setDeviceRating(1);
+        assertEquals(1, getFixture().getFirewall());
     }
 
     /**
      * Tests the '{@link de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung() <em>Datenverarbeitung</em>}' feature getter.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * 
      * @see de.urszeidler.eclipse.shr5.MatrixAttributes#getDatenverarbeitung()
-     * @generated
+     * @generated NOT
      */
     public void testGetDatenverarbeitung() {
-        // TODO: implement this feature getter test method
-        // Ensure that you remove @generated or mark it @generated NOT
-        fail();
+        getFixture().setDeviceRating(1);
+        assertEquals(1, getFixture().getDatenverarbeitung());
     }
 
-} //DefaultWifiTest
+} // DefaultWifiTest
