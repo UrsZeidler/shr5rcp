@@ -83,7 +83,7 @@ and apache fop (http://xmlgraphics.apache.org/fop/).
       <plugin id="de.urszeidler.shr5.scripting.ui"/>
       <plugin id="de.urszeidler.shr5.webserver"/>
       <plugin id="javax.annotation"/>
-      <plugin id="javax.el"/>
+      <plugin id="com.sun.el.javax.el"/>
       <plugin id="javax.inject"/>
       <plugin id="javax.servlet"/>
       <plugin id="javax.servlet.jsp-api"/>
