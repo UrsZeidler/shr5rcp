@@ -304,7 +304,7 @@ border-top-color="rgb(0,0,0)" border-top-style="outset" border-top-width="1pt"
 [comment]                    <fo:region-body region-name="inhalt" margin="30mm" />[/comment]
                     <fo:region-before region-name="kopf" extent="25mm" />
 [comment]                    <fo:region-after region-name="fuss" extent="20mm" background-color="yellow" />[/comment]
-            <fo:region-after region-name="xsl-region-after"  extent="15mm"/>
+            <fo:region-after region-name="xsl-region-after"  extent="15mm" />
                     <fo:region-start extent="25mm"  />
                     <fo:region-end extent="15mm" />
 
@@ -319,7 +319,7 @@ border-top-color="rgb(0,0,0)" border-top-style="outset" border-top-width="1pt"
 		<fo:title>[documentTitel /]</fo:title>
 	
         <fo:static-content flow-name="xsl-region-after">
-            <fo:block font-size="x-small" margin-left="15mm">shr5rcp character sheet [documentTitel /] page <fo:page-number/></fo:block>
+            <fo:block font-size="x-small" margin-top="5mm" margin-left="5mm">shr5rcp character sheet [documentTitel /] page <fo:page-number/> printed [formatDate(currentDate()) /]</fo:block>
         </fo:static-content>
 
 		<fo:flow flow-name="xsl-region-body">

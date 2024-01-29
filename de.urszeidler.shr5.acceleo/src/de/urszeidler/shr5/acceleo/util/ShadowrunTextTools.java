@@ -218,6 +218,9 @@ public class ShadowrunTextTools {
         return dateTimeFormatSec.format(date);
      }
      
+    public static Date currentDate() {
+        return new Date();
+    }
     /**
      * Get a localized text from the managenent plugin with the prefix _PR_.
      * 

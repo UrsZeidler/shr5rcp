@@ -56,6 +56,10 @@
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'formatDateTimeSec(java.util.Date)', Sequence{object})
 /]
 
+[query public currentDate() : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'currentDate()', Sequence{})
+/]
+
 [query public createNumberList(count : Integer) : OrderedSet(String)
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'createNumberList(java.lang.Integer)', Sequence{count})
 /]
