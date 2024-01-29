@@ -213,8 +213,8 @@
      <fo:table-row>
 [printCell('')/]
 [printCell('anzahl')/]
-[printCell('power')/]
-[printCell('ac')/]
+[printCell('dmg')/]
+[printCell('ap')/]
 [printCell('type')/]
      </fo:table-row>
 [for (m : Munition | aManagedCharacter.inventar->selectByKind(Munition))]
@@ -1203,7 +1203,7 @@ endif /]
     <fo:table-body  >
 
      <fo:table-row>
-[printCell(aDiaryEntry.date.formatDateTime())/]
+[printCell(aDiaryEntry.date.formatDate())/]
 [printCellSpanned(aDiaryEntry.message,2)/]
      </fo:table-row>
 
@@ -1219,13 +1219,13 @@ endif /]
     <fo:table-body  >
 
      <fo:table-row>
-[printCell(tr.date.formatDateTime())/]
+[printCell(tr.date.formatDate())/]
 [printCellSpanned(tr.change.getText(),2)/]
      </fo:table-row>
 [for (it : TrainingRange | tr.training)]
      <fo:table-row>
 [printCell('')/]
-[printCellSpanned(it.start.formatDateTime()+' - '+ it.end.formatDateTime(),2)/]
+[printCellSpanned(it.start.formatDate()+' - '+ it.end.formatDate(),2)/]
      </fo:table-row>
 [/for]
     </fo:table-body>
