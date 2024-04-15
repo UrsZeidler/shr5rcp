@@ -1,0 +1,363 @@
+[comment encoding = UTF-8 /]
+[module markdownCharacterSheet('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[import de::urszeidler::shr5::acceleo::common::ShadowrunTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunManagmentTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::ShadowrunMarkdownSheetTools  /]
+[import de::urszeidler::shr5::acceleo::common::shr5EEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::common::shr5ManagementEEnumhelper  /]
+[import de::urszeidler::shr5::acceleo::util::shadowrunTextTools  /]
+
+[template public markdownCharacterSheet(aManagedCharacter : ManagedCharacter)]
+	
+	[comment @main /]
+[file (aManagedCharacter.persona.name+'.md', false, 'UTF-8')]
+[printBoardCharacterReport(aManagedCharacter)/]
+[/file]
+[/template]
+
+[**
+ * Print the chracter as a BB board txt.
+ * 
+*/]
+[template public printBoardCharacterReport(aManagedCharacter : ManagedCharacter)
+{ empty :String =  '..............................' ;
+  empty1 :String =  '....................' ;
+}]
+[printBasicCharacterData(aManagedCharacter)/]
+[printPersonaBasic(aManagedCharacter,empty)/]
+
+[printSkillGroup(aManagedCharacter.persona.fertigkeitsGruppen,empty)/]
+
+[printActiveSkills(aManagedCharacter.persona.fertigkeiten,empty)/]
+
+[printKnowledgeSkills(aManagedCharacter.persona.fertigkeiten,empty)/]
+
+[if (aManagedCharacter.persona.oclIsKindOf(Zauberer))]
+[let z : Zauberer = aManagedCharacter.persona.oclAsType(Zauberer)]
+[printSpells(z,'',empty1)/]
+[/let]
+[/if]
+[if (aManagedCharacter.persona.oclIsKindOf(KiAdept))]
+[printKiPowers( aManagedCharacter.persona.oclAsType(KiAdept).kikraft)/]
+[/if]
+[if (aManagedCharacter.persona.oclIsKindOf(Technomancer))]
+[printComplexForms( aManagedCharacter.persona.oclAsType(Technomancer).complexForms )/]
+[/if]
+
+[if (aManagedCharacter.persona.oclIsKindOf(KoerperPersona))]
+[let kp : KoerperPersona = aManagedCharacter.persona.oclAsType(KoerperPersona)]
+[printQualities(kp.eigenschaften, empty)/]
+[printAugmentations(kp.koerperMods, empty)/]
+[/let]
+[/if]
+
+[printGear(aManagedCharacter.inventar->asSequence(),empty)/]
+
+[printContracts(aManagedCharacter.contracts->asSequence(),empty)/]
+
+[printConnections(aManagedCharacter.connections,empty)/]
+
+[printVehicles(aManagedCharacter.vehicels,empty)/]
+
+[if (aManagedCharacter.oclIsTypeOf(PlayerCharacter))]
+[printDiary(aManagedCharacter.oclAsType(PlayerCharacter).diary)/]
+[/if]
+
+[printAdvacements(aManagedCharacter.changes)/]
+
+[printAllCredSticks(aManagedCharacter.inventar->selectByType(Credstick), empty)  /]
+
+
+['Notes'.localizedString().boldText()/]  
+[for (it : OclAny | aManagedCharacter.eContents())]
+[if (it.oclIsKindOf(Beschreibbar) and not it.oclIsKindOf(AbstraktPersona))]
+[if (not it.oclAsType(Beschreibbar).beschreibung.oclIsUndefined())]
+[it.oclAsType(Beschreibbar).name.getText()/]  
+[it.oclAsType(Beschreibbar).beschreibung.tagText('`')/]  
+[/if]
+[/if]
+[/for]
+
+[/template]
+
+[template public printComplexForms (pcf : OrderedSet(PersonaKomplexForm)) ? (not pcf->isEmpty()) ]
+['_UI_Technomancer_complexForms_feature'.localizedString().titelText()/]  
+[for (it : PersonaKomplexForm | pcf)]
+[it.form.getText()/]  
+[/for]
+[/template]
+
+[template public printPersonaBasic(aManagedCharacter : ManagedCharacter,empty :String)
+{persona : AbstraktPersona = aManagedCharacter.persona ; }]
+['Attributes'.titelText()/]  
+[printAttributes(persona,empty)/]
+[printTextPlusSpace('_UI_SpezielleAttribute_essenz_feature'.localizedString(), empty)/] [   (persona.essenz)/100  /]  
+[printTextPlusSpace('_UI_SpezielleAttribute_initative_feature'.localizedString(), empty)/] [persona.toLocalizedInitative()/]  
+[if(persona.oclIsKindOf(AstraleProjektion))]
+[let ap : AstraleProjektion = persona.oclAsType(AstraleProjektion)]
+[printTextPlusSpace('_UI_AstraleProjektion_astraleInitative_feature'.localizedString(), empty)/] [ap.toLocalizedAstralInitative()/]  
+[/let][/if]
+[if (aManagedCharacter.hasMatrixInitative())]
+[printTextPlusSpace('Matrix Ini cold', empty)/] [aManagedCharacter.getMatrixInitative()/]+3d6  
+[printTextPlusSpace('Matrix Ini hot', empty)/] [aManagedCharacter.getMatrixInitative()/]+4d6  
+[/if]
+[printTextPlusSpace('Condition', empty)/] [persona.oclAsType(KoerperPersona).zustandKoerperlichMax/]/[persona.oclAsType(KoerperPersona).zustandGeistigMax/]  
+[printTextPlusSpace('_UI_Panzerung_panzer_feature'.localizedString(), empty)/] [persona.oclAsType(KoerperPersona).panzer/]  
+[printTextPlusSpace('_UI_BerechneteAttribute_selbstbeherrschung_feature'.localizedString(), empty)/] [persona.oclAsType(KoerperPersona).selbstbeherrschung.toString()/]  
+[printTextPlusSpace('_UI_BerechneteAttribute_menschenkenntnis_feature'.localizedString(), empty)/] [persona.oclAsType(KoerperPersona).menschenkenntnis/]  
+[printTextPlusSpace('_UI_BerechneteAttribute_errinerungsvermoegen_feature'.localizedString(), empty)/] [(persona.oclAsType(KoerperPersona).errinerungsvermoegen).toString() /]  
+[printTextPlusSpace('Lifting/Carrying', empty)/] [persona.liftCarry()/]  
+[printTextPlusSpace('Movement', empty)/] [persona.movement()/]  
+
+Limits  
+['_UI_ChrakterLimits_koerperlich_feature'.localizedString()/] [persona.oclAsType(KoerperPersona).koerperlich/] / ['_UI_ChrakterLimits_geistig_feature'.localizedString()/] [persona.oclAsType(KoerperPersona).geistig/] / ['_UI_ChrakterLimits_sozial_feature'.localizedString()/] [persona.oclAsType(KoerperPersona).sozial/]  
+[/template]
+
+[**
+ * Print the qualities
+*/]
+[template public printAdvacements(changes : OrderedSet(Changes)) ? (not changes->isEmpty()) { empty :String = '                                             ' ;}]
+['_UI_ManagedCharacter_changes_feature'.localizedString().titelText()/]  
+[for (ag : Changes | changes-> select(changeApplied)-> sortedBy(date) )]
+[ printTextPlusSpace(ag.date.formatDateLong()+' '+  getText(ag),empty)  /][if (not ag.oclIsTypeOf(KarmaGaint))] [ag.karmaCost/][/if]  
+[/for]
+[/template]
+
+[**
+ * Print the qualities
+*/]
+[template public printQualities(gears : OrderedSet(PersonaEigenschaft),empty :String) ? (not gears->isEmpty())]
+['_UI_KoerperPersona_eigenschaften_feature'.localizedString().titelText()/]  
+[for (ag : PersonaEigenschaft | gears)]
+[printTextPlusSpace(ag.getText(),empty)/][ag.karmaKosten/]  
+[/for]
+
+[printTextPlusSpace('sum :', empty)/][sumQuallitiyKarma(gears)/]  
+[/template]
+
+[**
+ * Print the kipowers
+*/]
+[template public printKiPowers(gears : OrderedSet(KiKraft)) ? (not gears->isEmpty())]
+['_UI_KiAdept_kikraft_feature'.localizedString().titelText()/]  
+[for (ag : KiKraft | gears)]
+[ag.getText()  /]  
+[/for]
+[/template]
+
+
+[**
+ * Print the wares
+*/]
+[template public printAugmentations(gears : OrderedSet(Koerpermods),empty :String) ? (not gears->isEmpty())
+]
+['_UI_KoerperPersona_koerperMods_feature'.localizedString().titelText()/]  
+[for (ag : Koerpermods | gears)]
+[printTextPlusSpace(ag.getText(),empty)/][ag.oclAsType(GeldWert).wert/]  
+[/for]
+
+[printTextPlusSpace('sum :', empty)/][calcListenWertToString(gears->asSequence())/]
+[/template]
+
+[template public printBasicCharacterData(aManagedCharacter : ManagedCharacter)]
+['Basic Data'.titelText('##')/]
+[let persona : AbstraktPersona = aManagedCharacter.persona]
+['_UI_Beschreibbar_name_feature'.localizedString()/]: [persona.name.italicText() /]  ['_UI_ManagedCharacter_sex_feature'.localizedString()/] : [aManagedCharacter.sex.sexToName().italicText() /]  
+['_UI_AbstractPersona_spezies_feature'.localizedString()/]: [persona.spezies.name.italicText()/] Type: [getText(  persona.eClass()).italicText() /]  
+
+[if (not (persona.beschreibung.size()=0 ) )]
+[persona.beschreibung.quoteText()/]  
+[/if]
+[/let]
+
+['_UI_ManagedCharacter_nativeLanguage_feature'.localizedString()/]: [aManagedCharacter.nativeLanguage.getText()/]  
+['_UI_ManagedCharacter_dateofbirth_feature'.localizedString()/]: [aManagedCharacter.dateofbirth.formatDate() /][if (aManagedCharacter.oclIsTypeOf(PlayerCharacter))]  ['_UI_ManagedCharacter_age_feature'.localizedString()/]: [aManagedCharacter.oclAsType(PlayerCharacter).age/][/if]  
+['_UI_ManagedCharacter_karmaGaint_feature'.localizedString()/]: [aManagedCharacter.karmaGaint/]  ['_UI_ManagedCharacter_currentKarma_feature'.localizedString()/]: [aManagedCharacter.currentKarma/]  
+['_UI_ManagedCharacter_streetCred_feature'.localizedString()/]: [aManagedCharacter.streetCred/]  ['_UI_ManagedCharacter_notoriety_feature'.localizedString()/]: [aManagedCharacter.notoriety/]  
+['_UI_ManagedCharacter_height_feature'.localizedString()/]: [aManagedCharacter.height/] cm  ['_UI_ManagedCharacter_weight_feature'.localizedString()/]: [aManagedCharacter.weight/] kg  
+
+[/template]
+
+
+[**
+ * print the attributes the persona, uses the localized text.
+*/]
+[template public printAttributes(persona : AbstraktPersona,empty :String)]
+[for (ea : EAttribute | getOrderedAttibutesForPersona(persona))]
+[let attributeName : String = getText(base2Calced(ea))]
+[printTextPlusSpace(attributeName, empty)/] [persona.eGet(ea)/][if(not (persona.eGet(ea)=persona.eGet(base2Calced(ea))))]([persona.eGet(base2Calced(ea))/])[/if]  
+[/let]
+[/for]
+[/template]
+
+
+[template public printSkillGroup(sg : OrderedSet(PersonaFertigkeitsGruppe),empty :String)]
+['_UI_AbstractPersona_fertigkeitsGruppen_feature'.localizedString().titelText()/]  
+[for (pfg : PersonaFertigkeitsGruppe | sg)]
+[printTextPlusSpace(pfg.gruppe.getText(), empty)/] [pfg.stufe/]  
+[/for]
+[/template]
+
+
+[template public printActiveSkills(sg : OrderedSet(PersonaFertigkeit),empty :String)]
+['_UI_AbstractPersona_fertigkeiten_feature'.localizedString().titelText()/]  
+[for (pfg : PersonaFertigkeit | sg)]
+[if (not(pfg.fertigkeit.oclIsKindOf(Wissensfertigkeit) ))]
+[printTextPlusSpace(pfg.fertigkeit.getText(),empty)/] [pfg.stufe/]  
+[/if]
+[/for]
+[/template]
+
+[template public printKnowledgeSkills(sg : OrderedSet(PersonaFertigkeit),empty :String)]
+['Knowledge Skills'.titelText()/]  
+[for (pfg : PersonaFertigkeit | sg)]
+[if ((pfg.fertigkeit.oclIsKindOf(Wissensfertigkeit) ))]
+[printTextPlusSpace(pfg.fertigkeit.getText(),empty )/] [pfg.stufe/]  
+[/if]
+[/for]
+[/template]
+
+
+[template public printConnections(c : OrderedSet(Connection),empty :String)? (not c->isEmpty())]
+['_UI_ManagedCharacter_connections_feature'.localizedString().titelText()/]  
+[for (connection : Connection | c)]
+[printTextPlusSpace(connection.getText(),empty)/]  [connection.influence/]/[connection.loyality/]  
+[/for]
+[/template]
+
+[template public printSpells(z : Zauberer,loc : String,empty :String) ? (not z.zauber->isEmpty())]
+['_UI_Zauberer_zauber_feature'.localizedString().titelText()/]  
+[for (pz : PersonaZauber | z.zauber)]
+[printTextPlusSpace(pz.formel.getText(), empty)/]  
+[/for]
+[/template]
+
+[template public printContracts(gears : Sequence(Vertrag),empty :String)? (not gears->isEmpty())]
+['_UI_ManagedCharacter_contracts_feature'.localizedString().titelText()/]  
+[for (ag : Vertrag | gears)]
+[printContract(ag, empty)/]
+[/for]
+
+[printTextPlusSpace('sum :', empty)/] [calcListenWertToString(gears) /]  
+[/template]
+
+[template public printContract(c : Vertrag,empty :String)]
+[printTextPlusSpace(c.getText(),empty)/] [c.wert.formatMoney()/]  
+[/template]
+
+[template public printContract(c : Lifestyle,empty :String)]
+[printTextPlusSpace(c.getText(),empty)/] [c.wertValue.formatMoney()/]/[c.wert.formatMoney()/]  
+[for (l : LifestyleOption | c.options)]
+- [printTextPlusSpace(l.getText(),empty)/] [l.wert.formatMoney()/]  
+[/for]
+[/template]
+
+[template public printContract(c : Sin,empty :String)]
+[printTextPlusSpace(c.getText(),empty)/] [c.wertValue.formatMoney()/]/[c.wert.formatMoney()/]  
+[for (l : Lizenz | c.licences)]
+- [printTextPlusSpace(l.getText(),empty)/] [l.wert.formatMoney()/]  
+[/for]
+[/template]
+
+[template public printVehicles(sg : OrderedSet(Fahrzeug),empty :String)? (not sg->isEmpty())]
+['_UI_ManagedCharacter_vehicels_feature'.localizedString().titelText()/]  
+[for (pfg : Fahrzeug | sg)]
+[printVehicle(pfg, empty)/]
+[/for]
+
+[printTextPlusSpace('sum :', empty)/] [calcListenWertToString(sg->asSequence()) /]  
+[/template]
+
+[template private printVehicle(vehicle : Fahrzeug,empty :String)]
+[printTextPlusSpace(vehicle.getText()  ,empty)/] [vehicle.wertValue /]
+[if (not vehicle.modifizierungen->isEmpty())][printGeldwertCollection(vehicle.modifizierungen, vehicle.wert,empty, '- ')/][/if]  [/template]
+
+[template private printVehicle(vehicle : Drohne,empty :String)]
+[printTextPlusSpace(vehicle.getText()  ,empty)/] [vehicle.wertValue /]  
+[if (not vehicle.modifizierungen->isEmpty())]
+[printGeldwertCollection(vehicle.modifizierungen, vehicle.wert,empty, '- ')/][/if]
+[if (not vehicle.storedPrograms->isEmpty())]
+[printGeldwertCollection(vehicle.storedPrograms, vehicle.wert,empty, '- ')/][/if][/template]
+
+[template public printGear(gears : Sequence(AbstraktGegenstand), empty :String)? (not gears->isEmpty())]
+['_UI_ManagedCharacter_inventar_feature'.localizedString().titelText()/]  
+[for (ag : AbstraktGegenstand | gears)]
+[printGegenstand(ag, empty)/]  
+[/for]
+
+[printTextPlusSpace('sum :', empty)/] [calcListenWertToString(gears) /]  
+[/template]
+
+
+[template public printDiary(diary : CharacterDiary)]
+['Diary'.localizedString().titelText()/]  
+Current Date: [diary.characterDate/]  
+[for (de : DiaryEntry | diary.entries -> sortedBy(characterDate))]
+[printDiaryEntry(de)/]
+[/for]
+[/template]
+
+[template public printDiaryEntry (aDiaryEntry : DiaryEntry) ]
+[aDiaryEntry.date.formatDateLong().boldText()/]: [aDiaryEntry.message/]  
+[/template]
+
+[template public printDiaryEntry (aDiaryEntry : TrainingsTime) ]
+[aDiaryEntry.date.formatDateLong().boldText()/]: ['training for'.localizedString()/] [aDiaryEntry.change.getText()/]  
+[for (tr : TrainingRange | aDiaryEntry.training)]
+ * [tr.start.formatDate()/] - [tr.end.formatDate()/] : [tr.daysTrained/] ['Days_Trained'.localizedString()/]  
+[/for][/template]
+
+[template public printAllCredSticks(cs : OrderedSet(Credstick), empty :String)]
+['Credsticks'.localizedString().titelText()/]  
+[for (credstick : Credstick | cs)]
+[printCredStick(credstick, empty) /]
+[/for]
+[/template]
+
+
+[template public printCredStick(credstick : Credstick, empty :String)]
+[printTextPlusSpace('Credstick: '.concat(credstick.getText()), empty)/]  
+[for (t : CredstickTransaction | credstick.transactionlog)]
+[if (t.oclIsTypeOf(ShoppingTransaction))]
+Shopping list:  
+[printSoppingTransaction(t.oclAsType(ShoppingTransaction))/]
+[else]
+[t.date.formatDate() /] [t.description.italicText()/] [t.amount.formatMoney()/]  
+[/if]
+[/for]
+[printTextPlusSpace('Saldo :', empty)/] [credstick.currentValue.formatMoney() /]  
+
+[/template]
+
+
+[template public printSoppingTransaction(ta : ShoppingTransaction)]
+[for (gw : GeldWert | ta.items)]
+[gw.getText()/] [gw.oclAsType(Quelle).srcBook.getText()/] [gw.wertValue.formatMoney()/]  
+[/for]
+calculated costs: [ta.caculatedCosts.formatMoney()/] (incuding [ta.fee/] fee)  
+[/template]
+
+[template private printGegenstand(gegenstand : AbstraktGegenstand,empty :String)]
+[printTextPlusSpace(gegenstand.getText(),empty)/] [gegenstand.wert.formatMoney()/]  
+[/template]
+
+[template private printGegenstand(comlink : Commlink,empty :String)]
+[printTextPlusSpace(comlink.getText()  ,empty)/] [comlink.wertValue.formatMoney() /]
+[printGeldwertCollection(comlink.storedPrograms, comlink.wert,empty, '- ')/]  [/template]
+
+[template private printGegenstand(comlink : RiggerCommandConsole,empty :String)]
+[printTextPlusSpace(comlink.getText()  ,empty)/] [comlink.wertValue.formatMoney() /]
+[printGeldwertCollection(comlink.storedPrograms,comlink.wert, empty, '- ')/]  [/template]
+
+[template private printGegenstand(comlink : Cyberdeck,empty :String)]
+[printTextPlusSpace(comlink.getText()  ,empty)/] [comlink.wertValue.formatMoney() /]
+[if (not comlink.storedPrograms->isEmpty())][printGeldwertCollection(comlink.storedPrograms, comlink.wert,empty, '- ')/][/if]  [/template]
+
+[template public printGeldwertCollection(col : OrderedSet(GeldWert),wert: EBigDecimal ,empty :String,prefix : String)? (not col->isEmpty())
+post(trim())
+][for (gw : GeldWert | col)]
+[printTextPlusSpace(prefix+gw.getText()  ,empty)/] [gw.wert.formatMoney()/]  
+[/for]
+[printTextPlusSpace('sum :', empty)/] [wert.formatMoney()/]  [/template]

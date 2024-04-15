@@ -49,6 +49,9 @@
 [query public formatDate(object : OclAny) : String
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'formatDate(java.util.Date)', Sequence{object})
 /]
+[query public formatDateLong(object : OclAny) : String
+	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'formatDateLong(java.util.Date)', Sequence{object})
+/]
 [query public formatDateTime(object : OclAny) : String
 	= invoke('de.urszeidler.shr5.acceleo.util.ShadowrunTextTools', 'formatDateTime(java.util.Date)', Sequence{object})
 /]

@@ -18,6 +18,20 @@
          </TransformerMapping>
       </Transformer>
       <Transformer
+            acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.MarkdownCharacterSheet"
+            description="markdown character report"
+            dialogImage="images/textTransformations.png"
+            name="chracter report in markdown">
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.NonPlayerCharacter"></TransformerMapping>
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.PlayerCharacter">
+         </TransformerMapping>
+         <TransformerMapping
+               class="de.urszeidler.eclipse.shr5Management.CharacterGroup">
+         </TransformerMapping>
+      </Transformer>
+      <Transformer
             acceleoGenerator="de.urszeidler.shr5.acceleo.sheets.BoardShr5GeneratorSheet"
             description="%Transformer.bbgeneratorsheet.description"
             dialogImage="images/textTransformations.png"
