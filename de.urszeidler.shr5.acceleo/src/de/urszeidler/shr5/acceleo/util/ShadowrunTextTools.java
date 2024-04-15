@@ -52,6 +52,7 @@ public class ShadowrunTextTools {
     private static KomplexeForm komplexForm = Shr5Factory.eINSTANCE.createKomplexeForm();
     private static NonPlayerCharacter character = Shr5managementFactory.eINSTANCE.createNonPlayerCharacter();
     private static Feuerwaffe fiereweapon = Shr5Factory.eINSTANCE.createFeuerwaffe();
+    private static DateFormat dateFormatLong = DateFormat.getDateInstance(DateFormat.FULL);
     private static DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.SHORT);
     private static DateFormat dateTimeFormat = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
     private static DateFormat dateTimeFormatSec = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.LONG);
@@ -196,6 +197,13 @@ public class ShadowrunTextTools {
      }
      
     
+    
+    public static String formatDateLong(Date date) {
+        if(date==null)
+            return "unset";
+        
+        return dateFormatLong.format(date);
+     }
     
     public static String formatDate(Date date) {
         if(date==null)

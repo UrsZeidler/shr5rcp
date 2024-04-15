@@ -1,0 +1,34 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module.
+ */]
+[module ShadowrunMarkdownSheetTools('http://urszeidler.de/shr5/1.0', 'http://urszeidler.de/shr5mngt/1.0', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+[query public titelText(txt : String, heading : String) : String = heading+' '+self /]
+[query public titelText(txt : String) : String = self.titelText('###') /]
+
+[query public boldText(txt : String) : String = self.tagText('**') /]
+[query public italicText(txt : String) : String = self.tagText('*') /]
+[query public underlineText(txt : String) : String = self.tagText('u') /]
+[query public tagText(txt : String,tag : String) : String =  tag +self+tag /]
+[query public quoteText(txt : String) : String =  '> ' +self /]
+
+[query public startTag(txt : String,) : String = '['+ self + ']' /]
+[query public endTag(txt : String,) : String = '[/'+ self + ']' /]
+
+[query public cellText(txt : String) : String = self.tagText('td') /]
+[query public tableRow(row : Sequence(OclAny)) : String = (self->collect(e| (e.toString()).cellText())+'').tagText('tr') /]
+
+[query public table(txt : String) : String = self.tagText('table')  /]
+[query public tableHeading(txt : String) : String = self.tagText('th')  /]
+
+
+[**
+ * Prints a row in the table
+*/]
+[template public printRow(row : Sequence(String))]
+[startTag('tr')/][for (it : String | row)]
+[startTag('td')/][it/][endTag('td')/][/for][endTag('tr')/]
+[/template]
+
+
