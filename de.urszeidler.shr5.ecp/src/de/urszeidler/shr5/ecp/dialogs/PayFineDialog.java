@@ -133,7 +133,7 @@ public class PayFineDialog extends TitleAreaDialog {
         });
         checkboxTreeViewer.setLabelProvider(labelProvider);
         Tree tree = checkboxTreeViewer.getTree();
-        tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, false, 2, 2));
+        tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 2, 2));
         checkboxTreeViewer.setContentProvider(new SimpleListContenProvider(new AdapterFactoryContentProvider(AdapterFactoryUtil.getInstance()
                 .getAdapterFactory())));
         //
